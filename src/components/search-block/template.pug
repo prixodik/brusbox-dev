@@ -1,0 +1,8 @@
+
+mixin searchBlock(data)
+	form.search-block.js-search-block&attributes(attributes)
+		button(type="submit")._icon.js-search-toggle.is-disabled
+			+svg('search')
+		._wrapper
+			input._input(type="text" placeholder=data.placeholder)
+			//-button._btn Искать

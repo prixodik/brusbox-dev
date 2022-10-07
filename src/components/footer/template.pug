@@ -1,0 +1,67 @@
+include ../soc-list/template
+include ../search-block/template
+
+mixin footer(data)
+	footer.footer&attributes(attributes)
+		._container.container
+				._row.row.row--stretch
+					._logo-col.col-2
+						img(src="/images/logo.svg", alt="")._logo
+						._slogan Современные <br>оконные системы
+						+socList()._soc
+						
+					._menu-col.col-2
+						._title Покупателям окон
+						._menu
+							._menu-item
+								a(href="#") Продукция
+							._menu-item
+								a(href="#") Подобрать окно
+							._menu-item
+								a(href="#") Калькулятор
+							._menu-item
+								a(href="#") Где купить
+							._menu-item
+								a(href="#") О компании
+							._menu-item
+								a(href="#") Акции
+							._menu-item
+								a(href="#") Статьи
+					
+					._menu-col.col-2
+						._title Продукция
+						._menu
+							._menu-item
+								a(href="#") Пластиковые окна
+							._menu-item
+								a(href="#") Пластиковые двери
+							._menu-item
+								a(href="#") Подоконники
+							._menu-item
+								a(href="#") Балконы и лоджии
+							._menu-item
+								a(href="#") Преимущества
+							._menu-item
+								a(href="#") Выберите цвет
+
+					._right.col-6
+						._contacts
+							a._phone(href="#") 8 (800) 777-55-33
+							+socListHeader()._soc-2
+							a(href="#")._call Заказать замер
+							a(href="#")._mail one@brusbox.ru
+						+searchBlock({
+							placeholder: "Поиск по сайту"
+						}).search-block--static._search 
+
+						._bottom 
+							._copyright
+								p (с) Spident 2021
+								p
+									a(href="#") Политика конфиденциальности
+								p
+									a(href="#") Карта сайта
+								p 
+									a(href="#") Разработано в РА VOZDUH
+							._img 
+								img(src="/images/slider-arrow.svg", alt="")

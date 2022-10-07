@@ -1,0 +1,43 @@
+include ../icon-inline/template
+include ../menu-block/template
+include ../search-block/template
+include ../soc-list/template
+include ../burger/template
+
+mixin header(data)
+	header.header&attributes(attributes)
+		._body
+			._container.container
+				
+				a._logo(href="/")
+					img(src='/images/logo.svg' alt='brusbox')
+
+				._wrapper
+					._top
+						+menuBlockNav()._nav
+
+						._contacts
+							+iconInline({
+								icon: 'marker',
+								text: 'Нижний Новгород'
+							})._contacts-item 
+							+iconInline({
+								icon: 'user',
+								text: 'Личный кабинет'
+							})._contacts-item 
+							+iconInline({
+								icon: 'phone',
+								text: '8 (800) 777-55-33'
+							})._contacts-item 
+
+						+socListHeader()._soc
+
+					._bottom
+						._menu.js-mobile-menu
+							+menuBlock()
+
+						+searchBlock({
+							placeholder: 'Поиск по сайту'
+						})._search
+
+						+burger()._burger

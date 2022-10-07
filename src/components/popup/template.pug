@@ -1,0 +1,94 @@
+include ../form-block/template
+//- include ../stars/template
+
+mixin popup(data)
+	.popup&attributes(attributes)
+		._overflow.js-popup-hide
+		._wrapper
+			a._close.js-popup-hide
+				+svg('close2')
+			block
+
+
+
+mixin popupFinish(data)
+	+popup().popup--finish#popup-finish
+		._title Спасибо за заказ!
+		._desc Менеджер Spident свяжется с Вами в ближайшее время.
+
+mixin popupAddProduct(data)
+	+popup().popup--add-product#popup-add-product
+		._title Товар добавлен в корзину
+		._buttons 
+			a.btn.-border(href="#") Продолжить покупки
+			a.btn(href="#") Перейти в корзину
+
+mixin popupLogin()
+	+popup().popup--login.popup--registration#popup-login(attributes)
+		._title Авторизация
+		form._form(action="") 
+			.form-group.-sm._input
+				._label E-mail
+				input.form-control.form-control--border.js-required(type="email" placeholder="" required)
+			.form-group.-sm._input
+				._label Пароль
+				input.form-control.form-control--border.js-required(type="password" placeholder="" required)
+			._buttons
+				button.btn.js-submit Вход
+				a.btn.-border.js-popup-show(href="#popup-registration")
+					span Регистрация
+
+mixin popupRegistration()
+	+popup().popup--registration#popup-registration(attributes)
+		._title Регистрация
+		form._form(action="") 
+			.form-group.-sm._input
+				._label ФИО*
+				input.form-control.form-control--border.js-required(type="text" placeholder="" required)
+			.form-group.-sm._input
+				._label E-mail*
+				input.form-control.form-control--border.js-required(type="email" placeholder="" required)
+			.form-group.-sm._input
+				._label Место работы
+				input.form-control.form-control--border(type="text" placeholder="")
+			.form-group.-sm._input
+				._label Должность
+				input.form-control.form-control--border(type="text" placeholder="")
+			.form-group.-sm._input
+				._label Телефон
+				input.form-control.form-control--border(type="phone" placeholder="")
+			.form-group.-sm._input
+				._label Адрес доставки
+				input.form-control.form-control--border.js-required(type="text" placeholder="" required)
+			.form-group.-sm._input
+				._label Пароль
+				input.form-control.form-control--border.js-required(type="password" placeholder="" required)
+			.form-group.-sm._input
+				._label Подтверждение пароля
+				input.form-control.form-control--border.js-required(type="password" placeholder="" required)
+			.checkbox.-sm._input
+				input#polic-02.js-required(type="checkbox" required)
+				label(for="polic-02") Я прочитал <a href="#">политику конфиденциальности и согласен</a> с ней
+			._buttons
+				button.btn.js-submit Зарегистрироваться
+		
+
+mixin popupCallBack()
+	+popup().popup--call-back#popup-call(attributes)
+		._title Отправьте ваш вопрос
+		form._form(action="") 
+			.form-group.-sm._input
+				._label Ваше имя*
+				input.form-control.form-control--border.js-required(type="text" placeholder="" required)
+			.form-group.-sm._input
+				._label E-mail*
+				input.form-control.form-control--border.js-required(type="email" placeholder="" required)
+			.form-group.-sm._input
+				._label Ваш вопрос
+				textarea.form-control(name="", cols="30", rows="10") 
+			.checkbox.-sm._input
+				input#polic-02.js-required(type="checkbox" required)
+				label(for="polic-02") Я прочитал <a href="#">политику конфиденциальности и согласен</a> с ней
+			._buttons
+				button.btn.js-submit Отправить
+		

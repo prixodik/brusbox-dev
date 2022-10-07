@@ -1,0 +1,113 @@
+.menu-block {
+	@include flex(space-between, center, center, nowrap);
+	&__item {
+		color: $black;
+		font: 500 16px/1 $baseFF;
+		position: relative;
+		@include time();
+		text-transform: uppercase;
+		flex: 1 1 auto;
+
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@include media($md) {
+			font: 11px/1 $baseFF;
+		}
+
+		& > a,
+		& > span {
+			white-space: nowrap;
+			@include time();
+		}
+
+		&.d-none {
+			display: none;
+		}
+
+		&.is-active,
+		&:hover {
+			& > a {
+				text-decoration: none;
+				//background-color: $green-dark;
+				color: $red;
+			}
+		}
+
+		&:hover {
+			.menu-block__sub {
+				display: block;
+			}
+		}
+	}
+
+	&__sub {
+		position: absolute;
+		top: 100%;
+		left: -1px;
+		right: -1px;
+		background-color: $white;
+		border: 1px $gray2 solid;
+		border-radius: 0 0 4px 4px;
+		z-index: 10;
+		display: none;
+
+		&-item {
+			padding: 10px 16px;
+			border-bottom: 1px $gray2 solid;
+			font: $fs-p2;
+			color: $black;
+			&:last-child {
+				border: 0;
+			}
+		}
+	}
+
+	&--nav & {
+		&__item {
+			text-transform: none;
+			font: bold 14px $baseFF;
+			margin-right: 32px;
+			color: $gray-medium;
+
+			&.is-active,
+			&:hover {
+				& > a {
+					color: $black;
+				}
+			}
+		}
+	}
+
+	@include media($lg) {
+		&__item {
+			//font: 16px/1.2 $baseFF;
+		}
+	}
+
+	@include media($md) {
+		//@include flex(space-between, center, center, nowrap);
+		&__item {
+			//font: 16px/1.2 $baseFF;
+
+			&.d-block_md {
+				display: block;
+			}
+		}
+		/* &__sub {
+			&-item {
+				font: $fs-p2-lg;
+			}
+		} */
+	}
+	@include media($xs) {
+		display: block;
+
+		&__item {
+		}
+	}
+}

@@ -1,0 +1,84 @@
+//- include ../count-block/template
+
+mixin iconInline(data)
+	.icon-inline&attributes(attributes)
+		a._link(href="#")
+		._icon
+			+svg(data.icon)
+		._wrap
+			!= data.text
+
+mixin iconInlineSearch(data)
+	.icon-inline.-default&attributes(attributes)
+		a._link.js-search-mob-show(href="#")
+		._icon
+			+svg(data.icon)
+
+mixin iconInlineDefault(data) 
+	.icon-inline.-default&attributes(attributes)
+		a._link(href="#")
+		._icon
+			._counter 2
+			+svg(data.icon)
+		if data.title || data.text
+			._wrap
+				._title
+					!= data.title
+				._text
+					!= data.text
+
+mixin iconInlineLogin(data)
+	.icon-inline.-default.-login&attributes(attributes)
+		a._link.js-popup-show(href="#popup-login")
+		._icon
+			+svg(data.icon) 
+
+mixin iconInlineCart(data)
+	.icon-inline.-default.-cart&attributes(attributes)
+		a._link(href="#")
+		._icon
+			._counter 16
+			img(src="/images/cart.svg" alt="")
+
+mixin iconInlineLogout(data)
+	.icon-inline.-default.-logout&attributes(attributes)
+		._icon
+			+svg(data.icon)
+		if data.title || data.text
+			._wrap
+				._title
+					!= data.title
+				._text
+					a(href="#") 
+						!= data.text
+		._hidden
+			._menu 
+				._menu-item 
+					a(href="#") Заказы
+				._menu-item 
+					a(href="#") Адреса доставки
+				._menu-item 
+					a(href="#") Бонусы и скидки
+				._menu-item 
+					a(href="#") Личные данные
+				._menu-item 
+					a(href="#") Уведомления
+				._menu-item 
+					a(href="#") Подписки
+				._menu-item 
+					a(href="#") 
+						span Выйти из профиля
+						+svg('exit')
+
+mixin iconInlinePhone(data)
+	.icon-inline&attributes(attributes)
+		._title 
+			!= data.title
+		._row
+			._icon
+				+svg(data.icon)
+			._wrap
+				._phone 
+					!= data.phone
+				p 
+					!= data.subtext

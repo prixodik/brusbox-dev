@@ -1,0 +1,176 @@
+html {
+	height: 100%;
+	//overflow-x: hidden;
+	&.overflow {
+		overflow: hidden;
+	}
+}
+body {
+	font-family: $baseFF;
+	color: $baseFClr;
+	font: $fs-p2-xlg;
+	min-height: 100%;
+	position: relative;
+	background: $baseBg;
+	overflow-x: hidden;
+	overflow-y: auto;
+	@include flex(space-between, stretch, stretch, nowrap, column);
+
+	&.checkout-page {
+		overflow: visible;
+	}
+
+	&.overflow {
+		overflow: hidden;
+		max-height: 100vh;
+		&:after {
+			content: "";
+			display: block;
+			background: $black;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 9;
+			opacity: 0.25;
+		}
+	}
+
+	@include media($lg) {
+		font: $fs-p2-lg;
+	}
+	@include media($xs) {
+		font: $fs-p3;
+	}
+}
+
+.ui-helper-hidden-accessible {
+	display: none;
+}
+
+input {
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+input[type="search"] {
+	-webkit-appearance: none;
+}
+
+button,
+input[type="submit"] {
+	@include transition();
+}
+
+/* p {
+	margin: 0 0 16px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+} */
+
+.color-green {
+	color: $green;
+}
+.color-link {
+	color: $link;
+}
+.color-red {
+	color: $red;
+}
+.color-blue-form,
+.color-form-blue {
+	color: $form-blue;
+}
+
+img {
+	max-width: 100%;
+}
+
+.slick-slider *,
+input,
+button,
+a:focus,
+a:hover {
+	outline: none !important;
+}
+* {
+	-webkit-locale: auto;
+	box-sizing: border-box;
+}
+*:after,
+*:before,
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.clearfix {
+	&:after {
+		content: "";
+		display: table;
+		width: 100%;
+		clear: both;
+	}
+}
+.container {
+	padding-left: $containerP;
+	padding-right: $containerP;
+	max-width: $containerW;
+	margin-left: auto;
+	margin-right: auto;
+
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&.container-fluid {
+		max-width: 100%;
+	}
+
+	&--xlg {
+		max-width: 1264px;
+	}
+
+	&--lg {
+		max-width: 1060px;
+	}
+
+	&--md {
+		max-width: 708px;
+	}
+
+	@include media($xlg) {
+		//max-width: 1360px;
+	}
+
+	@include media($lg) {
+		//max-width: 1060px;
+	}
+
+	@include media($md) {
+		max-width: 1120px;
+	}
+	@include media($xs) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.w-100 {
+	width: 100%;
+}
+
+hr {
+	border: 0;
+	border-top: 1px rgba($blue-dark, 0.2) solid;
+	margin: 24px 0;
+}
+
+.d-none,
+.hidden {
+	display: none;
+}

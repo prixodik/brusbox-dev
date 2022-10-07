@@ -1,0 +1,126 @@
+$title-h1: 500 36px/1.02 $titleFF;
+$title-h2: 600 32px/1.2 $titleFF;
+$title-h2-3: 600 28px/1.2 $titleFF;
+$title-h2-3-sm: 600 22px/1.2 $titleFF;
+$title-h2-3-xs: 600 18px/1.2 $titleFF;
+$title-h3: bold 24px/1.2 $baseFF;
+$title-h3-4: 600 20px/1.2 $baseFF;
+$title-h4: 600 16px/1.2 $baseFF;
+$title-h5: 600 14px/1.2 $titleFF;
+$title-h6: 600 12px/1.2 $baseFF;
+
+$title-h1-lg: 500 34px/1.02 $titleFF; // ?
+$title-h2-lg: 600 30px/1.2 $titleFF;
+$title-h3-lg: 600 16px/1.2 $baseFF;
+$title-h4-lg: 600 18px/1.4 $baseFF; // ?
+$title-h5-lg: 600 16px/1.4 $titleFF; // ?
+
+$title-h1-sm: 500 32px/1.02 $titleFF;
+$title-h2-sm: 600 26px/1.2 $titleFF;
+$title-h3-sm: bold 18px/1.2 $baseFF;
+$title-h4-sm: bold 18px/1.2 $baseFF;
+$title-h5-sm: 600 16px/1.2 $titleFF; // ?
+
+$title-h1-xs: 600 24px/1.03 $titleFF;
+$title-h2-xs: 600 20px/1.2 $titleFF;
+$title-h3-xs: 600 14px/1.2 $baseFF;
+$title-h4-xs: bold 14px/1.2 $baseFF;
+$title-h5-xs: 600 12px/1.2 $titleFF;
+
+$title-color: inherit;
+
+h1,
+.title-h1 {
+	font: $title-h1;
+	//color: $title-color;
+	margin: 0 0 24px 0;
+	@include media($md) {
+		font: $title-h1-lg;
+	}
+	@include media($sm) {
+		font: $title-h1-sm;
+	}
+	@include media($xxs) {
+		font: $title-h1-xs;
+	}
+}
+h2,
+.title-h2 {
+	font: $title-h2;
+	//color: $title-color;
+	margin: 0 0 24px 0;
+
+	@include media($md) {
+		font: $title-h2-lg;
+	}
+	@include media($sm) {
+		font: $title-h2-sm;
+	}
+	@include media($xs) {
+		font: $title-h2-xs;
+	}
+}
+h3,
+.title-h3 {
+	font: $title-h3;
+	//color: $title-color;
+	margin: 0 0 16px 0;
+
+	@include media($lg) {
+		font: $title-h3-lg;
+	}
+	@include media($sm) {
+		font: $title-h3-sm;
+	}
+	@include media($xs) {
+		font: $title-h3-xs;
+	}
+}
+h4,
+.title-h4 {
+	font: $title-h4;
+	//color: $title-color;
+	margin: 0 0 16px 0;
+
+	@include media($lg) {
+		//font: $title-h4-lg; margin-bottom: 20px;
+	}
+	@include media($sm) {
+		//font: $title-h4-sm; margin-bottom: 30px;
+	}
+	@include media($xs) {
+		font: $title-h4-xs;
+	}
+}
+h5,
+.title-h5 {
+	font: $title-h5;
+	//color: $title-color;
+	margin: 0 0 16px 0;
+
+	@include media($lg) {
+		//font: $title-h5-lg;
+	}
+	@include media($sm) {
+		//font: $title-h5-sm;
+	}
+	@include media($xs) {
+		font: $title-h5-xs;
+	}
+}
+
+.title-h6 {
+	font: $title-h6;
+	//color: $title-color;
+	margin: 0 0 16px 0;
+
+	@include media($lg) {
+		//font: $title-h5-lg;
+	}
+	@include media($sm) {
+		//font: $title-h5-sm;
+	}
+	@include media($xs) {
+		//font: $title-h5-xs;
+	}
+}

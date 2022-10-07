@@ -1,0 +1,108 @@
+.news-section {
+	padding: 48px 0;
+
+	&__title {
+		text-align: center;
+		margin-bottom: 24px;
+	}
+	&__row {
+		margin: 0 -20px -20px;
+		&-item {
+			padding: 0 20px;
+			margin-bottom: 20px;
+		}
+	}
+
+	@include media($lg) {
+		&__row {
+			margin: 0 -16px -16px;
+			&-item {
+				padding: 0 16px;
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	@include media($md) {
+		padding: 24px 0;
+
+		&__row {
+			margin: 0 -10px -16px;
+			&-item {
+				padding: 0 10px;
+				//margin-bottom: 16px;
+			}
+		}
+	}
+
+	@include media($xs) {
+		padding: 16px 0;
+
+		&__title {
+			margin-bottom: 16px;
+		}
+
+		&__row {
+			position: relative;
+			margin-bottom: 0;
+
+			&.slick-initialized {
+				padding: 0 32px;
+			}
+
+			&-item {
+				margin-bottom: 0;
+			}
+			.slick-prev {
+				position: absolute;
+				top: 50%;
+				left: 16px;
+				transform: translateY(-50%);
+			}
+			.slick-next {
+				position: absolute;
+				top: 50%;
+				right: 16px;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	&--other {
+		padding: 0;
+		margin-top: 24px;
+
+		@include media($lg) {
+			margin-top: 0;
+		}
+		@include media($md) {
+			padding-bottom: 20px;
+		}
+	}
+	&--other & {
+		&__title {
+			text-align: left;
+			margin-bottom: 24px;
+		}
+		&__back {
+			margin-top: 48px;
+		}
+
+		@include media($lg) {
+			&__back {
+				margin-top: 24px;
+			}
+		}
+		@include media($md) {
+			&__back {
+				display: none;
+			}
+		}
+		@include media($xs) {
+			&__title {
+				text-align: center;
+				margin-bottom: 16px;
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'index.html';
+	- var pageTitle = 'Структура сайта';
+	- var classBody = 'homepage';
+	//- var headerBg = 'images/main-banner.jpg';
+block styles
+	
+block content
+	.main-section
+		.container
+			h1 Cтраницы проекта
+			
+			+listLink({
+				tagName: 'ol',
+					items: [
+						{ttl: 'Главная страница', url: 'main.html', target: '_blank'},
+					]
+				})
+
+
+block scripts

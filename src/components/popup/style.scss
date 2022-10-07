@@ -1,0 +1,286 @@
+.popup {
+	position: fixed;
+	top: 0;
+	left: -10000px;
+	width: 100%;
+	z-index: 9999;
+	height: 100%;
+	display: block;
+	visibility: hidden;
+	pointer-events: none;
+	opacity: 0;
+	padding: 70px 30px;
+	overflow-y: auto;
+	//@include time(0.4s, opacity);
+	transition: left 0s ease 0.5s, opacity 0.1s ease;
+
+	&__overflow {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		display: block;
+		background: rgba($black, 0.68);
+	}
+
+	&__wrapper {
+		position: relative;
+		width: 100%;
+		padding: 48px;
+		max-width: 810px;
+		margin: auto;
+		z-index: 1;
+		background: $white;
+		border-radius: 8px;
+		transform: translateY(150px) rotateX(-85deg);
+		opacity: 0;
+		@include time(0.4s);
+		perspective: 1000px;
+		perspective-origin: 50% 50%;
+	}
+
+	&__close {
+		width: 22px;
+		height: 22px;
+		cursor: pointer;
+		position: absolute;
+		top: 9px;
+		z-index: 10;
+		right: 9px;
+		margin: 0;
+		padding: 0;
+		visibility: visible;
+		@include time();
+		@include flex(center, center, center);
+
+		svg {
+			fill: $gray2;
+			font-size: 22px;
+			@include time();
+		}
+
+		&:hover {
+			svg {
+				fill: $black;
+			}
+		}
+	}
+	&__title {
+		text-align: center;
+		margin: 0 0 24px;
+		font: bold 24px/1.2 $baseFF;
+		color: $black;
+	}
+	&__desc {
+		text-align: center;
+		margin-bottom: 32px;
+		font: $fs-p2;
+		color: $black;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__input {
+		margin-bottom: 20px;
+	}
+	&__form {
+		margin: 0 auto;
+		max-width: 402px;
+	}
+	&__buttons {
+		margin-top: 40px;
+		margin-bottom: -16px;
+		@include flex(center);
+
+		.btn {
+			margin: 0 16px 16px;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&.is-active,
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		left: 0;
+		pointer-events: auto;
+		transition: left 0s ease, opacity 0.1s ease;
+	}
+	&.is-active &,
+	&.active & {
+		&__wrapper {
+			transform: translateY(0) scale(1, 1) rotateX(0);
+			opacity: 1;
+		}
+	}
+
+	@include media($xs) {
+		&__wrapper {
+			padding: 48px 24px;
+		}
+		&__close {
+			width: 12px;
+			height: 12px;
+			top: 8px;
+			right: 8px;
+			svg {
+				font-size: 12px;
+			}
+		}
+		&__title {
+			margin: 0 0 16px;
+			font: $title-h2-xs;
+		}
+		&__desc {
+			margin-bottom: 16px;
+			font: $fs-p2-xs;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	/********* MODS *********************/
+
+	&--add-product & {
+		&__wrapper {
+			padding: 56px 24px 48px;
+			max-width: 530px;
+		}
+		&__title {
+			color: $black;
+			font: $title-h3;
+			margin-bottom: 40px;
+		}
+
+		@include media($xs) {
+			&__wrapper {
+				padding: 44px 28px;
+			}
+
+			&__title {
+				margin-bottom: 32px;
+				font: $title-h2-xs;
+			}
+			&__buttons {
+				display: block;
+				margin-top: 34px;
+				.btn {
+					width: 100%;
+					margin: 0 0 16px;
+				}
+			}
+		}
+	}
+
+	&--finish & {
+		&__wrapper {
+			padding-top: 50px;
+			padding-bottom: 50px;
+			max-width: 490px;
+		}
+
+		&__title {
+			margin-bottom: 24px;
+		}
+
+		@include media($xs) {
+			&__wrapper {
+				padding: 40px 28px;
+			}
+
+			&__title {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&--registration & {
+		&__wrapper {
+			padding: 48px;
+			max-width: 640px;
+		}
+		&__form {
+			max-width: 100%;
+		}
+
+		@include media($xs) {
+			&__wrapper {
+				padding: 20px 28px 28px;
+			}
+
+			&__title {
+				margin-bottom: 16px;
+				font-size: 18px;
+			}
+			&__input {
+				margin-bottom: 16px;
+			}
+
+			&__buttons {
+				margin-top: 16px;
+				.btn {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&--login & {
+		@include media($xs) {
+			&__buttons {
+				margin: 40px -4px 0;
+				.btn {
+					width: auto;
+					flex: 1 1 auto;
+					margin: 0 4px;
+				}
+			}
+		}
+	}
+
+	&--call-back & {
+		&__wrapper {
+			padding: 48px;
+			max-width: 640px;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+		}
+
+		&__form {
+			max-width: 100%;
+		}
+
+		@include media($xs) {
+			&__wrapper {
+				padding: 20px 28px 28px;
+			}
+
+			&__title {
+				margin-bottom: 16px;
+				font-size: 18px;
+			}
+			&__input {
+				margin-bottom: 16px;
+			}
+
+			&__buttons {
+				margin-top: 16px;
+				.btn {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

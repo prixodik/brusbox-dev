@@ -1,0 +1,53 @@
+include ../news-block/template
+
+mixin newsSection(data)
+	.news-section&attributes(attributes)
+		._container.container 
+			._title.title-h2 Новости
+			._row.row.row--stretch.js-default-xs-slider
+				._row-item.col-4.col-xs-12
+					+newsBlock({
+						img: 'images/news-img-1.jpg',
+						title: 'Дентима 2021, Краснодар',
+						text: 'Приглашаем вас на 20-ю Юбилейную стоматологическую выставку Дентима 2021, Краснодар, 19 - 21 мая'
+					})
+				._row-item.col-4.col-xs-12
+					+newsBlock({
+						img: 'images/news-img-2.jpg',
+						title: 'Временные материалы',
+						text: 'Приглашаем вас на 20-ю Юбилейную стоматологическую выставку Дентима 2021, Краснодар, 19 - 21 мая'
+					})
+				._row-item.col-4.col-xs-12
+					+newsBlock({
+						img: 'images/news-img-3.jpg',
+						title: 'Дентима 2021, Краснодар',
+						text: 'Временные риглашаем вас на 20-ю Юбилейную стоматологическую выставку Дентима 2021, Краснодар, 19 - 21 маяматериалы'
+					})
+
+mixin newsSectionOther(data)
+	.news-section.-other&attributes(attributes)
+		._container.container 
+			._title.title-h2 Другие новости
+			._row.row.row--stretch.js-default-xs-slider
+				._row-item.col-4.col-xs-12
+					+newsBlock({
+						img: 'images/news-img-1.jpg',
+						title: 'Дентима 2021, Краснодар',
+						text: 'Приглашаем вас на 20-ю Юбилейную стоматологическую выставку Дентима 2021, Краснодар, 19 - 21 мая'
+					})
+				._row-item.col-4.col-xs-12
+					+newsBlock({
+						img: 'images/news-img-2.jpg',
+						title: 'Временные материалы',
+						text: 'Приглашаем вас на 20-ю Юбилейную стоматологическую выставку Дентима 2021, Краснодар, 19 - 21 мая'
+					})
+				._row-item.col-4.col-xs-12
+					+newsBlock({
+						img: 'images/news-img-3.jpg',
+						title: 'Дентима 2021, Краснодар',
+						text: 'Временные риглашаем вас на 20-ю Юбилейную стоматологическую выставку Дентима 2021, Краснодар, 19 - 21 маяматериалы'
+					})
+			._back
+				a.icon-inline.-default.-green(href="#")
+					img._icon(src="/images/back.svg" alt="")
+					span._text Назад

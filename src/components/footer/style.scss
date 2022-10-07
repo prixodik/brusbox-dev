@@ -1,0 +1,77 @@
+.footer {
+	padding: 40px 0;
+	margin-top: 80px;
+	position: relative;
+	color: $black;
+	z-index: 3;
+	background-color: $white;
+	border-top: 1px $gray-200 solid;
+
+	&--mt0 {
+		margin-top: 0;
+	}
+
+	&__logo {
+		margin-bottom: 9px;
+		max-width: 152px;
+
+		&-col {
+			@include flex(space-between, stretch, stretch, nowrap, column);
+		}
+	}
+	&__slogan {
+		font: 300 14px/1.1 $baseFF;
+		color: $black;
+	}
+
+	&__title {
+		font: bold 14px/1.1 $baseFF;
+		margin-bottom: 20px;
+	}
+	&__menu {
+		&-item {
+			margin-bottom: 8px;
+			font: 300 13px/1 $baseFF;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__contacts {
+		@include flex(0, center, center);
+		font: $fs-p5;
+		margin-bottom: 10px;
+	}
+	&__phone {
+		margin-right: 18px;
+	}
+	&__soc-2 {
+		flex: 0 0 auto;
+		flex-wrap: nowrap;
+		margin: 0 60px 0 0;
+	}
+	&__call {
+		font: $fs-p5;
+		margin-right: 60px;
+	}
+	&__search {
+		margin-bottom: 26px;
+	}
+	&__bottom {
+		@include flex(space-between, center, center);
+	}
+	&__copyright {
+		font: $fs-p6-light;
+
+		a {
+			text-decoration: none;
+		}
+		p {
+			margin-bottom: 8px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+mixin newsBlock(data)
+	.news-block&attributes(attributes)
+		._img 
+			a(href="#") 
+				+webp(data.img)
+		._date 19.05.2021
+		._title 
+			a(href="#") 
+				!= data.title
+		._text
+			!= data.text
+
+mixin newsBlockDefault(data)
+	.news-block.-default&attributes(attributes)
+		._img 
+			a(href="#") 
+				+webp(data.img)
+		._title 
+			a(href="#") 
+				!= data.title
+		if data.text
+			._text
+				!= data.text
+
+mixin newsBlockDiscount(data)
+	.news-block.-discount&attributes(attributes)
+		._img 
+			a(href="#") 
+				+webp(data.img)
+		._wrap
+			._title 
+				a(href="#") 
+					!= data.title
+			if data.text
+				._text
+					!= data.text
+
+mixin newsBlockFile(data)
+	.news-block.-file&attributes(attributes)
+		._title 
+			a(href="#") 
+				!= data.title
+		._bottom
+			._params 
+				._params-size PDF / 12,2 Мб
+				._params-date 22.01.2021
+			a._more(href="#") Скачать

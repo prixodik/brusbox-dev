@@ -1,0 +1,110 @@
+.soc-list {
+	@include flex();
+
+	&__item {
+		margin-right: 4px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		a {
+			border: 0;
+			@include flex(center, center, center);
+			width: 24px;
+			height: 24px;
+
+			&:hover {
+				svg {
+					fill: $red;
+				}
+			}
+		}
+
+		svg,
+		img {
+			width: 24px;
+			height: 24px;
+			display: block;
+			fill: $black;
+			@include time();
+		}
+	}
+
+	&--header & {
+		&__item {
+			flex: 0 0 28px;
+			max-width: 28px;
+			height: 28px;
+			margin-right: 8px;
+			@include flex(center, center, center);
+			flex-wrap: nowrap;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			svg {
+				fill: $black;
+				display: block;
+				max-width: 18px;
+				max-height: 18px;
+			}
+		}
+	}
+
+	/* &--center{ @include flex(space-between,0,0,nowrap); margin-bottom: -10px; }
+	&--center &{
+		&__item{ margin: 0 5px 10px; 
+			&:first-child{ margin-left: 0; }
+			&:last-child{ margin-right: 0; }
+		}
+	}
+
+	&--right{ @include flex(flex-end,0,0,nowrap); margin-bottom: -20px; }
+	&--right &{
+		&__item{ margin: 0 0 20px 36px; 
+			&:first-child{ margin-left: 0; }
+		}
+	} */
+
+	@include media($md) {
+		&__item {
+			margin-right: 8px;
+			margin-bottom: 8px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			a {
+				width: 36px;
+				height: 36px;
+			}
+			svg,
+			img {
+				width: 36px;
+				height: 36px;
+			}
+		}
+	}
+
+	@include media($xs) {
+		//@include flex(center, center, center);
+
+		/* &__item {
+			&:last-child {
+				margin-bottom: 20px;
+			}
+		}
+
+		&--vertical & {
+			&__item {
+				margin: 0 10px 20px;
+				&:last-child {
+					margin-bottom: 20px;
+				}
+			}
+		} */
+	}
+}

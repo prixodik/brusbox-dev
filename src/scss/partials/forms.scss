@@ -1,0 +1,152 @@
+.input {
+	position: relative;
+	&__edit {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 8px;
+		svg {
+			width: 24px;
+			height: 24px;
+			display: block;
+			fill: $gray2;
+		}
+	}
+}
+.form-group {
+	// margin: 0 0 15px;
+	position: relative;
+	// padding: 20px 0 0;
+	&__label {
+		font: $fs-p3;
+		color: $gray-greenish;
+		@include time();
+		margin-bottom: 4px;
+
+		&--lg {
+			font: $fs-p2;
+		}
+	}
+
+	&--inline {
+		@include flex(0, center, center, nowrap);
+	}
+	&--inline & {
+		&__label {
+			font: $title-h4;
+			color: $black;
+			margin: 0 16px 0 0;
+		}
+
+		@include media($md) {
+			&__label {
+				font: 600 14px $baseFF;
+			}
+		}
+	}
+
+	@include media($xs) {
+		&__label {
+			font: $fs-p2-xs;
+
+			&--lg {
+				font: $fs-p2-xs;
+			}
+		}
+
+		/* &__currency {
+			font: 16px/28px $baseFF;
+			padding: 37px 20px 0;
+		}
+		&__desc {
+			margin: 8px 0 0 20px;
+		} */
+	}
+}
+
+.error-message {
+	display: none;
+	color: $red;
+}
+
+.form-control {
+	border: 1px solid $gray2;
+	padding: 10px 20px;
+	font: 16px/18px $baseFF;
+	background: $white;
+	color: $black;
+	display: block;
+	width: 100%;
+	border-radius: 4px;
+
+	&.is-error {
+		border-color: $red !important;
+	}
+
+	&::-webkit-input-placeholder {
+		opacity: 1;
+		color: $gray2;
+	}
+	&::-moz-placeholder {
+		opacity: 1;
+		color: $gray2;
+	}
+
+	&:focus {
+		outline: none; /* border-color: $gray-devider; background: $gray-devider;  */
+	}
+
+	//&--white{ border-color: $white; color: $white;  }
+
+	&--center {
+		text-align: center;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	/* &--default {
+		border: 2px $white solid;
+		background: $white;
+		padding: 10px 15px;
+		font: 15px/18px $baseFF;
+		border-radius: 3px;
+		&:focus {
+			box-shadow: 0 3px 7px rgba($black, 0.1);
+		}
+
+		&.is-error {
+			border-color: $red !important;
+		}
+	} */
+
+	/* @include placeholder {
+		color: #adadad;
+		opacity: 1;
+	} */
+
+	@include media($xs) {
+		padding: 8px 16px;
+		font-size: 16px;
+	}
+}
+
+textarea {
+	resize: none;
+	border: 0;
+	&:focus {
+		box-shadow: none;
+		outline: none;
+	}
+	&::-webkit-input-placeholder {
+		opacity: 1;
+		color: $gray2;
+	}
+	&::-moz-placeholder {
+		opacity: 1;
+		color: $gray2;
+	}
+}
+
+textarea.form-control {
+	height: 120px;
+}
