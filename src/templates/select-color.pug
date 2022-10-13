@@ -18,13 +18,15 @@ block content
 				.main-section__right.col-6.col-sm-12 
 					p Мы любим белый цвет – он универсален, но для тех, кому не подходят стандартные решения, компания «БРУСБОКС» предлагает большой выбор расцветок оконного профиля. 
 					p Хотите гармонично вписать ваши окна в интерьер? Выберите любой вариант из 96 цветов каталога ламинации немецкой фирмы «RENOLIT» и наслаждайтесь результатом. Мы используем немецкий клей «KLEIBERIT», благодаря которому пленка не отслаивается даже в самых суровых условиях.
-			include ../components/colors-block/template
-			+colorsBlock().main-section__colors
-		include ../components/contact-section/template
-		+contactSectionOrder().main-section__contact-section
+					
+	include ../components/colors-section/template
+	+colorsSection()
 
-		include ../components/questions-section/template
-		+questionsSection().main-section__questions-section
+	include ../components/contact-section/template
+	+contactSectionOrder()
+
+	include ../components/questions-section/template
+	+questionsSection()
 
 	//- +gridLayout()  
 
