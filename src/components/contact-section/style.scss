@@ -10,4 +10,21 @@
 	}
 	&__right {
 	}
+
+	&--order & {
+		&__banner {
+			display: block;
+			@include media($sm) {
+				max-height: 348px;
+				max-width: 700px;
+				width: 100%;
+				margin: 40px auto 0 ;
+			}
+			@include media($xs) {
+				min-height: 348px;
+				object-fit: cover;
+				object-position: left;
+			}
+		}
+	}
 }

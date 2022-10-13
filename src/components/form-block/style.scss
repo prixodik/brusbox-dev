@@ -37,6 +37,7 @@
 			}
 			&::placeholder {
 				font: 300 18px/19px $baseFF;
+				color: $black;
 				@include media($xs) {
 					font: 300 13px/14px $baseFF;
 				}
@@ -61,6 +62,7 @@
 				@include media($xs) {
 					font: 300 13px/14px $baseFF;
 				}
+				color: $black;
 			}
 			&:focus {
 				border-bottom: 1px solid $black;
@@ -89,5 +91,12 @@
 
 	&__buttons {
 		@include flex(space-between);
+	}
+	&--order & {
+		&__title {
+			@include media($xs) {
+				margin-bottom: 16px;
+			}
+		}
 	}
 }

@@ -59,4 +59,13 @@
 			}
 		}
 	}
+	&--select-color & {
+		&__contact-section {
+			background-color: $bg-grey;
+			padding: 60px 0;
+			@include media($sm) {
+				padding: 40px 0;
+			}
+		}
+	}
 }
