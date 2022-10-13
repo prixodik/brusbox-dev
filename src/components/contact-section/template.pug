@@ -8,3 +8,13 @@ mixin contactSection(data)
 					._title.title-h2 Обратная<br> связь
 				._right.col-6.col-sm-12
 					+formBlockContacts._form
+
+mixin contactSectionOrder(data)
+	.contact-section.--order&attributes(attributes)
+		._container.container
+			._row.row
+				._left.col-6.col-sm-12
+					+formBlockContactsOrder._form
+				._right.col-6.col-sm-12
+					img(src="images/order-banner.jpg", alt="")._banner
+					

@@ -1,0 +1,31 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'color-solution.html';
+	- var pageTitle = 'Покупателям: Выбор цвета';
+	- var classBody = 'color-solution-page';
+	- var headerBg = 'images/main-banner.jpg';
+block styles
+	
+block content
+	include ../components/main-section/template
+	+mainSection({
+		bread: [{url: '#', title: 'Профессионалам рынка'},{url: '#', title: 'Цветовые решения'}]
+	}).main-section--color-solutions.--select-color
+		.main-section__container.container
+			h1.main-section__title Выберите цвет
+			.main-section__info.row
+				.main-section__left.col-6.col-sm-12 Кто сказал, что окно должно быть белым? «БРУСБОКС» считает, что покупатель вправе сам решать, какого цвета будут окна в его доме.
+				.main-section__right.col-6.col-sm-12 
+					p Мы любим белый цвет – он универсален, но для тех, кому не подходят стандартные решения, компания «БРУСБОКС» предлагает большой выбор расцветок оконного профиля. 
+					p Хотите гармонично вписать ваши окна в интерьер? Выберите любой вариант из 96 цветов каталога ламинации немецкой фирмы «RENOLIT» и наслаждайтесь результатом. Мы используем немецкий клей «KLEIBERIT», благодаря которому пленка не отслаивается даже в самых суровых условиях.
+			include ../components/colors-block/template
+			+colorsBlock().main-section__colors
+		include ../components/contact-section/template
+		+contactSectionOrder().main-section__contact-section
+
+		include ../components/questions-section/template
+		+questionsSection().main-section__questions-section
+
+	//- +gridLayout()  
+
+block scripts 

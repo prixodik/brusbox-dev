@@ -1,0 +1,25 @@
+mixin questionBlock(data)
+	.question-block&attributes(attributes)
+		._container.container
+			._row.row
+				._img.col-6.col-md-12
+					img(src=data.img, alt="")
+				._info.col-6.col-md-12
+					._title
+						!=data.title 
+					._text
+						!=data.text
+
+mixin questionBlockMode(data)
+	.question-block.--mode&attributes(attributes)
+		._container.container
+			._row.row
+				._img-1.col-3.col-md-12
+					img(src=data.imgLeft, alt="")
+				._info.col-6.col-md-12
+					._title
+						!=data.title 
+					._text
+						!=data.text
+				._img-2.col-3.col-md-12
+					img(src=data.imgRight, alt="")

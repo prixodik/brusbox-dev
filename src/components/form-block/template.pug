@@ -17,3 +17,18 @@ mixin formBlockContacts()
 				._agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность,<br>согласие на обработку персональных данных в соответствии с указанным здесь текстом
 				._buttons
 					button.btn.-red.js-submit(type="submit") Отправить
+
+mixin formBlockContactsOrder()
+	.form-block.--order&attributes(attributes)
+		h4._title Закажите лучшие окна в BRUSBOX!
+		._subtitle Оставьте заявку и наш специалист свяжется с вами для расчета
+		form(action="")
+			._row
+				._inputs
+					._input
+						input.form-control.js-required(type="text" placeholder="Ваше имя*" required)
+					._input
+						input.form-control.js-required(type="tel" placeholder="Телeфон*" required)
+				._agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность,<br>согласие на обработку персональных данных в соответствии с указанным здесь текстом
+				._buttons
+					button.btn.-red.js-submit(type="submit") Отправить
