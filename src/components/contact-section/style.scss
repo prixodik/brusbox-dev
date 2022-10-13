@@ -1,9 +1,18 @@
 .contact-section {
+	background-color: $bg-grey;
+	padding: 60px 0 80px;
+
+	@include media($sm) {
+		padding: 40px 0;
+	}
+
 	&__row {
 	}
 	&__left {
 	}
 	&__title {
+		text-transform: uppercase;
+
 		@include media($xs) {
 			margin-bottom: 16px;
 		}

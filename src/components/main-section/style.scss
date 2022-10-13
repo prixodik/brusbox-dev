@@ -4,6 +4,7 @@
 
 	&__bread {
 		margin: 24px 0 20px;
+
 		@include media($sm) {
 			margin: 21px 0 14px;
 		}
@@ -12,6 +13,7 @@
 		&__left {
 			letter-spacing: 0.02em;
 			font: 300 36px/36px $baseFF;
+
 			@include media($md) {
 				font: 300 28px/34px $baseFF;
 			}
@@ -23,24 +25,10 @@
 				font: 300 16px/16px $baseFF;
 			}
 		}
-		&__colors {
-			padding-bottom: 90px;
-			@include media($md) {
-				padding-bottom: 60px;
-			}
-			@include media($xs) {
-				padding-bottom: 30px;
-			}
-		}
-		&__contact-section {
-			background-color: $bg-grey;
-			padding: 60px 0 80px;
-			@include media($sm) {
-				padding: 40px 0;
-			}
-		}
+
 		&__right {
 			font: 300 18px/20px $baseFF;
+
 			@include media($md) {
 				font: 300 28px/34px $baseFF;
 			}
@@ -52,10 +40,8 @@
 			}
 		}
 		&__info {
-			margin-bottom: 64px;
 			@include media($sm) {
 				flex-direction: column;
-				margin-bottom: 56px;
 			}
 		}
 	}

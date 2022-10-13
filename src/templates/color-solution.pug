@@ -19,10 +19,12 @@ block content
 					p В настоящее время компания «БРУСБОКС» поставляет на рынок более одного миллиона погонных метров ламинированного профиля.<br> Наша компания уделяет особое внимание процессу ламинации. Профиль ламинируется в специальном ламинационном цеху в соответствии со всеми существующими нормативами. 
 					p Срок от заказа до отгрузки стандартной цветовой палитры ламинации составляет не более 3 дней!
 					p В дополнение к основному белому цвету были дополнительно разработаны три цветных профиля в массе: «шоколад», «карамель» и «серый».
-			include ../components/colors-block/template
-			+colorsBlock().main-section__colors
-		include ../components/contact-section/template
-		+contactSection().main-section__contact-section
+
+	include ../components/colors-section/template
+	+colorsSection().main-section__colors
+
+	include ../components/contact-section/template
+	+contactSection().main-section__contact-section
 
 
 	//- +gridLayout()  
