@@ -35,7 +35,7 @@ html
     meta(name="author" content="Site name")
 
     // og meta
-    meta(property='og:title', content='Site name') 
+    meta(property='og:title', content='Site name')
     meta(property='og:url', content='')
     meta(property='og:image', content='')
     meta(property='og:description', content='Site name')
@@ -53,14 +53,14 @@ html
     block body
       block header
         include ../../components/header/template
-        +header()
+        //- +header()
 
       block main 
         block content
 
       block footer
         include ../../components/footer/template 
-        +footer()
+        //- +footer()
 
       block popups
         include ../../components/popup/template

@@ -1,0 +1,13 @@
+.contact-section {
+	&__row {
+	}
+	&__left {
+	}
+	&__title {
+		@include media($xs) {
+			margin-bottom: 16px;
+		}
+	}
+	&__right {
+	}
+}

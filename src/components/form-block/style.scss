@@ -1,172 +1,93 @@
 .form-block {
 	&__title {
-		font: bold 18px/1.2 $baseFF;
-		margin-bottom: 24px;
+		margin-bottom: 16px;
 		color: $black;
+		@include media($xs) {
+			margin-bottom: 26px;
+			color: $black;
+		}
 	}
-	&__desc {
-		/* text-align: center;
-		margin-bottom: 45px;
-		color: $text-green-dark;
-		font: $fs-18; */
+	&__subtitle {
+		font: 300 13px/14px $baseFF;
+		margin-bottom: 27px;
 	}
 
 	&__row {
 	}
 	&__input {
-		margin-bottom: 20px;
+		margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 20px;
+		}
+		@include media($xs) {
+			margin-bottom: 48px;
+			&:last-child {
+				margin-bottom: 17px;
+			}
+		}
+		textarea {
+			font: 300 18px/19px $baseFF;
+			padding: 13px;
+			border: 1px solid $gray;
+			width: 100%;
+			min-height: 103px;
+			background-color: transparent;
+			@include media($xs) {
+				font: 300 13px/14px $baseFF;
+			}
+			&::placeholder {
+				font: 300 18px/19px $baseFF;
+				@include media($xs) {
+					font: 300 13px/14px $baseFF;
+				}
+				
+			}
+			&:focus {
+				border: 1px solid $black;
+			}
+		}
+		input {
+			width: 100%;
+			font: 300 18px/19px $baseFF;
+			background-color: transparent;
+			padding: 13px 0;
+			border: none;
+			border-bottom: 1px solid $gray;
+			@include media($xs) {
+				font: 300 13px/14px $baseFF;
+			}
+			&::placeholder {
+				font: 300 18px/19px $baseFF;
+				@include media($xs) {
+					font: 300 13px/14px $baseFF;
+				}
+			}
+			&:focus {
+				border-bottom: 1px solid $black;
+			}
+			@include media($xs) {
+				padding: 9px 0;
+				font: 300 13px/14px $baseFF;
+			}
+		}
+	}
+	&__label {
+	}
+
+	&__agree {
+		font: 300 13px/13px $baseFF;
+		color: $gray-medium;
+		margin-bottom: 40px;
+		@include media($sm) {
+			margin-bottom: 30px;
+		}
+		@include media($xs) {
+			margin-bottom: 16px;
+			font: 300 10px/10px $baseFF;
+		}
 	}
 
 	&__buttons {
 		@include flex(space-between);
-	}
-
-	/* &--popup & {
-		&__desc {
-			margin-bottom: 30px;
-			font: $fs-16;
-			color: $text-form;
-		}
-		&__title {
-			font: bold 27px $baseFF;
-			margin-bottom: 16px;
-		}
-	} */
-
-	&--call-back & {
-		&__upload {
-			margin-bottom: 52px;
-			@include flex(space-between, center, center, nowrap);
-			&-label {
-				font: 18px/1.2 $baseFF;
-				color: $gray-greenish;
-			}
-		}
-
-		&__buttons {
-			@include flex(center);
-		}
-
-		@include media($lg) {
-			&__upload {
-				margin-bottom: 44px;
-			}
-		}
-
-		@include media($xs) {
-			&__upload {
-				margin-bottom: 20px;
-				&-label {
-					font: $fs-p2-xs;
-				}
-			}
-		}
-	}
-
-	&--payments,
-	&--delivery {
-		border: 1px $gray2 solid;
-		padding: 24px;
-
-		@include media($xs) {
-			padding: 16px;
-		}
-	}
-
-	&--payments &,
-	&--delivery & {
-		&__title {
-			margin-bottom: 24px;
-			font: $title-h3-4;
-		}
-		&__row {
-			margin: 0 -32px -24px;
-			&-item {
-				padding: 0 32px;
-				margin-bottom: 24px;
-			}
-		}
-
-		@include media($lg) {
-			&__title {
-				font: $title-h3-lg;
-			}
-			&__row {
-				margin: 0 -10px -24px;
-				&-item {
-					padding: 0 10px;
-					margin-bottom: 24px;
-				}
-			}
-		}
-
-		@include media($xs) {
-			&__title {
-				margin-bottom: 8px;
-			}
-			&__row {
-				margin: 0 -10px -12px;
-				&-item {
-					padding: 0 10px;
-					margin-bottom: 12px;
-				}
-			}
-		}
-	}
-
-	@include media($lg) {
-		&__buttons {
-			flex-wrap: wrap;
-			flex-direction: column;
-			.btn {
-				order: 99;
-			}
-		}
-		&__capcha {
-			margin-bottom: 20px;
-		}
-	}
-	@include media($sm) {
-		&__file {
-			margin: 0 0 40px 0;
-		}
-		&__police {
-			margin: 0 0 40px 0;
-		}
-	}
-	@include media($xs) {
-		&__title {
-			margin-bottom: 16px;
-			font: $title-h2-3-xs;
-		}
-
-		&__input {
-			margin-bottom: 16px;
-		}
-
-		/* &__desc {
-			margin-bottom: 25px;
-			font: $fs-16;
-			strong {
-				display: block;
-			}
-		} */
-		/* &__file {
-			margin: 0 0 16px 0;
-		}
-		&__police {
-			margin: 0 0 30px 0;
-		} */
-
-		/* &--popup & {
-			&__desc {
-				margin-bottom: 24px;
-				font: $fs-14;
-			}
-			&__title {
-				font: bold 20px $baseFF;
-				margin-bottom: 16px;
-			}
-		} */
 	}
 }

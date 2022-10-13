@@ -6020,8 +6020,6 @@ Made by Hernán Sartorio  */
 
 }(jQuery));
 
-
-
 var uikit = {
 
 	lg: '1450',
@@ -6052,9 +6050,17 @@ var uikit = {
 
 	mask: function () {
 
-		$("input[type='tel']").mask('+7 (000) 000-0000', { placeholder: '+7 (___) ___-____' });
+		$("input[type='tel']").mask('+7 (000) 000-0000', {
 
-		$("input.js-mask-sms").mask('0 0 0 0 0 0', { placeholder: '_ _ _ _ _ _' });
+			placeholder: '+7 (___) ___-____'
+
+		});
+
+		$("input.js-mask-sms").mask('0 0 0 0 0 0', {
+
+			placeholder: '_ _ _ _ _ _'
+
+		});
 
 	},
 
@@ -6120,6 +6126,134 @@ var uikit = {
 
 
 
+	///------------------------------------------------используются в текущем проекте-----------------------------------------------
+
+	chengeColorPalette: function () {
+
+		let id = undefined;
+
+		//let id = undefined;
+
+		$('.js-palette').click(function () {
+
+
+
+			id = $(this).data('id');
+
+			$('.js-palette').removeClass('is-active');
+
+			$(this).addClass('is-active');
+
+			if (id !== undefined) {
+
+				$(".js-pallette-chenge img").attr("src", `images/color-sol-${id}.png`);
+
+			}
+
+
+
+			$(".js-pallette-chenge img:not(.is-active)").attr("src", `images/color-sol-${id}.png`);
+
+
+
+			// setTimeout(function () {
+
+			// 	var a = $('.js-pallette-chenge img.is-active');
+
+			// 	var nota = $('.js-pallette-chenge img:not(.is-active)');
+
+			// 	a.removeClass('is-active');
+
+			// 	nota.addClass('is-active');
+
+			// }, 1000);
+
+			let a = $('.js-pallette-chenge img.is-active');
+
+			let nota = $('.js-pallette-chenge img:not(.is-active)');
+
+			a.removeClass('is-active');
+
+			nota.addClass('is-active');
+
+		});
+
+
+
+		$('.js-palette-profile').click(function () {
+
+
+
+			id = $(this).data('id');
+
+			$('.js-palette-profile').removeClass('is-active');
+
+			$(this).addClass('is-active');
+
+			if (id !== undefined) {
+
+				$(".js-pallette-profile-chenge img").attr("src", `images/color-sol-${id}.png`);
+
+			}
+
+
+
+			$(".js-pallette-profile-chenge img:not(.is-active)").attr("src", `images/color-sol-second-img-${id}.png`);
+
+
+
+			// setTimeout(function () {
+
+			// 	var a = $('.js-pallette-chenge img.is-active');
+
+			// 	var nota = $('.js-pallette-chenge img:not(.is-active)');
+
+			// 	a.removeClass('is-active');
+
+			// 	nota.addClass('is-active');
+
+			// }, 1000);
+
+			let a = $('.js-pallette-profile-chenge img.is-active');
+
+			let nota = $('.js-pallette-profile-chenge img:not(.is-active)');
+
+			a.removeClass('is-active');
+
+			nota.addClass('is-active');
+
+		});
+
+
+
+		// let id = undefined;
+
+		// $('#js-palette').click(function () {
+
+		// 	console.log($(this).dataset.id)
+
+		// 	id = e.target.dataset.id
+
+		// 	$('#js-palette').children('img.is-active').removeClass('is-active');
+
+		// 	e.target.classList.add('is-active')
+
+		// 	if(id != undefined) {
+
+		// 		$('.js-pallette-chenge img').attr("src", `images/color-sol-${e.target.dataset.id}.png`)
+
+		// 	}
+
+		// 	// console.log(src)
+
+		// })
+
+	},
+
+	///-----------------------------------------------------------------------------------------------------------------------------
+
+
+
 	countBlock: function () {
 
 		// Количество +-
@@ -6158,7 +6292,9 @@ var uikit = {
 
 		function formatSize(length) {
 
-			var i = 0, type = ['б', 'Кб', 'Мб', 'Гб', 'Тб', 'Пб'];
+			var i = 0,
+
+				type = ['б', 'Кб', 'Мб', 'Гб', 'Тб', 'Пб'];
 
 			while ((length / 1000 | 0) && i < type.length - 1) {
 
@@ -6386,6 +6522,8 @@ var uikit = {
 
 			classError = 'is-error';
 
+
+
 		function error(el) {
 
 			$(el)
@@ -6402,6 +6540,8 @@ var uikit = {
 
 		}
 
+
+
 		function validate(el) {
 
 			$(el)
@@ -6417,6 +6557,8 @@ var uikit = {
 				.addClass(classValidate);
 
 		}
+
+
 
 		function reset(el) {
 
@@ -6450,13 +6592,15 @@ var uikit = {
 
 		});
 
+
+
 		function checkInput(el) {
 
 			var $form = $(el);
 
 
 
-			$form.find('.is-error').removeClass('is-error');//.each(function(){
+			$form.find('.is-error').removeClass('is-error'); //.each(function(){
 
 			//$(this).removeClass('is-error');
 
@@ -6920,33 +7064,19 @@ var uikit = {
 
 
 
-		function logElementEvent(eventName, element) {
+		function logElementEvent(eventName, element) {}
 
-		}
+		var callback_enter = function (element) {};
 
-		var callback_enter = function (element) {
+		var callback_exit = function (element) {};
 
-		};
+		var callback_loading = function (element) {};
 
-		var callback_exit = function (element) {
+		var callback_loaded = function (element) {};
 
-		};
+		var callback_error = function (element) {};
 
-		var callback_loading = function (element) {
-
-		};
-
-		var callback_loaded = function (element) {
-
-		};
-
-		var callback_error = function (element) {
-
-		};
-
-		var callback_finish = function () {
-
-		};
+		var callback_finish = function () {};
 
 		var callback_cancel = function (element) {
 
@@ -7268,9 +7398,7 @@ var uikit = {
 
 					nextArrow: '<a href="#" class="product-page__products-next slick-arrow slick-arrow--gray-2 slick-next" tabindex="-1"><svg class="icon"><use xlink:href="images/sprite-svg.svg#slider-arrow-right"></use></svg></a>',
 
-					responsive: [
-
-						{
+					responsive: [{
 
 							breakpoint: lg,
 
@@ -7566,7 +7694,11 @@ var uikit = {
 
 			var href = $(this).attr("href");
 
-			$('html, body').animate({ scrollTop: $(href).offset().top }, 400);
+			$('html, body').animate({
+
+				scrollTop: $(href).offset().top
+
+			}, 400);
 
 			return false;
 
@@ -7592,7 +7724,9 @@ var uikit = {
 
 					if (!div.is(e.target) // если клик был не по нашему блоку
 
-						&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+						&&
+
+						div.has(e.target).length === 0) { // и не по его дочерним элементам
 
 						div.removeClass('is-active'); // скрываем его
 
@@ -7649,6 +7783,8 @@ var uikit = {
 		//this.fancybox();
 
 		this.popups();
+
+		this.chengeColorPalette();
 
 		//this.mask();
 
@@ -7743,6 +7879,4 @@ $(window).scroll(function () {
 	//uikit.headerFixed();
 
 });
-
-
 

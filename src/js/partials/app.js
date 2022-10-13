@@ -1,4 +1,3 @@
-
 var uikit = {
 	lg: '1450',
 	md: '1200',
@@ -14,8 +13,12 @@ var uikit = {
 	},
 
 	mask: function () {
-		$("input[type='tel']").mask('+7 (000) 000-0000', { placeholder: '+7 (___) ___-____' });
-		$("input.js-mask-sms").mask('0 0 0 0 0 0', { placeholder: '_ _ _ _ _ _' });
+		$("input[type='tel']").mask('+7 (000) 000-0000', {
+			placeholder: '+7 (___) ___-____'
+		});
+		$("input.js-mask-sms").mask('0 0 0 0 0 0', {
+			placeholder: '_ _ _ _ _ _'
+		});
 	},
 
 	niceSelect: function () {
@@ -48,6 +51,70 @@ var uikit = {
 
 	}, */
 
+	///------------------------------------------------используются в текущем проекте-----------------------------------------------
+	chengeColorPalette: function () {
+		let id = undefined;
+		//let id = undefined;
+		$('.js-palette').click(function () {
+
+			id = $(this).data('id');
+			$('.js-palette').removeClass('is-active');
+			$(this).addClass('is-active');
+			if (id !== undefined) {
+				$(".js-pallette-chenge img").attr("src", `images/color-sol-${id}.png`);
+			}
+
+			$(".js-pallette-chenge img:not(.is-active)").attr("src", `images/color-sol-${id}.png`);
+
+			// setTimeout(function () {
+			// 	var a = $('.js-pallette-chenge img.is-active');
+			// 	var nota = $('.js-pallette-chenge img:not(.is-active)');
+			// 	a.removeClass('is-active');
+			// 	nota.addClass('is-active');
+			// }, 1000);
+			let a = $('.js-pallette-chenge img.is-active');
+			let nota = $('.js-pallette-chenge img:not(.is-active)');
+			a.removeClass('is-active');
+			nota.addClass('is-active');
+		});
+
+		$('.js-palette-profile').click(function () {
+
+			id = $(this).data('id');
+			$('.js-palette-profile').removeClass('is-active');
+			$(this).addClass('is-active');
+			if (id !== undefined) {
+				$(".js-pallette-profile-chenge img").attr("src", `images/color-sol-${id}.png`);
+			}
+
+			$(".js-pallette-profile-chenge img:not(.is-active)").attr("src", `images/color-sol-second-img-${id}.png`);
+
+			// setTimeout(function () {
+			// 	var a = $('.js-pallette-chenge img.is-active');
+			// 	var nota = $('.js-pallette-chenge img:not(.is-active)');
+			// 	a.removeClass('is-active');
+			// 	nota.addClass('is-active');
+			// }, 1000);
+			let a = $('.js-pallette-profile-chenge img.is-active');
+			let nota = $('.js-pallette-profile-chenge img:not(.is-active)');
+			a.removeClass('is-active');
+			nota.addClass('is-active');
+		});
+
+		// let id = undefined;
+		// $('#js-palette').click(function () {
+		// 	console.log($(this).dataset.id)
+		// 	id = e.target.dataset.id
+		// 	$('#js-palette').children('img.is-active').removeClass('is-active');
+		// 	e.target.classList.add('is-active')
+		// 	if(id != undefined) {
+		// 		$('.js-pallette-chenge img').attr("src", `images/color-sol-${e.target.dataset.id}.png`)
+		// 	}
+		// 	// console.log(src)
+		// })
+	},
+	///-----------------------------------------------------------------------------------------------------------------------------
+
 	countBlock: function () {
 		// Количество +-
 		$(".js-count-plus").click(function () {
@@ -67,7 +134,8 @@ var uikit = {
 	upload: function () {
 
 		function formatSize(length) {
-			var i = 0, type = ['б', 'Кб', 'Мб', 'Гб', 'Тб', 'Пб'];
+			var i = 0,
+				type = ['б', 'Кб', 'Мб', 'Гб', 'Тб', 'Пб'];
 			while ((length / 1000 | 0) && i < type.length - 1) {
 				length /= 1024;
 				i++;
@@ -181,6 +249,7 @@ var uikit = {
 			classValidate = 'is-validate',
 			classParent = '.form-group',
 			classError = 'is-error';
+
 		function error(el) {
 			$(el)
 				.addClass(classError)
@@ -189,6 +258,7 @@ var uikit = {
 				.addClass(classError)
 				.removeClass(classValidate);
 		}
+
 		function validate(el) {
 			$(el)
 				.removeClass(classError)
@@ -197,6 +267,7 @@ var uikit = {
 				.removeClass(classError)
 				.addClass(classValidate);
 		}
+
 		function reset(el) {
 			$(el)
 				.removeClass(classValidate + ' ' + classError)
@@ -213,10 +284,11 @@ var uikit = {
 		$('input[type="checkbox"], input[type="radio"]').change(function () {
 			reset($(this))
 		});
+
 		function checkInput(el) {
 			var $form = $(el);
 
-			$form.find('.is-error').removeClass('is-error');//.each(function(){
+			$form.find('.is-error').removeClass('is-error'); //.each(function(){
 			//$(this).removeClass('is-error');
 			//console.log("!"+$form.find('.is-error').length+"!");
 			//});
@@ -448,20 +520,13 @@ var uikit = {
 
 	lazy: function () {
 
-		function logElementEvent(eventName, element) {
-		}
-		var callback_enter = function (element) {
-		};
-		var callback_exit = function (element) {
-		};
-		var callback_loading = function (element) {
-		};
-		var callback_loaded = function (element) {
-		};
-		var callback_error = function (element) {
-		};
-		var callback_finish = function () {
-		};
+		function logElementEvent(eventName, element) {}
+		var callback_enter = function (element) {};
+		var callback_exit = function (element) {};
+		var callback_loading = function (element) {};
+		var callback_loaded = function (element) {};
+		var callback_error = function (element) {};
+		var callback_finish = function () {};
 		var callback_cancel = function (element) {
 
 		};
@@ -622,8 +687,7 @@ var uikit = {
 					lazyLoad: 'progressive',
 					prevArrow: '<a href="#" class="product-page__products-prev slick-arrow slick-arrow--gray-2 slick-prev" tabindex="-1"><svg class="icon"><use xlink:href="images/sprite-svg.svg#slider-arrow-right"></use></svg></a>',
 					nextArrow: '<a href="#" class="product-page__products-next slick-arrow slick-arrow--gray-2 slick-next" tabindex="-1"><svg class="icon"><use xlink:href="images/sprite-svg.svg#slider-arrow-right"></use></svg></a>',
-					responsive: [
-						{
+					responsive: [{
 							breakpoint: lg,
 							settings: {
 								slidesToShow: 5,
@@ -771,7 +835,9 @@ var uikit = {
 	scrollTo: function () {
 		$(".js-scroll-to").click(function () {
 			var href = $(this).attr("href");
-			$('html, body').animate({ scrollTop: $(href).offset().top }, 400);
+			$('html, body').animate({
+				scrollTop: $(href).offset().top
+			}, 400);
 			return false;
 		});
 	},
@@ -784,7 +850,8 @@ var uikit = {
 				$(document).click(function (e) { // событие клика по веб-документу
 					var div = $('.js-search-block'); // тут указываем ID элемента
 					if (!div.is(e.target) // если клик был не по нашему блоку
-						&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+						&&
+						div.has(e.target).length === 0) { // и не по его дочерним элементам
 						div.removeClass('is-active'); // скрываем его
 						div.find('.js-search-toggle').addClass('is-disabled');
 					}
@@ -813,6 +880,7 @@ var uikit = {
 		//this.countBlock();
 		//this.fancybox();
 		this.popups();
+		this.chengeColorPalette();
 		//this.mask();
 		//this.accardion();
 		this.mobile();

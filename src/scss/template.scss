@@ -28,6 +28,22 @@
 -----------------------------*/
 @import "partials/base";
 
+
+/* blocks
+-----------------------------*/
+@import "../components/breadcrumbs/style";
+@import "../components/colors-block/style";
+@import "../components/palette-block/style";
+@import "../components/form-block/style";
+/*-----------------------------*/
+
+/* sections
+-----------------------------*/
+@import "../components/contact-section/style";
+@import "../components/main-section/style";
+/*-----------------------------*/
+
+
 /* TITLES */
 @import "partials/titles";
 //@import "partials/table";

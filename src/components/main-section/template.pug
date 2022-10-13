@@ -2,12 +2,11 @@ include ../breadcrumbs/template
 
 mixin mainSection(data)
 	.main-section&attributes(attributes)
-		._container.container
-			+breadcrumbs({
-				items: data.bread
-			})._bread 
+		+breadcrumbs({
+			items: data.bread
+		})._bread 
 
-			block
+		block
 
 mixin mainSectionUser(data)
 	.main-section&attributes(attributes)

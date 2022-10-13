@@ -63,13 +63,21 @@ input[type="submit"] {
 	@include transition();
 }
 
-/* p {
-	margin: 0 0 16px;
+p {
+	margin: 0 0 24px;
 
 	&:last-child {
 		margin-bottom: 0;
 	}
-} */
+
+	@include media($xs) {
+		margin: 0 0 16px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
 
 .color-green {
 	color: $green;
@@ -155,8 +163,8 @@ a:hover {
 		max-width: 1120px;
 	}
 	@include media($xs) {
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 }
 
