@@ -5,13 +5,17 @@
 		margin: 0;
 		padding: 0;
 	}
+
 	&__li {
 		font: 300 14px/15px $baseFF;
+
 		@include media($xs) {
 			font: 300 10px/11px $baseFF;
 		}
+
 		color: $medium-gray;
 		@include flex(0, center, center, nowrap);
+
 		&:after {
 			content: "";
 			background-image: url("../../images/braedcrumbs-arrow.svg");
@@ -23,6 +27,7 @@
 			background-position: center;
 			margin: 0 13px;
 		}
+		
 		a {
 			text-decoration: none;
 		}
@@ -31,10 +36,8 @@
 			&:after {
 				display: none;
 			}
+
 			color: $black;
-			/* a {
-				color: rgba($green, 0.4);
-			} */
 		}
 
 		@include media($sm) {
@@ -47,6 +50,7 @@
 			flex-wrap: nowrap;
 			overflow: auto;
 		}
+		
 		&__li {
 			white-space: nowrap;
 		}

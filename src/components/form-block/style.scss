@@ -2,6 +2,7 @@
 	&__title {
 		margin-bottom: 16px;
 		color: $black;
+		
 		@include media($xs) {
 			margin-bottom: 26px;
 			color: $black;
@@ -16,11 +17,14 @@
 	}
 	&__input {
 		margin-bottom: 40px;
+
 		&:last-child {
 			margin-bottom: 20px;
 		}
+
 		@include media($xs) {
 			margin-bottom: 48px;
+
 			&:last-child {
 				margin-bottom: 17px;
 			}
@@ -32,17 +36,21 @@
 			width: 100%;
 			min-height: 103px;
 			background-color: transparent;
+
 			@include media($xs) {
 				font: 300 13px/14px $baseFF;
 			}
+
 			&::placeholder {
 				font: 300 18px/19px $baseFF;
 				color: $black;
+
 				@include media($xs) {
 					font: 300 13px/14px $baseFF;
 				}
 				
 			}
+
 			&:focus {
 				border: 1px solid $black;
 			}
@@ -54,19 +62,25 @@
 			padding: 13px 0;
 			border: none;
 			border-bottom: 1px solid $gray;
+
 			@include media($xs) {
 				font: 300 13px/14px $baseFF;
 			}
+
 			&::placeholder {
 				font: 300 18px/19px $baseFF;
+
 				@include media($xs) {
 					font: 300 13px/14px $baseFF;
 				}
+
 				color: $black;
 			}
+
 			&:focus {
 				border-bottom: 1px solid $black;
 			}
+
 			@include media($xs) {
 				padding: 9px 0;
 				font: 300 13px/14px $baseFF;
@@ -80,9 +94,11 @@
 		font: 300 13px/13px $baseFF;
 		color: $gray-medium;
 		margin-bottom: 40px;
+
 		@include media($sm) {
 			margin-bottom: 30px;
 		}
+
 		@include media($xs) {
 			margin-bottom: 16px;
 			font: 300 10px/10px $baseFF;
@@ -92,6 +108,7 @@
 	&__buttons {
 		@include flex(space-between);
 	}
+
 	&--order & {
 		&__title {
 			@include media($xs) {

@@ -2,6 +2,7 @@
 	&__head {
 		@include flex(space-between, center, center);
 		margin-bottom: 24px;
+
 		@include media($xs) {
 			flex-direction: column;
 			align-items: flex-start;
@@ -10,22 +11,27 @@
 			margin-bottom: 8px;
 		}
 	}
+
 	&__title {
 		font: 300 24px/24px $baseFF;
 		text-transform: uppercase;
+
 		@include media($xs) {
 			font: 300 20px/20px $baseFF;
 			margin-bottom: 16px;
 		}
 	}
+
 	&__info {
 		@include flex(0, center, center, center);
 		color: $bb-gray;
 		font: 400 14px/14px $baseFF;
+
 		@include media($xs) {
 			font: 400 12px/13px $baseFF;
 		}
 	}
+
 	&__copy {
 		svg {
 			margin-left: 4px;
@@ -36,17 +42,21 @@
 			cursor: pointer;
 		}
 	}
+
 	&__colors {
 		@include flex(0, center, center, center);
 		flex-wrap: wrap;
 		margin-bottom: -5px;
+
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
+
 	&__color {
 		margin-bottom: 10px;
 		transition: all 0.3s;
+
 		&:hover {
 			cursor: pointer;
 			transition: all 0.3s;
@@ -54,19 +64,24 @@
 			outline-offset: -6px;
 			outline: 6px solid rgba(225, 225, 225, 0.8);
 		}
+
 		&.is-active {
 			transform: scale(1.1);
 		}
+
 		border-radius: 50%;
 		margin-right: 5px;
+
 		@include media($sm) {
 			width: 26px;
 			height: 26px;
 			margin-right: 15px;
+
 			&:last-child {
 				margin-right: 0;
 			}
 		}
+		
 		img {
 			display: block;
 			width: 42px;

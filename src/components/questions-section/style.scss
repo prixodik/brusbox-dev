@@ -5,12 +5,15 @@
 		@include flex(0,center,center);
 		margin: 16px 0 32px;
 		display: none;
+
 		@include media($xs) {
 			display: flex;
 		}
+
 		span {
 			margin-left: 12px;
 		}
+
 		svg {
 			width: 6px;
 			height: 6px;
@@ -18,10 +21,12 @@
 	}
 	&__item {
 		padding: 120px 0;
+
 		&:nth-child(even) {
 			background-color: $bg-grey;
 			padding: 60px 0;
 		}
+
 		@include media($md) {
 			padding: 60px 0;
 			&:nth-child(even) {
@@ -29,6 +34,7 @@
 				padding: 30px 0;
 			}
 		}
+
 		@include media($sm) {
 			padding: 40px 0;
 			&:nth-child(even) {
@@ -36,6 +42,7 @@
 				padding: 30px 0;
 			}
 		}
+		
 		@include media($xs) {
 			padding: 16px 0;
 			&:nth-child(even) {

@@ -4,9 +4,11 @@
 	&__img {
 		img {
 			display: block;
+
 			@include media($md) {
 				margin: 0 auto 25px;
 			}
+
 			@include media($xs) {
 				margin: 0 auto 16px;
 				object-fit: cover;
@@ -14,23 +16,31 @@
 			}
 		}
 	}
+
 	&__info {
+
 	}
+
 	&__title {
 		font: 300 36px/36px $baseFF;
 		margin-bottom: 16px;
+
 		@include media($sm) {
 			font: 300 25px/25px $baseFF;
 		}
+
 		@include media($xs) {
 			font: 300 16px/16px $baseFF;
 		}
 	}
+
 	&__text {
 		font: 300 24px/26px $baseFF;
+
 		@include media($sm) {
 			font: 300 18px/20px $baseFF;
 		}
+
 		@include media($xs) {
 			font: 300 13px/14px $baseFF;
 		}
@@ -45,6 +55,7 @@
 					display: block;
 					margin: 0 auto 16px;
 				}
+
 				&-2 img {
 					max-height: 288px;
 					object-fit: cover;
@@ -57,6 +68,7 @@
 				&-1 img  {
 					width: 100%;
 				}
+				
 				&-2 img {
 					width: 100%;
 				}

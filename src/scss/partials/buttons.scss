@@ -11,6 +11,7 @@
 	overflow: hidden;
 	border-radius: 30px;
 	border: none;
+	
 	@include media($xs) {
 		font: 400 12px/13px $baseFF;
 		padding: 10px 30px;

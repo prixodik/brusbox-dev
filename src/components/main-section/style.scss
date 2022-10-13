@@ -10,6 +10,7 @@
 		}
 	}
 	&--color-solutions & {
+		
 		&__left {
 			letter-spacing: 0.02em;
 			font: 300 36px/36px $baseFF;
@@ -17,10 +18,12 @@
 			@include media($md) {
 				font: 300 28px/34px $baseFF;
 			}
+
 			@include media($sm) {
 				font: 300 25px/32px $baseFF;
 				margin-bottom: 16px;
 			}
+
 			@include media($xs) {
 				font: 300 16px/16px $baseFF;
 			}
@@ -32,9 +35,11 @@
 			@include media($md) {
 				font: 300 28px/34px $baseFF;
 			}
+
 			@include media($sm) {
 				font: 300 20px/24px $baseFF;
 			}
+
 			@include media($xs) {
 				font: 300 13px/14px $baseFF;
 			}
@@ -46,9 +51,11 @@
 		}
 	}
 	&--select-color & {
+
 		&__contact-section {
 			background-color: $bg-grey;
 			padding: 60px 0;
+
 			@include media($sm) {
 				padding: 40px 0;
 			}

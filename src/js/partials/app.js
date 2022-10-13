@@ -13,16 +13,40 @@ var uikit = {
 	},
 
 	///------------------------------------------------используются в текущем проекте-----------------------------------------------
+	copyMaterial: function () {
+		$(".js-copy-material").click(function () {
+			let $text_copy = $(".js-data-material");
+			let $temp = $("<input>");
+			$("body").append($temp);
+			$temp.val($text_copy.text()).select();
+			document.execCommand("copy");
+			$temp.remove();
+		})
+
+		$(".js-copy-color").click(function () {
+			let $text_copy = $(".js-data-color");
+			let $temp = $("<input>");
+			$("body").append($temp);
+			$temp.val($text_copy.text()).select();
+			document.execCommand("copy");
+			$temp.remove();
+		})
+	},
+
 	chengeColorPalette: function () {
 		let id = undefined;
+		let article = '';
+		let color = '';
 		//let id = undefined;
 		$('.js-palette').click(function () {
-
+			article = $(this).data('info')
 			id = $(this).data('id');
 			$('.js-palette').removeClass('is-active');
 			$(this).addClass('is-active');
 			if (id !== undefined) {
 				$(".js-pallette-chenge img").attr("src", `images/color-sol-${id}.png`);
+				$('.js-data-material').text(article);
+				$('.js-data-material').attr('value', article)
 			}
 
 			$(".js-pallette-chenge img:not(.is-active)").attr("src", `images/color-sol-${id}.png`);
@@ -34,12 +58,14 @@ var uikit = {
 		});
 
 		$('.js-palette-profile').click(function () {
-
 			id = $(this).data('id');
+			color = $(this).data('color');
+
 			$('.js-palette-profile').removeClass('is-active');
 			$(this).addClass('is-active');
 			if (id !== undefined) {
 				$(".js-pallette-profile-chenge img").attr("src", `images/color-sol-${id}.png`);
+				$('.js-data-color').text(color);
 			}
 
 			$(".js-pallette-profile-chenge img:not(.is-active)").attr("src", `images/color-sol-second-img-${id}.png`);
@@ -329,13 +355,13 @@ var uikit = {
 
 	lazy: function () {
 
-		function logElementEvent(eventName, element) { }
-		var callback_enter = function (element) { };
-		var callback_exit = function (element) { };
-		var callback_loading = function (element) { };
-		var callback_loaded = function (element) { };
-		var callback_error = function (element) { };
-		var callback_finish = function () { };
+		function logElementEvent(eventName, element) {}
+		var callback_enter = function (element) {};
+		var callback_exit = function (element) {};
+		var callback_loading = function (element) {};
+		var callback_loaded = function (element) {};
+		var callback_error = function (element) {};
+		var callback_finish = function () {};
 		var callback_cancel = function (element) {
 
 		};
@@ -434,7 +460,7 @@ var uikit = {
 
 		this.lazy();
 		//this.validation();
-
+		this.copyMaterial();
 		//this.fancybox();
 		this.popups();
 		this.chengeColorPalette();
