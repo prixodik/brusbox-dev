@@ -32,3 +32,17 @@ mixin formBlockContactsOrder()
 				._agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность,<br>согласие на обработку персональных данных в соответствии с указанным здесь текстом
 				._buttons
 					button.btn.-red.js-submit(type="submit") Отправить
+
+mixin formBlockWindow()
+	.form-block.--quiz&attributes(attributes)
+		h4._title Шаг <span class="js-steps-quiz-from">1</span> из <span class="js-steps-quiz-to">3</span> <span class="js-steps-quiz-title">Ответьте на несколько вопросов</span> 
+		form(action="")
+			._row
+				._checkbox.radiobox
+					label(for="a1")
+					input(type="radio" id="a1")
+				._checkbox.radiobox
+					input(type="radio")
+			._agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность,<br>согласие на обработку персональных данных в соответствии с указанным здесь текстом
+			._buttons
+				button.btn.-red.js-submit(type="submit") Отправить

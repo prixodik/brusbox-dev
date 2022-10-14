@@ -1,0 +1,12 @@
+
+
+mixin selectWindowSection(data)
+	.select-window-section&attributes(attributes)
+		._container.container
+			._row.row
+				._left
+					._title Подобрать окно легко, как 1-2-3! Ответьте на несколько вопросов и получите решение вашей задачи!
+					img(src="images/window.png", alt="")._img
+				._right
+					include ../form-block/template
+					+formBlockWindow()
