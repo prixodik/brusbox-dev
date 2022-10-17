@@ -3,6 +3,7 @@
 	font: 400 16px/16px $baseFF;
 	padding: 10px 24px;
 	color: $white;
+	display: block;
 	text-align: center;
 	display: inline-block;
 	vertical-align: top;
@@ -11,10 +12,10 @@
 	overflow: hidden;
 	border-radius: 30px;
 	border: none;
-	
+
 	@include media($xs) {
 		font: 400 12px/13px $baseFF;
-		padding: 10px 30px;
+		padding: 10px 24px;
 	}
 
 	svg {
@@ -35,7 +36,18 @@
 		outline: none;
 	}
 
-	&--red {
+	&--border {
+		background: transparent;
+		border: 1px solid $btn-red;
+		color: $btn-red;
+		transition: all 0.3s;
+
+		&:hover,
+		&:active {
+			transition: all 0.3s;
+			background: $btn-red;
+			color: $white;
+		}
 	}
 
 	&--disabled,

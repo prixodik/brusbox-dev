@@ -33,16 +33,149 @@ mixin formBlockContactsOrder()
 				._buttons
 					button.btn.-red.js-submit(type="submit") Отправить
 
-mixin formBlockWindow()
-	.form-block.--quiz&attributes(attributes)
-		h4._title Шаг <span class="js-steps-quiz-from">1</span> из <span class="js-steps-quiz-to">3</span> <span class="js-steps-quiz-title">Ответьте на несколько вопросов</span> 
+mixin formBlockPayRequest()
+	.form-block&attributes(attributes)
+		h4._title Отправьте заявку на расчёт
 		form(action="")
 			._row
-				._checkbox.radiobox
-					label(for="a1")
-					input(type="radio" id="a1")
-				._checkbox.radiobox
-					input(type="radio")
-			._agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность,<br>согласие на обработку персональных данных в соответствии с указанным здесь текстом
-			._buttons
-				button.btn.-red.js-submit(type="submit") Отправить
+				._inputs
+					._input
+						input.form-control.js-required(type="text" placeholder="Ваше имя*" required)
+					._input
+						input.form-control.js-required(type="tel" placeholder="Телeфон*" required)
+				._agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность, согласие на обработку персональных данных в соответствии с указанным здесь текстом
+				._buttons
+					button.btn.-red.js-submit(type="submit") Отправить
+
+mixin formBlockWindow1()
+	.form-block.--quiz&attributes(attributes)
+		h4._title <div class="form-block__title-left">Шаг <span class="js-steps-quiz-from">1</span> из <span class="js-steps-quiz-to">3</span></div> <span class="form-block__title-right js-steps-quiz-title">Ответьте на несколько вопросов</span> 
+		form(action="")
+			._body
+				._row
+					._item
+						._item-title Куда планируете устанавливать окна?
+						._item-radio
+							.radiobox
+								input(type="radio" id="a1" name="where" checked)
+								label(for="a1") Загородный дом
+						._item-radio
+							.radiobox
+								input(type="radio" id="a2" name="where")
+								label(for="a2") Квартира
+						._item-radio
+							.radiobox
+								input(type="radio" id="a3" name="where")
+								label(for="a3") Балкон или лоджия
+					
+					._item
+						._item-title Ваше окно выходит:
+						._item-radio
+							.radiobox
+								input(type="radio" id="b1" name="side" checked)
+								label(for="b1") На солнечную сторону
+						._item-radio
+							.radiobox
+								input(type="radio" id="b2" name="side")
+								label(for="b2") Улица с автомобильным движением
+						._item-radio
+							.radiobox
+								input(type="radio" id="b3" name="side")
+								label(for="b3") Шумная улица, аэропорт
+				
+				._row
+					._item
+						._item-title У Вас за окном?
+						._item-radio
+							.radiobox
+								input(type="radio" id="c1" name="noise" checked)
+								label(for="c1") Тихий двор
+						._item-radio
+							.radiobox
+								input(type="radio" id="c2" name="noise")
+								label(for="c2") Улица с автомобильным движением
+						._item-radio
+							.radiobox
+								input(type="radio" id="c3" name="noise")
+								label(for="c3") Шумная улица, аэропорт
+					
+					._item
+						._item-title У вас есть дети?
+						._item-radio
+							.radiobox
+								input(type="radio" id="d1" name="age" checked)
+								label(for="d1") Нет, или уже взрослые
+						._item-radio
+							.radiobox
+								input(type="radio" id="d2" name="age")
+								label(for="d2") Есть, младше 7 лет
+						._item-radio
+							.radiobox
+								input(type="radio" id="d3" name="age")
+								label(for="d3") Есть, старше 7 лет
+						._agree *Обращаем Ваше внимание на то, что, согласно ГОСТ РФ, все окна<br> должны быть укомплектованы детским замком.
+			._button(data-step="1")
+				a(href="#" data-step="1").btn.-red.js-next-btn-1 Далее
+
+mixin formBlockWindow2()
+	.form-block.--quiz.--quiz2&attributes(attributes)
+		h4._title <div class="form-block__title-left">Шаг <span class="js-steps-quiz-from">2</span> из <span class="js-steps-quiz-to">3</span></div> <span class="form-block__title-right js-steps-quiz-title">... и последний вопрос</span> 
+		form(action="")
+			._body
+				._row
+					._item
+						._item-title По дизайну окна планируются:
+						._item-radio
+							.radiobox
+								input(type="radio" id="e1" name="color" checked)
+								label(for="e1") Классические белые
+						._item-radio
+							.radiobox
+								input(type="radio" id="e2" name="color")
+								label(for="e2") «Под дерево» или цветные
+						._item-radio
+							.radiobox
+								input(type="radio" id="e3" name="color")
+								label(for="e3") Нестандартной формы (круглые, арочные, треугольные)
+						._agree *Обращаем Ваше внимание на то, что, согласно ГОСТ РФ, все окна<br> должны быть укомплектованы детским замком.
+					._item
+						._item-title Ваши ответы:
+						ul._item-list
+							li._item-answer Загородный дом
+							li._item-answer На теневую сторону
+							li._item-answer Улица с автомобильным движением
+							li._item-answer Есть, младше 7 лет
+							li._item-answer «Под дерево» или цветные
+			._buttons(data-step="1")
+				a(href="#").btn.-border.js-prev-btn Назад
+				a(href="#" data-step="1").btn.js-next-btn-2 Далее
+
+mixin formBlockWindow3()
+	.form-block.--quiz.--quiz3&attributes(attributes)
+		h4._title <div class="form-block__title-left">Шаг <span class="js-steps-quiz-from">3</span> из <span class="js-steps-quiz-to">3</span></div> <span class="form-block__title-right js-steps-quiz-title">Рекомендуемое решение</span> 
+		form(action="")
+			._body
+				._row
+					._item
+						include ../options-block/template
+						+optionsBlock()
+					._item
+						h4._title Отправьте заявку на расчёт
+						._inputs
+							._input
+								input.form-control.js-required(type="text" placeholder="Ваше имя*" required)
+							._input
+								input.form-control.js-required(type="tel" placeholder="Телeфон*" required)
+						._agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность, согласие на обработку персональных данных в соответствии с указанным здесь текстом
+						._buttons
+							._button-close
+								a(href="#").btn.-border.js-prev-btn Назад
+							button.btn.-red.js-submit(type="submit") Отправить
+
+			._button(data-step="1")
+				a(href="#").btn.-border.js-prev-btn Назад
+
+mixin formBlockWindow4()
+	.form-block.--thanks&attributes(attributes)
+		h4._title Благодарим вас за заявку!
+		._subtitle В ближайшее время наш менеджер свяжется<br> с вами для точного расчёта необходимого окна.<br> Ожидайте, пожалуйста.

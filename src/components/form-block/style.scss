@@ -2,9 +2,8 @@
 	&__title {
 		margin-bottom: 16px;
 		color: $black;
-		
+
 		@include media($xs) {
-			margin-bottom: 26px;
 			color: $black;
 		}
 	}
@@ -48,7 +47,6 @@
 				@include media($xs) {
 					font: 300 13px/14px $baseFF;
 				}
-				
 			}
 
 			&:focus {
@@ -113,6 +111,300 @@
 		&__title {
 			@include media($xs) {
 				margin-bottom: 16px;
+			}
+		}
+	}
+	&--quiz {
+		form {
+			min-height: 414px;
+			@include flex(space-between);
+			flex-direction: column;
+
+			@include media($xs) {
+				min-height: auto;
+			}
+		}
+
+		@include media($md) {
+			padding-bottom: 50px;
+		}
+	}
+	&--quiz & {
+		&__title {
+			&-left {
+				margin-right: 16px;
+			}
+
+			&-right {
+				color: $gray;
+			}
+
+			@include flex();
+
+			@include media($xs) {
+				@include flex(0, 0, 0, nowrap, column);
+
+				div {
+					margin-bottom: 4px;
+				}
+			}
+		}
+
+		&__row {
+			@include flex(space-between, 0, 0, nowrap);
+			margin-bottom: 60px;
+
+			&:last-child {
+				margin-bottom: 16px;
+
+				@include media($xs) {
+					margin-bottom: 0;
+
+					.form-block__item {
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+
+			@include media($sm) {
+				flex-direction: column;
+				margin-bottom: 0;
+			}
+		}
+
+		&__body {
+			width: 100%;
+		}
+
+		&__item {
+			max-width: 467px;
+			width: 100%;
+
+			@include media($sm) {
+				margin-bottom: 24px;
+			}
+
+			&-title {
+				font: 300 24px/26px $baseFF;
+				margin-bottom: 16px;
+
+				@include media($lg) {
+					font: 300 18px/24px $baseFF;
+				}
+
+				@include media($sm) {
+					font: 300 13px/14px $baseFF;
+					margin-bottom: 12px;
+				}
+
+				@include media($xs) {
+					margin-bottom: 8px;
+				}
+			}
+
+			&-radio {
+				font: 300 18px/19px $baseFF;
+				margin-bottom: 9px;
+				min-height: 20px;
+
+				label {
+					min-height: 20px;
+					@include flex(0, center, center);
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				@include media($lg) {
+					font: 300 16px/18px $baseFF;
+				}
+
+				@include media($sm) {
+					font: 300 12px/13px $baseFF;
+				}
+			}
+
+			&-list {
+				list-style: none;
+			}
+
+			&-answer {
+				position: relative;
+				padding-left: 18px;
+				margin-bottom: 2px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				@include media($xs) {
+					padding-left: 16px;
+				}
+
+				&::after {
+					position: absolute;
+					top: calc(50% - 3.5px);
+					left: 0;
+					content: "";
+					min-width: 7px;
+					max-width: 7px;
+					min-height: 7px;
+					max-height: 7px;
+					border-radius: 50%;
+					background-color: $black;
+
+					@include media($xs) {
+						min-width: 5px;
+						max-width: 5px;
+						min-height: 5px;
+						max-height: 5px;
+					}
+				}
+			}
+		}
+
+		&__agree {
+			margin-top: 16px;
+
+			@include media($xs) {
+				margin-top: 8px;
+				margin-left: 28px;
+				margin-bottom: 0;
+			}
+		}
+
+		&__button {
+			@include media($xs) {
+				margin-top: 16px;
+			}
+		}
+
+		&__buttons {
+			.btn {
+				&:first-child {
+					margin-right: 16px;
+				}
+			}
+
+			@include media($xs) {
+				margin-top: 40px;
+			}
+		}
+	}
+
+	&--quiz2 & {
+		&__item {
+			@include media($xs) {
+				margin-bottom: 40px;
+			}
+
+			&-list {
+				@include media($xs) {
+					padding-left: 7px;
+				}
+			}
+		}
+	}
+
+	&--quiz3 & {
+
+		&__title {
+			@include media($xs) {
+				margin-bottom: 26px;
+			}
+		}
+
+		&__input {
+			@include media($xs) {
+				margin-bottom: 36px;
+
+				&:last-child {
+					margin-bottom: 29px;
+				}
+			}
+		}
+
+		&__agree {
+			margin-left: 0;
+		}
+
+		&__buttons {
+			@include media($xs) {
+				margin-top: 16px;
+			}
+		}
+
+		&__item {
+			padding-left: 10px;
+			padding-right: 10px;
+
+			@include media($sm) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			@include media($xs) {
+				margin-bottom: 56px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__row {
+			margin-left: -10px;
+			margin-right: -10px;
+
+			@include media($sm) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+
+		&__button {
+			@include media($sm) {
+				display: none;
+			}
+		}
+
+		&__buttons {
+			@include media($sm) {
+				justify-content: flex-start;
+			}
+		}
+
+		&__button-close {
+			display: none;
+			@include media($sm) {
+				display: block;
+			}
+		}
+	}
+
+	&--thanks {
+		transform: translateY(100%);
+	}
+
+	&--thanks & {
+		&__title {
+			margin-bottom: 16px;
+			text-align: center;
+		}
+
+		&__subtitle {
+			text-align: center;
+			font: 300 24px/26px $baseFF;
+			margin-bottom: 0;
+
+			@include media($md) {
+				font: 300 16px/18px $baseFF;
+			}
+
+			@include media($xs) {
+				font: 300 13px/14px $baseFF;
 			}
 		}
 	}
