@@ -44,10 +44,103 @@
                 <div class="select-window-section__left col-5 col-xs-12">
                   <h4 class="select-window-section__title">Подобрать окно легко, как 1-2-3! Ответьте на несколько вопросов и получите решение вашей задачи!</h4><img class="select-window-section__img" src="images/window.png" alt="">
                 </div>
-                <div class="select-window-section__right js-quiz-step-4 col-7 col-xs-12">
-                  <div class="form-block form-block--thanks select-window-section__form">
-                    <h4 class="form-block__title">Благодарим вас за заявку!</h4>
-                    <div class="form-block__subtitle">В ближайшее время наш менеджер свяжется<br> с вами для точного расчёта необходимого окна.<br> Ожидайте, пожалуйста.</div>
+                <div class="select-window-section__right js-quiz-step-1 col-7 col-xs-12">
+                  <div class="form-block form-block--quiz select-window-section__form">
+                    <h4 class="form-block__title"><div class="form-block__title-left">Шаг <span class="js-steps-quiz-from">1</span> из <span class="js-steps-quiz-to">3</span></div> <span class="form-block__title-right js-steps-quiz-title">Ответьте на несколько вопросов</span> </h4>
+                    <form action="">
+                      <div class="form-block__body">
+                        <div class="form-block__row">
+                          <div class="form-block__item">
+                            <div class="form-block__item-title">Куда планируете устанавливать окна?</div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="a1" name="where" checked>
+                                <label for="a1">Загородный дом</label>
+                              </div>
+                            </div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="a2" name="where">
+                                <label for="a2">Квартира</label>
+                              </div>
+                            </div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="a3" name="where">
+                                <label for="a3">Балкон или лоджия</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-block__item">
+                            <div class="form-block__item-title">Ваше окно выходит:</div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="b1" name="side" checked>
+                                <label for="b1">На солнечную сторону</label>
+                              </div>
+                            </div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="b2" name="side">
+                                <label for="b2">Улица с автомобильным движением</label>
+                              </div>
+                            </div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="b3" name="side">
+                                <label for="b3">Шумная улица, аэропорт</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-block__row">
+                          <div class="form-block__item">
+                            <div class="form-block__item-title">У Вас за окном?</div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="c1" name="noise" checked>
+                                <label for="c1">Тихий двор</label>
+                              </div>
+                            </div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="c2" name="noise">
+                                <label for="c2">Улица с автомобильным движением</label>
+                              </div>
+                            </div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="c3" name="noise">
+                                <label for="c3">Шумная улица, аэропорт</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-block__item">
+                            <div class="form-block__item-title">У вас есть дети?</div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="d1" name="age" checked>
+                                <label for="d1">Нет, или уже взрослые</label>
+                              </div>
+                            </div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="d2" name="age">
+                                <label for="d2">Есть, младше 7 лет</label>
+                              </div>
+                            </div>
+                            <div class="form-block__item-radio">
+                              <div class="radiobox">
+                                <input type="radio" id="d3" name="age">
+                                <label for="d3">Есть, старше 7 лет</label>
+                              </div>
+                            </div>
+                            <div class="form-block__agree">*Обращаем Ваше внимание на то, что, согласно ГОСТ РФ, все окна<br> должны быть укомплектованы детским замком.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-block__button" data-step="1"><a class="btn btn--red js-next-btn-1" href="#" data-step="1">Далее</a></div>
+                    </form>
                   </div>
                 </div>
               </div>

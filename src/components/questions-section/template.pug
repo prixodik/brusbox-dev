@@ -1,12 +1,12 @@
-include ../question-block/template
+//-include ../question-block/template
 
 mixin questionsSection(data)
 	.questions-section&attributes(attributes)
-		._container.container
+		//- ._container.container
 			a(href="#")._link
 				+svg('arrow-left')
 				span Назад
-		._items
+		//- ._items
 			+questionBlock({
 				img: 'images/question-1.jpg',
 				title: 'Как мы получаем цветные окна?',

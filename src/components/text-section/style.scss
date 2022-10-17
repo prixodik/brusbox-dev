@@ -1,6 +1,37 @@
-.question-block {
-	&__row {
+.text-section {
+	padding: 120px 0;
+
+	@include media($md) {
+		padding: 60px 0;
 	}
+
+	@include media($sm) {
+		padding: 40px 0;
+	}
+
+	@include media($xs) {
+		padding: 16px 0;
+	}
+
+	&__row {
+		margin: 0 -30px;
+
+		@include media($md) {
+			margin: 0 -15px;
+		}
+	}
+
+	&__img,
+	&__img-1,
+	&__img-2,
+	&__info {
+		padding: 0 30px;
+
+		@include media($md) {
+			padding: 0 15px;
+		}
+	}
+
 	&__img {
 		img {
 			display: block;
@@ -15,10 +46,6 @@
 				height: 288px;
 			}
 		}
-	}
-
-	&__info {
-
 	}
 
 	&__title {
@@ -46,6 +73,23 @@
 		}
 	}
 
+	&--mode {
+		background-color: $bg-grey;
+		padding: 60px 0;
+
+		@include media($md) {
+			padding: 30px 0;
+		}
+
+		@include media($sm) {
+			padding: 30px 0;
+		}
+
+		@include media($xs) {
+			padding: 16px 0;
+		}
+	}
+
 	&--mode & {
 		&__img {
 			@include media($md) {
@@ -65,10 +109,10 @@
 			}
 
 			@include media($xs) {
-				&-1 img  {
+				&-1 img {
 					width: 100%;
 				}
-				
+
 				&-2 img {
 					width: 100%;
 				}

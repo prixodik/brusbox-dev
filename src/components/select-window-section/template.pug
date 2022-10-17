@@ -8,8 +8,8 @@ mixin selectWindowSection(data)
 				._left.col-5.col-xs-12
 					h4._title Подобрать окно легко, как 1-2-3! Ответьте на несколько вопросов и получите решение вашей задачи!
 					img(src="images/window.png", alt="")._img
-				//- ._right.js-quiz-step-1.col-7.col-xs-12
-				//- 	+formBlockWindow1()._form
+				._right.js-quiz-step-1.col-7.col-xs-12
+					+formBlockWindow1()._form
 
 				//- ._right.js-quiz-step-2.col-7.col-xs-12
 				//- 	+formBlockWindow2()._form
@@ -17,5 +17,5 @@ mixin selectWindowSection(data)
 				//- ._right.js-quiz-step-3.col-7.col-xs-12
 				//- 	+formBlockWindow3()._form
 
-				._right.js-quiz-step-4.col-7.col-xs-12
+				//-._right.js-quiz-step-4.col-7.col-xs-12
 					+formBlockWindow4()._form

@@ -7,9 +7,26 @@
 	}
 
 	&__row {
+		margin: 0 -30px;
+
+		@include media($md) {
+			margin: 0 -15px;
+		}
 	}
 
 	&__left {
+		padding: 0 30px;
+
+		@include media($md) {
+			padding: 0 15px;
+		}
+	}
+	&__right {
+		padding: 0 30px;
+
+		@include media($md) {
+			padding: 0 15px;
+		}
 	}
 
 	&__title {
@@ -19,19 +36,16 @@
 			margin-bottom: 16px;
 		}
 	}
-	
-	&__right {
-	}
 
 	&--order & {
 		&__banner {
 			display: block;
-			
+
 			@include media($sm) {
 				max-height: 348px;
 				max-width: 700px;
 				width: 100%;
-				margin: 40px auto 0 ;
+				margin: 40px auto 0;
 			}
 
 			@include media($xs) {
