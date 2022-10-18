@@ -115,6 +115,12 @@
 		}
 	}
 	&--quiz {
+		display: none;
+
+		&.is-active {
+			display: block;
+		}
+
 		form {
 			min-height: 414px;
 			@include flex(space-between);
@@ -310,7 +316,6 @@
 	}
 
 	&--quiz3 & {
-
 		&__title {
 			@include media($xs) {
 				margin-bottom: 26px;

@@ -1,0 +1,9 @@
+mixin serviceBlock(data)
+	.service-block&attributes(attributes)
+		if data.icon
+			._icon
+				img(src=data.icon alt="")
+		._wrap
+			if data.title
+				._title
+					!= data.title

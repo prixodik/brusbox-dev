@@ -6022,823 +6022,887 @@ Made by Hernán Sartorio  */
 
 var uikit = {
 
-	lg: '1450',
+  lg: "1450",
 
-	md: '1200',
+  md: "1200",
 
-	sm: '992',
+  sm: "992",
 
-	xs: '640',
+  xs: "640",
 
-	xxs: '480',
+  xxs: "480",
 
-	ww: function () {
+  changeWindow: [],
 
-		return $(window).width();
+  ww: function () {
 
-	},
+    return $(window).width();
 
+  },
 
 
-	wh: function () {
 
-		return $(window).height();
+  wh: function () {
 
-	},
+    return $(window).height();
 
+  },
 
 
-	///------------------------------------------------используются в текущем проекте-----------------------------------------------
 
-	copyMaterial: function () {
+  ///------------------------------------------------используются в текущем проекте-----------------------------------------------
 
-		$(".js-copy-material").click(function () {
+  stepsQuiz() {
 
-			let $text_copy = $(".js-data-material");
+    $(".js-steps-quiz-next").click(function () {
 
-			let $temp = $("<input>");
+      let cur = $(this).data("current");
 
-			$("body").append($temp);
+      let next = $(this).data("step");
 
-			$temp.val($text_copy.text()).select();
+      let data = $(this).parents("form").serializeArray();
 
-			document.execCommand("copy");
+      if (uikit.changeWindow[cur - 1] === undefined) {
 
-			$temp.remove();
+        uikit.changeWindow.push(data);
 
-		})
+      } else {
 
+        uikit.changeWindow[cur - 1] = data;
 
+      }
 
-		$(".js-copy-color").click(function () {
 
-			let $text_copy = $(".js-data-color");
 
-			let $temp = $("<input>");
+      /* if() */
 
-			$("body").append($temp);
 
-			$temp.val($text_copy.text()).select();
 
-			document.execCommand("copy");
+      $(".js-steps-quiz").removeClass("is-active");
 
-			$temp.remove();
+      $(`#quiz-${next}`).addClass("is-active");
 
-		})
+      console.log(uikit.changeWindow);
 
-	},
+      return false;
 
+    });
 
 
-	chengeColorPalette: function () {
 
-		let id = undefined;
+    $(".js-steps-quiz-submit").click(function () {
 
-		let article = '';
+      return false;
 
-		let color = '';
+    });
 
-		//let id = undefined;
+  },
 
-		$('.js-palette').click(function () {
 
-			article = $(this).data('info')
 
-			id = $(this).data('id');
+  copyMaterial: function () {
 
-			$('.js-palette').removeClass('is-active');
+    $(".js-copy-material, .js-copy-color").click(function () {
 
-			$(this).addClass('is-active');
+      let $text_copy = $(".js-data-material");
 
-			if (id !== undefined) {
+      let $temp = $("<input>");
 
-				$(".js-pallette-chenge img").attr("src", `images/color-sol-${id}.png`);
+      $("body").append($temp);
 
-				$('.js-data-material').text(article);
+      $temp.val($text_copy.text()).select();
 
-				$('.js-data-material').attr('value', article)
+      document.execCommand("copy");
 
-			}
+      $temp.remove();
 
+    });
 
+  },
 
-			$(".js-pallette-chenge img:not(.is-active)").attr("src", `images/color-sol-${id}.png`);
 
 
+  chengeColorPalette: function () {
 
-			let a = $('.js-pallette-chenge img.is-active');
+    let id = undefined;
 
-			let nota = $('.js-pallette-chenge img:not(.is-active)');
+    let article = "";
 
-			a.removeClass('is-active');
+    let color = "";
 
-			nota.addClass('is-active');
+    //let id = undefined;
 
-		});
+    $(".js-palette").click(function () {
 
+      article = $(this).data("info");
 
+      id = $(this).data("id");
 
-		$('.js-palette-profile').click(function () {
+      $(".js-palette").removeClass("is-active");
 
-			id = $(this).data('id');
+      $(this).addClass("is-active");
 
-			color = $(this).data('color');
+      if (id !== undefined) {
 
+        $(".js-pallette-chenge img").attr("src", `images/color-sol-${id}.png`);
 
+        $(".js-data-material").text(article);
 
-			$('.js-palette-profile').removeClass('is-active');
+        $(".js-data-material").attr("value", article);
 
-			$(this).addClass('is-active');
+      }
 
-			if (id !== undefined) {
 
-				$(".js-pallette-profile-chenge img").attr("src", `images/color-sol-${id}.png`);
 
-				$('.js-data-color').text(color);
+      $(".js-pallette-chenge img:not(.is-active)").attr(
 
-			}
+        "src",
 
+        `images/color-sol-${id}.png`
 
+      );
 
-			$(".js-pallette-profile-chenge img:not(.is-active)").attr("src", `images/color-sol-second-img-${id}.png`);
 
 
+      let a = $(".js-pallette-chenge img.is-active");
 
-			let a = $('.js-pallette-profile-chenge img.is-active');
+      let nota = $(".js-pallette-chenge img:not(.is-active)");
 
-			let nota = $('.js-pallette-profile-chenge img:not(.is-active)');
+      a.removeClass("is-active");
 
-			a.removeClass('is-active');
+      nota.addClass("is-active");
 
-			nota.addClass('is-active');
+    });
 
-		});
 
 
+    $(".js-palette-profile").click(function () {
 
-	},
+      id = $(this).data("id");
 
+      color = $(this).data("color");
 
 
-	//-----------------------------------------------------------------------------------------------------------------------------
 
+      $(".js-palette-profile").removeClass("is-active");
 
+      $(this).addClass("is-active");
 
-	validation: function () {
+      if (id !== undefined) {
 
-		var
+        $(".js-pallette-profile-chenge img").attr(
 
-			classValidate = 'is-validate',
+          "src",
 
-			classParent = '.form-group',
+          `images/color-sol-${id}.png`
 
-			classError = 'is-error';
+        );
 
+        $(".js-data-color").text(color);
 
+      }
 
-		function error(el) {
 
-			$(el)
 
-				.addClass(classError)
+      $(".js-pallette-profile-chenge img:not(.is-active)").attr(
 
-				.removeClass(classValidate)
+        "src",
 
-				.closest(classParent)
+        `images/color-sol-second-img-${id}.png`
 
-				.addClass(classError)
+      );
 
-				.removeClass(classValidate);
 
-		}
 
+      let a = $(".js-pallette-profile-chenge img.is-active");
 
+      let nota = $(".js-pallette-profile-chenge img:not(.is-active)");
 
-		function validate(el) {
+      a.removeClass("is-active");
 
-			$(el)
+      nota.addClass("is-active");
 
-				.removeClass(classError)
+    });
 
-				.addClass(classValidate)
+  },
 
-				.closest(classParent)
 
-				.removeClass(classError)
 
-				.addClass(classValidate);
+  //-----------------------------------------------------------------------------------------------------------------------------
 
-		}
 
 
+  validation: function () {
 
-		function reset(el) {
+    var classValidate = "is-validate",
 
-			$(el)
+      classParent = ".form-group",
 
-				.removeClass(classValidate + ' ' + classError)
+      classError = "is-error";
 
-				.closest(classParent)
 
-				.removeClass(classError)
 
-				.removeClass(classValidate + ' ' + classError)
+    function error(el) {
 
-		}
+      $(el)
 
-		$('.form-control').focus(function () {
+        .addClass(classError)
 
-			reset($(this))
+        .removeClass(classValidate)
 
-		});
+        .closest(classParent)
 
-		$('select').change(function () {
+        .addClass(classError)
 
-			reset($(this))
+        .removeClass(classValidate);
 
-		});
+    }
 
-		$('input[type="checkbox"], input[type="radio"]').change(function () {
 
-			reset($(this))
 
-		});
+    function validate(el) {
 
+      $(el)
 
+        .removeClass(classError)
 
-		function checkInput(el) {
+        .addClass(classValidate)
 
-			var $form = $(el);
+        .closest(classParent)
 
+        .removeClass(classError)
 
+        .addClass(classValidate);
 
-			$form.find('.is-error').removeClass('is-error'); //.each(function(){
+    }
 
-			//$(this).removeClass('is-error');
 
-			//console.log("!"+$form.find('.is-error').length+"!");
 
-			//});
+    function reset(el) {
 
+      $(el)
 
+        .removeClass(classValidate + " " + classError)
 
-			$form.find('select.js-required').each(function () {
+        .closest(classParent)
 
-				if ($(this).val() != '') {
+        .removeClass(classError)
 
-					validate($(this));
+        .removeClass(classValidate + " " + classError);
 
-				} else {
+    }
 
-					error($(this));
+    $(".form-control").focus(function () {
 
-				}
+      reset($(this));
 
-			});
+    });
 
-			$form.find('input[type=tel].js-required').each(function () {
+    $("select").change(function () {
 
-				if ($(this).val() != '') {
+      reset($(this));
 
-					validate($(this));
+    });
 
-				} else {
+    $('input[type="checkbox"], input[type="radio"]').change(function () {
 
-					error($(this));
+      reset($(this));
 
-				}
+    });
 
-			});
 
-			$form.find('input[type=email].js-required').each(function () {
 
-				if ($(this).val() != '') {
+    function checkInput(el) {
 
-					validate($(this));
+      var $form = $(el);
 
-				} else {
 
-					error($(this));
 
-				}
+      $form.find(".is-error").removeClass("is-error"); //.each(function(){
 
-			});
+      //$(this).removeClass('is-error');
 
-			$form.find('input[type=text].js-required').each(function () {
+      //console.log("!"+$form.find('.is-error').length+"!");
 
-				if ($(this).val() != '') {
+      //});
 
-					validate($(this));
 
-				} else {
 
-					error($(this));
+      $form.find("select.js-required").each(function () {
 
-				}
+        if ($(this).val() != "") {
 
-			});
+          validate($(this));
 
-			$form.find('input[type=password].js-required').each(function () {
+        } else {
 
-				if ($(this).val() != '') {
+          error($(this));
 
-					validate($(this));
+        }
 
-				} else {
+      });
 
-					error($(this));
+      $form.find("input[type=tel].js-required").each(function () {
 
-				}
+        if ($(this).val() != "") {
 
-			});
+          validate($(this));
 
-			if ($('.js-pass1', $form).length != 0) {
+        } else {
 
-				var pass01 = $form.find('.js-pass1').val();
+          error($(this));
 
-				var pass02 = $form.find('.js-pass2').val();
+        }
 
-				if (pass01 == pass02) {
+      });
 
-					validate($('.js-pass1, .js-pass2', $form));
+      $form.find("input[type=email].js-required").each(function () {
 
-				} else {
+        if ($(this).val() != "") {
 
-					error($('.js-pass1, .js-pass2', $form));
+          validate($(this));
 
-				}
+        } else {
 
-			}
+          error($(this));
 
-			$form.find('textarea.js-required').each(function () {
+        }
 
-				if ($(this).val() != '') {
+      });
 
-					validate($(this));
+      $form.find("input[type=text].js-required").each(function () {
 
-				} else {
+        if ($(this).val() != "") {
 
-					error($(this));
+          validate($(this));
 
-				}
+        } else {
 
-			});
+          error($(this));
 
-			$form.find('input[type=email]').each(function () {
+        }
 
-				var regexp = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+      });
 
-				var $this = $(this);
+      $form.find("input[type=password].js-required").each(function () {
 
-				if ($this.hasClass('js-required')) {
+        if ($(this).val() != "") {
 
-					if (regexp.test($this.val())) {
+          validate($(this));
 
-						validate($this);
+        } else {
 
-					} else {
+          error($(this));
 
-						error($this);
+        }
 
-					}
+      });
 
-				} else {
+      if ($(".js-pass1", $form).length != 0) {
 
-					if ($this.val() != '') {
+        var pass01 = $form.find(".js-pass1").val();
 
-						if (regexp.test($this.val())) {
+        var pass02 = $form.find(".js-pass2").val();
 
-							validate($this);
+        if (pass01 == pass02) {
 
-						} else {
+          validate($(".js-pass1, .js-pass2", $form));
 
-							error($this);
+        } else {
 
-						}
+          error($(".js-pass1, .js-pass2", $form));
 
-					} else {
+        }
 
-						reset($this)
+      }
 
-					}
+      $form.find("textarea.js-required").each(function () {
 
-				}
+        if ($(this).val() != "") {
 
-			});
+          validate($(this));
 
+        } else {
 
+          error($(this));
 
-			$form.find('input[type=checkbox].js-required').each(function () {
+        }
 
+      });
 
+      $form.find("input[type=email]").each(function () {
 
-				if ($(this).is(':checked')) {
+        var regexp =
 
-					validate($(this));
+          /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
 
-				} else {
+        var $this = $(this);
 
-					error($(this));
+        if ($this.hasClass("js-required")) {
 
-					$(this).parent().addClass('is-error');
+          if (regexp.test($this.val())) {
 
-				}
+            validate($this);
 
-			});
+          } else {
 
+            error($this);
 
+          }
 
-			var radios = [];
+        } else {
 
-			$form.find('input[type=radio]:required').each(function () {
+          if ($this.val() != "") {
 
-				var name = $(this).attr('name');
+            if (regexp.test($this.val())) {
 
+              validate($this);
 
+            } else {
 
-				if (radios.indexOf(name) == -1) {
+              error($this);
 
+            }
 
+          } else {
 
-					radios.push(name);
+            reset($this);
 
-					var result = false;
+          }
 
-					$form.find('input[name=' + name + '].js-required').each(function () {
+        }
 
+      });
 
 
-						if ($(this).is(':checked')) {
 
-							result = true;
+      $form.find("input[type=checkbox].js-required").each(function () {
 
-						}
+        if ($(this).is(":checked")) {
 
-					});
+          validate($(this));
 
-					if (result == true) {
+        } else {
 
-						validate($(this));
+          error($(this));
 
-						return false;
+          $(this).parent().addClass("is-error");
 
-					} else {
+        }
 
-						//console.log(radios);
+      });
 
-						$form.find('input[name=' + name + '].js-required').addClass(classError);
 
-						error($(this));
 
-					}
+      var radios = [];
 
-				}
+      $form.find("input[type=radio]:required").each(function () {
 
-			});
+        var name = $(this).attr("name");
 
-		}
 
 
+        if (radios.indexOf(name) == -1) {
 
-		$('.js-edit-input').click(function () {
+          radios.push(name);
 
-			$(this).parents('.input').removeClass('is-disabled').find('input, textarea').prop('disabled', false);
+          var result = false;
 
-			return false;
+          $form.find("input[name=" + name + "].js-required").each(function () {
 
-		});
+            if ($(this).is(":checked")) {
 
+              result = true;
 
+            }
 
-		$('.js-submit').click(function () {
+          });
 
-			var $form = $(this).closest('form');
+          if (result == true) {
 
-			checkInput($form);
+            validate($(this));
 
-			var errors = $form.find('.is-error:visible').length;
+            return false;
 
-			//console.log(errors);
+          } else {
 
-			if (errors) {
+            //console.log(radios);
 
-				return false;
+            $form
 
-			} else if ($(this).data('href') != "" && $(this).data('href') != undefined) {
+              .find("input[name=" + name + "].js-required")
 
+              .addClass(classError);
 
+            error($(this));
 
-				// Открытие попапа после отправки формы.
+          }
 
+        }
 
+      });
 
-				if ($(this).attr("href") != "" && $(this).attr("href") != undefined) {
+    }
 
-					var href = $(this).attr("href");
 
-				} else {
 
-					var href = $(this).data("href");
+    $(".js-edit-input").click(function () {
 
-				}
+      $(this)
 
-				if ($(this).data('media') == "lg" && uikit.ww() <= uikit.md) {
+        .parents(".input")
 
-					return false;
+        .removeClass("is-disabled")
 
-				}
+        .find("input, textarea")
 
+        .prop("disabled", false);
 
+      return false;
 
-				var bodyWidth = $('body').width();
+    });
 
 
 
-				$("body, html").addClass("overflow");
+    $(".js-submit").click(function () {
 
+      var $form = $(this).closest("form");
 
+      checkInput($form);
 
-				if (bodyWidth - uikit.ww() < 0) {
+      var errors = $form.find(".is-error:visible").length;
 
-					//$('body').css('padding-right',((bodyWidth - uikit.ww())* -1)+'px');
+      //console.log(errors);
 
-				}
+      if (errors) {
 
+        return false;
 
+      } else if (
 
-				//$(".mobile-menu").removeClass("active");
+        $(this).data("href") != "" &&
 
+        $(this).data("href") != undefined
 
+      ) {
 
-				$(".popup").removeClass("active");
+        // Открытие попапа после отправки формы.
 
-				$(href).addClass("active");
 
 
+        if ($(this).attr("href") != "" && $(this).attr("href") != undefined) {
 
-				return false;
+          var href = $(this).attr("href");
 
-			}
+        } else {
 
-		});
+          var href = $(this).data("href");
 
-	},
+        }
 
+        if ($(this).data("media") == "lg" && uikit.ww() <= uikit.md) {
 
+          return false;
 
-	tabs: function () {
+        }
 
-		$('[data-tab]').click(function (e) {
 
-			e.preventDefault();
 
-			let tab = typeof ($(this).attr('href')) != 'undefined' ? $(this).attr('href') : $(this).attr('data-tab');
+        var bodyWidth = $("body").width();
 
-			if (typeof ($(this).attr('data-parent')) != 'undefined') {
 
-				$('[href="' + tab + '"], [data-tab="' + tab + '"]').closest($(this).attr('data-parent')).addClass('is-active').siblings().removeClass('is-active');
 
-			} else {
+        $("body, html").addClass("overflow");
 
-				$(this).addClass('is-active').siblings().removeClass('is-active');
 
-			}
 
-			$(tab).addClass('is-visible').siblings().removeClass('is-visible');
+        if (bodyWidth - uikit.ww() < 0) {
 
-		});
+          //$('body').css('padding-right',((bodyWidth - uikit.ww())* -1)+'px');
 
+        }
 
 
-		$(".js-tab-nav").click(function (e) {
 
-			e.preventDefault();
+        //$(".mobile-menu").removeClass("active");
 
-			var href = $(this).attr("href");
 
-			$(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass("is-active");
 
-			$(this).parent().addClass("is-active");
+        $(".popup").removeClass("active");
 
-			$(href).addClass("is-active");
+        $(href).addClass("active");
 
-		});
 
 
+        return false;
 
-		$(".js-tab-show").click(function (e) {
+      }
 
-			//alert(); 
+    });
 
-			//console.log("#"+$(this).val()); 
+  },
 
 
 
-			if ($(this).attr('href') != undefined) {
+  tabs: function () {
 
+    $("[data-tab]").click(function (e) {
 
+      e.preventDefault();
 
-				//e.preventDefault(); 
+      let tab =
 
-			}
+        typeof $(this).attr("href") != "undefined"
 
-			var href = ($(this).attr("href") != undefined) ? $(this).attr("href") : "#" + $(this).val();
+          ? $(this).attr("href")
 
-			var nav_id = $(this).data("navid");
+          : $(this).attr("data-tab");
 
-			$(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass("is-active");
+      if (typeof $(this).attr("data-parent") != "undefined") {
 
-			$(nav_id).addClass("is-active");
+        $('[href="' + tab + '"], [data-tab="' + tab + '"]')
 
-			$(href).addClass("is-active");
+          .closest($(this).attr("data-parent"))
 
-		});
+          .addClass("is-active")
 
-		//$(".js-tab-show").che
+          .siblings()
 
-	},
+          .removeClass("is-active");
 
+      } else {
 
+        $(this).addClass("is-active").siblings().removeClass("is-active");
 
-	popups: function () {
+      }
 
-		$(document).on("click", ".js-popup-show", function () {
+      $(tab).addClass("is-visible").siblings().removeClass("is-visible");
 
-			if ($(this).attr("href") != "" && $(this).attr("href") != undefined) {
+    });
 
-				var href = $(this).attr("href");
 
-			} else {
 
-				var href = $(this).data("href");
+    $(".js-tab-nav").click(function (e) {
 
-			}
+      e.preventDefault();
 
-			if ($(this).data('media') == "lg" && uikit.ww() <= uikit.md) {
+      var href = $(this).attr("href");
 
-				return false;
+      $(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass(
 
-			}
+        "is-active"
 
+      );
 
+      $(this).parent().addClass("is-active");
 
-			var bodyWidth = $('body').width();
+      $(href).addClass("is-active");
 
+    });
 
 
-			$("body, html").addClass("overflow");
 
+    $(".js-tab-show").click(function (e) {
 
+      //alert();
 
-			if (bodyWidth - uikit.ww() < 0) {
+      //console.log("#"+$(this).val());
 
-				//$('body').css('padding-right',((bodyWidth - uikit.ww())* -1)+'px');
 
-			}
 
+      if ($(this).attr("href") != undefined) {
 
+        //e.preventDefault();
 
-			//$(".mobile-menu").removeClass("active");
+      }
 
+      var href =
 
+        $(this).attr("href") != undefined
 
-			$(".popup").removeClass("active");
+          ? $(this).attr("href")
 
-			$(href).addClass("active");
+          : "#" + $(this).val();
 
+      var nav_id = $(this).data("navid");
 
+      $(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass(
 
+        "is-active"
 
+      );
 
+      $(nav_id).addClass("is-active");
 
+      $(href).addClass("is-active");
 
-			return false;
+    });
 
-		});
+    //$(".js-tab-show").che
 
+  },
 
 
-		$(".js-popup-hide").click(function () {
 
-			$(".popup").removeClass("active");
+  popups: function () {
 
-			$("body, html").css('padding-right', 0).removeClass("overflow");
+    $(document).on("click", ".js-popup-show", function () {
 
-			return false;
+      if ($(this).attr("href") != "" && $(this).attr("href") != undefined) {
 
-		});
+        var href = $(this).attr("href");
 
-	},
+      } else {
 
+        var href = $(this).data("href");
 
+      }
 
-	lazy: function () {
+      if ($(this).data("media") == "lg" && uikit.ww() <= uikit.md) {
 
+        return false;
 
+      }
 
-		function logElementEvent(eventName, element) {}
 
-		var callback_enter = function (element) {};
 
-		var callback_exit = function (element) {};
+      var bodyWidth = $("body").width();
 
-		var callback_loading = function (element) {};
 
-		var callback_loaded = function (element) {};
 
-		var callback_error = function (element) {};
+      $("body, html").addClass("overflow");
 
-		var callback_finish = function () {};
 
-		var callback_cancel = function (element) {
 
+      if (bodyWidth - uikit.ww() < 0) {
 
+        //$('body').css('padding-right',((bodyWidth - uikit.ww())* -1)+'px');
 
-		};
+      }
 
 
 
-		var lazyLoadOb = new LazyLoad({
+      //$(".mobile-menu").removeClass("active");
 
-			class_applied: "lz-applied",
 
-			class_loading: "lz-loading",
 
-			class_loaded: "lz-loaded",
+      $(".popup").removeClass("active");
 
-			class_error: "lz-error",
+      $(href).addClass("active");
 
-			class_entered: "lz-entered",
 
-			class_exited: "lz-exited",
 
-			// Assign the callbacks defined above
+      return false;
 
-			callback_enter: callback_enter,
+    });
 
-			callback_exit: callback_exit,
 
-			callback_cancel: callback_cancel,
 
-			callback_loading: callback_loading,
+    $(".js-popup-hide").click(function () {
 
-			callback_loaded: callback_loaded,
+      $(".popup").removeClass("active");
 
-			callback_error: callback_error,
+      $("body, html").css("padding-right", 0).removeClass("overflow");
 
-			callback_finish: callback_finish
+      return false;
 
-		});
+    });
 
-		lazyLoadOb.update();
+  },
 
-	},
 
 
+  lazy: function () {
 
+    function logElementEvent(eventName, element) {}
 
+    var callback_enter = function (element) {};
 
+    var callback_exit = function (element) {};
 
+    var callback_loading = function (element) {};
 
-	fancybox: function () {
+    var callback_loaded = function (element) {};
 
-		$(".js-fancybox, .fancybox").fancybox({
+    var callback_error = function (element) {};
 
-			// Options will go here
+    var callback_finish = function () {};
 
-			iframe: {
+    var callback_cancel = function (element) {};
 
-				preload: false
 
-			}
 
-		});
+    var lazyLoadOb = new LazyLoad({
 
-	},
+      class_applied: "lz-applied",
 
+      class_loading: "lz-loading",
 
+      class_loaded: "lz-loaded",
 
+      class_error: "lz-error",
 
+      class_entered: "lz-entered",
 
+      class_exited: "lz-exited",
 
+      // Assign the callbacks defined above
 
-	mobile: function () {
+      callback_enter: callback_enter,
 
+      callback_exit: callback_exit,
 
+      callback_cancel: callback_cancel,
 
-		$('.js-mobile-menu-toggle').click(function () {
+      callback_loading: callback_loading,
 
-			$(this).toggleClass('active');
+      callback_loaded: callback_loaded,
 
-			$('body').toggleClass('overflow');
+      callback_error: callback_error,
 
+      callback_finish: callback_finish,
 
+    });
 
-			$('.js-mobile-menu').slideToggle();
+    lazyLoadOb.update();
 
+  },
 
 
-			/* $(document).mouseup(function (e) { // событие клика по веб-документу
+
+  fancybox: function () {
+
+    $(".js-fancybox, .fancybox").fancybox({
+
+      // Options will go here
+
+      iframe: {
+
+        preload: false,
+
+      },
+
+    });
+
+  },
+
+
+
+  mobile: function () {
+
+    $(".js-mobile-menu-toggle").click(function () {
+
+      $(this).toggleClass("active");
+
+      $("body").toggleClass("overflow");
+
+
+
+      $(".js-mobile-menu").slideToggle();
+
+
+
+      /* $(document).mouseup(function (e) { // событие клика по веб-документу
 
 				var div = $('.js-menu-toggle').parent(); // тут указываем ID элемента
 
@@ -6856,139 +6920,145 @@ var uikit = {
 
 
 
-			return false;
+      return false;
 
-		});
+    });
 
+  },
 
 
 
+  scrollTo: function () {
 
-	},
+    $(".js-scroll-to").click(function () {
 
+      var href = $(this).attr("href");
 
+      $("html, body").animate(
 
-	scrollTo: function () {
+        {
 
-		$(".js-scroll-to").click(function () {
+          scrollTop: $(href).offset().top,
 
-			var href = $(this).attr("href");
+        },
 
-			$('html, body').animate({
+        400
 
-				scrollTop: $(href).offset().top
+      );
 
-			}, 400);
+      return false;
 
-			return false;
+    });
 
-		});
+  },
 
-	},
 
 
+  searchBlock: function () {
 
-	searchBlock: function () {
+    $(".js-search-toggle").click(function () {
 
-		$('.js-search-toggle').click(function () {
+      if ($(this).hasClass("is-disabled") == true) {
 
-			if ($(this).hasClass('is-disabled') == true) {
+        $(this)
 
-				$(this).removeClass('is-disabled').parents('.js-search-block').addClass('is-active');
+          .removeClass("is-disabled")
 
+          .parents(".js-search-block")
 
+          .addClass("is-active");
 
-				$(document).click(function (e) { // событие клика по веб-документу
 
-					var div = $('.js-search-block'); // тут указываем ID элемента
 
-					if (!div.is(e.target) // если клик был не по нашему блоку
+        $(document).click(function (e) {
 
-						&&
+          // событие клика по веб-документу
 
-						div.has(e.target).length === 0) { // и не по его дочерним элементам
+          var div = $(".js-search-block"); // тут указываем ID элемента
 
-						div.removeClass('is-active'); // скрываем его
+          if (
 
-						div.find('.js-search-toggle').addClass('is-disabled');
+            !div.is(e.target) && // если клик был не по нашему блоку
 
-					}
+            div.has(e.target).length === 0
 
-				});
+          ) {
 
-				console.log(1);
+            // и не по его дочерним элементам
 
-				return false;
+            div.removeClass("is-active"); // скрываем его
 
-			} else {
+            div.find(".js-search-toggle").addClass("is-disabled");
 
-				$(this).addClass('is-disabled').parents('.js-search-block').removeClass('is-active');
+          }
 
+        });
 
+        console.log(1);
 
-				return true;
+        return false;
 
-			}
+      } else {
 
-		});
+        $(this)
 
-	},
+          .addClass("is-disabled")
 
+          .parents(".js-search-block")
 
+          .removeClass("is-active");
 
 
 
-	mainInit: function () {
+        return true;
 
+      }
 
+    });
 
-		this.lazy();
+  },
 
-		//this.validation();
 
-		this.copyMaterial();
 
-		//this.fancybox();
+  mainInit: function () {
 
-		this.popups();
+    this.lazy();
 
-		this.chengeColorPalette();
+    //this.validation();
 
-		this.mobile();
+    this.copyMaterial();
 
-		this.scrollTo();
+    //this.fancybox();
 
-		this.searchBlock();
+    this.popups();
 
+    this.chengeColorPalette();
 
+    this.mobile();
 
+    this.scrollTo();
 
+    this.searchBlock();
 
-	}
+    this.stepsQuiz();
+
+  },
 
 };
 
 $(document).ready(function () {
 
-
-
-	uikit.mainInit();
-
-
+  uikit.mainInit();
 
 });
 
 var clrTimeOut;
 
-$(window).on('load', function (e) {
+$(window).on("load", function (e) {
 
-	clearTimeout(clrTimeOut);
+  clearTimeout(clrTimeOut);
 
-	clrTimeOut = setTimeout(function () {
-
-
-
-	}, 200);
+  clrTimeOut = setTimeout(function () {}, 200);
 
 });
 
@@ -6996,15 +7066,9 @@ $(window).on('load', function (e) {
 
 $(window).resize(function () {
 
-	clearTimeout(clrTimeOut);
+  clearTimeout(clrTimeOut);
 
-	clrTimeOut = setTimeout(function () {
-
-
-
-	}, 200);
-
-
+  clrTimeOut = setTimeout(function () {}, 200);
 
 });
 
@@ -7012,7 +7076,9 @@ $(window).resize(function () {
 
 $(window).scroll(function () {
 
-	//uikit.headerFixed();
+  //uikit.headerFixed();
 
 });
+
+
 

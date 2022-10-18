@@ -9,8 +9,32 @@
 			margin: 21px 0 14px;
 		}
 	}
+
+	&__row {
+		margin: 0 -30px;
+
+		@include media($md) {
+			margin: 0 -15px;
+		}
+	}
+
+	&__col {
+		padding: 0 30px;
+
+		@include media($md) {
+			padding: 0 15px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__text {
+		font: $fs-p1;
+	}
+
 	&--color-solutions & {
-		
 		&__left {
 			letter-spacing: 0.02em;
 			font: 300 36px/36px $baseFF;
@@ -51,7 +75,6 @@
 		}
 	}
 	&--select-color & {
-
 		&__contact-section {
 			background-color: $bg-grey;
 			padding: 60px 0;
