@@ -133,6 +133,7 @@ $baseBg: $white;
 $family: $baseFF;
 
 //$containerW: 1584px;
+$containerSm: 1490px;
 $containerW: 1830px;
 $containerP: $grid-gutter-width/2;
 
@@ -149,7 +150,8 @@ $text-big: 19px/1.4 $baseFF;
 $fs-p5: 14px/1.1 $baseFF;
 $fs-p6-light: 300 13px/1 $baseFF;
 
-$fs-p: 17px/1.2 $baseFF;
+// $fs-p: 17px/1.2 $baseFF;
+$fs-p1: 17px/1.2 $baseFF;
 $fs-p2: 15px/1.3 $baseFF;
 $fs-p2-xlg: 16px/1.2 $baseFF;
 $fs-p2-bold: bold 14px/1.3 $baseFF;

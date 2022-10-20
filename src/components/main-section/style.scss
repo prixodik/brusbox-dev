@@ -84,4 +84,76 @@
 			}
 		}
 	}
+
+	&--history & {
+
+		&__subtitle {
+			letter-spacing: 0.02em;
+			color: $bb-gray;
+			margin-bottom: 60px;
+			text-transform: uppercase;
+
+			@include media($md) {
+				margin-bottom: 40px;
+			}
+
+			@include media($sm) {
+				margin-bottom: 30px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 25px;
+			}
+		}
+
+		&__text {
+			font: 300 24px/26px $baseFF;
+
+			@include media($md) {
+				font: 300 18px/22px $baseFF;
+			}
+
+			@include media($sm) {
+				margin-bottom: 30px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 16px;
+				font: 300 13px/14px $baseFF;
+			}
+		}
+
+		&__right {
+			img {
+				display: block;
+
+				@include media($sm) {
+					margin: 0 auto;
+					object-fit: cover;
+					min-height: 288px;
+					max-height: 288px;
+				}
+			}
+		}
+
+		&__row {
+			margin: 0 -10px 120px;
+
+			@include media($lg) {
+				margin-bottom: 90px;
+			}
+
+			@include media($md) {
+				margin-bottom: 50px;
+			}
+
+			@include media($sm) {
+				margin-bottom: 20px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 16px;
+			}
+		}
+	}
 }

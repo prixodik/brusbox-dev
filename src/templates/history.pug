@@ -1,0 +1,34 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'dealer-support.html';
+	- var pageTitle = 'История';
+block styles
+	
+block content
+	include ../components/main-section/template
+	+mainSection({
+		bread: [{url: '#', title: 'О компании'},{url: '#', title: 'История'}]
+	}).main-section--history
+		.main-section__container.container
+			h1.main-section__title История
+			.main-section__subtitle.title-h2 На сегодняшний день «БРУСБОКС» – крупнейший Российский производитель профиля из пВХ и подоконной доски!
+			.main-section__row.row
+				.main-section__left.col-6.col-sm-12
+					.main-section__text
+						p Складские и офисные помещения компании расположены в Брянске и занимают общую площадь около 50 000 кв. метров. На предприятии имеется 28 высокотехнологичных экструзионных линий, на которых производится около 40 000 тонн продукции в год. 
+						p Высокое качество профиля, большие объемы производства, оптимальные сроки поставки позволяют удовлетворить даже самый большой спрос, поэтому сегодня компания «БРУСБОКС» имеет развитую дилерскую сеть по всей России и в 8-ми странах мира: в Румынии, в Республиках Беларусь, Казахстан, Таджикистан, Кыргызстан, Молдова, в Монголии и Армении. Так что будущее «остекление» страны и ближнего зарубежья – в надежных руках!
+				.main-section__right.col-6.col-sm-12
+					img(src="/images/history-img.jpg", alt="")
+		include ../components/banner-section/template
+		+bannerSection()
+
+		+bannerSectionObject()
+
+		include ../components/history-section/template
+		+historySection()
+				
+
+
+	//- +gridLayout()
+
+block scripts 

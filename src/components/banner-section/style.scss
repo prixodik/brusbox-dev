@@ -1,0 +1,112 @@
+.banner-section {
+	padding: 120px 0;
+
+	@include media($md) {
+		padding: 90px 0;
+	}
+
+	@include media($sm) {
+		padding: 60px 0;
+	}
+
+	@include media($xs) {
+		padding: 40px 0;
+	}
+
+	&__row {
+	}
+
+	&__title {
+		margin-bottom: 33px;
+		@include media($xs) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__img {
+		padding-right: 30px;
+
+		@include media($lg) {
+			padding-right: 15px;
+		}
+
+		@include media($sm) {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+
+		img {
+			@include media($sm) {
+				margin: 0 auto 26px;
+				width: 100%;
+				display: block;
+				max-width: 288px;
+			}
+
+			@include media($xs) {
+				margin: 0 auto 16px;
+			}
+		}
+	}
+
+	&__info {
+		padding-left: 30px;
+		@include media($lg) {
+			padding-left: 15px;
+		}
+
+		@include media($sm) {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+	}
+
+	&__text {
+		font: 300 24px/26px $baseFF;
+
+		@include media($md) {
+			font: 300 18px/22px $baseFF;
+		}
+
+		@include media($xs) {
+			font: 300 13px/14px $baseFF;
+		}
+	}
+
+	&--red {
+		color: $white;
+		background-color: $btn-red;
+	}
+
+	&--object & {
+		&__info {
+			@include media($sm) {
+				margin-bottom: 16px;
+			}
+		}
+
+		&__link {
+			margin-top: 40px;
+			display: block;
+			font: 400 24px/26px $baseFF;
+
+			@include media($md) {
+				font: 400 18px/22px $baseFF;
+			}
+
+			@include media($sm) {
+				margin-top: 16px;
+			}
+
+			@include media($xs) {
+				font: 400 13px/14px $baseFF;
+			}
+		}
+
+		&__img {
+			img {
+				max-width: 450px;
+			}
+		}
+	}
+}
