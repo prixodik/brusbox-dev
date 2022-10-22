@@ -7,18 +7,18 @@
 	}
 
 	&__li {
-		font: 300 14px/15px $baseFF;
+		font: 300 14px/16px $baseFF;
 
 		@include media($xs) {
 			font: 300 10px/11px $baseFF;
 		}
 
-		color: $medium-gray;
+		color: $bread;
 		@include flex(0, center, center, nowrap);
 
 		&:after {
 			content: "";
-			background-image: url("../../images/braedcrumbs-arrow.svg");
+			background-image: url("../../images/braedcrumbs-arrow.png");
 			height: 6px;
 			width: 6px;
 			display: block;
@@ -37,7 +37,7 @@
 				display: none;
 			}
 
-			color: $black;
+			color: $white;
 		}
 
 		@include media($sm) {

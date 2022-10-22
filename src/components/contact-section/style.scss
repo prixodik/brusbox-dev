@@ -1,31 +1,26 @@
 .contact-section {
 	background-color: $bg-grey;
-	padding: 60px 0;
 
 	@include media($sm) {
 		padding: 40px 0;
 	}
 
-	&__row {
-		margin: 0 -30px;
+	&__form {
+		padding: 50px 0;
+	}
 
-		@include media($md) {
-			margin: 0 -15px;
-		}
+	&__row {
+		align-items: center;
 	}
 
 	&__left {
-		padding: 0 30px;
-
-		@include media($md) {
-			padding: 0 15px;
-		}
 	}
 	&__right {
-		padding: 0 30px;
-
-		@include media($md) {
-			padding: 0 15px;
+		img {
+			display: block;
+			min-height: 823px;
+			max-height: 823px;
+			object-fit: cover;
 		}
 	}
 
@@ -38,6 +33,7 @@
 	}
 
 	&--order & {
+
 		&__banner {
 			display: block;
 
@@ -52,6 +48,15 @@
 				min-height: 348px;
 				object-fit: cover;
 				object-position: left;
+			}
+		}
+
+		&__right {
+			img {
+				display: block;
+				min-height: 593px;
+				max-height: 593px;
+				object-fit: cover;
 			}
 		}
 	}

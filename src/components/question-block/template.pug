@@ -1,0 +1,21 @@
+mixin questionBlock(data)
+	.question-block&attributes(attributes)
+		._row 
+			._info
+				h4._title
+					!=data.title
+				._text
+					!=data.text
+			._img
+				img(src=data.img, alt="")
+
+mixin questionBlockMode(data)
+	.question-block&attributes(attributes)
+		._row 
+			._info
+				h3._title
+					!=data.title
+				._text
+					!=data.text
+			._img
+				img(src=data.img, alt="")

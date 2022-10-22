@@ -13,12 +13,16 @@
 
 	&__row {
 		@include flex(space-between);
+		flex-wrap: nowrap;
 	}
 
 	&__left {
 		@include media($sm) {
 			padding: 0;
 		}
+		padding-right: 10px;
+		max-width: 559px;
+		width: 100%;
 	}
 
 	&__palettes {
@@ -26,6 +30,7 @@
 
 	&__palette {
 		margin-bottom: 60px;
+		max-width: 570px;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -41,8 +46,9 @@
 	}
 
 	&__right {
-		// margin-right: 137px;
-		max-width: 732px;
+		max-width: 559px;
+		width: 100%;
+		padding-left: 10px;
 		@include flex(space-between, 0, 0, nowrap);
 		width: 100%;
 

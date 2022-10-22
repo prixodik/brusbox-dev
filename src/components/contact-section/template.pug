@@ -5,9 +5,9 @@ mixin contactSection(data)
 		._container.container
 			._row.row
 				._left.col-6.col-sm-12
-					._title.title-h2 Обратная<br> связь
-				._right.col-6.col-sm-12
 					+formBlockContacts._form
+				._right.col-6.col-sm-12
+					img(src="images/contact-img.jpg", alt="")
 
 mixin contactSectionOrder(data)
 	.contact-section.--order&attributes(attributes)

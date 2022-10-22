@@ -1,0 +1,11 @@
+mixin actionBlock(data)
+	.action-block&attributes(attributes)
+		a(href="#")._link
+			._head
+				!=data.date
+			._img
+				img(src=data.img, alt="")
+			._title
+				!=data.title
+			._text
+				!=data.text

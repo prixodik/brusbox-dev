@@ -2,36 +2,50 @@
 	position: relative;
 	// flex: 1 1 auto;
 
+	&__head {
+		position: relative;
+	}
+
+	&__img {
+		display: block;
+		margin: 0 auto;
+		max-height: 600px;
+		max-width: 1920px;
+		width: 100%;
+	}
+
 	&__bread {
-		margin: 24px 0 20px;
-
-		@include media($sm) {
-			margin: 21px 0 14px;
-		}
-	}
-
-	&__row {
-		margin: 0 -30px;
-
-		@include media($md) {
-			margin: 0 -15px;
-		}
-	}
-
-	&__col {
-		padding: 0 30px;
-
-		@include media($md) {
-			padding: 0 15px;
-		}
+		position: absolute;
+		bottom: 137px;
+		left: 50%;
+		transform: translate(-50%);
 	}
 
 	&__title {
-		margin-bottom: 24px;
+		color: $white;
+		position: absolute;
+		bottom: 60px;
+		left: 50%;
+		transform: translate(-50%);
+		margin-bottom: 0;
+		text-transform: none;
+	}
+
+	&__info {
+		max-width: 1180px;
+		margin: 112px auto 0;
 	}
 
 	&__text {
 		font: $fs-p1;
+	}
+
+	&__about {
+		margin:  120px 0;
+		&-button {
+			margin-top: 49px;
+			@include flex(center,center);
+		}
 	}
 
 	&--color-solutions & {
@@ -86,74 +100,18 @@
 	}
 
 	&--history & {
+		&__info {
+			margin-bottom: 112px;
+		}
+	}
 
-		&__subtitle {
-			letter-spacing: 0.02em;
-			color: $bb-gray;
-			margin-bottom: 60px;
-			text-transform: uppercase;
-
-			@include media($md) {
-				margin-bottom: 40px;
-			}
-
-			@include media($sm) {
-				margin-bottom: 30px;
-			}
-
-			@include media($xs) {
-				margin-bottom: 25px;
-			}
+	&--actions & {
+		&__actions {
+			padding: 112px 0 0;
 		}
 
-		&__text {
-			font: 300 24px/26px $baseFF;
-
-			@include media($md) {
-				font: 300 18px/22px $baseFF;
-			}
-
-			@include media($sm) {
-				margin-bottom: 30px;
-			}
-
-			@include media($xs) {
-				margin-bottom: 16px;
-				font: 300 13px/14px $baseFF;
-			}
-		}
-
-		&__right {
-			img {
-				display: block;
-
-				@include media($sm) {
-					margin: 0 auto;
-					object-fit: cover;
-					min-height: 288px;
-					max-height: 288px;
-				}
-			}
-		}
-
-		&__row {
-			margin: 0 -10px 120px;
-
-			@include media($lg) {
-				margin-bottom: 90px;
-			}
-
-			@include media($md) {
-				margin-bottom: 50px;
-			}
-
-			@include media($sm) {
-				margin-bottom: 20px;
-			}
-
-			@include media($xs) {
-				margin-bottom: 16px;
-			}
+		&__action {
+			margin-bottom: 76px;
 		}
 	}
 }

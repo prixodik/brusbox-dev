@@ -13,8 +13,7 @@
 	}
 
 	&__title {
-		font: 300 24px/24px $baseFF;
-		text-transform: uppercase;
+		font: 300 28px/30px $baseFF;
 
 		@include media($xs) {
 			font: 300 20px/20px $baseFF;
@@ -70,7 +69,7 @@
 		}
 
 		border-radius: 50%;
-		margin-right: 5px;
+		margin-right: 3px;
 
 		@include media($sm) {
 			width: 26px;

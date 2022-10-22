@@ -1,0 +1,45 @@
+.question-block {
+
+
+	&__row {
+		@include flex(space-between,center,center,nowrap);
+		background-color: $gray-bridge;
+	}
+
+	&__info {
+		max-width: 736px;
+		margin: 0 auto;
+		padding: 0 10px;
+	}
+
+	&__title {
+	}
+
+	&__text {
+		font: $fs-p1;
+	}
+
+	&__img {
+		max-width: 50%;
+		width: 100%;
+		// min-height: 600px;
+		img {
+			display: block;
+	
+		}
+	}
+	&--row-revers & {
+
+		&__row {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&--gray & {
+
+		&__row {
+			background-color: $medium-gray;
+			color: $white;
+		}
+	}
+}

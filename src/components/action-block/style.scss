@@ -1,0 +1,24 @@
+.action-block {
+	&__head {
+		background-color: $btn-red;
+		padding: 10px 20px;
+		color: $white;
+	}
+
+	&__title {
+		font: 300 28px/30px $baseFF;
+		margin-bottom: 8px;
+	}
+
+	&__text {
+	}
+
+	&__img {
+		margin-bottom: 24px;
+
+		img {
+			display: block;
+			object-fit: cover;
+		}
+	}
+}

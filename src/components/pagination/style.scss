@@ -1,0 +1,31 @@
+.pagination {
+	@include flex(center,center,center);
+	flex-wrap: nowrap;
+	font: 400 14px/14px $baseFF;
+	color: $gray-medium;
+	padding-bottom: 112px;
+
+	&__values {
+		@include flex(0,center,center);
+		padding: 0 28px
+	}
+	&__value {
+		@include flex(center,center,center);
+		width: 73px;
+		height: 40px;
+		transition: all 0.3s;
+		cursor: pointer;
+		&:hover {
+			background-color: rgba(rgb(132, 132, 132), 0.1);
+			transition: all 0.3s;
+		}
+
+		&.is-active {
+			color: $black;
+		}
+	}
+	&__prev,
+	&__next {
+		cursor: pointer;
+	}
+}
