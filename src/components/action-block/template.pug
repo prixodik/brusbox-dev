@@ -9,3 +9,16 @@ mixin actionBlock(data)
 				!=data.title
 			._text
 				!=data.text
+
+
+mixin actionBlockMode(data)
+	.action-block.--mode&attributes(attributes)
+		a(href="#")._link
+			._img
+				img(src=data.img, alt="")
+			._date
+				!=data.date
+			._title
+				!=data.title
+			._text
+				!=data.text

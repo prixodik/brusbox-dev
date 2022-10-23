@@ -18,6 +18,24 @@ mixin formBlockContacts()
 				._buttons
 					button.btn.-red.js-submit(type="submit") Отправить
 
+mixin formBlockSunscribe()
+	.form-block.--subscribe&attributes(attributes)
+		h4._title Оформите подписку на новости
+		._subtitle Подпишитесь на рассылку, чтобы первыми узнавать об актуальных новостях
+		form(action="")
+			._row
+				._inputs
+					._input
+						input.form-control.js-required(type="text" placeholder="Ваше имя*" required)
+					._input
+						input.form-control.js-required(type="email" placeholder="Email*" required)
+				._check
+					.checkbox
+						input.js-required#a1(type="checkbox" name="police" value="1" required)
+						label(for="a1") Ознакомлен с <span>политикой конфиденциальности</span>
+				._buttons
+					button.btn.-red.js-submit(type="submit") Отправить
+
 mixin formBlockContactsOrder()
 	.form-block.--order&attributes(attributes)
 		h4._title Закажите лучшие окна в BRUSBOX!

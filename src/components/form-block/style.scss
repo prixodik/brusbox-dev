@@ -14,6 +14,27 @@
 
 	&__row {
 	}
+
+	&__check {
+		color: $gray-medium;
+		font: 300 13px/13px $baseFF;
+		height: 18px;
+		span {
+			position: relative;
+			&::after {
+				position: absolute;
+				content: "";
+				display: block;
+				height: 1px;
+				width: 100%;
+				bottom: -3px;
+				left: 0;
+				right: 0;
+				background-color: $gray-medium;
+			}
+		}
+	}
+
 	&__input {
 		margin-bottom: 40px;
 
@@ -36,6 +57,7 @@
 			min-height: 103px;
 			max-width: 855px;
 			background-color: transparent;
+			resize: vertical;
 
 			@include media($xs) {
 				font: 300 13px/14px $baseFF;
@@ -408,6 +430,12 @@
 			@include media($xs) {
 				font: 300 13px/14px $baseFF;
 			}
+		}
+	}
+
+	&--subscribe & {
+		&__check {
+			margin: 25px 0 40px;
 		}
 	}
 }

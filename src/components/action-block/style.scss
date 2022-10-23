@@ -21,4 +21,17 @@
 			object-fit: cover;
 		}
 	}
+
+	&--mode {
+		padding-bottom: 16px;
+	}
+	&--mode & {
+		&__img {
+			margin-bottom: 12px;
+		}
+		&__date {
+			color: $medium-gray;
+			margin-bottom: 8px;
+		}
+	}
 }

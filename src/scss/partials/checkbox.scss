@@ -73,20 +73,20 @@
 	label {
 		background: none;
 		position: relative;
-		padding-left: 40px;
+		padding-left: 30px;
 		padding-top: 0;
 		display: inline-block;
 		cursor: pointer;
 		&:before {
 			content: "";
 			display: block;
-			width: 24px;
-			height: 24px;
+			width: 18px;
+			height: 18px;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
 			left: 0;
-			border: 1px $black solid;
+			border: 1px $bg-grey solid;
 			border-radius: 0;
 			@include time();
 			background-color: $white;
@@ -94,9 +94,9 @@
 		&:after {
 			content: "";
 			display: block;
-			width: 24px;
-			height: 24px;
-			background: url("../images/check.svg") 50% 50%/14px auto no-repeat;
+			width: 18px;
+			height: 18px;
+			background: url("../images/tick.svg") 50% 50%/13px auto no-repeat;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
@@ -117,8 +117,8 @@
 	input[type="checkbox"]:checked + label,
 	input[type="radio"]:checked + label {
 		&:before {
-			/* background: $form-blue;
-			border-color: $form-blue; */
+			background: $btn-red;
+			border: none;
 		}
 		&:after {
 			opacity: 1;

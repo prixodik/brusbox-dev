@@ -41,10 +41,16 @@
 	}
 
 	&__about {
-		margin:  120px 0;
+		margin: 120px 0;
 		&-button {
 			margin-top: 49px;
-			@include flex(center,center);
+			@include flex(center, center);
+		}
+	}
+
+	&--gap-bottom & {
+		&__head {
+			margin-bottom: 112px;
 		}
 	}
 
@@ -112,6 +118,14 @@
 
 		&__action {
 			margin-bottom: 76px;
+		}
+
+		&__items {
+			margin-bottom: 44px;
+
+			&:last-child {
+				margin-bottom: 40px;
+			}
 		}
 	}
 }
