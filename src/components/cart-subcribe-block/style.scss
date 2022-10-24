@@ -1,0 +1,21 @@
+.cart-subcribe-block {
+	@include flex(space-between,center,center,nowrap);
+	font: 400 14px/14px $baseFF;
+	&__link {
+
+	}
+	&__icon {
+		width: 6px;
+		height: 6px;
+		margin-right: 18px;
+	}
+	&__subscribe {
+		@include flex(0,center,center,nowrap);
+		color: $gray-medium;
+		&-title {
+		}
+	}
+	&__soc-list {
+		margin-left: 16px;
+	}
+}

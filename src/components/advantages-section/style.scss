@@ -1,0 +1,20 @@
+.advantages-section {
+	background-color: $bg-grey;
+	padding: 60px 0;
+
+	&__items {
+		background-color: $bg-grey;
+		@include flex(0, center, center, nowrap);
+	}
+
+	&__item {
+		&-title {
+		}
+
+		&-img {
+			margin-bottom: 16px;
+			display: block;
+			object-fit: cover;
+		}
+	}
+}

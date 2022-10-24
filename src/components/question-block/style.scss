@@ -42,4 +42,16 @@
 			color: $white;
 		}
 	}
+
+	&--text-sm & {
+		&__info {
+			max-width: 100%;
+			margin: 0;
+			padding: 0 215px 0 112px;
+		}
+
+		&__text {
+			max-width: 633px;
+		}
+	}
 }

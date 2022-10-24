@@ -53,6 +53,34 @@
 		}
 	}
 
+	&--subscribe & {
+		&__item {
+			flex: 0 0 24px;
+			max-width: 24px;
+			height: 24px;
+			margin-right: 8px;
+			@include flex(center, center, center);
+			flex-wrap: nowrap;
+
+			&:last-child {
+				margin-right: 0;
+			}
+			rect {
+				fill: $medium-gray;
+			}
+			g {
+				stroke: rgba(0,0,0,0.5);
+			 }
+
+			svg {
+				display: block;
+				max-width: 18px;
+				max-height: 18px;
+				
+			}
+		}
+	}
+
 	/* &--center{ @include flex(space-between,0,0,nowrap); margin-bottom: -10px; }
 	&--center &{
 		&__item{ margin: 0 5px 10px; 

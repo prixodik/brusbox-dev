@@ -12,11 +12,19 @@ mixin mainSection(data)
 
 		block
 
-mixin mainSectionUser(data)
-	.main-section&attributes(attributes)
-		._container.container
-			+breadcrumbsUser({
+mixin mainSectionMode(data)
+	.main-section.--mode&attributes(attributes)
+		._head
+			img(src=data.img, alt="")._img
+			+breadcrumbs({
 				items: data.bread
-			})._bread 
+			})._bread
+			._head-info
+				._date
+					!=data.date
+				h1._title
+					!=data.title
+				._subtitle 
+					!=data.subtitle
 
-			block
+		block

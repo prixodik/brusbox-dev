@@ -156,6 +156,24 @@ a:hover {
 		margin: 0 auto;
 	}
 
+	&--full {
+		padding-left: 0;
+		padding-right: 0;
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+
+	&--text {
+		max-width: 1180px;
+		padding-left: 10px;
+		padding-right: 10px;
+	} 
+
+	&--padding {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	@include media($xlg) {
 		//max-width: 1360px;
 	}

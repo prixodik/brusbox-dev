@@ -1,0 +1,15 @@
+mixin textBlock(data)
+	.text-block&attributes(attributes)
+		._container.container.container--sm
+			._title
+				!=data.title
+			._text
+				!=data.text
+
+mixin textBlockPadding(data)
+	.text-block.--padding-sm&attributes(attributes)
+		._container.container.container--sm
+			._title
+				!=data.title
+			._text
+				!=data.text
