@@ -1,8 +1,10 @@
 .cart-subcribe-block {
 	@include flex(space-between,center,center,nowrap);
 	font: 400 14px/14px $baseFF;
+	padding: 65px 0 60px;
+	
 	&__link {
-
+		@include flex(0,center,center,nowrap);
 	}
 	&__icon {
 		width: 6px;

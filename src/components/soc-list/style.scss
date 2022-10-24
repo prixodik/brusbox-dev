@@ -52,7 +52,7 @@
 			}
 		}
 	}
-
+	
 	&--subscribe & {
 		&__item {
 			flex: 0 0 24px;
@@ -65,18 +65,18 @@
 			&:last-child {
 				margin-right: 0;
 			}
-			rect {
-				fill: $medium-gray;
-			}
-			g {
-				stroke: rgba(0,0,0,0.5);
-			 }
 
 			svg {
 				display: block;
 				max-width: 18px;
 				max-height: 18px;
+				fill: $medium-gray;
 				
+			}
+			&:hover {
+				svg {
+					fill: $bb-gray;
+				}
 			}
 		}
 	}
