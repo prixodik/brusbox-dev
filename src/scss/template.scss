@@ -40,6 +40,9 @@
 @import "../components/text-block/style";
 @import "../components/about-cart-block/style";
 @import "../components/cart-subcribe-block/style";
+@import "../components/article-creator-block/style";
+@import "../components/sort-block/style";
+@import "../components/article-block/style";
 /*-----------------------------*/
 
 /* sections
@@ -64,7 +67,7 @@
 -----------------------------*/
 //@import "partials/forms";
 @import "partials/checkbox";
-//@import "partials/nice-select";
+@import "partials/nice-select";
 
 //@import "partials/mCustomScrollbar";
 //@import "partials/range-slider";

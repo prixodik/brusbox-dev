@@ -1,0 +1,28 @@
+.article-creator-block {
+	padding: 40px 0;
+	&__row {
+		@include flex(center,center,center);
+		
+	}
+	&__author {
+	}
+	&__img {
+		border-radius: 50%;
+		overflow: hidden;
+		width: 92px;
+		height: 92px;
+		margin: 0 24px;
+		img {
+			display: block;
+			object-fit: cover;
+		}
+	}
+	&__info {
+	}
+	&__title {
+		font-weight: 400;
+		margin-bottom: 2px;
+	}
+	&__subtitle {
+	}
+}

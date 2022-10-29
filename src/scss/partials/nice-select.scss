@@ -20,18 +20,18 @@ $arrow_color: $gray !default;
 	text-decoration: none;
 	background-color: $white;
 	border-radius: $input_border_radius;
-	border: 1px $gray2 solid;
+	// border: 1px $gray2 solid;
 	box-sizing: border-box;
 	clear: both;
 	color: $text-green-dark;
 	cursor: pointer;
 	display: block;
-	font: 16px/38px $family;
+	font: 300 18px/25px $family;
 	height: 40px;
 	//line-height: $input_height - 2;
 	outline: none;
-	padding-left: 20px;
-	padding-right: 20px;
+	// padding-left: 20px;
+	// padding-right: 20px;
 	position: relative;
 	text-align: left !important;
 	transition: all 0.2s ease-in-out;
@@ -55,8 +55,10 @@ $arrow_color: $gray !default;
 	}
 
 	&__head {
-		@include flex(space-between, center, center, nowrap);
+		@include flex(flex-end, center, center, nowrap, row-reverse);
 		height: 100%;
+		padding-left: 15px;
+		color: $black;
 	}
 	&__search-icon {
 		width: 16px;
@@ -74,7 +76,10 @@ $arrow_color: $gray !default;
 		width: 16px;
 		transform: rotate(0deg);
 		pointer-events: none;
-		margin-left: 10px;
+		margin-right: 8px;
+		svg {
+			stroke: $black;
+		}
 		/* position: absolute; 
     right: 15px; 
     top: 50%;  */
@@ -89,8 +94,7 @@ $arrow_color: $gray !default;
 
 	&__drop {
 		background: $white;
-		border-radius: 11px;
-		border: 1px $gray2 solid;
+		// border: 1px $gray2 solid;
 		box-sizing: border-box;
 		margin-top: 0;
 		opacity: 0;

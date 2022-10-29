@@ -2,22 +2,30 @@
 	@include flex(space-between,center,center,nowrap);
 	font: 400 14px/14px $baseFF;
 	padding: 65px 0 60px;
-	
+
 	&__link {
 		@include flex(0,center,center,nowrap);
 	}
+	
 	&__icon {
 		width: 6px;
 		height: 6px;
 		margin-right: 18px;
 	}
+
 	&__subscribe {
 		@include flex(0,center,center,nowrap);
 		color: $gray-medium;
+
 		&-title {
 		}
 	}
+
 	&__soc-list {
 		margin-left: 16px;
+	}
+
+	&--article {
+		padding: 32px 0 0;
 	}
 }

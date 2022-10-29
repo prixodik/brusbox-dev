@@ -498,6 +498,11 @@ var uikit = {
     });
   },
 
+  niceSelect: function () {
+    $('select').niceSelect();
+    //$('.nice-select .list').mCustomScrollbar();
+  },
+
   mainInit: function () {
     this.lazy();
     //this.validation();
@@ -509,6 +514,7 @@ var uikit = {
     this.scrollTo();
     this.searchBlock();
     this.stepsQuiz();
+    this.niceSelect();
   },
 };
 $(document).ready(function () {

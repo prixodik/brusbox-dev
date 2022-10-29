@@ -1,0 +1,10 @@
+include ../cart-subcribe-block/template
+
+mixin articleBlock(data)
+	.article-block&attributes(attributes)
+		._img
+			img(src=data.img, alt="")
+		._title
+			!=data.title
+		._subscribe
+			+cartSubcribeBlockArticle()

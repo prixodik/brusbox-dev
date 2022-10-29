@@ -7020,6 +7020,16 @@ var uikit = {
 
 
 
+  niceSelect: function () {
+
+    $('select').niceSelect();
+
+    //$('.nice-select .list').mCustomScrollbar();
+
+  },
+
+
+
   mainInit: function () {
 
     this.lazy();
@@ -7041,6 +7051,8 @@ var uikit = {
     this.searchBlock();
 
     this.stepsQuiz();
+
+    this.niceSelect();
 
   },
 
