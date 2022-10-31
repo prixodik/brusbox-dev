@@ -27,6 +27,8 @@
 /* Базовые стили всего сайта
 -----------------------------*/
 @import "partials/base";
+/* TITLES */
+@import "partials/titles";
 
 /* blocks
 -----------------------------*/
@@ -57,8 +59,6 @@
 @import "../components/advantages-section/style";
 /*-----------------------------*/
 
-/* TITLES */
-@import "partials/titles";
 //@import "partials/table";
 //@import "partials/slick";
 

@@ -3,7 +3,7 @@ include ../breadcrumbs/template
 mixin mainSection(data)
 	.main-section&attributes(attributes)
 		._head
-			img(src=data.img, alt="")._img
+			img(src=data.img, alt="")._head-img
 			+breadcrumbs({
 				items: data.bread
 			})._bread
@@ -15,7 +15,7 @@ mixin mainSection(data)
 mixin mainSectionMode(data)
 	.main-section.--mode&attributes(attributes)
 		._head
-			img(src=data.img, alt="")._img
+			img(src=data.img, alt="")._head-img
 			+breadcrumbs({
 				items: data.bread
 			})._bread

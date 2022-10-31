@@ -4,14 +4,15 @@
 
 	&__head {
 		position: relative;
-	}
 
-	&__img {
-		display: block;
-		margin: 0 auto;
-		max-height: 600px;
-		max-width: 1920px;
-		width: 100%;
+		&-img {
+			display: block;
+			margin: 0 auto;
+			max-height: 600px;
+			/* max-width: 1920px; */
+			object-fit: cover;
+			width: 100%;
+		}
 	}
 
 	&__bread {
@@ -42,7 +43,7 @@
 		&-list {
 			padding-left: 28px;
 		}
-		
+
 		&-col {
 			&-left {
 				padding-left: 10px;
@@ -63,7 +64,8 @@
 	}
 
 	&__about {
-		margin: 120px 0;
+		padding: 120px 0;
+
 		&-button {
 			margin-top: 49px;
 			@include flex(center, center);
@@ -156,7 +158,7 @@
 			position: absolute;
 			bottom: 67px;
 			color: $white;
-			
+
 			left: 50%;
 			transform: translate(-50%);
 			text-align: center;
@@ -174,7 +176,6 @@
 			margin-bottom: 8px;
 		}
 		&__subtitle {
-			
 		}
 	}
 

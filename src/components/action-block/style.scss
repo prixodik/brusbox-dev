@@ -1,4 +1,15 @@
 .action-block {
+	position: relative;
+
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+	}
+
 	&__head {
 		background-color: $btn-red;
 		padding: 10px 20px;
