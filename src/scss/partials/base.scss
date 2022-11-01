@@ -7,8 +7,8 @@ html {
 }
 body {
 	font-family: $baseFF;
-	color: $baseFClr;
-	font: $fs-p2-xlg;
+	color: $black;
+	font: $fs-p1;
 	min-height: 100%;
 	position: relative;
 	background: $baseBg;
@@ -63,13 +63,21 @@ input[type="submit"] {
 	@include transition();
 }
 
-/* p {
-	margin: 0 0 16px;
+p {
+	margin: 0 0 24px;
 
 	&:last-child {
 		margin-bottom: 0;
 	}
-} */
+
+	@include media($xs) {
+		margin: 0 0 16px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
 
 .color-green {
 	color: $green;
@@ -86,6 +94,7 @@ input[type="submit"] {
 }
 
 img {
+	display: block;
 	max-width: 100%;
 }
 
@@ -143,6 +152,29 @@ a:hover {
 		max-width: 708px;
 	}
 
+	&--sm {
+		max-width: 1240px;
+		margin: 0 auto;
+	}
+
+	&--full {
+		padding-left: 0;
+		padding-right: 0;
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+
+	&--text {
+		max-width: 1180px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	&--padding {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	@include media($xlg) {
 		//max-width: 1360px;
 	}
@@ -155,8 +187,8 @@ a:hover {
 		max-width: 1120px;
 	}
 	@include media($xs) {
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 }
 

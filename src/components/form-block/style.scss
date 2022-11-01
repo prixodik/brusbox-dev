@@ -1,172 +1,441 @@
 .form-block {
 	&__title {
-		font: bold 18px/1.2 $baseFF;
-		margin-bottom: 24px;
+		margin-bottom: 16px;
 		color: $black;
+
+		@include media($xs) {
+			color: $black;
+		}
 	}
-	&__desc {
-		/* text-align: center;
-		margin-bottom: 45px;
-		color: $text-green-dark;
-		font: $fs-18; */
+	&__subtitle {
+		font: 300 13px/14px $baseFF;
+		margin-bottom: 27px;
 	}
 
 	&__row {
 	}
+
+	&__check {
+		color: $gray-medium;
+		font: 300 13px/13px $baseFF;
+		height: 18px;
+		span {
+			position: relative;
+			&::after {
+				position: absolute;
+				content: "";
+				display: block;
+				height: 1px;
+				width: 100%;
+				bottom: -3px;
+				left: 0;
+				right: 0;
+				background-color: $gray-medium;
+			}
+		}
+	}
+
 	&__input {
-		margin-bottom: 20px;
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 20px;
+		}
+
+		@include media($xs) {
+			margin-bottom: 48px;
+
+			&:last-child {
+				margin-bottom: 17px;
+			}
+		}
+		textarea {
+			font: 300 18px/19px $baseFF;
+			padding: 13px;
+			border: 1px solid $gray;
+			width: 100%;
+			min-height: 103px;
+			max-width: 855px;
+			background-color: transparent;
+			resize: vertical;
+
+			@include media($xs) {
+				font: 300 13px/14px $baseFF;
+			}
+
+			&::placeholder {
+				font: 300 18px/19px $baseFF;
+				color: $black;
+
+				@include media($xs) {
+					font: 300 13px/14px $baseFF;
+				}
+			}
+
+			&:focus {
+				border: 1px solid $black;
+			}
+		}
+		input {
+			width: 100%;
+			font: 300 18px/19px $baseFF;
+			background-color: transparent;
+			padding: 13px 0;
+			border: none;
+			border-bottom: 1px solid $gray;
+
+			@include media($xs) {
+				font: 300 13px/14px $baseFF;
+			}
+
+			&::placeholder {
+				font: 300 18px/19px $baseFF;
+
+				@include media($xs) {
+					font: 300 13px/14px $baseFF;
+				}
+
+				color: $black;
+			}
+
+			&:focus {
+				border-bottom: 1px solid $black;
+			}
+
+			@include media($xs) {
+				padding: 9px 0;
+				font: 300 13px/14px $baseFF;
+			}
+		}
+	}
+	&__label {
+	}
+
+	&__agree {
+		font: 300 13px/13px $baseFF;
+		color: $gray-medium;
+		margin-bottom: 24px;
+
+		@include media($xs) {
+			margin-bottom: 16px;
+			font: 300 10px/10px $baseFF;
+		}
 	}
 
 	&__buttons {
 		@include flex(space-between);
 	}
 
-	/* &--popup & {
-		&__desc {
-			margin-bottom: 30px;
-			font: $fs-16;
-			color: $text-form;
-		}
+	&--order & {
 		&__title {
-			font: bold 27px $baseFF;
-			margin-bottom: 16px;
+			@include media($xs) {
+				margin-bottom: 16px;
+			}
 		}
-	} */
+	}
+	&--quiz {
+		display: none;
 
-	&--call-back & {
-		&__upload {
-			margin-bottom: 52px;
-			@include flex(space-between, center, center, nowrap);
-			&-label {
-				font: 18px/1.2 $baseFF;
-				color: $gray-greenish;
+		&.is-active {
+			display: block;
+		}
+
+		form {
+			min-height: 414px;
+			@include flex(space-between);
+			flex-direction: column;
+
+			@include media($xs) {
+				min-height: auto;
 			}
 		}
 
-		&__buttons {
-			@include flex(center);
+		@include media($md) {
+			padding-bottom: 50px;
 		}
-
-		@include media($lg) {
-			&__upload {
-				margin-bottom: 44px;
+	}
+	&--quiz & {
+		&__title {
+			&-left {
+				margin-right: 16px;
 			}
-		}
 
-		@include media($xs) {
-			&__upload {
-				margin-bottom: 20px;
-				&-label {
-					font: $fs-p2-xs;
+			&-right {
+				color: $gray;
+			}
+
+			@include flex();
+
+			@include media($xs) {
+				@include flex(0, 0, 0, nowrap, column);
+
+				div {
+					margin-bottom: 4px;
 				}
 			}
 		}
-	}
 
-	&--payments,
-	&--delivery {
-		border: 1px $gray2 solid;
-		padding: 24px;
-
-		@include media($xs) {
-			padding: 16px;
-		}
-	}
-
-	&--payments &,
-	&--delivery & {
-		&__title {
-			margin-bottom: 24px;
-			font: $title-h3-4;
-		}
 		&__row {
-			margin: 0 -32px -24px;
-			&-item {
-				padding: 0 32px;
+			@include flex(space-between, 0, 0, nowrap);
+			margin-bottom: 60px;
+
+			&:last-child {
+				margin-bottom: 16px;
+
+				@include media($xs) {
+					margin-bottom: 0;
+
+					.form-block__item {
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+
+			@include media($sm) {
+				flex-direction: column;
+				margin-bottom: 0;
+			}
+		}
+
+		&__body {
+			width: 100%;
+		}
+
+		&__item {
+			max-width: 467px;
+			width: 100%;
+
+			@include media($sm) {
 				margin-bottom: 24px;
 			}
-		}
 
-		@include media($lg) {
-			&__title {
-				font: $title-h3-lg;
-			}
-			&__row {
-				margin: 0 -10px -24px;
-				&-item {
-					padding: 0 10px;
-					margin-bottom: 24px;
+			&-title {
+				font: 300 24px/26px $baseFF;
+				margin-bottom: 16px;
+
+				@include media($lg) {
+					font: 300 18px/24px $baseFF;
 				}
-			}
-		}
 
-		@include media($xs) {
-			&__title {
-				margin-bottom: 8px;
-			}
-			&__row {
-				margin: 0 -10px -12px;
-				&-item {
-					padding: 0 10px;
+				@include media($sm) {
+					font: 300 13px/14px $baseFF;
 					margin-bottom: 12px;
 				}
+
+				@include media($xs) {
+					margin-bottom: 8px;
+				}
+			}
+
+			&-radio {
+				font: 300 18px/19px $baseFF;
+				margin-bottom: 9px;
+				min-height: 20px;
+
+				label {
+					min-height: 20px;
+					@include flex(0, center, center);
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				@include media($lg) {
+					font: 300 16px/18px $baseFF;
+				}
+
+				@include media($sm) {
+					font: 300 12px/13px $baseFF;
+				}
+			}
+
+			&-list {
+				list-style: none;
+			}
+
+			&-answer {
+				position: relative;
+				padding-left: 18px;
+				margin-bottom: 2px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				@include media($xs) {
+					padding-left: 16px;
+				}
+
+				&::after {
+					position: absolute;
+					top: calc(50% - 3.5px);
+					left: 0;
+					content: "";
+					min-width: 7px;
+					max-width: 7px;
+					min-height: 7px;
+					max-height: 7px;
+					border-radius: 50%;
+					background-color: $black;
+
+					@include media($xs) {
+						min-width: 5px;
+						max-width: 5px;
+						min-height: 5px;
+						max-height: 5px;
+					}
+				}
+			}
+		}
+
+		&__agree {
+			margin-top: 16px;
+
+			@include media($xs) {
+				margin-top: 8px;
+				margin-left: 28px;
+				margin-bottom: 0;
+			}
+		}
+
+		&__button {
+			@include media($xs) {
+				margin-top: 16px;
+			}
+		}
+
+		&__buttons {
+			.btn {
+				&:first-child {
+					margin-right: 16px;
+				}
+			}
+
+			@include media($xs) {
+				margin-top: 40px;
 			}
 		}
 	}
 
-	@include media($lg) {
-		&__buttons {
-			flex-wrap: wrap;
-			flex-direction: column;
-			.btn {
-				order: 99;
+	&--quiz2 & {
+		&__item {
+			@include media($xs) {
+				margin-bottom: 40px;
+			}
+
+			&-list {
+				@include media($xs) {
+					padding-left: 7px;
+				}
 			}
 		}
-		&__capcha {
-			margin-bottom: 20px;
-		}
 	}
-	@include media($sm) {
-		&__file {
-			margin: 0 0 40px 0;
-		}
-		&__police {
-			margin: 0 0 40px 0;
-		}
-	}
-	@include media($xs) {
+
+	&--quiz3 & {
 		&__title {
-			margin-bottom: 16px;
-			font: $title-h2-3-xs;
+			@include media($xs) {
+				margin-bottom: 26px;
+			}
 		}
 
 		&__input {
-			margin-bottom: 16px;
+			@include media($xs) {
+				margin-bottom: 36px;
+
+				&:last-child {
+					margin-bottom: 29px;
+				}
+			}
 		}
 
-		/* &__desc {
-			margin-bottom: 25px;
-			font: $fs-16;
-			strong {
+		&__agree {
+			margin-left: 0;
+		}
+
+		&__buttons {
+			@include media($xs) {
+				margin-top: 16px;
+			}
+		}
+
+		&__item {
+			padding-left: 10px;
+			padding-right: 10px;
+
+			@include media($sm) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			@include media($xs) {
+				margin-bottom: 56px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__row {
+			margin-left: -10px;
+			margin-right: -10px;
+
+			@include media($sm) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+
+		&__button {
+			@include media($sm) {
+				display: none;
+			}
+		}
+
+		&__buttons {
+			@include media($sm) {
+				justify-content: flex-start;
+			}
+		}
+
+		&__button-close {
+			display: none;
+			@include media($sm) {
 				display: block;
 			}
-		} */
-		/* &__file {
-			margin: 0 0 16px 0;
 		}
-		&__police {
-			margin: 0 0 30px 0;
-		} */
+	}
 
-		/* &--popup & {
-			&__desc {
-				margin-bottom: 24px;
-				font: $fs-14;
+	&--thanks {
+		transform: translateY(100%);
+	}
+
+	&--thanks & {
+		&__title {
+			margin-bottom: 16px;
+			text-align: center;
+		}
+
+		&__subtitle {
+			text-align: center;
+			font: 300 24px/26px $baseFF;
+			margin-bottom: 0;
+
+			@include media($md) {
+				font: 300 16px/18px $baseFF;
 			}
-			&__title {
-				font: bold 20px $baseFF;
-				margin-bottom: 16px;
+
+			@include media($xs) {
+				font: 300 13px/14px $baseFF;
 			}
-		} */
+		}
+	}
+
+	&--subscribe & {
+		&__check {
+			margin: 25px 0 40px;
+		}
 	}
 }

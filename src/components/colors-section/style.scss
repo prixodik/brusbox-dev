@@ -1,0 +1,124 @@
+.colors-section {
+	padding: 64px 0 90px;
+
+	@include media($md) {
+		padding-bottom: 60px;
+	}
+	@include media($sm) {
+		padding-top: 56px;
+	}
+	@include media($xs) {
+		padding-bottom: 30px;
+	}
+
+	&__row {
+		@include flex(space-between);
+		flex-wrap: nowrap;
+	}
+
+	&__left {
+		@include media($sm) {
+			padding: 0;
+		}
+		padding-right: 10px;
+		max-width: 559px;
+		width: 100%;
+	}
+
+	&__palettes {
+	}
+
+	&__palette {
+		margin-bottom: 60px;
+		max-width: 570px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include media($sm) {
+			margin-bottom: 40px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__right {
+		max-width: 559px;
+		width: 100%;
+		padding-left: 10px;
+		@include flex(space-between, 0, 0, nowrap);
+		width: 100%;
+
+		@include media($lg) {
+			max-width: 600px;
+			margin-right: 0;
+		}
+		@include media($sm) {
+			max-width: 100%;
+			justify-content: center;
+			padding: 0;
+		}
+		@include media($xs) {
+			max-width: 100%;
+			justify-content: space-between;
+			padding: 0;
+			margin-top: 40px;
+		}
+
+		&-img-1 {
+			margin-right: 43px;
+
+			@include media($xs) {
+				margin-right: 0;
+			}
+		}
+
+		&-img-1,
+		&-img-2 {
+			max-width: 400px;
+
+			@include media($lg) {
+				max-width: 300px;
+			}
+			@include media($xs) {
+				max-width: 150px;
+			}
+
+			img {
+				display: none;
+
+				&.is-active {
+					display: block;
+				}
+			}
+		}
+
+		img {
+			max-height: 455px;
+
+			@include media($lg) {
+				max-height: 370px;
+			}
+			@include media($xs) {
+				max-height: 166px;
+			}
+
+			&.is-active {
+				animation-name: Appearance;
+				animation-duration: 2s;
+			}
+		}
+	}
+}
+
+@keyframes Appearance {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

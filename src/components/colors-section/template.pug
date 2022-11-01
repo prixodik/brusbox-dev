@@ -1,0 +1,16 @@
+include ../palette-block/template
+
+mixin colorsSection(data)
+	.colors-section&attributes(attributes)
+		._row
+			._left
+				._palettes
+					+paletteBlock()._palette
+					+paletteBlockSmall()._palette
+			._right
+				._right-img-1.js-pallette-chenge
+					img(src="images/color-sol-2.png", alt="")
+					img(src="images/color-sol-1.png", alt="").is-active
+				._right-img-2.js-pallette-profile-chenge
+					img(src="images/color-sol-second-img-1.png", alt="")
+					img(src="images/color-sol-second-img-2.png", alt="").is-active

@@ -1,0 +1,34 @@
+.about-cart-block {
+	&__items {
+		@include flex(space-between, center, center, nowrap);
+	}
+	&__date {
+		color: $gray-medium;
+		font: 300 14px/16px $baseFF;
+	}
+	&__info {
+		@include flex(0, center, center, nowrap);
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+		span {
+			font: 300 14px/16px $baseFF;
+			margin-left: 4px;
+			color: $gray-medium;
+		}
+	}
+	&__likes {
+		margin-right: 16px;
+	}
+	&__likes,
+	&__eye {
+		@include flex(0, center, center, nowrap);
+	}
+
+	&--mode & {
+		&__date {
+			margin-right: 24px;
+		}
+	}
+}

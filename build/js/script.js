@@ -6020,1517 +6020,889 @@ Made by Hernán Sartorio  */
 
 }(jQuery));
 
-
-
 var uikit = {
 
-	lg: '1450',
+  lg: "1450",
 
-	md: '1200',
+  md: "1200",
 
-	sm: '992',
+  sm: "992",
 
-	xs: '640',
+  xs: "640",
 
-	xxs: '480',
+  xxs: "480",
 
-	ww: function () {
+  changeWindow: [],
 
-		return $(window).width();
+  ww: function () {
 
-	},
+    return $(window).width();
 
+  },
 
 
-	wh: function () {
 
-		return $(window).height();
+  wh: function () {
 
-	},
+    return $(window).height();
 
+  },
 
 
-	mask: function () {
 
-		$("input[type='tel']").mask('+7 (000) 000-0000', { placeholder: '+7 (___) ___-____' });
+  ///------------------------------------------------используются в текущем проекте-----------------------------------------------
 
-		$("input.js-mask-sms").mask('0 0 0 0 0 0', { placeholder: '_ _ _ _ _ _' });
+  stepsQuiz() {
 
-	},
+    $(".js-steps-quiz-next").click(function () {
 
+      let cur = $(this).data("current");
 
+      let next = $(this).data("step");
 
-	niceSelect: function () {
+      let data = $(this).parents("form").serializeArray();
 
-		$('select').niceSelect();
+      if (uikit.changeWindow[cur - 1] === undefined) {
 
-		$('.nice-select .list').mCustomScrollbar();
+        uikit.changeWindow.push(data);
 
-	},
+      } else {
 
+        uikit.changeWindow[cur - 1] = data;
 
+      }
 
-	niceSelectUpdate: function () {
 
-		$('select').niceSelect('update');
 
-		$('.nice-select .list').mCustomScrollbar();
+      /* if() */
 
-	},
 
 
+      $(".js-steps-quiz").removeClass("is-active");
 
+      $(`#quiz-${next}`).addClass("is-active");
 
+      console.log(uikit.changeWindow);
 
+      return false;
 
+    });
 
-	/* headerFix: function () {
 
-		var scroller = 0;
 
-		var hpos = hpos = $('.header__bottom').offset().top;
+    $(".js-steps-quiz-submit").click(function () {
 
-		$(document).scroll(function () {
+      return false;
 
-			scroller = $('html,body').scrollTop();
+    });
 
+  },
 
 
-			console.log(scroller >= hpos);
 
-			if (scroller >= hpos) {
+  copyMaterial: function () {
 
-				$('.header').height($('.header').height());
+    $(".js-copy-material, .js-copy-color").click(function () {
 
-				$('.header__bottom').addClass('fixed');
+      let $text_copy = $(".js-data-material");
 
-			} else {
+      let $temp = $("<input>");
 
-				$('.header').attr('style', '');
+      $("body").append($temp);
 
-				$('.header__bottom').removeClass('fixed');
+      $temp.val($text_copy.text()).select();
 
-			}
+      document.execCommand("copy");
 
-		});
+      $temp.remove();
 
+    });
 
+  },
 
-	}, */
 
 
+  chengeColorPalette: function () {
 
-	countBlock: function () {
+    let id = undefined;
 
-		// Количество +-
+    let article = "";
 
-		$(".js-count-plus").click(function () {
+    let color = "";
 
-			var count = $(this).parent().children('input').val();
+    //let id = undefined;
 
-			$(this).parent().children('input').val(++count);
+    $(".js-palette").click(function () {
 
-			return false;
+      article = $(this).data("info");
 
-		});
+      id = $(this).data("id");
 
+      $(".js-palette").removeClass("is-active");
 
+      $(this).addClass("is-active");
 
-		$(".js-count-minus").click(function () {
+      if (id !== undefined) {
 
-			var tempCount = $(this).parent().children('input').val();
+        $(".js-pallette-chenge img").attr("src", `images/color-sol-${id}.png`);
 
-			var count = (--tempCount <= 1) ? 1 : tempCount;
+        $(".js-data-material").text(article);
 
+        $(".js-data-material").attr("value", article);
 
+      }
 
-			$(this).parent().children('input').val(count);
 
-			return false;
 
-		});
+      $(".js-pallette-chenge img:not(.is-active)").attr(
 
-	},
+        "src",
 
-	upload: function () {
+        `images/color-sol-${id}.png`
 
+      );
 
 
-		function formatSize(length) {
 
-			var i = 0, type = ['б', 'Кб', 'Мб', 'Гб', 'Тб', 'Пб'];
+      let a = $(".js-pallette-chenge img.is-active");
 
-			while ((length / 1000 | 0) && i < type.length - 1) {
+      let nota = $(".js-pallette-chenge img:not(.is-active)");
 
-				length /= 1024;
+      a.removeClass("is-active");
 
-				i++;
+      nota.addClass("is-active");
 
-			}
+    });
 
-			return length.toFixed(2) + ' ' + type[i];
 
-		}
 
+    $(".js-palette-profile").click(function () {
 
+      id = $(this).data("id");
 
+      color = $(this).data("color");
 
 
-		// File Upload
 
-		$.fn.fileUploader = function (filesToUpload, sectionIdentifier) {
+      $(".js-palette-profile").removeClass("is-active");
 
-			var fileIdCounter = 0;
+      $(this).addClass("is-active");
 
+      if (id !== undefined) {
 
+        $(".js-pallette-profile-chenge img").attr(
 
-			this.parents('.js-files-form').find(".js-file-input").change(function (evt) {
+          "src",
 
-				var output = [];
+          `images/color-sol-${id}.png`
 
+        );
 
+        $(".js-data-color").text(color);
 
-				for (var i = 0; i < evt.target.files.length; i++) {
+      }
 
-					fileIdCounter++;
 
-					var file = evt.target.files[i];
 
-					var fileId = sectionIdentifier + fileIdCounter;
+      $(".js-pallette-profile-chenge img:not(.is-active)").attr(
 
+        "src",
 
+        `images/color-sol-second-img-${id}.png`
 
-					filesToUpload.push({
+      );
 
-						id: fileId,
 
-						file: file
 
-					});
+      let a = $(".js-pallette-profile-chenge img.is-active");
 
+      let nota = $(".js-pallette-profile-chenge img:not(.is-active)");
 
+      a.removeClass("is-active");
 
-					var size = uikit.formatSize(file.size);
+      nota.addClass("is-active");
 
-					var removeLink = "<a class=\"js-file-delete upload-block__result-close\" href=\"#\" data-fileid=\"" + fileId + "\"><svg class=\"icon icon_close\"><use xlink:href=\"images/sprite-svg.svg#close\"></use></svg></a>";
+    });
 
+  },
 
 
-					output.push("<div class=\"upload-block__result-item\"><svg class=\"icon icon_close upload-block__result-icon\"><use xlink:href=\"images/sprite-svg.svg#list\"></use></svg>", "<span>", escape(file.name), "</span>",
 
-						"<span class=\"upload-block__result-size\">", size, "</span>",
+  //-----------------------------------------------------------------------------------------------------------------------------
 
-						removeLink, "</div>");
 
-				};
 
+  validation: function () {
 
+    var classValidate = "is-validate",
 
-				$(this).parents('.js-files-form').find(".js-files-list")
+      classParent = ".form-group",
 
-					.append(output.join(""));
+      classError = "is-error";
 
 
 
-				//reset the input to null - nice little chrome bug!
+    function error(el) {
 
-				evt.target.value = null;
+      $(el)
 
-			});
+        .addClass(classError)
 
+        .removeClass(classValidate)
 
+        .closest(classParent)
 
-			$(document).on("click", ".js-file-delete", function (e) {
+        .addClass(classError)
 
-				e.preventDefault();
+        .removeClass(classValidate);
 
+    }
 
 
-				var fileId = $(this).parent().children("a").data("fileid");
 
+    function validate(el) {
 
+      $(el)
 
-				// loop through the files array and check if the name of that file matches FileName
+        .removeClass(classError)
 
-				// and get the index of the match
+        .addClass(classValidate)
 
-				for (var i = 0; i < filesToUpload.length; ++i) {
+        .closest(classParent)
 
-					if (filesToUpload[i].id === fileId)
+        .removeClass(classError)
 
-						filesToUpload.splice(i, 1);
+        .addClass(classValidate);
 
-				}
+    }
 
 
 
-				$(this).parent().remove();
+    function reset(el) {
 
-			});
+      $(el)
 
+        .removeClass(classValidate + " " + classError)
 
+        .closest(classParent)
 
-			this.clear = function () {
+        .removeClass(classError)
 
-				for (var i = 0; i < filesToUpload.length; ++i) {
+        .removeClass(classValidate + " " + classError);
 
-					if (filesToUpload[i].id.indexOf(sectionIdentifier) >= 0)
+    }
 
-						filesToUpload.splice(i, 1);
+    $(".form-control").focus(function () {
 
-				}
+      reset($(this));
 
+    });
 
+    $("select").change(function () {
 
-				$(this).children(".js-files-list").empty();
+      reset($(this));
 
-			}
+    });
 
+    $('input[type="checkbox"], input[type="radio"]').change(function () {
 
+      reset($(this));
 
-			return this;
+    });
 
-		};
 
 
+    function checkInput(el) {
 
-		(function () {
+      var $form = $(el);
 
-			var filesToUpload = [];
 
 
+      $form.find(".is-error").removeClass("is-error"); //.each(function(){
 
-			var files1Uploader = $(".js-file-input").fileUploader(filesToUpload, "files1");
+      //$(this).removeClass('is-error');
 
-			//var files2Uploader = $("#files2").fileUploader(filesToUpload, "files2");
+      //console.log("!"+$form.find('.is-error').length+"!");
 
-			//var files3Uploader = $("#files3").fileUploader(filesToUpload, "files3");
+      //});
 
 
 
-			$(document).on('click', '.js-upload-btn', function (e) {
+      $form.find("select.js-required").each(function () {
 
-				e.preventDefault();
+        if ($(this).val() != "") {
 
+          validate($(this));
 
+        } else {
 
-				var formData = new FormData();
+          error($(this));
 
+        }
 
+      });
 
-				for (var i = 0, len = filesToUpload.length; i < len; i++) {
+      $form.find("input[type=tel].js-required").each(function () {
 
-					formData.append("files", filesToUpload[i].file);
+        if ($(this).val() != "") {
 
-				}
+          validate($(this));
 
+        } else {
 
+          error($(this));
 
-				$.ajax({
+        }
 
-					url: "http://requestb.in/1k0dxvs1",
+      });
 
-					data: formData,
+      $form.find("input[type=email].js-required").each(function () {
 
-					processData: false,
+        if ($(this).val() != "") {
 
-					contentType: false,
+          validate($(this));
 
-					type: "POST",
+        } else {
 
-					success: function (data) {
+          error($(this));
 
-						alert("DONE");
+        }
 
+      });
 
+      $form.find("input[type=text].js-required").each(function () {
 
-						files1Uploader.clear();
+        if ($(this).val() != "") {
 
-						files2Uploader.clear();
+          validate($(this));
 
-						files3Uploader.clear();
+        } else {
 
-					},
+          error($(this));
 
-					error: function (data) {
+        }
 
-						alert("ERROR - " + data.responseText);
+      });
 
-					}
+      $form.find("input[type=password].js-required").each(function () {
 
-				});
+        if ($(this).val() != "") {
 
-			});
+          validate($(this));
 
-		})()
+        } else {
 
-	},
+          error($(this));
 
+        }
 
+      });
 
-	/* customScroll: function () {
+      if ($(".js-pass1", $form).length != 0) {
 
-		$('.js-custom-scroll').mCustomScrollbar();
+        var pass01 = $form.find(".js-pass1").val();
 
-	}, */
+        var pass02 = $form.find(".js-pass2").val();
 
+        if (pass01 == pass02) {
 
+          validate($(".js-pass1, .js-pass2", $form));
 
-	validation: function () {
+        } else {
 
-		var
+          error($(".js-pass1, .js-pass2", $form));
 
-			classValidate = 'is-validate',
+        }
 
-			classParent = '.form-group',
+      }
 
-			classError = 'is-error';
+      $form.find("textarea.js-required").each(function () {
 
-		function error(el) {
+        if ($(this).val() != "") {
 
-			$(el)
+          validate($(this));
 
-				.addClass(classError)
+        } else {
 
-				.removeClass(classValidate)
+          error($(this));
 
-				.closest(classParent)
+        }
 
-				.addClass(classError)
+      });
 
-				.removeClass(classValidate);
+      $form.find("input[type=email]").each(function () {
 
-		}
+        var regexp =
 
-		function validate(el) {
+          /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
 
-			$(el)
+        var $this = $(this);
 
-				.removeClass(classError)
+        if ($this.hasClass("js-required")) {
 
-				.addClass(classValidate)
+          if (regexp.test($this.val())) {
 
-				.closest(classParent)
+            validate($this);
 
-				.removeClass(classError)
+          } else {
 
-				.addClass(classValidate);
+            error($this);
 
-		}
+          }
 
-		function reset(el) {
+        } else {
 
-			$(el)
+          if ($this.val() != "") {
 
-				.removeClass(classValidate + ' ' + classError)
+            if (regexp.test($this.val())) {
 
-				.closest(classParent)
+              validate($this);
 
-				.removeClass(classError)
+            } else {
 
-				.removeClass(classValidate + ' ' + classError)
+              error($this);
 
-		}
+            }
 
-		$('.form-control').focus(function () {
+          } else {
 
-			reset($(this))
+            reset($this);
 
-		});
+          }
 
-		$('select').change(function () {
+        }
 
-			reset($(this))
+      });
 
-		});
 
-		$('input[type="checkbox"], input[type="radio"]').change(function () {
 
-			reset($(this))
+      $form.find("input[type=checkbox].js-required").each(function () {
 
-		});
+        if ($(this).is(":checked")) {
 
-		function checkInput(el) {
+          validate($(this));
 
-			var $form = $(el);
+        } else {
 
+          error($(this));
 
+          $(this).parent().addClass("is-error");
 
-			$form.find('.is-error').removeClass('is-error');//.each(function(){
+        }
 
-			//$(this).removeClass('is-error');
+      });
 
-			//console.log("!"+$form.find('.is-error').length+"!");
 
-			//});
 
+      var radios = [];
 
+      $form.find("input[type=radio]:required").each(function () {
 
-			$form.find('select.js-required').each(function () {
+        var name = $(this).attr("name");
 
-				if ($(this).val() != '') {
 
-					validate($(this));
 
-				} else {
+        if (radios.indexOf(name) == -1) {
 
-					error($(this));
+          radios.push(name);
 
-				}
+          var result = false;
 
-			});
+          $form.find("input[name=" + name + "].js-required").each(function () {
 
-			$form.find('input[type=tel].js-required').each(function () {
+            if ($(this).is(":checked")) {
 
-				if ($(this).val() != '') {
+              result = true;
 
-					validate($(this));
+            }
 
-				} else {
+          });
 
-					error($(this));
+          if (result == true) {
 
-				}
+            validate($(this));
 
-			});
+            return false;
 
-			$form.find('input[type=email].js-required').each(function () {
+          } else {
 
-				if ($(this).val() != '') {
+            //console.log(radios);
 
-					validate($(this));
+            $form
 
-				} else {
+              .find("input[name=" + name + "].js-required")
 
-					error($(this));
+              .addClass(classError);
 
-				}
+            error($(this));
 
-			});
+          }
 
-			$form.find('input[type=text].js-required').each(function () {
+        }
 
-				if ($(this).val() != '') {
+      });
 
-					validate($(this));
+    }
 
-				} else {
 
-					error($(this));
 
-				}
+    $(".js-edit-input").click(function () {
 
-			});
+      $(this)
 
-			$form.find('input[type=password].js-required').each(function () {
+        .parents(".input")
 
-				if ($(this).val() != '') {
+        .removeClass("is-disabled")
 
-					validate($(this));
+        .find("input, textarea")
 
-				} else {
+        .prop("disabled", false);
 
-					error($(this));
+      return false;
 
-				}
+    });
 
-			});
 
-			if ($('.js-pass1', $form).length != 0) {
 
-				var pass01 = $form.find('.js-pass1').val();
+    $(".js-submit").click(function () {
 
-				var pass02 = $form.find('.js-pass2').val();
+      var $form = $(this).closest("form");
 
-				if (pass01 == pass02) {
+      checkInput($form);
 
-					validate($('.js-pass1, .js-pass2', $form));
+      var errors = $form.find(".is-error:visible").length;
 
-				} else {
+      //console.log(errors);
 
-					error($('.js-pass1, .js-pass2', $form));
+      if (errors) {
 
-				}
+        return false;
 
-			}
+      } else if (
 
-			$form.find('textarea.js-required').each(function () {
+        $(this).data("href") != "" &&
 
-				if ($(this).val() != '') {
+        $(this).data("href") != undefined
 
-					validate($(this));
+      ) {
 
-				} else {
+        // Открытие попапа после отправки формы.
 
-					error($(this));
 
-				}
 
-			});
+        if ($(this).attr("href") != "" && $(this).attr("href") != undefined) {
 
-			$form.find('input[type=email]').each(function () {
+          var href = $(this).attr("href");
 
-				var regexp = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+        } else {
 
-				var $this = $(this);
+          var href = $(this).data("href");
 
-				if ($this.hasClass('js-required')) {
+        }
 
-					if (regexp.test($this.val())) {
+        if ($(this).data("media") == "lg" && uikit.ww() <= uikit.md) {
 
-						validate($this);
+          return false;
 
-					} else {
+        }
 
-						error($this);
 
-					}
 
-				} else {
+        var bodyWidth = $("body").width();
 
-					if ($this.val() != '') {
 
-						if (regexp.test($this.val())) {
 
-							validate($this);
+        $("body, html").addClass("overflow");
 
-						} else {
 
-							error($this);
 
-						}
+        if (bodyWidth - uikit.ww() < 0) {
 
-					} else {
+          //$('body').css('padding-right',((bodyWidth - uikit.ww())* -1)+'px');
 
-						reset($this)
+        }
 
-					}
 
-				}
 
-			});
+        //$(".mobile-menu").removeClass("active");
 
 
 
-			$form.find('input[type=checkbox].js-required').each(function () {
+        $(".popup").removeClass("active");
 
+        $(href).addClass("active");
 
 
-				if ($(this).is(':checked')) {
 
-					validate($(this));
+        return false;
 
-				} else {
+      }
 
-					error($(this));
+    });
 
-					$(this).parent().addClass('is-error');
+  },
 
-				}
 
-			});
 
+  tabs: function () {
 
+    $("[data-tab]").click(function (e) {
 
-			var radios = [];
+      e.preventDefault();
 
-			$form.find('input[type=radio]:required').each(function () {
+      let tab =
 
-				var name = $(this).attr('name');
+        typeof $(this).attr("href") != "undefined"
 
+          ? $(this).attr("href")
 
+          : $(this).attr("data-tab");
 
-				if (radios.indexOf(name) == -1) {
+      if (typeof $(this).attr("data-parent") != "undefined") {
 
+        $('[href="' + tab + '"], [data-tab="' + tab + '"]')
 
+          .closest($(this).attr("data-parent"))
 
-					radios.push(name);
+          .addClass("is-active")
 
-					var result = false;
+          .siblings()
 
-					$form.find('input[name=' + name + '].js-required').each(function () {
+          .removeClass("is-active");
 
+      } else {
 
+        $(this).addClass("is-active").siblings().removeClass("is-active");
 
-						if ($(this).is(':checked')) {
+      }
 
-							result = true;
+      $(tab).addClass("is-visible").siblings().removeClass("is-visible");
 
-						}
+    });
 
-					});
 
-					if (result == true) {
 
-						validate($(this));
+    $(".js-tab-nav").click(function (e) {
 
-						return false;
+      e.preventDefault();
 
-					} else {
+      var href = $(this).attr("href");
 
-						//console.log(radios);
+      $(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass(
 
-						$form.find('input[name=' + name + '].js-required').addClass(classError);
+        "is-active"
 
-						error($(this));
+      );
 
-					}
+      $(this).parent().addClass("is-active");
 
-				}
+      $(href).addClass("is-active");
 
-			});
+    });
 
-		}
 
 
+    $(".js-tab-show").click(function (e) {
 
-		$('.js-edit-input').click(function () {
+      //alert();
 
-			$(this).parents('.input').removeClass('is-disabled').find('input, textarea').prop('disabled', false);
+      //console.log("#"+$(this).val());
 
-			return false;
 
-		});
 
+      if ($(this).attr("href") != undefined) {
 
+        //e.preventDefault();
 
-		$('.js-submit').click(function () {
+      }
 
-			var $form = $(this).closest('form');
+      var href =
 
-			checkInput($form);
+        $(this).attr("href") != undefined
 
-			var errors = $form.find('.is-error:visible').length;
+          ? $(this).attr("href")
 
-			//console.log(errors);
+          : "#" + $(this).val();
 
-			if (errors) {
+      var nav_id = $(this).data("navid");
 
-				return false;
+      $(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass(
 
-			} else if ($(this).data('href') != "" && $(this).data('href') != undefined) {
+        "is-active"
 
+      );
 
+      $(nav_id).addClass("is-active");
 
-				// Открытие попапа после отправки формы.
+      $(href).addClass("is-active");
 
+    });
 
+    //$(".js-tab-show").che
 
-				if ($(this).attr("href") != "" && $(this).attr("href") != undefined) {
+  },
 
-					var href = $(this).attr("href");
 
-				} else {
 
-					var href = $(this).data("href");
+  popups: function () {
 
-				}
+    $(document).on("click", ".js-popup-show", function () {
 
-				if ($(this).data('media') == "lg" && uikit.ww() <= uikit.md) {
+      if ($(this).attr("href") != "" && $(this).attr("href") != undefined) {
 
-					return false;
+        var href = $(this).attr("href");
 
-				}
+      } else {
 
+        var href = $(this).data("href");
 
+      }
 
-				var bodyWidth = $('body').width();
+      if ($(this).data("media") == "lg" && uikit.ww() <= uikit.md) {
 
+        return false;
 
+      }
 
-				$("body, html").addClass("overflow");
 
 
+      var bodyWidth = $("body").width();
 
-				if (bodyWidth - uikit.ww() < 0) {
 
-					//$('body').css('padding-right',((bodyWidth - uikit.ww())* -1)+'px');
 
-				}
+      $("body, html").addClass("overflow");
 
 
 
-				//$(".mobile-menu").removeClass("active");
+      if (bodyWidth - uikit.ww() < 0) {
 
+        //$('body').css('padding-right',((bodyWidth - uikit.ww())* -1)+'px');
 
+      }
 
-				$(".popup").removeClass("active");
 
-				$(href).addClass("active");
 
+      //$(".mobile-menu").removeClass("active");
 
 
-				return false;
 
-			}
+      $(".popup").removeClass("active");
 
-		});
+      $(href).addClass("active");
 
-	},
 
 
+      return false;
 
-	tabs: function () {
+    });
 
-		$('[data-tab]').click(function (e) {
 
-			e.preventDefault();
 
-			let tab = typeof ($(this).attr('href')) != 'undefined' ? $(this).attr('href') : $(this).attr('data-tab');
+    $(".js-popup-hide").click(function () {
 
-			if (typeof ($(this).attr('data-parent')) != 'undefined') {
+      $(".popup").removeClass("active");
 
-				$('[href="' + tab + '"], [data-tab="' + tab + '"]').closest($(this).attr('data-parent')).addClass('is-active').siblings().removeClass('is-active');
+      $("body, html").css("padding-right", 0).removeClass("overflow");
 
-			} else {
+      return false;
 
-				$(this).addClass('is-active').siblings().removeClass('is-active');
+    });
 
-			}
+  },
 
-			$(tab).addClass('is-visible').siblings().removeClass('is-visible');
 
-		});
 
+  lazy: function () {
 
+    function logElementEvent(eventName, element) {}
 
-		$(".js-tab-nav").click(function (e) {
+    var callback_enter = function (element) {};
 
-			e.preventDefault();
+    var callback_exit = function (element) {};
 
-			var href = $(this).attr("href");
+    var callback_loading = function (element) {};
 
-			$(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass("is-active");
+    var callback_loaded = function (element) {};
 
-			$(this).parent().addClass("is-active");
+    var callback_error = function (element) {};
 
-			$(href).addClass("is-active");
+    var callback_finish = function () {};
 
-		});
+    var callback_cancel = function (element) {};
 
 
 
-		$(".js-tab-show").click(function (e) {
+    var lazyLoadOb = new LazyLoad({
 
-			//alert(); 
+      class_applied: "lz-applied",
 
-			//console.log("#"+$(this).val()); 
+      class_loading: "lz-loading",
 
+      class_loaded: "lz-loaded",
 
+      class_error: "lz-error",
 
-			if ($(this).attr('href') != undefined) {
+      class_entered: "lz-entered",
 
+      class_exited: "lz-exited",
 
+      // Assign the callbacks defined above
 
-				//e.preventDefault(); 
+      callback_enter: callback_enter,
 
-			}
+      callback_exit: callback_exit,
 
-			var href = ($(this).attr("href") != undefined) ? $(this).attr("href") : "#" + $(this).val();
+      callback_cancel: callback_cancel,
 
-			var nav_id = $(this).data("navid");
+      callback_loading: callback_loading,
 
-			$(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass("is-active");
+      callback_loaded: callback_loaded,
 
-			$(nav_id).addClass("is-active");
+      callback_error: callback_error,
 
-			$(href).addClass("is-active");
+      callback_finish: callback_finish,
 
-		});
+    });
 
-		//$(".js-tab-show").che
+    lazyLoadOb.update();
 
-	},
+  },
 
 
 
-	popups: function () {
+  fancybox: function () {
 
-		$(document).on("click", ".js-popup-show", function () {
+    $(".js-fancybox, .fancybox").fancybox({
 
-			if ($(this).attr("href") != "" && $(this).attr("href") != undefined) {
+      // Options will go here
 
-				var href = $(this).attr("href");
+      iframe: {
 
-			} else {
+        preload: false,
 
-				var href = $(this).data("href");
+      },
 
-			}
+    });
 
-			if ($(this).data('media') == "lg" && uikit.ww() <= uikit.md) {
+  },
 
-				return false;
 
-			}
 
+  mobile: function () {
 
+    $(".js-mobile-menu-toggle").click(function () {
 
-			var bodyWidth = $('body').width();
+      $(this).toggleClass("active");
 
+      $("body").toggleClass("overflow");
 
 
-			$("body, html").addClass("overflow");
 
+      $(".js-mobile-menu").slideToggle();
 
 
-			if (bodyWidth - uikit.ww() < 0) {
 
-				//$('body').css('padding-right',((bodyWidth - uikit.ww())* -1)+'px');
-
-			}
-
-
-
-			//$(".mobile-menu").removeClass("active");
-
-
-
-			$(".popup").removeClass("active");
-
-			$(href).addClass("active");
-
-
-
-
-
-
-
-			return false;
-
-		});
-
-
-
-		$(".js-popup-hide").click(function () {
-
-			$(".popup").removeClass("active");
-
-			$("body, html").css('padding-right', 0).removeClass("overflow");
-
-			return false;
-
-		});
-
-	},
-
-
-
-	lazy: function () {
-
-
-
-		function logElementEvent(eventName, element) {
-
-		}
-
-		var callback_enter = function (element) {
-
-		};
-
-		var callback_exit = function (element) {
-
-		};
-
-		var callback_loading = function (element) {
-
-		};
-
-		var callback_loaded = function (element) {
-
-		};
-
-		var callback_error = function (element) {
-
-		};
-
-		var callback_finish = function () {
-
-		};
-
-		var callback_cancel = function (element) {
-
-
-
-		};
-
-
-
-		var lazyLoadOb = new LazyLoad({
-
-			class_applied: "lz-applied",
-
-			class_loading: "lz-loading",
-
-			class_loaded: "lz-loaded",
-
-			class_error: "lz-error",
-
-			class_entered: "lz-entered",
-
-			class_exited: "lz-exited",
-
-			// Assign the callbacks defined above
-
-			callback_enter: callback_enter,
-
-			callback_exit: callback_exit,
-
-			callback_cancel: callback_cancel,
-
-			callback_loading: callback_loading,
-
-			callback_loaded: callback_loaded,
-
-			callback_error: callback_error,
-
-			callback_finish: callback_finish
-
-		});
-
-		lazyLoadOb.update();
-
-	},
-
-
-
-	sliders: function () {
-
-		var ww = this.ww();
-
-		var wh = this.wh();
-
-		var lg = this.lg;
-
-		var md = this.md;
-
-		var sm = this.sm;
-
-		var xs = this.xs;
-
-		var xxs = this.xxs;
-
-
-
-		if ($('.js-gallery-main').length) {
-
-
-
-			$('.js-gallery-main').slick({
-
-				slidesToShow: 1,
-
-				slidesToScroll: 1,
-
-				centerMode: false,
-
-				variableWidth: false,
-
-				arrows: false,
-
-				dots: false,
-
-				infinite: true,
-
-				autoplay: false,
-
-				autoplaySpeed: 2000,
-
-				lazyLoad: 'progressive',
-
-				//fade: true,
-
-				asNavFor: '.js-gallery-thumb'
-
-			});
-
-
-
-			$(".js-gallery-thumb").slick({
-
-				focusOnSelect: true,
-
-				infinite: true,
-
-				variableWidth: false,
-
-				slidesToShow: 4,
-
-				slidesToScroll: 1,
-
-				centerMode: false,
-
-				lazyLoad: 'progressive',
-
-				arrows: false,
-
-				fade: false,
-
-				vertical: true,
-
-				asNavFor: '.js-gallery-main',
-
-				nextArrow: '<button type="button" class="gallery-block__thumb-next slick-next slick-arrow"><svg class="icon"><use xlink:href="images/sprite-svg.svg#arrow-right"></svg></button>',
-
-				prevArrow: '<button type="button" class="gallery-block__thumb-prev slick-prev slick-arrow"><svg class="icon"><use xlink:href="images/sprite-svg.svg#arrow-right"></svg></button>',
-
-				responsive: [{
-
-					breakpoint: md,
-
-					settings: {
-
-						slidesToShow: 4,
-
-						vertical: false,
-
-					}
-
-				}, {
-
-					breakpoint: xs,
-
-					settings: {
-
-						slidesToShow: 4,
-
-						vertical: false,
-
-					}
-
-				}]
-
-			});
-
-
-
-		}
-
-
-
-		if ($(".js-index-slider-img").length || $(".js-index-slider-info").length) {
-
-
-
-			$(".js-index-slider-img").slick({
-
-				infinite: true,
-
-				variableWidth: false,
-
-				slidesToShow: 1,
-
-				slidesToScroll: 1,
-
-				lazyLoad: 'progressive',
-
-				arrows: true,
-
-				nextArrow: '<button type="button" class="slider-section__next slick-next slick-arrow"><svg class="icon"><use xlink:href="images/sprite-svg.svg#slider-arrow-right"></svg></button>',
-
-				prevArrow: '<button type="button" class="slider-section__prev slick-prev slick-arrow"><svg class="icon"><use xlink:href="images/sprite-svg.svg#slider-arrow-right"></svg></button>',
-
-				fade: false,
-
-				dots: true,
-
-				dotsClass: 'slick-dots slider-section__dots',
-
-				responsive: [
-
-					/* {
-
-						breakpoint: sm,
-
-						settings: {
-
-							slidesToShow: 2,
-
-							slidesToScroll: 2
-
-						}
-
-					}, */
-
-					{
-
-						breakpoint: xs,
-
-						settings: {
-
-							dots: false
-
-						}
-
-					}
-
-				]
-
-				//asNavFor: $('.js-index-slider-info'),
-
-			});
-
-
-
-			/* $(".js-index-slider-info").slick({
-
-				infinite: true,
-
-				slidesToShow: 1,
-
-				slidesToScroll: 1,
-
-				lazyLoad: 'progressive',
-
-
-
-				arrows: false,
-
-				dots: true,
-
-				asNavFor: $('.js-index-slider-img'),
-
-				appendDots: $('.js-index-slider-dots'),
-
-				fade: true,
-
-				//nextArrow: '<button type="button" class="slider-section__next slick-next slick-arrow slick-arrow--circle slick-arrow--white"><svg class="icon"><use xlink:href="images/sprite.svg#arrow-right-2"></svg></button>',
-
-				//prevArrow: '<button type="button" class="slider-section__prev slick-prev slick-arrow slick-arrow--circle slick-arrow--white"><svg class="icon"><use xlink:href="images/sprite.svg#arrow-left-2"></svg></button>',
-
-				responsive: [{
-
-					breakpoint: xs,
-
-					settings: {
-
-						adaptiveHeight: true
-
-					}
-
-				}]
-
-			});
-
-
-
-			$('.js-index-slider-next').click(function () {
-
-				$('.js-index-slider-img').slick('slickNext');
-
-				$('.js-index-slider-info').slick('slickNext');
-
-				return false;
-
-			}); */
-
-
-
-		}
-
-
-
-
-
-
-
-		if ($('.js-other-products-slider').length) {
-
-			$('.js-other-products-slider').each(function () {
-
-				var $this = $(this);
-
-
-
-				$this.slick({
-
-					slidesToShow: 6,
-
-					slidesToScroll: 2,
-
-					centerMode: false,
-
-					variableWidth: false,
-
-					arrows: true,
-
-					dots: false,
-
-					infinite: true,
-
-					autoplay: false,
-
-					autoplaySpeed: 2000,
-
-					lazyLoad: 'progressive',
-
-					prevArrow: '<a href="#" class="product-page__products-prev slick-arrow slick-arrow--gray-2 slick-prev" tabindex="-1"><svg class="icon"><use xlink:href="images/sprite-svg.svg#slider-arrow-right"></use></svg></a>',
-
-					nextArrow: '<a href="#" class="product-page__products-next slick-arrow slick-arrow--gray-2 slick-next" tabindex="-1"><svg class="icon"><use xlink:href="images/sprite-svg.svg#slider-arrow-right"></use></svg></a>',
-
-					responsive: [
-
-						{
-
-							breakpoint: lg,
-
-							settings: {
-
-								slidesToShow: 5,
-
-								slidesToScroll: 1
-
-							}
-
-						},
-
-						{
-
-							breakpoint: md,
-
-							settings: {
-
-								slidesToShow: 4,
-
-								slidesToScroll: 1
-
-							}
-
-						},
-
-						{
-
-							breakpoint: xs,
-
-							settings: {
-
-								slidesToShow: 2,
-
-								slidesToScroll: 1
-
-							}
-
-						}
-
-					]
-
-				});
-
-
-
-			});
-
-
-
-			/* $('.js-products-slider-prev').click(function () {
-
-				$('.js-products-slider').slick('slickPrev');
-
-				return false;
-
-			});
-
-			$('.js-products-slider-next').click(function () {
-
-				$('.js-products-slider').slick('slickNext');
-
-				return false;
-
-			}); */
-
-
-
-		}
-
-
-
-
-
-		if ($('.js-catalog-slider').length) {
-
-			$('.js-catalog-slider').each(function () {
-
-				var $this = $(this);
-
-
-
-				$this.slick({
-
-					slidesToShow: 3,
-
-					slidesToScroll: 3,
-
-					centerMode: false,
-
-					variableWidth: false,
-
-					arrows: true,
-
-					dots: false,
-
-					infinite: true,
-
-					autoplay: false,
-
-					autoplaySpeed: 2000,
-
-					lazyLoad: 'progressive',
-
-					prevArrow: '<a href="#" class="catalog-section__prev slick-arrow slick-arrow--gray-2 slick-prev" tabindex="-1"><svg class="icon"><use xlink:href="images/sprite-svg.svg#slider-arrow-right"></use></svg></a>',
-
-					nextArrow: '<a href="#" class="catalog-section__next slick-arrow slick-arrow--gray-2 slick-next" tabindex="-1"><svg class="icon"><use xlink:href="images/sprite-svg.svg#slider-arrow-right"></use></svg></a>',
-
-					responsive: [
-
-						/* {
-
-							breakpoint: sm,
-
-							settings: {
-
-								slidesToShow: 2,
-
-								slidesToScroll: 2
-
-							}
-
-						}, */
-
-						{
-
-							breakpoint: xs,
-
-							settings: {
-
-								slidesToShow: 1,
-
-								slidesToScroll: 1
-
-							}
-
-						}
-
-					]
-
-				});
-
-
-
-			});
-
-
-
-			/* $('.js-products-slider-prev').click(function () {
-
-				$('.js-products-slider').slick('slickPrev');
-
-				return false;
-
-			});
-
-			$('.js-products-slider-next').click(function () {
-
-				$('.js-products-slider').slick('slickNext');
-
-				return false;
-
-			}); */
-
-
-
-		}
-
-
-
-		if ($('.js-default-xs-slider').length && uikit.ww() <= uikit.xs) {
-
-
-
-			$('.js-default-xs-slider').each(function () {
-
-				var carousel = $(this);
-
-				//var nav = $(this).parent().find('.js-slick-nav');
-
-
-
-				carousel.slick({
-
-					slidesToShow: 1,
-
-					slidesToScroll: 1,
-
-					arrow: true,
-
-					dots: false,
-
-					prevArrow: '<button class="slick-prev slick-arrow"><svg class="icon icon_arrow-right"><use xlink:href="/images/sprite-svg.svg#slider-arrow-right"></use></svg></button>',
-
-					nextArrow: '<button class="slick-next slick-arrow"><svg class="icon icon_arrow-right"><use xlink:href="/images/sprite-svg.svg#slider-arrow-right"></use></svg></button>',
-
-					//appendArrows: nav
-
-				});
-
-			});
-
-		}
-
-
-
-	},
-
-
-
-	fancybox: function () {
-
-		$(".js-fancybox, .fancybox").fancybox({
-
-			// Options will go here
-
-			iframe: {
-
-				preload: false
-
-			}
-
-		});
-
-	},
-
-
-
-	accardion: function () {
-
-		$('.js-accardion-toggle').click(function () {
-
-			$(this).toggleClass('is-active').next().toggleClass('is-active');
-
-			return false;
-
-		});
-
-	},
-
-
-
-	mobile: function () {
-
-
-
-		$('.js-mobile-menu-toggle').click(function () {
-
-			$(this).toggleClass('active');
-
-			$('body').toggleClass('overflow');
-
-
-
-			$('.js-mobile-menu').slideToggle();
-
-
-
-			/* $(document).mouseup(function (e) { // событие клика по веб-документу
+      /* $(document).mouseup(function (e) { // событие клика по веб-документу
 
 				var div = $('.js-menu-toggle').parent(); // тут указываем ID элемента
 
@@ -7548,175 +6920,157 @@ var uikit = {
 
 
 
-			return false;
+      return false;
 
-		});
+    });
 
+  },
 
 
 
+  scrollTo: function () {
 
-	},
+    $(".js-scroll-to").click(function () {
 
+      var href = $(this).attr("href");
 
+      $("html, body").animate(
 
-	scrollTo: function () {
+        {
 
-		$(".js-scroll-to").click(function () {
+          scrollTop: $(href).offset().top,
 
-			var href = $(this).attr("href");
+        },
 
-			$('html, body').animate({ scrollTop: $(href).offset().top }, 400);
+        400
 
-			return false;
+      );
 
-		});
+      return false;
 
-	},
+    });
 
+  },
 
 
-	searchBlock: function () {
 
-		$('.js-search-toggle').click(function () {
+  searchBlock: function () {
 
-			if ($(this).hasClass('is-disabled') == true) {
+    $(".js-search-toggle").click(function () {
 
-				$(this).removeClass('is-disabled').parents('.js-search-block').addClass('is-active');
+      if ($(this).hasClass("is-disabled") == true) {
 
+        $(this)
 
+          .removeClass("is-disabled")
 
-				$(document).click(function (e) { // событие клика по веб-документу
+          .parents(".js-search-block")
 
-					var div = $('.js-search-block'); // тут указываем ID элемента
+          .addClass("is-active");
 
-					if (!div.is(e.target) // если клик был не по нашему блоку
 
-						&& div.has(e.target).length === 0) { // и не по его дочерним элементам
 
-						div.removeClass('is-active'); // скрываем его
+        $(document).click(function (e) {
 
-						div.find('.js-search-toggle').addClass('is-disabled');
+          // событие клика по веб-документу
 
-					}
+          var div = $(".js-search-block"); // тут указываем ID элемента
 
-				});
+          if (
 
-				console.log(1);
+            !div.is(e.target) && // если клик был не по нашему блоку
 
-				return false;
+            div.has(e.target).length === 0
 
-			} else {
+          ) {
 
-				$(this).addClass('is-disabled').parents('.js-search-block').removeClass('is-active');
+            // и не по его дочерним элементам
 
+            div.removeClass("is-active"); // скрываем его
 
+            div.find(".js-search-toggle").addClass("is-disabled");
 
-				return true;
+          }
 
-			}
+        });
 
-		});
+        console.log(1);
 
-	},
+        return false;
 
+      } else {
 
+        $(this)
 
+          .addClass("is-disabled")
 
+          .parents(".js-search-block")
 
-	mainInit: function () {
+          .removeClass("is-active");
 
 
 
-		//this.sliders();
+        return true;
 
+      }
 
+    });
 
-		this.lazy();
+  },
 
-		//this.validation();
 
 
+  niceSelect: function () {
 
-		//this.tabs();
+    $('select').niceSelect();
 
+    //$('.nice-select .list').mCustomScrollbar();
 
+  },
 
-		//this.niceSelect();
 
-		//this.countBlock();
 
-		//this.fancybox();
+  mainInit: function () {
 
-		this.popups();
+    this.lazy();
 
-		//this.mask();
+    //this.validation();
 
-		//this.accardion();
+    this.copyMaterial();
 
-		this.mobile();
+    //this.fancybox();
 
-		//this.upload();
+    this.popups();
 
-		this.scrollTo();
+    this.chengeColorPalette();
 
-		this.searchBlock();
+    this.mobile();
 
-		//this.headerFix();
+    this.scrollTo();
 
+    this.searchBlock();
 
+    this.stepsQuiz();
 
+    this.niceSelect();
 
-
-	}
+  },
 
 };
 
 $(document).ready(function () {
 
-
-
-	uikit.mainInit();
-
-
-
-	// Разворот текстового описания
-
-	$(".js-more-text").click(function () {
-
-		if ($(this).parent().hasClass('is-hide') == false) {
-
-			$(this).parent().addClass('is-hide');
-
-			$(this).parent().parent().find(".js-wrap-text").removeClass("is-overflow");
-
-		} else {
-
-			$(this).parent().removeClass('is-hide');
-
-			$(this).parent().parent().find(".js-wrap-text").addClass("is-overflow");
-
-		}
-
-		return false;
-
-	});
-
-
+  uikit.mainInit();
 
 });
 
 var clrTimeOut;
 
-$(window).on('load', function (e) {
+$(window).on("load", function (e) {
 
-	clearTimeout(clrTimeOut);
+  clearTimeout(clrTimeOut);
 
-	clrTimeOut = setTimeout(function () {
-
-
-
-	}, 200);
+  clrTimeOut = setTimeout(function () {}, 200);
 
 });
 
@@ -7724,15 +7078,9 @@ $(window).on('load', function (e) {
 
 $(window).resize(function () {
 
-	clearTimeout(clrTimeOut);
+  clearTimeout(clrTimeOut);
 
-	clrTimeOut = setTimeout(function () {
-
-
-
-	}, 200);
-
-
+  clrTimeOut = setTimeout(function () {}, 200);
 
 });
 
@@ -7740,7 +7088,7 @@ $(window).resize(function () {
 
 $(window).scroll(function () {
 
-	//uikit.headerFixed();
+  //uikit.headerFixed();
 
 });
 

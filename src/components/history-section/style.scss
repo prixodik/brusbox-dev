@@ -1,0 +1,143 @@
+.history-section {
+	padding: 120px 0 0;
+
+	&__container {
+		max-width: 1920px;
+		padding: 0;
+	}
+
+	&__title {
+		margin: 0 auto 40px;
+		padding: 0 15px;
+		max-width: 1200px;
+
+		@include media($lg) {
+			/* font: 100 100px/100px $baseFF; */
+		}
+
+		@include media($md) {
+			/* font: 100 80px/80px $baseFF; */
+			margin-bottom: 30px;
+		}
+
+		@include media($sm) {
+			/* font: 100 40px/40px $baseFF; */
+			margin-bottom: 20px;
+		}
+
+		@include media($xs) {
+			/* font: 100 34px/31px $baseFF; */
+			margin-bottom: 12px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		background-color: #fff;
+
+		&::after {
+			position: absolute;
+			content: "";
+			display: block;
+			top: 0;
+			left: calc(50% - 1px);
+			bottom: 0;
+			width: 2px;
+			background-color: $red;
+
+			@include media($sm) {
+				left: 26px;
+			}
+
+			@include media($xs) {
+				left: 16px;
+			}
+		}
+
+		&--gray {
+			background: $bg-grey;
+		}
+
+		&--reverse & {
+			&-row {
+				flex-direction: row-reverse;
+
+				@include media($sm) {
+					flex-direction: column;
+				}
+
+				&::before {
+					transform: rotate(180deg);
+					left: calc(50% - 40px);
+
+					@include media($sm) {
+						left: 16px;
+						transform: rotate(0deg);
+					}
+
+					@include media($xs) {
+						left: 0;
+					}
+				}
+			}
+		}
+
+		&-row {
+			@include flex(space-between, center, center, nowrap);
+			position: relative;
+			margin-left: 0;
+			margin-right: 0;
+
+			@include media($sm) {
+				@include flex(flex-end, flex-start, flex-end, 0, column);
+				padding-left: 74px;
+			}
+
+			@include media($xs) {
+				padding-left: 26px;
+			}
+
+			&::before {
+				position: absolute;
+				content: "";
+				display: block;
+				top: 140px;
+				left: calc(50%);
+				bottom: 0;
+				width: 40px;
+				height: 40px;
+				background: url("../images/triangle.svg");
+				background-size: 40px;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+
+		&-img {
+			max-width: 50%;
+			width: 100%;
+			height: 400px;
+			object-fit: cover;
+		}
+
+		&-info {
+			max-width: 530px;
+			margin: 0 auto;
+		}
+
+		&-date {
+			font: 100 120px/112px $baseFF;
+			margin-bottom: 5px;
+		}
+
+		&-text {
+			ul {
+				padding-left: 20px;
+				@include media($xs) {
+					padding-left: 0;
+					list-style: none;
+				}
+			}
+		}
+	}
+}

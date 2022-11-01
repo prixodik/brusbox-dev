@@ -1,414 +1,206 @@
 .main-section {
 	position: relative;
-	margin-top: -4px;
-	padding-bottom: 48px;
-	flex: 1 1 auto;
-	&--news {
-		padding-bottom: 0;
+	// flex: 1 1 auto;
+
+	&__head {
+		position: relative;
+
+		&-img {
+			display: block;
+			margin: 0 auto;
+			max-height: 600px;
+			/* max-width: 1920px; */
+			object-fit: cover;
+			width: 100%;
+		}
 	}
 
 	&__bread {
-		margin-bottom: 30px;
+		position: absolute;
+		bottom: 137px;
+		left: 50%;
+		transform: translate(-50%);
 	}
+
 	&__title {
-		text-align: center;
-		margin-bottom: 40px;
-		color: $black;
-	}
-	&__back {
-		margin-bottom: 16px;
-		&--bottom {
-			margin-top: 60px;
-			margin-bottom: 0;
-		}
-
-		@include media($md) {
-			display: none;
-		}
+		color: $white;
+		position: absolute;
+		bottom: 60px;
+		left: 50%;
+		transform: translate(-50%);
+		margin-bottom: 0;
+		text-transform: none;
 	}
 
-	&__row {
-		margin-bottom: -40px;
-		&-item {
-			margin-bottom: 40px;
+	&__info {
+		max-width: 1180px;
+		margin: 112px auto 0;
+
+		&-title {
+			margin-bottom: 16px;
 		}
 
-		&--md {
-			margin-bottom: -24px;
+		&-list {
+			padding-left: 28px;
+		}
 
-			@include media($lg) {
-				margin-bottom: -20px;
+		&-col {
+			&-left {
+				padding-left: 10px;
 			}
+			&-right {
+				padding-right: 10px;
+			}
+		}
+	}
+
+	&__text {
+		font: $fs-p1;
+
+		&--row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	&__about {
+		padding: 120px 0;
+
+		&-button {
+			margin-top: 49px;
+			@include flex(center, center);
+		}
+	}
+
+	&--gap-bottom & {
+		&__head {
+			margin-bottom: 112px;
+		}
+	}
+
+	&--color-solutions & {
+		&__left {
+			letter-spacing: 0.02em;
+			font: 300 36px/36px $baseFF;
+
+			@include media($md) {
+				font: 300 28px/34px $baseFF;
+			}
+
+			@include media($sm) {
+				font: 300 25px/32px $baseFF;
+				margin-bottom: 16px;
+			}
+
 			@include media($xs) {
-				margin-bottom: -8px;
+				font: 300 16px/16px $baseFF;
 			}
 		}
-		&--md & {
-			&-item {
-				margin-bottom: 24px;
+
+		&__right {
+			font: 300 18px/20px $baseFF;
+
+			@include media($md) {
+				font: 300 28px/34px $baseFF;
 			}
 
-			@include media($lg) {
-				margin-bottom: 20px;
+			@include media($sm) {
+				font: 300 20px/24px $baseFF;
 			}
+
 			@include media($xs) {
-				margin-bottom: 8px;
+				font: 300 13px/14px $baseFF;
+			}
+		}
+		&__info {
+			@include media($sm) {
+				flex-direction: column;
 			}
 		}
 	}
-	&__pagination {
-		margin-top: 24px;
-		@include flex(center);
-	}
+	&--select-color & {
+		&__contact-section {
+			background-color: $bg-grey;
+			padding: 60px 0;
 
-	@include media($lg) {
-		&__bread {
-			margin-bottom: 4px;
-		}
-		&__title {
-			margin-bottom: 20px;
+			@include media($sm) {
+				padding: 40px 0;
+			}
 		}
 	}
-	@include media($md) {
-		margin-top: 0;
-		padding-bottom: 24px;
 
-		&__title {
+	&--history & {
+		&__info {
+			margin-bottom: 112px;
+		}
+	}
+
+	&--actions & {
+		&__actions {
+			padding: 112px 0 0;
+		}
+
+		&__action {
+			margin-bottom: 76px;
+		}
+
+		&__items {
+			margin-bottom: 44px;
+
+			&:last-child {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&--mode & {
+		&__head-info {
+			position: absolute;
+			bottom: 67px;
+			color: $white;
+
+			left: 50%;
+			transform: translate(-50%);
+			text-align: center;
+			width: 100%;
+		}
+		&__date {
 			margin-bottom: 8px;
 		}
-	}
-	@include media($xs) {
-		margin-top: 0;
-		padding-bottom: 24px;
-
 		&__bread {
-			margin-bottom: 16px;
+			top: 24px;
 		}
 		&__title {
-			margin-bottom: 16px;
-		}
-	}
-
-	&--page-404 & {
-		&__title {
-			text-align: center;
-			margin-bottom: 14px;
-			color: $gray2;
-			font: 500 80px/1 $baseFF;
+			position: relative;
+			bottom: auto;
+			margin-bottom: 8px;
 		}
 		&__subtitle {
-			text-align: center;
-		}
-		&__links {
-			text-align: center;
-			margin-top: 80px;
-			color: $green;
-			font: 600 16px/1.4 $baseFF;
-		}
-
-		@include media($lg) {
-			&__links {
-				margin-top: 40px;
-			}
-		}
-
-		@include media($xs) {
-			&__title {
-				font-size: 48px;
-				margin-bottom: 2px;
-			}
-			&__links {
-				margin-top: 24px;
-			}
 		}
 	}
 
-	&--video-page & {
-		&__title {
-			margin-bottom: 56px;
-		}
-		&__nav {
-			margin-bottom: 48px;
-		}
-		&__body {
-			.main-section__pagination {
-				margin-top: 48px;
-			}
-		}
-
-		@include media($lg) {
-			&__title {
-				margin-bottom: 28px;
-			}
-			&__nav {
-				margin-bottom: 24px;
-			}
-			&__body {
-				.main-section__pagination {
-					margin-top: 36px;
-				}
-			}
-		}
-
-		@include media($xs) {
-			&__title {
-				margin-bottom: 16px;
-			}
-			&__nav {
-				margin-bottom: 16px;
-			}
-			&__body {
-				.main-section__pagination {
-					margin-top: 24px;
-				}
-			}
-			&__row {
-				margin-bottom: -20px;
-				&-item {
-					margin-bottom: 20px;
-				}
-			}
+	&--one-news & {
+		&__info {
+			margin-bottom: 112px;
 		}
 	}
 
-	&--about-page & {
-		&__row {
-			margin: 0 -10px -20px;
-			&-item {
-				margin-bottom: 20px;
-				padding: 0 10px;
-			}
-		}
-		&__boss {
-			margin-top: 64px;
-		}
-
-		@include media($lg) {
-			&__bread {
-				margin-bottom: 16px;
-			}
-			&__boss {
-				margin-top: 36px;
-			}
-		}
-
-		@include media($md) {
-			/* &__bread {
-				margin-bottom: 16px;
-			} */
-			&__boss {
-				margin-top: 16px;
-			}
-		}
-
-		@include media($xs) {
-			&__row {
-				margin: 0 -10px -8px;
-				&-item {
-					margin-bottom: 8px;
-				}
-			}
+	&--article & {
+		&__head {
+			margin-bottom: 0;
 		}
 	}
 
-	&--news-page & {
-		&__bread {
-			margin-bottom: 16px;
+	&--articles & {
+		&__search-row {
+			padding: 35px 0;
+			display: flex;
+			flex-wrap: nowrap;
+			max-width: 1200px;
 		}
-		&__title {
-			margin-bottom: 24px;
-		}
+
 		&__pagination {
-			margin-top: 24px;
-		}
-		&__back {
-			margin-bottom: 8px;
-			&--bottom {
-				margin-top: 24px;
-				margin-bottom: 0;
-			}
-		}
-
-		@include media($md) {
-			&__back {
-				display: none;
-			}
-			&__row {
-				margin-bottom: -24px;
-				&-item {
-					margin-bottom: 24px;
-				}
-			}
-		}
-
-		@include media($xs) {
-			&__title {
-				margin-bottom: 16px;
-			}
-			&__pagination {
-				margin-top: 16px;
-			}
-			&__row {
-				margin-bottom: -16px;
-				&-item {
-					margin-bottom: 16px;
-
-					.news-block {
-						max-width: none;
-					}
-				}
-			}
-		}
-	}
-
-	&--comments-page & {
-		&__title {
-			margin-bottom: 40px;
-		}
-		&__pagination {
-			margin-top: 40px;
-		}
-
-		&__row {
-			margin: 0 -20px -40px;
-			&-item {
-				padding: 0 20px;
-				margin-bottom: 40px;
-			}
-		}
-
-		@include media($lg) {
-			&__title {
-				margin-bottom: 20px;
-			}
-
-			&__row {
-				margin: 0 -10px -20px;
-				&-item {
-					padding: 0 10px;
-					margin-bottom: 20px;
-				}
-			}
-		}
-
-		@include media($xs) {
-			&__pagination {
-				margin-top: 20px;
-			}
-		}
-	}
-
-	&--discounts-page & {
-		&__title {
-			margin-bottom: 40px;
-		}
-		&__pagination {
-			margin-top: 60px;
-		}
-
-		&__row {
-			margin: 0 -10px -40px;
-			&-item {
-				padding: 0 10px;
-				margin-bottom: 40px;
-			}
-		}
-
-		@include media($lg) {
-			&__pagination {
-				margin-top: 40px;
-			}
-		}
-
-		@include media($md) {
-			&__title {
-				margin-bottom: 20px;
-			}
-			&__row {
-				margin: 0 -10px -20px;
-				&-item {
-					padding: 0 10px;
-					margin-bottom: 20px;
-				}
-			}
-			&__pagination {
-				margin-top: 20px;
-			}
-		}
-	}
-
-	&--news-view & {
-		&__title {
-			text-align: left;
-		}
-		&__body {
-			max-width: 1244px;
-			margin: 0 auto;
-		}
-		&__tags {
-			margin-top: 24px;
-			&-item {
-				margin: 0 8px 8px 0;
-
-				a {
-					display: inline-block;
-					padding: 5px 12px;
-					color: $white;
-					background-color: $black;
-					font: 500 14px/20px $baseFF;
-					border-radius: 4px;
-				}
-			}
-		}
-		&__video {
-			margin: 46px 0;
-		}
-
-		@include media($lg) {
-			&__bread {
-				margin-bottom: 16px;
-			}
-			&__back {
-				margin-bottom: 16px;
-			}
-			&__title {
-				margin-bottom: 24px;
-			}
-			&__video {
-				margin: 40px 0;
-			}
-		}
-		@include media($md) {
-			&__back {
-				display: none;
-			}
-			&__video {
-				margin: 24px 0;
-			}
-		}
-		@include media($xs) {
-			&__bread {
-				margin-bottom: 16px;
-			}
-			&__title {
-				margin-bottom: 16px;
-			}
-			&__tags {
-				&-item {
-					a {
-						font: 500 12px/20px $baseFF;
-					}
-				}
-			}
-		}
-	}
-
-	&--products & {
-		&__bread {
-			margin-bottom: 16px;
-		}
-		&__title {
-			margin-bottom: 24px;
+			margin-top: 4px;
 		}
 	}
 }

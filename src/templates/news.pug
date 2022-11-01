@@ -1,0 +1,85 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'news.html';
+	- var pageTitle = 'Новости';
+	- var classBody = 'news';
+block styles
+	
+block content
+	include ../components/action-block/template
+	include ../components/main-section/template
+
+	+mainSection({
+		bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Новости'}],
+		title: "Новости",
+		img: "images/main-bg-news.jpg"
+	}).main-section--actions.main-section--gap-bottom
+		.main-section__container.container
+			.main-section__items.row
+				.main-section__news.col-6
+					+actionBlockMode({
+						date: "01 марта",
+						img: "images/news-1.jpg",
+						title: "Бизнес-форум завода «ПРОГРЕСС» в столице Дагестана",
+						text: "На днях наши московские коллеги прибыли в<br> яркую, аутентичную Махачкалу"
+					})
+
+				.main-section__news.col-3
+					+actionBlockMode({
+						date: "01 марта",
+						img: "images/news-2.jpg",
+						title: "Новинка от BRUSBOX – когда цвет имеет значение!",
+						text: "Хорошая новость от «БРУСБОКС»! Линейка подоконников BRUSBOX пополнена..."
+					})
+
+				.main-section__news.col-3
+					+actionBlockMode({
+						date: "01 марта",
+						img: "images/news-3.jpg",
+						title: "В строительстве школы «СКОЛКОВО-2» в Тамбове применяются оконные системы BRUSBOX",
+						text: "В Тамбове полным ходом идут масштабные строительные работы — реализуется..."
+					})
+
+			.main-section__items.row
+				.main-section__news.col-3
+					+actionBlockMode({
+						date: "01 марта",
+						img: "images/news-4.jpg",
+						title: "Встреча партнёров компании «БРУСБОКС»",
+						text: "В последнюю неделю марта в Москве прошла крупнейшая международная строительная..."
+					})
+
+				.main-section__news.col-3
+					+actionBlockMode({
+						date: "01 марта",
+						img: "images/news-5.jpg",
+						title: "День рождения «БРУСБОКС»!",
+						text: "В последнюю неделю марта в Москве прошла крупнейшая международная строительная..."
+					})
+
+				.main-section__news.col-3
+					+actionBlockMode({
+						date: "01 марта",
+						img: "images/news-6.jpg",
+						title: "Завод «БРУСБОКС» работает в штатном режиме",
+						text: "В последнюю неделю марта в Москве прошла крупнейшая международная строительная..."
+					})
+
+				.main-section__news.col-3
+					+actionBlockMode({
+						date: "01 марта",
+						img: "images/news-7.jpg",
+						title: "11/12-я конференция «Евро Окна-Дома»",
+						text: "21 января компания «Евро Окна-Дома» громко и впечатляюще творила свою историю!"
+					})
+
+			include  ../components/pagination/template
+			+pagination()
+
+		include ../components/contact-section/template
+		+contactSectionSubscribe()
+		
+
+	+gridLayout()
+
+block scripts 

@@ -5,17 +5,30 @@
 		margin: 0;
 		padding: 0;
 	}
+
 	&__li {
-		font: $fs-p3;
-		color: $black;
-		@include flex(0, center, center, nowrap);
-		&:after {
-			content: "/";
-			color: $black;
-			margin: 0 5px;
+		font: 300 14px/16px $baseFF;
+
+		@include media($xs) {
+			font: 300 10px/11px $baseFF;
 		}
-		a {
+
+		color: $bread;
+		@include flex(0, center, center, nowrap);
+
+		&:after {
+			content: "";
+			background-image: url("../../images/braedcrumbs-arrow.png");
+			height: 6px;
+			width: 6px;
+			display: block;
+			background-repeat: no-repeat;
 			color: $black;
+			background-position: center;
+			margin: 0 13px;
+		}
+		
+		a {
 			text-decoration: none;
 		}
 
@@ -23,9 +36,12 @@
 			&:after {
 				display: none;
 			}
-			/* a {
-				color: rgba($green, 0.4);
-			} */
+
+			color: $white;
+		}
+
+		@include media($sm) {
+			font: 300 10px/11px $baseFF;
 		}
 	}
 
@@ -34,6 +50,7 @@
 			flex-wrap: nowrap;
 			overflow: auto;
 		}
+		
 		&__li {
 			white-space: nowrap;
 		}

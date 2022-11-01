@@ -1,0 +1,38 @@
+include ../form-block/template
+
+mixin contactSection(data)
+	.contact-section&attributes(attributes)
+		._container.container
+			._row.row
+				._left
+					+formBlockContacts._form
+				._right
+					img(src="images/contact-img.jpg", alt="")
+
+mixin contactSectionOrder(data)
+	.contact-section.--order&attributes(attributes)
+		._container.container
+			._row.row
+				._left
+					+formBlockContactsOrder._form
+				._right
+					img(src="images/order-banner.jpg", alt="")._banner
+
+mixin contactSectionSubscribe(data)
+	.contact-section.--suvscribe&attributes(attributes)
+		._container.container
+			._row.row
+				._left
+					+formBlockSunscribe._form
+				._right
+					img(src="images/contact-img.jpg", alt="")
+
+mixin contactSectionSubscribeArticles(data)
+	.contact-section.--suvscribe&attributes(attributes)
+		._container.container
+			._row.row
+				._left
+					+formBlockSunscribeArticles._form
+				._right
+					img(src="images/contact-img.jpg", alt="")
+					

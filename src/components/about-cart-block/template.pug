@@ -1,0 +1,23 @@
+mixin aboutCartBlock(data)
+	.about-cart-block&attributes(attributes)
+		._items
+			._date 07.09.2020
+			._info
+				._likes
+					+svg('like')
+					span 26
+				._eye
+					+svg('eye')
+					span 394
+
+mixin aboutCartBlockMode(data)
+	.about-cart-block.--mode&attributes(attributes)
+		._items
+			._date 07.09.2020
+			._info
+				._likes
+					+svg('like')
+					span 26
+				._eye
+					+svg('eye')
+					span 394

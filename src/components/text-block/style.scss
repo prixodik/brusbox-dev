@@ -1,0 +1,12 @@
+.text-block {
+	&__container {
+	}
+
+	&__text {
+		padding: 112px 0;
+	}
+
+	&--padding-sm & {
+		padding: 100px 0;
+	}
+}

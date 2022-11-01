@@ -1,17 +1,22 @@
 .btn {
-	border: 2px solid $green;
-	background: $green;
-	font: $button-sm;
-	line-height: 20px;
-	padding: 8px 25px;
+	background: $btn-red;
+	font: 400 18px/25px $baseFF;
+	padding: 9px 24px;
 	color: $white;
+	display: block;
 	text-align: center;
 	display: inline-block;
 	vertical-align: top;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	border-radius: 4px;
+	border-radius: 30px;
+	border: none;
+
+	@include media($xs) {
+		font: 400 12px/13px $baseFF;
+		padding: 10px 24px;
+	}
 
 	svg {
 		fill: $white;
@@ -20,10 +25,8 @@
 
 	&:hover,
 	&:active {
-		border-color: $green-dark;
-		background: $green-dark;
+		background: $btn-hover;
 		color: $white;
-
 		svg {
 			fill: $white;
 		}
@@ -31,6 +34,20 @@
 
 	&:focus {
 		outline: none;
+	}
+
+	&--border {
+		background: transparent;
+		border: 1px solid $btn-red;
+		color: $btn-red;
+		transition: all 0.3s;
+
+		&:hover,
+		&:active {
+			transition: all 0.3s;
+			background: $btn-red;
+			color: $white;
+		}
 	}
 
 	&--disabled,
@@ -67,129 +84,8 @@
 			margin: 0 0 0 6px;
 		}
 	}
-
-	&--black {
-		background: $black;
-		border-color: $black;
-		color: $white;
-		&:hover,
-		&:active {
-			background: $green-dark;
-			border-color: $green-dark;
-		}
-
-		&.btn--disabled,
-		&:disabled,
-		&[disabled],
-		&:disabled:focus {
-			opacity: 0.5;
-		}
-	}
-
-	&--border {
-		background: transparent;
-		color: $green;
-		&:hover,
-		&:active {
-			border-color: $green-dark;
-			background: $green-dark;
-			color: $white;
-		}
-	}
-
-	&--block {
-		width: 100%;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
-	&--only-icon {
-		width: 54px;
-		height: 54px;
-		padding: 0;
-		@include flex(center, center, center);
-		border-radius: 50%;
-		svg {
-			fill: $white;
-			font-size: 21px;
-			display: block;
-			.binfo {
-				fill: $black;
-			}
-		}
-	}
-
-	&--link {
-		background: transparent;
-		border: 0;
-		padding: 0;
-		border-radius: 0;
-		color: $form-blue;
-		text-align: left;
-		font: 500 16px $baseFF;
-		//border-bottom: currentColor 2px dotted;
-		svg {
-			font-size: 24px;
-			margin-right: 12px;
-		}
-		span {
-			text-align: left;
-		}
-
-		&:hover,
-		&:active {
-			background: none;
-			//text-decoration: underline;
-		}
-	}
-
-	&--lg {
-		padding-left: 50px;
-		padding-right: 50px;
-
-		/* svg {
-			font-size: 19px;
-			margin-right: 16px;
-		} */
-	}
 	/* &--sm {
 		padding: 5px 16px;
 		font: 500 14px/26px $baseFF;
 	} */
-
-	@include media($lg) {
-	}
-
-	@include media($md) {
-	}
-
-	@include media($sm) {
-	}
-
-	@include media($xs) {
-		font: $button-xs;
-		line-height: 24px;
-		padding: 5px 20px;
-
-		&--only-icon {
-			padding: 0;
-		}
-
-		&--lg {
-			padding-left: 46px;
-			padding-right: 46px;
-		}
-		&--sm {
-			padding: 10px 16px;
-		}
-
-		&--link {
-			padding: 0;
-		}
-		&--block {
-			width: 100%;
-			padding-left: 10px;
-			padding-right: 10px;
-		}
-	}
 }

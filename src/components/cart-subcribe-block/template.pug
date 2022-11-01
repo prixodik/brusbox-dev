@@ -1,0 +1,20 @@
+mixin cartSubcribeBlock(data)
+	.cart-subcribe-block&attributes(attributes)
+		a(href="#")._link
+			+svg('arrow-left')._icon
+			span Назад
+		._subscribe
+			._subscribe-title Поделиться:
+
+			include ../soc-list/template
+			+socListSubscribe()._soc-list
+
+mixin cartSubcribeBlockArticle(data)
+	.cart-subcribe-block.--article&attributes(attributes)
+		include ../about-cart-block/template
+		+aboutCartBlockMode()._about-cart
+		._subscribe
+			._subscribe-title Поделиться:
+
+			include ../soc-list/template
+			+socListSubscribe()._soc-list

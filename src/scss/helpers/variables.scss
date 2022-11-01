@@ -33,17 +33,15 @@ $breakpoints: (
 $white: #fff;
 $black: #000;
 
-$gray: #b9b9b9;
 $red: #e40032;
 $red-dark: #79001d;
 $pink: #ff9292;
 $gray-200: #e1e1e1;
-$gray-medium: #999999;
 $gray-bridge: #f1f1f1;
 
 $green: #80b13d;
 $green-dark: #4c971d;
-$gray-spident: $gray;
+// $gray-spident: $gray;
 $gray-greenish: #8e9592;
 $gray2: #d0d0d0;
 $gray-pale: #f9f9f9;
@@ -90,6 +88,18 @@ $gradient-to-white: linear-gradient(90deg, rgba($white, 0) 0%, $white 100%);
 $gray-grad: linear-gradient(90deg, #e3e3e5 0%, $white 100%);
 $gray-back: linear-gradient(90deg, $white 0%, #f1f1f2 50%, $white 100%);
 
+//цвета на новом проекте пишутся ниже, цвета выше, нужно удалить по завершению
+$medium-gray: #999;
+$black: #000;
+$bb-gray: #53555a;
+$gray: #b9b9b9;
+$gray-medium: #999999;
+$btn-red: #e40032;
+$btn-hover: #b90129;
+$bg-grey: #f1f1f1;
+$bread: rgba(255, 255, 255, 0.5);
+$medium-gray: #999;
+
 $mobileBrackpoints: "tablet";
 
 $enable-grid-classes: true !default;
@@ -106,7 +116,8 @@ $grid-breakpoints: (
 
 // Grids
 $grid-columns: 12;
-$grid-gutter-width: 20px;
+$grid-gutter-width: 60px;
+// $grid-gutter-width: 60px;
 
 $baseFontF: "HelveticaNeueCyr", sans-serif;
 $headlineFontF: "HelveticaNeueCyr", sans-serif;
@@ -124,6 +135,7 @@ $baseBg: $white;
 $family: $baseFF;
 
 //$containerW: 1584px;
+$containerSm: 1490px;
 $containerW: 1830px;
 $containerP: $grid-gutter-width/2;
 
@@ -140,7 +152,8 @@ $text-big: 19px/1.4 $baseFF;
 $fs-p5: 14px/1.1 $baseFF;
 $fs-p6-light: 300 13px/1 $baseFF;
 
-$fs-p: 17px/1.2 $baseFF;
+// $fs-p: 17px/1.2 $baseFF;
+$fs-p1: 300 18px/25px $baseFF;
 $fs-p2: 15px/1.3 $baseFF;
 $fs-p2-xlg: 16px/1.2 $baseFF;
 $fs-p2-bold: bold 14px/1.3 $baseFF;
