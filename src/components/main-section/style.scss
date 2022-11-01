@@ -48,6 +48,7 @@
 			&-left {
 				padding-left: 10px;
 			}
+
 			&-right {
 				padding-right: 10px;
 			}
@@ -112,12 +113,14 @@
 				font: 300 13px/14px $baseFF;
 			}
 		}
+
 		&__info {
 			@include media($sm) {
 				flex-direction: column;
 			}
 		}
 	}
+
 	&--select-color & {
 		&__contact-section {
 			background-color: $bg-grey;
@@ -164,19 +167,22 @@
 			text-align: center;
 			width: 100%;
 		}
+
 		&__date {
 			margin-bottom: 8px;
 		}
+
 		&__bread {
 			top: 24px;
 		}
+
 		&__title {
 			position: relative;
 			bottom: auto;
 			margin-bottom: 8px;
 		}
-		&__subtitle {
-		}
+
+		&__subtitle {}
 	}
 
 	&--one-news & {
@@ -202,5 +208,10 @@
 		&__pagination {
 			margin-top: 4px;
 		}
+	}
+
+	&__header-text {
+		text-align: center;
+		padding: 112px 0;
 	}
 }

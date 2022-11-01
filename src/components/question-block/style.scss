@@ -49,4 +49,13 @@
 			max-width: 633px;
 		}
 	}
+	&--title-height & {
+		&__title {
+			padding-bottom: 40px;
+			padding-top: 112px;
+		}
+		// &__img img{
+		// 	width: 100%;
+		// }
+	}
 }
