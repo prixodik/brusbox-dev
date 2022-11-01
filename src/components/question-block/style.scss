@@ -51,14 +51,23 @@
 	}
 	&--title-height & {
 		&__title {
-			padding-bottom: 40px;
-			padding-top: 112px;
+			// padding-bottom: 0px;
+			// padding-top: 20px;
 		}
 		&__info {
 			max-width: 100%;
+			padding: 80px 112px 20px 112px;
 		}
+	}
+		
+		
 		// &__img img{
 		// 	width: 100%;
 		// }
+		&--item-content &{
+			&__row{
+				background-color: transparent;
+			}
+			
 	}
 }
