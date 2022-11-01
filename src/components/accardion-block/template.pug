@@ -1,0 +1,329 @@
+include ../table-carts/template
+include ../payment-block/template
+
+mixin accardionBlock(data)
+	.accardion-block&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= item.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+				!= item.text
+
+mixin accardionBlockPayment1(data)
+	.accardion-block.-payment&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= data.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+				._body-row.row
+					+paymentBlockRed({
+						icon:'clock',
+						title:'Предварительные заказы:',
+						text:' <p><strong>100% предоплата:</strong> осуществляете 100% предоплату<br> товара.</p><p><strong>Частичная предоплата:</strong> осуществляете предоплату<br> к заказу по условиям каталога, оставшуюся часть<br> доплачиваете при получении заказ.</p>',
+						important:'Важно! При 100% предоплате заказа, цены не изменятся'
+					}).accardion-block__item.col-6.col-sm-12
+					+paymentBlock({
+						icon:'catalog-2',
+						title:'Заказы по каталогу "Сегодня в продаже":',
+						text:'<strong>Оплата при получении заказа:</strong> оплата товара<br> производится наличными или банковской картой<br> при получении заказа через ТК СДЭК.'
+					}).accardion-block__item.col-6.col-sm-12
+
+mixin accardionBlockPayment2(data)
+	.accardion-block.-payment&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= data.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+				._body-row.row
+					+paymentBlockRed({
+						icon:'clock',
+						title:'Предварительные заказы:',
+						text:' <p><strong>100% предоплата:</strong> осуществляете 100% предоплату<br> товара.</p><p><strong>Частичная предоплата:</strong> осуществляете предоплату<br> к заказу по условиям каталога, оставшуюся часть<br> доплачиваете при получении заказ.</p>',
+						important:'Важно! При 100% предоплате заказа, цены не изменятся'
+					}).accardion-block__item.col-6.col-sm-12
+
+mixin accardionBlockPayment3(data)
+	.accardion-block.-payment&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= data.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body 
+				._body-row.row
+					+paymentBlockRedRight({
+						icon:'clock',
+						title:'Предварительные заказы:',
+						text:' <p><strong>100% предоплата:</strong> осуществляете 100% предоплату<br> товара.</p><p><strong>Частичная предоплата:</strong> осуществляете предоплату<br> к заказу по условиям каталога, оставшуюся часть<br> доплачиваете при получении заказ.</p>',
+						important:'Важно! При 100% предоплате<br> заказа, цены не изменятся'
+					}).accardion-block__item.col-12
+
+mixin accardionBlockPayment4(data)
+	.accardion-block.-payment.-payment4&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= data.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+				._body-row.row
+					+paymentBlockOne({
+						icon:'store',
+						title:'Оплата в магазинах “Bestgarden”:',
+						text:'Для оплаты наличными в магазине, вам надо распечатать<br> заказ или переписать номер вашего заказа и оплатить<br> в любом магазине «Bestgarden».<br><br>Также вы можете сделать заказ, приехав непосредственно<br> в наши магазины и сразу их оплатить.'
+					}).accardion-block__item.col-6.col-sm-12
+
+mixin accardionBlockPayment5(data)
+	.accardion-block.-payment.-payment5&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= data.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+				._body-row.row
+					+paymentBlock({
+						icon:'bank',
+						title:'Вы можете осуществить оплату через банк<br> по следующим реквизитам:',
+						text:'ООО "БЕСТГАРДЕН"<br>ИНН: 9715322394<br>КПП: 771501001<br>Расчетный счет: 40702810038000238634<br>Банк: ПАО СБЕРБАНК г. МОСКВА<br>БИК: 044525225<br>Корр. счет: 30101810400000000225'
+					}).accardion-block__item.col-6.col-sm-12
+					+paymentBlockRed2({
+						icon:'invoice',
+						title:'Скачать квитанцию:',
+						text:'Квитанцию для оплаты через «Банк» необходимо<br> <strong><a href="#">скачать</a></strong> и распечатать для оплаты.',
+						important:'Для просмотра и печати квитанций вам потребуется<br> установить себе на компьютер программу <strong>Adobe Reader.</strong>'
+					}).accardion-block__item.col-6.col-sm-12
+
+mixin accardionBlockPayment6(data)
+	.accardion-block.-payment.-payment4&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= data.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+				._body-row.row
+					+paymentBlockList({
+						icon:'robo-kassa',
+						title:'Робокасса - это сервис, который позволяет оперативно оплачивать товары и услуги одним<br> из множества удобных способов:',
+						text:'<ul><li>с помощью электронной валюты (Яндекс.Деньги, WebMoney, EasyPay, Единый Кошелек и др.)</li><li>с помощью банковских карт (Visa, MasterCard)</li><li>через терминалы оплаты (QIWI, Элекснет, Новоплат, Уникасса и др.)</li><li>через сотовый телефон с помощью смс-сообщений</li><li>через систему денежных переводов Contact</li><li>с помощью специального приложения для смартфона</li></ul>',
+						info:'Чтобы воспользоваться одним из перечисленных методов оплаты, выберите пункт<br> <strong>«Электронные платежи»<strong> на странице оформления заказа в нашем интернет-магазине.'
+					}).accardion-block__item.col-10.col-sm-12
+
+mixin accardionBlockPayment7(data)
+	.accardion-block.-payment&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= data.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+				._body-row.row
+					+paymentBlockRed2({
+						icon:'invoice',
+						title:'Скачать квитанцию:',
+						text:'Квитанцию для оплаты через «Банк» необходимо<br> <strong><a href="#">скачать</a></strong> и распечатать для оплаты.',
+						important:'Для просмотра и печати квитанций вам потребуется<br> установить себе на компьютер программу <strong>Adobe Reader.</strong>'
+					}).accardion-block__item.col-6.col-sm-12
+
+mixin accardionBlockPayment8(data)
+	.accardion-block.-payment&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= data.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+				._body-row.row
+					+paymentBlock({
+						icon:'user',
+						title:'В личном кабинете:',
+						text:'Вы можете оформить возврат через специальную форму в <strong>личном кабинете</strong>, указав причину возврата и способ возврата товара и средств.'
+					}).accardion-block__item.col-11.col-sm-12
+					+paymentBlock({
+						icon:'blank',
+						title:'По заявлению:',
+						text:'Вы можете оформить возврат почтовым переводом по заявлению, написанному в свободной форме, с указанием номера заказа, причиной возврата, ФИО получателя платежа, адреса на который должен быть осуществлен перевод. Заявления, Вы можете прислать по электронной почте на адрес info@bestgarden.ru, по почте письмом на адрес 127641, г. Москва, ул. Санникова, д.13, так же передать курьеру или в любой розничный магазин сети "Мир Увлечений". '
+					}).accardion-block__item.col-11.col-sm-12
+
+					._info.col-10.col-sm-12 Перевод на банковскую карту осуществляется при условии, что Вы производили оплату с данной карты, только по оригиналу заявления установленного образца, заполненного и подписанного лично покупателем или в личном кабинете.
+
+mixin accardionBlockIn(data)
+	.accardion-block.-in&attributes(attributes)
+		each item in data
+			._head.is-active.js-accardion-toggle
+				._head-acardion
+					._title
+						!= item.title
+					._carts
+						!= item.carts
+				._arrow
+					+svg('arrow-right-2')
+			._body.is-active.js-accardion-body
+				._ditails 
+					._item
+						._icon 
+							+svg('catalog')
+						._info
+							._item-title Товары из каталога:
+							._item-status <strong>Товары в наличии</strong>
+					._item
+						._icon 
+							+svg('delivery')
+						._info
+							._item-title Доставка:
+							._item-status <strong>в течении 2-7 дней</strong>
+				+tableCarts()
+				.accardion-block.-in.-in2.-mode
+					._head.is-active.js-accardion-toggle
+						._title Применить промокод или бонусную карту
+						._arrow
+							+svg('arrow-right-2')
+					._body.is-active.js-accardion-body
+						._body-row
+							._input-form.row
+								._input-item.col-6.col-xs-12
+									.form-group
+										._label Промокод (если есть)
+										input.form-control.-border(placeholder="" type="text")
+								._input-item.col-6.col-xs-12
+									.form-group
+										._label Номер бонусной карты
+										input.form-control.-border(placeholder="" type="text")
+								._input-item.col-12
+									button.btn.-disabled.-lg Применить
+				._total-body.col-12
+					._total-title Общая сумма заказа
+					._total-info
+						._total-text Сумма без скидок: 880.00 ₽
+						._total-text Сумма скидок: 0.00 ₽
+						._total-cost 880.00 ₽ 
+						._buttons
+							a.btn.-border.-lg(href='#') Продолжить покупки
+							a.btn.-lg(href='#') Оформить заказ
+mixin accardionBlockDelivery1(data)
+	.accardion-block.-delivery1&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= data.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+				._about
+					._about-img
+						img(src="images/post-rus.png", alt="")
+					._about-info
+						._about-text <strong>Минимальная сумма заказа отсутствует.</strong><br><br><strong>Бесплатно</strong> - доставка почтой России и сборка при заказе на сумму от <strong>12 000 руб.</strong><br> (с учетом скидок и бонусов) и 100 % предоплате по каталогам Осень, Луковичные и многолетники,<br> Розы, Саженцы, Саженцы ЗКС
+				._table 
+					<div class="table-responsive"><table class="table"><tbody><tr><th>Каталог</th><th>Сумма доставки</th><th>Сборка заказа</th><th>Способ доставки</th></tr><tr><td><strong>Товары в наличии</strong></td><td><a href="#">по тарифам почты России</a></td><td>100,00 руб.</td><td>Доставка почтой России</td></tr><tr><td><strong>Курьером по Москве и области<br> Розы, Саженцы, Луковичные<br> и многолетники., Саженцы ЗКС</strong></td><td><a href="#">по тарифам почты России</a></td><td>100,00 руб.</td><td>Доставка почтой России</td></tr></tbody></table></div>	
+				._item 
+					._icon 
+						+svg('delivery') 
+					._item-info
+						._item-text  Заказанные вами товары будут упакованы в посылку и доставлены в ваше почтовое отделение.<br><br> После отправки посылки, на Ваш электронный адрес или телефон будет выслан идентификационный номер и дата почтового отправления. Все желающие могут найти идентификационный номер своей посылки и отследить её передвижение на <strong><a href="#">сайте почты России.</a></strong>
+				._item
+					._icon 
+						+svg('coins')
+					._item-info
+						._item-text Доставка по тарифам Почты России.<br> С тарифами на оказание услуг по пересылке можно ознакомиться<strong><a href="#"> здесь.</a></strong>
+
+mixin accardionBlockDelivery4(data)
+	.accardion-block.-delivery1.-delivery4&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= data.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+				._info Благодаря альтернативной доставке клиентам из регионов России стал доступен для заказа более<br> широкий ассортимент товара (например штамбовые формы растений).
+				._about
+					._about-img
+						img(src="images/cdek.png", alt="")
+					._about-info
+						._about-text 
+							p <strong>Минимальная сумма заказа отсутствует.</strong>
+							p <strong>Бесплатно</strong> - доставка ТК СДЭК до пункта выдачи и сборка при заказе на сумму <strong>12 000 руб.</strong><br> (с учетом скидок и бонусов) и 100 % предоплате по каталогам Осень, Луковичные и многолетники,<br> Розы, Саженцы, Саженцы ЗКС.
+				._table 
+					<div class="table-responsive"><table class="table"><tbody><tr><th>Каталог</th><th>Сумма доставки</th><th>Сборка заказа</th></tr><tr><td><strong>Альтернативная доставка ТК СДЭК</strong></td><td><a href="#">по тарифам ТК СДЭК</a></td><td>100,00 руб.</td></tr></tbody></table></div>
+
+mixin accardionBlockExtra(data)
+	.accardion-block.-in.-extra&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._head-acardion
+					._title
+						!= item.title
+					._carts
+						!= item.carts
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+				._ditails 
+					._item
+						._icon 
+							+svg('catalog')
+						._info
+							._item-title Товары из каталога:
+							._status <strong>Товары в наличии</strong>
+					._item
+						._icon-delivery 
+							+svg('delivery')
+						._info
+							._item-title Доставка:
+							._status-delivery <strong>в течении 2-7 дней</strong>
+				+tableCartsDelete()
+				.accardion-block.-in.-in2
+					._head.js-accardion-toggle
+						._title Применить промокод или бонусную карту
+						._arrow
+							+svg('arrow-right-2')
+					._body.js-accardion-body.row
+						._card-info.col-12
+							._card-number Применена бонусная карта номер <strong>53856541235687450</strong>
+							._discount-value Скидка составляет <strong>5%</strong>
+							._button
+								a.btn.-lg.-border(href="#") Применить другую карту или промокод
+							
+				._total-body.col-12
+					._total-title Общая сумма заказа
+					._total-info
+						._total-text Сумма без скидок: 880.00 ₽
+						._total-text Сумма скидок: 0.00 ₽
+						._total-cost 880.00 ₽ 
+						._buttons
+							a.btn.-border.-lg(href='#') Продолжить покупки
+							a.btn.-lg(href='#') Оформить заказ
+
+
+mixin accardionBlockGuarantees(data)
+	.accardion-block.-guarantees&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._title
+					!= data.title
+				._arrow
+					+svg('arrow-right-2')
+			._body.js-accardion-body
+					.payment-block.-right2
+						._text 
+							p Обязательно проверяйте качество товара, упаковку, количество, целостность комплектации в присутствии курьера (продавца). В случае обнаружения недостатков по вышеперечисленным пунктам вы имеете право отказаться от покупки.
+							p.color-blue-dark
+								strong После приемки заказом покупателя или его доверенного лица претензии не принимаются,<br> возврат не производится.
+							._important Важно! Согласно постановлению правительства №55 от 19.01.98 г. растения и агрохимикаты не подлежат обмену или возврату.

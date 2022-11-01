@@ -50,6 +50,11 @@
 		}
 	}
 
+	&--white {
+		border-color: $white;
+		color: $white;
+	}
+
 	&--disabled,
 	&:disabled,
 	&[disabled],
