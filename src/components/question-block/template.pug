@@ -19,38 +19,3 @@ mixin questionBlockMode(data)
 					!=data.text
 			._img
 				img(src=data.img, alt="")
-
-include ../suppliers-block/template
-mixin questionBlockSuppliers7(data)
-	.question-block.question-block--supliers.question-block--row-revers.question-block--title-height&attributes(attributes)
-		._row 
-			._info
-				h5._title
-					!=data.title
-				._suppliers
-					include ../suppliers-block/template
-					+suppliersBlock7()
-			._img
-				img(src=data.img, alt="")
-
-mixin questionBlockSuppliers5(data)
-	.question-block.question-block--supliers.question-block--title-height.question-block--item-content&attributes(attributes)
-		._row 
-			._info
-				h5._title
-					!=data.title
-				._suppliers
-					include ../suppliers-block/template
-					+suppliersBlock5()
-
-mixin questionBlockSuppliers(data)
-	.question-block.question-block--supliers.question-block--title-height&attributes(attributes)
-		._row 
-			._info
-				h5._title
-					!=data.title
-				._suppliers
-					include ../suppliers-block/template
-					+suppliersBlock()
-			._img
-				img(src=data.img, alt="")

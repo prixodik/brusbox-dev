@@ -1,0 +1,34 @@
+include ../info-section/template
+mixin ParamBlock7(data)
+	.param-block.param-block--param.param-block--row-revers&attributes(attributes)
+		._row
+			._info
+				h5._title
+					!=data.title
+				._param
+					include ../info-section/template
+					+infoSection7({
+					})
+			._img
+				img(src=data.img, alt="")
+
+mixin ParamBlock5(data)
+	.param-block.param-block--param.param-block--center.param-block--white&attributes(attributes)
+		._info
+			h5._title
+				!=data.title
+			._param
+				include ../info-section/template
+				+infoSection5()
+
+mixin ParamBlock(data)
+	.param-block.param-block--param&attributes(attributes)
+		._row
+			._info
+				h5._title
+					!=data.title
+				._param
+					include ../info-section/template
+					+infoSection()
+			._img
+				img(src=data.img, alt="")

@@ -1,4 +1,4 @@
-.suppliers_block{
+.param-block{
 	&__item{
 	display: flex;
 	border-bottom: 1px solid rgba(225, 225, 225, 1);
@@ -9,7 +9,4 @@
 	&__title, &__text {
 		padding-bottom: 8px;
 	}
-}
-.suppliers_block{
-	margin-bottom: 112px;
 }
