@@ -2,33 +2,40 @@ include ../info-section/template
 mixin ParamBlock7(data)
 	.param-block.param-block--param.param-block--row-revers&attributes(attributes)
 		._row
-			._info
-				h5._title
-					!=data.title
-				._param
-					include ../info-section/template
-					+infoSection7({
-					})
+			include ../info-section/template
+			+infoSection({
+				items: data.list
+			})._list
 			._img
 				img(src=data.img, alt="")
+
 
 mixin ParamBlock5(data)
 	.param-block.param-block--param.param-block--center.param-block--white&attributes(attributes)
 		._info
-			h5._title
-				!=data.title
 			._param
 				include ../info-section/template
-				+infoSection5()
+				+infoSection({
+				items: data.list
+			})
 
 mixin ParamBlock(data)
 	.param-block.param-block--param&attributes(attributes)
 		._row
-			._info
-				h5._title
-					!=data.title
-				._param
-					include ../info-section/template
-					+infoSection()
+			include ../info-section/template
+			+infoSection({
+				items: data.list
+			})._list
 			._img
 				img(src=data.img, alt="")
+
+mixin ParamBlock1(data)
+	.param-block&attributes(attributes)
+		+infoSection({
+			items: data.list
+		})._list
+		._item
+			._label
+				!=data.label
+			._value 
+				!=data.value

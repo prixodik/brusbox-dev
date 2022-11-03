@@ -5,20 +5,21 @@
 	}
 
 	&__info {
-		max-width: 736px;
-		margin: 0 auto;
-		padding: 0 24px;
+		// max-width: 736px;
+		// margin: 0 auto;
+		// padding: 0 24px;
 	}
 
-	&__title {}
+	&__title:first-child {
+		margin: 0px 0px 40px;
+		max-width: 710px;
+	}
 
 	&__text {
 		font: $fs-p1;
 	}
 
 	&__img {
-		max-width: 50%;
-		width: 100%;
 
 		// min-height: 600px;
 		img {
@@ -77,5 +78,11 @@
 		&__row {
 			background-color: transparent;
 		}
+	}
+	&__param {
+		display: flex;
+	}
+	.param-block__list{
+		padding: 80px 112px;
 	}
 }
