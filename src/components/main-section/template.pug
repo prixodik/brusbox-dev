@@ -15,16 +15,14 @@ mixin mainSection(data)
 mixin mainSectionMode(data)
 	.main-section.--mode&attributes(attributes)
 		._head
-			img(src=data.img, alt="")._head-img
 			+breadcrumbs({
 				items: data.bread
 			})._bread
+			img(src=data.img, alt="")._head-img
 			._head-info
-				._date
-					!=data.date
 				h1._title
 					!=data.title
-				._subtitle 
+				._subtitle
 					!=data.subtitle
 
 		block
