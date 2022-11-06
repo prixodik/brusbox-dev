@@ -5,28 +5,29 @@ append vars
 block styles
 	
 block content
-	include ../components/main-section/template
+	include ../components/head-section/template
 	include ../components/dilers-block/template
-	include ../components/question-block/template
+	//-include ../components/question-block/template
 
-	+mainSectionBtn({
-		bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Дилеры списком'}],
-		title: "Офисы продаж пластиковых окон<br> в Нижнем Новгороде",
-		img: "images/main-bg-dilers-list.jpg",
-		btn: "Изменить город"
-	}).main-section--btn.main-section--dilers
-		.main-section__container.container
-			.main-section__links
-				a(href="").main-section__link на карте
-				a(href="").main-section__link.is-active списком
-			.main-section__row.row
+	.dilers-page
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Дилеры списком'}],
+			title: "Офисы продаж пластиковых окон<br> в Нижнем Новгороде",
+			img: "images/main-bg-dilers-list.jpg",
+			btn: "Изменить город"
+		})
+		._container.container
+			._links
+				a(href="")._link на карте
+				a(href="")._link.is-active списком
+			._row.row
 				+dilersBlock({
 					title: "Окна в дом",
 					location: "Деревня Внуково, ул Минская, д 144",
 					email: 'oknavdom@mail.com',
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82'
-				}).main-section__col.col-4
+				})._col.col-4
 
 				+dilersBlock2({
 					title: "Окна в дом",
@@ -35,7 +36,7 @@ block content
 					website: "oknavdom.ru",
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82'
-				}).main-section__col.col-4
+				})._col.col-4
 
 				+dilersBlock3({
 					title: "Окна в дом",
@@ -43,9 +44,9 @@ block content
 					email: 'oknavdom@mail.com',
 					website: "oknavdom.ru",
 					tel1: '+7 (495) 736-67-81'
-				}).main-section__col.col-4
+				})._col.col-4
 			
-			.main-section__row.row
+			._row.row
 				+dilersBlock2({
 					title: "Окна в дом",
 					location: "Деревня Внуково, ул Минская, д 144",
@@ -53,14 +54,14 @@ block content
 					website: "oknavdom.ru",
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82'
-				}).main-section__col.col-4
+				})._col.col-4
 
 				+dilersBlock4({
 					title: "Рокна-Пласт",
 					location: "Оренбургская обл., с. Сакмара, ул. Советская, д. 22",
 					email: 'oknavdom@mail.com',
 					tel1: '+7 (495) 736-67-81'
-				}).main-section__col.col-4
+				})._col.col-4
 
 				+dilersBlock({
 					title: "Пластек",
@@ -68,9 +69,9 @@ block content
 					email: 'oknavdom@mail.com',
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82'
-				}).main-section__col.col-4
+				})._col.col-4
 
-			.main-section__row.row
+			._row.row
 				+dilersBlock4({
 					title: "ИП Косолапов Валерий Николаевич",
 					location: "Деревня Внуково, ул Минская, д 144",
@@ -78,7 +79,7 @@ block content
 					website: "oknavdom.ru",
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82'
-				}).main-section__col.col-4
+				})._col.col-4
 
 				+dilersBlock2({
 					title: "Окна в дом",
@@ -87,7 +88,7 @@ block content
 					email: 'oknavdom@mail.com',
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82',
-				}).main-section__col.col-4
+				})._col.col-4
 
 				+dilersBlock2({
 					title: "Окна в дом",
@@ -96,9 +97,9 @@ block content
 					email: 'oknavdom@mail.com',
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82',
-				}).main-section__col.col-4
+				})._col.col-4
 
-			.main-section__row.row
+			._row.row
 				+dilersBlock2({
 					title: "Окна в дом",
 					location: "Деревня Внуково, ул Минская, д 144",
@@ -106,7 +107,7 @@ block content
 					website: "oknavdom.ru",
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82'
-				}).main-section__col.col-4
+				})._col.col-4
 
 				+dilersBlock({
 					title: "ФабрикантЪ-Оконные системы",
@@ -114,7 +115,7 @@ block content
 					email: 'oknavdom@mail.com',
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82',
-				}).main-section__col.col-4
+				})._col.col-4
 
 				+dilersBlock3({
 					title: "Рокна-Пласт",
@@ -123,9 +124,9 @@ block content
 					website: "oknavdom.ru",
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82'
-				}).main-section__col.col-4
+				})._col.col-4
 			
-			.main-section__row.row
+			._row.row
 				+dilersBlock2({
 					title: "Евро Окна Дома НН",
 					location: "Нижегородская обл, г. Дзержинск, пр. Ленина, д. 13",
@@ -133,7 +134,7 @@ block content
 					website: "oknavdom.ru",
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82'
-				}).main-section__col.col-4
+				})._col.col-4
 
 				+dilersBlock2({
 					title: "Российские оконные и дверные системы",
@@ -142,10 +143,10 @@ block content
 					website: "oknavdom.ru",
 					tel1: '+7 (495) 736-67-81',
 					tel2: '+7 (495) 736-67-82',
-				}).main-section__col.col-4
+				})._col.col-4
 
 			include  ../components/pagination/template
-			+pagination().main-section__pagination
+			+pagination()._pagination
 
 		include ../components/info-section/template
 		+infoSection({

@@ -51,6 +51,7 @@
 
 /* sections
 -----------------------------*/
+@import "../components/head-section/style";
 @import "../components/colors-section/style";
 @import "../components/contact-section/style";
 @import "../components/main-section/style";
@@ -60,6 +61,10 @@
 @import "../components/history-section/style";
 @import "../components/advantages-section/style";
 @import "../components/info-section/style";
+/*-----------------------------*/
+
+/*! PAGES */
+@import "../components/dilers-page/style";
 /*-----------------------------*/
 
 //@import "partials/table";

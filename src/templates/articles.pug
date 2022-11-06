@@ -6,15 +6,16 @@ block styles
 	
 block content
 	include ../components/article-block/template
-	include ../components/main-section/template
+	include ../components/head-section/template
 
-	+mainSection({
-		bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Статьи'}],
-		title: "Статьи",
-		img: "images/main-bg-articles.jpg"
-	}).main-section--actions.main-section--articles
-		.main-section__container.container.container--text
-			.main-section__search-row
+	.main-section.main-section--actions.main-section--articles
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Статьи'}],
+			title: "Статьи",
+			img: "images/main-bg-articles.jpg"
+		})._head
+		._container.container.container--text
+			._search-row
 				include ../components/sort-block/template
 				+sortBlock()
 				
@@ -22,53 +23,53 @@ block content
 				+searchBlock({
 					placeholder: "Поиск по статьям",
 				})
-		.main-section__container.container
-			.main-section__items.row
+		._container.container
+			._items.row
 				+articleBlock({
 					img: 'images/article-1.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				}).main-section__article.col-4
+				})._article.col-4
 
 				+articleBlock({
 					img: 'images/article-2.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				}).main-section__article.col-4
+				})._article.col-4
 
 				+articleBlock({
 					img: 'images/article-3.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				}).main-section__article.col-4
+				})._article.col-4
 
-			.main-section__items.row
+			._items.row
 				+articleBlock({
 					img: 'images/article-4.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				}).main-section__article.col-4
+				})._article.col-4
 
 				+articleBlock({
 					img: 'images/article-5.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				}).main-section__article.col-4
+				})._article.col-4
 
 				+articleBlock({
 					img: 'images/article-6.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				}).main-section__article.col-4
+				})._article.col-4
 			
-			.main-section__items.row
+			._items.row
 				+articleBlock({
 					img: 'images/article-7.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				}).main-section__article.col-4
+				})._article.col-4
 
 				+articleBlock({
 					img: 'images/article-8.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				}).main-section__article.col-4
+				})._article.col-4
 
 
 			include  ../components/pagination/template
-			+pagination().main-section__pagination
+			+pagination()._pagination
 
 		include ../components/contact-section/template
 		+contactSectionSubscribeArticles()
