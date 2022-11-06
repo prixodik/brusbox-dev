@@ -1,0 +1,31 @@
+include ../breadcrumbs/template
+
+mixin headSection(data)
+	.head-section&attributes(attributes)
+		img(src=data.img, alt="")._img
+		._container.container
+			._info
+				+breadcrumbs({
+					items: data.bread
+				})._bread
+				h1._title
+					!=data.title
+				if data.subtitle
+					._subtitle
+						!=data.subtitle
+				if data.btn
+					._button
+						a(href="#").btn.-border.-white
+							!=data.btn
+
+mixin headSectionMode(data)
+	.head-section.--mode&attributes(attributes)
+		img(src=data.img, alt="")._img
+		+breadcrumbs({
+			items: data.bread
+		})._bread
+		._info
+			h1._title
+				!=data.title
+			._subtitle
+				!=data.subtitle

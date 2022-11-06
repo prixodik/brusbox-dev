@@ -7,16 +7,17 @@ block styles
 	
 block content
 	include ../components/action-block/template
-	include ../components/main-section/template
+	include ../components/head-section/template
 	include ../components/info-section/template
 	include ../components/text-section/template
 
-	+mainSectionMode({
-		bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Статьи'},{url: '#', title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'}],
-		title: "12 советов о том, как выбрать пластиковые окна,<br> сэкономить деньги и нервы",
-		date: "Пластиковые окна | Частный загородный дом",
-		img: "images/main-bg-article.jpg"
-	}).main-section--one-news.main-section--gap-bottom.main-section--article
+	.main-section.main-section--one-news.main-section--gap-bottom.main-section--article
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Статьи'},{url: '#', title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'}],
+			title: "12 советов о том, как выбрать пластиковые окна,<br> сэкономить деньги и нервы",
+			date: "Пластиковые окна | Частный загородный дом",
+			img: "images/main-bg-article.jpg"
+		})
 	
 		include ../components/article-creator-block/template
 		+articleCreatorBlock().main-section__creator-article

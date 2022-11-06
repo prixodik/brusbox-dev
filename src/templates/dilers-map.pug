@@ -5,19 +5,20 @@ append vars
 block styles
 	
 block content
-	include ../components/main-section/template
-	include ../components/question-block/template
+	include ../components/head-section/template
+	//-include ../components/question-block/template
 
-	+mainSectionBtn({
-		bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Дилеры списком'}],
-		title: "Офисы продаж пластиковых окон<br> в Нижнем Новгороде",
-		img: "images/main-bg-dilers-list.jpg",
-		btn: "Изменить город"
-	}).main-section--btn.main-section--dilers
-		.main-section__container.container
-			.main-section__links
-				a(href="").main-section__link.is-active на карте
-				a(href="").main-section__link списком
+	.dilers-page
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Дилеры списком'}],
+			title: "Офисы продаж пластиковых окон<br> в Нижнем Новгороде",
+			img: "images/main-bg-dilers-list.jpg",
+			btn: "Изменить город"
+		})._head
+		._container.container
+			._links
+				a(href="")._link.is-active на карте
+				a(href="")._link списком
 			
 			include ../components/map-section/template
 			+mapSection()

@@ -244,7 +244,7 @@
 		}
 	}
 
-	&--btn & {
+	/* &--btn & {
 		&__title {
 			max-width: 1920px;
 			text-align: center;
@@ -262,9 +262,9 @@
 		&__bread {
 			bottom: 256px;
 		}
-	}
+	} */
 
-	&--dilers & {
+	/* &--dilers & {
 		&__links {
 			@include flex(center, center, center);
 			padding: 44px 0;
@@ -317,5 +317,5 @@
 				}
 			}
 		}
-	}
+	} */
 }

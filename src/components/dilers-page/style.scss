@@ -1,0 +1,78 @@
+.dilers-page{
+	&__links {
+		@include flex(center, center, center);
+		padding: 44px 0;
+	}
+
+	&__row {
+		margin-bottom: 60px;
+	}
+
+	&__map {
+		&-accardion {
+			&:first-child {
+				border-top: 1px solid $gray;
+			}
+		}
+		&-accardions {
+			max-height: 560px;
+			overflow: auto;
+			&::-webkit-scrollbar {
+				width: 2px;
+			}
+
+			&::-webkit-scrollbar-track {
+				background-color: transparent;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: $black;
+				height: 287px;
+			}
+		}
+	}
+
+	&__link {
+		margin-right: 16px;
+		color: $bb-gray;
+		font-weight: 400;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&.is-active {
+			color: $black;
+			&:hover {
+				&:after {
+					display: none;
+				}
+			}
+		}
+		position: relative;
+
+		&:after {
+			position: absolute;
+			bottom: -1px;
+			left: 50%;
+			width: 0;
+			height: 1px;
+			content: "";
+			background-color: $bb-gray;
+			transition: all 0.3s;
+			transform: translateX(-50%);
+		}
+
+		&:hover {
+			&:after {
+				position: absolute;
+				bottom: -3px;
+				width: 100%;
+				height: 1px;
+				content: "";
+				transition: all 0.3s;
+				background-color: $bb-gray;
+			}
+		}
+	}
+}

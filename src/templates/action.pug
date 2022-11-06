@@ -7,16 +7,17 @@ block styles
 	
 block content
 	include ../components/action-block/template
-	include ../components/main-section/template
+	include ../components/head-section/template
 
-	+mainSection({
-		bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Акции'}],
-		title: "Акции",
-		img: "images/main-bg-action.jpg"
-	}).main-section--actions
-		.main-section__container.container
-			.main-section__actions.row
-				.main-section__action.col-3
+	.main-section.main-section--actions
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Акции'}],
+			title: "Акции",
+			img: "images/main-bg-action.jpg"
+		})._head
+		._container.container
+			._actions.row
+				._action.col-3
 					+actionBlock({
 						date: "1 марта — 30 июня",
 						img: "images/action-1.jpg",
@@ -24,7 +25,7 @@ block content
 						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
 					})
 
-				.main-section__action.col-3
+				._action.col-3
 					+actionBlock({
 						date: "1 марта — 30 июня",
 						img: "images/action-2.jpg",
@@ -32,7 +33,7 @@ block content
 						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
 					})
 
-				.main-section__action.col-3
+				._action.col-3
 					+actionBlock({
 						date: "1 марта — 30 июня",
 						img: "images/action-3.jpg",
@@ -40,7 +41,7 @@ block content
 						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
 					})
 
-				.main-section__action.col-3
+				._action.col-3
 					+actionBlock({
 						date: "1 марта — 30 июня",
 						img: "images/action-4.jpg",
@@ -48,7 +49,7 @@ block content
 						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
 					})
 
-				.main-section__action.col-3
+				._action.col-3
 					+actionBlock({
 						date: "1 марта — 30 июня",
 						img: "images/action-2.jpg",
@@ -56,7 +57,7 @@ block content
 						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
 					})
 
-				.main-section__action.col-3
+				._action.col-3
 					+actionBlock({
 						date: "1 марта — 30 июня",
 						img: "images/action-3.jpg",
@@ -64,7 +65,7 @@ block content
 						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
 					})
 
-				.main-section__action.col-3
+				._action.col-3
 					+actionBlock({
 						date: "1 марта — 30 июня",
 						img: "images/action-4.jpg",
@@ -72,7 +73,7 @@ block content
 						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
 					})
 
-				.main-section__action.col-3
+				._action.col-3
 					+actionBlock({
 						date: "1 марта — 30 июня",
 						img: "images/action-1.jpg",
@@ -80,7 +81,7 @@ block content
 						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
 					})
 
-				.main-section__action.col-3
+				._action.col-3
 					+actionBlock({
 						date: "1 марта — 30 июня",
 						img: "images/action-3.jpg",
@@ -88,7 +89,7 @@ block content
 						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
 					})
 
-				.main-section__action.col-3
+				._action.col-3
 					+actionBlock({
 						date: "1 марта — 30 июня",
 						img: "images/action-2.jpg",
