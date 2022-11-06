@@ -1,0 +1,18 @@
+mixin employeBlock(data)
+	.employe-block&attributes(attributes)
+		._img
+			img(src=data.img, alt="")
+		._info
+			._info-title
+				!=data.title
+			._info-suntitle
+				!=data.subtitle
+			._info-phone
+				+svg('diler-phone')._icon
+				!=data.phone
+			._info-mobile
+				+svg('mobile')._icon
+				!=data.mobile
+			._info-mail
+				+svg('diler-email')._icon
+				!=data.mail

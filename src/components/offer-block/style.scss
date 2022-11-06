@@ -1,0 +1,44 @@
+.offer-block {
+	min-height: 250px;
+
+	&__row {
+		@include flex(space-between, center, center, nowrap);
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	&__img {
+		max-width: 248px;
+		width: 100%;
+		margin-right: 10px;
+
+		img {
+			display: block;
+		}
+	}
+
+	&__about {
+		@include flex(space-between);
+		flex-direction: column;
+		min-height: 250px;
+	}
+
+	&__info {
+	}
+
+	&__title {
+		font: 300 36px/36px $baseFF;
+		margin-bottom: 4px;
+	}
+
+	&__subtitle {
+	}
+	&__button {
+	}
+
+	&--border-bottom & {
+		&__row {
+			border-bottom: 1px solid $gray;
+		}
+	}
+}

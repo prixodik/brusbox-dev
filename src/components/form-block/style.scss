@@ -126,6 +126,16 @@
 		@include flex(space-between);
 	}
 
+	&--contacts & {
+		&__subtitle {
+			font: 300 28px/30px $baseFF;
+			margin-bottom: 38px;
+		}
+		&__title {
+			font: 300 36px/36px $baseFF;
+		}
+	}
+
 	&--order & {
 		&__title {
 			@include media($xs) {

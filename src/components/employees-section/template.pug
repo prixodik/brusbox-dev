@@ -1,0 +1,16 @@
+include ../employe-block/template
+
+mixin employeesSection(data)
+	.employees-section&attributes(attributes)
+		._row
+			._title Наши сотрудники
+			._item
+				+employeBlock({
+					img: 'images/employe.png',
+					title: 'Озерова Наталья Александровна',
+					subtitle: 'Заместитель генерального директора по продажам',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})
+

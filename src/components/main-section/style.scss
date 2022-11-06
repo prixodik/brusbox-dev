@@ -99,6 +99,12 @@
 		padding-bottom: 112px;
 	}
 
+	&--contacts & {
+		&__map {
+			padding: 112px 0 60px;
+		}
+	}
+
 	&--color-solutions & {
 		&__left {
 			letter-spacing: 0.02em;
@@ -266,30 +272,6 @@
 
 		&__row {
 			margin-bottom: 60px;
-		}
-
-		&__map {
-			&-accardion {
-				&:first-child {
-					border-top: 1px solid $gray;
-				}
-			}
-			&-accardions {
-				max-height: 560px;
-				overflow: auto;
-				&::-webkit-scrollbar {
-					width: 2px;
-				}
-
-				&::-webkit-scrollbar-track {
-					background-color: transparent;
-				}
-
-				&::-webkit-scrollbar-thumb {
-					background-color: $black;
-					height: 287px;
-				}
-			}
 		}
 
 		&__link {
