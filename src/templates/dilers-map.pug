@@ -1,0 +1,50 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'dilers-list.html';
+	- var pageTitle = 'Дилеры на карте';
+block styles
+	
+block content
+	include ../components/main-section/template
+	include ../components/question-block/template
+
+	+mainSectionBtn({
+		bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Дилеры списком'}],
+		title: "Офисы продаж пластиковых окон<br> в Нижнем Новгороде",
+		img: "images/main-bg-dilers-list.jpg",
+		btn: "Изменить город"
+	}).main-section--btn.main-section--dilers
+		.main-section__container.container
+			.main-section__links
+				a(href="").main-section__link.is-active на карте
+				a(href="").main-section__link списком
+			
+			include ../components/accardion-block/template
+			.main-section__row.row
+				.main-section__map-accardions.col-4
+					+accardionBlockDilers({
+						title: 'Петровские окна'
+					}).main-section__map-accardion
+					+accardionBlockDilers({
+						title: 'Петровские окна'
+					}).main-section__map-accardion
+					+accardionBlockDilers({
+						title: 'Российские оконные и дверные системы'
+					}).main-section__map-accardion
+					+accardionBlockDilers({
+						title: 'Петровские окна'
+					}).main-section__map-accardion
+				.main-section__map-img.col-8
+					img(src="images/map.jpg", alt="")
+			
+
+		include ../components/info-section/template
+		+infoSection({
+			text: "<p>SEO TEXT::: Клиенты компании «Окна в дом» получают качественное остекление квартир, частных домов, коттеджей и офисных помещений по разумной цене. Безупречный сервис компании выражается в понимании потребностей каждого покупателя, профессиональной консультации квалифицированного персонала, грамотном подходе в выборе продукции, и точном расчете стоимости окон. Наша компания не экономит на материалах и работает только с надежными поставщиками. Применяет комплектующие производства мировых лидеров.</p> <p>Благодаря комплексному подходу наши оконные блоки служат дольше других. Контроль качества происходит на всех этапах — от замера окон до монтажа и принятия объекта. Поэтому мы даем гарантии на все предлагаемые конструкции и работы по их установке. На официальном сайте  «Окна в дом» работает удобная навигация, поэтому вы без труда найдете необходимую и полезную информацию, которая поможет сделать правильный выбор.</p>",
+			img: "images/question-6.jpg"
+		}).info-section--row-revers
+		
+
+	//- +gridLayout()
+
+block scripts 

@@ -15,16 +15,30 @@ mixin mainSection(data)
 mixin mainSectionMode(data)
 	.main-section.--mode&attributes(attributes)
 		._head
+			+breadcrumbs({
+				items: data.bread
+			})._bread
 			img(src=data.img, alt="")._head-img
+			._head-info
+				h1._title
+					!=data.title
+				._subtitle
+					!=data.subtitle
+
+		block
+
+mixin mainSectionBtn(data)
+	.main-section.--btn&attributes(attributes)
+		._head
+			img(src=data.img, alt="")._img
 			+breadcrumbs({
 				items: data.bread
 			})._bread
 			._head-info
-				._date
-					!=data.date
 				h1._title
 					!=data.title
-				._subtitle 
-					!=data.subtitle
+				._button
+					a(href="").btn.-border.-white
+						!=data.btn
 
 		block

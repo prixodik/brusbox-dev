@@ -1,0 +1,55 @@
+mixin accardionBlock(data)
+	.accardion-block&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._arrow
+					+svg('arrow-down')
+				._title
+					!= item.title
+			._body.js-accardion-body
+				!= item.text
+
+mixin accardionBlockLocation(data)
+	.accardion-block.-location&attributes(attributes)
+		each item in data
+			._head.js-accardion-toggle
+				._arrow
+					+svg('arrow-down')
+				._title
+					!= data.title
+			._body.js-accardion-body
+				._list
+					a(href="#")._list-title Показать на карте
+					._item
+						._item-title Телефон:
+						._item-text 
+							a(href="tel:+79852229799")
+								span +7(985) 222-97-99
+							span._decor-line |
+							a(href="tel:+79852229798")
+								span +7(985) 222-97-98
+					._item
+						._item-title Сайт:
+						a(href="http://vdomokna.ru")._item-text vdomokna.ru
+					._item
+						._item-title Email:
+						a(href="mailto:OVD@vdomokna.ru")._item-text OVD@vdomokna.ru
+
+mixin accardionBlockDilers(data)
+	.accardion-block.-dilers&attributes(attributes)
+		each item in data
+			._head.accardion-block__head--revers.js-accardion-toggle
+				._arrow
+					+svg('arrow-down')
+				._title
+					!= data.title
+			._body.accardion-block__body--bg.js-accardion-body
+				+accardionBlockLocation({
+					title: 'с. Сакмара, ул. Советская, д. 22'
+				})
+				+accardionBlockLocation({
+					title: 'ул. Первая, д. 10'
+				})
+				+accardionBlockLocation({
+					title: 'ул. Вторая, д. 43'
+				})

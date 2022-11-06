@@ -1,0 +1,15 @@
+
+mixin infoSection(data)
+	.info-section&attributes(attributes)
+		._container.container
+			._row 
+				._info
+					if data.title
+						h4._title
+							!=data.title
+					if data.text
+						._text
+							!=data.text
+				if data.img
+					._img
+						img(src=data.img, alt="")
