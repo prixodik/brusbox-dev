@@ -48,9 +48,8 @@
 //- 			._label Резиновые уплотнители
 //- 			._value «Semperit Gummiwerk Deggendorf GmbH»
 
-mixin infoSection(data)
+mixin paramBlock(data)
 	.param-block&attributes(attributes)
-	
 			each list in data.items
 				h5._title
 					!=list.title
@@ -60,3 +59,18 @@ mixin infoSection(data)
 					._value
 						!=list.value
 				
+
+mixin infoSection(data)
+	.info-section&attributes(attributes)
+		._container.container
+			._row 
+				._info
+					if data.title
+						h4._title
+							!=data.title
+					if data.text
+						._text
+							!=data.text
+				if data.img
+					._img
+						img(src=data.img, alt="")

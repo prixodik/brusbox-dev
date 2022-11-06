@@ -1,0 +1,131 @@
+.accardion-block {
+	* {
+		transition-duration: 0.2s;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	&__head {
+		@include flex(0, center, center, nowrap);
+		padding: 8px 3px;
+		cursor: pointer; /* border-bottom: 2px rgba($gray-devider,.6) solid;  */
+
+		/* &:first-child {
+			border-bottom: 2px rgba($gray-devider, 0.6) solid;
+		} */
+		&.is-active {
+			border-color: transparent;
+			.accardion-block__arrow {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	&__title {
+		color: $black;
+	}
+	&__arrow {
+		@include flex(center, center, center);
+		width: 18px;
+		height: 18px;
+		@include time();
+		flex: 0 0 auto;
+		margin-right: 11px;
+		svg {
+			font-size: 18px;
+			fill: $black;
+			display: block;
+		}
+
+		&:hover {
+			background: rgba($blue, 0.9);
+		}
+	}
+	&__body {
+		margin: 0;
+		max-height: 0;
+		opacity: 1;
+		pointer-events: none;
+		overflow: hidden; /* transition: all .7s linear;  padding: 0 15px; */
+		border-top: 2px rgba($gray-devider, 0.6) solid;
+		padding: 0 32px; /* height: auto; transition-delay: 0;   */
+		background: $bg-grey;
+
+		&:last-child {
+			border-top: 0;
+		}
+
+		&.is-active {
+			max-height: 20300px;
+			//margin-top: 20px;
+			opacity: 1;
+			pointer-events: auto; /*transition: all .7s linear;   height: 100%;  */
+			padding: 16px 32px;
+			border-bottom: 2px rgba($gray-devider, 0.6) solid;
+			border-top-color: transparent;
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	&--location & {
+		&__title {
+			font-weight: 400;
+		}
+
+		&__decor-line {
+			margin: 0 8px;
+		}
+
+		&__list {
+			&-title {
+				font-weight: 300;
+				margin-bottom: 4px;
+			}
+		}
+
+		&__item {
+			margin-bottom: 4px;
+			@include flex(0,center,center);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+			
+			&-tel {
+				margin-right: 8px;
+			}
+
+			&-title {
+				color: $gray-medium;
+				margin-right: 8px;
+			}
+
+			&-text {
+				color: $black;
+			}
+		}
+	}
+
+	&--dilers & {
+		&__body {
+			&--bg {
+				padding-left: 0;
+				padding-right: 0;
+				background-color: transparent;
+				&.is-active {
+					
+					padding: 4px 0;
+				}
+			}
+		}
+		&__head {
+			&--revers {
+				flex-direction: row-reverse;
+				justify-content: flex-end;
+				font-weight: 400;
+				.accardion-block__arrow {
+					margin-left: 9px;
+				}
+			}
+		}
+	}
+}
