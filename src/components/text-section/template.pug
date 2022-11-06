@@ -1,6 +1,37 @@
 mixin textSection(data)
 	.text-section&attributes(attributes)
-		h4._info-title
-			!=data.title
-		._text 
-			!=data.text
+		._container.container.container--text
+			if data.title
+				h4._info-title
+					!=data.title
+			if data.text
+				._text 
+					!=data.text
+			if data.btn 
+				._buttons 
+					a.btn.--border(href="#")
+						!= data.btn
+			block
+
+mixin textSectionTwoCol(data)
+	.text-section&attributes(attributes)
+		._container.container.container--text
+			._row.row 
+				._col.col-6.col-sm-12
+					if data.titleLeft
+						h4._info-title
+							!=data.titleLeft
+					if data.textLeft
+						._text 
+							!=data.textLeft
+				._col.col-6.col-sm-12
+					if data.titleRight
+						h4._info-title
+							!=data.titleRight
+					if data.textRight
+						._text 
+							!=data.textRight
+			if data.btn 
+				._buttons 
+					a.btn.--border(href="#")
+						!= data.btn

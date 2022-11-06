@@ -1,3 +1,13 @@
 .text-section {
 	padding: 100px 0;
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 50px;
+	}
+	&__list{
+		padding-left: 28px;
+	}
 }

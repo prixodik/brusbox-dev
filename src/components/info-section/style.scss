@@ -1,7 +1,15 @@
-.question-block {
+.info-section{
+	background-color: $gray-bridge;
+
+	&__container {
+		max-width: 1920px;
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	&__row {
 		@include flex(space-between, center, center, nowrap);
-		background-color: $gray-bridge;
 	}
 
 	&__info {
@@ -31,11 +39,9 @@
 		}
 	}
 
-	&--gray & {
-		&__row {
-			background-color: $medium-gray;
-			color: $white;
-		}
+	&--gray{
+		background-color: $medium-gray;
+		color: $white;
 	}
 
 	&--text-sm & {
