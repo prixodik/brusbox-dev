@@ -80,14 +80,14 @@
 		}
 	}
 
-	&__about {
+	/* &__about {
 		padding: 120px 0;
 
 		&-button {
 			margin-top: 49px;
 			@include flex(center, center);
 		}
-	}
+	} */
 
 	&--gap-bottom & {
 		&__head {
@@ -146,14 +146,14 @@
 		}
 	}
 	&--select-color & {
-		&__contact-section {
+		/* &__contact-section {
 			background-color: $bg-grey;
 			padding: 60px 0;
 
 			@include media($sm) {
 				padding: 40px 0;
 			}
-		}
+		} */
 	}
 
 	&--history & {
@@ -210,14 +210,14 @@
 		}
 	}
 
-	&--one-news & {
+	/* &--one-news & {
 		&__info {
 			margin-bottom: 112px;
 		}
 		&__text {
 			margin-bottom: 60px;
 		}
-	}
+	} */
 
 	&--article & {
 		&__head {
