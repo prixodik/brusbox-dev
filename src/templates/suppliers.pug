@@ -19,19 +19,22 @@ block content
 		
 	include ../components/param-block/template
 	.info-section
-		+ParamBlock7({
-			list: [
-				{title: "Поставщики основного сырья", label: "Мел", value: "ООО «ОМИА»"}, 
-				{label: "Диоксид титана", value: "ООО «ДюПон Наука и Технология»"}, 
-				{label: "Модификатор ударопрочности", value: "«Arkema France»"},
-				{label: "Стабилизатор", value: "«ELNOVA Handelsgesellschaft GmbH»"},
-				{label: "Древесина для паллет", value: "ООО «33 Дуба»"},
-				{label: "Пленка для ламинации оконного профиля", value: "ООО «Ренолит»"},
-				{label: "ПВХ", value: "ОАО «Саянскхимпласт»"}
-				],
-			img: "images/param-1.jpg"
-	})
-	
+		._containe.container.container--full
+			._row.row
+				._img.col-6.col-sm-12
+					+wepb('images/param-1.jpg')
+				._info.col-6.col-sm-12
+					+ParamBlock7({
+						list: [
+							{title: "Поставщики основного сырья", label: "Мел", value: "ООО «ОМИА»"}, 
+							{label: "Диоксид титана", value: "ООО «ДюПон Наука и Технология»"}, 
+							{label: "Модификатор ударопрочности", value: "«Arkema France»"},
+							{label: "Стабилизатор", value: "«ELNOVA Handelsgesellschaft GmbH»"},
+							{label: "Древесина для паллет", value: "ООО «33 Дуба»"},
+							{label: "Пленка для ламинации оконного профиля", value: "ООО «Ренолит»"},
+							{label: "ПВХ", value: "ОАО «Саянскхимпласт»"}
+						]
+					})
 	.info-section
 		+ParamBlock5({
 			list: [
