@@ -1,12 +1,35 @@
 .employe-block {
-	&__img {}
+	@include flex(0, center, center, nowrap);
+	max-width: 731px;
+
+	&__img {
+		margin-right: 60px;
+		max-width: 250px;
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
 	&__info {
-		&-title {}
-		&-suntitle {}
-		&-phone {}
-		&-mobile {}
-		&-mail {}
+		&-title {
+			font-weight: 400;
+			margin-bottom: 4px;
+		}
+	}
+	&__item {
+		@include flex(0,center,center,nowrap);
+		
+		margin-bottom: 8px;
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
-	&__icon {}
+	&__icon {
+		width: 24px;
+		height: 24px;
+		margin-right: 4px;
+	}
 }

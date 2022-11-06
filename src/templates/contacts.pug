@@ -5,21 +5,22 @@ append vars
 block styles
 	
 block content
-	include ../components/main-section/template
-	include ../components/question-block/template
 
-	+mainSection({
-		bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Контакты'}],
-		title: "Контакты",
-		img: "images/main-bg-contacts.jpg",
-	}).main-section.--dilers.--contacts
-		.main-section__container.container
-			
+	include ../components/head-section/template
+	.dilers-page.--contacts
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Контакты'}],
+			title: "Контакты",
+			img: "images/main-bg-contacts.jpg",
+		})._head
+		._container.container
+
 			include ../components/map-section/template
-			+mapSection().main-section__map
+			+mapSection()._map
 		
-		include ../components/employees-section/template
-		+employeesSection()
+		._container.container.container--sm
+			include ../components/employees-section/template
+			+employeesSection()
 
 	//- +gridLayout()
 

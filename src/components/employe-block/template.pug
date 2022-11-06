@@ -5,14 +5,14 @@ mixin employeBlock(data)
 		._info
 			._info-title
 				!=data.title
-			._info-suntitle
+			._item
 				!=data.subtitle
-			._info-phone
+			a(href="tel:+74952691719")._item
 				+svg('diler-phone')._icon
 				!=data.phone
-			._info-mobile
+			a(href="tel:+79057295250")._item
 				+svg('mobile')._icon
 				!=data.mobile
-			._info-mail
+			a(href="mailto:ozerova@brusbox.ru")._item
 				+svg('diler-email')._icon
 				!=data.mail

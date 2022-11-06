@@ -6,22 +6,23 @@ append vars
 block styles
 	
 block content
-	include ../components/main-section/template
-	+mainSection({
-		bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'История'}],
-		title: "Профиль BRUSBOX",
-		img: "images/main-bg-category.jpg"
-	}).main-section--color-solutions
-		.main-section__container.container
+	include ../components/head-section/template
+	.dilers-page
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'История'}],
+			title: "Профиль BRUSBOX",
+			img: "images/main-bg-category.jpg"
+		})._head
+		._container.container
 
 			include ../components/offer-section/template
 			+offerSection()
 
-		include ../components/question-block/template
-		+questionBlock({
+		include ../components/info-section/template
+		+infoSection({
 			img: 'images/category-img.jpg',
 			text: '<p>SEO TEXT::: Клиенты компании «Окна в дом» получают качественное остекление квартир, частных домов, коттеджей и офисных помещений по разумной цене. Безупречный сервис компании выражается в понимании потребностей каждого покупателя, профессиональной консультации квалифицированного персонала, грамотном подходе в выборе продукции, и точном расчете стоимости окон. Наша компания не экономит на материалах и работает только с надежными поставщиками. Применяет комплектующие производства мировых лидеров.</p> <p>Благодаря комплексному подходу наши оконные блоки служат дольше других. Контроль качества происходит на всех этапах — от замера окон до монтажа и принятия объекта. Поэтому мы даем гарантии на все предлагаемые конструкции и работы по их установке. На официальном сайте  «Окна в дом» работает удобная навигация, поэтому вы без труда найдете необходимую и полезную информацию, которая поможет сделать правильный выбор.</p>'
-		}).question-block--row-revers
+		}).info-section--row-revers
 
 		include ../components/contact-section/template
 		+contactSection()

@@ -2,15 +2,152 @@ include ../employe-block/template
 
 mixin employeesSection(data)
 	.employees-section&attributes(attributes)
-		._row
-			._title Наши сотрудники
-			._item
+		._items
+			h3._title Наши сотрудники
+			._row.row
 				+employeBlock({
-					img: 'images/employe.png',
+					img: 'images/employe-1.png',
 					title: 'Озерова Наталья Александровна',
 					subtitle: 'Заместитель генерального директора по продажам',
 					phone: '+7 (495) 269-17-19, доб. 114',
 					mobile: '+7 (905) 729-52-50',
 					mail: 'ozerova@brusbox.ru'
-				})
+				})._item.col-12
+		._items
+			h3._title Отдел продаж
+			._row.row
+				+employeBlock({
+					img: 'images/employe-2.png',
+					title: 'Варданян Саркис Андраникович',
+					subtitle: 'Менеджер по развитию',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
 
+				+employeBlock({
+					img: 'images/employe-3.png',
+					title: 'Лиховодов Виталий Александрович',
+					subtitle: 'Менеджер отдела продаж',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+
+				+employeBlock({
+					img: 'images/employe-4.png',
+					title: 'Кириллов Пётр Юрьевич',
+					subtitle: 'Менеджер отдела продаж',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+
+				+employeBlock({
+					img: 'images/employe-5.png',
+					title: 'Карамзин Сергей Юрьевич',
+					subtitle: 'Менеджер отдела продаж',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+
+				+employeBlock({
+					img: 'images/employe-6.png',
+					title: 'Короткий Сергей Владимирович',
+					subtitle: 'Менеджер отдела продаж',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+		._items
+			h3._title Отдел по работе с клиентами
+			._row.row
+				+employeBlock({
+					img: 'images/employe-7.png',
+					title: 'Оганджанян Жанна Валерьевна',
+					subtitle: 'Руководитель отдела по работе с клиентами',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+
+				+employeBlock({
+					img: 'images/employe-8.png',
+					title: 'Шувалова Виктория Николаевна',
+					subtitle: 'Менеджер отдела по работе с клиентами',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+
+				+employeBlock({
+					img: 'images/employe-default-avatar.png',
+					title: 'Бородина Александра Артуровна',
+					subtitle: 'Менеджер отдела по работе с клиентами',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+
+				+employeBlock({
+					img: 'images/employe-9.png',
+					title: 'Яковлева Евгения Васильевна',
+					subtitle: 'Менеджер отдела по работе с клиентами',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+
+		._items
+			h3._title Отдел технического<br> сопровождения и сервиса 
+			._row.row
+				+employeBlock({
+					img: 'images/employe-10.png',
+					title: 'Романенко Роман Юрьевич',
+					subtitle: 'Начальник Отдела технического<br> сопровождения и сервиса',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+
+				+employeBlock({
+					img: 'images/employe-default-avatar.png',
+					title: 'Карпов Сергей Владимирович',
+					subtitle: 'Инженер-конструктор',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+		
+		._items
+			h3._title Маркетинг и реклама
+			._row.row
+				+employeBlock({
+					img: 'images/employe-default-avatar.png',
+					title: 'Рожков Александр Николаевич',
+					subtitle: 'Руководитель отдела аналитики<br> и интернет-продвижения',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+
+				+employeBlock({
+					img: 'images/employe-11.png',
+					title: 'Мелконян Айк Артемович',
+					subtitle: 'Специалист отдела аналитики<br> и интернет-продвижения',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-6
+
+		._items.employees-section__items--border-top
+			._row.row
+				+employeBlock({
+					img: 'images/employe-default-avatar.png',
+					title: 'Волконская Ирина Алексеевна',
+					subtitle: 'Заместитель генерального директора по продажам',
+					phone: '+7 (495) 269-17-19, доб. 114',
+					mobile: '+7 (905) 729-52-50',
+					mail: 'ozerova@brusbox.ru'
+				})._item.col-12
