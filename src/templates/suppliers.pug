@@ -8,47 +8,64 @@ append vars
 block styles
 	
 block content
-	include ../components/main-section/template
-	+mainSection({
-		bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Поставщики'}],
-		title: "Поставщики",
-		img: "images/param-main-bg.jpg"
-	})
-		.main-section__container.container.container--text.main-section__text.main-section__header-text
-			p Текст о поставщиках и качестве комплектующих	
-		
+	include ../components/head-section/template
+	include ../components/text-section/template
 	include ../components/param-block/template
-	.info-section
-		+ParamBlock7({
-			list: [
-				{title: "Поставщики основного сырья", label: "Мел", value: "ООО «ОМИА»"}, 
-				{label: "Диоксид титана", value: "ООО «ДюПон Наука и Технология»"}, 
-				{label: "Модификатор ударопрочности", value: "«Arkema France»"},
-				{label: "Стабилизатор", value: "«ELNOVA Handelsgesellschaft GmbH»"},
-				{label: "Древесина для паллет", value: "ООО «33 Дуба»"},
-				{label: "Пленка для ламинации оконного профиля", value: "ООО «Ренолит»"},
-				{label: "ПВХ", value: "ОАО «Саянскхимпласт»"}
-				],
-			img: "images/param-1.jpg"
-	})
+
+	.suppliers-page
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Поставщики'}],
+			title: "Поставщики",
+			img: "images/param-main-bg.jpg"
+		})._head
+		+textSection({
+			text: '<p>Текст о поставщиках и качестве комплектующих</p>'
+		}).text-section--center
+
+	//- Это для примера, подробнее посмотри как сделано на других страницах. Все эти секции запихни в компонент info-section. Так же как там.
 	
 	.info-section
-		+ParamBlock5({
+		._containe.container.container--full
+			._row.row
+				._img.col-6.col-sm-12
+					img(src='images/param-1.jpg' alt='')
+				._info.col-6.col-sm-12
+					+paramBlock({
+						list: [
+							{title: "Поставщики основного сырья", label: "Мел", value: "ООО «ОМИА»"}, 
+							{label: "Диоксид титана", value: "ООО «ДюПон Наука и Технология»"}, 
+							{label: "Модификатор ударопрочности", value: "«Arkema France»"},
+							{label: "Стабилизатор", value: "«ELNOVA Handelsgesellschaft GmbH»"},
+							{label: "Древесина для паллет", value: "ООО «33 Дуба»"},
+							{label: "Пленка для ламинации оконного профиля", value: "ООО «Ренолит»"},
+							{label: "ПВХ", value: "ОАО «Саянскхимпласт»"}
+						]
+					})._params
+
+	.info-section.info-section--col-center
+		._title Поставщики основного оборудования
+		+paramBlock({
 			list: [
-				{title: "Поставщики основного оборудования", label: "Экструзионное оборудование", value: "«KraussMaffei Technologies GmbH»"}, 
+				{label: "Экструзионное оборудование", value: "«KraussMaffei Technologies GmbH»"}, 
 				{label: "Экструзионный инструмент", value: "«Greiner Extrusion GmbH»»"}, 
 				{label: "Холодильные устройства", value: "«Gessner Kalte-Klima-Service GmbH»"},
 				{label: "Дробильные установки", value: "«AMIS Maschinen-Vertriebs GmbH»"},
 				{label: "Станция смешения и подачи сырья", value: "«Zeppelin Reimelt GmbH»"}
 				]
-	})
-	.info-section
-		+ParamBlock({
-			list: [
-				{title: "Поставщики основных комплектующих для изготовления оконных блоков", label: "Резиновые уплотнители", value: "«Semperit Gummiwerk Deggendorf GmbH»"}, 
-				],
-			img: "images/param-2.jpg"
-	})
+		})._params
+
+	.info-section.info-section--row-revers
+		._containe.container.container--full
+			._row.row
+				._img.col-6.col-sm-12
+					img(src='images/param-2.jpg' alt='')
+				._info.col-6.col-sm-12
+					._title Поставщики основных комплектующих для изготовления оконных блоков
+					+paramBlock({
+						list: [
+							{ label: "Резиновые уплотнители", value: "«Semperit Gummiwerk Deggendorf GmbH»"}, 
+							]
+					})._params
 
 	//- +gridLayout()
 

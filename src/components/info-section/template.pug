@@ -1,65 +1,3 @@
-//- mixin infoSection7(data)
-//- 	.param-block&attributes(attributes)
-//- 		._item
-//- 			._label Мел
-//- 			._value ООО «ОМИА»
-//- 		._item
-//- 			._label Диоксид титана
-//- 			._value ООО «ДюПон Наука и Технология»
-//- 		._item
-//- 			._label Модификатор ударопрочности
-//- 			._value «Arkema France»
-//- 		._item
-//- 			._label Стабилизатор
-//- 			._value «ELNOVA Handelsgesellschaft GmbH»
-//- 		._item
-//- 			._label Древесина для паллет
-//- 			._value ООО «33 Дуба»
-//- 		._item
-//- 			._label Пленка для ламинации оконного профиля
-//- 			._value ООО «Ренолит»
-//- 		._item 
-//- 			._label ПВХ
-//- 			._value ОАО «Саянскхимпласт»
-
-//- mixin infoSection5(data)
-//- 	.param-block&attributes(attributes)
-//- 		._item
-//- 			._label Экструзионное оборудование
-//- 			._value «KraussMaffei Technologies GmbH»
-//- 		._item
-//- 			._label Экструзионный инструмент
-//- 			._value «Greiner Extrusion GmbH»
-//- 		._item
-//- 			._label Холодильные устройства
-//- 			._value «Gessner Kalte-Klima-Service GmbH»
-//- 		._item
-//- 			._label Дробильные установки
-//- 			._value «AMIS Maschinen-Vertriebs GmbH»
-//- 		._item
-//- 			._label Станция смешения и подачи сырья
-//- 			._value «Zeppelin Reimelt GmbH»			
-
-
-
-//- mixin infoSection(data)
-//- 	.param-block&attributes(attributes)
-//- 		._item
-//- 			._label Резиновые уплотнители
-//- 			._value «Semperit Gummiwerk Deggendorf GmbH»
-
-mixin infoSection(data)
-	.param-block&attributes(attributes)
-			each list in data.items
-				h5._title
-					!=list.title
-				._item
-					._label
-						!=list.label
-					._value
-						!=list.value
-				
-
 mixin infoSection(data)
 	.info-section&attributes(attributes)
 		._container.container
@@ -74,4 +12,3 @@ mixin infoSection(data)
 				if data.img
 					._img
 						img(src=data.img, alt="")
-

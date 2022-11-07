@@ -1,4 +1,4 @@
-.info-section{
+.info-section {
 	background-color: $gray-bridge;
 
 	&__container {
@@ -18,8 +18,7 @@
 		padding: 0 24px;
 	}
 
-	&__title {
-	}
+	&__title {}
 
 	&__text {
 		font: $fs-p1;
@@ -28,18 +27,20 @@
 	&__img {
 		max-width: 50%;
 		width: 100%;
+
 		// min-height: 600px;
 		img {
 			display: block;
 		}
 	}
+
 	&--row-revers & {
 		&__row {
 			flex-direction: row-reverse;
 		}
 	}
 
-	&--gray{
+	&--gray {
 		background-color: $medium-gray;
 		color: $white;
 	}
@@ -55,4 +56,28 @@
 			max-width: 633px;
 		}
 	}
+
+	&--title-height & {
+		&__title {
+			// padding-bottom: 0px;
+			// padding-top: 20px;
+		}
+
+		&__info {
+			max-width: 100%;
+			padding: 80px 112px 20px 112px;
+		}
+	}
+
+
+	// &__img img{
+	// 	width: 100%;
+	// }
+	&--item-content & {
+		&__row {
+			background-color: transparent;
+		}
+
+	}
+
 }
