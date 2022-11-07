@@ -45,6 +45,8 @@
 @import "../components/article-creator-block/style";
 @import "../components/sort-block/style";
 @import "../components/article-block/style";
+@import "../components/dilers-block/style";
+@import "../components/accardion-block/style";
 /*-----------------------------*/
 
 /* sections
@@ -58,6 +60,11 @@
 @import "../components/banner-section/style";
 @import "../components/history-section/style";
 @import "../components/advantages-section/style";
+@import "../components/info-section/style";
+/*-----------------------------*/
+
+/*! PAGES */
+@import "../components/dilers-page/style";
 /*-----------------------------*/
 
 //@import "partials/table";

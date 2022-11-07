@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 //- mixin infoSection7(data)
 //- 	.param-block&attributes(attributes)
 //- 		._item
@@ -61,4 +59,19 @@ mixin infoSection(data)
 					._value
 						!=list.value
 				
->>>>>>> Stashed changes
+
+mixin infoSection(data)
+	.info-section&attributes(attributes)
+		._container.container
+			._row 
+				._info
+					if data.title
+						h4._title
+							!=data.title
+					if data.text
+						._text
+							!=data.text
+				if data.img
+					._img
+						img(src=data.img, alt="")
+
