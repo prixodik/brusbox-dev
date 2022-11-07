@@ -143,6 +143,16 @@
 			}
 		}
 	}
+
+	&--subtitle & {
+		&__subtitle {
+			font: 300 18px/25px $baseFF;
+		}
+		&__agree {
+			margin-top: 25px;
+		}
+	}
+
 	&--quiz {
 		display: none;
 

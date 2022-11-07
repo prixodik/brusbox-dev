@@ -13,3 +13,19 @@ mixin infoSection(data)
 				if data.img
 					._img
 						img(src=data.img, alt="")
+
+include ../form-block/template
+
+mixin infoSectionForm(data)
+	.info-section.--form&attributes(attributes)
+		._container.container
+			._row 
+				._info
+					+formBlockContactsOrderSubtitle({
+						title: 'Закажите лучшие окна в BRUSBOX!',
+						subtitle: 'Оставьте заявку и наш специалист свяжется с вами для расчета',
+						agree: 'Нажимая кнопку «Отправить», я подтверждаю свою дееспособность, согласие на обработку персональных данных<br> в соответствии с указанным здесь текстом'
+					})
+				if data.img
+					._img
+						img(src=data.img, alt="")
