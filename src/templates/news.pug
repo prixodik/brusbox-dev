@@ -7,16 +7,17 @@ block styles
 	
 block content
 	include ../components/action-block/template
-	include ../components/main-section/template
+	include ../components/head-section/template
 
-	+mainSection({
-		bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Новости'}],
-		title: "Новости",
-		img: "images/main-bg-news.jpg"
-	}).main-section--actions.main-section--gap-bottom
-		.main-section__container.container
-			.main-section__items.row
-				.main-section__news.col-6
+	.main-section.main-section--actions.main-section--gap-bottom
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Новости'}],
+			title: "Новости",
+			img: "images/main-bg-news.jpg"
+		})._head
+		._container.container
+			._items.row
+				._news.col-6
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-1.jpg",
@@ -24,7 +25,7 @@ block content
 						text: "На днях наши московские коллеги прибыли в<br> яркую, аутентичную Махачкалу"
 					})
 
-				.main-section__news.col-3
+				._news.col-3
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-2.jpg",
@@ -32,7 +33,7 @@ block content
 						text: "Хорошая новость от «БРУСБОКС»! Линейка подоконников BRUSBOX пополнена..."
 					})
 
-				.main-section__news.col-3
+				._news.col-3
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-3.jpg",
@@ -40,8 +41,8 @@ block content
 						text: "В Тамбове полным ходом идут масштабные строительные работы — реализуется..."
 					})
 
-			.main-section__items.row
-				.main-section__news.col-3
+			._items.row
+				._news.col-3
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-4.jpg",
@@ -49,7 +50,7 @@ block content
 						text: "В последнюю неделю марта в Москве прошла крупнейшая международная строительная..."
 					})
 
-				.main-section__news.col-3
+				._news.col-3
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-5.jpg",
@@ -57,7 +58,7 @@ block content
 						text: "В последнюю неделю марта в Москве прошла крупнейшая международная строительная..."
 					})
 
-				.main-section__news.col-3
+				._news.col-3
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-6.jpg",
@@ -65,7 +66,7 @@ block content
 						text: "В последнюю неделю марта в Москве прошла крупнейшая международная строительная..."
 					})
 
-				.main-section__news.col-3
+				._news.col-3
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-7.jpg",

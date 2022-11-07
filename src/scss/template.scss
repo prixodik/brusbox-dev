@@ -36,7 +36,7 @@
 @import "../components/palette-block/style";
 @import "../components/form-block/style";
 @import "../components/options-block/style";
-@import "../components/question-block/style";
+//@import "../components/question-block/style";
 @import "../components/action-block/style";
 @import "../components/pagination/style";
 @import "../components/text-block/style";
@@ -45,21 +45,19 @@
 @import "../components/article-creator-block/style";
 @import "../components/sort-block/style";
 @import "../components/article-block/style";
-@import "../components/param-block/style";
 /*-----------------------------*/
 
 /* sections
 -----------------------------*/
+@import "../components/head-section/style";
 @import "../components/colors-section/style";
 @import "../components/contact-section/style";
 @import "../components/main-section/style";
-@import "../components/questions-section/style";
+//@import "../components/questions-section/style";
 @import "../components/text-section/style";
 @import "../components/banner-section/style";
 @import "../components/history-section/style";
 @import "../components/advantages-section/style";
-@import "../components/info-section/style";
-
 /*-----------------------------*/
 
 //@import "partials/table";

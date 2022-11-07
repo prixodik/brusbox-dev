@@ -153,8 +153,10 @@ a:hover {
 	}
 
 	&--sm {
-		max-width: 1240px;
 		margin: 0 auto;
+		max-width: 1490px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	&--full {

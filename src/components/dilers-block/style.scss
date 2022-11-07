@@ -1,0 +1,22 @@
+.dilers-block {
+	&__title {
+		@include flex(0,flex-start,flex-start);
+		font-weight: 550;
+	}
+
+	&__icon {
+		width: 24px;
+		height: 24px;
+		margin-right: 8px
+	}
+
+	&__item {
+		@include flex(0,center,center);
+		margin-bottom: 5px;
+	}
+
+	&__items {
+		max-width: 386px;
+		@include flex(space-between,center,center);
+	}
+}

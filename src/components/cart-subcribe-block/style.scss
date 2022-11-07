@@ -1,12 +1,20 @@
 .cart-subcribe-block {
-	@include flex(space-between,center,center,nowrap);
 	font: 400 14px/14px $baseFF;
-	padding: 65px 0 60px;
+
+	&__top {
+		//@include flex(space-between, center, center, nowrap);
+		padding: 60px 0;
+	}
+
+	&__bottom {
+		@include flex(space-between, center, center, nowrap);
+		padding: 0 0 60px;
+	}
 
 	&__link {
-		@include flex(0,center,center,nowrap);
+		@include flex(0, center, center, nowrap);
 	}
-	
+
 	&__icon {
 		width: 6px;
 		height: 6px;
@@ -14,11 +22,10 @@
 	}
 
 	&__subscribe {
-		@include flex(0,center,center,nowrap);
+		@include flex(0, center, center, nowrap);
 		color: $gray-medium;
 
-		&-title {
-		}
+		&-title {}
 	}
 
 	&__soc-list {
@@ -27,5 +34,18 @@
 
 	&--article {
 		padding: 32px 0 0;
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&--article & {
+		&__icon {
+			svg {
+				fill: red;
+			}
+		}
 	}
 }

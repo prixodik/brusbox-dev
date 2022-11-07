@@ -503,6 +503,13 @@ var uikit = {
     //$('.nice-select .list').mCustomScrollbar();
   },
 
+  accardion: function () {
+		$('.js-accardion-toggle').click(function () {
+			$(this).toggleClass('is-active').next().toggleClass('is-active');
+			return false;
+		});
+	},
+
   mainInit: function () {
     this.lazy();
     //this.validation();
@@ -515,6 +522,7 @@ var uikit = {
     this.searchBlock();
     this.stepsQuiz();
     this.niceSelect();
+    this.accardion();
   },
 };
 $(document).ready(function () {
