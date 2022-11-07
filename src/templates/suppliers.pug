@@ -30,9 +30,10 @@ block content
 				._img.col-6.col-sm-12
 					img(src='images/param-1.jpg' alt='')
 				._info.col-6.col-sm-12
+					._title.title-h5 Поставщики основного сырья
 					+paramBlock({
 						list: [
-							{title: "Поставщики основного сырья", label: "Мел", value: "ООО «ОМИА»"}, 
+							{label: "Мел", value: "ООО «ОМИА»"}, 
 							{label: "Диоксид титана", value: "ООО «ДюПон Наука и Технология»"}, 
 							{label: "Модификатор ударопрочности", value: "«Arkema France»"},
 							{label: "Стабилизатор", value: "«ELNOVA Handelsgesellschaft GmbH»"},
@@ -43,7 +44,7 @@ block content
 					})._params
 
 	.info-section.info-section--col-center
-		._title Поставщики основного оборудования
+		._title.title-h5 Поставщики основного оборудования
 		+paramBlock({
 			list: [
 				{label: "Экструзионное оборудование", value: "«KraussMaffei Technologies GmbH»"}, 
@@ -55,12 +56,12 @@ block content
 		})._params
 
 	.info-section.info-section--row-revers
-		._containe.container.container--full
+		._container.container.container--full
 			._row.row
 				._img.col-6.col-sm-12
 					img(src='images/param-2.jpg' alt='')
 				._info.col-6.col-sm-12
-					._title Поставщики основных комплектующих для изготовления оконных блоков
+					._title.title-h5 Поставщики основных комплектующих для изготовления оконных блоков
 					+paramBlock({
 						list: [
 							{ label: "Резиновые уплотнители", value: "«Semperit Gummiwerk Deggendorf GmbH»"}, 
@@ -70,4 +71,3 @@ block content
 	//- +gridLayout()
 
 block scripts
-			//- list: [{label: "Метка", value: "Значение"}],
