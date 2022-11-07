@@ -12,3 +12,50 @@ mixin infoSection(data)
 				if data.img
 					._img
 						img(src=data.img, alt="")
+
+mixin infoSectionImgParams(data)
+	.info-section&attributes(attributes)
+		._container.container.container--full
+			._row.row
+				._img.col-6.col-sm-12
+					img(src='images/param-1.jpg' alt='')
+				._info.col-6.col-sm-12
+					._title.title-h5 Поставщики основного сырья
+					+paramBlock({
+						list: [
+							{label: "Мел", value: "ООО «ОМИА»"}, 
+							{label: "Диоксид титана", value: "ООО «ДюПон Наука и Технология»"}, 
+							{label: "Модификатор ударопрочности", value: "«Arkema France»"},
+							{label: "Стабилизатор", value: "«ELNOVA Handelsgesellschaft GmbH»"},
+							{label: "Древесина для паллет", value: "ООО «33 Дуба»"},
+							{label: "Пленка для ламинации оконного профиля", value: "ООО «Ренолит»"},
+							{label: "ПВХ", value: "ОАО «Саянскхимпласт»"}
+						]
+					})._params
+
+mixin infoSectionParams(data)
+	.info-section.info-section--col-center.info-section--transparent&attributes(attributes)
+		._title.title-h5 Поставщики основного оборудования
+		+paramBlock({
+			list: [
+				{label: "Экструзионное оборудование", value: "«KraussMaffei Technologies GmbH»"}, 
+				{label: "Экструзионный инструмент", value: "«Greiner Extrusion GmbH»»"}, 
+				{label: "Холодильные устройства", value: "«Gessner Kalte-Klima-Service GmbH»"},
+				{label: "Дробильные установки", value: "«AMIS Maschinen-Vertriebs GmbH»"},
+				{label: "Станция смешения и подачи сырья", value: "«Zeppelin Reimelt GmbH»"}
+				]
+		})._params
+
+mixin infoSectionImgParam(data)
+	.info-section.info-section--row-revers&attributes(attributes)
+		._container.container.container--full
+			._row.row
+				._img.col-6.col-sm-12
+					img(src='images/param-2.jpg' alt='')
+				._info.col-6.col-sm-12
+					._title.title-h5 Поставщики основных комплектующих для изготовления оконных блоков
+					+paramBlock({
+						list: [
+							{ label: "Резиновые уплотнители", value: "«Semperit Gummiwerk Deggendorf GmbH»"}, 
+							]
+					})._params

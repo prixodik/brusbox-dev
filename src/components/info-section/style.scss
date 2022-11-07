@@ -72,17 +72,16 @@
 		}
 	}
 
+	&--transparent {
+		background-color: transparent;
+	}
 
 	// &__img img{
 	// 	width: 100%;
 	// }
-	&--item-content & {
-		&__row {
-			background-color: transparent;
-		}
-	}
+
 	&--col-center {
-			margin: 112px 524px;
+		margin: 112px 524px;
 	}
 
 }
