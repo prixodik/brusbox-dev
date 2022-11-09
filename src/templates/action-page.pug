@@ -1,0 +1,109 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'action-page.html';
+	- var pageTitle = 'Страница акции';
+	- var classBody = 'action-page';
+block styles
+	
+block content
+	include ../components/action-block/template
+	include ../components/head-section/template
+
+	.main-section.main-section--action
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Акция'}],
+			title: "Все поворотно-откидные створки<br> по цене обычных!",
+			img: "images/main-bg-action-page.jpg"
+		})._head
+		._container.container
+			include ../components/action-about-section/template
+			+actionAboutSection().main-section__action-about
+
+			._actions.row
+				._action.col-3
+					+actionBlock({
+						date: "1 марта — 30 июня",
+						img: "images/action-1.jpg",
+						title: "Все поворотно-откидные створки по цене обычных!",
+						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
+					})
+
+				._action.col-3
+					+actionBlock({
+						date: "1 марта — 30 июня",
+						img: "images/action-2.jpg",
+						title: "Окна без монтажа<br> по оптовым ценам!",
+						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
+					})
+
+				._action.col-3
+					+actionBlock({
+						date: "1 марта — 30 июня",
+						img: "images/action-3.jpg",
+						title: "Все поворотно-откидные створки по цене обычных!",
+						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
+					})
+
+				._action.col-3
+					+actionBlock({
+						date: "1 марта — 30 июня",
+						img: "images/action-4.jpg",
+						title: "Больше окон — больше выгода!",
+						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
+					})
+
+				._action.col-3
+					+actionBlock({
+						date: "1 марта — 30 июня",
+						img: "images/action-2.jpg",
+						title: "Окна без монтажа по оптовым ценам!",
+						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
+					})
+
+				._action.col-3
+					+actionBlock({
+						date: "1 марта — 30 июня",
+						img: "images/action-3.jpg",
+						title: "Все поворотно-откидные створки по цене обычных!",
+						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
+					})
+
+				._action.col-3
+					+actionBlock({
+						date: "1 марта — 30 июня",
+						img: "images/action-4.jpg",
+						title: "Больше окон — больше выгода!",
+						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
+					})
+
+				._action.col-3
+					+actionBlock({
+						date: "1 марта — 30 июня",
+						img: "images/action-1.jpg",
+						title: "Все поворотно-откидные створки по цене обычных!",
+						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
+					})
+
+				._action.col-3
+					+actionBlock({
+						date: "1 марта — 30 июня",
+						img: "images/action-3.jpg",
+						title: "Все поворотно-откидные створки по цене обычных!",
+						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
+					})
+
+				._action.col-3
+					+actionBlock({
+						date: "1 марта — 30 июня",
+						img: "images/action-2.jpg",
+						title: "Окна без монтажа по оптовым ценам!",
+						text: "При заказе остекления все поворотно-откидные створки по цене обычных"
+					})
+
+			include  ../components/pagination/template
+			+pagination()
+		
+
+	//- +gridLayout()
+
+block scripts 

@@ -1,0 +1,23 @@
+.action-about-section {
+	&__title {
+		margin-bottom: 40px;
+	}
+	&__items {
+		@include flex(0,center,center,0)
+	}
+	&__contacts {
+	}
+	&__img {
+	}
+	&__about {
+		max-width: 715px;
+		&-bottom {
+		}
+	}
+	&__text {
+	}
+	&__date {
+	}
+	&__button {
+	}
+}
