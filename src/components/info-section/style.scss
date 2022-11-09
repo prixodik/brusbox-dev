@@ -9,17 +9,19 @@
 	}
 
 	&__row {
-		@include flex(space-between, center, center, nowrap);
+		margin: 0;
+		@include flex(space-between, stretch, stretch, nowrap);
 	}
 
 	&__info {
-		max-width: 736px;
+		max-width: 784px;
 		margin: 0 auto;
-		padding: 0 24px;
+		padding: 110px 24px;
+		align-self: center;
 	}
 
 	&__title {
-		padding-bottom: 8px;
+		/* padding-bottom: 8px; */
 		margin-bottom: 40px;
 	}
 
@@ -30,10 +32,14 @@
 	&__img {
 		max-width: 50%;
 		width: 100%;
+		padding: 0;
 
 		// min-height: 600px;
 		img {
 			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 
@@ -81,7 +87,13 @@
 	// }
 
 	&--col-center {
-		margin: 112px 524px;
+		padding: 112px 0;
+	}
+
+	&--col-center & {
+		&__row {
+			justify-content: center;
+		}
 	}
 
 }

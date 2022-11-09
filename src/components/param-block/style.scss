@@ -1,17 +1,23 @@
 .param-block {
 	&__item {
 		display: flex;
-		border-bottom: 1px solid rgba(225, 225, 225, 1);
+		border-bottom: 1px solid #E1E1E1;
 		justify-content: space-between;
-		margin-bottom: 20px;
+		align-items: stretch;
+		margin-bottom: 12px;
 		max-width: 872px;
+
+		&:last-child{ margin-bottom: 0; border: 0; }
 	}
 
 	&__label,
 	&__value {
 		padding-bottom: 8px;
+		font: 300 18px/1.4 $baseFF;
 	}
 	&__value {
 		font-weight: 400;
+		flex: 1 1 auto;
+		text-align: right;
 	}
 }

@@ -23,11 +23,38 @@ block content
 		}).text-section--center
 
 	include ../components/info-section/template
-	+infoSectionImgParams()
+	+infoSectionImgParams({
+		img: "images/param-1.jpg",
+		title: "Поставщики основного сырья",
+		list: [
+			{label: "Мел", value: "ООО «ОМИА»"}, 
+			{label: "Диоксид титана", value: "ООО «ДюПон Наука и Технология»"}, 
+			{label: "Модификатор ударопрочности", value: "«Arkema France»"},
+			{label: "Стабилизатор", value: "«ELNOVA Handelsgesellschaft GmbH»"},
+			{label: "Древесина для паллет", value: "ООО «33 Дуба»"},
+			{label: "Пленка для ламинации оконного профиля", value: "ООО «Ренолит»"},
+			{label: "ПВХ", value: "ОАО «Саянскхимпласт»"}
+		]
+	})
 
-	+infoSectionParams()
+	+infoSectionParams({
+		title: "Поставщики основного оборудования",
+		list: [
+				{label: "Экструзионное оборудование", value: "«KraussMaffei Technologies GmbH»"}, 
+				{label: "Экструзионный инструмент", value: "«Greiner Extrusion GmbH»»"}, 
+				{label: "Холодильные устройства", value: "«Gessner Kalte-Klima-Service GmbH»"},
+				{label: "Дробильные установки", value: "«AMIS Maschinen-Vertriebs GmbH»"},
+				{label: "Станция смешения и подачи сырья", value: "«Zeppelin Reimelt GmbH»"}
+				]
+	})
 
-	+infoSectionImgParam()
+	+infoSectionImgParams({
+		img: "images/param-2.jpg",
+		title: "Поставщики основных комплектующих для изготовления оконных блоков",
+		list: [
+			{ label: "Резиновые уплотнители", value: "«Semperit Gummiwerk Deggendorf GmbH»"}, 
+		]
+	}).info-section--row-revers
 
 	//- +gridLayout()
 
