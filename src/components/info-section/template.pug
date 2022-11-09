@@ -1,4 +1,3 @@
-
 mixin infoSection(data)
 	.info-section&attributes(attributes)
 		._container.container
@@ -13,3 +12,27 @@ mixin infoSection(data)
 				if data.img
 					._img
 						img(src=data.img, alt="")
+
+mixin infoSectionImgParams(data)
+	.info-section&attributes(attributes)
+		._container.container.container--full
+			._row.row
+				._img.col-6.col-sm-12
+					img(src=data.img alt='')
+				._info.col-6.col-sm-12
+					._title.title-h5
+						!= data.title
+					+paramBlock({
+						list: data.list
+					})._params
+
+mixin infoSectionParams(data)
+	.info-section.info-section--col-center.info-section--transparent&attributes(attributes)
+		._container.container 
+			._row.row.row--center
+				._col.col-6.col-xs-12
+					._title.title-h5
+						!= data.title
+					+paramBlock({
+						list: data.list
+					})._params
