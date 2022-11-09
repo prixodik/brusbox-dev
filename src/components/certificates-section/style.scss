@@ -1,8 +1,8 @@
 .certificates-section {
-	margin-bottom: 112px;
+	padding: 112px 0px 60px 0px;
 	&__title {
 		text-align: center;
-		padding: 112px 0px 60px 0px;
+		margin-bottom: 60px
 	}
 	&__row {
 		justify-content: space-between;
@@ -12,5 +12,8 @@
 	&__row-center	{
 		justify-content: center;
 		margin: 0px 107px;
-	}
+	}	
+}
+.certificates-section:nth-child(odd){
+	background: #f1f1f1;
 }
