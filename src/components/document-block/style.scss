@@ -1,0 +1,31 @@
+.document-block{
+	&--center {
+		margin: 60px auto 0px;
+	}
+	&--mode {
+		&__row{
+		justify-content: center;
+		}
+	}
+	position: relative;
+
+	&__info {
+		@include flex(0, center, flex-start, 0, 0);
+		max-width: 456px;
+	}
+
+	&__text {
+		text-align: left;
+		max-width: 356px;
+		margin: 0px 0px 10px 8px;
+	}
+
+	&__img {
+		img {
+			display: block;
+			object-fit: cover;
+			width: 95px;
+		}
+	}
+
+}

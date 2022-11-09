@@ -1,0 +1,86 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'certificates.html';
+	- var pageTitle = 'Сертификаты и дипломы';
+block styles
+	
+block content
+	include ../components/document-block/template
+	include ../components/head-section/template
+
+	.main-section.main-section--actions
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Сертификаты и дипломы'},],
+			title: "Сертификаты и дипломы",
+			img: "images/main-bg-certificates.jpg"
+		})._head
+		._container.container
+			.certificates-section
+				.certificates-section__title
+					.title-h5 Сертификаты на профильные системы
+				._row.row
+					+documentBlock({
+						text: "Сертификат соответствия <br> № 04ИДЮ1.RU.C00001 <br> Срок действия: до 16.07.2023",
+						img: "images/certificates-icon-1.png"
+					}).col-4
+					+documentBlock({
+						text: "Пожарный сертификат <br> на профильные системы BRUSBOX <br> № АПБ.RU.OC002/3/H/01498 <br> Действителен с 12.03.21 по 11.03.26",
+						img: "images/certificates-icon-1.png"
+					}).col-4
+					+documentBlock({
+						text: "Санитарно-эпидемиологическое заключение № 1-250пр от 21.06.2022 г.",
+						img: "images/certificates-icon-1.png"
+					}).col-4
+			.certificates-section
+				.certificates-section__title
+					.title-h5 Сертификаты на подоконники
+				._row.row
+					+documentBlock({
+						text: "Сертификат соответствия <br> № РОСС RU.HB32.H03910/20 <br> Срок действия с 30.10.2020 по 29.10.2023",
+						img: "images/certificates-icon-1.png"
+					}).col-4
+					+documentBlock({
+						text: "Санитарно-эпидемиологическое <br> заключение <br> № 1-249пр от 21.06.2022 г.",
+						img: "images/certificates-icon-1.png"
+					}).col-4
+					+documentBlock({
+						text: "Пожарный сертификат соответствия <br> №RU C-RU.ПБ09.В.00164/20 <br> Срок действия с 22.10.2020 по 12.10.2025",
+						img: "images/certificates-icon-1.png"
+					}).col-4
+					+documentBlockCenter({
+						text: "Подоконники системы «BRUSBOX AERO» <br> Пожарный сертификат соответствия <br> №RU C-RU.ПБ09.В.00173/20 <br> Срок действия с 26.11.2020 по 25.11.2025",
+						img: "images/certificates-icon-1.png"
+					}).col-4
+			.certificates-section
+				.certificates-section__title
+					.title-h5 Результаты проведения специальной оценки условий труда в ООО «БРУСБОКС»
+				._row-center.row
+					+documentBlock({
+						text: "Перечень рекомендуемых мероприятий <br> по улучшению условий труда",
+						img: "images/certificates-icon-2.png"
+					}).col-4
+					+documentBlock({
+						text: "Сводная ведомость результатов прове- <br> дения специальной оценки условий труда",
+						img: "images/certificates-icon-2.png"
+					}).col-4
+			.certificates-section
+				.certificates-section__title
+					.title-h5 Дипломы
+				._row.row
+					+documentBlock({
+						text: "Сертификат за участие на выставке <br> строительных и отделочных материалов <br> MosBuild 2019",
+						img: "images/certificates-icon-1.png"
+					}).col-4
+					+documentBlock({
+						text: "Диплом за участие <br> в международной интерьерно- <br> строительной выставке BATIMAT 2015",
+						img: "images/certificates-icon-1.png"
+					}).col-4
+					+documentBlock({
+						text: "Рекомендательное письмо Департамента <br> градостроительной политики, развития <br> и реконструкции города Москвы",
+						img: "images/certificates-icon-1.png"
+					}).col-4
+
+				
+	//- +gridLayout()
+
+block scripts 

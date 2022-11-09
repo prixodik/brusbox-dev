@@ -1,0 +1,16 @@
+.certificates-section {
+	margin-bottom: 112px;
+	&__title {
+		text-align: center;
+		padding: 112px 0px 60px 0px;
+	}
+	&__row {
+		justify-content: space-between;
+		margin: 0px 107px;
+		align-items: center;
+	}
+	&__row-center	{
+		justify-content: center;
+		margin: 0px 107px;
+	}
+}
