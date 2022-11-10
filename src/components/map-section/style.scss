@@ -26,4 +26,14 @@
 			}
 		}
 	}
+	&--padding {
+		padding: 120px 0;
+	}
+	&--main-accardion & {
+		&__map {
+			&-accardions {
+				max-height: 270px;
+			}
+		}
+	}
 }

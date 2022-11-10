@@ -97,24 +97,24 @@ mixin dilersBlock4(data)
 
 mixin dilersBlockAction(data)
 	.dilers-block&attributes(attributes)
-		._item
+		a(href="#")._item
 			+svg('diler-location')._icon
 			span
 				!=data.location
-		._item
+		a(href="#")._item
 			+svg('website')._icon
 			span
 				!=data.website
-		._item
+		a(href="#")._item
 			+svg('diler-email')._icon
 			span
 				!=data.email
 		._items
-			._item
+			a(href="#")._item
 				+svg('diler-phone')._icon
 				span
 					!=data.tel1
-			._item
+			a(href="#")._item
 				+svg('diler-phone')._icon
 				span
 					!=data.tel2
