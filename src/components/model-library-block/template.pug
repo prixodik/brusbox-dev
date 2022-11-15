@@ -1,0 +1,9 @@
+mixin modelLibraryBlock(data)
+	.model-library-block&attributes(attributes)
+		._img
+			img(src=data.img, alt="")
+		._text
+			!=data.text
+			._link
+				a(href="#")
+					+svg("download")

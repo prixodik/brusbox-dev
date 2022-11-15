@@ -1,0 +1,39 @@
+// .model-library {
+// 	display: flex;
+// }
+
+.model-library-section {
+	max-width: 1800px;
+	padding: 120px 60px 0px 60px;
+
+	&--column {
+		.model-library-block:first-child {
+			margin-bottom: 60px;
+		}
+	}
+
+	&__row {
+		justify-content: space-between;
+	}
+}
+
+.model-library-section--btn {
+	padding-bottom: 112px;
+
+	&__buttons {
+		text-align: center;
+	}
+}
+
+.model-library-section--mode {
+	padding: 60px 60px 60px 60px;
+
+	&__row {
+		justify-content: space-between;
+	}
+
+	.model-library-block {
+		max-width: 560px;
+	}
+
+}

@@ -1,0 +1,15 @@
+include ../model-library-block/template
+
+mixin modelLibrarySection(data)
+	.model-library-section&attributes(attributes)
+		._container.container
+			._row.row
+				+modelLibraryBlock(data)
+				
+				
+
+mixin modelLibrarySectionColumn(data)
+	.model-library-section--column&attributes(attributes)
+		._container.container
+			._row.row
+				+modelLibraryBlock(data)
