@@ -13,10 +13,12 @@ block content
 	include ../components/banner-section/template
 
 	.main-section.main-section--buyers
-		+headSection({
-			bread: [{url: '#', title: 'О компании'},{url: '#', title: 'Покупателям'},{url: '#', title: 'История'}],
-			title: "История",
-			img: "images/main-bg-history.jpg"
+		+headSectionSlider({
+			title: "Качественные окна<br> на любой вкус",
+			img: "images/main-bg-buyers.jpg",
+			subtitle: 'Покупайте у дилера со сроком эксплуатации 60 лет',
+			title2: "Качественные окна<br> на любой вкус (вариант 2)",
+			img2: "images/main-bg-buyers.jpg"
 		})._head
 
 		+textSectionTitle({

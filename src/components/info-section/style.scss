@@ -10,7 +10,11 @@
 
 	&__row {
 		margin: 0;
-		@include flex(space-between, stretch, stretch, nowrap);
+		// @include flex(space-between, stretch, stretch, nowrap);
+		align-items: center;
+		@include media($sm) {
+			justify-content: center;
+		}
 	}
 
 	&__info {
@@ -33,6 +37,9 @@
 		max-width: 50%;
 		width: 100%;
 		padding: 0;
+		@include media($sm) {
+			max-width: 100%;
+		}
 
 		// min-height: 600px;
 		img {
