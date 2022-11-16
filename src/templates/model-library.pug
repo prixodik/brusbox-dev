@@ -8,72 +8,51 @@ block content
 	include ../components/head-section/template
 	include ../components/model-library-block/template
 
-	.main-section
+	.model-library-page
 		+headSection({
 			bread: [{url: '#', title: 'Архитекторам и дизайнерам'},{url: '#', title: 'Библиотека BIM-моделей'}],
 			title: "Библиотека BIM-моделей",
 			img: "images/main-bg-model-library.jpg"
 		})._head
 
-	include ../components/model-library-section/template
-	.model-library
-		//- ._row.row
-		//- 	+modelLibrarySection({
-		//- 		img: "images/model-library-1.png",
-		//- 		text: "Одностворчатое окно с разными схемами открывания и заполнения",
-		//- 	})
-		//- 	+modelLibrarySectionColumn({
-		//- 		img: "images/model-library-2.png",
-		//- 		text: "Одностворчатое окно с разными схемами открывания и заполнения",
-		//- 	})
-		//- 	+modelLibrarySectionColumn({
-		//- 		img: "images/model-library-3.png",
-		//- 		text: "Одностворчатое окно с разными схемами открывания и заполнения",
-		//- 	})
-		//- 	+modelLibrarySection({
-		//- 		img: "images/model-library-4.png",
-		//- 		text: "Одностворчатое окно с разными схемами открывания и заполнения",
-		//- 	})
-		.model-library-section
-			._container.container
-				._row.row
-					+modelLibraryBlock({
-						img: "images/model-library-1.png",
-						text: "Одностворчатое окно с разными схемами открывания и заполнения",
-					})
-					.model-library-section--column
+		._container.container
+			._section
+					._row.row
 						+modelLibraryBlock({
-						img: "images/model-library-2.png",
-						text: "Фрамужное (откидное) окно",
-						})
+							img: "images/model-library-1.png",
+							text: "Одностворчатое окно с разными схемами открывания и заполнения",
+						}).col-3
+						._items.col-3
+							+modelLibraryBlock({
+							img: "images/model-library-2.png",
+							text: "Фрамужное (откидное) окно",
+							})._item
+							+modelLibraryBlock({
+							img: "images/model-library-3.png",
+							text: "Двухстворчатое окно с разными схемами открывания и заполнения",
+							})._item
 						+modelLibraryBlock({
-						img: "images/model-library-3.png",
-						text: "Двухстворчатое окно с разными схемами открывания и заполнения",
-						})
-					+modelLibraryBlock({
-						img: "images/model-library-4.png",
-						text: "Т-образное окно с правой и левой поворотно-откидной створкой и с двумя откидными створками",
-					})
-					+modelLibraryBlock({
-						img: "images/model-library-5.png",
-						text: "Окно с разными схемами открывания <br> и глухой частью сверху",
-					})
-		.model-library-section--mode
-			._container.container
+							img: "images/model-library-4.png",
+							text: "Т-образное окно с правой и левой поворотно-откидной створкой и с двумя откидными створками",
+						}).col-3
+						+modelLibraryBlock({
+							img: "images/model-library-5.png",
+							text: "Окно с разными схемами открывания <br> и глухой частью сверху",
+						}).col-3
+			._section.--mode
 				._row.row
 					+modelLibraryBlock({
 						img: "images/model-library-6.png",
 						text: "Трехстворчатое окно с разными схемами открывания",
-					})
+					}).col-4
 					+modelLibraryBlock({
 						img: "images/model-library-7.png",
 						text: "Витраж с шестью стеклопакетами с поворотно-откидной створкой посерединеv",
-					})
+					}).col-4
 					+modelLibraryBlock({
 						img: "images/model-library-8.png",
 						text: "Балконный блок с одностворчатым окном справа <br> с разными схемами открывания",
-					})
-		.model-library-section--btn
+					}).col-4
 			._buttons
 				button.btn.-red.js-submit(type="submit") Скачать все
 
