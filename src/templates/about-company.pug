@@ -1,0 +1,32 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'about-company.html';
+	- var pageTitle = 'О компании';
+block styles
+	
+block content
+	include ../components/head-section/template
+	include ../components/text-section/template
+	include ../components/info-section/template
+
+	.about-company
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'История'}],
+			title: "О компании",
+			img: "images/main-bg-about-company.jpg",
+		})
+		._section
+			+textSection({
+				text: '<p>Компания «БРУСБОКС» основана в 2004 году. Сегодня это один из крупнейших производителей ПВХ-профиля и подоконной доски в России.<br> Среди отечественных производителей «БРУСБОКС» является компанией №1 по производству и объемам продаж.</p>',
+				btn: 'История компании'
+			})
+
+		+infoSection({
+					img: 'images/about-company-1.jpg',
+					title: 'Наша миссия',
+					text: '<p>Мы создаем высококачественный профиль для Ваших окон, гордясь тем, <br> что делаем Вашу жизнь светлее и комфортнее.<br> Мы работаем, чтобы развивалась наша страна и партнеры, повышалось <br> благополучие предприятия и сотрудников. <br> <br> «БРУСБОКС» — это МЫ!</p>'
+				}).info-section--gray.info-section--row-revers
+
+	//- +gridLayout()
+
+block scripts 
