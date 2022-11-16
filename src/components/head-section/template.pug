@@ -29,3 +29,36 @@ mixin headSectionMode(data)
 				!=data.title
 			._subtitle
 				!=data.subtitle
+
+mixin headSectionSlider(data)
+	.head-section.--slider&attributes(attributes)
+		._slider.js-slider-head
+			._slide
+				._img
+					img(src=data.img, alt="")
+				._container.container.container--text
+					._info
+						h1._title
+							!=data.title
+						if data.subtitle
+							._subtitle
+								!=data.subtitle
+						if data.btn2
+							._button
+								a(href="#").btn.-border.-white
+									!=data.btn
+
+			._slide
+				._img
+					img(src=data.img2, alt="")
+				._container.container.container--text
+					._info
+						h1._title
+							!=data.title2
+						if data.subtitle2
+							._subtitle
+								!=data.subtitle2
+						if data.btn2
+							._button
+								a(href="#").btn.-border.-white
+									!=data.btn2

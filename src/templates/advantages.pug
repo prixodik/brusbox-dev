@@ -1,0 +1,75 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'advantages.html';
+	- var pageTitle = 'Преимущества';
+block styles
+	
+block content
+	include  ../components/text-section/template
+	include  ../components/info-section/template
+	include ../components/head-section/template
+
+	.main-section.main-section--advantages
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Продукция'},{url: '#', title: 'Преимущества пластиковых окон BRUSBOX'}],
+			title: "Преимущества пластиковых окон BRUSBOX",
+			img: "images/main-bg-advantages.jpg"
+		})._head
+		._container.container
+
+			+textSection({
+				text: 'Текст о поставщиках и качестве комплектующих'
+			}).text-section--text-center
+
+		+infoSection({
+			img: 'images/advantage-img-1.jpg',
+			title: 'Долговечность',
+			text: 'Профиль BRUSBOX ежегодно проходит испытания в лаборатории контроля качества.<br> Ему не страшна коррозия, гниение, атмосферные осадки, жара, холод и перепады температуры от -50С до +50С. При правильном монтаже окна прослужат максимальный срок службы без каких-либо проблем и нареканий. А гарантия на сам профиль, основу окна, составляет 60 лет!'
+		}).info-section--row-revers
+
+		+textSectionTwoColBorder({
+			titleLeft: 'Экологичность',
+			textLeft: 'Оконные системы BRUSBOX производятся только из экологически чистых, безопасных и качественных материалов. Окна BRUSBOX успешно эксплуатируются не только в жилых и производственных помещениях, но и в учреждениях с самыми высокими требованиями к гигиене и санитарии: больницах, поликлиниках и т.п. Профиль BRUSBOX производится без добавок, содержащих соединения свинца.',
+			titleRight: 'Шумоизоляция',
+			textRight: 'Оконные системы BRUSBOX значительно улучшают звукоизоляцию помещения, снижают уровень проникновения уличного шума.'
+		})
+
+		+infoSection({
+			img: 'images/advantage-img-2.jpg',
+			title: 'Безопасность',
+			text: 'Окна и балконные двери из профилей BRUSBOX надежно защищают ваш дом или квартиру от непрошенных гостей.'
+		})
+
+		+textSectionTwoColBorder({
+			titleLeft: 'Теплоизоляция',
+			textLeft: 'Применение профилей BRUSBOX уменьшает потребности в тепловой энергии, что приводит к равномерному распределению температуры в помещении.',
+			titleRight: 'Морозостойкость',
+			textRight: 'Можно использовать в экстремальных климатических условиях, доказано испытаниями'
+		})
+
+		+infoSection({
+			img: 'images/advantage-img-3.jpg',
+			title: 'Эстетичность',
+			text: 'Множество форм и цветов. 4 цвета профиля и 96 цветов ламинации.'
+		})
+
+		+textSectionTwoColBorder({
+			titleLeft: 'Комплексность',
+			textLeft: 'Окно / балкон / подоконник / дополнительные комплектующие в едином стиле.',
+			titleRight: 'Оптимальность',
+			textRight: 'Широкая линейка профильных систем БРУСБОКС, позволяющая подобрать оптимальный вариант исходя из особенностей объекта, необходимой формы, типа открывания и стоимости.'
+		})
+
+		+infoSection({
+			img: 'images/advantage-img-4.jpg',
+			title: 'Практичность',
+			text: 'Можно устанавливать в любую погоду, в любой климатической зоне<br> Не требуют дополнительного ухода<br> Легко моются'
+		})
+		+infoSectionForm({
+			img: 'images/advantage-img-5.jpg'
+		}).info-section--row-revers
+		
+
+	+gridLayout()
+
+block scripts 

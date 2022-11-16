@@ -1,0 +1,60 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'dilers-list.html';
+	- var pageTitle = 'Дилеры на карте';
+block styles
+	
+block content
+	include ../components/head-section/template
+	include ../components/documentation-block/template
+
+	.documentation-page
+		+headSection({
+			bread: [{url: '#', title: 'Профессионалам'},{url: '#', title: 'Техническая документация'}],
+			title: "Техническая документация",
+			img: "images/main-bg-documentation.jpg"
+		})._head
+		._docs
+			._container.container
+				._row.row
+					+documentationBlock({
+						img: 'images/offer-img.png',
+						title: 'Оконные системы',
+						params: [{param: 'AERO', value: '(60 мм, 3 камеры, класс B)'},{param: 'SUPER AERO', value: '(70 мм, 5 камер, класс B)'},{param: 'ACLASS', value: '(60 мм, 3 камеры, класс A)'},{param: '70-6', value: '(70 мм, 6 камеры, класс A)'},{param: '60-4', value: '(60 мм, 4 камеры, класс B)'}]
+					}).col-6.col-sm-12.documentation-block--border-bottom
+
+					+documentationBlock({
+						img: 'images/doc-1.png',
+						title: 'Раздвижная система',
+						params: [{param: 'AERO', value: '(60 мм, 3 камеры, класс B)'},{param: 'SUPER AERO', value: '(70 мм, 5 камер, класс B)'},{param: 'ACLASS', value: '(60 мм, 3 камеры, класс A)'},{param: '70-6', value: '(70 мм, 6 камеры, класс A)'},{param: '60-4', value: '(60 мм, 4 камеры, класс B)'}]
+					}).col-6.col-sm-12.documentation-block--border-bottom
+
+					+documentationBlock({
+						img: 'images/doc-2.png',
+						title: 'Дверные системы',
+						params: [{param: 'Двери 60'},{param: 'Двери 70'}]
+					}).col-6.col-sm-12.documentation-block--border-bottom
+
+					+documentationBlock({
+						img: 'images/doc-3.png',
+						title: 'Дополнительные профили',
+						params: [{param: 'Системная глубина 60 мм'},{param: 'Системная глубина 70 мм'},{param: 'Универсальные 60/70 мм'}]
+					}).col-6.col-sm-12.documentation-block--border-bottom
+
+					+documentationBlock({
+						img: 'images/doc-4.png',
+						title: 'Штапики',
+						params: [{param: 'Штапики'}]
+					}).col-6.col-sm-12
+
+					+documentationBlock({
+						img: 'images/doc-5.png',
+						title: 'Подоконники',
+						params: [{param: 'Стандарт'},{param: 'AERO'}]
+					}).col-6.col-sm-12
+			
+		
+
+	//- +gridLayout()
+
+block scripts 

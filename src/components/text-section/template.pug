@@ -35,3 +35,27 @@ mixin textSectionTwoCol(data)
 				._buttons 
 					a.btn.--border(href="#")
 						!= data.btn
+
+mixin textSectionTwoColBorder(data)
+	.text-section.--border&attributes(attributes)
+		._container.container
+			._row.row 
+				._col.col-6.col-sm-12
+					if data.titleLeft
+						h4._info-title
+							!=data.titleLeft
+					if data.textLeft
+						._text 
+							!=data.textLeft
+				._col.col-6.col-sm-12
+					if data.titleRight
+						h4._info-title
+							!=data.titleRight
+					if data.textRight
+						._text 
+							!=data.textRight
+
+mixin textSectionTitle(data)
+	.text-section.--center.--title-gray&attributes(attributes)
+			h3._title
+				!=data.title

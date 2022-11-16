@@ -47,10 +47,13 @@
 @import "../components/article-block/style";
 @import "../components/dilers-block/style";
 @import "../components/accardion-block/style";
+@import "../components/offer-block/style";
+@import "../components/employe-block/style";
 @import "../components/param-block/style";
 @import "../components/document-block/style";
 @import "../components/error-block/style";
 @import "../components/model-library-block/style";
+@import "../components/documentation-block/style";
 /*-----------------------------*/
 
 /* sections
@@ -64,19 +67,27 @@
 @import "../components/banner-section/style";
 @import "../components/history-section/style";
 @import "../components/advantages-section/style";
+@import "../components/map-section/style";
+@import "../components/offer-section/style";
 @import "../components/info-section/style";
 @import "../components/certificates-section/style";
 @import "../components/privacy-section/style";
+@import "../components/employees-section/style";
+@import "../components/action-about-section/style";
+@import "../components/action-section/style";
+@import "../components/products-section/style";
+@import "../components/place-section/style";
 /*-----------------------------*/
 
 /*! PAGES */
 @import "../components/dilers-page/style";
 @import "../components/model-library-page/style";
 @import "../components/error-page/style";
+@import "../components/documentation-page/style";
 /*-----------------------------*/
 
 //@import "partials/table";
-//@import "partials/slick";
+@import "partials/slick";
 
 @import "partials/buttons";
 /* Элементы форм

@@ -13,3 +13,13 @@ mixin bannerSection(data)
 mixin bannerImg(data)
 	.banner-section.--img&attributes(attributes)
 		img(src=data.img, alt="")
+
+mixin bannerSectionImg(data)
+	.banner-section.--img-mode&attributes(attributes)
+		._img
+			img(src=data.img, alt="")
+		._info
+			h3._title
+				!=data.title
+			._text
+				!=data.text

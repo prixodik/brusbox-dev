@@ -20,24 +20,8 @@ block content
 				a(href="")._link.is-active на карте
 				a(href="")._link списком
 			
-			include ../components/accardion-block/template
-			._row.row
-				._map-accardions.col-4
-					+accardionBlockDilers({
-						title: 'Петровские окна'
-					})._map-accardion
-					+accardionBlockDilers({
-						title: 'Петровские окна'
-					})._map-accardion
-					+accardionBlockDilers({
-						title: 'Российские оконные и дверные системы'
-					})._map-accardion
-					+accardionBlockDilers({
-						title: 'Петровские окна'
-					})._map-accardion
-				._map-img.col-8
-					img(src="images/map.jpg", alt="")
-			
+			include ../components/map-section/template
+			+mapSection()
 
 		include ../components/info-section/template
 		+infoSection({

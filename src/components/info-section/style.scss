@@ -10,7 +10,11 @@
 
 	&__row {
 		margin: 0;
-		@include flex(space-between, stretch, stretch, nowrap);
+		// @include flex(space-between, stretch, stretch, nowrap);
+		align-items: center;
+		@include media($sm) {
+			justify-content: center;
+		}
 	}
 
 	&__info {
@@ -22,7 +26,7 @@
 
 	&__title {
 		/* padding-bottom: 8px; */
-		margin-bottom: 40px;
+		margin-bottom: 16px;
 	}
 
 	&__text {
@@ -33,6 +37,9 @@
 		max-width: 50%;
 		width: 100%;
 		padding: 0;
+		@include media($sm) {
+			max-width: 100%;
+		}
 
 		// min-height: 600px;
 		img {
@@ -93,6 +100,20 @@
 	&--col-center & {
 		&__row {
 			justify-content: center;
+		}
+	}
+
+	
+	&--big-title & {
+		&__title {
+			font: 300 56px/51px $baseFF;
+			margin-bottom: 40px;
+		}
+	}
+
+	&--btn & {
+		&__button {
+			margin-top: 40px;
 		}
 	}
 

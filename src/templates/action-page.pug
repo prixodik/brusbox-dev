@@ -1,0 +1,33 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'action-page.html';
+	- var pageTitle = 'Страница акции';
+	- var classBody = 'action-page';
+block styles
+	
+block content
+	include ../components/action-block/template
+	include ../components/head-section/template
+
+	.main-section.main-section--action
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Акция'}],
+			title: "Все поворотно-откидные створки<br> по цене обычных!",
+			img: "images/main-bg-action-page.jpg"
+		})._head
+		._container.container
+			include ../components/action-about-section/template
+			+actionAboutSection().main-section__action-about
+
+		include ../components/action-section/template
+		+actionSection({
+			title: 'Другие акции дилера'
+		})
+
+		include  ../components/map-section/template
+		+mapSectionContainer().map-section--padding.map-section--main-accardion
+		
+
+	//- +gridLayout()
+
+block scripts 

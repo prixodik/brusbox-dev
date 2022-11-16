@@ -75,4 +75,14 @@
 			}
 		}
 	}
+
+	&--contacts {
+		padding-bottom: 18px;
+	}
+
+	&--contacts & {
+		&__map {
+			padding: 112px 0 60px;
+		}
+	}
 }

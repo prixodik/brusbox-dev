@@ -7,10 +7,49 @@
 		justify-content: center;
 		margin-top: 50px;
 	}
-	&__list{
+	&__list {
 		padding-left: 28px;
 	}
+
+	&--text-center {
+		text-align: center;
+	}
+
+	&--border & {
+		&__row {
+			position: relative;
+			justify-content: space-between;
+
+			&::after {
+				content: "";
+				bottom: 0;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				position: absolute;
+				display: block;
+				height: 100%;
+				width: 1px;
+				background: $gray-200;
+			}
+		}
+		&__col {
+			max-width: 736px;
+		}
+	}
+
 	&--center{
 		text-align: center;
+	}
+
+	&--title-gray {
+		padding: 101px 0 49px;
+		color: $gray-medium;
+	}
+
+	&--title-gray & {
+		&__title {
+			margin-bottom: 0;
+		}
 	}
 }

@@ -1,0 +1,29 @@
+.employees-section {
+	padding-top: 60px;
+	
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__items {
+		margin-bottom: 38px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&--border-top {
+			padding-top: 60px;
+			border-top: 1px solid $gray;
+		}
+	}
+	&__row {
+		margin-left: 0;
+		margin-right: 0;
+		justify-content: space-between;
+	}
+	&__item {
+		padding-left: 0;
+		padding-right: 0;
+		margin-bottom: 42px;
+	}
+}
