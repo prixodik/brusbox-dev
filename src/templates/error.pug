@@ -1,0 +1,26 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'error.html';
+	- var pageTitle = 'Страница 404';
+
+block styles
+block content
+	.error-page
+		.error-block
+			._info
+				._title.title-h4 К сожалению, на сайте отсутствует страница, которую вы ищете
+				._text
+					p Что же делать?
+					p Вы можете выполнить одно из следующих действий:
+				._list
+					ul
+						li перейти на главную страницу <span>Покупателям</span>
+						li перейти на главную страницу <span>Профессионалам</span>
+						li перейти на главную страницу <span>Архитекторам / Дизайнерам</span>
+						li перейти в раздел <span>Контакты</span>
+		.error-block
+			._img
+				img(src="images/error.jpg", alt="")
+	//- +gridLayout()
+
+block scripts

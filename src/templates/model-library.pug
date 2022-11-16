@@ -1,0 +1,61 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'model-library.html';
+	- var pageTitle = 'Архитекторам и дизайнерам: библиотека BIM-моделей';
+block styles
+
+block content
+	include ../components/head-section/template
+	include ../components/model-library-block/template
+
+	.model-library-page
+		+headSection({
+			bread: [{url: '#', title: 'Архитекторам и дизайнерам'},{url: '#', title: 'Библиотека BIM-моделей'}],
+			title: "Библиотека BIM-моделей",
+			img: "images/main-bg-model-library.jpg"
+		})._head
+
+		._container.container
+			._section
+					._row.row
+						+modelLibraryBlock({
+							img: "images/model-library-1.png",
+							text: "Одностворчатое окно с разными схемами открывания и заполнения",
+						}).col-3
+						._items.col-3
+							+modelLibraryBlock({
+							img: "images/model-library-2.png",
+							text: "Фрамужное (откидное) окно",
+							})._item
+							+modelLibraryBlock({
+							img: "images/model-library-3.png",
+							text: "Двухстворчатое окно с разными схемами открывания и заполнения",
+							})._item
+						+modelLibraryBlock({
+							img: "images/model-library-4.png",
+							text: "Т-образное окно с правой и левой поворотно-откидной створкой и с двумя откидными створками",
+						}).col-3
+						+modelLibraryBlock({
+							img: "images/model-library-5.png",
+							text: "Окно с разными схемами открывания <br> и глухой частью сверху",
+						}).col-3
+			._section.--mode
+				._row.row
+					+modelLibraryBlock({
+						img: "images/model-library-6.png",
+						text: "Трехстворчатое окно с разными схемами открывания",
+					}).col-4
+					+modelLibraryBlock({
+						img: "images/model-library-7.png",
+						text: "Витраж с шестью стеклопакетами с поворотно-откидной створкой посерединеv",
+					}).col-4
+					+modelLibraryBlock({
+						img: "images/model-library-8.png",
+						text: "Балконный блок с одностворчатым окном справа <br> с разными схемами открывания",
+					}).col-4
+			._buttons
+				button.btn.-red.js-submit(type="submit") Скачать все
+
+	//- //- +gridLayout()
+
+block scripts 

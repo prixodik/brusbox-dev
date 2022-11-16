@@ -1,0 +1,44 @@
+.privacy-section {
+	padding: 0px 370px;
+
+	ul {
+		list-style: none;
+	}
+	& ol {
+		li {
+			margin-left: 0px;
+			margin: 0px;
+			padding: 0px;
+			-webkit-padding-start: 0;
+		}
+	}
+
+	li {
+		margin-left: 0px;
+		margin: 0px;
+		list-style-type: none;
+	}
+
+	&__main-title{
+		margin: 20px 0px;
+	}
+	&__title {
+		padding-top: 112px;
+	}
+
+	&__row {
+		width: 1180px;
+		// padding: 24px 0px;
+	}
+
+	p {
+		margin: 0px 0px;
+	}
+	&__list{
+		margin-right: 15px;
+	}
+	&__info{
+		padding-top: 24px;
+		padding-bottom: 120px;
+	}
+}

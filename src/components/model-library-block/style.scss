@@ -1,0 +1,9 @@
+.model-library-block {
+	position: relative;
+
+	&__text {
+		@include flex(space-between, center, flex-start, 0, 0);
+		margin-top: 16px;
+		max-width: 100%;
+	}
+}
