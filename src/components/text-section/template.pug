@@ -59,3 +59,13 @@ mixin textSectionTitle(data)
 	.text-section.--center.--title-gray&attributes(attributes)
 			h3._title
 				!=data.title
+
+mixin textSectionLong(data)
+	.text-section.--long&attributes(attributes)
+		._container.container.container--sm
+			if data.title
+				h4._info-title
+					!=data.title
+			if data.text
+				._text 
+					!=data.text

@@ -34,8 +34,7 @@ mixin headSectionSlider(data)
 	.head-section.--slider&attributes(attributes)
 		._slider.js-slider-head
 			._slide
-				._img
-					img(src=data.img, alt="")
+				img(src=data.img, alt="")._img
 				._container.container.container--text
 					._info
 						h1._title
@@ -49,8 +48,7 @@ mixin headSectionSlider(data)
 									!=data.btn
 
 			._slide
-				._img
-					img(src=data.img2, alt="")
+				img(src=data.img2, alt="")._img
 				._container.container.container--text
 					._info
 						h1._title
