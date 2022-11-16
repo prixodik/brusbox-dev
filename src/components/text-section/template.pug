@@ -54,3 +54,8 @@ mixin textSectionTwoColBorder(data)
 					if data.textRight
 						._text 
 							!=data.textRight
+
+mixin textSectionTitle(data)
+	.text-section.--center.--title-gray&attributes(attributes)
+			h3._title
+				!=data.title

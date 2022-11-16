@@ -52,3 +52,22 @@ mixin infoSectionParams(data)
 					+paramBlock({
 						list: data.list
 					})._params
+
+mixin infoSectionButton(data)
+	.info-section.-btn&attributes(attributes)
+		._container.container
+			._row.row
+				._info.col-6.col-sm-12
+					if data.title
+						h4._title
+							!=data.title
+					if data.text
+						._text
+							!=data.text
+					if data.btn
+						._button
+							a(href="#").btn.-border.-white 
+								!=data.btn
+				if data.img
+					._img.col-6.col-sm-12
+						img(src=data.img, alt="")

@@ -47,7 +47,7 @@
 	}
 
 	&__info {
-		margin: 112px 0 0;
+		margin: 112px 0 112px;
 
 		&-title {
 			margin-bottom: 16px;
@@ -242,7 +242,24 @@
 	}
 
 	&--advantages & {
+	}
 
+	&--buyers & {
+		&__button {
+			margin: 49px 0 101px;
+			text-align: center;
+		}
+		&__item {
+			&-title {
+				font-weight: 400;
+				margin-bottom: 3px;
+				span {
+					font-weight: 300;
+				}
+			}
+			&-text {
+			}
+		}
 	}
 
 	/* &--btn & {

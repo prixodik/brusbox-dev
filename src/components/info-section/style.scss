@@ -22,7 +22,7 @@
 
 	&__title {
 		/* padding-bottom: 8px; */
-		margin-bottom: 40px;
+		margin-bottom: 16px;
 	}
 
 	&__text {
@@ -93,6 +93,20 @@
 	&--col-center & {
 		&__row {
 			justify-content: center;
+		}
+	}
+
+	
+	&--big-title & {
+		&__title {
+			font: 300 56px/51px $baseFF;
+			margin-bottom: 40px;
+		}
+	}
+
+	&--btn & {
+		&__button {
+			margin-top: 40px;
 		}
 	}
 

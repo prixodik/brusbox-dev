@@ -1,0 +1,48 @@
+.products-section {
+	max-width: 1920px;
+	margin: 0 auto;
+	position: relative;
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+
+		img {
+			height: 100%;
+			display: block;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+	&__info {
+		padding: 180px 0 218px;
+	}
+	&__title {
+		color: $white;
+		margin-bottom: 54px;
+	}
+	&__params {
+		margin-bottom: 54px;
+	}
+	&__param {
+		margin-bottom: 0;
+		color: $white;
+		padding: 10px 0;
+		border-bottom: 1px solid $border-light;
+		
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	&__buttons {
+	}
+	&__button {
+		&:first-child {
+			margin-right: 40px;
+		}
+	}
+}

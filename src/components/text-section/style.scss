@@ -41,4 +41,15 @@
 	&--center{
 		text-align: center;
 	}
+
+	&--title-gray {
+		padding: 101px 0 49px;
+		color: $gray-medium;
+	}
+
+	&--title-gray & {
+		&__title {
+			margin-bottom: 0;
+		}
+	}
 }
