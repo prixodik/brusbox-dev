@@ -1,16 +1,13 @@
-// .model-library {
-// 	display: flex;
-// }
-
 .model-library-page {
 	padding-bottom: 112px;
+
 	&__section {
 		padding: 120px 0 0;
 
 		&--btn {
 			padding-bottom: 112px;
-		
-			
+
+
 		}
 
 		&--mode {
@@ -19,12 +16,14 @@
 	}
 
 	&__items {
-		@include flex(0,center,center,0,column);
+		@include flex(0, center, center, 0, column);
 	}
 
 	&__item {
-		&:first-child {
-			margin-bottom: 60px;
+		margin-bottom: 60px;
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 
@@ -32,11 +31,11 @@
 		text-align: center;
 	}
 
-	&--column {
-		
-	}
-
 	&__row {
 		justify-content: space-between;
 	}
+
+	&--column {}
+
+	
 }

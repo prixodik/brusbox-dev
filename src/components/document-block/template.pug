@@ -1,6 +1,5 @@
 mixin documentBlock(data)
 	.document-block&attributes(attributes)
-		._info
 			a(href="#")._img
 				img(src=data.img, alt="")
 			if data.text
@@ -9,7 +8,6 @@ mixin documentBlock(data)
 
 mixin documentBlockCenter(data)
 	.document-block.--center&attributes(attributes)
-		._info
 			a(href="#")._img
 				img(src=data.img, alt="")
 			if data.text
@@ -18,7 +16,6 @@ mixin documentBlockCenter(data)
 
 mixin documentBlockMode(data)
 	.document-block.--mode&attributes(attributes)
-		._info
 			a(href="#")._img
 				img(src=data.img, alt="")
 			if data.text
