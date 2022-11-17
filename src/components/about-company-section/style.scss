@@ -1,0 +1,9 @@
+.about-company-section {
+	&--gray{
+		background: #B9B9B9;
+		color: $white;
+		&__info {
+			@include flex(space-between)
+		}
+	}
+}

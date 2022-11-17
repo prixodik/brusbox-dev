@@ -28,7 +28,7 @@ mixin infoSectionForm(data)
 				if data.img
 					._img.col-6.col-sm-12
 						img(src=data.img, alt="")
-						
+
 mixin infoSectionImgParams(data)
 	.info-section&attributes(attributes)
 		._container.container.container--full
@@ -90,3 +90,30 @@ mixin infoSectionButtonRed(data)
 				if data.img
 					._img.col-6.col-sm-12
 						img(src=data.img, alt="")
+
+mixin infoSectionAboutCompany(data)
+	.info-section--about-company&attributes(attributes)
+		._container.container
+			._title
+				h5 Ознакомьтесь подробнее с компанией BRUSBOX
+			._items.row
+				._item.col-3
+					a(href="#")
+						._item-img
+							img(src="images/about-company-2.jpg", alt="")
+						._item-title История BRUSBOX
+				._item.col-3
+					a(href="#")
+						._item-img
+							img(src="images/about-company-3.jpg", alt="")
+						._item-title Поставщики
+				._item.col-3
+					a(href="#")
+						._item-img
+							img(src="images/about-company-4.jpg", alt="")
+						._item-title Дипломы и сертификаты
+				._item.col-3
+					a(href="#")
+						._item-img
+							img(src="images/about-company-5.jpg", alt="")
+						._item-title Реализованные объекты

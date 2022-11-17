@@ -7,6 +7,14 @@
 		justify-content: center;
 		margin-top: 50px;
 	}
+
+	&--center-btn & {
+		&__buttons {
+			margin-top: 24px;
+		}
+	}
+
+
 	&__list {
 		padding-left: 28px;
 	}
@@ -14,6 +22,8 @@
 	&--text-center {
 		text-align: center;
 	}
+
+
 
 	&--border & {
 		&__row {
@@ -33,12 +43,13 @@
 				background: $gray-200;
 			}
 		}
+
 		&__col {
 			max-width: 736px;
 		}
 	}
 
-	&--center{
+	&--center {
 		text-align: center;
 	}
 
@@ -55,5 +66,16 @@
 
 	&--long {
 		padding: 112px 0 60px;
+	}
+
+	&--long-2 {
+		padding: 112px 0px;
+	}
+
+	&--long-3 {
+		padding: 120px 0px
+	}
+	&--small {
+		padding: 40px 0px;
 	}
 }

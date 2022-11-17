@@ -12,6 +12,7 @@ $title-h5: 300 36px/36px $titleFF;
 // $title-h5: 600 14px/1.2 $titleFF;
 $title-h6: 600 12px/1.2 $baseFF;
 
+
 $title-h1-lg: 100 78px/85px $titleFF; // ?
 $title-h2-lg: 100 60px/60px $titleFF;
 $title-h3-lg: 600 16px/1.2 $baseFF;
@@ -116,7 +117,7 @@ h5,
 		font: $title-h5-xs;
 	}
 }
-
+h6,
 .title-h6 {
 	font: $title-h6;
 	//color: $title-color;
