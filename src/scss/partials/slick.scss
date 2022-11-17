@@ -106,33 +106,25 @@
 .slick-arrow {
 	z-index: 5;
 	border: 0;
-	width: 32px;
-	height: 80px;
+	width: 48px;
+	height: 48px;
 	@include flex(center, center, center);
 	flex: 0 0 auto;
 	background: none;
+
 	svg {
-		stroke: $green-dark;
-		font-size: 80px;
+		stroke: none;
+		width: 48px;
+		height: 48px;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 50%;
 		display: block;
 		@include time();
 	}
 
 	&:hover {
 		svg {
-			stroke: $gray2;
-		}
-	}
-
-	&--gray-2 {
-		svg {
-			stroke: $gray2;
-		}
-
-		&:hover {
-			svg {
-				stroke: $green-dark;
-			}
+			background: rgba(255, 255, 255, 0);
 		}
 	}
 
@@ -141,15 +133,6 @@
 			transform: rotate(-180deg);
 		}
 	}
-
-	/* &--md {
-		width: 52px;
-		height: 52px;
-		
-		svg {
-			font-size: 17px;
-		}
-	} */
 
 	@include media($md) {
 		width: 20px;

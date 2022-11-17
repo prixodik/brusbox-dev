@@ -1,0 +1,17 @@
+mixin documentationBlock(data)
+	.documentation-block&attributes(attributes)
+		._row
+			._img
+				img(src=data.img, alt="")
+			._info
+				h5._title
+					!=data.title
+				._params
+					each params in data.params
+						._param
+							span
+								!=params.param
+							span._param-value
+								!=params.value
+							a(href="#")._param-icon
+								+svg('download')

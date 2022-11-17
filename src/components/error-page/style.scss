@@ -1,0 +1,8 @@
+.error-page {
+	padding: 0px 215px;
+	@include flex(center, center, center, 0, 0);
+
+	p {
+		margin: 0px 0px 0px;
+	}
+}

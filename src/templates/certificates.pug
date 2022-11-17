@@ -1,0 +1,36 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'certificates.html';
+	- var pageTitle = 'Сертификаты и дипломы';
+block styles
+	
+block content
+	include ../components/document-block/template
+	include ../components/head-section/template
+	include ../components/certificates-section/template
+
+	.main-section.main-section
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Сертификаты и дипломы'},],
+			title: "Сертификаты и дипломы",
+			img: "images/main-bg-certificates.jpg"
+		})._head
+	+certificatesSectionProfile({
+		title: 'Сертификаты на профильные системы'
+	})
+	+certificatesSectionWindowsill({
+		title: 'Сертификаты на подоконники'
+	})
+
+	+certificatesSectionResults({
+		title: 'Результаты проведения специальной оценки условий труда в ООО «БРУСБОКС»'
+	})
+	
+	+certificatesSectionDimplomas({
+		title: 'Дипломы'
+	})
+
+				
+	//- +gridLayout()
+
+block scripts 
