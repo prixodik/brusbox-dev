@@ -142,4 +142,50 @@
 
 	}
 
+	&--slider & {
+		&__slide {
+			min-height: 600px;
+
+			&::after {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: block;
+				height: 177px;
+				background: $headGreadient;
+				z-index: 2;
+			}
+		}
+
+		&__info {
+			align-items: center;
+			position: absolute;
+			max-width: 736px;
+			margin: 250px 112px;
+			padding: 0px 0px;
+		}
+
+		&__text {
+			text-align: left;
+		}
+
+		&__img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			float: right;
+		}
+
+		&--right & {
+
+			.head-section__prev {
+				right: 780px;
+			}
+
+			.head-section__next {
+				right: 750px;
+			}
+		}
+	}
 }

@@ -117,3 +117,58 @@ mixin infoSectionAboutCompany(data)
 						._item-img
 							img(src="images/about-company-5.jpg", alt="")
 						._item-title Реализованные объекты
+
+mixin infoSectionSlider(data)
+	.info-section.--slider.--right&attributes(attributes)
+		._slider.js-slider-head
+			._slide
+				._container.container.container--text
+					._info
+						._text
+							!=data.text
+					img(src=data.img, alt="")._img
+					._button
+						a(href="#").btn.-border.-white
+							!=data.btn
+
+			._slide
+				._container.container.container--text
+					._info
+						._text
+							!=data.text2
+					img(src=data.img2, alt="")._img
+					._button
+						a(href="#").btn.-border.-white
+							!=data.btn2
+			
+			._slide
+				._container.container.container--text
+					._info
+						._text
+							!=data.text3
+					img(src=data.img3, alt="")._img
+					._button
+						a(href="#").btn.-border.-white
+							!=data.btn3
+			
+			._slide
+				._container.container.container--text
+					._info
+						._text
+							!=data.text4
+					img(src=data.img4, alt="")._img
+					._button
+						a(href="#").btn.-border.-white
+							!=data.btn4
+
+			._slide
+				._container.container.container--text
+					._info
+						._text
+							!=data.text5
+					img(src=data.img5, alt="")._img
+					._button
+						a(href="#").btn.-border.-white
+							!=data.btn5
+			
+	

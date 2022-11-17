@@ -72,6 +72,7 @@
 		&__slide {
 			min-height: 733px;
 			position: relative;
+
 			&::after {
 				position: absolute;
 				bottom: 0;
@@ -91,6 +92,7 @@
 			bottom: 0;
 			height: 0;
 		}
+
 		&__title {
 			text-align: left;
 		}
