@@ -1,0 +1,15 @@
+mixin productsSection(data)
+	.products-section&attributes(attributes)
+		._bg
+			img(src=data.img, alt="")
+		._container.container.container--text
+			._info
+				h3._title
+					!=data.title
+				._params
+					each params in data.params
+						h5._param
+							!=params.param
+				._buttons
+					a(href="#")._button.btn.btn--border.btn--white Подробнее о продукции
+					a(href="#")._button.btn Калькулятор

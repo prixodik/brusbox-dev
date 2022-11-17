@@ -1,0 +1,12 @@
+mixin placeSection(data)
+	.place-section&attributes(attributes)
+		._bg
+			img(src=data.img, alt="")
+		._info
+			._container.container--text
+				h3._title
+					!=data.title
+				._text
+					!=data.text
+				._button
+					a(href="#").btn.-border Где купить

@@ -1,6 +1,37 @@
+include ../accardion-block/template
+
 mixin mapSection(data)
 	.map-section&attributes(attributes)
+		._row.row
+			._map-accardions.col-4
+				+accardionBlockDilers({
+					title: 'Петровские окна'
+				}).map-section__map-accardion
+				+accardionBlockDilers({
+					title: 'Петровские окна'
+				}).map-section__map-accardion
+				+accardionBlockDilers({
+					title: 'Российские оконные и дверные системы'
+				}).map-section__map-accardion
+				+accardionBlockDilers({
+					title: 'Петровские окна'
+				}).map-section__map-accardion
+			.map-section__map-img.col-8
+				img(src="images/map.jpg", alt="")
+
+mixin mapSectionContainer(data)
+	.map-section&attributes(attributes)
 		._container.container
-			._left
-				
-			._right
+			._row.row
+				._map-accardions.col-4
+					+accardionBlockLocation({
+						title: 'с. Сакмара, ул. Советская, д. 22'
+					}).map-section__map-accardion
+					+accardionBlockLocation({
+						title: 'ул. Первая, д. 10'
+					}).map-section__map-accardion
+					+accardionBlockLocation({
+						title: 'ул. Вторая, д. 43'
+					}).map-section__map-accardion
+				.map-section__map-img.col-8
+					img(src="images/map.jpg", alt="")

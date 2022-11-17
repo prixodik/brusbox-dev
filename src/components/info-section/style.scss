@@ -10,7 +10,12 @@
 
 	&__row {
 		margin: 0;
-		@include flex(space-between, stretch, stretch, nowrap);
+		// @include flex(space-between, stretch, stretch, nowrap);
+		align-items: center;
+
+		@include media($sm) {
+			justify-content: center;
+		}
 	}
 
 	&__info {
@@ -22,7 +27,7 @@
 
 	&__title {
 		/* padding-bottom: 8px; */
-		margin-bottom: 40px;
+		margin-bottom: 16px;
 	}
 
 	&__text {
@@ -33,6 +38,10 @@
 		max-width: 50%;
 		width: 100%;
 		padding: 0;
+
+		@include media($sm) {
+			max-width: 100%;
+		}
 
 		// min-height: 600px;
 		img {
@@ -96,4 +105,90 @@
 		}
 	}
 
+
+	&--big-title & {
+		&__title {
+			font: 300 56px/51px $baseFF;
+			margin-bottom: 40px;
+		}
+	}
+
+	&--btn & {
+		&__button {
+			margin-top: 40px;
+		}
+	}
+
+	&--title-size & {
+		&__title {
+			font-size: 52px;
+			margin-bottom: 24px;
+		}
+	}
+
+	&--about-company {
+		padding: 120px 0px;
+
+		&__title {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		&__item {
+			&-img {
+				margin-bottom: 14px;
+			}
+		}
+
+	}
+
+	&--slider & {
+		&__slide {
+			min-height: 600px;
+
+			&::after {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: block;
+				height: 177px;
+				background: $headGreadient;
+				z-index: 2;
+			}
+		}
+
+		&__info {
+			align-items: center;
+			position: absolute;
+			max-width: 736px;
+			margin: 250px 112px;
+			padding: 0px 0px;
+		}
+
+		&__text {
+			text-align: left;
+		}
+
+		&__img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			float: right;
+		}
+
+		&__prev,
+		&__next {
+			position: absolute;
+			bottom: 35px;
+		}
+		&__prev {
+			right: 867px;
+		}
+
+		&__next {
+			right: 808px;
+		}
+
+	}
 }

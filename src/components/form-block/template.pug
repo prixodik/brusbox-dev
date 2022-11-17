@@ -1,6 +1,6 @@
 
 mixin formBlockContacts()
-	.form-block&attributes(attributes)
+	.form-block.--contacts&attributes(attributes)
 		h4._title Обратная связь
 		._subtitle Мы с радостью ответим на все ваши вопросы
 		form(action="")
@@ -66,6 +66,24 @@ mixin formBlockContactsOrder()
 					._input
 						input.form-control.js-required(type="tel" placeholder="Телeфон*" required)
 				._agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность,<br>согласие на обработку персональных данных в соответствии с указанным здесь текстом
+				._buttons
+					button.btn.-red.js-submit(type="submit") Отправить
+
+mixin formBlockContactsOrderSubtitle(data)
+	.form-block.--order.--subtitle&attributes(attributes)
+		h4._title
+			!=data.title
+		._subtitle
+			!=data.subtitle
+		form(action="")
+			._row
+				._inputs
+					._input
+						input.form-control.js-required(type="text" placeholder="Ваше имя*" required)
+					._input
+						input.form-control.js-required(type="tel" placeholder="Телeфон*" required)
+				._agree
+					!=data.agree
 				._buttons
 					button.btn.-red.js-submit(type="submit") Отправить
 

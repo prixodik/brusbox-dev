@@ -1,0 +1,27 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'contacts.html';
+	- var pageTitle = 'Дилерам: контакты';
+block styles
+	
+block content
+
+	include ../components/head-section/template
+	.dilers-page.--contacts
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Контакты'}],
+			title: "Контакты",
+			img: "images/main-bg-contacts.jpg",
+		})._head
+		._container.container
+
+			include ../components/map-section/template
+			+mapSection()._map
+		
+		._container.container.container--sm
+			include ../components/employees-section/template
+			+employeesSection()
+
+	//- +gridLayout()
+
+block scripts 

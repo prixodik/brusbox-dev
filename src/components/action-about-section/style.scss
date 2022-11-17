@@ -1,0 +1,32 @@
+.action-about-section {
+	padding: 60px 0 120px;
+	&__title {
+		margin-bottom: 40px;
+	}
+	&__items {
+		@include flex(space-between,0,center,0)
+	}
+	&__contacts {
+		@include flex(space-between,0,0,0,column);
+		&-text {
+
+		}
+	}
+	&__img {
+		margin-right: 20px;
+	}
+	&__about {
+		max-width: 715px;
+		margin-left: 20px;
+		@include flex(space-between,0,0,0,column);
+		&-bottom {
+		}
+	}
+	&__text {
+	}
+	&__date {
+		margin: 10px 0 16px;
+	}
+	&__button {
+	}
+}

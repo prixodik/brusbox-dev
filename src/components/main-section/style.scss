@@ -4,7 +4,7 @@
 
 	&__head {
 		position: relative;
-
+	
 		&-img {
 			display: block;
 			margin: 0 auto;
@@ -14,17 +14,7 @@
 			width: 100%;
 		}
 
-		&::after {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			content: "";
-			display: block;
-			height: 177px;
-			background: $headGreadient;
-			z-index: 1;
-		}
+		
 	}
 
 	&__bread {
@@ -47,7 +37,7 @@
 	}
 
 	&__info {
-		margin: 112px 0 0;
+		margin: 112px 0 112px;
 
 		&-title {
 			margin-bottom: 16px;
@@ -241,6 +231,27 @@
 		}
 	}
 
+	&--advantages & {
+	}
+
+	&--buyers & {
+		&__button {
+			margin: 49px 0 101px;
+			text-align: center;
+		}
+		&__item {
+			&-title {
+				font-weight: 400;
+				margin-bottom: 3px;
+				span {
+					font-weight: 300;
+				}
+			}
+			&-text {
+			}
+		}
+	}
+
 	/* &--btn & {
 		&__title {
 			max-width: 1920px;
@@ -269,30 +280,6 @@
 
 		&__row {
 			margin-bottom: 60px;
-		}
-
-		&__map {
-			&-accardion {
-				&:first-child {
-					border-top: 1px solid $gray;
-				}
-			}
-			&-accardions {
-				max-height: 560px;
-				overflow: auto;
-				&::-webkit-scrollbar {
-					width: 2px;
-				}
-
-				&::-webkit-scrollbar-track {
-					background-color: transparent;
-				}
-
-				&::-webkit-scrollbar-thumb {
-					background-color: $black;
-					height: 287px;
-				}
-			}
 		}
 
 		&__link {
