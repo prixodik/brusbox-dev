@@ -73,12 +73,12 @@ mixin infoSectionButton(data)
 						img(src=data.img, alt="")
 
 mixin infoSectionButtonRed(data)
-	.info-section.-btn&attributes(attributes)
+	.info-section.-btn.-title-margin&attributes(attributes)
 		._container.container
 			._row.row
 				._info.col-6.col-sm-12
 					if data.title
-						h4._title
+						h2._title
 							!=data.title
 					if data.text
 						._text
@@ -90,3 +90,34 @@ mixin infoSectionButtonRed(data)
 				if data.img
 					._img.col-6.col-sm-12
 						img(src=data.img, alt="")
+
+mixin infoSectionSlider(data)
+	.info-section.-btn.-slider.-title-margin&attributes(attributes)
+		._container.container
+			._row.row
+				._info.col-6.col-sm-12
+					if data.title
+						h2._title
+							!=data.title
+					if data.text
+						._text
+							!=data.text
+					if data.btn
+						._button
+							a(href="#").btn.-border.-red 
+								!=data.btn
+				._slides.col-6.col-sm-12
+					._slider.swiper.mySwiper
+						._slider-wrap.swiper-wrapper
+							._slide.swiper-slide
+								img(src="images/swiper-product-1.png", alt="")
+							._slide.swiper-slide
+								img(src="images/swiper-product-2.png", alt="")
+							._slide.swiper-slide
+								img(src="images/swiper-product-2.png", alt="")
+							._slide.swiper-slide
+								img(src="images/swiper-product-1.png", alt="")
+						.swiper-button-prev
+							+svg('slider-arrow-right')
+						.swiper-button-next
+							+svg('slider-arrow-right')
