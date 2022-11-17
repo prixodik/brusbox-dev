@@ -177,15 +177,18 @@
 			float: right;
 		}
 
-		&--right & {
-
-			.head-section__prev {
-				right: 780px;
-			}
-
-			.head-section__next {
-				right: 750px;
-			}
+		&__prev,
+		&__next {
+			position: absolute;
+			bottom: 35px;
 		}
+		&__prev {
+			right: 867px;
+		}
+
+		&__next {
+			right: 808px;
+		}
+
 	}
 }
