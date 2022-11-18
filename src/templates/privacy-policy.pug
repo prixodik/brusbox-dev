@@ -5,8 +5,7 @@ append vars
 block styles
 	
 block content
-	include ../components/head-section/template
-	include ../components/privacy-section/template	
+	include ../components/head-section/template	
 
 	.main-section.privacy-policy-section
 		+headSection({
@@ -14,11 +13,11 @@ block content
 			title: "Политика конфиденциальности",
 			img: "images/main-bg-privacy-policy.jpg"
 		})._head
-		.privacy-section
+		.privacy-page
 			._container.container
 				._title
 					p Политика общества с ограниченной ответственностью «НАЗВАНИЕ КОМПАНИИ» <br> в отношении обработки персональных данных и сведения о реализуемых требованиях к защите персональных данных
-	.privacy-section
+	.privacy-page
 		._container.container
 			._info
 				._row

@@ -1,16 +1,19 @@
 .error-block {
-	&:first-child{
+	&:first-child {
 		padding-right: 60px;
-	}	
+	}
+
 	&__info {
 		max-width: 561px;
 	}
 
 	&__list {
 		padding-left: 28px;
-		span{
+
+		span {
 			font-weight: 400;
 		}
+
 		li {
 			margin-bottom: 12px;
 		}
@@ -23,8 +26,9 @@
 	&__text {
 		margin-bottom: 16px;
 	}
-	&__img{
-		img{
+
+	&__img {
+		img {
 			max-width: 100%;
 		}
 	}
