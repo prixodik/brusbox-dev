@@ -7248,7 +7248,7 @@ var uikit = {
 
     this.copyMaterial();
 
-    //this.fancybox();
+    this.fancybox();
 
     this.popups();
 

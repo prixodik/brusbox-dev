@@ -1,9 +1,9 @@
 .privacy-page {
-	padding: 0px 370px;
 
-	&__main-title{
+	&__main-title {
 		margin: 20px 0px;
 	}
+
 	&__title {
 		padding-top: 112px;
 	}
@@ -13,18 +13,24 @@
 		// padding: 24px 0px;
 	}
 
-	&__list{
+	&__list {
 		margin-right: 15px;
 	}
-	&__info{
+
+	&__info {
 		padding-top: 24px;
 		padding-bottom: 120px;
 	}
 
 	ul {
-		list-style: none;
+		li{
+			margin-left: 20px;
+		}
 	}
-	& ol {
+
+	ol {
+		list-style: none;
+
 		li {
 			margin-left: 0px;
 			margin: 0px;
@@ -36,11 +42,10 @@
 	li {
 		margin-left: 0px;
 		margin: 0px;
-		list-style-type: none;
 	}
 
 	p {
 		margin: 0px 0px;
 	}
-	
+
 }

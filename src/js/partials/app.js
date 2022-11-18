@@ -612,7 +612,7 @@ var uikit = {
     this.lazy();
     //this.validation();
     this.copyMaterial();
-    //this.fancybox();
+    this.fancybox();
     this.popups();
     this.chengeColorPalette();
     this.mobile();

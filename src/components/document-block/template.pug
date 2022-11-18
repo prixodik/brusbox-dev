@@ -1,22 +1,14 @@
 mixin documentBlock(data)
 	.document-block&attributes(attributes)
-			a(href="#")._img
-				img(src=data.img, alt="")
-			if data.text
-				._text
-					!=data.text
-
-mixin documentBlockCenter(data)
-	.document-block.--center&attributes(attributes)
-			a(href="#")._img
-				img(src=data.img, alt="")
-			if data.text
-				._text
-					!=data.text
+		a(href=data.link)._img.js-fancybox
+			img(src=data.img, alt="")
+		if data.text
+			._text
+				!=data.text
 
 mixin documentBlockMode(data)
 	.document-block.--mode&attributes(attributes)
-			a(href="#")._img
+			a(href=data.link)._img.js-fancybox
 				img(src=data.img, alt="")
 			if data.text
 				._text

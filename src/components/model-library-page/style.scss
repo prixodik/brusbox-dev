@@ -26,6 +26,7 @@
 			margin-bottom: 0;
 		}
 	}
+	
 
 	&__buttons {
 		text-align: center;
@@ -33,9 +34,9 @@
 
 	&__row {
 		justify-content: space-between;
+		margin-bottom: -60px;
+	}
+	&__item {
 	}
 
-	&--column {}
-
-	
 }
