@@ -1,0 +1,31 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'objects.html';
+	- var pageTitle = 'Объекты';
+	- var classBody = 'objects';
+block styles
+	
+block content
+	include ../components/action-block/template
+	include ../components/head-section/template
+
+	.objects-page
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Объекты'}],
+			title: "Объекты",
+			img: "images/objects-head-bg.jpg"
+		})._head
+		._container.container.container--text
+			._selects
+				
+
+			include  ../components/pagination/template
+			+pagination()
+
+		include ../components/contact-section/template
+		+contactSectionSubscribe()
+		
+
+	+gridLayout()
+
+block scripts 
