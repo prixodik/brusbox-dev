@@ -1,0 +1,109 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'products.html';
+	- var pageTitle = 'Продукция';
+block styles
+	
+block content
+	include ../components/head-section/template
+	include ../components/info-section/template
+	include ../components/documentation-block/template
+
+	.dilers-page.dilers-page--dilers-products
+		+headSection({
+			bread: [{url: '#', title: 'Профессионалам'},{url: '#', title: 'Продукция'}],
+			title: "Продукция",
+			img: "images/main-bg-dilers-products.jpg"
+		})._head
+		._about
+			+infoSectionButton({
+				img: 'images/info-section-product.png',
+				title: 'Профиль BRUSBOX',
+				text: 'Мы готовы предложить вам семь типов профилей, каждый<br> из которых обладает уникальными свойствами!<br> Профили BRUSBOX обладают бескомпромиссным качеством<br> и превосходными показателями',
+				btn: 'Подробнее о профиле'
+			}).dilers-page__info.info-section--bg-black.info-section--big-title
+
+			._container.container.container--text
+				+documentationBlockTwoImg({
+					img1: 'images/offer-img.png',
+					img2: 'images/offer-img.png',
+					title: 'BRUSBOX ACLASS',
+					subtitle: 'Новая система BRUSBOX ACLASS оптимальна для изготовления оконных конструкций всех основных типов и форм.',
+					btn: 'Подробнее о BRUSBOX ACLASS'
+				})
+
+				+documentationBlockTwoImg({
+					img1: 'images/offer-img.png',
+					img2: 'images/offer-img.png',
+					title: 'BRUSBOX ACLASS',
+					subtitle: 'Новая система BRUSBOX ACLASS оптимальна для изготовления оконных конструкций всех основных типов и форм.',
+					btn: 'Подробнее о BRUSBOX ACLASS'
+				})
+
+				+documentationBlockTwoImg({
+					img1: 'images/offer-img.png',
+					img2: 'images/offer-img.png',
+					title: 'BRUSBOX ACLASS',
+					subtitle: 'Новая система BRUSBOX ACLASS оптимальна для изготовления оконных конструкций всех основных типов и форм.',
+					btn: 'Подробнее о BRUSBOX ACLASS'
+				})
+
+				+documentationBlockTwoImg({
+					img1: 'images/offer-img.png',
+					img2: 'images/offer-img.png',
+					title: 'BRUSBOX ACLASS',
+					subtitle: 'Новая система BRUSBOX ACLASS оптимальна для изготовления оконных конструкций всех основных типов и форм.',
+					btn: 'Подробнее о BRUSBOX ACLASS'
+				})
+
+				+documentationBlockTwoImg({
+					img1: 'images/offer-img.png',
+					img2: 'images/offer-img.png',
+					title: 'BRUSBOX ACLASS',
+					subtitle: 'Новая система BRUSBOX ACLASS оптимальна для изготовления оконных конструкций всех основных типов и форм.',
+					btn: 'Подробнее о BRUSBOX ACLASS'
+				})
+
+				+documentationBlockTwoImg({
+					img1: 'images/offer-img.png',
+					img2: 'images/offer-img.png',
+					title: 'BRUSBOX ACLASS',
+					subtitle: 'Новая система BRUSBOX ACLASS оптимальна для изготовления оконных конструкций всех основных типов и форм.',
+					btn: 'Подробнее о BRUSBOX ACLASS'
+				})
+
+		._container.container.container--text
+			+infoSectionButtonRed({
+				img:'images/info-section-diler-product.png',
+				title: 'Подоконники',
+				text: 'На сегодняшний день компания «БРУСБОКС» является одним<br> из крупнейших поставщиков ПВХ-подоконников на российском<br> рынке. Объемы производства превышают миллион квадратных<br> метров в год.',
+				btn: 'Подробнее о подоконниках'
+			}).info-section--transparent.info-section--padding-big
+		
+		._about.dilers-page__about--white
+			._container.container.container--text
+				+documentationBlockTwoImg({
+					img1: 'images/offer-img.png',
+					img2: 'images/offer-img.png',
+					title: 'BRUSBOX ACLASS',
+					subtitle: 'Новая система BRUSBOX ACLASS оптимальна для изготовления оконных конструкций всех основных типов и форм.',
+					btn: 'Подробнее о BRUSBOX ACLASS'
+				}).documentation-block--white.documentation-block--border-top
+
+				+documentationBlockTwoImg({
+					img1: 'images/offer-img.png',
+					img2: 'images/offer-img.png',
+					title: 'BRUSBOX ACLASS',
+					subtitle: 'Новая система BRUSBOX ACLASS оптимальна для изготовления оконных конструкций всех основных типов и форм.',
+					btn: 'Подробнее о BRUSBOX ACLASS'
+				}).documentation-block--white.documentation-block--border-top
+		
+		+infoSectionSlider({
+			title: 'Цветовые решения',
+			text: 'Важно соответствовать современным тенденциям и главное —<br> потребностям клиентов. Поэтому мы в BRUSBOX разработали<br> широкую линейку ламинационных материалов, способных<br> удовлетворить любые потребности!',
+			btn: 'Цветовые решения'
+		})
+
+	//- +gridLayout()
+
+block scripts

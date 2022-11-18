@@ -85,4 +85,22 @@
 			padding: 112px 0 60px;
 		}
 	}
+
+	&--dilers-products {
+		
+	}
+
+	&--dilers-products & {
+		&__about {
+			background: $black;
+			padding-bottom: 112px;
+
+			&--white {
+				background: transparent;
+			}
+		}
+		&__info {
+			margin-bottom: 60px;
+		}
+	}
 }
