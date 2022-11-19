@@ -48,4 +48,40 @@
 			border-bottom: 1px solid $white;
 		}
 	}
+
+	&--white & {
+		&__info {
+			color: $black;
+		}
+	}
+
+	&--two-img & {
+		&__row {
+			padding: 30px 0;
+			border-bottom: 1px solid $bb-gray;
+		}
+		&__imgs {
+			max-width: 500px;
+			width: 100%;
+			@include flex();
+			flex-wrap: nowrap;
+			margin-right: 60px;
+
+			img {
+				display: block;
+			}
+		}
+		&__info {
+			min-height: 250px;
+			@include flex(space-between,0,0,0,column);
+		}
+	}
+
+	&--border-top & {
+		&__row {
+			border-top: 1px solid $bb-gray;
+			border-bottom: none;
+		}
+	}
+
 }

@@ -314,9 +314,9 @@ var uikit = {
     $("[data-tab]").click(function (e) {
       e.preventDefault();
       let tab =
-        typeof $(this).attr("href") != "undefined"
-          ? $(this).attr("href")
-          : $(this).attr("data-tab");
+        typeof $(this).attr("href") != "undefined" ?
+        $(this).attr("href") :
+        $(this).attr("data-tab");
       if (typeof $(this).attr("data-parent") != "undefined") {
         $('[href="' + tab + '"], [data-tab="' + tab + '"]')
           .closest($(this).attr("data-parent"))
@@ -347,9 +347,9 @@ var uikit = {
         //e.preventDefault();
       }
       var href =
-        $(this).attr("href") != undefined
-          ? $(this).attr("href")
-          : "#" + $(this).val();
+        $(this).attr("href") != undefined ?
+        $(this).attr("href") :
+        "#" + $(this).val();
       var nav_id = $(this).data("navid");
       $(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass(
         "is-active"
@@ -455,8 +455,7 @@ var uikit = {
   scrollTo: function () {
     $(".js-scroll-to").click(function () {
       var href = $(this).attr("href");
-      $("html, body").animate(
-        {
+      $("html, body").animate({
           scrollTop: $(href).offset().top,
         },
         400
@@ -466,55 +465,66 @@ var uikit = {
   },
 
   sliders: function () {
-		var ww = this.ww();
-		var wh = this.wh();
-		var lg = this.lg;
-		var md = this.md;
-		var sm = this.sm;
-		var xs = this.xs;
-		var xxs = this.xxs;
+    var ww = this.ww();
+    var wh = this.wh();
+    var lg = this.lg;
+    var md = this.md;
+    var sm = this.sm;
+    var xs = this.xs;
+    var xxs = this.xxs;
 
-		if ($('.js-slider-head').length) {
-			$('.js-slider-head').each(function () {
-				var $this = $(this);
+    var swiper = new Swiper(".mySwiper", {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      initialSlide: 2,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 60,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
 
-				$this.slick({
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					centerMode: false,
-					variableWidth: false,
-					arrows: true,
-					dots: false,
-					infinite: true,
-					adaptiveHeight: true,
-					autoplay: false,
-					autoplaySpeed: 2000,
-					lazyLoad: 'progressive',
-					prevArrow: '<a href="#" class="head-section__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
-					nextArrow: '<a href="#" class="head-section__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
-					responsive: [
-						{
-							breakpoint: xs,
-							settings: {
-								arrows: false,
-								dots: true,
-								slidesToShow: 1,
-								slidesToScroll: 1
-							}
-						}
-					]
-				});
+    if ($('.js-slider-head').length) {
+      $('.js-slider-head').each(function () {
+        var $this = $(this);
 
-			});
+        $this.slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
+          arrows: true,
+          dots: false,
+          infinite: true,
+          adaptiveHeight: true,
+          autoplay: false,
+          autoplaySpeed: 2000,
+          lazyLoad: 'progressive',
+          prevArrow: '<a href="#" class="head-section__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+          nextArrow: '<a href="#" class="head-section__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+          responsive: [{
+            breakpoint: xs,
+            settings: {
+              arrows: false,
+              dots: true,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }]
+        });
 
-			$('.js-team-slider-prev').click(function () {
-				$('.js-team-slider').slick('slickPrev');
-				return false;
-			});
-			$('.js-team-slider-next').click(function () {
-				$('.js-team-slider').slick('slickNext');
-				return false;
-			});
+      });
 
 		}
     if ($('.js-slider-info').length) {
@@ -560,8 +570,18 @@ var uikit = {
 			});
 
 		}
+      $('.js-team-slider-prev').click(function () {
+        $('.js-team-slider').slick('slickPrev');
+        return false;
+      });
+      $('.js-team-slider-next').click(function () {
+        $('.js-team-slider').slick('slickNext');
+        return false;
+      });
 
-	},
+    }
+
+  },
 
   searchBlock: function () {
     $(".js-search-toggle").click(function () {
@@ -602,11 +622,11 @@ var uikit = {
   },
 
   accardion: function () {
-		$('.js-accardion-toggle').click(function () {
-			$(this).toggleClass('is-active').next().toggleClass('is-active');
-			return false;
-		});
-	},
+    $('.js-accardion-toggle').click(function () {
+      $(this).toggleClass('is-active').next().toggleClass('is-active');
+      return false;
+    });
+  },
 
   mainInit: function () {
     this.lazy();
