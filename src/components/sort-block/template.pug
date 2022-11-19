@@ -6,10 +6,10 @@ mixin sortBlock(data)
 			<option class="option">Все включено</option>
 		</select>
 
-mixin sortBlock(data)
-	.sort-block&attributes(attributes)
-		<select class="nice-select" name="" data-js-placeholder="Выбрать">
-			<option class="option">Базовый</option>
-			<option class="option">Без питания</option>
-			<option class="option">Все включено</option>
-		</select>
+mixin sortBlockMode(data)
+	.sort-block.--mode&attributes(attributes)
+		select._select.nice-select.js-select-options
+			option._option.sort-block__option--placeholder.option(data-display=data.display)
+			each option in data.options
+				option._option.option
+					!=option.item

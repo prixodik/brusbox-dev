@@ -51,6 +51,7 @@
 @import "../components/employe-block/style";
 @import "../components/param-block/style";
 @import "../components/documentation-block/style";
+@import "../components/object-block/style";
 /*-----------------------------*/
 
 /* sections
@@ -72,6 +73,7 @@
 @import "../components/action-section/style";
 @import "../components/products-section/style";
 @import "../components/place-section/style";
+@import "../components/selects-section/style";
 /*-----------------------------*/
 
 /*! PAGES */
@@ -98,7 +100,7 @@
 
 /* Модальные окна
 -----------------------------*/
-//@import "../../bower_components/fancybox/dist/jquery.fancybox.css";
+@import "../../bower_components/fancybox/dist/jquery.fancybox.css";
 
 /* Шапка сайта
 -----------------------------*/
