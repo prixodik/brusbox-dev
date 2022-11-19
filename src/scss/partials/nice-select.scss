@@ -189,7 +189,7 @@ $arrow_color: $gray !default;
 	}
 	.option {
 		cursor: pointer;
-		font: $fs-p2;
+		font: 300 18px/25px $family;
 		list-style: none;
 		//min-height: $input_height - 2;
 		outline: none;

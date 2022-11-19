@@ -1,0 +1,38 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'advertising-catalog.html';
+	- var pageTitle = 'Рекламный каталог';
+block styles
+	
+block content
+	include ../components/head-section/template
+	include ../components/text-section/template
+	include ../components/products-section/template
+
+	.advertising-catalog-page
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Рекламный каталог'}],
+			title: "Рекламный каталог",
+			img: "images/head-bg-catalog.jpg"
+		})._head
+		._container.container.container--text
+			+textSection({
+				text: 'Данный каталог носит информационный характер.<br> По всем вопросам обращаться в отдел маркетинга и рекламы.'
+			}).advertising-catalog-page__text.text-section--center
+			._search-row
+				include ../components/sort-block/template
+				+sortBlock({
+					options: [{item: 'Выберите тип продукции'},{item: 'Выберите тип продукции 2'},{item: 'Все включено'}]
+				}).advertising-catalog-page__sort-block
+				
+				include ../components/search-block/template
+				+searchBlock({
+					placeholder: "Поиск по словам",
+				})
+		._container.container.container--sm
+			+productsSectionCatalog()
+		
+
+	//- +gridLayout()
+
+block scripts 

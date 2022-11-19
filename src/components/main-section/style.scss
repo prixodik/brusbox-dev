@@ -226,8 +226,16 @@
 			max-width: 1200px;
 		}
 
+		&__sort-block {
+			min-width: 180px;
+		}
+
 		&__pagination {
 			margin-top: 4px;
+		}
+
+		&__search {
+			margin-left: 40px;
 		}
 	}
 
