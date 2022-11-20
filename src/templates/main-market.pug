@@ -3,25 +3,90 @@ append vars
 	- var pageUrl = 'main-market.html';
 	- var pageTitle = 'Главная: Профессионалам рынка';
 block styles
-	
+
 block content
 	include ../components/head-section/template
 	include ../components/text-section/template
 	include ../components/info-section/template
-	include ../components/products-section/template
-	include ../components/place-section/template
+	include ../components/document-block/template
 	include ../components/banner-section/template
 
-	.main-section.main-section--buyers
-		+headSectionSlider({
-			title: "Качественные окна<br> на любой вкус",
-			img: "images/main-bg-buyers.jpg",
-			subtitle: 'Покупайте у дилера со сроком эксплуатации 60 лет',
-			title2: "Качественные окна<br> на любой вкус (вариант 2)",
-			img2: "images/main-bg-buyers.jpg"
-		})._head
+	.market-page
+		._container.container.container--full
+			+headSectionSlider({
+				title: "Поддержка дилеров на 360°",
+				img: "images/main-bg-market-1.jpg",
+				subtitle: 'Возможности производства и поставки без ограничений дилерам',
+				title2: "Качественные окна<br> на любой вкус (вариант 2)",
+				img2: "images/main-bg-buyers.jpg"
+			})._head
+			+infoSectionMarket({
+				title: "Наша продукция",
+				text: "BRUSBOX — это принципиально новая разработка — качественный профиль ПВХ, созданный в России и для России <br> на основе уникального комплекса передовых технологий <br> и собственного практического опыта производства металлопластиковых окон.",
+				btn: "Подробнее о продукции",
+				img: "images/main-market-1.png",
+			})
+			+infoSectionMarketBlack({
+				title: "Профиль BRUSBOX",
+				text: "Мы готовы предложить вам семь типов профилей, каждый из которых обладает уникальными свойствами! <br> Профили BRUSBOX обладают бескомпромиссным качеством и превосходными показателями",
+				btn: "Подробнее о профиле",
+				img: "images/main-market-2.png",
+			})
+			+infoSectionMarket({
+				title: "Раздвижная система",
+				text: "Раздвижная система BRUSBOX GLIDE — система ПВХ профилей, разработанная компанией «БРУСБОКС» в 2016 году.<br> Система позволяет переработчикам повысить <br> конкурентоспособность в сегменте тендерного строительства <br> и частного остекления балконных конструкций и лоджий.",
+				btn: "Подробнее о BRUSBOX GLIDE",
+				img: "images/main-market-3.png",
+			})
+			+infoSectionMarket({
+				title: "Подоконники",
+				text: "На сегодняшний день компания «БРУСБОКС» является одним <br> из крупнейших поставщиков ПВХ-подоконников на российском рынке. Объемы производства превышают миллион квадратных метров в год.",
+				btn: "Подробнее о продукции",
+				img: "images/main-market-4.png",
+			}).info-section--bg-gray
 
+			.market-page-document
+				._container.container.container--text
+					._title
+						.title-h5 Сертификаты BRUSBOX
+					._text Для соответствия всем необходимым требованиям, компания BRUSBOX предоставляет дилерам всю необходимую документацию
+					._items
+						+documentBlockMarket({
+							text: "Сертификат <br> соответствия",
+							img: "images/main-market-document-1.png",
+						})
+						+documentBlockMarket({
+							text: "Пожарный сертификат <br> на профильные системы BRUSBOX",
+							img: "images/main-market-document-2.png",
+						})
+						+documentBlockMarket({
+							text: "Санитарно-эпидемиологическое заключение",
+							img: "images/main-market-document-3.png",
+						})
+					._buttons
+					button.btn.-border.-red.js-submit(type="submit") Тех. документация
 
+			+bannerImg({
+				img:"images/banner-main-market.jpg"
+			}).banner-section--big-banner
+
+			+infoSection({
+				img: 'images/main-market-5.jpg',
+				title: 'О компании',
+				text: '<p>Компания «БРУСБОКС» — один из крупнейших производителей ПВХ профиля <br> и подоконной доски в России, основана в марте 2004 года.</p> <br> <p> На сегодняшний день производственная база компании «БРУСБОКС» расположена <br> в г. Брянске и составляет 50 000 м², площадь производственных помещений — <br> 10 000 м², 28 экструзионных линий фирмы KraussMaffei Technologies GmbH.</p>'
+			}).info-section--gray.info-section--big-text
+
+			+bannerSectionImg({
+			img:'images/banner-bg-main.jpg',
+			title: 'Миссия',
+			text: 'Мы создаем высококачественный профиль<br> для ваших окон, гордясь тем, что делаем вашу жизнь светлее и комфортнее.<br> Мы работаем, чтобы развивались наша страна<br> и партнеры, повышалось благополучие предприятия и сотрудников БРУСБОКС.'
+			})
+		._container.container.container--full
+			+infoSectionButton({
+			img: 'images/info-section-about.jpg',
+			text: 'BRUSBOX — это принципиально новая разработка — качественный профиль ПВХ, созданный в России и для России на основе уникального комплекса передовых техно-логий и собственного практического опыта производства металлопластиковых окон.',
+			btn: 'Подробнее о компании'
+			}).info-section--gray.info-section--row-revers.info-section--big-text
 	//- +gridLayout()
 
 block scripts 
