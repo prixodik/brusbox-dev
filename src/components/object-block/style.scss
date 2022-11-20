@@ -1,0 +1,31 @@
+.object-block {
+	&__slider {
+	}
+	&__prev,
+	&__next {
+		position: absolute;
+		bottom: 16px;
+	}
+	&__prev {
+		right: 72px;
+
+	}
+	&__next {
+		right: 16px;
+	}
+	&__info {
+	}
+	&__img {
+		display: block;
+	}
+	&__title {
+		margin-bottom: 8px;
+		margin-top: 24px;
+	}
+	&__text {
+		margin-bottom: 8px;
+	}
+	&__date {
+		color: $gray-medium;
+	}
+}

@@ -1,0 +1,25 @@
+include ../sort-block/template
+
+mixin selectsSection(data)
+	.selects-section&attributes(attributes)
+		._container.container.container--text
+			._items
+				._row
+					._select.js-select-sorting
+						+sortBlockMode({
+							display: 'Город / область',
+							options: [{item: 'Москва'}, {item: 'Калининград'}, {item: 'Казань'}]
+						})
+
+					._select.js-select-sorting
+						+sortBlockMode({
+							display: 'Год реализации',
+							options: [{item: '2020'}, {item: '2022'}, {item: '2021'}]
+						})
+
+					._select.js-select-sorting
+						+sortBlockMode({
+							display: 'Профильная система',
+							options: [{item: 'BRUSBOX AERO'}, {item: 'BRUSBOX AERO 2'}, {item: 'BRUSBOX AERO 3'}]
+						})
+				._options.js-select-sorting-options

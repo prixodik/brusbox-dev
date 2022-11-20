@@ -7526,6 +7526,258 @@ var uikit = {
 
 
 
+    if ($('.js-slider-product').length) {
+
+
+      $('.js-slider-product').each(function () {
+
+
+        var $this = $(this);
+
+
+
+
+
+        $this.slick({
+
+
+          slidesToShow: 1,
+
+
+          slidesToScroll: 1,
+
+
+          centerMode: false,
+
+
+          variableWidth: false,
+
+
+          arrows: true,
+
+
+          dots: false,
+
+
+          infinite: true,
+
+
+          adaptiveHeight: true,
+
+
+          autoplay: false,
+
+
+          autoplaySpeed: 2000,
+
+
+          lazyLoad: 'progressive',
+
+
+          prevArrow: '<a href="#" class="product-block__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+
+
+          nextArrow: '<a href="#" class="product-block__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+
+
+          responsive: [{
+
+
+            breakpoint: xs,
+
+
+            settings: {
+
+
+              arrows: false,
+
+
+              dots: true,
+
+
+              slidesToShow: 1,
+
+
+              slidesToScroll: 1
+
+
+            }
+
+
+          }]
+
+
+        });
+
+
+
+
+
+      });
+
+
+
+
+
+      $('.js-team-slider-prev').click(function () {
+
+
+        $('.js-team-slider').slick('slickPrev');
+
+
+        return false;
+
+
+      });
+
+
+      $('.js-team-slider-next').click(function () {
+
+
+        $('.js-team-slider').slick('slickNext');
+
+
+        return false;
+
+
+      });
+
+
+
+
+
+    }
+
+
+
+
+
+    if ($('.js-slider-object').length) {
+
+
+      $('.js-slider-object').each(function () {
+
+
+        var $this = $(this);
+
+
+
+
+
+        $this.slick({
+
+
+          slidesToShow: 1,
+
+
+          slidesToScroll: 1,
+
+
+          centerMode: false,
+
+
+          variableWidth: false,
+
+
+          arrows: true,
+
+
+          dots: false,
+
+
+          infinite: true,
+
+
+          adaptiveHeight: true,
+
+
+          autoplay: false,
+
+
+          autoplaySpeed: 2000,
+
+
+          lazyLoad: 'progressive',
+
+
+          prevArrow: '<a href="#" class="object-block__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+
+
+          nextArrow: '<a href="#" class="object-block__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+
+
+          responsive: [{
+
+
+            breakpoint: xs,
+
+
+            settings: {
+
+
+              arrows: false,
+
+
+              dots: true,
+
+
+              slidesToShow: 1,
+
+
+              slidesToScroll: 1
+
+
+            }
+
+
+          }]
+
+
+        });
+
+
+
+
+
+      });
+
+
+
+
+
+      $('.js-team-slider-prev').click(function () {
+
+
+        $('.js-team-slider').slick('slickPrev');
+
+
+        return false;
+
+
+      });
+
+
+      $('.js-team-slider-next').click(function () {
+
+
+        $('.js-team-slider').slick('slickNext');
+
+
+        return false;
+
+
+      });
+
+
+
+
+
+    }
+
+
+
+
+
     if ($('.js-slider-head').length) {
 
 
@@ -7876,6 +8128,129 @@ var uikit = {
   },
 
 
+  
+
+
+  selectsSorting: function () {
+
+
+    let arr = [];
+
+
+    $('.js-select-sorting').on('change', 'select', function () {
+
+
+      let sortBy = $(this).val();
+
+
+      let list = '<ul>';
+
+
+
+
+
+      if (arr.length >= 1) {
+
+
+  
+
+
+        if (arr.includes(sortBy)) {
+
+
+          return false
+
+
+        } else {
+
+
+          arr.push(sortBy)
+
+
+        }
+
+
+  
+
+
+      } else {
+
+
+        arr.push(sortBy)
+
+
+      }
+
+
+      console.log(arr)
+
+
+
+
+
+      arr.forEach(function(item, i, arr) {
+
+
+        list += `<li id=${i}>`+item+'<svg class="selects-section__close js-close-option" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5L12.5 12.5" stroke="black" stroke-linecap="round"/><path d="M12.5 0.5L0.5 12.5" stroke="black" stroke-linecap="round"/></svg>'+'</li>';
+
+
+      });
+
+
+
+
+
+      $('.js-select-sorting-options').html(list)
+
+
+    });
+
+
+
+
+
+    $(function() {
+
+
+        $(document).on('click touchstart', '.js-close-option', function(){ 
+
+
+          let list = '<ul>';
+
+
+
+
+
+          let id = $(this).parent('li').attr('id');
+
+
+          arr.splice(id, 1);
+
+
+           arr.forEach(function(item, i, arr) {
+
+
+            list += `<li id=${i}>`+item+'<svg class="selects-section__close js-close-option" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5L12.5 12.5" stroke="black" stroke-linecap="round"/><path d="M12.5 0.5L0.5 12.5" stroke="black" stroke-linecap="round"/></svg>'+'</li>';
+
+
+          });
+
+
+
+
+
+          $('.js-select-sorting-options').html(list)
+
+
+        });
+
+
+    });
+
+
+  },
+
+
 
 
 
@@ -7892,6 +8267,7 @@ var uikit = {
 
     this.fancybox();
 
+    this.fancybox();
 
     this.popups();
 
@@ -7918,6 +8294,9 @@ var uikit = {
 
 
     this.sliders();
+
+
+    this.selectsSorting();
 
 
   },

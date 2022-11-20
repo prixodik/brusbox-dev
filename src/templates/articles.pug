@@ -7,7 +7,7 @@ block styles
 block content
 	include ../components/article-block/template
 	include ../components/head-section/template
-
+	
 	.main-section.main-section--actions.main-section--articles
 		+headSection({
 			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Статьи'}],
@@ -17,12 +17,14 @@ block content
 		._container.container.container--text
 			._search-row
 				include ../components/sort-block/template
-				+sortBlock()
+				+sortBlock({
+					options: [{item: 'Выберите тему'},{item: 'Без питания'},{item: 'Все включено'}]
+				}).main-section__sort-block
 				
 				include ../components/search-block/template
 				+searchBlock({
 					placeholder: "Поиск по статьям",
-				})
+				}).main-section__search
 		._container.container
 			._items.row
 				+articleBlock({

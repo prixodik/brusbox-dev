@@ -1,0 +1,73 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'objects.html';
+	- var pageTitle = 'Объекты';
+	- var classBody = 'objects';
+block styles
+	
+block content
+	include ../components/action-block/template
+	include ../components/object-block/template
+	include ../components/head-section/template
+	include ../components/selects-section/template
+	
+
+	.objects-page
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Объекты'}],
+			title: "Объекты",
+			img: "images/objects-head-bg.jpg"
+		})._head
+		._container.container.container--text
+			+selectsSection()._selects
+
+		._container.container
+			._row.row
+				+objectBlock({
+					slides: [{img: 'images/object-1.jpg'}, {img: 'images/object-2.jpg'}, {img: 'images/object-3.jpg'}],
+					title: '«Красная горка»',
+					text: 'ЖК «Жуков» — новый многоквартирный комплекс, расположенный на ул. Новосёлов, 45А. Если рассматривать новостройки в Дашках (Песочне) в Рязани, сегодня это один из самых современных проектов, строящихся в этом районе. Здесь всё предусмотрено для комфортной жизни: от грамотной планировки квартир до развитой инфраструктуры района.',
+					date: 'Дата реализации: 10 июня 2022'
+				}).objects-page__object.col-6
+
+				+objectBlock({
+					slides: [{img: 'images/object-2.jpg'}, {img: 'images/object-3.jpg'}, {img: 'images/object-4.jpg'}],
+					title: '«Красная горка»',
+					text: 'ЖК «Жуков» — новый многоквартирный комплекс, расположенный на ул. Новосёлов, 45А. Если рассматривать новостройки в Дашках (Песочне) в Рязани, сегодня это один из самых современных проектов, строящихся в этом районе. Здесь всё предусмотрено для комфортной жизни: от грамотной планировки квартир до развитой инфраструктуры района.',
+					date: 'Дата реализации: 10 июня 2022'
+				}).objects-page__object.col-6
+
+				+objectBlock({
+					slides: [{img: 'images/object-3.jpg'}, {img: 'images/object-4.jpg'}, {img: 'images/object-5.jpg'}],
+					title: '«Красная горка»',
+					text: 'ЖК «Жуков» — новый многоквартирный комплекс, расположенный на ул. Новосёлов, 45А. Если рассматривать новостройки в Дашках (Песочне) в Рязани, сегодня это один из самых современных проектов, строящихся в этом районе. Здесь всё предусмотрено для комфортной жизни: от грамотной планировки квартир до развитой инфраструктуры района.',
+					date: 'Дата реализации: 10 июня 2022'
+				}).objects-page__object.col-6
+
+				+objectBlock({
+					slides: [{img: 'images/object-4.jpg'}, {img: 'images/object-5.jpg'}, {img: 'images/object-6.jpg'}],
+					title: '«Красная горка»',
+					text: 'ЖК «Жуков» — новый многоквартирный комплекс, расположенный на ул. Новосёлов, 45А. Если рассматривать новостройки в Дашках (Песочне) в Рязани, сегодня это один из самых современных проектов, строящихся в этом районе. Здесь всё предусмотрено для комфортной жизни: от грамотной планировки квартир до развитой инфраструктуры района.',
+					date: 'Дата реализации: 10 июня 2022'
+				}).objects-page__object.col-6
+
+				+objectBlock({
+					slides: [{img: 'images/object-5.jpg'}, {img: 'images/object-2.jpg'}, {img: 'images/object-6.jpg'}],
+					title: '«Красная горка»',
+					text: 'ЖК «Жуков» — новый многоквартирный комплекс, расположенный на ул. Новосёлов, 45А. Если рассматривать новостройки в Дашках (Песочне) в Рязани, сегодня это один из самых современных проектов, строящихся в этом районе. Здесь всё предусмотрено для комфортной жизни: от грамотной планировки квартир до развитой инфраструктуры района.',
+					date: 'Дата реализации: 10 июня 2022'
+				}).objects-page__object.col-6
+
+				+objectBlock({
+					slides: [{img: 'images/object-6.jpg'}, {img: 'images/object-1.jpg'}, {img: 'images/object-4.jpg'}],
+					title: '«Красная горка»',
+					text: 'ЖК «Жуков» — новый многоквартирный комплекс, расположенный на ул. Новосёлов, 45А. Если рассматривать новостройки в Дашках (Песочне) в Рязани, сегодня это один из самых современных проектов, строящихся в этом районе. Здесь всё предусмотрено для комфортной жизни: от грамотной планировки квартир до развитой инфраструктуры района.',
+					date: 'Дата реализации: 10 июня 2022'
+				}).objects-page__object.col-6
+
+		include  ../components/pagination/template
+		+pagination()
+
+	+gridLayout()
+
+block scripts 

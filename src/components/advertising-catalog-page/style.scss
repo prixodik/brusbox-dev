@@ -1,0 +1,14 @@
+.advertising-catalog-page {
+	&__search-row {
+		@include flex(0,center,center,0);
+		max-width: 869px;
+		margin: 0 auto 40px;
+	}
+	&__sort-block {
+		margin-right: 40px;
+	}
+	
+	&__text {
+		padding-bottom: 24px;
+	}
+}
