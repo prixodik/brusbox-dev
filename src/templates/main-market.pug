@@ -1,0 +1,27 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'main-market.html';
+	- var pageTitle = 'Главная: Профессионалам рынка';
+block styles
+	
+block content
+	include ../components/head-section/template
+	include ../components/text-section/template
+	include ../components/info-section/template
+	include ../components/products-section/template
+	include ../components/place-section/template
+	include ../components/banner-section/template
+
+	.main-section.main-section--buyers
+		+headSectionSlider({
+			title: "Качественные окна<br> на любой вкус",
+			img: "images/main-bg-buyers.jpg",
+			subtitle: 'Покупайте у дилера со сроком эксплуатации 60 лет',
+			title2: "Качественные окна<br> на любой вкус (вариант 2)",
+			img2: "images/main-bg-buyers.jpg"
+		})._head
+
+
+	//- +gridLayout()
+
+block scripts 
