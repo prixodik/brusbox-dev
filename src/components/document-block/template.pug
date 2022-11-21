@@ -1,0 +1,26 @@
+mixin documentBlock(data)
+	.document-block&attributes(attributes)
+		a(href=data.link)._img.js-fancybox
+			img(src=data.img, alt="")
+		if data.text
+			._text
+				!=data.text
+
+mixin documentBlockMode(data)
+	.document-block.--mode&attributes(attributes)
+			a(href=data.link)._img.js-fancybox
+				img(src=data.img, alt="")
+			if data.text
+				._text
+					!=data.text
+
+mixin documentBlockMarket(data)
+	.document-block.--btn&attributes(attributes)
+		img(src=data.img, alt="")
+		if data.text
+			._text
+				!=data.text
+				._link
+					a(href="#")
+						+svg("download")
+				

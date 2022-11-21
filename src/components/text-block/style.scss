@@ -1,12 +1,14 @@
 .text-block {
-	&__container {
-	}
-
-	&__text {
-		padding: 112px 0;
-	}
-
-	&--padding-sm & {
-		padding: 100px 0;
+	margin: 60px 0;
+	&--numerical &{
+		&__number{
+			font-size: 120px;
+			font-weight: 100;
+			line-height: 112.8px;
+			text-transform: uppercase;
+		}
+		&__text {
+			// padding: 15px 8px;
+		}
 	}
 }

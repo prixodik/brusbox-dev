@@ -1,0 +1,56 @@
+.document-block {
+	position: relative;
+	@include flex(0, center, flex-start, 0, 0);
+	max-width: 456px;
+
+	&__text {
+		text-align: left;
+		max-width: 356px;
+		margin-left: 8px;
+		font: 300 18px/25px $baseFF;
+		color: $black;
+	}
+
+	&__img {
+		flex: 0 0 95px;
+		max-width: 95px;
+
+		img {
+			display: block;
+			object-fit: cover;
+			width: 95px;
+		}
+	}
+
+	&--mode {
+		justify-content: center;
+	}
+
+	&--btn & {
+		&__link {
+			margin-left: 16px;
+			padding: 8px 0px;
+			height: 40px;
+			background: #f1f1f1;
+			border-radius: 40px;
+
+			.icon {
+				height: 24px;
+			}
+		}
+		&__text{
+			margin-left: 20px;
+			align-items: center;
+			max-width: 267px;
+			@include flex(center,0,0,0,0);
+
+		}
+
+
+
+
+
+
+	}
+
+}

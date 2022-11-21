@@ -28,7 +28,7 @@ mixin infoSectionForm(data)
 				if data.img
 					._img.col-6.col-sm-12
 						img(src=data.img, alt="")
-						
+
 mixin infoSectionImgParams(data)
 	.info-section&attributes(attributes)
 		._container.container.container--full
@@ -91,8 +91,94 @@ mixin infoSectionButtonRed(data)
 					._img.col-6.col-sm-12
 						img(src=data.img, alt="")
 
+mixin infoSectionAboutCompany(data)
+	.info-section--about-company&attributes(attributes)
+		._container.container
+			._title
+				h5 Ознакомьтесь подробнее с компанией BRUSBOX
+			._items.row
+				._item.col-3
+					a(href="#")
+						._item-img
+							img(src="images/about-company-2.jpg", alt="")
+						._item-title История BRUSBOX
+				._item.col-3
+					a(href="#")
+						._item-img
+							img(src="images/about-company-3.jpg", alt="")
+						._item-title Поставщики
+				._item.col-3
+					a(href="#")
+						._item-img
+							img(src="images/about-company-4.jpg", alt="")
+						._item-title Дипломы и сертификаты
+				._item.col-3
+					a(href="#")
+						._item-img
+							img(src="images/about-company-5.jpg", alt="")
+						._item-title Реализованные объекты
+
+mixin infoSectionSliderImg(data)
+	.info-section.--slider-img&attributes(attributes)
+		._slider.js-slider-info
+			._slide
+				._row.row
+					._container
+						._info.col-6
+							._text
+								!=data.text
+						img(src=data.img, alt="")._img
+						._button
+							a(href="#").btn.-border.-white
+								!=data.btn
+
+			._slide
+				._row.row
+					._container
+						._info.col-6
+							._text
+								!=data.text2
+						img(src=data.img2, alt="")._img
+						._button
+							a(href="#").btn.-border.-white
+								!=data.btn2
+			
+			._slide
+				._row.row
+					._container
+						._info.col-6
+							._text
+								!=data.text3
+						img(src=data.img3, alt="")._img
+						._button
+							a(href="#").btn.-border.-white
+								!=data.btn3
+			
+			._slide
+				._row.row
+					._container
+						._info.col-6
+							._text
+								!=data.text4
+						img(src=data.img4, alt="")._img
+						._button
+							a(href="#").btn.-border.-white
+								!=data.btn4
+
+			._slide
+				._row.row
+					._container
+						._info.col-6
+							._text
+								!=data.text5
+						img(src=data.img5, alt="")._img
+						._button
+							a(href="#").btn.-border.-white
+								!=data.btn5
+			
+	
 mixin infoSectionSlider(data)
-	.info-section.-btn.-slider.-title-margin&attributes(attributes)
+	.info-section.-btn.-slider&attributes(attributes)
 		._container.container
 			._row.row
 				._info.col-6.col-sm-12
@@ -121,3 +207,41 @@ mixin infoSectionSlider(data)
 							+svg('slider-arrow-right')
 						.swiper-button-next
 							+svg('slider-arrow-right')
+							
+mixin infoSectionMarket(data)
+	.info-section.-btn.-title-margin.-img-half&attributes(attributes)
+		._container.container
+			._row.row
+				._info
+					if data.title
+						h2._title
+							!=data.title
+					if data.text
+						._text
+							!=data.text
+					if data.btn
+						._button
+							a(href="#").btn.-border.-red 
+								!=data.btn
+				if data.img
+					._img.col-6
+						img(src=data.img, alt="")
+
+mixin infoSectionMarketBlack(data)
+	.info-section.-btn.-title-margin.-img-half.-bg-black&attributes(attributes)
+		._container.container
+			._row.row
+				._info
+					if data.title
+						h2._title
+							!=data.title
+					if data.text
+						._text
+							!=data.text
+					if data.btn
+						._button
+							a(href="#").btn.-border.-red 
+								!=data.btn
+				if data.img
+					._img.col-6
+						img(src=data.img, alt="")

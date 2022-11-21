@@ -1,0 +1,45 @@
+.model-library-page {
+	padding-bottom: 112px;
+
+	&__section {
+		padding: 120px 0 0;
+
+		&--btn {
+			padding-bottom: 112px;
+
+
+		}
+
+		&--mode {
+			padding: 60px 0;
+		}
+	}
+
+	&__items {
+		@include flex(0, center, center, 0, column);
+	}
+
+	&__item {
+		margin-bottom: 60px;
+
+		&--column {
+			margin-bottom: 60px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+
+	&__buttons {
+		text-align: center;
+	}
+
+	&__row {
+		justify-content: space-between;
+		// margin-bottom: -60px;
+	}
+	&__item {
+	}
+
+}

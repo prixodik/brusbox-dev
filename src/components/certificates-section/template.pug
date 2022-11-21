@@ -1,0 +1,101 @@
+include ../document-block/template
+
+mixin certificatesSectionProfile(data)
+	.certificates-section&attributes(attributes)
+		._container.container.container--sm
+			._title.title-h5
+				!=data.title
+			._row.row
+				.certificates-section__item.col-4
+					+documentBlock({
+						text: "Сертификат соответствия <br> № 04ИДЮ1.RU.C00001 <br> Срок действия: до 16.07.2023",
+						img: "images/certificates-icon-1.png",
+						link: "images/popup-document.jpg",
+					})
+				.certificates-section__item.col-4
+					+documentBlock({
+						text: "Пожарный сертификат <br> на профильные системы BRUSBOX <br> № АПБ.RU.OC002/3/H/01498 <br> Действителен с 12.03.21 по 11.03.26",
+						img: "images/certificates-icon-1.png",
+						link: "images/popup-document.jpg",
+					})
+				.certificates-section__item.col-4
+					+documentBlock({
+						text: "Санитарно-эпидемиологическое заключение № 1-250пр от 21.06.2022 г.",
+						img: "images/certificates-icon-1.png",
+						link: "images/popup-document.jpg",
+					})
+
+mixin certificatesSectionWindowsill(data)
+	.certificates-section&attributes(attributes)
+		._container.container.container--sm
+			._title.title-h5
+				!=data.title
+			._row.row
+				._item.col-4
+					+documentBlock({
+						text: "Сертификат соответствия <br> № РОСС RU.HB32.H03910/20 <br> Срок действия с 30.10.2020 по 29.10.2023",
+						img: "images/certificates-icon-1.png",
+						link: "images/popup-document.jpg",
+					})
+				._item.col-4
+					+documentBlock({
+						text: "Санитарно-эпидемиологическое <br> заключение <br> № 1-249пр от 21.06.2022 г.",
+						img: "images/certificates-icon-1.png",
+						link: "images/popup-document.jpg",
+					})
+				._item.col-4
+					+documentBlock({
+						text: "Пожарный сертификат соответствия <br> №RU C-RU.ПБ09.В.00164/20 <br> Срок действия с 22.10.2020 по 12.10.2025",
+						img: "images/certificates-icon-1.png",
+						link: "images/popup-document.jpg",
+					})
+				._item.col-4.--center
+					+documentBlock({
+						text: "Подоконники системы «BRUSBOX AERO» <br> Пожарный сертификат соответствия <br> №RU C-RU.ПБ09.В.00173/20 <br> Срок действия с 26.11.2020 по 25.11.2025",
+						img: "images/certificates-icon-1.png",
+						link: "images/popup-document.jpg",
+					})
+
+mixin certificatesSectionResults(data)
+	.certificates-section&attributes(attributes)
+		._container.container.container--sm
+			._title.title-h5
+				!=data.title
+			._row-center.row
+				._item.col-4
+					+documentBlock({
+						text: "Перечень рекомендуемых мероприятий <br> по улучшению условий труда",
+						img: "images/certificates-icon-2.png",
+						link: "images/popup-document.jpg",
+					})
+				._item.col-4
+					+documentBlock({
+						text: "Сводная ведомость результатов прове- <br> дения специальной оценки условий труда",
+						img: "images/certificates-icon-2.png",
+						link: "images/popup-document.jpg",
+					})
+
+mixin certificatesSectionDimplomas(data)
+	.certificates-section&attributes(attributes)
+		._container.container.container--sm
+			._title.title-h5
+				!=data.title
+			._row.row
+				._item.col-4
+					+documentBlock({
+						text: "Сертификат за участие на выставке <br> строительных и отделочных материалов <br> MosBuild 2019",
+						img: "images/certificates-icon-1.png",
+						link: "images/popup-document.jpg",
+					})
+				._item.col-4
+					+documentBlock({
+						text: "Диплом за участие <br> в международной интерьерно- <br> строительной выставке BATIMAT 2015",
+						img: "images/certificates-icon-1.png",
+						link: "images/popup-document.jpg",
+					})
+				._item.col-4
+					+documentBlock({
+						text: "Рекомендательное письмо Департамента <br> градостроительной политики, развития <br> и реконструкции города Москвы",
+						img: "images/certificates-icon-1.png",
+						link: "images/popup-document.jpg",
+					})

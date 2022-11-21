@@ -1,0 +1,11 @@
+.market-page {
+
+	&-document {
+		padding: 120px 0px;
+		&__items {
+			margin: 40px 0px;
+			@include flex(center);
+			justify-content: space-between;
+		}
+	}
+}

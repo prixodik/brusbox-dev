@@ -1,0 +1,46 @@
+.error-page {
+	padding: 40px 0px 120px;
+	@include flex(center, center, center, 0, 0);
+
+	&__row {
+		justify-content: space-between;
+	}
+
+	&:first-child {
+		padding-right: 60px;
+	}
+
+	&__info {
+		max-width: 561px;
+	}
+
+	&__list {
+		padding-left: 28px;
+
+		span {
+			font-weight: 400;
+		}
+
+		li {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__text {
+		margin-bottom: 16px;
+	}
+
+	&__img {
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+p {
+	margin: 0px 0px 0px;
+}

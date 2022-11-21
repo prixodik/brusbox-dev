@@ -1,0 +1,51 @@
+.privacy-page {
+
+	&__main-title {
+		margin: 20px 0px;
+	}
+
+	&__title {
+		padding-top: 112px;
+	}
+
+	&__row {
+		max-width: 1180px;
+		// padding: 24px 0px;
+	}
+
+	&__list {
+		margin-right: 15px;
+	}
+
+	&__info {
+		padding-top: 24px;
+		padding-bottom: 120px;
+	}
+
+	ul {
+		li{
+			margin-left: 20px;
+		}
+	}
+
+	ol {
+		list-style: none;
+
+		li {
+			margin-left: 0px;
+			margin: 0px;
+			padding: 0px;
+			-webkit-padding-start: 0;
+		}
+	}
+
+	li {
+		margin-left: 0px;
+		margin: 0px;
+	}
+
+	p {
+		margin: 0px 0px;
+	}
+
+}

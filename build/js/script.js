@@ -6986,10 +6986,10 @@ var uikit = {
         typeof $(this).attr("href") != "undefined" ?
 
 
-        $(this).attr("href") :
+          $(this).attr("href") :
 
 
-        $(this).attr("data-tab");
+          $(this).attr("data-tab");
 
 
       if (typeof $(this).attr("data-parent") != "undefined") {
@@ -7085,10 +7085,10 @@ var uikit = {
         $(this).attr("href") != undefined ?
 
 
-        $(this).attr("href") :
+          $(this).attr("href") :
 
 
-        "#" + $(this).val();
+          "#" + $(this).val();
 
 
       var nav_id = $(this).data("navid");
@@ -7226,28 +7226,28 @@ var uikit = {
   lazy: function () {
 
 
-    function logElementEvent(eventName, element) {}
+    function logElementEvent(eventName, element) { }
 
 
-    var callback_enter = function (element) {};
+    var callback_enter = function (element) { };
 
 
-    var callback_exit = function (element) {};
+    var callback_exit = function (element) { };
 
 
-    var callback_loading = function (element) {};
+    var callback_loading = function (element) { };
 
 
-    var callback_loaded = function (element) {};
+    var callback_loaded = function (element) { };
 
 
-    var callback_error = function (element) {};
+    var callback_error = function (element) { };
 
 
-    var callback_finish = function () {};
+    var callback_finish = function () { };
 
 
-    var callback_cancel = function (element) {};
+    var callback_cancel = function (element) { };
 
 
 
@@ -7361,25 +7361,25 @@ var uikit = {
       /* $(document).mouseup(function (e) { // событие клика по веб-документу
 
 
-				var div = $('.js-menu-toggle').parent(); // тут указываем ID элемента
+        var div = $('.js-menu-toggle').parent(); // тут указываем ID элемента
 
 
-				if (!div.is(e.target) // если клик был не по нашему блоку
+        if (!div.is(e.target) // если клик был не по нашему блоку
 
 
-					&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+          && div.has(e.target).length === 0) { // и не по его дочерним элементам
 
 
-					div.removeClass('hover'); // скрываем его
+          div.removeClass('hover'); // скрываем его
 
 
-					$('body').removeClass('overflow');
+          $('body').removeClass('overflow');
 
 
-				}
+        }
 
 
-			}); */
+      }); */
 
 
 
@@ -7409,10 +7409,10 @@ var uikit = {
       $("html, body").animate({
 
 
-          scrollTop: $(href).offset().top,
+        scrollTop: $(href).offset().top,
 
 
-        },
+      },
 
 
         400
@@ -7578,6 +7578,129 @@ var uikit = {
 
 
           nextArrow: '<a href="#" class="product-block__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+
+
+          responsive: [{
+
+
+            breakpoint: xs,
+
+
+            settings: {
+
+
+              arrows: false,
+
+
+              dots: true,
+
+
+              slidesToShow: 1,
+
+
+              slidesToScroll: 1
+
+
+            }
+
+
+          }]
+
+
+        });
+
+
+
+
+
+      });
+
+
+
+
+
+      $('.js-team-slider-prev').click(function () {
+
+
+        $('.js-team-slider').slick('slickPrev');
+
+
+        return false;
+
+
+      });
+
+
+      $('.js-team-slider-next').click(function () {
+
+
+        $('.js-team-slider').slick('slickNext');
+
+
+        return false;
+
+
+      });
+
+
+
+
+
+    }
+
+
+    if ($('.js-slider-info').length) {
+
+
+      $('.js-slider-info').each(function () {
+
+
+        var $this = $(this);
+
+
+
+
+
+        $this.slick({
+
+
+          slidesToShow: 1,
+
+
+          slidesToScroll: 1,
+
+
+          centerMode: false,
+
+
+          variableWidth: false,
+
+
+          arrows: true,
+
+
+          dots: false,
+
+
+          infinite: true,
+
+
+          adaptiveHeight: true,
+
+
+          autoplay: false,
+
+
+          autoplaySpeed: 2000,
+
+
+          lazyLoad: 'progressive',
+
+
+          prevArrow: '<a href="#" class="info-section__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+
+
+          nextArrow: '<a href="#" class="info-section__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
 
 
           responsive: [{
@@ -8168,7 +8291,7 @@ var uikit = {
   },
 
 
-  
+
 
 
   selectsSorting: function () {
@@ -8192,7 +8315,7 @@ var uikit = {
       if (arr.length >= 1) {
 
 
-  
+
 
 
         if (arr.includes(sortBy)) {
@@ -8210,7 +8333,7 @@ var uikit = {
         }
 
 
-  
+
 
 
       } else {
@@ -8228,10 +8351,10 @@ var uikit = {
 
 
 
-      arr.forEach(function(item, i, arr) {
+      arr.forEach(function (item, i, arr) {
 
 
-        list += `<li id=${i}>`+item+'<svg class="selects-section__close js-close-option" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5L12.5 12.5" stroke="black" stroke-linecap="round"/><path d="M12.5 0.5L0.5 12.5" stroke="black" stroke-linecap="round"/></svg>'+'</li>';
+        list += `<li id=${i}>` + item + '<svg class="selects-section__close js-close-option" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5L12.5 12.5" stroke="black" stroke-linecap="round"/><path d="M12.5 0.5L0.5 12.5" stroke="black" stroke-linecap="round"/></svg>' + '</li>';
 
 
       });
@@ -8249,40 +8372,40 @@ var uikit = {
 
 
 
-    $(function() {
+    $(function () {
 
 
-        $(document).on('click touchstart', '.js-close-option', function(){ 
+      $(document).on('click touchstart', '.js-close-option', function () {
 
 
-          let list = '<ul>';
-
-
-
-
-
-          let id = $(this).parent('li').attr('id');
-
-
-          arr.splice(id, 1);
-
-
-           arr.forEach(function(item, i, arr) {
-
-
-            list += `<li id=${i}>`+item+'<svg class="selects-section__close js-close-option" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5L12.5 12.5" stroke="black" stroke-linecap="round"/><path d="M12.5 0.5L0.5 12.5" stroke="black" stroke-linecap="round"/></svg>'+'</li>';
-
-
-          });
+        let list = '<ul>';
 
 
 
 
 
-          $('.js-select-sorting-options').html(list)
+        let id = $(this).parent('li').attr('id');
+
+
+        arr.splice(id, 1);
+
+
+        arr.forEach(function (item, i, arr) {
+
+
+          list += `<li id=${i}>` + item + '<svg class="selects-section__close js-close-option" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5L12.5 12.5" stroke="black" stroke-linecap="round"/><path d="M12.5 0.5L0.5 12.5" stroke="black" stroke-linecap="round"/></svg>' + '</li>';
 
 
         });
+
+
+
+
+
+        $('.js-select-sorting-options').html(list)
+
+
+      });
 
 
     });
@@ -8363,7 +8486,7 @@ $(window).on("load", function (e) {
   clearTimeout(clrTimeOut);
 
 
-  clrTimeOut = setTimeout(function () {}, 200);
+  clrTimeOut = setTimeout(function () { }, 200);
 
 
 });
@@ -8378,7 +8501,7 @@ $(window).resize(function () {
   clearTimeout(clrTimeOut);
 
 
-  clrTimeOut = setTimeout(function () {}, 200);
+  clrTimeOut = setTimeout(function () { }, 200);
 
 
 });

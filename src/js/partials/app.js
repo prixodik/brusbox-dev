@@ -315,8 +315,8 @@ var uikit = {
       e.preventDefault();
       let tab =
         typeof $(this).attr("href") != "undefined" ?
-        $(this).attr("href") :
-        $(this).attr("data-tab");
+          $(this).attr("href") :
+          $(this).attr("data-tab");
       if (typeof $(this).attr("data-parent") != "undefined") {
         $('[href="' + tab + '"], [data-tab="' + tab + '"]')
           .closest($(this).attr("data-parent"))
@@ -348,8 +348,8 @@ var uikit = {
       }
       var href =
         $(this).attr("href") != undefined ?
-        $(this).attr("href") :
-        "#" + $(this).val();
+          $(this).attr("href") :
+          "#" + $(this).val();
       var nav_id = $(this).data("navid");
       $(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass(
         "is-active"
@@ -395,14 +395,14 @@ var uikit = {
   },
 
   lazy: function () {
-    function logElementEvent(eventName, element) {}
-    var callback_enter = function (element) {};
-    var callback_exit = function (element) {};
-    var callback_loading = function (element) {};
-    var callback_loaded = function (element) {};
-    var callback_error = function (element) {};
-    var callback_finish = function () {};
-    var callback_cancel = function (element) {};
+    function logElementEvent(eventName, element) { }
+    var callback_enter = function (element) { };
+    var callback_exit = function (element) { };
+    var callback_loading = function (element) { };
+    var callback_loaded = function (element) { };
+    var callback_error = function (element) { };
+    var callback_finish = function () { };
+    var callback_cancel = function (element) { };
 
     var lazyLoadOb = new LazyLoad({
       class_applied: "lz-applied",
@@ -440,13 +440,13 @@ var uikit = {
       $(".js-mobile-menu").slideToggle();
 
       /* $(document).mouseup(function (e) { // событие клика по веб-документу
-				var div = $('.js-menu-toggle').parent(); // тут указываем ID элемента
-				if (!div.is(e.target) // если клик был не по нашему блоку
-					&& div.has(e.target).length === 0) { // и не по его дочерним элементам
-					div.removeClass('hover'); // скрываем его
-					$('body').removeClass('overflow');
-				}
-			}); */
+        var div = $('.js-menu-toggle').parent(); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+          && div.has(e.target).length === 0) { // и не по его дочерним элементам
+          div.removeClass('hover'); // скрываем его
+          $('body').removeClass('overflow');
+        }
+      }); */
 
       return false;
     });
@@ -456,8 +456,8 @@ var uikit = {
     $(".js-scroll-to").click(function () {
       var href = $(this).attr("href");
       $("html, body").animate({
-          scrollTop: $(href).offset().top,
-        },
+        scrollTop: $(href).offset().top,
+      },
         400
       );
       return false;
@@ -513,6 +513,47 @@ var uikit = {
           lazyLoad: 'progressive',
           prevArrow: '<a href="#" class="product-block__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
           nextArrow: '<a href="#" class="product-block__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+          responsive: [{
+            breakpoint: xs,
+            settings: {
+              arrows: false,
+              dots: true,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }]
+        });
+
+      });
+
+      $('.js-team-slider-prev').click(function () {
+        $('.js-team-slider').slick('slickPrev');
+        return false;
+      });
+      $('.js-team-slider-next').click(function () {
+        $('.js-team-slider').slick('slickNext');
+        return false;
+      });
+
+    }
+    if ($('.js-slider-info').length) {
+      $('.js-slider-info').each(function () {
+        var $this = $(this);
+
+        $this.slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
+          arrows: true,
+          dots: false,
+          infinite: true,
+          adaptiveHeight: true,
+          autoplay: false,
+          autoplaySpeed: 2000,
+          lazyLoad: 'progressive',
+          prevArrow: '<a href="#" class="info-section__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+          nextArrow: '<a href="#" class="info-section__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
           responsive: [{
             breakpoint: xs,
             settings: {
@@ -709,7 +750,7 @@ var uikit = {
       return false;
     });
   },
-  
+
   selectsSorting: function () {
     let arr = [];
     $('.js-select-sorting').on('change', 'select', function () {
@@ -717,37 +758,37 @@ var uikit = {
       let list = '<ul>';
 
       if (arr.length >= 1) {
-  
+
         if (arr.includes(sortBy)) {
           return false
         } else {
           arr.push(sortBy)
         }
-  
+
       } else {
         arr.push(sortBy)
       }
       console.log(arr)
 
-      arr.forEach(function(item, i, arr) {
-        list += `<li id=${i}>`+item+'<svg class="selects-section__close js-close-option" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5L12.5 12.5" stroke="black" stroke-linecap="round"/><path d="M12.5 0.5L0.5 12.5" stroke="black" stroke-linecap="round"/></svg>'+'</li>';
+      arr.forEach(function (item, i, arr) {
+        list += `<li id=${i}>` + item + '<svg class="selects-section__close js-close-option" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5L12.5 12.5" stroke="black" stroke-linecap="round"/><path d="M12.5 0.5L0.5 12.5" stroke="black" stroke-linecap="round"/></svg>' + '</li>';
       });
 
       $('.js-select-sorting-options').html(list)
     });
 
-    $(function() {
-        $(document).on('click touchstart', '.js-close-option', function(){ 
-          let list = '<ul>';
+    $(function () {
+      $(document).on('click touchstart', '.js-close-option', function () {
+        let list = '<ul>';
 
-          let id = $(this).parent('li').attr('id');
-          arr.splice(id, 1);
-           arr.forEach(function(item, i, arr) {
-            list += `<li id=${i}>`+item+'<svg class="selects-section__close js-close-option" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5L12.5 12.5" stroke="black" stroke-linecap="round"/><path d="M12.5 0.5L0.5 12.5" stroke="black" stroke-linecap="round"/></svg>'+'</li>';
-          });
-
-          $('.js-select-sorting-options').html(list)
+        let id = $(this).parent('li').attr('id');
+        arr.splice(id, 1);
+        arr.forEach(function (item, i, arr) {
+          list += `<li id=${i}>` + item + '<svg class="selects-section__close js-close-option" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5L12.5 12.5" stroke="black" stroke-linecap="round"/><path d="M12.5 0.5L0.5 12.5" stroke="black" stroke-linecap="round"/></svg>' + '</li>';
         });
+
+        $('.js-select-sorting-options').html(list)
+      });
     });
   },
 
@@ -774,12 +815,12 @@ $(document).ready(function () {
 var clrTimeOut;
 $(window).on("load", function (e) {
   clearTimeout(clrTimeOut);
-  clrTimeOut = setTimeout(function () {}, 200);
+  clrTimeOut = setTimeout(function () { }, 200);
 });
 
 $(window).resize(function () {
   clearTimeout(clrTimeOut);
-  clrTimeOut = setTimeout(function () {}, 200);
+  clrTimeOut = setTimeout(function () { }, 200);
 });
 
 $(window).scroll(function () {
