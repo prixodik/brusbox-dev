@@ -17,4 +17,17 @@
 			object-fit: cover;
 		}
 	}
+	&--mini-img &{
+		&__items{
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+		&__text {
+			max-width: 405px;
+			
+		}
+	}
+	&--padding-big {
+			padding: 120px 0;
+	}
 }

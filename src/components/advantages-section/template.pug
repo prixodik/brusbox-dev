@@ -14,3 +14,32 @@ mixin advantagesSection(data)
 					._item-img
 						img(src="images/advantage-3.jpg", alt="")
 					._item-title Морозостойкость и светопрозрачность
+
+mixin advantagesSectionMini(data)
+	.advantages-section.--mini-img&attributes(attributes)
+		._container.container
+			._row.row
+				._item.col-3
+					._item-img
+						img(src=data.img, alt="")
+					._item
+						._text
+							!=data.text
+				._item.col-3
+					._item-img
+						img(src=data.img2, alt="")
+					._item
+						._text
+							!=data.text2
+				._item.col-3
+					._item-img
+						img(src=data.img3, alt="")
+					._item
+						._text
+							!=data.text3
+				._item.col-3
+					._item-img
+						img(src=data.img4, alt="")
+					._item
+						._text
+							!=data.text4
