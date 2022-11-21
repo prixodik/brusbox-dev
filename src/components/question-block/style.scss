@@ -1,0 +1,35 @@
+.question-block {
+	width: 20px;
+	height: 20px;
+	margin-left: 6px;
+	position: relative;
+
+	&:hover {
+		.question-block__answer {
+			transition: all 0.3s;
+			opacity: 1;
+			z-index: 10;
+		}
+	}
+	&__icon {
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+	&__answer {
+		font: 400 14px/16px $baseFF;
+		min-width: 200px;
+		width: 100%;
+		opacity: 0;
+		transition: all 0.3s;
+		z-index: -10;
+		position: absolute;
+		top: 10px;
+		left: 100%;
+		display: block;
+		background-color: $gray-bridge;
+		border-radius: 5px;
+		padding: 5px 10px;
+	}
+}

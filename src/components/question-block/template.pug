@@ -1,0 +1,6 @@
+mixin questionBlock(data)
+	.question-block&attributes(attributes)
+		._icon
+			+svg('question')
+		._answer
+			!=data.answer

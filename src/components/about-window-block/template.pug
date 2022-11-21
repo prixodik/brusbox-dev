@@ -1,0 +1,31 @@
+include ../question-block/template
+
+mixin aboutWindowBlock(data)
+	.about-window-block&attributes(attributes)
+		._container.container.container--text
+			._text На сегодняшний день компания «БРУСБОКС» является одним из крупнейших поставщиков ПВХ-подоконников на российском рынке.<br> Объемы производства превышают миллион квадратных метров в год.
+			._text «БРУСБОКС» производит 2 типа подоконной доски:
+			._row.row
+				._item.col-6
+					._item-param
+						span подоконник СТАНДАРТ
+						._item-icon
+							+questionBlock({
+								answer: 'какой то текст 2 '
+							})
+					._item-param
+						span (шириной от 100 до 800 мм)
+					._item-img
+						img(src="images/about-window-1.png", alt="")
+				
+				._item.col-6
+					._item-param
+						span подоконник AERO
+						._item-icon
+							+questionBlock({
+									answer: 'какой то текст'
+								})
+					._item-param
+						span (шириной до 650 мм)
+					._item-img
+						img(src="images/about-window-2.png", alt="")
