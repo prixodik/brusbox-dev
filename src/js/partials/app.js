@@ -552,8 +552,8 @@ var uikit = {
           autoplay: false,
           autoplaySpeed: 2000,
           lazyLoad: 'progressive',
-          prevArrow: '<a href="#" class="info-section__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
-          nextArrow: '<a href="#" class="info-section__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+          prevArrow: $('.slick-prev'),
+          nextArrow: $('.slick-next'),
           responsive: [{
             breakpoint: xs,
             settings: {
@@ -596,6 +596,48 @@ var uikit = {
           lazyLoad: 'progressive',
           prevArrow: '<a href="#" class="object-block__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
           nextArrow: '<a href="#" class="object-block__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+          responsive: [{
+            breakpoint: xs,
+            settings: {
+              arrows: false,
+              dots: true,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }]
+        });
+
+      });
+
+      $('.js-team-slider-prev').click(function () {
+        $('.js-team-slider').slick('slickPrev');
+        return false;
+      });
+      $('.js-team-slider-next').click(function () {
+        $('.js-team-slider').slick('slickNext');
+        return false;
+      });
+
+    }
+
+    if ($('.js-slider-head').length) {
+      $('.js-slider-head').each(function () {
+        var $this = $(this);
+
+        $this.slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
+          arrows: true,
+          dots: false,
+          infinite: true,
+          adaptiveHeight: true,
+          autoplay: false,
+          autoplaySpeed: 2000,
+          lazyLoad: 'progressive',
+          prevArrow: '<a href="#" class="head-section__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+          nextArrow: '<a href="#" class="head-section__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
           responsive: [{
             breakpoint: xs,
             settings: {

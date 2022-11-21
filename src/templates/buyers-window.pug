@@ -1,0 +1,27 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'articles.html';
+	- var pageTitle = 'Статьи';
+block styles
+	
+block content
+	include ../components/about-window-block/template
+	include ../components/head-section/template
+	
+	.buyers-window-page
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Подоконники'}],
+			title: "Подоконники BRUSBOX",
+			img: "images/haed-bg-window.jpg"
+		})._head
+		._container.container.container--text
+			+aboutWindowBlock()
+			h2._title Преимущества подоконников BRUSBOX
+
+		include ../components/contact-section/template
+		+contactSectionOrder2()
+		
+
+	//- +gridLayout()
+
+block scripts 
