@@ -1,0 +1,29 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'articles.html';
+	- var pageTitle = 'Статьи';
+block styles
+	
+block content
+	include ../components/article-block/template
+	include ../components/head-section/template
+	
+	.main-section.main-section--actions.main-section--articles
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Подоконники'}],
+			title: "Подоконники BRUSBOX",
+			img: "images/haed-bg-window.jpg"
+		})._head
+		._container.container.container--text
+
+
+			include  ../components/pagination/template
+			+pagination()._pagination
+
+		include ../components/contact-section/template
+		+contactSectionOrder2()
+		
+
+	//- +gridLayout()
+
+block scripts 

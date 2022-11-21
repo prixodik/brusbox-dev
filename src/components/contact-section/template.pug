@@ -18,6 +18,17 @@ mixin contactSectionOrder(data)
 				._right
 					img(src="images/order-banner.jpg", alt="")._banner
 
+
+mixin contactSectionOrder2(data)
+	.contact-section.--order&attributes(attributes)
+		._container.container
+			._row.row
+				._left
+					+formBlockContactsOrder2._form
+				._right
+					img(src="images/form-bg-order-2.jpg", alt="")._banner
+					
+
 mixin contactSectionSubscribe(data)
 	.contact-section.--suvscribe&attributes(attributes)
 		._container.container
@@ -35,4 +46,3 @@ mixin contactSectionSubscribeArticles(data)
 					+formBlockSunscribeArticles._form
 				._right
 					img(src="images/contact-img.jpg", alt="")
-					

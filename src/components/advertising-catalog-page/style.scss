@@ -1,4 +1,6 @@
 .advertising-catalog-page {
+	padding-bottom: 60px;
+	
 	&__search-row {
 		@include flex(0,center,center,0);
 		max-width: 869px;
