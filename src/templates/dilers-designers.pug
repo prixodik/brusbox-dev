@@ -1,0 +1,63 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'dilers-designers.html';
+	- var pageTitle = 'Дилерам: преимущества';
+block styles
+	
+block content
+	include ../components/head-section/template
+	include ../components/info-section/template
+	include ../components/document-block/template
+	include ../components/advantages-section/template
+
+	.dilers-designers-section
+		+headSectionSlider({
+			title: "Современные тенденции, <br> свежие тренды рынка",
+			img: "images/main-bg-dilers-designers-1.jpg",
+			subtitle: 'BRUSBOX — это современный дизайн и архитектура',
+			title2: "Качественные окна<br> на любой вкус (вариант 2)",
+			img2: "images/main-bg-buyers.jpg",
+			subtitle2: 'Возможности производства и поставки без ограничений дилерам',
+		})._head
+
+		._document
+			._title
+				h2 Полезные материалы
+			+documentBlockBtn({
+				items: [
+				{img: "images/dilers-designers-document-1.png",	btn: "Библиотека BIM-моделей"},
+				{img: "images/dilers-designers-document-2.png",	text: "Каталог продукции"},
+				{img: "images/dilers-designers-document-3.png",	btn: "Нормативная документация"},
+				{img: "images/dilers-designers-document-4.png",	text: "Альбом <br> интерьерных <br> решений"},
+				]
+			})
+
+		+infoSectionSliderImgBtn({
+			items: [
+			{img: "images/dilers-designers-slider-1.jpg", title: 'Богатая палитра <br> цветовых решений', text: 'Современный дом, как зону жизненного комфорта, сегодня трудно представить <br> без эстетической составляющей. С каждым годом потребители всё менее склонны <br> к компромиссу между визуальным совершенством и практичностью. Уникальное многообразие цветовых решений наших окон позволяет воплотить в жизнь практически любой дизайнерский замысел.<br> Без должного внимания не остаются ни модные тенденции в оформлении интерьеров, ни особенные требования к созданию изысканной обстановки, где каждый элемент — отражение безупречного вкуса хозяев дома.', btn: 'Каталог интерьерных решений'},
+			{img: "images/dilers-advantages-slider-1.jpg", text: 'С абсолютно разным набором технических характеристик (от 60 до 70 мм, от 3 до 6 камер). Относящиеся к различным ценовым сегментам (от эконом- до премиум-класса), следовательно предназначенные для различных целевых групп потребителей'},
+			{img: "images/dilers-advantages-slider-2.jpg", text: 'Из них 3 системы в морозостойком исполнении: <ul> <li> ACLASS <li> 60-4 <li>70-6'},
+			]
+		})
+		+advantagesSectionImg({
+			img: "images/dilers-designers-1.jpg",
+			text: "Частный загородный дом <span> Москва",
+			img2: "images/dilers-designers-2.jpg",
+			text2: "ЖК «Парковые аллеи» <span> Москва",
+			img3: "images/dilers-designers-3.jpg",
+			text3: "Частный загородный дом <span> Нижний Новгород",
+			img4: "images/dilers-designers-4.jpg",
+			text4: "Частный загородный дом <span> Екатеринбург",
+			img5: "images/dilers-designers-5.jpg",
+			text5: "ЖК «Современник» <span> Москва",
+			img6: "images/dilers-designers-6.jpg",
+			text6: "Частный загородный дом <span> Волгоград",
+			img7: "images/dilers-designers-7.jpg",
+			text7: "Частный загородный дом <span> Санкт-Петербург",
+			}).advantages-section--padding-big
+
+		include ../components/contact-section/template
+		+contactSection()
+	//- +gridLayout()
+
+block scripts 

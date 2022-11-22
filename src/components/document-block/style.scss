@@ -38,19 +38,28 @@
 				height: 24px;
 			}
 		}
-		&__text{
+
+		&__text {
 			margin-left: 20px;
 			align-items: center;
 			max-width: 267px;
-			@include flex(center,0,0,0,0);
+			@include flex(center, 0, 0, 0, 0);
+		}
+	}
 
+	&--btn-list & {
+
+		&__text,&__button {
+			margin-left: 20px;
 		}
 
+		&__row {
+			align-items: center;
+		}
+	}
 
-
-
-
-
+	&--max-width {
+		max-width: 100%;
 	}
 
 }

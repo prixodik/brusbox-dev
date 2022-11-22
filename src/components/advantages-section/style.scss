@@ -8,8 +8,7 @@
 	}
 
 	&__item {
-		&-title {
-		}
+		&-title {}
 
 		&-img {
 			margin-bottom: 16px;
@@ -17,17 +16,43 @@
 			object-fit: cover;
 		}
 	}
-	&--mini-img &{
-		&__items{
+
+	&--mini-img & {
+		&__items {
 			align-items: flex-start;
 			justify-content: space-between;
 		}
+
 		&__text {
 			max-width: 405px;
-			
+
 		}
 	}
+
 	&--padding-big {
-			padding: 120px 0;
+		padding: 120px 0;
+	}
+
+	&--dilers & {
+		&__title{
+			margin-bottom: 40px;
+		}
+		&__item {
+			margin-bottom: 36px;
+		}
+
+		&__item {
+			&-img {
+				margin-bottom: 14.5px;
+			}
+
+			span {
+				color: #999999;
+			}
+		}
+
+		&__item:nth-child(6) {
+			margin-bottom: 0px;
+		}
 	}
 }
