@@ -105,11 +105,16 @@
 		}
 	}
 
-
 	&--big-title & {
 		&__title {
 			font: 300 56px/51px $baseFF;
 			margin-bottom: 40px;
+		}
+	}
+
+	&--long-text & {
+		&__info {
+			max-width: 715px;
 		}
 	}
 
@@ -120,7 +125,6 @@
 	}
 
 	&--slider {
-
 		.swiper-button-next,
 		.swiper-button-prev {
 			position: absolute;
@@ -184,7 +188,8 @@
 	}
 
 	&--slider & {
-		&__row {}
+		&__row {
+		}
 
 		&__slider {
 			// overflow: visible;
@@ -199,7 +204,8 @@
 			}
 		}
 
-		&__slides {}
+		&__slides {
+		}
 
 		&__slide {
 			display: flex;
@@ -238,12 +244,13 @@
 				margin-bottom: 16px;
 			}
 		}
-
 	}
 
 	&--slider-img & {
+
 		&__slide {
-			min-height: 600px;
+			max-height: 600px;
+			height: 100%;
 
 			&::after {
 				position: absolute;
@@ -257,12 +264,17 @@
 			}
 		}
 
+		&__date {
+			color: $medium-gray;
+			margin-top: 13px;
+		}
+
 		&__info {
 			align-items: center;
 			position: absolute;
 			max-width: 736px;
-			margin: 250px 112px;
-			padding: 0px 0px;
+			margin: 0 auto;
+			padding: 10px 30px 10px 112px;
 		}
 
 		&__text {
@@ -273,7 +285,6 @@
 			display: block;
 			height: 100%;
 			width: 100%;
-			float: right;
 		}
 
 		&__prev,
@@ -291,12 +302,28 @@
 		}
 	}
 
+	&--slider-img {
+		&.info-section--row-revers {
+			.info-section__info {
+				position: relative;
+			}
+			.info-section__next {
+				right: 16px;
+			}
+			.info-section__prev {
+				right: 72px;
+			}
+		}
+	}
+
 	&--img-half & {
-		background: #F1F1F1;
-		&__row{
+		background: #f1f1f1;
+
+		&__row {
 			padding: 72px 0px;
 			justify-content: center;
 		}
+
 		&__info {
 			padding: 0px 0px;
 			max-width: 560px;
@@ -304,23 +331,33 @@
 		}
 
 		&__img {
-
 			max-width: 560px;
 		}
 	}
-	&--bg-black{
+
+	&--bg-black {
 		background: #000000;
 	}
-	&--bg-gray{
-		background: #E1E1E1;
+
+	&--bg-gray {
+		background: #e1e1e1;
 	}
-	&--big-text &{
-		&__info{
+
+	&--big-text & {
+		&__info {
 			max-width: 738px;
 		}
+
 		&__title {
 			font-size: 52px;
 			margin-bottom: 40px;
+		}
+	}
+
+	&--small-title & {
+		&__title {
+			font: $title-h5;
+			margin-bottom: 10px;
 		}
 	}
 }

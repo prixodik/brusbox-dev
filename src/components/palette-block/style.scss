@@ -60,12 +60,13 @@
 			cursor: pointer;
 			transition: all 0.3s;
 			// transform: scale(1.1);
-			outline-offset: -6px;
-			outline: 6px solid rgba(225, 225, 225, 0.8);
+			outline-offset: -8px;
+			outline: 8px solid rgba($btn-red, 0.5);
 		}
 
 		&.is-active {
-			transform: scale(1.1);
+			outline-offset: -8px;
+			outline: 8px solid rgba($btn-red, 0.5);
 		}
 
 		border-radius: 50%;
@@ -86,6 +87,21 @@
 			width: 42px;
 			height: 42px;
 			object-fit: contain;
+		}
+	}
+
+	&--lamination & {
+		&__head {
+			justify-content: center;
+			margin-bottom: 24px;
+		}
+
+		&__colors {
+			justify-content: center;
+		}
+
+		&__title {
+			margin-right: 24px;
 		}
 	}
 }

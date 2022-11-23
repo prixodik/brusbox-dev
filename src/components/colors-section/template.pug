@@ -14,3 +14,19 @@ mixin colorsSection(data)
 				._right-img-2.js-pallette-profile-chenge
 					img(src="images/color-sol-second-img-1.png", alt="")
 					img(src="images/color-sol-second-img-2.png", alt="").is-active
+
+mixin colorsSectionLamination(data)
+	.colors-section.-lamination&attributes(attributes)
+		._container.container.container--text
+			._buttons.js-button-palette-type
+				button.js-btn-type-1._button-left.btn.btn--black.btn--border Стандарт
+				button.js-btn-type-2(disabled)._button-right.btn.btn--black.btn--border.is-active AERO
+			._colors
+				._palettes
+					+paletteBlock6Colors()._palette
+				._img.js-pallette-chenge#js-palette-result-1
+					img(src="images/lamination-img-2.png", alt="").is-active
+					img(src="images/lamination-img-3.png", alt="")
+				._img.js-pallette-chenge.is-active#js-palette-result-2
+					img(src="images/lamination-img-2.png", alt="")
+					img(src="images/lamination-img-1.png", alt="").is-active

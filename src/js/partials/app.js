@@ -54,6 +54,31 @@ var uikit = {
     let article = "";
     let color = "";
     //let id = undefined;
+
+    //change type of palette
+    $('.js-btn-type-1').click(function () {
+      $('.js-button-palette-type').children().removeClass('is-active');
+      $('.js-button-palette-type').children().removeAttr('disabled')
+      $(this).addClass('is-active');
+      $(this).attr('disabled', true)
+
+      $('#js-palette-result-2').removeClass('is-active')
+      $('#js-palette-result-1').addClass('is-active')
+
+    });
+
+    $('.js-btn-type-2').click(function () {
+      $('.js-button-palette-type').children().removeClass('is-active');
+      $('.js-button-palette-type').children().removeAttr('disabled')
+      $(this).addClass('is-active');
+      $(this).attr('disabled', true)
+
+      $('#js-palette-result-1').removeClass('is-active')
+      $('#js-palette-result-2').addClass('is-active')
+
+    });
+    //-----------------------
+
     $(".js-palette").click(function () {
       article = $(this).data("info");
       id = $(this).data("id");
@@ -68,6 +93,28 @@ var uikit = {
       $(".js-pallette-chenge img:not(.is-active)").attr(
         "src",
         `images/color-sol-${id}.png`
+      );
+
+      let a = $(".js-pallette-chenge img.is-active");
+      let nota = $(".js-pallette-chenge img:not(.is-active)");
+      a.removeClass("is-active");
+      nota.addClass("is-active");
+    });
+
+    $(".js-palette-lamination").click(function () {
+      article = $(this).data("info");
+      id = $(this).data("id");
+      $(".js-palette-lamination").removeClass("is-active");
+      $(this).addClass("is-active");
+      if (id !== undefined) {
+        $(".js-pallette-chenge img").attr("src", `images/lamination-img-${id}.png`);
+        $(".js-data-material").text(article);
+        $(".js-data-material").attr("value", article);
+      }
+
+      $(".js-pallette-chenge img:not(.is-active)").attr(
+        "src",
+        `images/lamination-img-${id}.png`
       );
 
       let a = $(".js-pallette-chenge img.is-active");
@@ -315,8 +362,8 @@ var uikit = {
       e.preventDefault();
       let tab =
         typeof $(this).attr("href") != "undefined" ?
-          $(this).attr("href") :
-          $(this).attr("data-tab");
+        $(this).attr("href") :
+        $(this).attr("data-tab");
       if (typeof $(this).attr("data-parent") != "undefined") {
         $('[href="' + tab + '"], [data-tab="' + tab + '"]')
           .closest($(this).attr("data-parent"))
@@ -348,8 +395,8 @@ var uikit = {
       }
       var href =
         $(this).attr("href") != undefined ?
-          $(this).attr("href") :
-          "#" + $(this).val();
+        $(this).attr("href") :
+        "#" + $(this).val();
       var nav_id = $(this).data("navid");
       $(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass(
         "is-active"
@@ -395,14 +442,14 @@ var uikit = {
   },
 
   lazy: function () {
-    function logElementEvent(eventName, element) { }
-    var callback_enter = function (element) { };
-    var callback_exit = function (element) { };
-    var callback_loading = function (element) { };
-    var callback_loaded = function (element) { };
-    var callback_error = function (element) { };
-    var callback_finish = function () { };
-    var callback_cancel = function (element) { };
+    function logElementEvent(eventName, element) {}
+    var callback_enter = function (element) {};
+    var callback_exit = function (element) {};
+    var callback_loading = function (element) {};
+    var callback_loaded = function (element) {};
+    var callback_error = function (element) {};
+    var callback_finish = function () {};
+    var callback_cancel = function (element) {};
 
     var lazyLoadOb = new LazyLoad({
       class_applied: "lz-applied",
@@ -456,8 +503,8 @@ var uikit = {
     $(".js-scroll-to").click(function () {
       var href = $(this).attr("href");
       $("html, body").animate({
-        scrollTop: $(href).offset().top,
-      },
+          scrollTop: $(href).offset().top,
+        },
         400
       );
       return false;
@@ -525,16 +572,6 @@ var uikit = {
         });
 
       });
-
-      $('.js-team-slider-prev').click(function () {
-        $('.js-team-slider').slick('slickPrev');
-        return false;
-      });
-      $('.js-team-slider-next').click(function () {
-        $('.js-team-slider').slick('slickNext');
-        return false;
-      });
-
     }
     if ($('.js-slider-info').length) {
       $('.js-slider-info').each(function () {
@@ -566,16 +603,6 @@ var uikit = {
         });
 
       });
-
-      $('.js-team-slider-prev').click(function () {
-        $('.js-team-slider').slick('slickPrev');
-        return false;
-      });
-      $('.js-team-slider-next').click(function () {
-        $('.js-team-slider').slick('slickNext');
-        return false;
-      });
-
     }
 
     if ($('.js-slider-object').length) {
@@ -608,16 +635,6 @@ var uikit = {
         });
 
       });
-
-      $('.js-team-slider-prev').click(function () {
-        $('.js-team-slider').slick('slickPrev');
-        return false;
-      });
-      $('.js-team-slider-next').click(function () {
-        $('.js-team-slider').slick('slickNext');
-        return false;
-      });
-
     }
 
     if ($('.js-slider-head').length) {
@@ -650,16 +667,6 @@ var uikit = {
         });
 
       });
-
-      $('.js-team-slider-prev').click(function () {
-        $('.js-team-slider').slick('slickPrev');
-        return false;
-      });
-      $('.js-team-slider-next').click(function () {
-        $('.js-team-slider').slick('slickNext');
-        return false;
-      });
-
     }
 
     if ($('.js-slider-head').length) {
@@ -692,16 +699,6 @@ var uikit = {
         });
 
       });
-
-      $('.js-team-slider-prev').click(function () {
-        $('.js-team-slider').slick('slickPrev');
-        return false;
-      });
-      $('.js-team-slider-next').click(function () {
-        $('.js-team-slider').slick('slickNext');
-        return false;
-      });
-
     }
 
   },
@@ -815,12 +812,12 @@ $(document).ready(function () {
 var clrTimeOut;
 $(window).on("load", function (e) {
   clearTimeout(clrTimeOut);
-  clrTimeOut = setTimeout(function () { }, 200);
+  clrTimeOut = setTimeout(function () {}, 200);
 });
 
 $(window).resize(function () {
   clearTimeout(clrTimeOut);
-  clrTimeOut = setTimeout(function () { }, 200);
+  clrTimeOut = setTimeout(function () {}, 200);
 });
 
 $(window).scroll(function () {
