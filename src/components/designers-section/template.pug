@@ -75,3 +75,54 @@ mixin designersSectionCatalog(data)
 					],
 					btn: "Подробнее о дверной системе<span> brusbox</span>",
 				})
+
+mixin designersSectionCatalogOther(data)
+	.products-section.--catalog.--other&attributes(attributes)
+		._items
+			._item
+				+designersBlock({
+					img: 'images/designers-product-2.png',
+					title: '<span>BRUSBOX 60-4</span>',
+					subtitle: "Когда цена имеет значение",
+					text: 'Универсальная, самая доступная, благодаря высокому уровню потребительских свойств <br> и безупречному качеству, наиболее известная профильная система BRUSBOX',
+					params: [
+						{class: "<span>B</span> класс",	camer: "3 камеры", width: "60 мм"},
+					],
+					btn: "Подробнее о <span> BRUSBOX 60-4</span>",
+				})
+			._item
+				+designersBlock({
+					img: 'images/designers-product-3.png',
+					title: '<span>BRUSBOX 70-6</span>',
+					subtitle: "Когда цена имеет значение",
+					text: 'Новая система BRUSBOX ACLASS оптимальна для изготовления оконных конструкций всех основных типов и форм.',
+					params: [
+						{class: "<span>B</span> класс",	camer: "3 камеры", width: "60 мм"},
+					],
+					btn: "Подробнее о <span> BRUSBOX 70-6</span>",
+				})
+			._item
+				+designersBlock({
+					img: 'images/designers-product-4.png',
+					title: '<span> BRUSBOX AERO</span>',
+					subtitle: "Когда цена имеет значение",
+					text: 'Новая система BRUSBOX ACLASS оптимальна для изготовления оконных конструкций всех основных типов и форм.',
+					params: [
+						{class: "<span>B</span> класс",	camer: "3 камеры", width: "60 мм"},
+					],
+					btn: "Подробнее о <span> BRUSBOX AERO</span>",
+				})
+			._item
+				+designersBlock({
+					img: 'images/designers-product-5.png',
+					title: 'Дверная система <span>brusbox</span>',
+					subtitle: "Когда цена имеет значение",
+					text: 'Новая система BRUSBOX ACLASS оптимальна для изготовления оконных конструкций всех основных типов и форм.',
+					params: [
+						{class: "<span>B</span> класс",	camer: "3 камеры", width: "60 мм"},
+					],
+					btn: "Подробнее о дверной системе<span> brusbox</span>",
+				})
+		a(href="")._link
+			+svg("arrow-back")
+			span Назад

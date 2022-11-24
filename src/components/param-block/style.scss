@@ -20,4 +20,21 @@
 		flex: 1 1 auto;
 		text-align: right;
 	}
+	&--buyers &{
+		&__title{
+			margin-bottom: 8px;
+		}
+		&__value, &__label{
+			padding-bottom: 4px;
+			span{
+				text-transform: uppercase;
+			}
+		}
+		&__item{
+			margin-bottom: 4px;
+		}
+	}
+	&--padding{
+		padding: 40px 0px;
+	}
 }

@@ -185,6 +185,11 @@
 			padding: 120px 0;
 		}
 	}
+	&--padding-bt-big &{
+		&__row{
+			padding-bottom: 120px;
+		}
+	}
 
 	&--slider & {
 
@@ -249,6 +254,7 @@
 		&__button {
 			margin-top: 40px;
 		}
+
 		&__slide {
 			max-height: 600px;
 			height: 100%;
@@ -375,9 +381,27 @@
 			padding: 0px 0px;
 		}
 	}
-	&--btn &{
-		&__button{
-		margin-top: 40px;
+
+	&--btn & {
+		&__button {
+			margin-top: 40px;
+		}
+	}
+
+	&--title-size-md & {
+		&__title {
+			margin-bottom: 16px;
+			font-size: 36px;
+		}
+	}
+	&--title-mb & {
+		&__title {
+			margin-bottom: 16px;
+		}
+	}
+	&--ul{
+		ul{
+		padding-left: 28px;
 		}
 	}
 }

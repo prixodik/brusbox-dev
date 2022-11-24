@@ -70,4 +70,38 @@
 			}
 		}
 	}
+
+	&--full-bg {
+		background-color: transparent;
+		position: relative;
+		padding: 112px 0px;
+
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	&--text-left & {
+		&__img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 0;
+			z-index: -1;
+		}
+
+		&__text {
+			max-width: 959px;
+		}
+
+		&__form {
+			padding: 0px 112px;
+		}
+	}
 }

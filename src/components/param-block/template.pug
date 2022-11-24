@@ -11,3 +11,21 @@ mixin paramBlock(data)
 				if list.value
 					._value
 						!=list.value
+
+include ../question-block/template
+mixin paramBlockProduct(data)
+	.param-block.--buyers.--padding&attributes(attributes)
+		each list in data.list
+			if list.title
+				h4._title
+					!=list.title
+			._item
+				if list.label
+					._label
+						!=list.label
+				if list.value
+					._value
+						!=list.value
+					+questionBlock({
+						answer: "Тут подсказка",
+					})

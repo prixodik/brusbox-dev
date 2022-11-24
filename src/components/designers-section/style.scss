@@ -2,43 +2,52 @@
 	max-width: 1920px;
 	margin: 0 auto;
 	position: relative;
+
 	&__info {
 		padding: 180px 0 218px;
 	}
+
 	&__title {
 		color: $white;
 		margin-bottom: 54px;
 	}
+
 	&__params {
 		margin-bottom: 54px;
 	}
+
 	&__param {
 		margin-bottom: 0;
 		color: $white;
 		padding: 10px 0;
 		border-bottom: 1px solid $border-light;
-		
+
 		&:last-child {
 			border-bottom: none;
 		}
 	}
-	&__buttons {
-	}
+
+	&__buttons {}
+
 	&__button {
 		&:first-child {
 			margin-right: 40px;
 		}
 	}
-	&--bottom-mode{
+
+	&--bottom-mode {
 		padding-bottom: 120px;
 	}
+
 	&--catalog & {
 		&__items {
 			margin-bottom: 40px;
+
 			&:last-child {
 				margin-bottom: 0;
 			}
 		}
+
 		&__title {
 			color: $black;
 			margin-bottom: 16px;

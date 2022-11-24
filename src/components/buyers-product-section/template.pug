@@ -1,0 +1,45 @@
+include ../param-block/template
+
+mixin buyersProductSection(data)
+	.buyers-product-section&attributes(attributes)
+		._row
+			._left.col-5
+				._img 
+					img(src="images/buyers-product-section-1.png", alt="")
+					._link 
+						a(href="#")._img.js-fancybox
+							+svg("rotate")
+						a(href="https://www.youtube.com/watch?v=vokM08C3z_M").video-link.js-fancybox
+							+svg("link-video")
+						a(href="images/buyers-product-section-1.png")._img.js-fancybox
+							+svg("loupe")
+			._right.col-7
+				._text 
+					span Профиль BRUSBOX AERO стал главной новинкой 2018 года. <br>
+					span Основанием для создания которой явилось ужесточение требований ГОСТ 30673-2013 к толщине наружных стенок.<br>
+					span Относится к классу «А», поскольку имеет толщину лицевой стенки – 3,0 мм.<br>
+					span Классический дизайн, простота и технологичность – гарант успеха этой системы.<br>
+					span Выпускается на карамельном, сером и темно-коричневом основании, что позволяет удовлетворить требования к эстетике окна даже самого притязательного потребителя.
+					span  Морозостойкое исполнение гарантирует безоговорочную  эксплуатацию даже в регионах <br> с экстремальными климатическими условиями.
+				+paramBlockProduct({
+					list: [
+						{title: "Технические характеристики:", label: "Профиль", value: "<span>brusbox aclass</span>"},
+						{label: "Количество камер", value: "7/6"},
+						{label: "Ширина профиля", value: "60 мм"},
+						{label: "Количество контуров уплотнения", value: "3"},
+						{label: "Стеклопакет", value: "Двукамерный"},
+						{label: "Детская безопасность", value: "Детский замок и триплекс"},
+					]
+				})
+				.btn.-icon.-gray
+					+svg("download")
+					span Скачать
+				.btn.-icon.-gray
+					+svg("print")
+					span Распечатать
+				.btn.-icon.-gray
+					+svg("mail-red")
+					span Отправить на e-mail
+						
+
+					

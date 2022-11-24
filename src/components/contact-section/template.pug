@@ -46,3 +46,11 @@ mixin contactSectionSubscribeArticles(data)
 					+formBlockSunscribeArticles._form
 				._right
 					img(src="images/contact-img.jpg", alt="")
+
+mixin contactSectionBg(data)
+	.contact-section.--full-bg.--text-left&attributes(attributes)
+		._img
+			img(src="images/bg-buyers-product.jpg", alt="")
+		._container.container
+			._text
+				+formBlockContactsBuy._form
