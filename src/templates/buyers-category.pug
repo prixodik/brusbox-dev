@@ -1,0 +1,25 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'buyers-category.html';
+	- var pageTitle = 'Покупателям: Категория';
+block styles
+	
+block content
+	include ../components/head-section/template
+	include ../components/text-section/template
+	include ../components/info-section/template
+	include ../components/products-section/template
+	include ../components/place-section/template
+	include ../components/banner-section/template
+
+	.main-section
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Дилеры списком'}],
+			title: "Офисы продаж пластиковых окон<br> в Нижнем Новгороде",
+			img: "images/main-bg-dilers-list.jpg",
+			btn: "Изменить город"
+		})._head
+
+	//- +gridLayout()
+
+block scripts 
