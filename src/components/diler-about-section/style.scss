@@ -1,0 +1,42 @@
+.diler-about-section {
+	padding: 112px 0;
+
+	&__head {
+		@include flex(0,flex-start,center,0);
+		margin-bottom: 60px;
+	}
+	&__logo {
+		margin-right: 60px;
+		max-width: 168px;
+	}
+	&__info {
+
+	}
+	&__contacts {
+	}
+	&__contact {
+		margin-bottom: 4px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		span {
+			margin-right: 8px;
+			color: $gray-medium;
+		}
+	}
+	&__additionsl {
+		margin-top: 31px;
+	}
+	&__text {
+	}
+	&__slider {
+	}
+	&__slide {
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}

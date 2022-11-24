@@ -1,0 +1,50 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'diler-page.html';
+	- var pageTitle = 'Страница дилера';
+block styles
+	
+block content
+	include ../components/head-section/template
+
+	.diler-page
+		+headSection({
+			title: 'Пластиковые окна и двери<br> в ООО «Окна в дом»',
+			img: 'images/head-bg-diler.jpg',
+			bread: [{url: '#', title: 'Главная'},{url: '#', title: 'Покупателям'},{url: '#', title: 'Офисы продаж в Нижнем Новгороде'},{url: '#', title: 'Пластиковые окна и двери в ООО «Окна в дом»'}],
+		})._head
+		._container.container.container--text
+			include ../components/diler-about-section/template
+			+dilerAboutSection()
+
+			._title Реализованные проекты
+		
+		include ../components/info-section/template
+		+infoSectionSliderImg({
+			items: [{
+				img: 'images/info-slide-object-1.jpg',
+				title: '«Красная горка»',
+				text: 'ЖК «Жуков» — новый многоквартирный комплекс, расположенный на ул. Новосёлов, 45А. Если рассматривать новостройки в Дашках (Песочне) в Рязани, сегодня это один из самых современных проектов, строящихся в этом районе. Здесь всё предусмотрено для комфортной жизни: от грамотной планировки квартир до развитой инфраструктуры района.',
+				date: 'Дата реализации: 10 июня 2022'
+			},
+			{
+				img: 'images/info-slide-object-1.jpg',
+				title: '«Красная горка»',
+				text: 'ЖК «Жуков» — новый многоквартирный комплекс, расположенный на ул. Новосёлов, 45А. Если рассматривать новостройки в Дашках (Песочне) в Рязани, сегодня это один из самых современных проектов, строящихся в этом районе. Здесь всё предусмотрено для комфортной жизни: от грамотной планировки квартир до развитой инфраструктуры района.',
+				date: 'Дата реализации: 10 июня 2022'
+			}]
+		})
+
+
+		include ../components/action-section/template
+		+actionSection({
+			title: 'Другие акции дилера'
+		})
+
+		include  ../components/map-section/template
+		+mapSectionContainer().map-section--padding.map-section--main-accardion
+
+
+	//- +gridLayout()
+
+block scripts 
