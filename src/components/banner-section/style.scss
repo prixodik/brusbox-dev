@@ -133,4 +133,17 @@
 	&--big-banner{
 		padding: 0px 0px;
 	}
+	&--padding-mode{
+		padding: 120px 0px 112px;
+	}
+	&--btn &{
+		&__info{
+			padding-left: 0px;
+			text-align: center;
+			color: $white;
+		}
+		&__button{
+			margin-top: 40px;
+		}
+	}
 }

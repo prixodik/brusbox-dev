@@ -23,4 +23,22 @@ mixin documentBlockMarket(data)
 				._link
 					a(href="#")
 						+svg("download")
+
+mixin documentBlockBtn(data)
+	.document-block.--btn.--btn-list.--max-width&attributes(attributes)
+		each item in data.items
+			._container.container
+				._row.row
+					img(src=item.img, alt="")
+					if item.btn
+						._button
+							a(href="#").btn.-border.-red 
+								!=item.btn
+					if item.text
+						._text
+							!=item.text
+							._link
+								a(href="#")
+									+svg("download")
+
 				

@@ -1,0 +1,45 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'dilers-advantages.html';
+	- var pageTitle = 'Дилерам: преимущества';
+block styles
+	
+block content
+	include ../components/head-section/template
+	include ../components/info-section/template
+	include ../components/advantages-section/template
+
+	.dilers-page
+		+headSection({
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'История'}],
+			title: "Преимущества профильной системы BRUSBOX",
+			img: "images/main-bg-dilers-advantages.jpg",
+		})
+		+infoSectionSliderImg({
+			items: [
+			{img: "images/dilers-advantages-slider-1.jpg", text: 'С абсолютно разным набором технических характеристик (от 60 до 70 мм, от 3 до 6 камер). Относящиеся к различным ценовым сегментам (от эконом- до премиум-класса), следовательно предназначенные для различных целевых групп потребителей'},
+			{img: "images/dilers-advantages-slider-2.jpg", text: 'Из них 3 системы в морозостойком исполнении: <ul> <li> ACLASS <li> 60-4 <li>70-6'},
+			{img: "images/dilers-advantages-slider-3.jpg", text: 'Раздвижная система BRUSBOX GLIDE, предназначенная для остекления балконов и лоджий, крайне удобна в эксплуатации и незаменима в условиях экономии пространства в помещении'},
+		]
+		}).info-section--row-revers
+		+advantagesSectionMini({
+			img: "images/dilers-advantages-1.jpg",
+			text: 'Использование штапика 15мм фигурной формы  кардинально меняет внешний вид окна, позволяя уйти от привычного классического дизайна к абсолютно новому, элегантному решению',
+			img2: "images/dilers-advantages-2.jpg",
+			text2: 'Широкая линейка дополнительных профилей с коэкструдированным уплотнением гарантирует системам BRUSBOX полную независимость от аналогичных продуктов других производителей',
+			img3: "images/dilers-advantages-3.jpg",
+			text3: '2 вида подоконной доски: <br> СТАНДАРТ (шириной до 800 мм) <br> и AERO (шириной до 650 мм)',
+			img4: "images/dilers-advantages-4.jpg",
+			text4: '4 варианта выполнения дверных групп: <br> Т 118-60, 118-70,  Т 94-60, Z118-60',
+		}).advantages-section--padding-big
+		+infoSectionSliderImg({
+			items:	[
+			{img: "images/dilers-advantages-slider-4.jpg", text: 'Системы ACLASS и 70-6 в карамельном и темно-коричневом исполнении с последующим ламинированием пленкой RENOLIT позволяют предложить потребителю визуально завершенный, эстетически привлекательный продукт'},
+			{img: "images/dilers-advantages-slider-5.jpg", text: 'Системы AERO и SUPER AERO c коэкструдированным уплотнением черного и серого цветов позволяют снизить трудозатраты при сборке оконного блока'},
+			{img: "images/dilers-advantages-slider-6.jpg", text: 'Три альтернативных цветовых решения при выборе цвета уплотнения: черное, серое и темно-серое (RAL 7001) позволяют удовлетворить запросы самого требовательного заказчика'},
+		]
+		})
+				
+	//- +gridLayout()
+
+block scripts 

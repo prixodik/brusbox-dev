@@ -14,3 +14,75 @@ mixin advantagesSection(data)
 					._item-img
 						img(src="images/advantage-3.jpg", alt="")
 					._item-title Морозостойкость и светопрозрачность
+
+mixin advantagesSectionMini(data)
+	.advantages-section.--mini-img&attributes(attributes)
+		._container.container
+			._row.row
+				._item.col-3
+					._item-img
+						img(src=data.img, alt="")
+					._item
+						._text
+							!=data.text
+				._item.col-3
+					._item-img
+						img(src=data.img2, alt="")
+					._item
+						._text
+							!=data.text2
+				._item.col-3
+					._item-img
+						img(src=data.img3, alt="")
+					._item
+						._text
+							!=data.text3
+				._item.col-3
+					._item-img
+						img(src=data.img4, alt="")
+					._item
+						._text
+							!=data.text4
+
+mixin advantagesSectionImg(data)
+	.advantages-section.--dilers&attributes(attributes)
+		._container.container.container--text
+			._title
+				h2.text BRUSBOX — территория свободы <br> для вашего творчества
+		._container.container
+			._row.row
+				._item.col-8
+					._item-img
+						img(src=data.img, alt="")
+					._item-text
+						!=data.text
+				._item.col-4
+					._item-img
+						img(src=data.img2, alt="")
+					._item-text
+						!=data.text2
+				._item.col-5
+					._item-img
+						img(src=data.img3, alt="")
+					._item-text
+						!=data.text3
+				._item.col-3
+					._item-img
+						img(src=data.img4, alt="")
+					._item-text
+						!=data.text4
+				._item.col-4
+					._item-img
+						img(src=data.img5, alt="")
+					._item-text
+						!=data.text5
+				._item.col-4
+					._item-img
+						img(src=data.img6, alt="")
+					._item-text
+						!=data.text6
+				._item.col-8
+					._item-img
+						img(src=data.img7, alt="")
+					._item-text
+						!=data.text7

@@ -636,6 +636,47 @@ var uikit = {
 
       });
     }
+    if ($('.js-slider-info-2').length) {
+      $('.js-slider-info-2').each(function () {
+        var $this = $(this);
+
+        $this.slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
+          arrows: true,
+          dots: false,
+          infinite: true,
+          adaptiveHeight: true,
+          autoplay: false,
+          autoplaySpeed: 2000,
+          lazyLoad: 'progressive',
+          prevArrow: $('.slick-prev-2'),
+          nextArrow: $('.slick-next-2'),
+          responsive: [{
+            breakpoint: xs,
+            settings: {
+              arrows: false,
+              dots: true,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }]
+        });
+
+      });
+
+      $('.js-team-slider-prev').click(function () {
+        $('.js-team-slider').slick('slickPrev');
+        return false;
+      });
+      $('.js-team-slider-next').click(function () {
+        $('.js-team-slider').slick('slickNext2');
+        return false;
+      });
+
+    }
 
     if ($('.js-slider-object').length) {
       $('.js-slider-object').each(function () {
