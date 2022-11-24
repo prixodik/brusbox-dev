@@ -7811,10 +7811,10 @@ var uikit = {
           lazyLoad: 'progressive',
 
 
-          prevArrow: '<a href="#" class="product-block__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+          prevArrow: '<a href="#" class="diler-about-section__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
 
 
-          nextArrow: '<a href="#" class="product-block__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+          nextArrow: '<a href="#" class="diler-about-section__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
 
 
           responsive: [{
@@ -7854,6 +7854,9 @@ var uikit = {
 
 
     }
+
+
+
 
 
     if ($('.js-slider-info').length) {
@@ -7904,10 +7907,10 @@ var uikit = {
           lazyLoad: 'progressive',
 
 
-          prevArrow: $('.slick-prev'),
+          prevArrow: $this.children().find('.slick-prev'),
 
 
-          nextArrow: $('.slick-next'),
+          nextArrow: $this.children().find('.slick-next'),
 
 
           responsive: [{
@@ -7947,6 +7950,9 @@ var uikit = {
 
 
     }
+
+
+
 
 
     if ($('.js-slider-info-2').length) {
@@ -7997,10 +8003,10 @@ var uikit = {
           lazyLoad: 'progressive',
 
 
-          prevArrow: $('.slick-prev-2'),
+          prevArrow: $this.children().find('.slick-prev-2'),
 
 
-          nextArrow: $('.slick-next-2'),
+          nextArrow: $this.children().find('.slick-next-2'),
 
 
           responsive: [{
@@ -8037,36 +8043,6 @@ var uikit = {
 
 
       });
-
-
-
-
-
-      $('.js-team-slider-prev').click(function () {
-
-
-        $('.js-team-slider').slick('slickPrev');
-
-
-        return false;
-
-
-      });
-
-
-      $('.js-team-slider-next').click(function () {
-
-
-        $('.js-team-slider').slick('slickNext2');
-
-
-        return false;
-
-
-      });
-
-
-
 
 
     }
