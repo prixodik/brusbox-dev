@@ -8,18 +8,64 @@ block content
 	include ../components/head-section/template
 	include ../components/text-section/template
 	include ../components/info-section/template
-	include ../components/products-section/template
-	include ../components/place-section/template
+	include ../components/document-block/template
+	include ../components/designers-section/template
+	include ../components/designers-block/template
 	include ../components/banner-section/template
 
-	.main-section
+	.dilers-designers-section
 		+headSection({
-			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Дилеры списком'}],
-			title: "Офисы продаж пластиковых окон<br> в Нижнем Новгороде",
-			img: "images/main-bg-dilers-list.jpg",
-			btn: "Изменить город"
+			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'История'}],
+			title: "Пластиковые окна BRUSBOX",
+			img: "images/main-bg-buyers-designers.jpg"
 		})._head
+			
+		._container.container.container--sm
+			+designersSectionCatalog().designers-section--bottom-mode
+		
+		+bannerImg({
+			img: "images/banner-buyers-designers.jpg"
+		}).banner-section--big-banner
 
+		+textSection({}).text-section--long-2.text-section--gray
+			p BRUSBOX – это долговечные и надежные оконные системы. Первые окна из профиля BRUSBOX произведены еще в 2004 году, <br> и они продолжают радовать владельцев по сей день.
+				p Завод «БРУСБОКС» ежегодно производит более 45 000 тонн в год – это 60 000 км оконного профиля! Оконные системы BRUSBOX устанавливаются как в жилых, так и в нежилых помещениях, а также в учреждениях с высокими требованиями к гигиене и санитарии.
+
+			.text-section__title Из профиля BRUSBOX изготавливают пластиковые окна:
+			ul.text-section__list
+				li глухие
+				li поворотные
+				li поворотно-откидные
+				li нижнее- и верхнеподвесные
+				li двухстворчатые без жесткого импоста
+				li наклонно-раздвижные
+				li фигурные и другие виды
+
+		+infoSectionButtonRed({
+			img: 'images/buyers-category-1.jpg',
+			text: 'Компания «БРУСБОКС» выпускает несколько профилей. Вы сможете подобрать нужную систему по множеству параметров, в зависимости ваших целей, назначения объекта, погодных условий и т.п. <br> <br> <p> Также вы можете выбрать цвет вашего окна! Выбор большой – компания «БРУСБОКС» ламинирует профиль, используя самую качественную немецкую пленку фирмы «RENOLIT».<br> В вашем распоряжении богатая палитра из 96 цветов – любая ваша фантазия реализуема, вы сможете гармонично вписать ваши окна в любой интерьер.</p>',
+			btn: 'Выберите цвет'
+			}).info-section--big-text
+
+		+textSection({}).text-section--long-2.text-section--gray
+			h5.text-section__title Мы предлагаем только лучшие оконные профильные системы:
+			p BRUSBOX ACLASS — пластиковые окна премиум-класса для ценителей классики. <br> Это 3-х камерная профильная система класса «А» с лаконичным, приятным и привычным дизайном.
+
+			p BRUSBOX 60-4 — одна из самых известных профильных систем BRUSBOX отличается повышенной морозостойкостью. <br> Эта 4-х камерная система является одной из самых универсальных и доступных, благодаря высокому уровню потребительских свойств и качеству.
+
+			p BRUSBOX 70-6 — лучшее предложение компании «БРУСБОКС» с позиции энергоэффективности. <br>6-ти камерный профиль BRUSBOX толщиной 70 мм, класса «А», является лидером в премиум-сегменте оконных профилей и, как правило, используется для строительства элитного жилья и коттеджей.
+
+			p BRUSBOX AERO — одна из самых востребованных профильных систем с оптимальным соотношением цены и качества. <br>Обладая всем необходимым набором технических характеристик, она при этом остается доступной по цене. Имеет 3-х камерное строение и монтажную глубину 60 мм.
+
+			p BRUSBOX SUPER AERO — это оптимальное сочетание высоких показателей энергоэффективности и доступной цены окон. <br> Эта 5-ти камерная система профилей обладает монтажной глубиной в 70 мм, благодаря чему имеет высокие теплоизоляционные и звукоизоляционные свойства.
+
+		+bannerSectionBtn({
+			img: 'images/bg-buyers-designers.jpg',
+			text: '<p>Выбор профиля напрямую зависит от целей и особенностей вашего объекта. Обращайтесь к нашим партнерам, они не только подскажут, какая профильная система подходит вашему дому или квартире, но и помогут с расчетами, производством и установкой.<br> Список наших официальных дилеров смотрите здесь.</p>',
+			btn: "Дилеры на карте"
+		}).banner-section--text-center.banner-section
+
+		include ../components/contact-section/template
+		+contactSection()
 	//- +gridLayout()
-
 block scripts 

@@ -134,6 +134,10 @@ mixin infoSectionSliderImg(data)
 								if item.date
 									._date
 										!=item.date
+								if item.btn
+									._button
+										a(href="#").btn.-border.-red
+											!=item.btn										
 							._img.col-6
 								<a href="#" class="info-section__prev slick-arrow slick-prev" tabindex="-1">
 									<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg>
@@ -142,10 +146,7 @@ mixin infoSectionSliderImg(data)
 								<a href="#" class="info-section__next slick-arrow slick-next" tabindex="-1">
 									<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg>
 								</a>
-							if item.btn
-								._button
-									a(href="#").btn.-border.-white
-										!=item.btn
+
 			
 	
 mixin infoSectionSlider(data)
@@ -197,71 +198,3 @@ mixin infoSectionMarket(data)
 				if data.img
 					._img.col-6
 						img(src=data.img, alt="")
-
-mixin infoSectionMarketBlack(data)
-	.info-section.-btn.-title-margin.-img-half.-bg-black&attributes(attributes)
-		._container.container
-			._row.row
-				._info
-					if data.title
-						h2._title
-							!=data.title
-					if data.text
-						._text
-							!=data.text
-					if data.btn
-						._button
-							a(href="#").btn.-border.-red 
-								!=data.btn
-				if data.img
-					._img.col-6
-						img(src=data.img, alt="")
-
-mixin infoSectionSliderImgRevers(data)
-	.info-section.-slider-img.-slider-row-revers&attributes(attributes)
-		._slider.js-slider-info-2
-			each item in data.items
-				._slide
-					._row.row
-						._container
-							._img.col-6
-								<a href="#" class="info-section__prev slick-arrow slick-prev-2" tabindex="-1">
-									<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg>
-								</a>
-								img(src=item.img, alt="")
-								<a href="#" class="info-section__next slick-arrow slick-next-2" tabindex="-1">
-									<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg>
-								</a>
-							if item.btn
-								._button
-									a(href="#").btn.-border.-white
-										!=item.btn
-							._info.col-6
-								._text
-									!=item.text
-
-mixin infoSectionSliderImgBtn(data)
-	.info-section.-slider-row-revers.--btn.--big-title.--text-center&attributes(attributes)
-		._slider.js-slider-info
-			each item in data.items
-				._slide
-					._row.row
-						._container
-							._img.col-6
-								<a href="#" class="info-section__prev slick-arrow slick-prev" tabindex="-1">
-									<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg>
-								</a>
-								img(src=item.img, alt="")
-								<a href="#" class="info-section__next slick-arrow slick-next" tabindex="-1">
-									<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg>
-								</a>
-							._info.col-6
-								if item.title
-									h2._title
-										!=item.title
-								._text
-									!=item.text
-								if item.btn
-									._button
-										a(href="#").btn.-border.-red 
-											!=item.btn

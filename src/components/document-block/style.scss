@@ -61,5 +61,13 @@
 	&--max-width {
 		max-width: 100%;
 	}
-
+	&--info-list &{
+		&__item{
+			margin-right: 60px;
+			@include flex(center, center,1 ,1,1);
+		}
+		&__text{
+			margin-left: 16px;
+		}
+	}
 }

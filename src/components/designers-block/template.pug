@@ -1,0 +1,28 @@
+mixin designersBlock(data)
+	.designers-block&attributes(attributes)
+		._row
+			img(src=data.img, alt="")._img
+			._info
+				h5._title
+					!=data.title
+					._subtitle
+						!=data.subtitle
+				p._text
+					!=data.text
+				each param in data.params
+					._param
+						._item
+							+svg("designer-param-1")
+							._class 
+								!=param.class
+						._item
+							+svg("designer-param-2")
+							._camer
+								!=param.camer
+						._item
+							+svg("designer-param-3")
+							._width
+								!=param.width
+				._button
+					a(href="#").btn.-border.-red 
+						!=data.btn

@@ -120,13 +120,10 @@
 		}
 	}
 
-	&--btn & {
-		&__button {
-			margin-top: 40px;
-		}
-	}
+
 
 	&--slider {
+
 		.swiper-button-next,
 		.swiper-button-prev {
 			position: absolute;
@@ -190,8 +187,8 @@
 	}
 
 	&--slider & {
-		&__row {
-		}
+
+		&__row {}
 
 		&__slider {
 			// overflow: visible;
@@ -206,8 +203,7 @@
 			}
 		}
 
-		&__slides {
-		}
+		&__slides {}
 
 		&__slide {
 			display: flex;
@@ -217,6 +213,7 @@
 			img {
 				width: 100%;
 			}
+
 		}
 	}
 
@@ -249,7 +246,9 @@
 	}
 
 	&--slider-img & {
-
+		&__button {
+			margin-top: 40px;
+		}
 		&__slide {
 			max-height: 600px;
 			height: 100%;
@@ -273,10 +272,8 @@
 
 		&__info {
 			align-items: center;
-			position: absolute;
 			max-width: 736px;
 			margin: 0 auto;
-			padding: 10px 30px 10px 112px;
 		}
 
 		&__text {
@@ -309,9 +306,11 @@
 			.info-section__info {
 				position: relative;
 			}
+
 			.info-section__next {
 				right: 16px;
 			}
+
 			.info-section__prev {
 				right: 72px;
 			}
@@ -367,57 +366,18 @@
 
 	}
 
-	&--slider-row-revers & {
-		&__slide {
-			min-height: 600px;
-		}
-
-		&__row {
-			flex-direction: row-reverse;
-			margin-right: -65px;
-		}
-
-		&__info {
-			position: relative;
-			float: right;
-			max-width: 736px;
-			margin: 253px 96px;
-			padding: 0px 0px;
-		}
-
-		&__text {
-			text-align: left;
-		}
-
-		&__img {
-			display: block;
-			height: 100%;
-			width: 100%;
-			float: left;
-		}
-
-		&__prev,
-		&__next {
-			position: absolute;
-			bottom: 16px;
-		}
-
-		&__prev {
-			right: 73px;
-
-		}
-
-		&__next {
-			right: 16px;
-		}
-	}
-	&--text-center &{
+	&--text-center & {
 		&__info {
 			position: relative;
 			float: right;
 			max-width: 736px;
 			margin: 88px 112px;
 			padding: 0px 0px;
+		}
+	}
+	&--btn &{
+		&__button{
+		margin-top: 40px;
 		}
 	}
 }
