@@ -1,3 +1,8 @@
+button.btn {
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+
 .btn {
 	background: $btn-red;
 	font: 400 18px/25px $baseFF;
@@ -53,6 +58,28 @@
 	&--white {
 		border-color: $white;
 		color: $white;
+	}
+
+	&--black {
+		border-color: $black;
+		color: $black;
+		border: 2px solid $black;
+
+		&:hover {
+			background: $black;
+			border: 2px solid transparent;
+			color: $white;
+		}
+		&.btn[disabled] {
+			opacity: 1;
+			color: $gray-medium;
+			background: transparent;
+		}
+
+		&.is-active {
+			border: 2px solid transparent;
+			color: $gray-medium;
+		}
 	}
 
 	&--disabled,

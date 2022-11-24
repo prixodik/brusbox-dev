@@ -63,21 +63,6 @@ input[type="submit"] {
 	@include transition();
 }
 
-p {
-	margin: 0 0 24px;
-
-	&:last-child {
-		margin-bottom: 0;
-	}
-
-	@include media($xs) {
-		margin: 0 0 16px;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-}
 
 .color-green {
 	color: $green;
@@ -204,7 +189,27 @@ hr {
 	margin: 24px 0;
 }
 
+ul {
+	padding-left: 18px;
+}
+
 .d-none,
 .hidden {
 	display: none;
+}
+
+p {
+	margin: 0 0 24px!important;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include media($xs) {
+		margin: 0 0 16px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }

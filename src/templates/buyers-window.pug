@@ -7,6 +7,8 @@ block styles
 block content
 	include ../components/about-window-block/template
 	include ../components/head-section/template
+	include ../components/info-section/template
+	include ../components/colors-section/template
 	
 	.buyers-window-page
 		+headSection({
@@ -18,6 +20,35 @@ block content
 			+aboutWindowBlock()
 			h2._title Преимущества подоконников BRUSBOX
 
+		+infoSection({
+			img: 'images/info-about-window.jpg',
+			title: 'Cтабильно высокое качество',
+			text: 'Для их производства используется качественное, первичное сырье, благодаря чему подоконники отличаются надежностью, добротностью и долговечностью. Благодаря высокому качеству подоконники BRUSBOX не желтеют и не расслаиваются'
+		}).info-section--row-revers.info-section--long-text
+
+		+colorsSectionLamination()
+
+		+infoSectionSliderImg({
+			items: [{
+				title: '«Красная горка»',
+				text: 'ЖК «Жуков» — новый многоквартирный комплекс, расположенный на ул. Новосёлов, 45А. Если рассматривать новостройки в Дашках (Песочне) в Рязани, сегодня это один из самых современных проектов, строящихся в этом районе. Здесь всё предусмотрено для комфортной жизни: от грамотной планировки квартир до развитой инфраструктуры района.',
+				date: 'Дата реализации: 10 июня 2022',
+				img: 'images/info-slide-object-1.jpg'
+			},
+			{
+				text: 'С абсолютно разным набором технических характеристик (от 60 до 70 мм, от 3 до 6 камер). Относящиеся к различным ценовым сегментам (от эконом- до премиум-класса), следовательно предназначенные для различных целевых групп потребителей',
+				img: 'images/info-slide-object-2.jpg'
+			},
+			{
+				text: '<p>Из них 3 системы в морозостойком исполнении:</p> <p><ul> <li>ACLASS</li> <li>60-4</li> <li>70-6</li> </ul></p>',
+				img: 'images/info-slide-object-3.jpg'
+			},
+			{
+				text: 'Раздвижная система BRUSBOX GLIDE, предназначенная для остекления балконов и лоджий, крайне удобна в эксплуатации и незаменима в условиях экономии пространства в помещении',
+				img: 'images/info-slide-object-4.jpg'
+			}]
+		}).info-section--row-revers.info-section--small-title
+		
 		include ../components/contact-section/template
 		+contactSectionOrder2()
 		

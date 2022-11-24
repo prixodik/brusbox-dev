@@ -112,6 +112,80 @@
 			}
 		}
 	}
+
+	&--lamination & {
+		&__img {
+			margin-right: 43px;
+
+			@include media($xs) {
+				margin-right: 0;
+			}
+
+			max-width: 400px;
+
+			@include media($lg) {
+				max-width: 300px;
+			}
+			@include media($xs) {
+				max-width: 150px;
+			}
+
+			img {
+				max-height: 455px;
+				display: none;
+
+				&.is-active {
+					display: block;
+					animation-name: Appearance;
+					animation-duration: 2s;
+				}
+
+				@include media($lg) {
+					max-height: 370px;
+				}
+				@include media($xs) {
+					max-height: 166px;
+				}
+			}
+		}
+	}
+	&--lamination {
+		padding: 112px 0 120px;
+	}
+	&--lamination & {
+		&__buttons {
+			@include flex(center,center,center,center,0);
+			font: 300 18px/21px $baseFF;
+			text-transform: uppercase;
+			margin-bottom: 40px;
+		}
+
+		&__colors {
+
+		}
+
+		&__palette {
+			max-width: 100%;
+		}
+
+		&__palette {
+			margin-bottom: 40px;
+		}
+
+		&__button-left {
+			margin-right: 16px;
+		}
+
+		&__img {
+			max-width: 100%;
+			margin-right: 0;
+			display: none;
+
+			&.is-active {
+				display: block;
+			}
+		}
+	}
 }
 
 @keyframes Appearance {

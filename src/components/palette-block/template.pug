@@ -69,3 +69,19 @@ mixin paletteBlockSmall(data)
 			img(src="./images/color-50.jpg", alt="" data-id='2' data-color="Серый / арт. 3211005")._color.js-palette-profile
 			img(src="./images/color-51.jpg", alt="" data-id='3' data-color="Коричневый / арт. 3211005")._color.js-palette-profile
 			img(src="./images/color-52.jpg", alt="" data-id='4' data-color="Карамель / арт. 23405")._color.js-palette-profile
+
+mixin paletteBlock6Colors(data)
+	.palette-block.-lamination&attributes(attributes)
+		._head
+			._title Ламинация
+			._info
+				span.js-data-material(value="Золотой дуб / арт. 3211005") Золотой дуб / арт. 3211005
+				._copy.js-copy-material
+					+svg('copy-2')
+		._colors
+			img(src="./images/color-1.jpg", alt="" data-id='1' data-info="Ирландский дуб / арт. 32345005")._color.js-palette-lamination.is-active
+			img(src="./images/color-2.jpg", alt="" data-id='2' data-info="Ирландский дуб 2 / арт. 345345")._color.js-palette-lamination
+			img(src="./images/color-3.jpg", alt="" data-id='3' data-info="Ирландский дуб 3 / арт. 45756")._color.js-palette-lamination
+			img(src="./images/color-4.jpg", alt="" data-id='4' data-info="Ирландский дуб 4 / арт. 56778678")._color.js-palette-lamination
+			img(src="./images/color-5.jpg", alt="" data-id='5' data-info="Ирландский дуб 5 / арт. 534534")._color.js-palette-lamination
+			img(src="./images/color-6.jpg", alt="" data-id='6' data-info="Ирландский дуб 6 / арт. 53354534")._color.js-palette-lamination
