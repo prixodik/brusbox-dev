@@ -19,7 +19,7 @@
 			width: 20px;
 			height: 20px;
 			position: absolute;
-			top: 0;
+			top: calc(50% - 10px);
 			left: 0;
 			background: transparent;
 			border-radius: 50%;
@@ -47,7 +47,7 @@
 			max-height: 8px;
 			background: $black;
 			position: absolute;
-			top: calc(10px - 4px);
+			top: calc(50% - 4px);
 			left: calc(10px - 4px);
 			border-radius: 50%;
 		}
