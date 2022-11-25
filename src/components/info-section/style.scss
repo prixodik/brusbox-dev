@@ -28,10 +28,12 @@
 		@include media($md) {
 			padding: 25px 70px;
 		}
+		
 		@include media($sm) {
 			padding: 70px 40px;
 			max-width: 100%;
 		}
+
 		@include media($xs) {
 			padding: 40px;
 		}
