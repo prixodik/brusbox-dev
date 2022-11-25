@@ -55,10 +55,12 @@
 
 		&__row {
 			align-items: center;
+			@include flex(center, 0, 0, 0, 0);
 		}
 	}
 
 	&--max-width {
+		justify-content: center;
 		max-width: 100%;
 	}
 	&--info-list &{
