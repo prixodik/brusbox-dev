@@ -48,6 +48,22 @@
 		padding: 67px 0;
 		position: relative;
 		z-index: 4;
+
+		@include media($md) {
+			padding: 40px 0;
+			height: 375px;
+		}
+
+		@include media($sm) {
+			padding: 78px 0;
+			@include flex(flex-end, flex-start, stretch, nowrap, column);
+			height: 840px;
+		}
+
+		@include media($xs) {
+			padding: 60px 0;
+			height: 449px;
+		}
 	}
 
 	&__bread {
@@ -55,6 +71,10 @@
 		display: flex;
 		justify-content: center;
 		z-index: 4;
+
+		@include media($md) {
+			margin-bottom: 13px;
+		}
 	}
 
 	&__title {

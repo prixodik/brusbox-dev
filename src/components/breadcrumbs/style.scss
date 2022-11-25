@@ -7,10 +7,18 @@
 	}
 
 	&__li {
-		font: 300 14px/16px $baseFF;
+		font: 400 14px/16px $baseFF;
+
+		@include media($md) {
+			font: 400 12px/14px $baseFF;
+		}
+
+		@include media($sm) {
+			font: 400 16px/17px $baseFF;
+		}
 
 		@include media($xs) {
-			font: 300 10px/11px $baseFF;
+			font: 400 10px/11px $baseFF;
 		}
 
 		color: $bread;
@@ -38,10 +46,6 @@
 			}
 
 			color: $white;
-		}
-
-		@include media($sm) {
-			font: 300 10px/11px $baseFF;
 		}
 	}
 

@@ -2,7 +2,12 @@ include ../breadcrumbs/template
 
 mixin headSection(data)
 	.head-section&attributes(attributes)
-		img(src=data.img, alt="")._img
+		picture
+			if data.imgSm
+				source(media="(max-width: 770px)" srcset=data.imgSm)
+			if data.imgXs
+				source(media="(max-width: 450px)" srcset=data.imgXs)
+			img(src=data.img, alt="")._img
 		._container.container
 			._info
 				+breadcrumbs({

@@ -1,31 +1,45 @@
 .colors-section {
-	padding: 64px 0 90px;
+	padding: 76px 0 90px;
 
 	@include media($md) {
-		padding-bottom: 60px;
+		padding-bottom: 0;
+		padding-top: 36px;
 	}
 	@include media($sm) {
-		padding-top: 56px;
+		padding-top: 116px;
 	}
 	@include media($xs) {
-		padding-bottom: 30px;
+		padding-top: 40px;
 	}
 
 	&__row {
 		@include flex(0);
 		flex-wrap: nowrap;
+
+		@include media($sm) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&__left {
-		@include media($sm) {
-			padding: 0;
-		}
 		padding-right: 10px;
 		max-width: 559px;
 		width: 100%;
+
+		@include media($sm) {
+			padding: 0;
+			max-width: 100%;
+		}
 	}
 
 	&__palettes {
+		@include media($sm) {
+			margin-bottom: 33px;
+		}
+		@include media($xs) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__palette {
@@ -35,9 +49,20 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+		@include media($md) {
+			max-width: 348px;
+		}
 
 		@include media($sm) {
-			margin-bottom: 40px;
+			max-width: 100%;
+			margin-bottom: 26px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		@include media($xs) {
+			margin-bottom: 30px;
 
 			&:last-child {
 				margin-bottom: 0;
@@ -54,18 +79,21 @@
 
 		@include media($lg) {
 			max-width: 600px;
-			margin-right: 0;
+			padding-left: 0;
+		}
+		@include media($md) {
+			max-width: 444px;
+			justify-content: center;
 		}
 		@include media($sm) {
-			max-width: 100%;
-			justify-content: center;
-			padding: 0;
+			max-width: 640px;
+			justify-content: flex-start;
 		}
 		@include media($xs) {
 			max-width: 100%;
-			justify-content: space-between;
+			justify-content: center;
 			padding: 0;
-			margin-top: 40px;
+			margin-top: 16px;
 		}
 
 		&-img-1 {
@@ -73,6 +101,13 @@
 
 			@include media($xs) {
 				margin-right: 0;
+			}
+			@include media($sm) {
+				margin-right: 100px;
+			}
+
+			@include media($xs) {
+				margin-right: 40px;
 			}
 		}
 
@@ -82,6 +117,9 @@
 
 			@include media($lg) {
 				max-width: 300px;
+			}
+			@include media($sm) {
+				max-width: 325px;
 			}
 			@include media($xs) {
 				max-width: 150px;

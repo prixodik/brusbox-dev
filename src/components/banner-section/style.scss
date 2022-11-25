@@ -99,6 +99,31 @@
 		}
 	}
 
+	&--img {
+		padding: 0;
+
+		img {
+			object-fit: cover;
+			display: block;
+			height: 524px;
+
+			@include media($md) {
+				height: 328px;
+			}
+
+			@include media($sm) {
+				height: 576px;
+			}
+
+			@include media($xs) {
+				height: 320px;
+			}
+		}
+	}
+	&--img & {
+
+	}
+
 	&--img-mode {
 		position: relative;
 		padding: 200px 0 230px;

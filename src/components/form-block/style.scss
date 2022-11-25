@@ -3,13 +3,31 @@
 		margin-bottom: 16px;
 		color: $black;
 
+		@include media($md) {
+			margin-bottom: 2px;
+		}
 		@include media($xs) {
-			color: $black;
+			margin-bottom: 8px;
 		}
 	}
 	&__subtitle {
 		font: 300 13px/14px $baseFF;
 		margin-bottom: 27px;
+
+		@include media($md) {
+			font: 300 14px/19px $baseFF;
+			margin-bottom: 24px;
+		}
+
+		@include media($sm) {
+			font: 300 22px/30px $baseFF;
+			margin-bottom: 34px;
+		}
+
+		@include media($xs) {
+			font: 300 13px/18px $baseFF;
+			margin-bottom: 27px;
+		}
 	}
 
 	&__row {
@@ -42,13 +60,30 @@
 			margin-bottom: 20px;
 		}
 
+		@include media($md) {
+			margin-bottom: 35px;
+
+			&:last-child {
+				margin-bottom: 32px;
+			}
+		}
+
+		@include media($sm) {
+			margin-bottom: 45px;
+
+			&:last-child {
+				margin-bottom: 24px;
+			}
+		}
+
 		@include media($xs) {
-			margin-bottom: 48px;
+			margin-bottom: 28px;
 
 			&:last-child {
 				margin-bottom: 17px;
 			}
 		}
+
 		textarea {
 			font: 300 18px/19px $baseFF;
 			padding: 13px;
@@ -84,8 +119,19 @@
 			border: none;
 			border-bottom: 1px solid $gray;
 
+			@include media($md) {
+				font: 300 14px/19px $baseFF;
+				padding: 8px 0;
+			}
+
+			@include media($sm) {
+				font: 300 22px/30px $baseFF;
+				padding: 3px 0;
+			}
+
 			@include media($xs) {
-				font: 300 13px/14px $baseFF;
+				font: 300 13px/18px $baseFF;
+				padding: 5px 0;
 			}
 
 			&::placeholder {
@@ -116,8 +162,17 @@
 		color: $gray-medium;
 		margin-bottom: 24px;
 
-		@include media($xs) {
+		@include media($md) {
+			margin-bottom: 24px;
+			font: 300 10px/10px $baseFF;
+		}
+
+		@include media($sm) {
 			margin-bottom: 16px;
+			font: 300 16px/17px $baseFF;
+		}
+
+		@include media($xs) {
 			font: 300 10px/10px $baseFF;
 		}
 	}

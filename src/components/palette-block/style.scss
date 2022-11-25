@@ -3,6 +3,14 @@
 		@include flex(space-between, center, center);
 		margin-bottom: 24px;
 
+		@include media($md) {
+			margin-bottom: 16px;
+		}
+
+		@include media($xs) {
+			margin-bottom: 8px;
+		}
+
 		@include media($xs) {
 			flex-direction: column;
 			align-items: flex-start;
@@ -15,9 +23,18 @@
 	&__title {
 		font: 300 28px/30px $baseFF;
 
+		@include media($md) {
+			font: 300 18px/21px $baseFF;
+		}
+
+		@include media($sm) {
+			font: 300 22px/30px $baseFF;
+			margin-right: 10px;
+		}
+
 		@include media($xs) {
-			font: 300 20px/20px $baseFF;
-			margin-bottom: 16px;
+			font: 300 18px/21px $baseFF;
+			margin-bottom: 4px;
 		}
 	}
 
@@ -26,8 +43,16 @@
 		color: $bb-gray;
 		font: 400 14px/14px $baseFF;
 
+		@include media($md) {
+			font: 400 12px/14px $baseFF;
+		}
+
+		@include media($sm) {
+			font: 400 14px/14px $baseFF;
+		}
+
 		@include media($xs) {
-			font: 400 12px/13px $baseFF;
+			font: 400 14px/16px $baseFF;
 		}
 	}
 
@@ -50,6 +75,10 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+
+		@include media($xs) {
+			margin: 0 -8px;
+		}
 	}
 
 	&__color {
@@ -62,31 +91,76 @@
 			// transform: scale(1.1);
 			outline-offset: -8px;
 			outline: 8px solid rgba($btn-red, 0.5);
+
+			@include media($md) {
+				outline-offset: -6px;
+				outline: 6px solid rgba($btn-red, 0.5);
+			}
 		}
 
 		&.is-active {
 			outline-offset: -8px;
 			outline: 8px solid rgba($btn-red, 0.5);
+
+			@include media($md) {
+				outline-offset: -6px;
+				outline: 6px solid rgba($btn-red, 0.5);
+			}
 		}
 
 		border-radius: 50%;
 		margin-right: 3px;
+		width: 42px;
+		height: 42px;
 
-		@include media($sm) {
-			width: 26px;
-			height: 26px;
-			margin-right: 15px;
+		@include media($md) {
+			margin-right: 5px;
+			width: 24px;
+			height: 24px;
+			margin-bottom: 5px;
 
 			&:last-child {
 				margin-right: 0;
 			}
 		}
-		
+
+		@include media($sm) {
+			margin-right: 13px;
+			margin-bottom: 13px;
+			width: 36px;
+			height: 36px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@include media($xs) {
+			// margin-right: 15px;
+			margin: 0 8px 10px;
+			width: 26px;
+			height: 26px;
+		}
+
 		img {
 			display: block;
 			width: 42px;
 			height: 42px;
 			object-fit: contain;
+
+			@include media($md) {
+				width: 24px;
+				height: 24px;
+			}
+
+			@include media($sm) {
+				width: 36px;
+				height: 36px;
+			}
+			@include media($xs) {
+				width: 26px;
+				height: 26px;
+			}
 		}
 	}
 
