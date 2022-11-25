@@ -1,0 +1,45 @@
+.search-result-page {
+	&__wrap {
+		padding: 112px 0 8px;
+	}
+	
+	&__search {
+		margin-bottom: 18px
+	}
+
+	&__switches {
+		@include flex(0,center,center,0);
+	}
+
+	&__switch {
+		@include flex(0,center,center,0);
+		margin-right: 40px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__result {
+		font: 300 14px/15px $baseFF;
+		margin: 40px 0;
+	}
+
+	&__search-items {
+	}
+
+	&__item {
+		border-top: 1px solid $gray-200;
+		padding: 40px 0;
+
+		&-title {
+			margin-bottom: 9px;
+		}
+
+		&-text {
+		}
+	}
+
+	&__pagination {
+	}
+}

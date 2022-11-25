@@ -23,8 +23,6 @@
 		text-align: center;
 	}
 
-
-
 	&--border & {
 		&__row {
 			position: relative;
@@ -79,6 +77,18 @@
 		padding: 40px 0px;
 	}
 	&--gray{
-		background: #F1F1F1;
+		background: $bg-grey;
+	}
+
+	&--gray-dark{
+		background: $gray-200;
+	}
+
+	&--title-black {
+		color: $black;
+	}
+
+	&--special-padding {
+		padding: 112px 0 40px;
 	}
 }

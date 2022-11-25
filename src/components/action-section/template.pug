@@ -3,8 +3,9 @@ include ../action-block/template
 mixin actionSection(data)
 	.action-section&attributes(attributes)
 		._container.container
-			h5._title
-				!= data.title
+			if data.title
+				h5._title
+					!= data.title
 			._actions.row
 				+actionBlock({
 					date: "1 марта — 30 июня",
