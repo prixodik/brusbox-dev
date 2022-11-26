@@ -7,34 +7,84 @@
 		margin-bottom: 12px;
 		max-width: 872px;
 
-		&:last-child{ margin-bottom: 0; border: 0; }
+		&:last-child {
+			margin-bottom: 0;
+			
+			@include media($sm) {
+				border-bottom: 1px solid #e1e1e1;
+			}
+		}
+
+		@include media($md) {
+			margin-bottom: 8px;
+		}
+
+		@include media($sm) {
+			display: grid;
+			max-width: 672px;
+		}
+
+		@include media($xs) {
+			border: 0;
+		}
 	}
 
 	&__label,
 	&__value {
 		padding-bottom: 8px;
 		font: 300 18px/1.4 $baseFF;
+
+		@include media($md) {
+			font-size: 14px;
+		}
+
+		@include media($sm) {
+			font: 300 22px/30.8px $baseFF;
+		}
+
+		@include media($xs) {
+			font: 300 13px/18.2px $baseFF;
+			padding-bottom: 4px;
+		}
 	}
+
 	&__value {
 		font-weight: 400;
 		flex: 1 1 auto;
 		text-align: right;
+
+		@include media($sm) {
+			font: 400 24px/26.4px $baseFF;
+			padding-bottom: 16px;
+			text-align: left;
+		}
+
+		@include media($xs) {
+			padding-bottom: 8px;
+			font: 400 13px/14.3px $baseFF;
+		}
 	}
-	&--buyers &{
-		&__title{
+
+	&--buyers & {
+		&__title {
 			margin-bottom: 8px;
 		}
-		&__value, &__label{
+
+		&__value,
+		&__label {
 			padding-bottom: 4px;
-			span{
+
+			span {
 				text-transform: uppercase;
 			}
 		}
-		&__item{
+
+		&__item {
 			margin-bottom: 4px;
 		}
 	}
-	&--padding{
+
+	&--padding {
 		padding: 40px 0px;
 	}
 }

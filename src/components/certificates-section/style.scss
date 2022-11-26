@@ -1,23 +1,79 @@
 .certificates-section {
 	padding: 112px 0px 112px 0px;
 
-	&__title {
-		text-align: center;
-		margin-bottom: 60px
+	@include media($md) {
+		padding: 60px 0px;
 	}
 
+	@include media($sm) {
+		padding: 70px 0px;
+	}
+
+	@include media($xs) {
+		padding: 40px 0px;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 60px 0px;
+
+		@include media($md) {
+			padding-bottom: 40px;
+		}
+
+		@include media($sm) {
+			text-align: start;
+			padding-bottom: 0px;
+		}
+
+		@include media($xs) {
+			padding-bottom: 0px;
+		}
+	}
+
+
 	&__row {
+
 		// @include flex(space-between,center,center);
+		@include media($sm) {
+			display: block;
+		}
 	}
 
 	&__row-center {
 		justify-content: center;
-		margin: 0px 107px;
+
+		@include media($xs) {
+			display: block;
+		}
+
 	}
 
 	&__item {
+		@include media($sm) {
+			padding-top: 40px;
+		}
+
+		@include media($xs) {
+			padding: 0px;
+			padding-left: 10px;
+		}
+
 		&--center {
 			margin: 60px auto 0;
+
+			@include media($md) {
+				margin: 40px auto 0;
+			}
+
+			@include media($sm) {
+				padding-bottom: 40px;
+			}
+
+			@include media($xs) {
+				padding: 0px;
+				margin: 0px;
+			}
 		}
 	}
 }

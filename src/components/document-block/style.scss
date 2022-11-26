@@ -3,12 +3,44 @@
 	@include flex(0, center, flex-start, 0, 0);
 	max-width: 456px;
 
+	@include media($md) {
+		align-items: flex-start;
+		max-width: 346px;
+	}
+
+	@include media($sm) {
+		max-width: 688px;
+	}
+
+	@include media($xs) {
+		align-items: center;
+		max-width: 288px;
+	}
+
 	&__text {
 		text-align: left;
 		max-width: 356px;
 		margin-left: 8px;
 		font: 300 18px/25px $baseFF;
 		color: $black;
+
+		@include media($md) {
+			font: 300 14px/19.6px $baseFF;
+			margin-left: 20px;
+		}
+
+		@include media($sm) {
+			font: 300 22px/30.8px $baseFF;
+			padding: 0px 0px;
+			margin-left: 16px;
+			max-width: 592px;
+		}
+
+		@include media($xs) {
+			padding: 40px 0px;
+			font: 300 13px/18.2px $baseFF;
+		}
+
 	}
 
 	&__img {
@@ -18,7 +50,19 @@
 		img {
 			display: block;
 			object-fit: cover;
-			width: 95px;
+		}
+
+		@include media($md) {
+			flex: none;
+			max-width: 32px;
+		}
+
+		@include media($sm) {
+			max-width: 80px;
+		}
+
+		@include media($xs) {
+			max-width: 48px;
 		}
 	}
 
@@ -49,7 +93,8 @@
 
 	&--btn-list & {
 
-		&__text,&__button {
+		&__text,
+		&__button {
 			margin-left: 20px;
 		}
 
@@ -63,12 +108,14 @@
 		justify-content: center;
 		max-width: 100%;
 	}
-	&--info-list &{
-		&__item{
+
+	&--info-list & {
+		&__item {
 			margin-right: 60px;
-			@include flex(center, center,1 ,1,1);
+			@include flex(center, center, 1, 1, 1);
 		}
-		&__text{
+
+		&__text {
 			margin-left: 16px;
 		}
 	}

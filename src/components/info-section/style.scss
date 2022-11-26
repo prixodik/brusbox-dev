@@ -1,6 +1,8 @@
 .info-section {
 	background-color: $gray-bridge;
 
+
+
 	&__container {
 		max-width: 1920px;
 		width: 100%;
@@ -15,7 +17,6 @@
 
 		@include media($sm) {
 			justify-content: center;
-			flex-direction: column-reverse;
 		}
 	}
 
@@ -28,12 +29,56 @@
 		@include media($md) {
 			padding: 25px 70px;
 		}
+
 		@include media($sm) {
 			padding: 70px 40px;
 			max-width: 100%;
 		}
+
 		@include media($xs) {
 			padding: 40px;
+		}
+	}
+
+	&--params & {
+		@include media($md) {
+			justify-content: baseline;
+		}
+
+
+		&__title {
+
+			@include media($md) {
+				margin-bottom: 24px;
+				font: 300 24px/29px $baseFF;
+
+			}
+
+			@include media($sm) {
+				font: 300 44px/48.4px $baseFF;
+				margin-bottom: 16px;
+			}
+
+			@include media($xs) {
+				font: 300 20px/24px $baseFF;
+			}
+
+
+		}
+
+		&__info {
+			@include media($md) {
+				padding: 60px 60px;
+			}
+
+			@include media($sm) {
+				padding: 70px 40px;
+				max-width: 100%;
+			}
+
+			@include media($xs) {
+				padding: 40px 16px;
+			}
 		}
 	}
 
@@ -41,13 +86,9 @@
 		/* padding-bottom: 8px; */
 		margin-bottom: 16px;
 
-		@include media($md) {
-			font: 300 18px/21px $baseFF;
-		}
 	}
 
-	&__text {
-	}
+	&__text {}
 
 	&__img {
 		max-width: 50%;
@@ -74,7 +115,6 @@
 			flex-direction: row-reverse;
 
 			@include media($sm) {
-				flex-direction: column-reverse;
 			}
 		}
 	}
@@ -118,11 +158,27 @@
 
 	&--col-center {
 		padding: 112px 0;
+
+		@include media($md) {
+			padding: 60px 0px;
+		}
+
+		@include media($sm) {
+			padding: 70px 0px;
+		}
+
+		@include media($xs) {
+			padding: 40px 0px;
+		}
 	}
 
 	&--col-center & {
 		&__row {
 			justify-content: center;
+
+			@include media($sm) {
+				justify-content: flex-start;
+			}
 		}
 	}
 
@@ -140,6 +196,7 @@
 	}
 
 	&--slider {
+
 		.swiper-button-next,
 		.swiper-button-prev {
 			position: absolute;
@@ -201,15 +258,15 @@
 			padding: 120px 0;
 		}
 	}
-	&--padding-bt-big &{
-		&__row{
+
+	&--padding-bt-big & {
+		&__row {
 			padding-bottom: 120px;
 		}
 	}
 
 	&--slider & {
-		&__row {
-		}
+		&__row {}
 
 		&__slider {
 			// overflow: visible;
@@ -224,8 +281,7 @@
 			}
 		}
 
-		&__slides {
-		}
+		&__slides {}
 
 		&__slide {
 			display: flex;
@@ -327,6 +383,7 @@
 		&__info {
 			position: relative;
 		}
+
 		&__next {
 			left: 72px;
 		}
@@ -424,17 +481,20 @@
 			font-size: 36px;
 		}
 	}
+
 	&--title-mb & {
 		&__title {
 			margin-bottom: 16px;
 		}
 	}
-	&--ul{
-		ul{
-		padding-left: 28px;
+
+	&--ul {
+		ul {
+			padding-left: 28px;
 		}
 	}
-	&--bg-white{
+
+	&--bg-white {
 		background-color: $white;
 	}
 }

@@ -75,6 +75,11 @@
 		@include media($md) {
 			margin-bottom: 13px;
 		}
+		@include media($xs) {
+			max-width: 100%; 
+			overflow-x: auto;
+		}
+		
 	}
 
 	&__title {
@@ -83,6 +88,14 @@
 		text-transform: none;
 		z-index: 10;
 		text-align: center;
+
+		@include media($sm) {
+			text-align: start;
+		}
+
+		@include media($xs) {
+			text-align: start;
+		}
 	}
 
 	&__subtitle {

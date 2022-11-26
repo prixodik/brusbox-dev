@@ -17,19 +17,19 @@ $title-h1-lg: 100 44px/42px $titleFF; // ?
 $title-h2-lg: 100 60px/60px $titleFF;
 $title-h3-lg: 600 16px/1.2 $baseFF;
 $title-h4-lg: 300 24px/28px $baseFF; // ?
-$title-h5-lg: 600 16px/1.4 $titleFF; // ?
+$title-h5-lg: 300 18px/21.6px $titleFF;
 
 $title-h1-sm: 300 54px/59px $titleFF;
 $title-h2-sm: 100 26px/26px $titleFF;
 $title-h3-sm: bold 18px/1.2 $baseFF;
 $title-h4-sm: 300 44px/48px $baseFF;
-$title-h5-sm: 600 16px/1.2 $titleFF; // ?
+$title-h5-sm: 300 28px/33.6px $titleFF;
 
 $title-h1-xs: 300 24px/26px $titleFF;
 $title-h2-xs: 100 24px/24px $titleFF;
 $title-h3-xs: 600 14px/1.2 $baseFF;
 $title-h4-xs: 300 24px/26px $baseFF;
-$title-h5-xs: 600 12px/1.2 $titleFF;
+$title-h5-xs: 300 18px/21.6px $titleFF;
 
 $title-color: inherit;
 
@@ -108,10 +108,10 @@ h5,
 	margin: 0 0 16px 0;
 
 	@include media($lg) {
-		//font: $title-h5-lg;
+		font: $title-h5-lg;
 	}
 	@include media($sm) {
-		//font: $title-h5-sm;
+		font: $title-h5-sm;
 	}
 	@include media($xs) {
 		font: $title-h5-xs;
