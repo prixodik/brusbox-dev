@@ -39,6 +39,18 @@
 	&__info {
 		margin: 112px 0 112px;
 
+		@include media($md) {
+			margin: 64px 0 0;
+		}
+
+		@include media($sm) {
+			margin: 70px 0 0;
+		}
+
+		@include media($xs) {
+			margin: 40px 0 0;
+		}
+
 		&-title {
 			margin-bottom: 16px;
 		}
@@ -63,7 +75,7 @@
 	}
 
 	&__text {
-		font: $fs-p1;
+		// font: $fs-p1;
 
 		&--row {
 			margin-left: 0;
@@ -88,6 +100,18 @@
 
 	&--padding-bottom {
 		padding-bottom: 112px;
+
+		@include media($md) {
+			padding-bottom: 106px;
+		}
+
+		@include media($sm) {
+			padding-bottom: 55px;
+		}
+
+		@include media($xs) {
+			padding-bottom: 31px;
+		}
 	}
 
 	&--color-solutions & {

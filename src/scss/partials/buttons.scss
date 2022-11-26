@@ -1,5 +1,5 @@
 button.btn {
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	box-sizing: border-box;
 }
 
@@ -18,9 +18,19 @@ button.btn {
 	border-radius: 30px;
 	border: none;
 
+	@include media($md) {
+		font: 300 14px/19px $baseFF;
+		padding: 8px 24px;
+	}
+
+	@include media($sm) {
+		font: 400 22px/30px $baseFF;
+		padding: 9px 32px;
+	}
+
 	@include media($xs) {
-		font: 400 12px/13px $baseFF;
-		padding: 10px 24px;
+		font: 400 13px/18px $baseFF;
+		padding: 8px 16px;
 	}
 
 	svg {

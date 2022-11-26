@@ -23,7 +23,11 @@
   </head>
   <body class="color-solution-page">
     <div class="main-section main-section--color-solutions main-section--select-color main-section--padding-bottom">
-          <div class="head-section main-section__head"><img class="head-section__img" src="images/main-bg-2.jpg" alt="">
+          <div class="head-section main-section__head">
+            <picture>
+              <source media="(max-width: 770px)" srcset="images/main-bg-2-sm.jpg">
+              <source media="(max-width: 450px)" srcset="images/main-bg-2-xs.jpg"><img class="head-section__img" src="images/main-bg-2.jpg" alt="">
+            </picture>
             <div class="head-section__container container">
               <div class="head-section__info">
                     <div class="breadcrumbs head-section__bread">
@@ -46,8 +50,8 @@
       <div class="main-section__container container container--sm">
         <div class="main-section__info">
           <div class="main-section__text row">
-            <p class="col-6">Кто сказал, что окно должно быть белым? «БРУСБОКС» считает, что покупатель вправе сам решать, какого цвета будут окна в его доме. Мы любим белый цвет – он универсален, но для тех, кому не подходят стандартные решения, компания «БРУСБОКС» предлагает большой выбор расцветок оконного профиля. </p>
-            <p class="col-6">Хотите гармонично вписать ваши окна в интерьер? Выберите любой вариант из 96 цветов каталога ламинации немецкой фирмы «RENOLIT» и наслаждайтесь результатом. Мы используем немецкий клей «KLEIBERIT», благодаря которому пленка не отслаивается даже в самых суровых условиях.</p>
+            <p class="col-6 col-sm-12">Кто сказал, что окно должно быть белым? «БРУСБОКС» считает, что покупатель вправе сам решать, какого цвета будут окна в его доме. Мы любим белый цвет – он универсален, но для тех, кому не подходят стандартные решения, компания «БРУСБОКС» предлагает большой выбор расцветок оконного профиля. </p>
+            <p class="col-6 col-sm-12">Хотите гармонично вписать ваши окна в интерьер? Выберите любой вариант из 96 цветов каталога ламинации немецкой фирмы «RENOLIT» и наслаждайтесь результатом. Мы используем немецкий клей «KLEIBERIT», благодаря которому пленка не отслаивается даже в самых суровых условиях.</p>
           </div>
                     <div class="colors-section">
                       <div class="colors-section__row">
@@ -91,32 +95,30 @@
       </div>
     </div>
         <div class="contact-section contact-section--order">
-          <div class="contact-section__container container">
-            <div class="contact-section__row row">
-              <div class="contact-section__left">
-                    <div class="form-block form-block--order contact-section__form">
-                      <h4 class="form-block__title">Закажите лучшие окна в BRUSBOX!</h4>
-                      <div class="form-block__subtitle">Оставьте заявку и наш специалист свяжется с вами для расчета</div>
-                      <form action="">
-                        <div class="form-block__row">
-                          <div class="form-block__inputs">
-                            <div class="form-block__input">
-                              <input class="form-control js-required" type="text" placeholder="Ваше имя*" required>
-                            </div>
-                            <div class="form-block__input">
-                              <input class="form-control js-required" type="tel" placeholder="Телeфон*" required>
-                            </div>
+          <div class="contact-section__row row">
+            <div class="contact-section__left">
+                  <div class="form-block form-block--order contact-section__form">
+                    <h4 class="form-block__title">Закажите лучшие окна в BRUSBOX!</h4>
+                    <div class="form-block__subtitle">Оставьте заявку и наш специалист свяжется с вами для расчета</div>
+                    <form action="">
+                      <div class="form-block__row">
+                        <div class="form-block__inputs">
+                          <div class="form-block__input">
+                            <input class="form-control js-required" type="text" placeholder="Ваше имя*" required>
                           </div>
-                          <div class="form-block__agree">Нажимая кнопку «Отправить», я подтверждаю свою дееспособность,<br>согласие на обработку персональных данных в соответствии с указанным здесь текстом</div>
-                          <div class="form-block__buttons">
-                            <button class="btn btn--red js-submit" type="submit">Отправить</button>
+                          <div class="form-block__input">
+                            <input class="form-control js-required" type="tel" placeholder="Телeфон*" required>
                           </div>
                         </div>
-                      </form>
-                    </div>
-              </div>
-              <div class="contact-section__right"><img class="contact-section__banner" src="images/order-banner.jpg" alt=""></div>
+                        <div class="form-block__agree">Нажимая кнопку «Отправить», я подтверждаю свою дееспособность,<br>согласие на обработку персональных данных в соответствии с указанным здесь текстом</div>
+                        <div class="form-block__buttons">
+                          <button class="btn btn--red js-submit" type="submit">Отправить</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
             </div>
+            <div class="contact-section__right"><img class="contact-section__banner" src="images/order-banner.jpg" alt=""></div>
           </div>
         </div>
         <div class="text-section">

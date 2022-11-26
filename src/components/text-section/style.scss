@@ -1,6 +1,14 @@
 .text-section {
 	padding: 100px 0;
 
+	@include media($md) {
+		padding: 70px 0;
+	}
+
+	@include media($xs) {
+		padding: 40px 0;
+	}
+
 	&__buttons {
 		display: flex;
 		align-items: center;

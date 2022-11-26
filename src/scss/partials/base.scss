@@ -37,11 +37,11 @@ body {
 		}
 	}
 
-	@include media($lg) {
-		font: $fs-p2-lg;
+	@include media($md) {
+		font: 300 14px/20px $baseFF;
 	}
 	@include media($xs) {
-		font: $fs-p3;
+		font: 300 13px/18px $baseFF;
 	}
 }
 
@@ -140,8 +140,10 @@ a:hover {
 	&--sm {
 		margin: 0 auto;
 		max-width: 1490px;
-		padding-left: 10px;
-		padding-right: 10px;
+		// padding-left: 10px;
+		// padding-right: 10px;
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 
 	&--full {
@@ -172,6 +174,8 @@ a:hover {
 
 	@include media($md) {
 		max-width: 1120px;
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 	@include media($xs) {
 		padding-left: 16px;
@@ -203,6 +207,14 @@ p {
 
 	&:last-child {
 		margin-bottom: 0;
+	}
+
+	@include media($sm) {
+		margin: 0 0 16px!important;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	@include media($xs) {

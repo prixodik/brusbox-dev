@@ -15,23 +15,38 @@
 
 		@include media($sm) {
 			justify-content: center;
+			flex-direction: column-reverse;
 		}
 	}
 
 	&__info {
-		max-width: 640px;
+		max-width: 736px;
 		margin: 0 auto;
 		padding: 15px 24px;
 		align-self: center;
+
+		@include media($md) {
+			padding: 25px 70px;
+		}
+		@include media($sm) {
+			padding: 70px 40px;
+			max-width: 100%;
+		}
+		@include media($xs) {
+			padding: 40px;
+		}
 	}
 
 	&__title {
 		/* padding-bottom: 8px; */
-		margin-bottom: 40px;
+		margin-bottom: 16px;
+
+		@include media($md) {
+			font: 300 18px/21px $baseFF;
+		}
 	}
 
 	&__text {
-		font: $fs-p1;
 	}
 
 	&__img {
@@ -41,6 +56,8 @@
 
 		@include media($sm) {
 			max-width: 100%;
+			padding: 0;
+			max-height: 576px;
 		}
 
 		// min-height: 600px;
@@ -55,6 +72,10 @@
 	&--row-revers & {
 		&__row {
 			flex-direction: row-reverse;
+
+			@include media($sm) {
+				flex-direction: column-reverse;
+			}
 		}
 	}
 
