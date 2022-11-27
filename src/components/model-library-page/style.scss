@@ -1,8 +1,32 @@
 .model-library-page {
 	padding-bottom: 112px;
 
+	@include media ($md){
+		padding-bottom: 40px;
+	}
+
+	@include media ($sm){
+		padding-bottom: 70px;
+	}
+
+	@include media ($xs){
+		padding-bottom: 24px;
+	}
+
 	&__section {
 		padding: 120px 0 0;
+
+		@include media ($md){
+			padding-top: 40px;
+		}
+
+		@include media ($sm){
+			padding-top: 70px;
+		}
+
+		@include media ($xs){
+			padding-top: 40px;
+		}
 
 		&--btn {
 			padding-bottom: 112px;
@@ -22,11 +46,32 @@
 	&__item {
 		margin-bottom: 60px;
 
+		@include media ($sm){
+			margin-bottom: 40px;
+			font: 300 22px/30.8px $baseFF;
+		}
+
+		@include media ($xs){
+			margin-bottom: 24px;
+			font: 300 13px/18.2px $baseFF;
+		}
+
 		&--column {
 			margin-bottom: 60px;
 			&:last-child {
 				margin-bottom: 0;
 			}
+
+			@include media ($md){
+				margin-bottom: 40px;
+			}
+
+			@include media ($sm){
+				display: flex;
+				flex-direction: row;
+			}
+
+
 		}
 	}
 	

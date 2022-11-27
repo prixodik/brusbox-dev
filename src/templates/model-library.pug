@@ -12,7 +12,9 @@ block content
 		+headSection({
 			bread: [{url: '#', title: 'Архитекторам и дизайнерам'},{url: '#', title: 'Библиотека BIM-моделей'}],
 			title: "Библиотека BIM-моделей",
-			img: "images/main-bg-model-library.jpg"
+			img: "images/main-bg-model-library.jpg",
+			imgSm: "images/main-bg-model-library-sm.jpg",
+			imgXs: "images/main-bg-model-library-xs.jpg",
 		})._head
 
 		._container.container
@@ -21,36 +23,36 @@ block content
 					+modelLibraryBlock({
 						img: "images/model-library-1.png",
 						text: "Одностворчатое окно с разными схемами открывания и заполнения",
-					})._item.col-3
-					._item.model-library-page__item--column.col-3
+					})._item.col-3.col-sm-6.col-xs-12
+					._item.model-library-page__item--column.col-3.col-sm-12
 						+modelLibraryBlock({
 							img: "images/model-library-2.png",
 							text: "Фрамужное (откидное) окно",
-						})._item
+						})._item.col-sm-6
 						+modelLibraryBlock({
 							img: "images/model-library-3.png",
 							text: "Двухстворчатое окно с разными схемами открывания и заполнения",
-						})
+						}).col-sm-6
 					+modelLibraryBlock({
 						img: "images/model-library-4.png",
 						text: "Т-образное окно с правой и левой поворотно-откидной створкой и с двумя откидными створками",
-					})._item.col-3
+					})._item.col-3.col-sm-6.col-xs-12
 					+modelLibraryBlock({
 						img: "images/model-library-5.png",
 						text: "Окно с разными схемами открывания <br> и глухой частью сверху",
-					})._item.col-3
+					})._item.col-3.col-sm-6.col-xs-12
 					+modelLibraryBlock({
 						img: "images/model-library-6.png",
 						text: "Трехстворчатое окно с разными схемами открывания",
-					})._item.col-4
+					})._item.col-4.col-sm-6.col-xs-12
 					+modelLibraryBlock({
 						img: "images/model-library-7.png",
 						text: "Витраж с шестью стеклопакетами с поворотно-откидной створкой посередине",
-					})._item.col-4
+					})._item.col-4.col-sm-6.col-xs-12
 					+modelLibraryBlock({
 						img: "images/model-library-8.png",
 						text: "Балконный блок с одностворчатым окном справа <br> с разными схемами открывания",
-					})._item.col-4
+					})._item.col-4.col-sm-6.col-xs-12
 			._buttons
 				button.btn.-red.js-submit(type="submit") Скачать все
 
