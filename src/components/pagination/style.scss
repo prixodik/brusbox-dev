@@ -5,6 +5,22 @@
 	color: $gray-medium;
 	padding-bottom: 112px;
 
+	@include media($md) {
+		padding-bottom: 60px;
+		font: 400 12px/14px $baseFF;
+	}
+
+	@include media($sm) {
+		padding-bottom: 70px;
+		font: 400 16px/22px $baseFF;
+		justify-content: space-between;
+	}
+
+	@include media($xs) {
+		padding-bottom: 40px;
+		font: 400 12px/13px $baseFF;
+	}
+
 	&__values {
 		@include flex(0,center,center);
 		padding: 0 28px
@@ -22,6 +38,11 @@
 
 		&.is-active {
 			color: $black;
+		}
+
+		@include media($xs) {
+			width: 27px;
+			height: 25px;
 		}
 	}
 	&__prev,

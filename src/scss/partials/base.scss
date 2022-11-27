@@ -176,7 +176,7 @@ a:hover {
 	}
 
 	@include media($md) {
-		max-width: 1120px;
+		// max-width: 1120px;
 		padding-left: 40px;
 		padding-right: 40px;
 	}
