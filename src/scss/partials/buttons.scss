@@ -19,18 +19,18 @@ button.btn {
 	border: none;
 
 	@include media($md) {
-		font: 300 14px/19px $baseFF;
-		padding: 8px 24px;
+		font: 400 14px/18px $baseFF;
+		padding: 7px 24px;
 	}
 
 	@include media($sm) {
 		font: 400 22px/30px $baseFF;
-		padding: 9px 32px;
+		padding: 7px 32px;
 	}
 
 	@include media($xs) {
 		font: 400 13px/18px $baseFF;
-		padding: 8px 16px;
+		padding: 5px 20px;
 	}
 
 	svg {

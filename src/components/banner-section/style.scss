@@ -109,14 +109,17 @@
 
 			@include media($md) {
 				height: 328px;
+				height: auto;
 			}
 
 			@include media($sm) {
 				height: 576px;
+				height: auto;
 			}
 
 			@include media($xs) {
 				height: 320px;
+				height: auto;
 			}
 		}
 	}

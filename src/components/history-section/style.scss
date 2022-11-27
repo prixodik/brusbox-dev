@@ -1,6 +1,14 @@
 .history-section {
 	padding: 120px 0 0;
 
+	@include media($sm) {
+		padding: 70px 0 0;
+	}
+
+	@include media($xs) {
+		padding: 40px 0 0;
+	}
+
 	&__container {
 		max-width: 1920px;
 		padding: 0;
@@ -11,22 +19,16 @@
 		padding: 0 15px;
 		max-width: 1200px;
 
-		@include media($lg) {
-			/* font: 100 100px/100px $baseFF; */
-		}
-
 		@include media($md) {
-			/* font: 100 80px/80px $baseFF; */
 			margin-bottom: 30px;
+			max-width: 926px;
 		}
 
 		@include media($sm) {
-			/* font: 100 40px/40px $baseFF; */
 			margin-bottom: 20px;
 		}
 
 		@include media($xs) {
-			/* font: 100 34px/31px $baseFF; */
 			margin-bottom: 12px;
 		}
 	}
@@ -34,6 +36,14 @@
 	&__item {
 		position: relative;
 		background-color: #fff;
+
+		@include media($sm) {
+			padding: 40px 40px 70px;
+		}
+
+		@include media($xs) {
+			padding: 40px 16px 40px;
+		}
 
 		&::after {
 			position: absolute;
@@ -46,7 +56,7 @@
 			background-color: $red;
 
 			@include media($sm) {
-				left: 26px;
+				left: 40px;
 			}
 
 			@include media($xs) {
@@ -64,14 +74,23 @@
 
 				@include media($sm) {
 					flex-direction: column;
+					padding-left: 61px;
+				}
+
+				@include media($xs) {
+					padding-left: 24px;
 				}
 
 				&::before {
 					transform: rotate(180deg);
 					left: calc(50% - 40px);
 
+					@include media($md) {
+						left: calc(50% - 30px);
+					}
+
 					@include media($sm) {
-						left: 16px;
+						left: 0;
 						transform: rotate(0deg);
 					}
 
@@ -83,25 +102,25 @@
 		}
 
 		&-row {
-			@include flex(space-between, center, center, nowrap);
+			@include flex(space-between, 0, center, nowrap);
 			position: relative;
 			margin-left: 0;
 			margin-right: 0;
 
 			@include media($sm) {
 				@include flex(flex-end, flex-start, flex-end, 0, column);
-				padding-left: 74px;
+				padding-left: 61px;
 			}
 
 			@include media($xs) {
-				padding-left: 26px;
+				padding-left: 24px;
 			}
 
 			&::before {
 				position: absolute;
 				content: "";
 				display: block;
-				top: 140px;
+				top: 113px;
 				left: calc(50%);
 				bottom: 0;
 				width: 40px;
@@ -110,6 +129,25 @@
 				background-size: 40px;
 				background-repeat: no-repeat;
 				background-position: center;
+
+				@include media($md) {
+					top: 80px;
+					width: 30px;
+					height: 30px;
+					background-size: 30px;
+				}
+
+				@include media($sm) {
+					left: 0;
+					top: 431px;
+				}
+
+				@include media($xs) {
+					width: 20px;
+					height: 20px;
+					background-size: 20px;
+					top: 235px;
+				}
 			}
 		}
 
@@ -118,16 +156,53 @@
 			width: 100%;
 			height: 400px;
 			object-fit: cover;
+			display: block;
+
+			@include media($sm) {
+				max-width: 100%;
+				max-height: 356px;
+				margin-bottom: 24px;
+			}
+
+			@include media($xs) {
+				max-width: 100%;
+				max-height: 198px;
+				margin-bottom: 16px;
+			}
 		}
 
 		&-info {
 			max-width: 530px;
 			margin: 0 auto;
+			padding-top: 60px;
+			@include media($md) {
+				max-width: 348px;
+			}
+
+			@include media($sm) {
+				max-width: 100%;
+				padding-top: 0;
+			}
 		}
 
 		&-date {
 			font: 100 120px/112px $baseFF;
 			margin-bottom: 5px;
+
+			@include media($md) {
+				font: 100 64px/60px $baseFF;
+				margin-bottom: 3px;
+			}
+
+			@include media($sm) {
+				font: 100 120px/132px $baseFF;
+				margin-bottom: 3px;
+			}
+
+			@include media($xs) {
+				font: 100 64px/60px $baseFF;
+				margin-bottom: 3px;
+			}
 		}
 
 		&-text {

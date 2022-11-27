@@ -40,6 +40,9 @@ body {
 	@include media($md) {
 		font: 300 14px/20px $baseFF;
 	}
+	@include media($sm) {
+		font: 300 22px/30px $baseFF;
+	}
 	@include media($xs) {
 		font: 300 13px/18px $baseFF;
 	}
@@ -173,7 +176,7 @@ a:hover {
 	}
 
 	@include media($md) {
-		max-width: 1120px;
+		// max-width: 1120px;
 		padding-left: 40px;
 		padding-right: 40px;
 	}

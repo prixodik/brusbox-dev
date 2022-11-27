@@ -14,7 +14,7 @@
 				color: $btn-red;
 			}
 
-			border-bottom: 2px solid  $btn-red;
+			border-bottom: 2px solid $btn-red;
 			margin-bottom: -2px;
 		}
 	}
@@ -23,11 +23,27 @@
 		background-color: $btn-red;
 		padding: 10px 20px;
 		color: $white;
+
+		@include media($sm) {
+			padding: 8px 12px;
+		}
 	}
 
 	&__title {
 		font: 300 28px/30px $baseFF;
 		margin-bottom: 8px;
+
+		@include media($md) {
+			font: 300 18px/21px $baseFF;
+		}
+
+		@include media($sm) {
+			font: 300 28px/33px $baseFF;
+		}
+
+		@include media($xs) {
+			font: 300 18px/21px $baseFF;
+		}
 	}
 
 	&__text {
@@ -36,9 +52,18 @@
 	&__img {
 		margin-bottom: 24px;
 
+		@include media($sm) {
+			margin-bottom: 20px;
+		}
+
+		@include media($xs) {
+			margin-bottom: 12px;
+		}
+
 		img {
 			display: block;
 			object-fit: cover;
+			width: 100%;
 		}
 	}
 

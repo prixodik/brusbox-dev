@@ -114,6 +114,12 @@
 		}
 	}
 
+	&--color-solutions {
+		@include media($md) {
+			padding-bottom: 0;
+		}
+	}
+
 	&--color-solutions & {
 		&__left {
 			letter-spacing: 0.02em;
@@ -150,9 +156,7 @@
 		}
 
 		&__info {
-			@include media($sm) {
-				flex-direction: column;
-			}
+			margin-bottom: 0;
 		}
 	}
 
@@ -170,16 +174,39 @@
 	&--history & {
 		&__info {
 			margin-bottom: 112px;
+
+			@include media($md) {
+				margin-bottom: 64px;
+			}
+
+			@include media($sm) {
+				margin-bottom: 70px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 40px;
+			}
 		}
 	}
 
 	&--actions & {
 		&__actions {
 			padding: 112px 0 0;
+
+			@include media($md) {
+				padding: 64px 0 0;
+			}
 		}
 
 		&__action {
 			margin-bottom: 76px;
+			@include media($sm) {
+				margin-bottom: 40px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 36px;
+			}
 		}
 
 		&__items {
