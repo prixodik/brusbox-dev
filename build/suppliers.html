@@ -24,7 +24,9 @@
   <body>
     <div class="suppliers-page">
           <div class="head-section suppliers-page__head">
-            <picture><img class="head-section__img" src="images/param-main-bg.jpg" alt="">
+            <picture>
+              <source media="(max-width: 770px)" srcset="images/param-main-bg-sm.jpg">
+              <source media="(max-width: 450px)" srcset="images/param-main-bg-xs.jpg"><img class="head-section__img" src="images/param-main-bg.jpg" alt="">
             </picture>
             <div class="head-section__container container">
               <div class="head-section__info">
@@ -54,7 +56,7 @@
             </div>
           </div>
     </div>
-        <div class="info-section">
+        <div class="info-section info-section--params">
           <div class="info-section__container container container--full">
             <div class="info-section__row row">
               <div class="info-section__img col-6 col-sm-12"><img src="images/param-1.jpg" alt=""></div>
@@ -109,10 +111,10 @@
             </div>
           </div>
         </div>
-        <div class="info-section info-section--col-center info-section--transparent">
-          <div class="info-section__container container"> 
+        <div class="info-section info-section--params info-section--col-center info-section--transparent">
+          <div class="info-section__container container">
             <div class="info-section__row row row--center">
-              <div class="info-section__col col-6 col-xs-12">
+              <div class="info-section__col col-6 col-md-8 col-sm-12">
                 <div class="info-section__title title-h5">Поставщики основного оборудования
                 </div>
                     <div class="param-block info-section__params">
@@ -151,7 +153,7 @@
             </div>
           </div>
         </div>
-        <div class="info-section info-section--row-revers">
+        <div class="info-section info-section--params info-section--row-revers">
           <div class="info-section__container container container--full">
             <div class="info-section__row row">
               <div class="info-section__img col-6 col-sm-12"><img src="images/param-2.jpg" alt=""></div>

@@ -48,7 +48,8 @@
 
 	&--catalog & {
 		&__items {
-			margin-bottom: 40px;
+			margin-top: 60px;
+			margin-bottom: 30px;
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -56,6 +57,16 @@
 		&__title {
 			color: $black;
 			margin-bottom: 16px;
+		}
+		&__link{
+			svg{
+				font-size: 10px;
+				margin-right: 20px;
+			}
+			span{
+				font-weight: 400;
+				font-size: 14px;
+			}
 		}
 	}
 }

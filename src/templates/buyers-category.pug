@@ -45,7 +45,7 @@ block content
 			img: 'images/buyers-category-1.jpg',
 			text: 'Компания «БРУСБОКС» выпускает несколько профилей. Вы сможете подобрать нужную систему по множеству параметров, в зависимости ваших целей, назначения объекта, погодных условий и т.п. <br> <br> <p> Также вы можете выбрать цвет вашего окна! Выбор большой – компания «БРУСБОКС» ламинирует профиль, используя самую качественную немецкую пленку фирмы «RENOLIT».<br> В вашем распоряжении богатая палитра из 96 цветов – любая ваша фантазия реализуема, вы сможете гармонично вписать ваши окна в любой интерьер.</p>',
 			btn: 'Выберите цвет'
-			}).info-section--big-text
+			}).info-section--big-text.info-section--bg-white
 
 		+textSection({}).text-section--long-2.text-section--gray
 			h5.text-section__title Мы предлагаем только лучшие оконные профильные системы:
@@ -66,6 +66,6 @@ block content
 		}).banner-section--text-center.banner-section
 
 		include ../components/contact-section/template
-		+contactSection()
+		+contactSection().contact-section--bg-white
 	//- +gridLayout()
 block scripts 

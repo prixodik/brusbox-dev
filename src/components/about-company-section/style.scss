@@ -1,9 +1,23 @@
+.about-company {
+	overflow-x: hidden;
+}
+
 .about-company-section {
-	&--gray{
+	&--wrapper {
 		background: #B9B9B9;
 		color: $white;
+		overflow: hidden;
+		overflow-x: hidden;
+		white-space: nowrap;
+		overflow: auto;
+		@include media($sm) {
+			overflow: hidden;
+		}
+
 		&__info {
-			@include flex(space-between)
+			@include flex(space-between);
+			min-width: 1920px;
 		}
 	}
+
 }

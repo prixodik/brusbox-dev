@@ -638,38 +638,6 @@ var uikit = {
       });
     }
 
-    if ($('.js-slider-info-2').length) {
-      $('.js-slider-info-2').each(function () {
-        var $this = $(this);
-
-        $this.slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-          variableWidth: false,
-          arrows: true,
-          dots: false,
-          infinite: true,
-          adaptiveHeight: true,
-          autoplay: false,
-          autoplaySpeed: 2000,
-          lazyLoad: 'progressive',
-          prevArrow: $this.children().find('.slick-prev-2'),
-          nextArrow: $this.children().find('.slick-next-2'),
-          responsive: [{
-            breakpoint: xs,
-            settings: {
-              arrows: false,
-              dots: true,
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }]
-        });
-
-      });
-    }
-
     if ($('.js-slider-object').length) {
       $('.js-slider-object').each(function () {
         var $this = $(this);

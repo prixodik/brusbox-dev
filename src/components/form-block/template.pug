@@ -248,3 +248,29 @@ mixin formBlockWindow4()
 	.form-block.--thanks.js-steps-quiz#quiz-4&attributes(attributes)
 		h4._title Благодарим вас за заявку!
 		._subtitle В ближайшее время наш менеджер свяжется<br> с вами для точного расчёта необходимого окна.<br> Ожидайте, пожалуйста.
+
+mixin formBlockContactsBuy()
+	.form-block.--buy-form&attributes(attributes)
+		._header
+			h2._title Где купить
+			._subtitle Выберите офис продаж на карте вашего города
+			.btn.-icon.-red
+					+svg("map")
+					span Выбрать на карте
+			.btn.-icon.-red
+					+svg("list")
+					span Выбрать из списка
+		h4._text Не хотите искать?
+		._text Оставьте заявку и наш специалист поможет вам
+		form(action="")
+			._row
+				._inputs
+					._input
+						input.form-control.js-required(type="text" placeholder="Ваше имя*" required)
+					._input
+						input.form-control.js-required(type="tel" placeholder="Телeфон*" required)
+					._input
+						input.form-control.js-required(type="email" placeholder="Email*" required)
+				._agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность,<br>согласие на обработку персональных данных в соответствии с указанным здесь текстом
+				._buttons
+					button.btn.-red.js-submit(type="submit") Отправить

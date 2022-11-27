@@ -513,4 +513,46 @@
 			margin: 25px 0 40px;
 		}
 	}
+	&--buy-form &{
+		&__title{
+			color: $white;
+			font-size: 56px;
+		}
+		&__subtitle{
+			margin-bottom: 40px;
+			color: $white;
+			font-size: 18px;
+		}
+		&__text{
+			color: $white;
+		}
+		&__inputs{
+			margin-top: 16px;
+		}
+		&__input{
+			input::placeholder,textarea::placeholder{
+				color: $white;
+			}
+		}
+		&__agree {
+			margin-bottom: 40px;
+		}
+		&__buttons{
+			button{
+				text-transform: none;
+			}
+		}
+		&__header {
+			margin-bottom: 60px;
+			padding-bottom: 16px;
+		.btn--icon {
+			margin-right: 16px;
+			padding-left: 22px;
+			padding-right: 22px;
+		}
+		svg{
+			margin-right: 10px;
+		}
+	}
+	}
 }

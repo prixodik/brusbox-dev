@@ -30,7 +30,7 @@ mixin infoSectionForm(data)
 						img(src=data.img, alt="")
 
 mixin infoSectionImgParams(data)
-	.info-section&attributes(attributes)
+	.info-section.--params&attributes(attributes)
 		._container.container.container--full
 			._row.row
 				._img.col-6.col-sm-12
@@ -43,10 +43,10 @@ mixin infoSectionImgParams(data)
 					})._params
 
 mixin infoSectionParams(data)
-	.info-section.info-section--col-center.info-section--transparent&attributes(attributes)
-		._container.container 
+	.info-section.--params.info-section--col-center.info-section--transparent&attributes(attributes)
+		._container.container
 			._row.row.row--center
-				._col.col-6.col-xs-12
+				._col.col-6.col-md-8.col-sm-12
 					._title.title-h5
 						!= data.title
 					+paramBlock({

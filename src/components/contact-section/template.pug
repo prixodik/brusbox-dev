@@ -36,8 +36,17 @@ mixin contactSectionSubscribe(data)
 
 mixin contactSectionSubscribeArticles(data)
 	.contact-section.--suvscribe&attributes(attributes)
-		._row.row
-			._left
-				+formBlockSunscribeArticles._form
-			._right
-				img(src="images/contact-img.jpg", alt="")
+		._container.container
+			._row.row
+				._left
+					+formBlockSunscribeArticles._form
+				._right
+					img(src="images/contact-img.jpg", alt="")
+
+mixin contactSectionBg(data)
+	.contact-section.--full-bg.--text-left&attributes(attributes)
+		._img
+			img(src="images/bg-buyers-product.jpg", alt="")
+		._container.container
+			._text
+				+formBlockContactsBuy._form

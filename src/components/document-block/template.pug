@@ -27,18 +27,17 @@ mixin documentBlockMarket(data)
 mixin documentBlockBtn(data)
 	.document-block.--btn.--btn-list.--max-width&attributes(attributes)
 		each item in data.items
-			._container.container
-				._row.row
-					img(src=item.img, alt="")
-					if item.btn
-						._button
-							a(href="#").btn.-border.-red 
-								!=item.btn
-					if item.text
-						._text
-							!=item.text
-							._link
-								a(href="#")
-									+svg("download")
+			._row.row.col-3
+				img(src=item.img, alt="")
+				if item.btn
+					._button
+						a(href="#").btn.-border.-red 
+							!=item.btn
+				if item.text
+					._text
+						!=item.text
+						._link
+							a(href="#")
+								+svg("download")
 
 				
