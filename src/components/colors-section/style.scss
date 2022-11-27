@@ -2,7 +2,7 @@
 	padding: 76px 0 90px;
 
 	@include media($md) {
-		padding-bottom: 0;
+		padding-bottom: 55px;
 		padding-top: 36px;
 	}
 	@include media($sm) {
@@ -10,6 +10,7 @@
 	}
 	@include media($xs) {
 		padding-top: 40px;
+		padding-bottom: 31px;
 	}
 
 	&__row {

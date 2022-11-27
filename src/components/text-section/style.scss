@@ -20,6 +20,19 @@
 		align-items: center;
 		justify-content: center;
 		margin-top: 50px;
+
+		@include media($md) {
+			margin-top: 40px;
+			justify-content: flex-start;
+		}
+
+		@include media($sm) {
+			margin-top: 16px;
+			justify-content: flex-start;
+		}
+	}
+
+	&__info-title {
 	}
 
 	&--center-btn & {

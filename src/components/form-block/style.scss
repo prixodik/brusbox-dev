@@ -185,10 +185,25 @@
 		&__subtitle {
 			font: 300 28px/30px $baseFF;
 			margin-bottom: 38px;
+
+			@include media($md) {
+				font: 300 18px/21px $baseFF;
+				margin-bottom: 24px;
+			}
+
+			@include media($sm) {
+				font: 300 22px/30px $baseFF;
+				margin-bottom: 34px;
+			}
+
+			@include media($xs) {
+				font: 300 13px/18px $baseFF;
+				margin-bottom: 27px;
+			}
 		}
-		&__title {
-			font: 300 36px/36px $baseFF;
-		}
+		// &__title {
+		// 	font: 300 36px/36px $baseFF;
+		// }
 	}
 
 	&--order & {

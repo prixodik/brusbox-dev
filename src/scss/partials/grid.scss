@@ -65,13 +65,13 @@
 			margin-right: -16px;
 		}
 
-		// @include media($xs) {
-		// 	& > .col,
-		// 	& > [class*="col-"] {
-		// 		padding-left: 16px;
-		// 		padding-right: 16px;
-		// 	}
-		// }
+		@include media($xs) {
+			& > .col,
+			& > [class*="col-"] {
+				padding-left: 16px;
+				padding-right: 16px;
+			}
+		}
 
 		&--pad0 {
 			margin: 0;

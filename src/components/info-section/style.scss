@@ -1,13 +1,30 @@
 .info-section {
 	background-color: $gray-bridge;
 
-
-
 	&__container {
 		max-width: 1920px;
 		width: 100%;
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	&__title {
+		font: 300 56px/51px $baseFF;
+
+		@include media($md) {
+			font: 300 32px/32px $baseFF;
+
+		}
+
+		@include media($sm) {
+			font: 300 56px/61px $baseFF;
+		}
+
+		@include media($xs) {
+			font: 300 24px/26px $baseFF;
+		}
+
+
 	}
 
 	&__row {
@@ -17,6 +34,7 @@
 
 		@include media($sm) {
 			justify-content: center;
+			flex-direction: column-reverse;
 		}
 	}
 
@@ -37,7 +55,7 @@
 		}
 
 		@include media($xs) {
-			padding: 40px;
+			padding: 40px 16px 40px;
 		}
 	}
 
@@ -101,6 +119,9 @@
 			padding: 0;
 			max-height: 576px;
 		}
+		@include media($xs) {
+			padding: 0!important;
+		}
 
 		// min-height: 600px;
 		img {
@@ -116,6 +137,7 @@
 			flex-direction: row-reverse;
 
 			@include media($sm) {
+				flex-direction: column-reverse;
 			}
 		}
 	}
