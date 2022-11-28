@@ -13,19 +13,20 @@ block content
 		+headSection({
 			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Новости'}],
 			title: "Новости",
-			img: "images/main-bg-news.jpg"
+			img: "images/main-bg-news.jpg",
+			imgSm: "images/main-bg-news-sm.jpg"
 		})._head
 		._container.container
 			._items.row
-				._news.col-6
+				._news.col-6.col-sm-12
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-1.jpg",
 						title: "Бизнес-форум завода «ПРОГРЕСС» в столице Дагестана",
 						text: "На днях наши московские коллеги прибыли в<br> яркую, аутентичную Махачкалу"
-					})
+					}).action-block--hover-none
 
-				._news.col-3
+				._news.col-3.col-sm-6.col-xs-12
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-2.jpg",
@@ -33,7 +34,7 @@ block content
 						text: "Хорошая новость от «БРУСБОКС»! Линейка подоконников BRUSBOX пополнена..."
 					})
 
-				._news.col-3
+				._news.col-3.col-sm-6.col-xs-12
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-3.jpg",
@@ -41,8 +42,7 @@ block content
 						text: "В Тамбове полным ходом идут масштабные строительные работы — реализуется..."
 					})
 
-			._items.row
-				._news.col-3
+				._news.col-3.col-sm-6.col-xs-12
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-4.jpg",
@@ -50,7 +50,7 @@ block content
 						text: "В последнюю неделю марта в Москве прошла крупнейшая международная строительная..."
 					})
 
-				._news.col-3
+				._news.col-3.col-sm-6.col-xs-12
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-5.jpg",
@@ -58,7 +58,7 @@ block content
 						text: "В последнюю неделю марта в Москве прошла крупнейшая международная строительная..."
 					})
 
-				._news.col-3
+				._news.col-3.col-sm-6.col-xs-12
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-6.jpg",
@@ -66,7 +66,7 @@ block content
 						text: "В последнюю неделю марта в Москве прошла крупнейшая международная строительная..."
 					})
 
-				._news.col-3
+				._news.col-3.col-sm-6.col-xs-12
 					+actionBlockMode({
 						date: "01 марта",
 						img: "images/news-7.jpg",
