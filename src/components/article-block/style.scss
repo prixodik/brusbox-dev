@@ -1,10 +1,53 @@
 .article-block {
 	&__img {
+		@include media($sm) {
+			img {
+				width: 100%;
+				max-height: 431px;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		@include media($xs) {
+			img {
+				max-height: auto;
+			}
+		}
 	}
+	
 	&__title {
-		font: 300 28px/30px $baseFF;
 		margin: 16px 0 0;
+
+		@include media($xs) {
+			margin: 12px 0 0;
+		}
 	}
 	&__subscribe {
+	}
+
+	&__date {
+		display: none;
+		color: $gray-medium;
+		font: 400 14px/16px $baseFF;
+		@include media($md) {
+			font: 400 12px/14px $baseFF;
+		}
+
+		@include media($sm) {
+			font: 300 16px/22px $baseFF;
+		}
+
+		@include media($xs) {
+			font: 300 12px/13px $baseFF;
+			display: block;
+			margin-top: 12px;
+		}
+	}
+	
+	@include media($xs) {
+		.about-cart-block__date {
+			display: none;
+		}
 	}
 }

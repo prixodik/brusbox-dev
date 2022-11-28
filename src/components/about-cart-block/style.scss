@@ -52,6 +52,20 @@
 	&--mode & {
 		&__date {
 			margin-right: 24px;
+
+			@include media($md) {
+				margin-right: 4px;
+			}
+		}
+
+		&__likes {
+			@include media($md) {
+				margin-right: 8px;
+			}
+		}
+
+		&__items {
+			margin-right: 15px;
 		}
 	}
 }

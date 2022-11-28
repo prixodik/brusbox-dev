@@ -2,9 +2,11 @@ include ../cart-subcribe-block/template
 
 mixin articleBlock(data)
 	.article-block&attributes(attributes)
-		._img
+		a(href="#")._img
 			img(src=data.img, alt="")
-		._title
-			!=data.title
+		a(href="#") 
+			h4._title
+				!=data.title
+		._date 07.09.2020
 		._subscribe
 			+cartSubcribeBlockArticle()

@@ -39,11 +39,29 @@ $arrow_color: $gray !default;
 	white-space: nowrap;
 	width: auto;
 
+	@include media($md) {
+		height: 36px;
+		font: 300 14px/19px $family;
+	}
+
+	@include media($sm) {
+		height: 40px;
+		font: 300 16px/22px $family;
+	}
+
+	@include media($xs) {
+		height: 26px;
+		font: 300 12px/13px $family;
+	}
+
 	&--transparent {
 		background-color: transparent;
 	}
 
 	//&.noselect{ color: #c2c2c2; }
+	ul {
+		padding-left: 0;
+	}
 
 	&:hover {
 		//border-color: darken($gray_light, 5%);
@@ -59,6 +77,18 @@ $arrow_color: $gray !default;
 		height: 100%;
 		padding-left: 15px;
 		color: $black;
+
+		@include media($md) {
+			padding-left: 10px;
+		}
+
+		@include media($sm) {
+			padding-left: 6px;
+		}
+
+		@include media($xs) {
+			padding-left: 4px;
+		}
 	}
 	&__search-icon {
 		width: 16px;
@@ -72,8 +102,10 @@ $arrow_color: $gray !default;
 	// Arrow
 	&__arrow {
 		display: block;
-		height: 16px;
-		width: 16px;
+		min-height: 18px;
+		min-width: 18px;
+		max-width: 18px;
+		max-height: 18px;
 		transform: rotate(0deg);
 		pointer-events: none;
 		margin-right: 8px;
@@ -226,6 +258,18 @@ $arrow_color: $gray !default;
       line-height: 16px;
       padding: 6px 15px;
     } */
+		@include media($md) {
+			font: 300 14px/19px $family;
+		}
+
+		@include media($sm) {
+			font: 300 16px/22px $family;
+			padding: 7px 9px 7px 20px;
+		}
+
+		@include media($xs) {
+			font: 300 12px/13px $family;
+		}
 	}
 
 	&--auto {

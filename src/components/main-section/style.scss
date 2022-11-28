@@ -309,10 +309,34 @@
 			display: flex;
 			flex-wrap: nowrap;
 			max-width: 1200px;
+			align-items: center;
+
+			@include media($md) {
+				max-width: 475px;
+				margin: 0 auto;
+				padding: 26px 0;
+			}
+			@include media($sm) {
+				max-width: 100%;
+				padding: 70px 0 30px;
+			}
+			@include media($xs) {
+				flex-wrap: wrap;
+				padding: 32px 0 40px;
+			}
 		}
 
 		&__sort-block {
 			min-width: 180px;
+
+			@include media($sm) {
+				min-width: 200px;
+			}
+
+			@include media($xs) {
+				min-width: 100%;
+				margin-bottom: 12px;
+			}
 		}
 
 		&__pagination {
@@ -321,6 +345,38 @@
 
 		&__search {
 			margin-left: 40px;
+
+			@include media($md) {
+				min-width: 268px;
+				margin-left: 20px;
+			}
+			@include media($xs) {
+				margin-left: 0;
+			}
+		}
+		
+		&__article {
+			margin-bottom: 60px;
+
+			@include media($md) {
+				margin-bottom: 40px;
+			}
+
+			@include media($sm) {
+				margin-bottom: 70px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 40px;
+
+				&:last-child {
+					margin-bottom: 60px;
+				}
+			}
+		}
+
+		&__items {
+			margin-bottom: 0;
 		}
 	}
 
