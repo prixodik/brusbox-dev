@@ -10,13 +10,23 @@
 		overflow-x: hidden;
 		white-space: nowrap;
 		overflow: auto;
-		@include media($sm) {
-			overflow: hidden;
-		}
 
 		&__info {
-			@include flex(space-between);
+			@include flex(space-between,0,0,0);
 			min-width: 1920px;
+
+			@include media($md) {
+				justify-content: start;
+			}
+			
+			@include media($sm) {
+				justify-content: start;
+			}
+
+			@include media($xs) {
+				justify-content: start;
+			}
+			
 		}
 	}
 
