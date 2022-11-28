@@ -68,7 +68,7 @@
 	}
 
 	&--mode {
-		padding-bottom: 16px;
+
 	}
 	&--mode & {
 		&__img {
@@ -77,6 +77,19 @@
 		&__date {
 			color: $medium-gray;
 			margin-bottom: 8px;
+		}
+	}
+
+	&--hover-none &{
+		&__link {
+			&:hover {
+				.action-block__title,
+				.action-block__text {
+					color: $black;
+				}
+				border-bottom: none;
+				margin-bottom: 0;
+			}
 		}
 	}
 }

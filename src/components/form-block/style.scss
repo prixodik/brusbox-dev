@@ -50,6 +50,18 @@
 				right: 0;
 				background-color: $gray-medium;
 			}
+
+			@include media($xs) {
+				display: inline-block;
+			}
+		}
+
+		@include media($md) {
+			font: 300 10px/10px $baseFF;
+		}
+
+		@include media($sm) {
+			font: 400 10px/10px $baseFF;
 		}
 	}
 
@@ -526,6 +538,14 @@
 	&--subscribe & {
 		&__check {
 			margin: 25px 0 40px;
+
+			@include media($md) {
+				margin: 32px 0 40px;
+			}
+	
+			@include media($sm) {
+				margin: 29px 0 21px;
+			}
 		}
 	}
 	&--buy-form &{

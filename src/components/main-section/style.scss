@@ -95,6 +95,18 @@
 	&--gap-bottom & {
 		&__head {
 			margin-bottom: 112px;
+
+			@include media($md) {
+				margin-bottom: 64px;
+			}
+			
+			@include media($sm) {
+				margin-bottom: 70px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 40px;
+			}
 		}
 	}
 
@@ -210,10 +222,25 @@
 		}
 
 		&__items {
-			margin-bottom: 44px;
 
-			&:last-child {
+			@include media($sm) {
+				margin-bottom: 30px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 28px;
+			}
+		}
+
+		&__news {
+			margin-bottom: 60px;
+
+			@include media($sm) {
 				margin-bottom: 40px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 32px;
 			}
 		}
 	}
