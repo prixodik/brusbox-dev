@@ -12,7 +12,12 @@ mixin bannerSection(data)
 
 mixin bannerImg(data)
 	.banner-section.--img&attributes(attributes)
-		img(src=data.img, alt="")
+		picture
+			if data.imgSm
+				source(media="(max-width: 770px)" srcset=data.imgSm)
+			if data.imgXs
+				source(media="(max-width: 450px)" srcset=data.imgXs)
+			img(src=data.img, alt="")
 
 mixin bannerSectionImg(data)
 	.banner-section.--img-mode&attributes(attributes)

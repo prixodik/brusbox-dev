@@ -2,18 +2,57 @@
 	background-color: $bg-grey;
 	padding: 60px 0;
 
+	@include media($md) {
+		padding: 40px 0;
+	}
+
+	@include media($xs) {
+		padding: 16px 0;
+	}
+
 	&__items {
 		background-color: $bg-grey;
 		@include flex(0, center, center, nowrap);
+
+		@include media($sm) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__item {
-		&-title {}
+		@include media($sm) {
+			max-width: 688px;
+			margin: 0 auto 40px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include media($xs) {
+			margin: 0 auto 16px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 
 		&-img {
 			margin-bottom: 16px;
 			display: block;
 			object-fit: cover;
+
+			@include media($sm) {
+				margin-bottom: 12px;
+				img {
+					width: 100%;
+					object-fit: cover;
+					max-height: 688px;
+					height: 100%;
+				}
+			}
+
+			@include media($xs) {
+				margin-bottom: 4px;
+			}
 		}
 	}
 
@@ -25,7 +64,6 @@
 
 		&__text {
 			max-width: 405px;
-
 		}
 	}
 
@@ -34,7 +72,7 @@
 	}
 
 	&--dilers & {
-		&__title{
+		&__title {
 			margin-bottom: 40px;
 		}
 		&__item {

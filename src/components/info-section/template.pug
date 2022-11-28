@@ -6,7 +6,22 @@ mixin infoSection(data)
 			._row.row
 				._info.col-6.col-sm-12
 					if data.title
-						h3._title
+						h2._title
+							!=data.title
+					if data.text
+						._text
+							!=data.text
+				if data.img
+					._img.col-6.col-sm-12
+						img(src=data.img, alt="")
+
+mixin infoSectionTitleH4(data)
+	.info-section&attributes(attributes)
+		._container.container
+			._row.row
+				._info.col-6.col-sm-12
+					if data.title
+						h4._title
 							!=data.title
 					if data.text
 						._text
@@ -59,7 +74,7 @@ mixin infoSectionButton(data)
 			._row.row
 				._info.col-6.col-sm-12
 					if data.title
-						h3._title
+						h2._title
 							!=data.title
 					if data.text
 						._text
