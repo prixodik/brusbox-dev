@@ -478,7 +478,6 @@
 
 			&__prev {
 				margin-left: 16px;
-				rotate: 180deg;
 			}
 		}
 
@@ -520,25 +519,24 @@
 					display: none;
 				}
 			}
-			.slick-list{
-				transform: translate3d(-670px, 0px, 0px);
-			}
-
 
 			&__next {
 				right: 16px;
+				bottom: 16px;
 				left: auto;
 			}
 
 			&__prev {
 				right: 72px;
 				left: auto;
+				rotate: 180deg;
+				bottom: 21px;
+
 			}
 
 			&__next,
 			&__prev {
 				width: 40px;
-				bottom: 16px;
 			}
 		}
 
