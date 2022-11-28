@@ -9,22 +9,6 @@
 	}
 
 	&__title {
-		font: 300 56px/51px $baseFF;
-
-		@include media($md) {
-			font: 300 32px/32px $baseFF;
-
-		}
-
-		@include media($sm) {
-			font: 300 56px/61px $baseFF;
-		}
-
-		@include media($xs) {
-			font: 300 24px/26px $baseFF;
-		}
-
-
 	}
 
 	&__row {
@@ -63,7 +47,11 @@
 		@include media($md) {
 			justify-content: baseline;
 		}
-
+		&__img{
+			@include media($sm) {
+				padding: 0!important;
+			}
+		}
 
 		&__title {
 
@@ -139,6 +127,15 @@
 			@include media($sm) {
 				flex-direction: column-reverse;
 			}
+		}
+	}
+	&--no-column-revers &{
+		&__row {
+
+			@include media($sm) {
+				flex-direction: row-reverse!important;
+			}
+
 		}
 	}
 
@@ -325,7 +322,7 @@
 
 	&--title-size & {
 		&__title {
-			font-size: 52px;
+			// font-size: 52px;
 			margin-bottom: 24px;
 		}
 	}

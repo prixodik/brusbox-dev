@@ -38,6 +38,16 @@
 	&--center-btn & {
 		&__buttons {
 			margin-top: 24px;
+
+			@include media($md) {
+				margin-top: 28px;
+				justify-content: center;
+			}
+	
+			@include media($sm) {
+				margin-top: 16px;
+				justify-content: flex-start;
+			}
 		}
 	}
 
@@ -48,6 +58,20 @@
 
 	&--text-center {
 		text-align: center;
+	}
+
+	&--text-start-sm {
+
+		@include media($md) {
+		}
+
+		@include media($sm) {
+			text-align: start;
+
+			br{
+				display: none;
+			}
+		}
 	}
 
 	&--border & {
@@ -95,6 +119,20 @@
 
 	&--long-2 {
 		padding: 112px 0px;
+
+		@include media($md) {
+			padding: 64px 0;
+		}
+	
+		@include media($sm) {
+			padding: 70px 0;
+			font-size: 22px;
+		}
+	
+		@include media($xs) {
+			padding: 40px 0;
+			font-size: 13px;
+		}
 	}
 
 	&--long-3 {
