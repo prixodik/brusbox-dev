@@ -69,13 +69,13 @@
 	&__bread {
 		margin-bottom: 20px;
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		z-index: 4;
 
 		@include media($md) {
 			margin-bottom: 13px;
 		}
-		@include media($xs) {
+		@include media($sm) {
 			max-width: 100%; 
 			overflow-x: auto;
 		}
@@ -99,11 +99,14 @@
 	}
 
 	&__subtitle {
-		font: $fs-p1;
 		text-align: center;
 		color: $white;
 		margin-top: 16px;
 		margin-bottom: 0;
+
+		@include media($sm) {
+			display: none;
+		}
 	}
 
 	&__button {

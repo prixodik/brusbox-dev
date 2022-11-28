@@ -4,22 +4,45 @@
 	}
 	&__date {
 		color: $gray-medium;
-		font: 300 14px/16px $baseFF;
+		font: 400 14px/16px $baseFF;
+		@include media($md) {
+			font: 400 12px/14px $baseFF;
+		}
+
+		@include media($sm) {
+			font: 300 16px/22px $baseFF;
+		}
+
+		@include media($xs) {
+			font: 300 12px/13px $baseFF;
+		}
 	}
 	&__info {
 		@include flex(0, center, center, nowrap);
 		svg {
 			width: 24px;
 			height: 24px;
+
+			@include media($sm) {
+				width: 16px;
+				height: 16px;
+			}
 		}
 		span {
-			font: 300 14px/16px $baseFF;
+			font: 400 14px/16px $baseFF;
 			margin-left: 4px;
 			color: $gray-medium;
+
+			@include media($md) {
+				font: 400 12px/14px $baseFF;
+			}
 		}
 	}
 	&__likes {
 		margin-right: 16px;
+		@include media($sm) {
+			margin-right: 8px;
+		}
 	}
 	&__likes,
 	&__eye {

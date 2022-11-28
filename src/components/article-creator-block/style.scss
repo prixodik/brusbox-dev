@@ -1,10 +1,40 @@
 .article-creator-block {
 	padding: 40px 0;
+
+	@include media($md) {
+		padding: 24px 0;
+	}
+
+	@include media($sm) {
+		padding: 70px 0;
+	}
+
+	@include media($xs) {
+		padding: 40px 0;
+	}
 	&__row {
-		@include flex(center,center,center);
-		
+		@include flex(center, center, center,0);
+
+		@include media($sm) {
+			justify-content: flex-start;
+		}
+
+		@include media($xs) {
+			flex-wrap: wrap;
+			align-items: flex-end;
+			// flex-direction: column;
+			// justify-content: center;
+		}
 	}
 	&__author {
+		@include media($sm) {
+			font: 300 15px/16px $baseFF;
+		}
+
+		@include media($xs) {
+			font: 400 12px/13px $baseFF;
+			flex: 1 1 100%;
+		}
 	}
 	&__img {
 		border-radius: 50%;
@@ -16,13 +46,47 @@
 			display: block;
 			object-fit: cover;
 		}
+
+		@include media($sm) {
+			width: 80px;
+			height: 80px;
+			margin: 0 16px;
+		}
+		@include media($xs) {
+			width: 54px;
+			height: 54px;
+			margin: 10px 16px 0 0;
+			flex: 0 1 54px;
+		}
 	}
 	&__info {
+		@include media($xs) {
+			flex: 0 1 218px;
+			margin-bottom: 6px;
+		}
 	}
 	&__title {
 		font-weight: 400;
 		margin-bottom: 2px;
+
+		@include media($sm) {
+			font: 300 22px/30px $baseFF;
+			margin-bottom: 4px;
+		}
+
+		@include media($xs) {
+			font: 400 12px/13px $baseFF;
+		}
 	}
 	&__subtitle {
+		max-width: 500px;
+
+		@include media($sm) {
+			font: 300 15px/16px $baseFF;
+		}
+
+		@include media($xs) {
+			font: 400 12px/13px $baseFF;
+		}
 	}
 }

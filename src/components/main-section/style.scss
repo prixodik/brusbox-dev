@@ -290,9 +290,16 @@
 		}
 
 		&__creator-article {
-			max-width: 700px;
-			margin: 0 auto;
 			transform: translateX(160px);
+
+			@include media($md) {
+				transform: translateX(127px);
+			}
+
+			@include media($sm) {
+				max-width: 100%;
+				transform: translateX(0);
+			}
 		}
 	}
 

@@ -100,16 +100,14 @@
 	&__img {
 		max-width: 50%;
 		width: 100%;
-		padding: 0;
+		padding: 0!important;
 
 		@include media($sm) {
 			max-width: 100%;
-			padding: 0;
 			max-height: 576px;
 		}
-
 		@include media($xs) {
-			padding: 0 !important;
+			padding: 0!important;
 		}
 
 		// min-height: 600px;
@@ -160,11 +158,29 @@
 		&__info {
 			max-width: 100%;
 			margin: 0;
-			padding: 0 215px 0 112px;
+			padding: 20px 100px 20px 100px;
+
+			@include media($md) {
+				padding: 20px 60px 20px 60px;
+			}
+
+			@include media($sm) {
+				padding: 40px 40px;
+			}
+
+			@include media($xs) {
+				padding: 16px 16px;
+			}
 		}
 
 		&__text {
 			max-width: 633px;
+		}
+
+		&__title {
+			@include media($xs) {
+				margin-bottom: 8px;
+			}
 		}
 	}
 

@@ -4,6 +4,10 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+
+		@include media($sm) {
+			flex-wrap: nowrap;
+		}
 	}
 
 	&__li {
@@ -49,7 +53,7 @@
 		}
 	}
 
-	@include media($xs) {
+	@include media($sm) {
 		&__ul {
 			flex-wrap: nowrap;
 			overflow: auto;
