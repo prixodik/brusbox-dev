@@ -9,7 +9,6 @@
 	}
 
 	&__title {
-
 	}
 
 	&__row {
@@ -48,7 +47,11 @@
 		@include media($md) {
 			justify-content: baseline;
 		}
-
+		&__img{
+			@include media($sm) {
+				padding: 0!important;
+			}
+		}
 
 		&__title {
 
@@ -120,6 +123,15 @@
 			@include media($sm) {
 				flex-direction: column-reverse;
 			}
+		}
+	}
+	&--no-column-revers &{
+		&__row {
+
+			@include media($sm) {
+				flex-direction: row-reverse!important;
+			}
+
 		}
 	}
 
@@ -324,7 +336,7 @@
 
 	&--title-size & {
 		&__title {
-			font-size: 52px;
+			// font-size: 52px;
 			margin-bottom: 24px;
 		}
 	}
