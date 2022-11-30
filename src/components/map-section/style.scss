@@ -54,6 +54,18 @@
 	}
 	&--padding {
 		padding: 120px 0;
+
+		@include media($md) {
+			padding: 80px 0;
+		}
+	
+		@include media($sm) {
+			padding: 70px 0;
+		}
+	
+		@include media($xs) {
+			padding: 40px 0;
+		}
 	}
 	&--main-accardion & {
 		&__map {

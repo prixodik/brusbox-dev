@@ -1,32 +1,123 @@
 .action-about-section {
 	padding: 60px 0 120px;
+
+	@include media($md) {
+		padding: 60px 0 80px;
+	}
+
+	@include media($sm) {
+		padding: 70px 0 80px;
+	}
+
+	@include media($xs) {
+		padding: 40px 0 60px;
+	}
+
 	&__title {
 		margin-bottom: 40px;
-	}
-	&__items {
-		@include flex(space-between,0,center,0)
-	}
-	&__contacts {
-		@include flex(space-between,0,0,0,column);
-		&-text {
 
+		@include media($sm) {
+			margin-bottom: 16px
 		}
 	}
+
+	&__items {
+		@include flex(space-between, 0, center, 0);
+
+		@include media($sm) {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+
+		@include media($xs) {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&__contacts {
+		@include flex(space-between, 0, 0, 0, column);
+
+		@include media($md) {
+			justify-content: flex-start;
+		}
+
+		@include media($sm) {
+			max-width: 290px;
+		}
+		&-text {
+			@include media($md) {
+				margin-top: 22px;
+			}
+
+			@include media($xs) {
+				margin-top: 16px;
+			}
+		}
+	}
+
 	&__img {
 		margin-right: 20px;
+
+		@include media($md) {
+			max-width: 153px;
+			width: 100%;
+		}
+
+		@include media($sm) {
+			max-width: 203px;
+			margin-right: 40px;
+		}
+
+		@include media($xs) {
+			margin: 0 auto 16px;
+			max-width: 136px;
+		}
 	}
+
 	&__about {
 		max-width: 715px;
 		margin-left: 20px;
-		@include flex(space-between,0,0,0,column);
+		@include flex(space-between, 0, 0, 0, column);
+
 		&-bottom {
 		}
+
+		@include media($md) {
+			max-width: 540px;
+		}
+
+		@include media($sm) {
+			flex: 1 0 100%;
+			margin-left: 0;
+			margin-top: 40px;
+			max-width: 100%;
+		}
+
+		@include media($xs) {
+			margin-top: 40px;
+		}
 	}
+
 	&__text {
+		min-height: 140px;
+
+		@include media($sm) {
+			min-height: auto;
+		}
 	}
+
 	&__date {
 		margin: 10px 0 16px;
 	}
+
 	&__button {
+		@include media($sm) {
+			margin-top: 40px;
+		}
+
+		@include media($xs) {
+			margin-top: 16px;
+		}
 	}
 }
