@@ -4,11 +4,73 @@
 		padding: 184px 0px;
 		&__items {
 			margin: 40px 0px;
-			@include flex(center);
+			@include flex(center,center);
 			justify-content: space-between;
 		}
 		&__title{
 			margin-bottom: 40px;
+			font-size: 36px;
+		}
+
+				
+		@include media($md) {
+			text-align: center;
+			padding: 80px 0px;
+
+			&__items {
+				align-items: center;
+			}
+
+			&__title{
+				font: 300 32px/32px $baseFF;
+			}
+			.document-block{
+				align-items: center;
+			}
+		}
+
+		@include media($sm) {
+			padding: 70px 0px;
+			text-align: start;
+
+			&__items {
+				margin: 60px 0px;
+				justify-content: center;
+			}
+
+			.document-block{
+				margin-bottom: 24px;
+				&__text{
+					max-width: 600px;
+				}
+			}
+
+			&__title{
+				font: 300 56px/61.6px $baseFF;
+				margin-bottom: 24px;
+			}
+		}
+
+		@include media($xs) {
+			padding: 60px 0px;
+
+			&__items {
+				margin: 24px 0px;
+				justify-content: center;
+			}
+
+			.document-block{
+				margin-bottom: 25px;
+				&__text{
+				}
+				img{
+					width: 32px;
+				}
+			}
+
+			&__title{
+				font: 300 24px/26.4px $baseFF;
+			}
 		}
 	}
 }

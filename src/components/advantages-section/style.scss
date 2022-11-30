@@ -23,6 +23,7 @@
 		@include media($sm) {
 			max-width: 688px;
 			margin: 0 auto 40px;
+
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -30,6 +31,7 @@
 
 		@include media($xs) {
 			margin: 0 auto 16px;
+
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -42,6 +44,7 @@
 
 			@include media($sm) {
 				margin-bottom: 12px;
+
 				img {
 					width: 100%;
 					object-fit: cover;
@@ -64,24 +67,104 @@
 
 		&__text {
 			max-width: 405px;
+
+			@include media($sm) {
+				br {
+					display: none;
+				}
+			}
+		}
+
+		&__item {
+			@include media($xs) {
+				margin-bottom: 40px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 
 	&--padding-big {
 		padding: 120px 0;
+
+		@include media($md) {
+			padding: 80px 0;
+		}
+
+		@include media($sm) {
+			padding: 70px 0;
+		}
+
+		@include media($xs) {
+			padding: 40px 0;
+		}
 	}
 
 	&--dilers & {
 		&__title {
 			margin-bottom: 40px;
+
+			@include media($xs) {
+				margin-bottom: 16px;
+				br{
+					display: none;
+				}
+			}
+			
 		}
+
 		&__item {
 			margin-bottom: 36px;
+
+			@include media($md) {
+				&-text {
+					font-size: 18px;
+				}
+
+				
+				&__title {
+					margin-bottom: 40px;
+				}
+			}
+
+			@include media($sm) {
+				margin-bottom: 40px;
+				&-text {
+					font: 300 22px/30.8px $baseFF;
+
+					span{
+						display: block;
+					}
+				}
+			}
+
+			@include media($xs) {
+				margin-bottom: 16px;
+				&-text {
+					margin: 10px 0px 0px 0px;
+					max-width: 245px;
+					font: 300 16px/16px $baseFF;
+
+					span{
+						display: initial;
+					}
+				}
+				
+				&__title {
+					margin-bottom: 16px;
+				}
+			}
 		}
 
 		&__item {
 			&-img {
 				margin-bottom: 14.5px;
+
+				@include media($sm) {
+					margin-bottom: 0px;
+				}
 			}
 
 			span {
@@ -91,6 +174,12 @@
 
 		&__item:nth-child(6) {
 			margin-bottom: 0px;
+
+			@include media($sm) {
+				margin-bottom: 40px;
+			}
 		}
+
+		
 	}
 }

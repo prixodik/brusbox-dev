@@ -7733,7 +7733,7 @@ var uikit = {
               arrows: false,
 
 
-              dots: true,
+              dots: false,
 
 
               slidesToShow: 1,
@@ -7925,7 +7925,7 @@ var uikit = {
               arrows: false,
 
 
-              dots: true,
+              dots: false,
 
 
               slidesToShow: 1,

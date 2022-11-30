@@ -13,6 +13,9 @@
 	@include media($xs) {
 		padding: 40px 0;
 		font-size: 13px;
+		br{
+			display: none;
+		}
 	}
 
 	&__buttons {
@@ -136,10 +139,36 @@
 	}
 
 	&--long-3 {
-		padding: 120px 0px
+		padding: 120px 0px;
+
+		@include media($md) {
+			padding: 80px 0;
+		}
+	
+		@include media($sm) {
+			padding: 70px 0;
+			font-size: 22px;
+		}
+	
+		@include media($xs) {
+			padding: 40px 0;
+			font-size: 13px;
+		}
 	}
 	&--small {
 		padding: 40px 0px;
+
+		@include media($md) {
+			padding: 40px 0;
+		}
+	
+		@include media($sm) {
+			padding: 70px 0;
+		}
+	
+		@include media($xs) {
+			padding: 16px 0;
+		}
 	}
 	&--gray{
 		background: $bg-grey;

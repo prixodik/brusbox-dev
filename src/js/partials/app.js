@@ -564,7 +564,7 @@ var uikit = {
             breakpoint: xs,
             settings: {
               arrows: false,
-              dots: true,
+              dots: false,
               slidesToShow: 1,
               slidesToScroll: 1
             }
@@ -628,7 +628,7 @@ var uikit = {
             breakpoint: xs,
             settings: {
               arrows: false,
-              dots: true,
+              dots: false,
               slidesToShow: 1,
               slidesToScroll: 1
             }

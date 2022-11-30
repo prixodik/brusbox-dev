@@ -14,7 +14,27 @@
 		background: #f1f1f1;
 		border-radius: 40px;
 	}
-	.icon{
+
+	.icon {
 		height: 24px;
 	}
+
+	@include media($md) {
+		.icon {
+			height: 17px;
+		}
+	}
+
+	@include media($sm) {
+		.icon {
+			height: 22px;
+		}
+	}
+
+	@include media($xs) {
+		.icon {
+			height: 17px;
+		}
+	}
+
 }
