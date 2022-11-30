@@ -195,10 +195,10 @@ mixin infoSectionSlider(data)
 							+svg('slider-arrow-right')
 							
 mixin infoSectionMarket(data)
-	.info-section.-btn.-title-margin.-img-half&attributes(attributes)
+	.info-section.-btn.-title-margin.-img-half.--no-column-revers&attributes(attributes)
 		._container.container
 			._row.row
-				._info
+				._info.col-6.col-md-4.col-sm-12
 					if data.title
 						h2._title
 							!=data.title
@@ -210,5 +210,6 @@ mixin infoSectionMarket(data)
 							a(href="#").btn.-border.-red 
 								!=data.btn
 				if data.img
-					._img.col-6
+					._img.col-6.col-md-4.col-sm-12
 						img(src=data.img, alt="")
+

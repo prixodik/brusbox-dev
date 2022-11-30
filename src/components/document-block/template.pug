@@ -27,7 +27,7 @@ mixin documentBlockMarket(data)
 mixin documentBlockBtn(data)
 	.document-block.--btn.--btn-list.--max-width&attributes(attributes)
 		each item in data.items
-			._row.row.col-3
+			._row.row.col-3.col-sm-12
 				img(src=item.img, alt="")
 				if item.btn
 					._button

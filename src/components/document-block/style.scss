@@ -4,12 +4,13 @@
 	max-width: 456px;
 
 	@include media($md) {
-		align-items: flex-start;
+		// align-items: flex-start;
 		max-width: 346px;
 	}
 
 	@include media($sm) {
 		align-items: center;
+		display: block;
 		max-width: 688px;
 	}
 
@@ -89,6 +90,10 @@
 			align-items: center;
 			max-width: 267px;
 			@include flex(center, 0, 0, 0, 0);
+
+			@include media($sm) {
+				max-width: 600px;
+			}
 		}
 	}
 
@@ -100,9 +105,39 @@
 		}
 
 		&__row {
-			align-items: center;
-			@include flex(center, 0, 0, 0, 0);
+			@include flex(center, center, 0, nowrap, 0);
+
+			@include media($md) {
+				margin-right: 0px;
+
+				img {
+					max-width: 33px;
+				}
+			}
+
+			@include media($sm) {
+				img {
+					max-width: 48px;
+				}
+
+				justify-content: start;
+				margin-bottom: 24px;
+
+				br {
+					display: none;
+				}
+			}
+
+			@include media($xs) {
+				img {
+					max-width: 26px;
+				}
+			}
 		}
+
+
+
+
 	}
 
 	&--max-width {
