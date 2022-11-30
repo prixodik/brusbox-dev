@@ -28,6 +28,7 @@
 		align-self: center;
 
 		@include media($md) {
+			max-width: 400px;
 			padding: 25px 70px;
 		}
 

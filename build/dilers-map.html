@@ -50,7 +50,7 @@
         <div class="dilers-page__links"><a class="dilers-page__link is-active" href="">на карте</a><a class="dilers-page__link" href="">списком</a></div>
                 <div class="map-section">
                   <div class="map-section__row row">
-                    <div class="map-section__map-accardions col-4">
+                    <div class="map-section__map-accardions col-4 col-md-5 col-sm-12">
                               <div class="accardion-block accardion-block--dilers map-section__map-accardion">
                                 <div class="accardion-block__head accardion-block__head--revers js-accardion-toggle">
                                   <div class="accardion-block__arrow">
@@ -404,7 +404,11 @@
                                 </div>
                               </div>
                     </div>
-                    <div class="map-section__map-img col-8"><img src="images/map.jpg" alt=""></div>
+                    <div class="map-section__map-img col-8 col-md-7 col-sm-12">
+                      <picture>
+                        <source media="(max-width: 770px)" srcset="images/map-sm.jpg"><img src="images/map.jpg" alt="">
+                      </picture>
+                    </div>
                   </div>
                 </div>
       </div>

@@ -3,7 +3,7 @@ include ../accardion-block/template
 mixin mapSection(data)
 	.map-section&attributes(attributes)
 		._row.row
-			._map-accardions.col-4
+			._map-accardions.col-4.col-md-5.col-sm-12
 				+accardionBlockDilers({
 					title: 'Петровские окна'
 				}).map-section__map-accardion
@@ -16,14 +16,16 @@ mixin mapSection(data)
 				+accardionBlockDilers({
 					title: 'Петровские окна'
 				}).map-section__map-accardion
-			.map-section__map-img.col-8
-				img(src="images/map.jpg", alt="")
+			.map-section__map-img.col-8.col-md-7.col-sm-12
+				picture
+					source(media="(max-width: 770px)" srcset="images/map-sm.jpg")
+					img(src="images/map.jpg", alt="")
 
 mixin mapSectionContainer(data)
 	.map-section&attributes(attributes)
 		._container.container
 			._row.row
-				._map-accardions.col-4
+				._map-accardions.col-4.col-md-5.col-sm-12
 					+accardionBlockLocation({
 						title: 'с. Сакмара, ул. Советская, д. 22'
 					}).map-section__map-accardion
@@ -33,5 +35,7 @@ mixin mapSectionContainer(data)
 					+accardionBlockLocation({
 						title: 'ул. Вторая, д. 43'
 					}).map-section__map-accardion
-				.map-section__map-img.col-8
-					img(src="images/map.jpg", alt="")
+				.map-section__map-img.col-8.col-md-7.col-sm-12
+					picture
+						source(media="(max-width: 770px)" srcset="images/map-sm.jpg")
+						img(src="images/map.jpg", alt="")

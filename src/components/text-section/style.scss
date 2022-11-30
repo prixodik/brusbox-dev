@@ -77,6 +77,12 @@
 		}
 	}
 
+	&--border {
+		@include media($sm) {
+			padding: 0;
+		}
+	}
+
 	&--border & {
 		&__row {
 			position: relative;
@@ -93,11 +99,49 @@
 				height: 100%;
 				width: 1px;
 				background: $gray-200;
+
+				@include media($sm) {
+					display: none;
+				}
 			}
 		}
 
 		&__col {
 			max-width: 736px;
+
+			&:last-child {
+				@include media($sm) {
+	
+					&::after {
+						display: none;
+					}
+				}
+			}
+
+			@include media($sm) {
+				position: relative;
+				padding-top: 70px;
+				padding-bottom: 70px;
+				max-width: 100%;
+
+				&::after {
+					content: "";
+					left: 0;
+					bottom: 0;
+					right: 0;
+					transform: none;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+					display: block;
+					background: $gray-200;
+				}
+			}
+
+			@include media($xs) {
+				padding-top: 40px;
+				padding-bottom: 40px;
+			}
 		}
 	}
 
