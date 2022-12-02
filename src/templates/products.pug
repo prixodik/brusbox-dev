@@ -11,6 +11,7 @@ block content
 	include ../components/products-section/template
 	include ../components/place-section/template
 	include ../components/banner-section/template
+	include ../components/service-block/template
 
 	.main-section.main-section--products
 		+headSection({
@@ -18,10 +19,52 @@ block content
 			title: "Продукция",
 			img: "images/main-bg-products.jpg"
 		})._head
-
-		+textSectionLong({
-			text: 'BRUSBOX — это принципиально новая разработка — качественный профиль ПВХ, созданный<br>в России и для России на основе уникального комплекса передовых технологий и собственного практического опыта производства металлопластиковых окон.'
-		}).text-section--center
+		.__hed-text
+			+textSectionLong({
+				text: 'BRUSBOX — это принципиально новая разработка — качественный профиль ПВХ, созданный<br>в России и для России на основе уникального комплекса передовых технологий и собственного практического опыта производства металлопластиковых окон.'
+			}).text-section--center
+		._container.container
+			._services-row.row
+				._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					+serviceBlock({
+						icon: "images/service-icon-product-1.svg",
+						title: "Обладают высокими теплоизолирующими свойствами"
+					})
+				._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					+serviceBlock({
+						icon: "images/service-icon-product-2.svg",
+						title: "Защищают от уличного шума"
+					})
+				._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					+serviceBlock({
+						icon: "images/service-icon-product-3.svg",
+						title: "Создают комфортный микроклимат"
+					})
+				._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					+serviceBlock({
+						icon: "images/service-icon-product-4.svg",
+						title: "Разнообразие форм – можно подобрать под любой интерьер"
+					})
+				._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					+serviceBlock({
+						icon: "images/service-icon-product-5.svg",
+						title: "Эстетичны"
+					})
+				._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					+serviceBlock({
+						icon: "images/service-icon-product-6.svg",
+						title: "Экологичны"
+					})
+				._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					+serviceBlock({
+						icon: "images/service-icon-product-7.svg",
+						title: "Устойчивы к внешнему воздействию"
+					})
+				._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					+serviceBlock({
+						icon: "images/service-icon-product-8.svg",
+						title: "Простой уход: легко мыть, не требуют окраски"
+					})
 
 		+infoSectionButtonRed({
 			img: 'images/product-1.jpg',

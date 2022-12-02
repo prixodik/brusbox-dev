@@ -152,6 +152,15 @@
 	&--title-gray {
 		padding: 101px 0 49px;
 		color: $gray-medium;
+
+		@include media($sm) {
+			padding: 70px 0 40px;
+			text-align: left;
+		}
+
+		@include media($xs) {
+			padding: 40px 0 16px;
+		}
 	}
 
 	&--title-gray & {
@@ -162,6 +171,10 @@
 
 	&--long {
 		padding: 112px 0 60px;
+
+		@include media($md) {
+			padding: 64px 0 40px;
+		}
 	}
 
 	&--long-2 {

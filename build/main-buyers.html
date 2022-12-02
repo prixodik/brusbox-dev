@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>История</title>
+    <title>Покупателям</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="">
@@ -25,7 +25,11 @@
     <div class="main-section main-section--buyers">
           <div class="head-section head-section--slider main-section__head">
             <div class="head-section__slider js-slider-head">
-              <div class="head-section__slide"><img class="head-section__img" src="images/main-bg-buyers.jpg" alt="">
+              <div class="head-section__slide">
+                <picture>
+                  <source media="(max-width: 770px)" srcset="images/main-bg-buyers-sm.jpg">
+                  <source media="(max-width: 450px)" srcset="images/main-bg-buyers-sm.jpg"><img class="head-section__img" src="images/main-bg-buyers.jpg" alt="">
+                </picture>
                 <div class="head-section__container container container--text">
                   <div class="head-section__info">
                     <h1 class="head-section__title">Качественные окна<br> на любой вкус
@@ -45,10 +49,12 @@
               </div>
             </div>
           </div>
-          <div class="text-section text-section--center text-section--title-gray">
-            <h3 class="text-section__title">Преимущества
-            </h3>
-          </div>
+      <div class="main-section__container container">
+            <div class="text-section text-section--center text-section--title-gray">
+              <h3 class="text-section__title">Преимущества
+              </h3>
+            </div>
+      </div>
           <div class="info-section info-section--row-revers">
             <div class="info-section__container container">
               <div class="info-section__row row">
@@ -66,7 +72,12 @@
         <div class="main-section__button"><a class="btn btn--border" href="#">Узнать больше о преимуществах</a></div>
       </div>
           <div class="products-section">
-            <div class="products-section__bg"><img src="images/products-bg.jpg" alt=""></div>
+            <div class="products-section__bg">
+              <picture>
+                <source media="(max-width: 770px)" srcset="images/products-bg-sm.jpg">
+                <source media="(max-width: 500px)" srcset="images/products-bg-xs.jpg"><img src="images/products-bg.jpg" alt="">
+              </picture>
+            </div>
             <div class="products-section__container container container--text">
               <div class="products-section__info">
                 <h3 class="products-section__title">Продукция
@@ -87,7 +98,11 @@
           </div>
       <div class="main-section__container container container--full">
             <div class="place-section">
-              <div class="place-section__bg"><img src="images/map-section-bg.png" alt=""></div>
+              <div class="place-section__bg">
+                <picture>
+                  <source media="(max-width: 770px)" srcset="images/map-section-bg-sm.png"><img src="images/map-section-bg.png" alt="">
+                </picture>
+              </div>
               <div class="place-section__info">
                 <div class="place-section__container container--text">
                   <h3 class="place-section__title">Где купить
@@ -189,11 +204,11 @@
       </div>
       <div class="main-section__container container">
         <div class="main-section__row row">
-          <div class="main-section__info col-6">
+          <div class="main-section__info col-6 col-sm-12">
             <div class="main-section__info-title title-h4">Официальный сайт BRUSBOX(«БРУСБОКС»):<br>наши услуги и сервис</div>
             <div class="main-section__info-text">Производим высококачественные профили ПВХ для создания энергоэффективных окон в любых размерах и конфигурациях с высокими показателями прочности, практичности, долговечности. Проводим монтаж, оказываем гарантийное и постгарантийное обслуживание.</div>
           </div>
-          <div class="main-section__info col-6">
+          <div class="main-section__info col-6 col-sm-12">
             <div class="main-section__info-title title-h4">Преимущества сотрудничества</div>
             <div class="main-section__info-text">«БРУСБОКС» — официальный производитель ПВХ профилей, соответствующих ГОСТам. Наши окна конкурируют с европейскими аналогами, представленными в Москве и других городах РФ. Предлагаем официальные цены без посреднической наценки.</div>
           </div>

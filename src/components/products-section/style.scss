@@ -16,33 +16,101 @@
 			display: block;
 			object-fit: cover;
 			width: 100%;
+
+			@include media($sm) {
+				object-position: left;
+			}
 		}
 	}
 	&__info {
 		padding: 180px 0 218px;
+
+		@include media($md) {
+			padding: 88px 0 100px;
+		}
+
+		@include media($sm) {
+			padding: 293px 0;
+		}
+
+		@include media($xs) {
+			padding: 60px 0 172px;
+		}
 	}
 	&__title {
 		color: $white;
 		margin-bottom: 54px;
+
+		@include media($md) {
+			margin-bottom: 24px;
+		}
+
+		@include media($sm) {
+			margin-bottom: 40px;
+		}
+
+		@include media($xs) {
+			margin-bottom: 24px;
+		}
 	}
 	&__params {
 		margin-bottom: 54px;
+
+		@include media($md) {
+			margin-bottom: 24px;
+		}
+
+		@include media($sm) {
+			margin-bottom: 40px;
+		}
+
+		@include media($xs) {
+			margin-bottom: 24px;
+		}
 	}
 	&__param {
 		margin-bottom: 0;
 		color: $white;
 		padding: 10px 0;
 		border-bottom: 1px solid $border-light;
-		
+		max-width: 561px;
+
 		&:last-child {
 			border-bottom: none;
 		}
+
+		@include media($xs) {
+			padding: 4px 0;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
 	}
 	&__buttons {
+		@include media($xs) {
+			@include flex(0,0,0,0,column);
+		}
 	}
 	&__button {
 		&:first-child {
 			margin-right: 40px;
+
+			@include media($md) {
+				margin-right: 24px;
+			}
+
+			@include media($xs) {
+				margin-right: 0;
+			}
+		}
+
+		@include media($xs) {
+			margin-bottom: 8px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -58,12 +126,12 @@
 			color: $black;
 			margin-bottom: 16px;
 		}
-		&__link{
-			svg{
+		&__link {
+			svg {
 				font-size: 10px;
 				margin-right: 20px;
 			}
-			span{
+			span {
 				font-weight: 400;
 				font-size: 14px;
 			}

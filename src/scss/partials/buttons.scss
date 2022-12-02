@@ -6,31 +6,36 @@ button.btn {
 .btn {
 	background: $btn-red;
 	font: 400 18px/25px $baseFF;
-	padding: 7px 24px;
+	padding: 0 24px;
 	color: $white;
-	display: block;
 	text-align: center;
-	display: inline-block;
+	display: inline-flex;
 	vertical-align: top;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	border-radius: 30px;
 	border: none;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
 
 	@include media($md) {
 		font: 400 14px/18px $baseFF;
-		padding: 7px 24px;
+		height: 36px;
 	}
 
 	@include media($sm) {
 		font: 400 22px/30px $baseFF;
-		padding: 7px 32px;
+		padding: 0 32px;
+		height: 48px;
 	}
 
 	@include media($xs) {
 		font: 400 13px/18px $baseFF;
-		padding: 5px 20px;
+		padding: 0 20px;
+		height: 32px;
 	}
 
 	svg {

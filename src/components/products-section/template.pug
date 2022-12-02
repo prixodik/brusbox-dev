@@ -1,7 +1,12 @@
 mixin productsSection(data)
 	.products-section&attributes(attributes)
 		._bg
-			img(src=data.img, alt="")
+			picture
+				if data.imgSm
+					source(media="(max-width: 770px)" srcset=data.imgSm)
+				if data.imgXs
+					source(media="(max-width: 500px)" srcset=data.imgXs)
+				img(src=data.img, alt="")
 		._container.container.container--text
 			._info
 				h3._title
