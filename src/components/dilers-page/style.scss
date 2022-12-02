@@ -1,4 +1,4 @@
-.dilers-page{
+.dilers-page {
 	&__links {
 		@include flex(center, center, center);
 		padding: 44px 0;
@@ -27,7 +27,6 @@
 		@include media($xs) {
 			margin-bottom: 24px;
 		}
-		
 	}
 
 	&__map {
@@ -109,7 +108,13 @@
 	}
 
 	&--dilers-products {
-		
+		.documentation-block.documentation-block--two-img {
+			&:last-child {
+				.documentation-block__row {
+					border-bottom: none;
+				}
+			}
+		}
 	}
 
 	&--dilers-products & {
