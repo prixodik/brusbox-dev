@@ -248,13 +248,6 @@
 			right: 0;
 			left: auto;
 			top: auto;
-			width: 49px;
-			height: 49px;
-
-			@include media($sm) {
-				width: 40px;
-				height: 40px;
-			}
 		}
 
 		.swiper-button-next {
@@ -331,6 +324,14 @@
 	&--padding-big & {
 		&__row {
 			padding: 120px 0;
+
+			@include media($md) {
+				padding: 70px 0;
+			}
+
+			@include media($sm) {
+				padding: 40px 0 20px;
+			}
 		}
 	}
 

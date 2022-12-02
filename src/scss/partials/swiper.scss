@@ -230,15 +230,31 @@
 }
 .swiper-button-prev,
 .swiper-button-next {
+	@include media($sm) {
+		width: 40px;
+		height: 40px;
+	}
 	svg {
 		min-width: 47px;
 		min-height: 47px;
+		max-width: 47px;
+		max-height: 47px;
 		border-radius: 50%;
+		@include media($sm) {
+			min-width: 40px;
+			min-height: 40px;
+			max-width: 40px;
+			max-height: 40px;
+		}
 	}
 	width: 47px;
 	height: 47px;
+	@include media($sm) {
+		width: 40px;
+		height: 40px;
+	}
 	border-radius: 50%;
-	background-color: $gray-200;
+	background-color: rgba($medium-gray, 0.3);
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {

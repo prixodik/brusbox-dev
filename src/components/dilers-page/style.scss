@@ -117,6 +117,18 @@
 			background: $black;
 			padding-bottom: 112px;
 
+			@include media($md) {
+				padding-bottom: 40px;
+			}
+
+			@include media($sm) {
+				padding-bottom: 70px;
+			}
+
+			@include media($xs) {
+				padding-bottom: 40px;
+			}
+
 			&--white {
 				background: transparent;
 			}
