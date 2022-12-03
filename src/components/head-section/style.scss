@@ -75,11 +75,12 @@
 		@include media($md) {
 			margin-bottom: 13px;
 		}
+
 		@include media($sm) {
-			max-width: 100%; 
+			max-width: 100%;
 			overflow-x: auto;
 		}
-		
+
 	}
 
 	&__title {
@@ -139,6 +140,31 @@
 			position: absolute;
 			bottom: 0;
 			height: 0;
+
+			@include media($md) {
+				padding: 35px 0;
+			}
+
+			@include media($sm) {
+				padding: 78px 0;
+				@include flex(flex-end, flex-start, stretch, nowrap, column);
+				height: 840px;
+			}
+
+			@include media($xs) {
+				padding: 60px 0;
+				height: 449px;
+			}
+
+		}
+
+		@include media($md) {
+			&__prev &{
+
+				.slick-arrow {
+					width: auto;
+				}
+			}
 		}
 
 		&__title {
