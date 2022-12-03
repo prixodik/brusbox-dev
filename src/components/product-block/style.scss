@@ -3,13 +3,37 @@
 		border-top: 1px solid $black;
 		padding: 30px 0;
 		@include flex(0,0,center,0);
+
+		@include media($sm) {
+			flex-direction: column;
+			padding: 40px 0;
+		}
+
+		@include media($xs) {
+			padding: 17px 0;
+		}
 	}
 
 	&__slider {
 		max-width: 561px;
 		background-color: $gray-bridge;
 		margin-right: 60px;
-		height: 318px;
+
+		@include media($md) {
+			margin-right: 40px;
+			max-width: 346px;
+			height: auto;
+		}
+
+		@include media($sm) {
+			max-width: 688px;
+			width: 100%;
+			margin: 0 auto 40px;
+		}
+
+		@include media($xs) {
+			margin: 0 auto 16px;
+		}
 	}
 	&__slide {
 		img {
@@ -34,9 +58,24 @@
 	&__info {
 	}
 	&__title {
+
+		@include media($md) {
+			margin-bottom: 16px;
+			font: 300 18px/21.6px $baseFF;
+		}
+
+		@include media($sm) {
+			margin-bottom: 40px;
+			font: 300 28px/33.6px $baseFF;
+		}
+
+		@include media($xs) {
+			margin-bottom: 8px;
+			font: 300 18px/21.6px $baseFF;
+		}
 	}
 	&__text {
-	
+		margin-bottom: 16px;
 	}
 	&__params {
 		span {

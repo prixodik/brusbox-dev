@@ -121,6 +121,10 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
+
+			@include media($md) {
+				margin: 40px 0;
+			}
 		}
 		&__title {
 			color: $black;
