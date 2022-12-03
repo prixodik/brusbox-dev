@@ -1,10 +1,26 @@
 .offer-block {
-	min-height: 250px;
-
 	&__row {
 		@include flex(space-between, center, center, nowrap);
 		padding-top: 30px;
 		padding-bottom: 30px;
+
+		@include media($md) {
+			justify-content: flex-start;
+			padding-top: 33px;
+			padding-bottom: 33px;
+		}
+
+		@include media($sm) {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		@include media($xs) {
+			padding-top: 17px;
+			padding-bottom: 17px;
+		}
 	}
 
 	&__img {
@@ -15,25 +31,58 @@
 		img {
 			display: block;
 		}
+
+		@include media($sm) {
+			margin-right: 0;
+			max-width: 240px;
+			margin-bottom: 24px;
+		}
+
+		@include media($xs) {
+			max-width: 128px;
+			margin-bottom: 16px
+		}
 	}
 
 	&__about {
 		@include flex(space-between);
 		flex-direction: column;
 		min-height: 250px;
+		@include media($md) {
+			max-width: 100%;
+			width: 100%;
+			min-height: 150px;
+		}
+
+		@include media($sm) {
+			min-height: 210px;
+		}
+
+		@include media($sm) {
+			min-height: 150px;
+		}
 	}
 
 	&__info {
 	}
 
 	&__title {
-		font: 300 36px/36px $baseFF;
-		margin-bottom: 4px;
+		margin-bottom: 8px;
 	}
 
 	&__subtitle {
+		@include media($sm) {
+			br {
+				display: none;
+			}
+		}
 	}
 	&__button {
+		margin-top: 24px;
+
+		@include media($xs) {
+			margin-top: 16px;
+		}
 	}
 
 	&--border-bottom & {

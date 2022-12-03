@@ -39,7 +39,12 @@ mixin headSectionSlider(data)
 	.head-section.--slider&attributes(attributes)
 		._slider.js-slider-head
 			._slide
-				img(src=data.img, alt="")._img
+				picture
+					if data.imgSm
+						source(media="(max-width: 770px)" srcset=data.imgSm)
+					if data.imgXs
+						source(media="(max-width: 450px)" srcset=data.imgSm)
+					img(src=data.img, alt="")._img
 				._container.container.container--text
 					._info
 						h1._title

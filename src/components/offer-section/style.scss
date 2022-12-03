@@ -1,3 +1,15 @@
 .offer-section {
 	padding: 82px 0 112px;
+
+	@include media($md) {
+		padding: 55px 0 40px;
+	}
+
+	@include media($sm) {
+		padding: 70px 0;
+	}
+
+	@include media($xs) {
+		padding: 10px 0;
+	}
 }

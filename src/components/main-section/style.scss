@@ -4,7 +4,7 @@
 
 	&__head {
 		position: relative;
-	
+
 		&-img {
 			display: block;
 			margin: 0 auto;
@@ -13,8 +13,6 @@
 			object-fit: cover;
 			width: 100%;
 		}
-
-		
 	}
 
 	&__bread {
@@ -99,7 +97,7 @@
 			@include media($md) {
 				margin-bottom: 64px;
 			}
-			
+
 			@include media($sm) {
 				margin-bottom: 70px;
 			}
@@ -129,6 +127,27 @@
 	&--color-solutions {
 		@include media($md) {
 			padding-bottom: 0;
+		}
+	}
+
+	&--products & {
+
+		&__hed-text {
+			@include media($sm) {
+				display: none;
+			}
+		}
+
+		&__services-row {
+			padding-bottom: 60px;
+
+			@include media($sm) {
+				padding: 56px 0 70px;
+			}
+
+			@include media($sm) {
+				padding: 40px 0;
+			}
 		}
 	}
 
@@ -222,7 +241,6 @@
 		}
 
 		&__items {
-
 			@include media($sm) {
 				margin-bottom: 30px;
 			}
@@ -309,10 +327,34 @@
 			display: flex;
 			flex-wrap: nowrap;
 			max-width: 1200px;
+			align-items: center;
+
+			@include media($md) {
+				max-width: 475px;
+				margin: 0 auto;
+				padding: 26px 0;
+			}
+			@include media($sm) {
+				max-width: 100%;
+				padding: 70px 0 30px;
+			}
+			@include media($xs) {
+				flex-wrap: wrap;
+				padding: 32px 0 40px;
+			}
 		}
 
 		&__sort-block {
 			min-width: 180px;
+
+			@include media($sm) {
+				min-width: 200px;
+			}
+
+			@include media($xs) {
+				min-width: 100%;
+				margin-bottom: 12px;
+			}
 		}
 
 		&__pagination {
@@ -321,6 +363,38 @@
 
 		&__search {
 			margin-left: 40px;
+
+			@include media($md) {
+				min-width: 268px;
+				margin-left: 20px;
+			}
+			@include media($xs) {
+				margin-left: 0;
+			}
+		}
+
+		&__article {
+			margin-bottom: 60px;
+
+			@include media($md) {
+				margin-bottom: 40px;
+			}
+
+			@include media($sm) {
+				margin-bottom: 70px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 40px;
+
+				&:last-child {
+					margin-bottom: 60px;
+				}
+			}
+		}
+
+		&__items {
+			margin-bottom: 0;
 		}
 	}
 
@@ -331,6 +405,14 @@
 		&__button {
 			margin: 49px 0 101px;
 			text-align: center;
+
+			@include media($sm) {
+				margin: 0 0 80px;
+			}
+
+			@include media($xs) {
+				margin: 16px 0 40px;
+			}
 		}
 		&__item {
 			&-title {
@@ -341,6 +423,16 @@
 				}
 			}
 			&-text {
+			}
+		}
+
+		&__info {
+			@include media($md) {
+				margin: 70px 0;
+			}
+
+			@include media($xs) {
+				margin: 40px 0;
 			}
 		}
 	}

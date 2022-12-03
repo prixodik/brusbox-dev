@@ -17,6 +17,10 @@
 				transform: rotate(-180deg);
 			}
 		}
+
+		@include media($sm) {
+			padding: 8px 3px 8px 0;
+		}
 	}
 	&__title {
 		color: $black;

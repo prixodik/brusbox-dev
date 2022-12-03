@@ -1,7 +1,9 @@
 mixin placeSection(data)
 	.place-section&attributes(attributes)
 		._bg
-			img(src=data.img, alt="")
+			picture
+				source(media="(max-width: 770px)" srcset='images/map-section-bg-sm.png')
+				img(src=data.img, alt="")
 		._info
 			._container.container--text
 				h3._title

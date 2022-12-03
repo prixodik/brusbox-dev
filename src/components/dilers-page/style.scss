@@ -1,11 +1,32 @@
-.dilers-page{
+.dilers-page {
 	&__links {
 		@include flex(center, center, center);
 		padding: 44px 0;
+
+		@include media($md) {
+			padding: 28px 0 25px;
+		}
+
+		@include media($sm) {
+			padding: 70px 0 70px;
+		}
+
+		@include media($xs) {
+			padding: 40px 0 16px;
+			justify-content: flex-start;
+		}
 	}
 
-	&__row {
-		margin-bottom: 60px;
+	&__col {
+		margin-bottom: 70px;
+
+		@include media($md) {
+			margin-bottom: 39px;
+		}
+
+		@include media($xs) {
+			margin-bottom: 24px;
+		}
 	}
 
 	&__map {
@@ -87,13 +108,31 @@
 	}
 
 	&--dilers-products {
-		
+		.documentation-block.documentation-block--two-img {
+			&:last-child {
+				.documentation-block__row {
+					border-bottom: none;
+				}
+			}
+		}
 	}
 
 	&--dilers-products & {
 		&__about {
 			background: $black;
 			padding-bottom: 112px;
+
+			@include media($md) {
+				padding-bottom: 40px;
+			}
+
+			@include media($sm) {
+				padding-bottom: 70px;
+			}
+
+			@include media($xs) {
+				padding-bottom: 40px;
+			}
 
 			&--white {
 				background: transparent;

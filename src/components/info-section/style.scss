@@ -8,7 +8,8 @@
 		padding-right: 0;
 	}
 
-	&__title {}
+	&__title {
+	}
 
 	&__row {
 		margin: 0;
@@ -28,9 +29,9 @@
 		align-self: center;
 
 		@include media($md) {
+			max-width: 400px;
 			padding: 25px 70px;
 		}
-
 
 		@include media($sm) {
 			padding: 70px 40px;
@@ -54,11 +55,9 @@
 		}
 
 		&__title {
-
 			@include media($md) {
 				margin-bottom: 24px;
 				font: 300 24px/29px $baseFF;
-
 			}
 
 			@include media($sm) {
@@ -69,8 +68,6 @@
 			@include media($xs) {
 				font: 300 20px/24px $baseFF;
 			}
-
-
 		}
 
 		&__info {
@@ -92,10 +89,10 @@
 	&__title {
 		/* padding-bottom: 8px; */
 		margin-bottom: 16px;
-
 	}
 
-	&__text {}
+	&__text {
+	}
 
 	&__img {
 		max-width: 50%;
@@ -132,21 +129,17 @@
 
 	&--no-column-revers & {
 		&__row {
-
 			@include media($sm) {
 				flex-direction: row-reverse !important;
 			}
-
 		}
 	}
 
 	&--slider-column-xs & {
 		&__row {
-
 			@include media($xs) {
 				flex-direction: column;
 			}
-
 		}
 	}
 
@@ -231,13 +224,6 @@
 		}
 	}
 
-	&--big-title & {
-		&__title {
-			font: 300 56px/51px $baseFF;
-			margin-bottom: 40px;
-		}
-	}
-
 	&--long-text & {
 		&__info {
 			max-width: 715px;
@@ -245,6 +231,15 @@
 	}
 
 	&--slider {
+		padding: 112px 0;
+
+		@include media($md) {
+			padding: 70px 0;
+		}
+
+		@include media($xs) {
+			padding: 40px 0;
+		}
 
 		.swiper-button-next,
 		.swiper-button-prev {
@@ -257,33 +252,34 @@
 
 		.swiper-button-next {
 			left: calc(50% + 5px);
+
+			@include media($sm) {
+				left: calc(50% + 7px);
+			}
 		}
 
 		.swiper-button-prev {
 			right: calc(50% + 5px);
+
+			@include media($sm) {
+				right: calc(50% + 7px);
+			}
 		}
 
 		.swiper-slide-active {
-			box-shadow: 0 0 70px $white;
-		}
-		
-		@include media($xs) {
-			.swiper-3d{
-				perspective: 100px;
+			img {
+				box-shadow: 0 0 70px $white;
+
+				@include media($xs) {
+					box-shadow: 0 0 50px $white;
+				}
 			}
 		}
-		
-	}
-
-	&--slider {
-		padding: 112px 0;
-
-		@include media($md) {
-			padding: 70px 0;
-		}
 
 		@include media($xs) {
-			padding: 40px 0;
+			.swiper-3d {
+				perspective: 200px;
+			}
 		}
 	}
 
@@ -303,8 +299,16 @@
 
 	&--big-title & {
 		&__title {
-			font: $title-h2;
+			// font: $title-h2;
 			margin-bottom: 40px;
+
+			@include media($md) {
+				margin-bottom: 24px;
+			}
+
+			@include media($sm) {
+				margin-bottom: 16px;
+			}
 		}
 	}
 
@@ -320,6 +324,14 @@
 	&--padding-big & {
 		&__row {
 			padding: 120px 0;
+
+			@include media($md) {
+				padding: 70px 0;
+			}
+
+			@include media($sm) {
+				padding: 40px 0 20px;
+			}
 		}
 	}
 
@@ -329,15 +341,35 @@
 		}
 	}
 
-	&--slider & {
-		&__row {}
-
+	&--swiper {
 		&__slider {
 			// overflow: visible;
 			padding-bottom: 70px;
 			margin: 0;
 			position: relative;
 			max-width: 714px;
+
+			&-wrap {
+				width: 400px;
+				height: 400px;
+			}
+		}
+	}
+
+	&--slider & {
+		&__row {
+		}
+
+		&__slider {
+			// overflow: visible;
+			padding-bottom: 70px;
+			margin: 0 auto;
+			position: relative;
+			max-width: 714px;
+
+			@include media($xs) {
+				max-width: 288px;
+			}
 
 			&-wrap {
 				width: 400px;
@@ -350,7 +382,8 @@
 			}
 		}
 
-		&__slides {}
+		&__slides {
+		}
 
 		&__slide {
 			display: flex;
@@ -359,10 +392,9 @@
 
 			img {
 				width: 100%;
-				
+
 				@include media($xs) {
-					max-width: 163px;
-					height: 164px;
+					max-width: 203px;
 				}
 			}
 		}
@@ -493,7 +525,6 @@
 			left: 16px;
 		}
 
-
 		@include media($md) {
 			&__info {
 				max-width: 376px;
@@ -527,10 +558,7 @@
 				br {
 					display: none;
 				}
-
 			}
-
-
 
 			&__next {
 				right: 16px;
@@ -570,7 +598,6 @@
 				left: auto;
 				rotate: 180deg;
 				bottom: 21px;
-
 			}
 
 			&__next,
@@ -578,9 +605,7 @@
 				width: 40px;
 			}
 		}
-
 	}
-
 
 	&--img-half & {
 		background: #f1f1f1;
@@ -640,7 +665,6 @@
 				max-width: 238px;
 			}
 		}
-
 	}
 
 	&--bg-black {
@@ -660,7 +684,6 @@
 			margin-bottom: 40px;
 
 			@include media($sm) {
-
 			}
 		}
 	}

@@ -12,7 +12,9 @@ block content
 		+headSection({
 			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Статьи'}],
 			title: "Статьи",
-			img: "images/main-bg-articles.jpg"
+			img: "images/main-bg-articles.jpg",
+			imgSm: "images/main-bg-articles-sm.jpg",
+			imgXm: "images/main-bg-articles-xs.jpg"
 		})._head
 		._container.container.container--text
 			._search-row
@@ -30,44 +32,42 @@ block content
 				+articleBlock({
 					img: 'images/article-1.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				})._article.col-4
+				})._article.col-4.col-sm-12
 
 				+articleBlock({
 					img: 'images/article-2.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				})._article.col-4
+				})._article.col-4.col-sm-12
 
 				+articleBlock({
 					img: 'images/article-3.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				})._article.col-4
+				})._article.col-4.col-sm-12
 
-			._items.row
 				+articleBlock({
 					img: 'images/article-4.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				})._article.col-4
+				})._article.col-4.col-sm-12
 
 				+articleBlock({
 					img: 'images/article-5.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				})._article.col-4
+				})._article.col-4.col-sm-12
 
 				+articleBlock({
 					img: 'images/article-6.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				})._article.col-4
-			
-			._items.row
+				})._article.col-4.col-sm-12
+
 				+articleBlock({
 					img: 'images/article-7.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				})._article.col-4
+				})._article.col-4.col-sm-12
 
 				+articleBlock({
 					img: 'images/article-8.jpg',
 					title: '12 советов о том, как выбрать пластиковые окна, сэкономить деньги и нервы'
-				})._article.col-4
+				})._article.col-4.col-sm-12
 
 
 			include  ../components/pagination/template

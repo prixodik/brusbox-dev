@@ -18,7 +18,7 @@
 		border: 0;
 		background: $bg-grey;
 		width: 100%;
-		padding: 12px 120px 12px 14px;
+		padding: 12px 40px 12px 14px;
 		color: $black;
 		font: 400 18px/25px $baseFF;
 		height: 41px;
@@ -29,16 +29,48 @@
 			opacity: 1;
 			color: $black;
 			font: 300 18px/25px $baseFF;
+
+			@include media($md) {
+				font: 300 14px/19px $family;
+			}
+
+			@include media($sm) {
+				font: 300 16px/22px $family;
+			}
+
+			@include media($xs) {
+				font: 300 12px/13px $family;
+			}
 		}
 
 		&:focus {
 			outline: none;
 		}
+
+		@include media($md) {
+			font: 300 14px/19px $family;
+			height: 40px;
+			padding: 8px 40px 8px 16px;
+		}
+
+		@include media($sm) {
+			font: 300 16px/22px $family;
+			height: 48px;
+			padding: 8px 40px 6px 16px;
+		}
+
+		@include media($xs) {
+			font: 300 12px/13px $family;
+			height: 32px;
+			padding: 12px 40px 12px 12px;
+		}
 	}
 
 	&__icon {
-		width: 16px;
-		height: 16px;
+		min-width: 16px;
+		min-height: 16px;
+		max-width: 16px;
+		max-height: 16px;
 		@include flex(center, center, center);
 		cursor: pointer;
 		position: absolute;
@@ -51,18 +83,43 @@
 		svg {
 			fill: none;
 			stroke: $black;
-			width: 16px;
-			height: 16px;
+			min-width: 16px;
+			min-height: 16px;
+			max-width: 16px;
+			max-height: 16px;
 			display: block;
+		}
+
+		@include media($sm) {
+			min-width: 21px;
+			min-height: 21px;
+			max-width: 21px;
+			max-height: 21px;
+			bottom: calc(50% - 9px);
+			svg {
+				min-width: 21px;
+				min-height: 21px;
+				max-width: 21px;
+				max-height: 21px;
+			}
+		}
+
+		@include media($sm) {
+			min-width: 16px;
+			min-height: 16px;
+			max-width: 16px;
+			max-height: 16px;
+			bottom: calc(50% - 8px);
+			svg {
+				min-width: 16px;
+				min-height: 16px;
+				max-width: 16px;
+				max-height: 16px;
+			}
 		}
 	}
 
 	@include media($xs) {
-		&__input {
-			padding: 5px 90px 5px 36px;
-			font: 12px/20px $baseFF;
-			height: 32px;
-		}
 		&__btn {
 			padding: 6px 20px;
 			font: $button-xs;

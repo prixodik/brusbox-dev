@@ -1,45 +1,106 @@
 .documentation-block {
 	&__row {
-		@include flex(0,center,center,0);
+		@include flex(0, center, center, 0);
 		padding: 40px 0 23px;
+
+		@include media($md) {
+			min-height: 280px;
+		}
+
+		@include media($sm) {
+			min-height: auto;
+			padding: 16px 0 24px;
+			align-items: flex-start;
+		}
+
+		@include media($xs) {
+			padding: 16px 0 40px;
+			flex-direction: column;
+		}
 	}
 	&__img {
 		margin-right: 62px;
+
+		@include media($md) {
+			margin-right: 41px;
+		}
+
+		@include media($sm) {
+			max-width: 80px;
+		}
+
+		@include media($xs) {
+			margin-right: 0;
+			margin: 0 auto 0;
+		}
 	}
 	&__info {
 		color: $white;
+
+		@include media($sm) {
+			width: 100%;
+		}
 	}
 	&__title {
 		margin-bottom: 16px;
+
+		@include media($sm) {
+			margin-bottom: 48px;
+			margin-top: 18px;
+		}
+
+		@include media($xs) {
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
 	}
 	&__params {
 	}
 	&__param {
-		@include flex(0,center,center,0);
+		@include flex(0, center, center, 0);
 		margin-bottom: 8px;
 
 		&:last-child {
 			margin-bottom: 0;
 		}
+
+		@include media($xs) {
+			flex-wrap: wrap;
+		}
+
 		&-value {
 			color: $medium-gray;
-			margin-left: 6px
+			margin-left: 6px;
+
+			@include media($xs) {
+				flex: 1 0 auto;
+			}
 		}
+
 		&-icon {
-			@include flex(center,center,center,0);
+			@include flex(center, center, center, 0);
 			width: 40px;
 			height: 40px;
 			background-color: $dark-grey;
 			border-radius: 50%;
 			margin-left: 6px;
 
+			@include media($md) {
+				width: 36px;
+				height: 36px;
+			}
+
 			svg {
-				min-height: 17px;
-				min-width: 17px;
-				max-width: 17px;
-				max-height: 17px;
+				min-height: 20px;
+				min-width: 20px;
+				max-width: 20px;
+				max-height: 20px;
 				stroke: $btn-red;
 			}
+		}
+
+		@include media($xs) {
+			justify-content: space-between;
 		}
 	}
 
@@ -59,7 +120,18 @@
 		&__row {
 			padding: 30px 0;
 			border-bottom: 1px solid $bb-gray;
+			position: relative;
+
+			@include media($sm) {
+				padding: 40px 0;
+				flex-direction: column;
+			}
+
+			@include media($xs) {
+				padding: 17px 0 40px;
+			}
 		}
+
 		&__imgs {
 			max-width: 500px;
 			width: 100%;
@@ -70,10 +142,46 @@
 			img {
 				display: block;
 			}
+
+			@include media($sm) {
+				margin-right: 0;
+				max-width: 100%;
+				margin-bottom: 24px;
+			}
 		}
+
+		&__img {
+			@include media($sm) {
+				max-width: 344px;
+			}
+
+			@include media($xs) {
+				max-width: 144px;
+			}
+		}
+
+		&__title {
+			margin-top: 0;
+			
+			@include media($md) {
+				margin-bottom: 5px;
+			}
+		}
+
+		&__button {
+			margin-top: 24px;
+			@include media($xs) {
+				margin-top: 16px;
+			}
+		}
+
 		&__info {
 			min-height: 250px;
-			@include flex(space-between,0,0,0,column);
+			@include flex(space-between, 0, 0, 0, column);
+
+			@include media($sm) {
+				min-height: auto;
+			}
 		}
 	}
 
@@ -83,5 +191,4 @@
 			border-bottom: none;
 		}
 	}
-
 }
