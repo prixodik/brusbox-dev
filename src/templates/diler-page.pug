@@ -14,14 +14,15 @@ block content
 		+headSection({
 			title: 'Пластиковые окна и двери<br> в ООО «Окна в дом»',
 			img: 'images/head-bg-diler.jpg',
+			imgSm: 'images/head-bg-diler-sm.jpg',
 			bread: [{url: '#', title: 'Главная'},{url: '#', title: 'Покупателям'},{url: '#', title: 'Офисы продаж в Нижнем Новгороде'},{url: '#', title: 'Пластиковые окна и двери в ООО «Окна в дом»'}],
 		})._head
 		._container.container.container--text
 			+dilerAboutSection()
-
-		+textSectionTitle({
-			title: 'Реализованные проекты'
-		}).text-section--center.text-section--title-black.text-section--special-padding
+		._container.container
+			+textSectionTitle({
+				title: 'Реализованные проекты'
+			}).text-section--center.text-section--title-black.text-section--special-padding
 
 		+infoSectionSliderImg({
 			items: [{
@@ -38,18 +39,20 @@ block content
 			}]
 		}).info-section--row-revers
 
-		+textSectionTitle({
-			title: 'Реализованные проекты'
-		}).text-section--center.text-section--title-black.text-section--special-padding
+		._container.container
+			+textSectionTitle({
+				title: 'Реализованные проекты'
+			}).text-section--center.text-section--title-black.text-section--special-padding
 
 		include ../components/action-section/template
 		+actionSection({
 			title: ''
 		}).action-section--transporent.action-section--padding-top-none
 
-		+textSectionTitle({
-			title: 'Производство ООО «Окна в дом»'
-		}).text-section--center.text-section--title-black.text-section--special-padding
+		._container.container
+			+textSectionTitle({
+				title: 'Производство ООО «Окна в дом»'
+			}).text-section--center.text-section--title-black.text-section--special-padding
 
 		+infoSectionSliderImg({
 			items: [{

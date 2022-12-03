@@ -7,11 +7,31 @@
 		@include media($sm) {
 			flex-direction: column;
 			padding: 40px 0;
+			position: relative;
+			border-top: none;
+
+			&:after {
+				position: absolute;
+				top: 0;
+				left: -40px;
+				right: -40px;
+				height: 1px;
+				background-color: $black;
+				min-width: 100%;
+				content: "";
+			}
 		}
 
 		@include media($xs) {
 			padding: 17px 0;
+
+			&:after {
+				left: -16px;
+				right: -16px;
+			}
 		}
+
+		
 	}
 
 	&__slider {

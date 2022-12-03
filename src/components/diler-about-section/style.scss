@@ -1,19 +1,63 @@
 .diler-about-section {
 	padding: 112px 0 0;
 
+	@include media($md) {
+		padding: 70px 0 0;
+	}
+
+	@include media($xs) {
+		padding: 40px 0 0;
+	}
+
 	&__head {
 		@include flex(0,flex-start,center,0);
 		margin-bottom: 60px;
+
+		@include media($md) {
+			margin-bottom: 40px;
+		}
+
+		@include media($xs) {
+			flex-direction: column;
+		}
 	}
+
+	&__numbers {
+		@include media($sm) {
+			@include flex(0,0,0,0,column);
+			display: inline-flex;
+
+			&-decor {
+				display: none;
+			}
+		}
+	}
+
 	&__logo {
 		margin-right: 60px;
 		max-width: 168px;
+
+		@include media($md) {
+			margin-right: 40px;
+			max-width: 153px;
+		}
+
+		@include media($sm) {
+			max-width: 203px;
+		}
+
+		@include media($xs) {
+			max-width: 136px;
+			margin: 0 auto 16px;
+		}
 	}
+
 	&__info {
 
 	}
 	&__contacts {
 	}
+
 	&__contact {
 		margin-bottom: 4px;
 
@@ -26,13 +70,32 @@
 			color: $gray-medium;
 		}
 	}
+
 	&__additionsl {
 		margin-top: 31px;
+
+		@include media($sm) {
+			margin-top: 16px;
+		}
+
+		@include media($sm) {
+			margin-top: 8px;
+		}
 	}
+
 	&__text {
 	}
+
 	&__slider {
+		@include media($sm) {
+			margin-top: 70px;
+		}
+
+		@include media($xs) {
+			margin-top: 17px;
+		}
 	}
+
 	&__slide {
 		img {
 			display: block;

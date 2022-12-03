@@ -9,9 +9,20 @@
 		@include media($sm) {
 			max-width: 673px;
 		}
+
+		@include media($xs) {
+			max-width: 100%;
+			align-items: flex-start;
+			flex-direction: column;
+		}
+
 	}
 	&__sort-block {
 		margin-right: 40px;
+		@include media($xs) {
+			margin-right: 0;
+			margin-bottom: 16px;
+		}
 	}
 
 	&__text {

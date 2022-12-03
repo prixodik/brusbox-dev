@@ -31,5 +31,19 @@
 		background-color: $gray-bridge;
 		border-radius: 5px;
 		padding: 5px 10px;
+
+		@include media($sm) {
+			top: 25px;
+			left: -150px;
+			min-width: 150px;
+			font: 400 12px/14px $baseFF;
+		}
+
+		@include media($xs) {
+			min-width: 110px;
+			left: -100px;
+			top: 25px;
+			font: 400 11px/13px $baseFF;
+		}
 	}
 }
