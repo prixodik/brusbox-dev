@@ -152,55 +152,39 @@
 		}
 	}
 
-	&--lamination & {
-		&__img {
-			margin-right: 43px;
-
-			@include media($xs) {
-				margin-right: 0;
-			}
-
-			max-width: 400px;
-
-			@include media($lg) {
-				max-width: 300px;
-			}
-			@include media($xs) {
-				max-width: 150px;
-			}
-
-			img {
-				max-height: 455px;
-				display: none;
-
-				&.is-active {
-					display: block;
-					animation-name: Appearance;
-					animation-duration: 2s;
-				}
-
-				@include media($lg) {
-					max-height: 370px;
-				}
-				@include media($xs) {
-					max-height: 166px;
-				}
-			}
-		}
-	}
 	&--lamination {
 		padding: 112px 0 120px;
+
+		@include media($md) {
+			padding: 60px 0 30px;
+		}
+
+		@include media($sm) {
+			padding: 70px 0 30px;
+		}
+
+		@include media($xs) {
+			padding: 40px 0 10px;
+		}
 	}
 	&--lamination & {
 		&__buttons {
-			@include flex(center,center,center,center,0);
-			font: 300 18px/21px $baseFF;
+			@include flex(center, center, center, center, 0);
+			font: 400 18px/21px $baseFF;
 			text-transform: uppercase;
 			margin-bottom: 40px;
+
+			@include media($sm) {
+				font: 400 22px/30px $baseFF;
+				margin-bottom: 16px;
+			}
+
+			@include media($sm) {
+				font: 400 12px/12px $baseFF;
+			}
 		}
 
 		&__colors {
-
 		}
 
 		&__palette {
@@ -209,6 +193,10 @@
 
 		&__palette {
 			margin-bottom: 40px;
+
+			@include media($sm) {
+				margin-bottom: 16px;
+			}
 		}
 
 		&__button-left {
@@ -219,9 +207,24 @@
 			max-width: 100%;
 			margin-right: 0;
 			display: none;
+			margin: 0 auto;
 
 			&.is-active {
 				display: block;
+			}
+
+			@include media($md) {
+				max-width: 882px;
+			}
+
+			img {
+				display: none;
+
+				&.is-active {
+					display: block;
+					animation-name: Appearance;
+					animation-duration: 2s;
+				}
 			}
 		}
 	}

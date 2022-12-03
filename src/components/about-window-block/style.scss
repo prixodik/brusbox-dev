@@ -1,26 +1,99 @@
 .about-window-block {
 	padding: 112px 0 120px;
+
+	@include media($md) {
+		padding: 64px 0 80px;
+	}
+
+	@include media($sm) {
+		padding: 70px 0;
+	}
+
+	@include media($xs) {
+		padding: 40px 0;
+	}
+
+	&__info {
+		text-align: center;
+
+		margin-bottom: 60px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include media($md) {
+			margin-bottom: 24px;
+		}
+
+		@include media($sm) {
+			margin-bottom: 8px;
+		}
+
+		@include media($xs) {
+			margin-bottom: 8px;
+		}
+	}
+
 	&__text {
 		text-align: center;
 		margin-bottom: 60px;
 		&:last-child {
 			margin-bottom: 0;
 		}
+
+		@include media($md) {
+			margin-bottom: 40px;
+			&:last-child {
+				margin-bottom: 24px;
+			}
+		}
+
+		@include media($sm) {
+			margin-bottom: 34px;
+			&:last-child {
+				margin-bottom: 8px;
+			}
+		}
+
+		@include media($xs) {
+			margin-bottom: 40px;
+			&:last-child {
+				margin-bottom: 8px;
+			}
+		}
 	}
 	&__row {
 		margin-top: 26px;
+
+		@include media($xs) {
+			align-items: flex-end;
+		}
 	}
 	&__item {
+		@include media($xs) {
+			text-align: center;
+		}
+
 		&-param {
-			@include flex(center,center,center,0);
+			@include flex(center, center, center, 0);
 		}
+
 		&-icon {
-			
 		}
+
 		&-img {
 			margin-top: 15px;
 			img {
 				margin: 0 auto;
+			}
+
+			@include media($sm) {
+				max-width: 323px;
+				margin: 15px auto 0;
+			}
+
+			@include media($xs) {
+				max-width: 133px;
 			}
 		}
 	}

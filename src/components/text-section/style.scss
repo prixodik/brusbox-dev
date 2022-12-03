@@ -227,6 +227,10 @@
 		background: $bg-grey;
 	}
 
+	&--black{
+		color: $black;
+	}
+
 	&--gray-dark{
 		background: $gray-200;
 	}
@@ -237,5 +241,17 @@
 
 	&--special-padding {
 		padding: 112px 0 40px;
+
+		@include media($md) {
+			padding: 70px 0 24px;
+		}
+
+		@include media($sm) {
+			padding: 140px 0 40px;
+		}
+
+		@include media($xs) {
+			padding: 56px 0 16px;
+		}
 	}
 }

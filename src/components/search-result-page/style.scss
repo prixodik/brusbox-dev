@@ -1,28 +1,65 @@
 .search-result-page {
 	&__wrap {
-		padding: 112px 0 8px;
+		padding: 112px 0 0;
+
+		@include media($md) {
+			padding: 70px 0 0;
+		}
+
+		@include media($xs) {
+			padding: 40px 0 0;
+		}
 	}
-	
+
 	&__search {
-		margin-bottom: 18px
+		margin-bottom: 18px;
+
+		@include media($xs) {
+			margin-bottom: 8px;
+		}
 	}
 
 	&__switches {
-		@include flex(0,center,center,0);
+		@include flex(0, center, center, 0);
+
+		@include media($sm) {
+			overflow-x: auto;
+			padding: 1px 0 13px;
+		}
 	}
 
 	&__switch {
-		@include flex(0,center,center,0);
+		@include flex(0, center, center, 0);
 		margin-right: 40px;
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		label {
+			@include media($md) {
+				white-space: nowrap;
+			}
+		}
+
+		@include media($sm) {
+			margin-right: 24px;
 		}
 	}
 
 	&__result {
 		font: 300 14px/15px $baseFF;
 		margin: 40px 0;
+
+		@include media($sm) {
+			font: 300 18px/19px $baseFF;
+			margin: 60px 0 40px;
+		}
+
+		@include media($xs) {
+			font: 300 12px/13px $baseFF;
+			margin: 30px 0;
+		}
 	}
 
 	&__search-items {
@@ -32,8 +69,24 @@
 		border-top: 1px solid $gray-200;
 		padding: 40px 0;
 
+		@include media($md) {
+			padding: 24px 0;
+		}
+
+		@include media($sm) {
+			padding: 20px 0;
+		}
+
+		@include media($xs) {
+			padding: 16px 0;
+		}
+
 		&-title {
 			margin-bottom: 9px;
+
+			@include media($sm) {
+				margin-bottom: 4px;
+			}
 		}
 
 		&-text {
@@ -41,5 +94,16 @@
 	}
 
 	&__pagination {
+		@include media($md) {
+			margin-top: 20px;
+		}
+
+		@include media($sm) {
+			margin-top: 65px;
+		}
+
+		@include media($xs) {
+			margin-top: 40px;
+		}
 	}
 }

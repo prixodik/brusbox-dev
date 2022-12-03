@@ -168,6 +168,15 @@
 		&__head {
 			justify-content: center;
 			margin-bottom: 24px;
+
+			@include media($sm) {
+				justify-content: space-between;
+			}
+
+			@include media($xs) {
+				align-items: center;
+				align-content: center;
+			}
 		}
 
 		&__colors {
@@ -176,6 +185,16 @@
 
 		&__title {
 			margin-right: 24px;
+
+			@include media($xs) {
+				margin-right: 0;
+				margin-bottom: 16px;
+			}
+
+			@include media($xs) {
+				text-align: center;
+			}
 		}
+
 	}
 }

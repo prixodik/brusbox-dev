@@ -28,18 +28,18 @@
 		&::placeholder {
 			opacity: 1;
 			color: $black;
-			font: 300 18px/25px $baseFF;
+			font: 400 18px/25px $baseFF;
 
 			@include media($md) {
-				font: 300 14px/19px $family;
+				font: 400 14px/19px $family;
 			}
 
 			@include media($sm) {
-				font: 300 16px/22px $family;
+				font: 400 16px/22px $family;
 			}
 
 			@include media($xs) {
-				font: 300 12px/13px $family;
+				font: 400 12px/13px $family;
 			}
 		}
 

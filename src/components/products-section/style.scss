@@ -123,12 +123,16 @@
 			}
 
 			@include media($md) {
-				margin: 40px 0;
+				margin:0 0 40px;
 			}
 		}
 		&__title {
 			color: $black;
 			margin-bottom: 16px;
+
+			@include media($xs) {
+				margin-bottom: 12px;
+			}
 		}
 		&__link {
 			svg {
