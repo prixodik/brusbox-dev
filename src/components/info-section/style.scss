@@ -572,7 +572,6 @@
 
 			&__next,
 			&__prev {
-				width: 48px;
 				bottom: 16px;
 			}
 		}
@@ -596,13 +595,11 @@
 			&__prev {
 				right: 72px;
 				left: auto;
-				rotate: 180deg;
-				bottom: 21px;
 			}
 
 			&__next,
 			&__prev {
-				width: 40px;
+				width: auto;
 			}
 		}
 	}

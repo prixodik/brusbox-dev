@@ -20,7 +20,7 @@
 	}
 
 	&__title {
-		span{
+		span {
 			text-transform: uppercase;
 		}
 	}
@@ -47,9 +47,126 @@
 			margin-right: 8px;
 		}
 	}
-	&__button{
-		span{
+
+	&__button {
+		span {
 			text-transform: uppercase;
+			display: contents;
+		}
+	}
+
+	@include media($md) {
+		&__title & {
+			&__subtitle {
+				font-size: 14px;
+			}
+		}
+	}
+
+	@include media($sm) {
+		position: relative;
+
+		&__title & {
+			&__subtitle {
+				display: none;
+			}
+		}
+
+		&__title {
+			font: 300 28px/33.6px $baseFF;
+			margin-bottom: 4px;
+			margin-top: 24px;
+		}
+
+		&__row {
+			padding: 40px 0;
+			border-top: none;
+			display: block;
+
+			&:after {
+				height: 1px;
+				background-color: rgba(0, 0, 0, 1);
+				display: block;
+				position: absolute;
+				content: " ";
+				min-width: 100%;
+				top: 0;
+				left: -40px;
+				right: -40px;
+			}
+		}
+
+		&__info {
+			margin-left: 0px;
+		}
+
+		&__param {
+			display: none;
+		}
+
+		&__button {
+			margin-top: 24px;
+		}
+
+		&__img {
+			min-width: 688px;
+		}
+	}
+
+	@include media($xs) {
+		&__title & {
+			&__subtitle {
+				display: block;
+				font-size: 13px;
+			}
+		}
+
+		&__title {
+			font: 300 18px/21.6px $baseFF;
+			margin-bottom: 4px;
+			margin-top: 24px;
+		}
+
+		&__row {
+			padding: 17px 0;
+			display: block;
+			border-top: none;
+
+			&:after {
+				height: 1px;
+				background-color: rgba(0, 0, 0, 1);
+				display: block;
+				position: absolute;
+				content: " ";
+				min-width: 100%;
+				top: 0;
+				left: -16px;
+				right: -16px;
+
+			}
+		}
+
+		&__info {
+			margin-left: 0px;
+		}
+
+		&__param {
+			display: flex;
+			margin: 16px 0px;
+		}
+
+		&__button {
+			margin-top: 24px;
+		}
+
+		&__item {
+			svg {
+				width: 16px;
+			}
+		}
+
+		&__img {
+			min-width: 100%;
 		}
 	}
 }

@@ -37,6 +37,18 @@
 
 	&--bottom-mode {
 		padding-bottom: 120px;
+
+		@include media($md) {
+			padding-bottom: 80px;
+		}
+		
+		@include media($sm) {
+			padding-bottom: 0px;
+		}
+
+		@include media($xs) {
+			padding-bottom: 60px;
+		}
 	}
 
 	&--catalog & {
