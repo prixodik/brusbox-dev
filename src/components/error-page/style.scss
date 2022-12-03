@@ -2,27 +2,27 @@
 	padding: 40px 0px 120px;
 	@include flex(center, center, center, 0, 0);
 
-	@include media($md){
+	@include media($md) {
 		padding: 64px 0px 108px;
 	}
 
-	@include media($sm){
+	@include media($sm) {
 		padding: 40px 0px;
 	}
 
-	@include media($xs){
+	@include media($xs) {
 		padding: 32px 0px 60px;
 	}
-	
+
 	&__row {
 		justify-content: space-between;
 
-		@include media($md){
+		@include media($md) {
 			gap: 60px;
 			justify-content: center;
 		}
 
-		@include media($sm){
+		@include media($sm) {
 			gap: 0px;
 			display: block;
 		}
@@ -35,32 +35,30 @@
 	&__info {
 		max-width: 561px;
 
-		@include media($md){
+		@include media($md) {
 			max-width: 424px;
 		}
-		
-		@include media($sm){
+
+		@include media($sm) {
 			max-width: 768px;
 		}
 
-		@include media($xs){
+		@include media($xs) {
 			max-width: 320px;
 		}
-
 	}
 
 	&__list {
-		
-		@include media($md){
+		@include media($md) {
 			margin-bottom: 16px;
 			font: 300 18px/21.6px $baseFF;
 		}
-		
-		@include media($sm){
+
+		@include media($sm) {
 			font: 300 22px/30.8px $baseFF;
 		}
 
-		@include media($xs){
+		@include media($xs) {
 			font: 300 10px/11px $baseFF;
 		}
 		span {
@@ -75,17 +73,17 @@
 	&__title {
 		margin-bottom: 40px;
 
-		@include media($md){
+		@include media($md) {
 			margin-bottom: 16px;
 			font: 300 18px/21.6px $baseFF;
 		}
-		
-		@include media($sm){
+
+		@include media($sm) {
 			margin-bottom: 40px;
 			font: 300 28px/33.6px $baseFF;
 		}
 
-		@include media($xs){
+		@include media($xs) {
 			margin-bottom: 8px;
 			font: 300 18px/21.6px $baseFF;
 		}
@@ -93,13 +91,17 @@
 
 	&__text {
 		margin-bottom: 16px;
-		
-		@include media($sm){
+
+		p {
+			margin: 0px;
+		}
+
+		@include media($sm) {
 			margin-bottom: 40px;
 			font: 300 22px/30.8px $baseFF;
 		}
 
-		@include media($xs){
+		@include media($xs) {
 			margin-bottom: 16px;
 			font: 300 12px/13.2px $baseFF;
 		}
@@ -110,11 +112,11 @@
 			max-width: 100%;
 		}
 
-		@include media($sm){
+		@include media($sm) {
 			margin-top: 40px;
 		}
 
-		@include media($xs){
+		@include media($xs) {
 			margin-top: 16px;
 		}
 	}
