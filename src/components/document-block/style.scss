@@ -10,7 +10,6 @@
 
 	@include media($sm) {
 		align-items: center;
-		display: block;
 		max-width: 688px;
 	}
 
@@ -85,15 +84,52 @@
 			}
 		}
 
+		&__icon {
+			min-width: 95px;
+			min-height: 95px;
+			max-width: 95px;
+			max-height: 95px;
+
+			@include media($md) {
+				min-width: 56px;
+				min-height: 56px;
+				max-width: 56px;
+				max-height: 56px;
+			}
+
+			@include media($sm) {
+				min-width: 80px;
+				min-height: 80px;
+				max-width: 80px;
+				max-height: 80px;
+			}
+
+			@include media($xs) {
+				min-width: 44px;
+				min-height: 44px;
+				max-width: 44px;
+				max-height: 44px;
+			}
+		}
+
 		&__text {
-			margin-left: 20px;
+			margin-left: 4px;
 			align-items: center;
 			max-width: 267px;
 			@include flex(center, 0, 0, 0, 0);
 
 			@include media($sm) {
 				max-width: 600px;
+				br{
+					display: none;
+				}
 			}
+			@include media($xs) {
+				padding: 0px 0px;
+			}
+		}
+		&__item{
+			@include flex(center, 0, 0, 0, 0);
 		}
 	}
 
@@ -153,6 +189,13 @@
 
 		&__text {
 			margin-left: 16px;
+		}
+	}
+	&--right-link-sm{
+		@include media($sm) {
+			max-width: 100%;
+			justify-content: space-between;
+			width: 100%;
 		}
 	}
 }

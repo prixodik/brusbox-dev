@@ -1,20 +1,37 @@
 .buyers-product-section {
-	&--padding-top{
+	&--padding-top {
 		padding: 112px 0px 60px;
 	}
+
 	&--padding-md {
 		padding: 112px 0 60px;
+
+		@include media($md) {
+			padding: 64px 0 60px;
+		}
+
+		@include media($sm) {
+			padding: 40px 0 70px;
+		}
+
+		@include media($xs) {
+			padding: 40px 0 0px;
+		}
 	}
 
 	&--main & {
 		&__row {
 			@include flex(0);
 			flex-wrap: nowrap;
+
+			@include media($sm) {
+				display: block;
+			}
 		}
 
 		&__left {
 			@include media($sm) {
-				padding: 0;
+				padding-bottom: 40px;
 			}
 
 			max-width: 559px;
@@ -27,6 +44,10 @@
 
 			svg {
 				margin-right: 8px;
+
+				@include media($md) {
+					max-width: 32px;
+				}
 			}
 		}
 
@@ -65,14 +86,41 @@
 	&__title {
 		text-align: center;
 		margin-bottom: 40px;
+		padding-top: 120px;
 	}
-	&__title--gray{
+
+	&__title--gray {
 		color: #B9B9B9;
 		text-align: center;
 		margin-bottom: 40px;
 	}
-	&__gray{
+
+	&__gray {
 		background: #F1F1F1;
 	}
 
+	.btn {
+		margin-right: 24px;
+		cursor: pointer;
+
+		@include media($xs) {
+			span {
+				display: none;
+			}
+
+			svg {
+				width: 18px;
+				margin-right: 0px;
+			}
+
+			margin-right: 16px;
+			width: 32px;
+		}
+
+	}
+	.btn-list{
+		@include media($xs) {
+		text-align: center;
+		}
+	}
 }

@@ -227,7 +227,12 @@
 	&--long-text & {
 		&__info {
 			max-width: 715px;
+			
+			@include media($md) {
+				max-width: 436px;
+			}
 		}
+		
 	}
 
 	&--slider {
@@ -733,6 +738,10 @@
 		&__title {
 			margin-bottom: 16px;
 			font-size: 36px;
+
+			@include media($md) {
+				font: 300 24px/28.8px $baseFF;
+			}
 		}
 	}
 

@@ -45,4 +45,20 @@
 
 		}
 	}
+	&__services {
+		&-row{
+			align-items: center;
+			padding: 120px 0px;
+
+			@include media($md) {
+				padding: 80px 0px;
+			}
+
+			@include media($sm) {
+				padding: 0px 0px;
+			}
+
+		}
+		
+	}
 }

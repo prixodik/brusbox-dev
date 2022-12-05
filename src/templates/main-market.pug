@@ -10,6 +10,7 @@ block content
 	include ../components/info-section/template
 	include ../components/document-block/template
 	include ../components/banner-section/template
+	include ../components/service-block/template
 
 	.market-page
 		._container.container.container--full
@@ -60,19 +61,20 @@ block content
 					._title.col-sm-12
 						._title-h5 Сертификаты BRUSBOX
 					._text.col-sm-12 Для соответствия всем необходимым требованиям, компания BRUSBOX предоставляет дилерам всю необходимую документацию
-					._items.col-12
-						+documentBlockMarket({
-							text: "Сертификат <br> соответствия",
-							img: "images/main-market-document-1.png",
-						}).col-4.col-md-4.col-sm-12
-						+documentBlockMarket({
-							text: "Пожарный сертификат на профильные системы BRUSBOX",
-							img: "images/main-market-document-2.png",
-						}).col-4.col-md-4.col-sm-12
-						+documentBlockMarket({
-							text: "Санитарно-эпидемиологическое заключение",
-							img: "images/main-market-document-3.png",
-						}).col-4.col-md-4.col-sm-12
+					._items.col-md-12
+						._row.row
+							+documentBlockMarket({
+								text: "Сертификат <br> соответствия",
+								img: "images/main-market-document-1.png",
+							}).col-4.col-md-4.col-sm-12
+							+documentBlockMarket({
+								text: "Пожарный сертификат на профильные системы BRUSBOX",
+								img: "images/main-market-document-2.png",
+							}).col-4.col-md-4.col-sm-12
+							+documentBlockMarket({
+								text: "Санитарно-эпидемиологическое заключение",
+								img: "images/main-market-document-3.png",
+							}).col-4.col-md-4.col-sm-12
 					._buttons.col-sm-5
 						button.btn.-border.-red.js-submit(type="submit") Тех. документация
 
@@ -80,6 +82,77 @@ block content
 				img:"images/banner-main-market.jpg"
 			}).banner-section--big-banner
 
+			._services
+				._col.col-sm-12
+					._container.container.container--sm
+						._services__title.title-h2 Поддержка дилеров
+						p Одним из основных условий нашего сотрудничества является максимальное удовлетворение потребностей предприятий — производителей окон ПВХ. Не зависимо от того, где и на каком этапе своего развития находятся данные предприятия, каждое из них воспринимается как равноправный партнер нашей компании.
+						._services__text Компания «БРУСБОКС» предлагает своим партнёрам:
+						._services__row.row
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-1.svg",
+									title: "Помощь в проектировании цехов «под ключ»"
+								})
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-2.svg",
+									title: "Услуги технических специалистов по накладке производственных цехов"
+								})
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-4.svg",
+									title: "Предоставление программы по расчету окон Optima"
+								})
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-3.svg",
+									title: "Услуги по проекти-рованию и расчету сложных конструкций"
+								})
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-5.svg",
+									title: "Региональные семинары по продажам и монтажу"
+								})
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-5.svg",
+									title: "Региональные семинары по продажам и монтажу"
+								})
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-7.svg",
+									title: "Предоставление всевозможной рекламной продукции"
+								})
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-6.svg",
+									title: "Предоставление технологической оснастки"
+								})
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-9.svg",
+									title: "Гибкую систему скидок"
+								})
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-8.svg",
+									title: "Совместные рекламные кампании"
+								})
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-10.svg",
+									title: "Различные бонусные и мотивационные программы"
+								})
+							._services-item.col-3.col-sm-12
+								+serviceBlock({
+									icon: "/images/service-icon-11.svg",
+									title: "Индивидуальный подход к каждому клиенту"
+								})
+					._services__bottom Таким образом, мы предлагаем нашим партнёрам приятное сотрудничество на взаимовыгодных условиях
+					._services__btn
+						button.btn.-border.-red.js-submit(type="submit") Узнать больше о поддержке
+						
 			+infoSection({
 				img: 'images/main-market-5.jpg',
 				title: 'О компании',

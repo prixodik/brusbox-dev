@@ -15,14 +15,15 @@ mixin documentBlockMode(data)
 					!=data.text
 
 mixin documentBlockMarket(data)
-	.document-block.--btn&attributes(attributes)
-		img(src=data.img, alt="")
-		if data.text
+	.document-block.--btn.--right-link-sm&attributes(attributes)
+		._item
+			._icon
+				img(src=data.img, alt="")
 			._text
 				!=data.text
-				._link
-					a(href="#")
-						+svg("download")
+		._link
+			a(href="#")
+				+svg("download")
 
 mixin documentBlockBtn(data)
 	.document-block.--btn.--btn-list.--max-width&attributes(attributes)
