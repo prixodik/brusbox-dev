@@ -1,7 +1,7 @@
 mixin modelLibraryBlock(data)
 	.model-library-block&attributes(attributes)
 		._img
-			img(src=data.img, alt="")
+			+webp(data.img)
 		._text
 			!=data.text
 			._link

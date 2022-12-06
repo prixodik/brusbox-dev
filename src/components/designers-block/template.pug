@@ -1,7 +1,7 @@
 mixin designersBlock(data)
 	.designers-block&attributes(attributes)
 		._row
-			img(src=data.img, alt="")._img
+			+webp(data.img)._img
 			._info
 				h5._title
 					!=data.title

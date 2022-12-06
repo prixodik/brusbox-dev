@@ -3,7 +3,7 @@ mixin objectBlock(data)
 		._slider.js-slider-object
 			each slide in data.slides
 				._slide
-					img(src=slide.img, alt="")._img
+					+webp(slide.img)._img
 		._info
 			h4._title
 				!=data.title

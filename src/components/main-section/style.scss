@@ -402,16 +402,22 @@
 	}
 
 	&--buyers & {
+		&__info-section-buttons{
+			@include media($sm) {
+				background-color: #f1f1f1;
+			}
+		}
 		&__button {
-			margin: 49px 0 101px;
-			text-align: center;
+			padding: 49px 0 100px;
+			display: flex;
+			justify-content: center;
 
 			@include media($sm) {
-				margin: 0 0 80px;
+				padding: 0 0 80px;
 			}
 
 			@include media($xs) {
-				margin: 16px 0 40px;
+				padding: 16px 0 40px;
 			}
 		}
 		&__item {

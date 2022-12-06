@@ -32,14 +32,26 @@
 		position: absolute;
 		bottom: 67px;
 		z-index: -1;
+
+		@include media($xs) {
+			bottom: 16px;
+		}
 	}
 
 	&__prev {
 		right: 116px;
+
+		@include media($xs) {
+			right: 60px;
+		}
 	}
 
 	&__next {
 		right: 60px;
+
+		@include media($xs) {
+			right: 16px;
+		}
 	}
 
 	&__info {
@@ -75,11 +87,12 @@
 		@include media($md) {
 			margin-bottom: 13px;
 		}
+
 		@include media($sm) {
-			max-width: 100%; 
+			max-width: 100%;
 			overflow-x: auto;
 		}
-		
+
 	}
 
 	&__title {
@@ -90,11 +103,11 @@
 		text-align: center;
 
 		@include media($sm) {
-			text-align: start;
+			text-align: left;
 		}
 
 		@include media($xs) {
-			text-align: start;
+			text-align: left;
 		}
 	}
 
@@ -105,7 +118,7 @@
 		margin-bottom: 0;
 
 		@include media($sm) {
-			display: none;
+			text-align: left;
 		}
 	}
 
@@ -138,7 +151,9 @@
 			align-items: flex-start;
 			position: absolute;
 			bottom: 0;
-			height: 0;
+			height: auto;
+			left: 20px;
+			right: 20px;
 		}
 
 		&__title {

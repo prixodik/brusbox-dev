@@ -3,7 +3,7 @@ include ../breadcrumbs/template
 mixin mainSection(data)
 	.main-section&attributes(attributes)
 		._head
-			img(src=data.img, alt="")._head-img
+			+webp(data.img)._head-img
 			+breadcrumbs({
 				items: data.bread
 			})._bread
@@ -18,7 +18,7 @@ mixin mainSectionMode(data)
 			+breadcrumbs({
 				items: data.bread
 			})._bread
-			img(src=data.img, alt="")._head-img
+			+webp(data.img)._head-img
 			._head-info
 				h1._title
 					!=data.title
@@ -30,7 +30,7 @@ mixin mainSectionMode(data)
 mixin mainSectionBtn(data)
 	.main-section.--btn&attributes(attributes)
 		._head
-			img(src=data.img, alt="")._img
+			+webp(data.img)._img
 			+breadcrumbs({
 				items: data.bread
 			})._bread

@@ -3,7 +3,7 @@ include ../cart-subcribe-block/template
 mixin articleBlock(data)
 	.article-block&attributes(attributes)
 		a(href="#")._img
-			img(src=data.img, alt="")
+			+webp(data.img)
 		a(href="#") 
 			h4._title
 				!=data.title

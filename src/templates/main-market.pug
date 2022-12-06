@@ -59,18 +59,21 @@ block content
 						._title-h5 Сертификаты BRUSBOX
 					._text.col-sm-12 Для соответствия всем необходимым требованиям, компания BRUSBOX предоставляет дилерам всю необходимую документацию
 					._items.col-12
-						+documentBlockMarket({
-							text: "Сертификат <br> соответствия",
-							img: "images/main-market-document-1.png",
-						}).col-4.col-md-4.col-sm-12
-						+documentBlockMarket({
-							text: "Пожарный сертификат на профильные системы BRUSBOX",
-							img: "images/main-market-document-2.png",
-						}).col-4.col-md-4.col-sm-12
-						+documentBlockMarket({
-							text: "Санитарно-эпидемиологическое заключение",
-							img: "images/main-market-document-3.png",
-						}).col-4.col-md-4.col-sm-12
+						._col.col-4.col-md-4.col-sm-12
+							+documentBlockMarket({
+								text: "Сертификат <br> соответствия",
+								img: "images/main-market-document-1.png",
+							})
+						._col.col-4.col-md-4.col-sm-12
+							+documentBlockMarket({
+								text: "Пожарный сертификат на профильные системы BRUSBOX",
+								img: "images/main-market-document-2.png",
+							})
+						._col.col-4.col-md-4.col-sm-12
+							+documentBlockMarket({
+								text: "Санитарно-эпидемиологическое заключение",
+								img: "images/main-market-document-3.png",
+							})
 					._buttons.col-sm-5
 						button.btn.-border.-red.js-submit(type="submit") Тех. документация
 
