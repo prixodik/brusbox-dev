@@ -1,7 +1,8 @@
 .dilers-block {
 	&__title {
-		@include flex(0,flex-start,flex-start);
+		@include flex(0,flex-start,flex-start,0);
 		font-weight: 550;
+		margin-bottom: 5px;
 	}
 
 	&__icon {
@@ -11,12 +12,17 @@
 	}
 
 	&__item {
-		@include flex(0,center,center);
+		@include flex(0,center,center,0);
 		margin-bottom: 5px;
 	}
 
 	&__items {
 		max-width: 386px;
-		@include flex(space-between,center,center);
+		@include flex(space-between,center,center,0);
+
+		@include media($md) {
+			max-width: 310px;
+			flex-wrap: wrap;
+		}
 	}
 }

@@ -1,30 +1,49 @@
 .object-block {
 	&__slider {
 	}
+
 	&__prev,
 	&__next {
 		position: absolute;
 		bottom: 16px;
 	}
+
 	&__prev {
 		right: 72px;
 
+		@include media($sm) {
+			right: 60px;
+		}
 	}
+
 	&__next {
 		right: 16px;
 	}
+
 	&__info {
 	}
+
 	&__img {
 		display: block;
 	}
+
 	&__title {
 		margin-bottom: 8px;
 		margin-top: 24px;
+
+		@include media($sm) {
+			margin-top: 40px;
+		}
+
+		@include media($xs) {
+			margin-top: 16px;
+		}
 	}
+
 	&__text {
 		margin-bottom: 8px;
 	}
+
 	&__date {
 		color: $gray-medium;
 	}

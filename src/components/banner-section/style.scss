@@ -57,6 +57,10 @@
 			font: 300 18px/22px $baseFF;
 		}
 
+		@include media($sm) {
+			font: 300 22px/30.8px $baseFF;
+		}
+
 		@include media($xs) {
 			font: 300 13px/14px $baseFF;
 		}
@@ -130,6 +134,18 @@
 	&--img-mode {
 		position: relative;
 		padding: 200px 0 230px;
+
+		@include media($md) {
+			padding: 123px 0px;
+		}
+
+		@include media($sm) {
+			padding: 140px 0px;
+		}
+
+		@include media($xs) {
+			padding: 141px 0px;
+		}
 	}
 
 	&--img-mode & {

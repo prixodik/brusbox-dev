@@ -1,11 +1,32 @@
 .selects-section {
 	padding: 35px 0;
+
+	@include media($md) {
+		padding: 24px 0;
+	}
+
+	@include media($sm) {
+		padding: 70px 0 40px;
+	}
+
+	@include media($xs) {
+		padding: 33px 0 40px;
+	}
 	&__row {
 		@include flex();
 		flex-wrap: nowrap;
 		margin-right: 60px;
 		max-width: 600px;
 		width: 100%;
+
+		@include media($sm) {
+			max-width: 100%;
+			width: auto;
+		}
+
+		@include media($sm) {
+			flex-direction: column;
+		}
 	}
 	&__select {
 		margin-right: 24px;
@@ -17,29 +38,57 @@
 	&__items {
 		@include flex();
 		flex-wrap: nowrap;
+
+		@include media($sm) {
+			flex-direction: column;
+		}
 	}
+
 	&__options {
+
 		ul {
 			@include flex();
 			// flex-wrap: nowrap;
 			list-style: none;
-			max-width: 630px;
-			overflow-x: auto;
+			// max-width: 630px;
+			// overflow-x: auto;
 			margin-bottom: -10px;
+			padding-left: 0;
+
+			@include media($sm) {
+				margin-top: 10px;
+				max-width: 100%;
+			}
 		}
+
 		li {
 			margin-bottom: 10px;
 			margin-right: 4px;
-			padding: 8px 20px;
+			@include flex(center,center,center,0);
+			padding: 0 20px;
 			background-color: $bg-grey;
 			border-radius: 80px;
 			white-space: nowrap;
+			height: 42px;
+
 			&:last-child {
 				margin-right: 0;
 			}
+
 			&.focus {
 				display: none;
 			}
+
+			@include media($sm) {
+				height: 47px;
+				font: 300 16px/44px $baseFF;
+			}
+
+			@include media($xs) {
+				height: 32px;
+				font: 300 12px/13px $baseFF;
+			}
+
 		}
 	}
 

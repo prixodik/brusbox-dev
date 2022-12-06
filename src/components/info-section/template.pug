@@ -112,22 +112,22 @@ mixin infoSectionAboutCompany(data)
 			._title
 				h5 Ознакомьтесь подробнее с компанией BRUSBOX
 			._items.row
-				._item.col-3
+				._item.col-3.col-sm-6.col-xs-12
 					a(href="#")
 						._item-img
 							img(src="images/about-company-2.jpg", alt="")
 						._item-title История BRUSBOX
-				._item.col-3
+				._item.col-3.col-sm-6.col-xs-12
 					a(href="#")
 						._item-img
 							img(src="images/about-company-3.jpg", alt="")
 						._item-title Поставщики
-				._item.col-3
+				._item.col-3.col-sm-6.col-xs-12
 					a(href="#")
 						._item-img
 							img(src="images/about-company-4.jpg", alt="")
 						._item-title Дипломы и сертификаты
-				._item.col-3
+				._item.col-3.col-sm-6.col-xs-12
 					a(href="#")
 						._item-img
 							img(src="images/about-company-5.jpg", alt="")
@@ -140,7 +140,7 @@ mixin infoSectionSliderImg(data)
 				._slide
 					._container.container.container--full
 						._row.row
-							._info.col-6
+							._info.col-6.col-xs-12
 								if item.title
 									h2._title
 										!=item.title
@@ -153,7 +153,7 @@ mixin infoSectionSliderImg(data)
 									._button
 										a(href="#").btn.-border.-red
 											!=item.btn										
-							._img.col-6
+							._img.col-6.col-xs-12
 								<span class="info-section__prev slick-arrow slick-prev" tabindex="-1">
 									<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg>
 								</span>
@@ -164,7 +164,7 @@ mixin infoSectionSliderImg(data)
 			
 	
 mixin infoSectionSlider(data)
-	.info-section.-btn.-slider&attributes(attributes)
+	.info-section.-btn.-slider.-swiper&attributes(attributes)
 		._container.container
 			._row.row
 				._info.col-6.col-sm-12
@@ -195,10 +195,10 @@ mixin infoSectionSlider(data)
 							+svg('slider-arrow-right')
 							
 mixin infoSectionMarket(data)
-	.info-section.-btn.-title-margin.-img-half&attributes(attributes)
+	.info-section.-btn.-title-margin.-img-half.--no-column-revers&attributes(attributes)
 		._container.container
 			._row.row
-				._info
+				._info.col-6.col-md-4.col-sm-12
 					if data.title
 						h2._title
 							!=data.title
@@ -210,5 +210,6 @@ mixin infoSectionMarket(data)
 							a(href="#").btn.-border.-red 
 								!=data.btn
 				if data.img
-					._img.col-6
+					._img.col-6.col-md-4.col-sm-12
 						img(src=data.img, alt="")
+

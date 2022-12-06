@@ -1,29 +1,85 @@
 .employees-section {
 	padding-top: 60px;
-	
+
+	@include media($md) {
+		padding-top: 0;
+	}
+
+	@include media($sm) {
+		padding-top: 40px;
+	}
+
+	@include media($xs) {
+		padding-top: 0;
+	}
+
 	&__title {
 		margin-bottom: 24px;
+
+		@include media($md) {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		@include media($xs) {
+			margin-bottom: 16px;
+		}
 	}
 
 	&__items {
 		margin-bottom: 38px;
+
 		&:last-child {
 			margin-bottom: 0;
+		}
+
+		@include media($sm) {
+			margin-bottom: 0;
+		}
+
+		@include media($xs) {
+			margin-bottom: 40px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 
 		&--border-top {
 			padding-top: 60px;
 			border-top: 1px solid $gray;
+
+			@include media($md) {
+				padding-top: 50px;
+			}
+
+			@include media($sm) {
+				padding-top: 10px;
+				border: none;
+			}
+
+			@include media($xs) {
+				padding-top: 0;
+			}
 		}
 	}
+
 	&__row {
 		margin-left: 0;
 		margin-right: 0;
 		justify-content: space-between;
 	}
+
 	&__item {
 		padding-left: 0;
 		padding-right: 0;
 		margin-bottom: 42px;
+
+		@include media($xs) {
+			flex-direction: column;
+			align-items: center;
+			align-content: center;
+			margin-bottom: 16px;
+		}
 	}
 }

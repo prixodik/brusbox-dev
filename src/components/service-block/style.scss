@@ -1,2 +1,44 @@
 .service-block {
+	@include flex(0, center, center, 0);
+	margin-bottom: 24px;
+
+	@include media($sm) {
+		margin-bottom: 12px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__icon {
+		margin-right: 16px;
+		min-width: 90px;
+		min-height: 90px;
+		max-width: 90px;
+		max-height: 90px;
+
+		@include media($md) {
+			min-width: 56px;
+			min-height: 56px;
+			max-width: 56px;
+			max-height: 56px;
+		}
+
+		@include media($sm) {
+			min-width: 80px;
+			min-height: 80px;
+			max-width: 80px;
+			max-height: 80px;
+		}
+
+		@include media($xs) {
+			min-width: 44px;
+			min-height: 44px;
+			max-width: 44px;
+			max-height: 44px;
+		}
+	}
+	&__wrap {
+	}
+	&__title {
+	}
 }

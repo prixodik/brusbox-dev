@@ -51,28 +51,28 @@ block content
 					title: 'Ламинация',
 					text: 'Важно соответствовать современным тенденциям и главное — потребностям клиентов. Поэтому мы в BRUSBOX разработали широкую линейку ламинационных материалов, способных удовлетворить любые потребности!',
 					btn: 'Цветовые решения'
-				}).info-section--swapper-center.info-section--bg-white
+				}).info-section--swapper-center.info-section--bg-white.info-section--no-column-revers
 
 			.market-page-document
 				._container.container.container--text
-					._title
-						.title-h5 Сертификаты BRUSBOX
-					._text Для соответствия всем необходимым требованиям, компания BRUSBOX предоставляет дилерам всю необходимую документацию
-					._items
+					._title.col-sm-12
+						._title-h5 Сертификаты BRUSBOX
+					._text.col-sm-12 Для соответствия всем необходимым требованиям, компания BRUSBOX предоставляет дилерам всю необходимую документацию
+					._items.col-12
 						+documentBlockMarket({
 							text: "Сертификат <br> соответствия",
 							img: "images/main-market-document-1.png",
-						})
+						}).col-4.col-md-4.col-sm-12
 						+documentBlockMarket({
-							text: "Пожарный сертификат <br> на профильные системы BRUSBOX",
+							text: "Пожарный сертификат на профильные системы BRUSBOX",
 							img: "images/main-market-document-2.png",
-						})
+						}).col-4.col-md-4.col-sm-12
 						+documentBlockMarket({
 							text: "Санитарно-эпидемиологическое заключение",
 							img: "images/main-market-document-3.png",
-						})
-					._buttons
-					button.btn.-border.-red.js-submit(type="submit") Тех. документация
+						}).col-4.col-md-4.col-sm-12
+					._buttons.col-sm-5
+						button.btn.-border.-red.js-submit(type="submit") Тех. документация
 
 			+bannerImg({
 				img:"images/banner-main-market.jpg"
@@ -82,7 +82,7 @@ block content
 				img: 'images/main-market-5.jpg',
 				title: 'О компании',
 				text: '<p>Компания «БРУСБОКС» — один из крупнейших производителей ПВХ профиля <br> и подоконной доски в России, основана в марте 2004 года.</p> <br> <p> На сегодняшний день производственная база компании «БРУСБОКС» расположена <br> в г. Брянске и составляет 50 000 м², площадь производственных помещений — <br> 10 000 м², 28 экструзионных линий фирмы KraussMaffei Technologies GmbH.</p>'
-			}).info-section--gray.info-section--big-text
+			}).info-section--gray.info-section--big-text.info-section--no-column-revers
 
 			+bannerSectionImg({
 			img:'images/banner-bg-main.jpg',

@@ -1,5 +1,13 @@
 .objects-page {
 	&__object {
 		margin-bottom: 60px;
+
+		@include media($sm) {
+			margin-bottom: 69px;
+		}
+
+		@include media($xs) {
+			margin-bottom: 39px;
+		}
 	}
 }

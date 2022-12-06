@@ -1,7 +1,7 @@
 extends extends/base.pug
 append vars
-	- var pageUrl = 'dilers-list.html';
-	- var pageTitle = 'Дилеры на карте';
+	- var pageUrl = 'documentation.html';
+	- var pageTitle = 'Техническая документация';
 block styles
 	
 block content
@@ -12,7 +12,8 @@ block content
 		+headSection({
 			bread: [{url: '#', title: 'Профессионалам'},{url: '#', title: 'Техническая документация'}],
 			title: "Техническая документация",
-			img: "images/main-bg-documentation.jpg"
+			img: "images/main-bg-documentation.jpg",
+			imgSm: "images/main-bg-documentation-sm.jpg"
 		})._head
 		._docs
 			._container.container
