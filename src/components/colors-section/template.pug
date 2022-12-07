@@ -9,11 +9,11 @@ mixin colorsSection(data)
 					+paletteBlockSmall()._palette
 			._right
 				._right-img-1.js-pallette-chenge
-					img(src="images/color-sol-2.png", alt="")
-					img(src="images/color-sol-1.png", alt="").is-active
+					+webp("images/color-sol-2.png")
+					+webp("images/color-sol-1.png").is-active
 				._right-img-2.js-pallette-profile-chenge
-					img(src="images/color-sol-second-img-1.png", alt="")
-					img(src="images/color-sol-second-img-2.png", alt="").is-active
+					+webp("images/color-sol-second-img-1.png")
+					+webp("images/color-sol-second-img-2.png").is-active
 
 mixin colorsSectionLamination(data)
 	.colors-section.-lamination&attributes(attributes)
@@ -25,8 +25,8 @@ mixin colorsSectionLamination(data)
 				._palettes
 					+paletteBlock6Colors()._palette
 				._img.js-pallette-chenge#js-palette-result-1
-					img(src="images/lamination-img-2.png", alt="").is-active
-					img(src="images/lamination-img-3.png", alt="")
+					+webp("images/lamination-img-2.png").is-active
+					+webp("images/lamination-img-3.png")
 				._img.js-pallette-chenge.is-active#js-palette-result-2
-					img(src="images/lamination-img-2.png", alt="")
-					img(src="images/lamination-img-1.png", alt="").is-active
+					+webp("images/lamination-img-2.png")
+					+webp("images/lamination-img-1.png").is-active

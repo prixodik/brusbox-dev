@@ -1,7 +1,7 @@
 mixin documentBlock(data)
 	.document-block&attributes(attributes)
 		a(href=data.link)._img.js-fancybox
-			img(src=data.img, alt="")
+			+webp(data.img)
 		if data.text
 			._text
 				!=data.text
@@ -9,14 +9,14 @@ mixin documentBlock(data)
 mixin documentBlockMode(data)
 	.document-block.--mode&attributes(attributes)
 			a(href=data.link)._img.js-fancybox
-				img(src=data.img, alt="")
+				+webp(data.img)
 			if data.text
 				._text
 					!=data.text
 
 mixin documentBlockMarket(data)
 	.document-block.--btn&attributes(attributes)
-		img(src=data.img, alt="")
+		+webp(data.img)._img
 		if data.text
 			._text
 				!=data.text
@@ -28,7 +28,7 @@ mixin documentBlockBtn(data)
 	.document-block.--btn.--btn-list.--max-width&attributes(attributes)
 		each item in data.items
 			._row.row.col-3.col-sm-12
-				img(src=item.img, alt="")
+				+webp(item.img)
 				if item.btn
 					._button
 						a(href="#").btn.-border.-red 

@@ -25,7 +25,7 @@ mixin headSection(data)
 
 mixin headSectionMode(data)
 	.head-section.--mode&attributes(attributes)
-		img(src=data.img, alt="")._img
+		+webp(data.img)._img
 		+breadcrumbs({
 			items: data.bread
 		})._bread
@@ -58,7 +58,7 @@ mixin headSectionSlider(data)
 									!=data.btn
 
 			._slide
-				img(src=data.img2, alt="")._img
+				+webp(data.img2)._img
 				._container.container.container--text
 					._info
 						h1._title

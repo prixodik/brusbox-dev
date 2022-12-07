@@ -13,7 +13,8 @@ mixin infoSection(data)
 							!=data.text
 				if data.img
 					._img.col-6.col-sm-12
-						img(src=data.img, alt="")
+						+webp(data.img)
+						//-img(src=data.img, alt="")
 
 mixin infoSectionHideText(data)
 	.info-section.--hide-text&attributes(attributes)
@@ -47,7 +48,7 @@ mixin infoSectionTitleH4(data)
 							!=data.text
 				if data.img
 					._img.col-6.col-sm-12
-						img(src=data.img, alt="")
+						+webp(data.img)
 
 mixin infoSectionForm(data)
 	.info-section.--form&attributes(attributes)
@@ -61,7 +62,7 @@ mixin infoSectionForm(data)
 					})
 				if data.img
 					._img.col-6.col-sm-12
-						img(src=data.img, alt="")
+						+webp(data.img)
 
 mixin infoSectionFormCalculator(data)
 	.info-section.--form&attributes(attributes)
@@ -78,7 +79,7 @@ mixin infoSectionImgParams(data)
 		._container.container.container--full
 			._row.row
 				._img.col-6.col-sm-12
-					img(src=data.img alt='')
+					+webp(data.img)
 				._info.col-6.col-sm-12
 					._title.title-h5
 						!= data.title
@@ -114,7 +115,7 @@ mixin infoSectionButton(data)
 								!=data.btn
 				if data.img
 					._img.col-6.col-sm-12
-						img(src=data.img, alt="")
+						+webp(data.img)
 
 mixin infoSectionButtonRed(data)
 	.info-section.-btn.-title-margin&attributes(attributes)
@@ -133,7 +134,7 @@ mixin infoSectionButtonRed(data)
 								!=data.btn
 				if data.img
 					._img.col-6.col-sm-12
-						img(src=data.img, alt="")
+						+webp(data.img)
 
 mixin infoSectionAboutCompany(data)
 	.info-section--about-company&attributes(attributes)
@@ -144,22 +145,23 @@ mixin infoSectionAboutCompany(data)
 				._item.col-3.col-sm-6.col-xs-12
 					a(href="#")
 						._item-img
-							img(src="images/about-company-2.jpg", alt="")
+							+webp("images/about-company-2.jpg")
+							//-img(src="images/about-company-2.jpg", alt="")
 						._item-title История BRUSBOX
 				._item.col-3.col-sm-6.col-xs-12
 					a(href="#")
 						._item-img
-							img(src="images/about-company-3.jpg", alt="")
+							+webp("images/about-company-3.jpg")
 						._item-title Поставщики
 				._item.col-3.col-sm-6.col-xs-12
 					a(href="#")
 						._item-img
-							img(src="images/about-company-4.jpg", alt="")
+							+webp("images/about-company-4.jpg")
 						._item-title Дипломы и сертификаты
 				._item.col-3.col-sm-6.col-xs-12
 					a(href="#")
 						._item-img
-							img(src="images/about-company-5.jpg", alt="")
+							+webp("images/about-company-5.jpg")
 						._item-title Реализованные объекты
 
 mixin infoSectionSliderImg(data)
@@ -186,7 +188,7 @@ mixin infoSectionSliderImg(data)
 								<span class="info-section__prev slick-arrow slick-prev" tabindex="-1">
 									<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg>
 								</span>
-								img(src=item.img, alt="")
+								+webp(item.img)
 								<span class="info-section__next slick-arrow slick-next" tabindex="-1">
 									<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg>
 								</span>
@@ -211,13 +213,13 @@ mixin infoSectionSlider(data)
 					._slider.swiper.mySwiper
 						._slider-wrap.swiper-wrapper
 							._slide.swiper-slide
-								img(src="images/swiper-product-1.png", alt="")
+								+webp("images/swiper-product-1.png")
 							._slide.swiper-slide
-								img(src="images/swiper-product-2.png", alt="")
+								+webp("images/swiper-product-2.png")
 							._slide.swiper-slide
-								img(src="images/swiper-product-2.png", alt="")
+								+webp("images/swiper-product-2.png")
 							._slide.swiper-slide
-								img(src="images/swiper-product-1.png", alt="")
+								+webp("images/swiper-product-1.png")
 						.swiper-button-prev
 							+svg('slider-arrow-right')
 						.swiper-button-next
@@ -240,5 +242,5 @@ mixin infoSectionMarket(data)
 								!=data.btn
 				if data.img
 					._img.col-6.col-md-4.col-sm-12
-						img(src=data.img, alt="")
+						+webp(data.img)
 
