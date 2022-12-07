@@ -15,9 +15,10 @@ var uikit = {
 
   ///------------------------------------------------используются в текущем проекте-----------------------------------------------
   stepsQuiz() {
+    let next = '';
     $(".js-steps-quiz-next").click(function () {
       let cur = $(this).data("current");
-      let next = $(this).data("step");
+      next = $(this).data("step");
       let data = $(this).parents("form").serializeArray();
       if (uikit.changeWindow[cur - 1] === undefined) {
         uikit.changeWindow.push(data);
@@ -26,6 +27,10 @@ var uikit = {
       }
 
       /* if() */
+      console.log(next)
+      if (next === $(`#quiz-${next}`)) {
+        console.log(true)
+      }
 
       $(".js-steps-quiz").removeClass("is-active");
       $(`#quiz-${next}`).addClass("is-active");
@@ -33,9 +38,35 @@ var uikit = {
       return false;
     });
 
+    // $(".js-steps-quiz-submit").submit(function () {
+    //   return false;
+    // });
+
     $(".js-steps-quiz-submit").click(function () {
+      $(`#quiz-${next}`).removeClass("is-active");
+      console.log($(`#quiz-${next}`).children('form'))
+      $(`.js-quiz-thanks`).addClass('is-active');
       return false;
     });
+  },
+
+  hideText: function () {
+    $(".js-hide-text-btn").click(function () {
+      if ($(this).siblings('.js-hide-text').hasClass('is-active')) {
+        $(this).siblings('.js-hide-text').removeClass('is-active')
+        $(this).removeClass('is-active')
+      } else {
+        $(this).siblings('.js-hide-text').addClass('is-active')
+        $(this).addClass('is-active')
+      }
+
+
+    });
+
+    $(".js-hide-text-btn").click(function () {
+      console.log(true)
+      return false;
+    })
   },
 
   copyMaterial: function () {
@@ -151,211 +182,211 @@ var uikit = {
 
   //-----------------------------------------------------------------------------------------------------------------------------
 
-  validation: function () {
-    var classValidate = "is-validate",
-      classParent = ".form-group",
-      classError = "is-error";
+  // validation: function () {
+  //   var classValidate = "is-validate",
+  //     classParent = ".form-group",
+  //     classError = "is-error";
 
-    function error(el) {
-      $(el)
-        .addClass(classError)
-        .removeClass(classValidate)
-        .closest(classParent)
-        .addClass(classError)
-        .removeClass(classValidate);
-    }
+  //   function error(el) {
+  //     $(el)
+  //       .addClass(classError)
+  //       .removeClass(classValidate)
+  //       .closest(classParent)
+  //       .addClass(classError)
+  //       .removeClass(classValidate);
+  //   }
 
-    function validate(el) {
-      $(el)
-        .removeClass(classError)
-        .addClass(classValidate)
-        .closest(classParent)
-        .removeClass(classError)
-        .addClass(classValidate);
-    }
+  //   function validate(el) {
+  //     $(el)
+  //       .removeClass(classError)
+  //       .addClass(classValidate)
+  //       .closest(classParent)
+  //       .removeClass(classError)
+  //       .addClass(classValidate);
+  //   }
 
-    function reset(el) {
-      $(el)
-        .removeClass(classValidate + " " + classError)
-        .closest(classParent)
-        .removeClass(classError)
-        .removeClass(classValidate + " " + classError);
-    }
-    $(".form-control").focus(function () {
-      reset($(this));
-    });
-    $("select").change(function () {
-      reset($(this));
-    });
-    $('input[type="checkbox"], input[type="radio"]').change(function () {
-      reset($(this));
-    });
+  //   function reset(el) {
+  //     $(el)
+  //       .removeClass(classValidate + " " + classError)
+  //       .closest(classParent)
+  //       .removeClass(classError)
+  //       .removeClass(classValidate + " " + classError);
+  //   }
+  //   $(".form-control").focus(function () {
+  //     reset($(this));
+  //   });
+  //   $("select").change(function () {
+  //     reset($(this));
+  //   });
+  //   $('input[type="checkbox"], input[type="radio"]').change(function () {
+  //     reset($(this));
+  //   });
 
-    function checkInput(el) {
-      var $form = $(el);
+  //   function checkInput(el) {
+  //     var $form = $(el);
 
-      $form.find(".is-error").removeClass("is-error"); //.each(function(){
-      //$(this).removeClass('is-error');
-      //console.log("!"+$form.find('.is-error').length+"!");
-      //});
+  //     $form.find(".is-error").removeClass("is-error"); //.each(function(){
+  //     //$(this).removeClass('is-error');
+  //     //console.log("!"+$form.find('.is-error').length+"!");
+  //     //});
 
-      $form.find("select.js-required").each(function () {
-        if ($(this).val() != "") {
-          validate($(this));
-        } else {
-          error($(this));
-        }
-      });
-      $form.find("input[type=tel].js-required").each(function () {
-        if ($(this).val() != "") {
-          validate($(this));
-        } else {
-          error($(this));
-        }
-      });
-      $form.find("input[type=email].js-required").each(function () {
-        if ($(this).val() != "") {
-          validate($(this));
-        } else {
-          error($(this));
-        }
-      });
-      $form.find("input[type=text].js-required").each(function () {
-        if ($(this).val() != "") {
-          validate($(this));
-        } else {
-          error($(this));
-        }
-      });
-      $form.find("input[type=password].js-required").each(function () {
-        if ($(this).val() != "") {
-          validate($(this));
-        } else {
-          error($(this));
-        }
-      });
-      if ($(".js-pass1", $form).length != 0) {
-        var pass01 = $form.find(".js-pass1").val();
-        var pass02 = $form.find(".js-pass2").val();
-        if (pass01 == pass02) {
-          validate($(".js-pass1, .js-pass2", $form));
-        } else {
-          error($(".js-pass1, .js-pass2", $form));
-        }
-      }
-      $form.find("textarea.js-required").each(function () {
-        if ($(this).val() != "") {
-          validate($(this));
-        } else {
-          error($(this));
-        }
-      });
-      $form.find("input[type=email]").each(function () {
-        var regexp =
-          /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
-        var $this = $(this);
-        if ($this.hasClass("js-required")) {
-          if (regexp.test($this.val())) {
-            validate($this);
-          } else {
-            error($this);
-          }
-        } else {
-          if ($this.val() != "") {
-            if (regexp.test($this.val())) {
-              validate($this);
-            } else {
-              error($this);
-            }
-          } else {
-            reset($this);
-          }
-        }
-      });
+  //     $form.find("select.js-required").each(function () {
+  //       if ($(this).val() != "") {
+  //         validate($(this));
+  //       } else {
+  //         error($(this));
+  //       }
+  //     });
+  //     $form.find("input[type=tel].js-required").each(function () {
+  //       if ($(this).val() != "") {
+  //         validate($(this));
+  //       } else {
+  //         error($(this));
+  //       }
+  //     });
+  //     $form.find("input[type=email].js-required").each(function () {
+  //       if ($(this).val() != "") {
+  //         validate($(this));
+  //       } else {
+  //         error($(this));
+  //       }
+  //     });
+  //     $form.find("input[type=text].js-required").each(function () {
+  //       if ($(this).val() != "") {
+  //         validate($(this));
+  //       } else {
+  //         error($(this));
+  //       }
+  //     });
+  //     $form.find("input[type=password].js-required").each(function () {
+  //       if ($(this).val() != "") {
+  //         validate($(this));
+  //       } else {
+  //         error($(this));
+  //       }
+  //     });
+  //     if ($(".js-pass1", $form).length != 0) {
+  //       var pass01 = $form.find(".js-pass1").val();
+  //       var pass02 = $form.find(".js-pass2").val();
+  //       if (pass01 == pass02) {
+  //         validate($(".js-pass1, .js-pass2", $form));
+  //       } else {
+  //         error($(".js-pass1, .js-pass2", $form));
+  //       }
+  //     }
+  //     $form.find("textarea.js-required").each(function () {
+  //       if ($(this).val() != "") {
+  //         validate($(this));
+  //       } else {
+  //         error($(this));
+  //       }
+  //     });
+  //     $form.find("input[type=email]").each(function () {
+  //       var regexp =
+  //         /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+  //       var $this = $(this);
+  //       if ($this.hasClass("js-required")) {
+  //         if (regexp.test($this.val())) {
+  //           validate($this);
+  //         } else {
+  //           error($this);
+  //         }
+  //       } else {
+  //         if ($this.val() != "") {
+  //           if (regexp.test($this.val())) {
+  //             validate($this);
+  //           } else {
+  //             error($this);
+  //           }
+  //         } else {
+  //           reset($this);
+  //         }
+  //       }
+  //     });
 
-      $form.find("input[type=checkbox].js-required").each(function () {
-        if ($(this).is(":checked")) {
-          validate($(this));
-        } else {
-          error($(this));
-          $(this).parent().addClass("is-error");
-        }
-      });
+  //     $form.find("input[type=checkbox].js-required").each(function () {
+  //       if ($(this).is(":checked")) {
+  //         validate($(this));
+  //       } else {
+  //         error($(this));
+  //         $(this).parent().addClass("is-error");
+  //       }
+  //     });
 
-      var radios = [];
-      $form.find("input[type=radio]:required").each(function () {
-        var name = $(this).attr("name");
+  //     var radios = [];
+  //     $form.find("input[type=radio]:required").each(function () {
+  //       var name = $(this).attr("name");
 
-        if (radios.indexOf(name) == -1) {
-          radios.push(name);
-          var result = false;
-          $form.find("input[name=" + name + "].js-required").each(function () {
-            if ($(this).is(":checked")) {
-              result = true;
-            }
-          });
-          if (result == true) {
-            validate($(this));
-            return false;
-          } else {
-            //console.log(radios);
-            $form
-              .find("input[name=" + name + "].js-required")
-              .addClass(classError);
-            error($(this));
-          }
-        }
-      });
-    }
+  //       if (radios.indexOf(name) == -1) {
+  //         radios.push(name);
+  //         var result = false;
+  //         $form.find("input[name=" + name + "].js-required").each(function () {
+  //           if ($(this).is(":checked")) {
+  //             result = true;
+  //           }
+  //         });
+  //         if (result == true) {
+  //           validate($(this));
+  //           return false;
+  //         } else {
+  //           //console.log(radios);
+  //           $form
+  //             .find("input[name=" + name + "].js-required")
+  //             .addClass(classError);
+  //           error($(this));
+  //         }
+  //       }
+  //     });
+  //   }
 
-    $(".js-edit-input").click(function () {
-      $(this)
-        .parents(".input")
-        .removeClass("is-disabled")
-        .find("input, textarea")
-        .prop("disabled", false);
-      return false;
-    });
+  //   $(".js-edit-input").click(function () {
+  //     $(this)
+  //       .parents(".input")
+  //       .removeClass("is-disabled")
+  //       .find("input, textarea")
+  //       .prop("disabled", false);
+  //     return false;
+  //   });
 
-    $(".js-submit").click(function () {
-      var $form = $(this).closest("form");
-      checkInput($form);
-      var errors = $form.find(".is-error:visible").length;
-      //console.log(errors);
-      if (errors) {
-        return false;
-      } else if (
-        $(this).data("href") != "" &&
-        $(this).data("href") != undefined
-      ) {
-        // Открытие попапа после отправки формы.
+  //   $(".js-submit").click(function () {
+  //     var $form = $(this).closest("form");
+  //     checkInput($form);
+  //     var errors = $form.find(".is-error:visible").length;
+  //     //console.log(errors);
+  //     if (errors) {
+  //       return false;
+  //     } else if (
+  //       $(this).data("href") != "" &&
+  //       $(this).data("href") != undefined
+  //     ) {
+  //       // Открытие попапа после отправки формы.
 
-        if ($(this).attr("href") != "" && $(this).attr("href") != undefined) {
-          var href = $(this).attr("href");
-        } else {
-          var href = $(this).data("href");
-        }
-        if ($(this).data("media") == "lg" && uikit.ww() <= uikit.md) {
-          return false;
-        }
+  //       if ($(this).attr("href") != "" && $(this).attr("href") != undefined) {
+  //         var href = $(this).attr("href");
+  //       } else {
+  //         var href = $(this).data("href");
+  //       }
+  //       if ($(this).data("media") == "lg" && uikit.ww() <= uikit.md) {
+  //         return false;
+  //       }
 
-        var bodyWidth = $("body").width();
+  //       var bodyWidth = $("body").width();
 
-        $("body, html").addClass("overflow");
+  //       $("body, html").addClass("overflow");
 
-        if (bodyWidth - uikit.ww() < 0) {
-          //$('body').css('padding-right',((bodyWidth - uikit.ww())* -1)+'px');
-        }
+  //       if (bodyWidth - uikit.ww() < 0) {
+  //         //$('body').css('padding-right',((bodyWidth - uikit.ww())* -1)+'px');
+  //       }
 
-        //$(".mobile-menu").removeClass("active");
+  //       //$(".mobile-menu").removeClass("active");
 
-        $(".popup").removeClass("active");
-        $(href).addClass("active");
+  //       $(".popup").removeClass("active");
+  //       $(href).addClass("active");
 
-        return false;
-      }
-    });
-  },
+  //       return false;
+  //     }
+  //   });
+  // },
 
   tabs: function () {
     $("[data-tab]").click(function (e) {
@@ -651,30 +682,7 @@ var uikit = {
           autoplaySpeed: 2000,
           lazyLoad: 'progressive',
           prevArrow: '<a href="#" class="head-section__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
-          nextArrow: '<a href="#" class="head-section__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
-        });
-
-      });
-    }
-
-    if ($('.js-slider-head').length) {
-      $('.js-slider-head').each(function () {
-        var $this = $(this);
-
-        $this.slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-          variableWidth: false,
-          arrows: true,
-          dots: false,
-          infinite: true,
-          adaptiveHeight: true,
-          autoplay: false,
-          autoplaySpeed: 2000,
-          lazyLoad: 'progressive',
-          prevArrow: '<a href="#" class="head-section__prev slick-arrow slick-prev" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
-          nextArrow: '<a href="#" class="head-section__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>',
+          nextArrow: '<a href="#" class="head-section__next slick-arrow slick-next" tabindex="-1"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2894_13921)"><rect width="48" height="49" rx="24" fill="white" fill-opacity="0.2"/><path d="M4.90909 8.90909L30 24.5L4.90909 40.0909L-20.1818 24.5L4.90909 8.90909Z" fill="#E40032"/></g><defs><clipPath id="clip0_2894_13921"><rect width="48" height="49" rx="24" fill="white"/></clipPath></defs></svg></a>'
         });
 
       });
@@ -770,7 +778,7 @@ var uikit = {
 
   mainInit: function () {
     this.lazy();
-    //this.validation();
+    // this.validation();
     this.copyMaterial();
     this.fancybox();
     this.popups();
@@ -783,6 +791,7 @@ var uikit = {
     this.accardion();
     this.sliders();
     this.selectsSorting();
+    this.hideText();
   },
 };
 $(document).ready(function () {

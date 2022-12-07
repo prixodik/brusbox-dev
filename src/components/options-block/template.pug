@@ -1,32 +1,46 @@
+include ../question-block/template
+
 mixin optionsBlock(data)
 	.options-block&attributes(attributes)
 		._item
 			._item-title Профиль
 			._item-option
 				span BRUSBOX ACLASS
-				+svg('question')._item-icon
+				+questionBlock({
+					answer: 'Профиль'
+				}).options-block__item-icon
 		._item
 			._item-title Количество камер
 			._item-option
 				span 7/6
-				+svg('question').options-block__item-icon
+				+questionBlock({
+					answer: 'Количество камер'
+				}).options-block__item-icon
 		._item
 			._item-title Ширина профиля
 			._item-option
 				span 60 мм
-				+svg('question').options-block__item-icon
+				+questionBlock({
+					answer: 'Ширина профиля'
+				}).options-block__item-icon
 		._item
 			._item-title Количество контуров уплотнения
 			._item-option
 				span 3
-				+svg('question').options-block__item-icon
+				+questionBlock({
+					answer: 'Количество контуров уплотнения'
+				}).options-block__item-icon
 		._item
 			._item-title Стеклопакет
 			._item-option
 				span Двукамерный
-				+svg('question').options-block__item-icon
+				+questionBlock({
+					answer: 'Стеклопакет'
+				}).options-block__item-icon
 		._item
 			._item-title Детская безопасность
 			._item-option
 				span Детский замок и триплекс
-				+svg('question').options-block__item-icon
+				+questionBlock({
+					answer: 'Детская безопасность'
+				}).options-block__item-icon

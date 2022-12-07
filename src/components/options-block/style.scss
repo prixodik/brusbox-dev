@@ -3,7 +3,7 @@
 	width: 100%;
 
 	&__item {
-		@include flex(space-between,center,center,nowrap);
+		@include flex(space-between, center, center, nowrap);
 		border-bottom: 1px solid $gray-bridge;
 		padding: 6px 0;
 
@@ -24,8 +24,8 @@
 		}
 		&-option {
 			font: 300 18px/19px $baseFF;
-			@include flex(0, center, center,nowrap);
-			text-align: right;
+			@include flex(0, center, center, nowrap);
+			text-align: left;
 
 			@include media($md) {
 				font: 300 16px/18px $baseFF;

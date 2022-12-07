@@ -15,6 +15,25 @@ mixin infoSection(data)
 					._img.col-6.col-sm-12
 						img(src=data.img, alt="")
 
+mixin infoSectionHideText(data)
+	.info-section.--hide-text&attributes(attributes)
+		._container.container
+			._row.row
+				._info.col-6.col-sm-12
+					if data.title
+						h2._title
+							!=data.title
+					if data.text
+						._text.js-hide-text
+							!=data.text
+						include ../show-text-block/template
+						+showTextBlock({
+							title: "Развернуть текст"
+						})
+				if data.img
+					._img.col-6.col-sm-12
+						img(src=data.img, alt="")
+
 mixin infoSectionTitleH4(data)
 	.info-section&attributes(attributes)
 		._container.container
@@ -40,6 +59,16 @@ mixin infoSectionForm(data)
 						subtitle: 'Оставьте заявку и наш специалист свяжется с вами для расчета',
 						agree: 'Нажимая кнопку «Отправить», я подтверждаю свою дееспособность, согласие на обработку персональных данных<br> в соответствии с указанным здесь текстом'
 					})
+				if data.img
+					._img.col-6.col-sm-12
+						img(src=data.img, alt="")
+
+mixin infoSectionFormCalculator(data)
+	.info-section.--form&attributes(attributes)
+		._container.container
+			._row.row
+				._info.col-6.col-sm-12
+					+formBlockContactsCalculator()
 				if data.img
 					._img.col-6.col-sm-12
 						img(src=data.img, alt="")
