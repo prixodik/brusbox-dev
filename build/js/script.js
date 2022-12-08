@@ -8132,6 +8132,9 @@ var uikit = {
           .addClass("is-active");
 
 
+        $('.js-search-input').focus()
+
+
 
 
 

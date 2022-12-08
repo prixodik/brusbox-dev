@@ -697,6 +697,7 @@ var uikit = {
           .removeClass("is-disabled")
           .parents(".js-search-block")
           .addClass("is-active");
+        $('.js-search-input').focus()
 
         $(document).click(function (e) {
           // событие клика по веб-документу
