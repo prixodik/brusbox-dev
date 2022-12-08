@@ -1,0 +1,30 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'diler-page.html';
+	- var pageTitle = 'Страница дилера';
+block styles
+	
+block content
+	include ../components/head-section/template
+	include ../components/select-window-section/template
+	include ../components/info-section/template
+
+	.diler-page
+		+headSection({
+			title: 'Подобрать окно',
+			img: 'images/head-bg-calculator.jpg',
+			imgSm: 'images/head-bg-calculator-sm.jpg',
+			bread: [{url: '#', title: 'Главная'},{url: '#', title: 'Покупателям'},{url: '#', title: 'Подобрать окно'}],
+		})._head
+		+selectWindowSection()
+ 
+		+infoSectionFormCalculator({
+			img: 'images/info-calculator.jpg'
+		})
+
+			
+
+
+	//- +gridLayout()
+
+block scripts 

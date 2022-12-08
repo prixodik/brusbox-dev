@@ -5,10 +5,9 @@ mixin selectWindowSection(data)
 	.select-window-section&attributes(attributes)
 		._container.container
 			._row.row
-				._left.col-5.col-xs-12
-					h4._title Подобрать окно легко, как 1-2-3! Ответьте на несколько вопросов и получите решение вашей задачи!
+				._left.col-5.col-sm-12
 					img(src="images/window.png", alt="")._img
-				._right.js-quiz-step-1.col-7.col-xs-12
+				._right.js-quiz-step-1.col-7.col-sm-12
 					+formBlockWindow1()._form
 					+formBlockWindow2()._form
 					+formBlockWindow3()._form

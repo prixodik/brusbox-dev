@@ -109,14 +109,12 @@ $arrow_color: $gray !default;
 		transform: rotate(0deg);
 		pointer-events: none;
 		margin-right: 8px;
-		svg {
-			stroke: $black;
-		}
+
+		stroke: $black;
 		/* position: absolute; 
     right: 15px; 
     top: 50%;  */
 		//fill: none;
-		fill: $black;
 		//transform-origin: 66% 66%;
 		//transform: rotate(45deg);
 		@include time();

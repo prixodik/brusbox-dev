@@ -8,36 +8,49 @@ mixin header(data)
 	header.header&attributes(attributes)
 		._body
 			._container.container
-				
-				a._logo(href="/")
-					img(src='/images/logo.svg' alt='brusbox')
-
 				._wrapper
 					._top
-						+menuBlockNav()._nav
+						a._logo(href="/")
+							img(src='/images/logo.svg' alt='brusbox')
 
-						._contacts
-							+iconInline({
-								icon: 'marker',
-								text: 'Нижний Новгород'
-							})._contacts-item 
-							+iconInline({
-								icon: 'user',
-								text: 'Личный кабинет'
-							})._contacts-item 
-							+iconInline({
-								icon: 'phone',
-								text: '8 (800) 777-55-33'
-							})._contacts-item 
+						._items
+							+menuBlockNav()._nav
 
-						+socListHeader()._soc
+							._contacts
+								+iconInline({
+									icon: 'marker',
+									text: 'Нижний Новгород'
+								})._contacts-item.header__contacts-item--location.icon-inline--location
+
+								+iconInline({
+									icon: 'user',
+									text: 'Личный кабинет'
+								})._contacts-item.icon-inline--login
+
+								+iconInline({
+									icon: 'phone',
+									text: '8 (800) 777-55-33'
+								})._contacts-item.icon-inline--phone
+
+								+socListHeader()._soc
+
+								a(href="#")._login Личный кабинет
+
+								+searchBlockHeader({
+									placeholder: "поиск по сайту"
+								})._search
+
+							+burger()._burger
 
 					._bottom
-						._menu.js-mobile-menu
+						._menu
 							+menuBlock()
-
-						+searchBlock({
-							placeholder: 'Поиск по сайту'
-						})._search
-
-						+burger()._burger
+												
+						+iconInline({
+							icon: 'marker',
+							text: 'Нижний Новгород'
+						})._contacts-item.header__contacts-item--location.header__contacts-item--sm
+						
+						+searchBlockHeader({
+							placeholder: "поиск по сайту"
+						})._search--sm

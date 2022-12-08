@@ -1,0 +1,6 @@
+mixin showTextBlock(data)
+	a(href="#").show-text-block.js-hide-text-btn&attributes(attributes)
+		._title
+			!=data.title
+		._icon.js-hide-text-arrow
+			+svg('arrow-down')

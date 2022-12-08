@@ -1,18 +1,43 @@
 .header {
 	position: relative;
-	//z-index: 10;
+	z-index: 25;
 	padding: 6px 0;
+	background-color: $white;
+
+	@include media($md) {
+		padding: 10px 0;
+	}
+
+	@include media($xs) {
+		padding-bottom: 0
+	}
 
 	&__container {
 		@include flex(space-between, center, center, nowrap);
 	}
 
 	&__logo {
-		margin-right: 46px;
+		margin-right: 40px;
+		max-width: 163px;
 		flex: 0 0 auto;
 
 		img {
 			display: block;
+		}
+
+		@include media($md) {
+			margin-right: 24px;
+			max-width: 132px;
+		}
+
+		@include media($sm) {
+			margin-right: 30px;
+			max-width: 147px;
+		}
+
+		@include media($xs) {
+			margin-right: 20px;
+			max-width: 94px;
 		}
 	}
 
@@ -27,11 +52,13 @@
 	&__top {
 		display: flex;
 		flex-wrap: nowrap;
-		justify-content: space-between;
 		align-items: center;
 		padding-bottom: 15px;
-		margin-bottom: 15px;
-		border-bottom: 1px $gray solid;
+		border-bottom: 1px #b9b9b9 solid;
+
+		@include media($md) {
+			padding-bottom: 5px;
+		}
 	}
 
 	&__bottom {
@@ -40,23 +67,86 @@
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
+		margin-left: 204px;
+		padding: 15px 0;
+
+		@include media($md) {
+			margin-left: 0;
+		}
+
+		@include media($sm) {
+			padding: 5px 0 0 0;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+
+		@include media($xs) {
+			height: 25px;
+			margin-bottom: 12px;
+		}
+		
 	}
 
 	&__nav {
 		flex: 0 1 calc(60% - 104px);
+
+		@include media($lg) {
+			margin: 20px 0;
+		}
+
+		@include media($md) {
+			margin-bottom: 10px;
+			margin-top: 0;
+		}
 	}
+
 	&__soc {
-		flex: 0 0 64px;
 		margin-left: 16px;
+
+		@include media($md) {
+			margin-left: 0;
+		}
+
+		&.soc-list {
+			flex-wrap: nowrap;
+
+			@include media($xs) {
+				display: none;
+			}
+		}
+		
 	}
+
 	&__menu {
-		flex: 1 1 calc(100% - 48px);
+		flex: 0 1 calc(100% - 48px);
+
+		@include media($sm) {
+			flex: 1;
+		}
 	}
+
 	&__contacts {
 		margin-left: 24px;
-		flex: 0 1 calc(40% - 80px);
 		display: flex;
 		flex-wrap: nowrap;
+		flex: 1 1 auto;
+		align-items: center;
+		align-content: center;
+		
+
+		@include media($lg) {
+			margin-left: 0;
+			// justify-content: space-between;
+		}
+
+		@include media($md) {
+			margin-bottom: 10px;
+		}
+
+		@include media($sm) {
+			justify-content: flex-end;
+			margin-bottom: 0;
+		}
 
 		&-item {
 			margin-right: 40px;
@@ -64,17 +154,109 @@
 			&:last-child {
 				margin-right: 0;
 			}
+
+			@include media($md) {
+				margin-right: 16px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		&-item--location {
+			.icon-inline__wrap {
+				@include media($md) {
+					display: none;
+				}
+
+				@include media($sm) {
+					display: block;
+				}
+			}
+		}
+
+		&-item--sm {
+			display: none!important;
+
+			@include media($sm) {
+				flex: 1 0 auto;
+				display: flex!important;
+			}
+		}
+
+	}
+
+	&__login {
+		padding: 0 18px;
+		height: 36px;
+		background-color: $gray-bridge;
+		color: $btn-red;
+		border-radius: 59px;
+		font: 400 12px/1 $baseFF;
+		display: none;
+
+		@include media($md) {
+			@include flex(center,center,center);
+			text-align: center;
+		}
+
+		@include media($xs) {
+			display: none;
+		}
+	}
+
+	&__items {
+		position: relative;
+		width: 100%;
+		@include flex(space-between, center, center, 0);
+
+		@include media($lg) {
+			flex-wrap: wrap;
+		}
+
+		@include media($sm) {
+			flex-wrap: nowrap;
 		}
 	}
 
 	&__search {
-		flex: 0 0 28px;
-		margin-left: 20px;
-		max-width: 28px;
+		flex: 1 0 18px;
+		margin-left: 24px;
+		width: 18px;
+		height: 18px;
+
+		@include media($md) {
+			margin-left: 20px;
+		}
+
+		@include media($sm) {
+			display: none;
+		}
+
+		input {
+			background-color: transparent;
+		}
+
+		&--sm {
+			display: none;
+			@include media($sm) {
+				display: block;
+			}
+		}
 	}
 
 	&__burger {
 		display: none;
+
+		@include media($sm) {
+			display: block;
+			margin-left: 20px;
+		}
+
+		@include media($xs) {
+			margin-left: 16px;
+		}
 	}
 
 	@include media($lg) {

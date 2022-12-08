@@ -247,13 +247,13 @@
 			@include flex(space-between);
 			flex-direction: column;
 
+			@include media($md) {
+				min-height: auto;
+			}
+
 			@include media($xs) {
 				min-height: auto;
 			}
-		}
-
-		@include media($md) {
-			padding-bottom: 50px;
 		}
 	}
 	&--quiz & {
@@ -268,12 +268,29 @@
 
 			@include flex();
 
-			@include media($xs) {
+			@include media($md) {
+				margin-bottom: 24px;
 				@include flex(0, 0, 0, nowrap, column);
 
 				div {
 					margin-bottom: 4px;
 				}
+			}
+
+			@include media($sm) {
+				margin-bottom: 40px;
+				font: 300 22px/30px $baseFF;
+			}
+
+			@include media($xs) {
+				margin-bottom: 16px;
+				font: 300 18px/22px $baseFF;
+			}
+		}
+
+		&__img {
+			@include media($sm) {
+				margin-bottom: 16px;
 			}
 		}
 
@@ -283,21 +300,28 @@
 
 			&:last-child {
 				margin-bottom: 16px;
+			}
 
-				@include media($xs) {
-					margin-bottom: 0;
-
-					.form-block__item {
-						&:last-child {
-							margin-bottom: 0;
-						}
-					}
-				}
+			@include media($md) {
+				margin-left: -20px;
+				margin-right: -20px;
 			}
 
 			@include media($sm) {
-				flex-direction: column;
 				margin-bottom: 0;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			@include media($xs) {
+				flex-direction: column;
+
+				margin-bottom: 26px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 
@@ -309,8 +333,21 @@
 			max-width: 467px;
 			width: 100%;
 
+			@include media($md) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
 			@include media($sm) {
-				margin-bottom: 24px;
+				margin-bottom: 40px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 26px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 
 			&-title {
@@ -321,12 +358,17 @@
 					font: 300 18px/24px $baseFF;
 				}
 
+				@include media($md) {
+					margin-bottom: 8px;
+				}
+
 				@include media($sm) {
-					font: 300 13px/14px $baseFF;
+					font: 300 22px/30px $baseFF;
 					margin-bottom: 12px;
 				}
 
 				@include media($xs) {
+					font: 300 13px/18px $baseFF;
 					margin-bottom: 8px;
 				}
 			}
@@ -346,16 +388,36 @@
 				}
 
 				@include media($lg) {
-					font: 300 16px/18px $baseFF;
+					font: 300 14px/19px $baseFF;
+					margin-bottom: 5px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
 				}
 
 				@include media($sm) {
-					font: 300 12px/13px $baseFF;
+					font: 300 22px/30px $baseFF;
+					margin-bottom: 12px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+
+				@include media($xs) {
+					font: 300 13px/18px $baseFF;
+					margin-bottom: 6px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
 				}
 			}
 
 			&-list {
 				list-style: none;
+				padding-left: 0;
 			}
 
 			&-answer {
@@ -395,6 +457,10 @@
 
 		&__agree {
 			margin-top: 16px;
+
+			@include media($md) {
+				margin-bottom: 0;
+			}
 
 			@include media($xs) {
 				margin-top: 8px;
@@ -444,11 +510,20 @@
 		}
 
 		&__input {
-			@include media($xs) {
-				margin-bottom: 36px;
+
+			@include media($sm) {
+				margin-bottom: 45px;
 
 				&:last-child {
-					margin-bottom: 29px;
+					margin-bottom: 39px;
+				}
+			}
+
+			@include media($xs) {
+				margin-bottom: 30px;
+
+				&:last-child {
+					margin-bottom: 20px;
 				}
 			}
 		}
@@ -458,8 +533,20 @@
 		}
 
 		&__buttons {
-			@include media($xs) {
+			@include media($md) {
 				margin-top: 16px;
+			}
+
+			@include media($sm) {
+				justify-content: flex-start;
+			}
+
+			@include media($xs) {
+				justify-content: center;
+
+				.btn {
+					margin-right: 0;
+				}
 			}
 		}
 
@@ -467,12 +554,10 @@
 			padding-left: 10px;
 			padding-right: 10px;
 
-			@include media($sm) {
+			@include media($xs) {
 				padding-left: 0;
 				padding-right: 0;
-			}
 
-			@include media($xs) {
 				margin-bottom: 56px;
 				&:last-child {
 					margin-bottom: 0;
@@ -491,27 +576,30 @@
 		}
 
 		&__button {
-			@include media($sm) {
-				display: none;
-			}
-		}
-
-		&__buttons {
-			@include media($sm) {
-				justify-content: flex-start;
-			}
-		}
-
-		&__button-close {
 			display: none;
-			@include media($sm) {
-				display: block;
+
+			&-xs {
+				@include media($xs) {
+					display: inline-block;
+				}
+			}
+
+			&--close {
+				@include media($xs) {
+					display: none;
+				}
 			}
 		}
 	}
 
 	&--thanks {
 		transform: translateY(100%);
+
+		display: none;
+
+		&.is-active {
+			display: block;
+		}
 	}
 
 	&--thanks & {
@@ -542,52 +630,53 @@
 			@include media($md) {
 				margin: 32px 0 40px;
 			}
-	
+
 			@include media($sm) {
 				margin: 29px 0 21px;
 			}
 		}
 	}
-	&--buy-form &{
-		&__title{
+	&--buy-form & {
+		&__title {
 			color: $white;
 			font-size: 56px;
 		}
-		&__subtitle{
+		&__subtitle {
 			margin-bottom: 40px;
 			color: $white;
 			font-size: 18px;
 		}
-		&__text{
+		&__text {
 			color: $white;
 		}
-		&__inputs{
+		&__inputs {
 			margin-top: 16px;
 		}
-		&__input{
-			input::placeholder,textarea::placeholder{
+		&__input {
+			input::placeholder,
+			textarea::placeholder {
 				color: $white;
 			}
 		}
 		&__agree {
 			margin-bottom: 40px;
 		}
-		&__buttons{
-			button{
+		&__buttons {
+			button {
 				text-transform: none;
 			}
 		}
 		&__header {
 			margin-bottom: 60px;
 			padding-bottom: 16px;
-		.btn--icon {
-			margin-right: 16px;
-			padding-left: 22px;
-			padding-right: 22px;
+			.btn--icon {
+				margin-right: 16px;
+				padding-left: 22px;
+				padding-right: 22px;
+			}
+			svg {
+				margin-right: 10px;
+			}
 		}
-		svg{
-			margin-right: 10px;
-		}
-	}
 	}
 }
