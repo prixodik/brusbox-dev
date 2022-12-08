@@ -147,13 +147,18 @@
 			}
 		}
 
+		&__container {
+			height: 100%;
+		}
+
 		&__info {
 			align-items: flex-start;
-			position: absolute;
+			/* position: absolute;
 			bottom: 0;
 			height: auto;
 			left: 20px;
-			right: 20px;
+			right: 20px; */
+			height: 100%;
 		}
 
 		&__title {
