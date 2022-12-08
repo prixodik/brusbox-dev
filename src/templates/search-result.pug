@@ -9,6 +9,9 @@ block content
 	include ../components/search-block/template
 	include ../components/pagination/template
 
+	include ../components/header/template
+	+header()
+
 	.search-result-page
 		+headSection({
 			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Результаты поиска'}],

@@ -9,6 +9,9 @@ block content
 	include ../components/text-section/template
 	include ../components/products-section/template
 
+	include ../components/header/template
+	+header()
+
 	.advertising-catalog-page
 		+headSection({
 			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'Рекламный каталог'}],

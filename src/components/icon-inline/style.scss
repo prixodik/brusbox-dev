@@ -45,6 +45,23 @@
 	}
 
 	&__wrap {
+		@include media ($md) {
+			font: 400 12px/1 $baseFF;
+		}
+	}
+
+	@include media($sm) {
+		&__icon {
+			width: 18px;
+			height: 18px;
+			svg {
+				font-size: 18px;
+			}
+		}
+
+		&__wrap {
+			font: 400 12px/1 $baseFF;
+		}
 	}
 
 	@include media($xs) {
