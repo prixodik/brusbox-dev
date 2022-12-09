@@ -9,6 +9,9 @@ block content
 	include ../components/info-section/template
 	include ../components/documentation-block/template
 
+	include ../components/header/template
+	+header()
+
 	.dilers-page.dilers-page--dilers-products
 		+headSection({
 			bread: [{url: '#', title: 'Профессионалам'},{url: '#', title: 'Продукция'}],

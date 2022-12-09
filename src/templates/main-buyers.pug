@@ -13,6 +13,9 @@ block content
 	include ../components/banner-section/template
 	include ../components/show-text-block/template
 
+	include ../components/header/template
+	+header2()
+
 	.main-section.main-section--buyers
 		+headSectionSlider({
 			title: "Качественные окна<br> на любой вкус",
@@ -127,7 +130,8 @@ block content
 					._info-title.title-h4 Преимущества сотрудничества
 					._info-text «БРУСБОКС» — официальный производитель ПВХ профилей, соответствующих ГОСТам. Наши окна конкурируют с европейскими аналогами, представленными в Москве и других городах РФ. Предлагаем официальные цены без посреднической наценки.
 
-
+	include ../components/popup/template
+	+popupLacation()
 	//- +gridLayout()
 
 block scripts 

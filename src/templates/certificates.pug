@@ -9,6 +9,9 @@ block content
 	include ../components/head-section/template
 	include ../components/certificates-section/template
 
+	include ../components/header/template
+	+header2()
+
 	.main-section.main-section
 		+headSection({
 			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'Сертификаты и дипломы'},],

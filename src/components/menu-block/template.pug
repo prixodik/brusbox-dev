@@ -1,42 +1,53 @@
 
 mixin menuBlock(data)
 	.menu-block&attributes(attributes)
-		._item.parent
-			a(href="#") Продукция
-		._item
-			a(href="#") Подобрать окно
-		._item
-			a(href="#") Калькулятор
-		._item
-			a(href="#") Где купить
+		._menu
+			._item.parent
+				a(href="#") Продукция
+			._item
+				a(href="#") Подобрать окно
+			._item
+				a(href="#") Калькулятор
+			._item
+				a(href="#") Где купить
 
-			._sub 
-				._sub-item 
-					a(href="#") Офисы продаж на карте
-				._sub-item 
-					a(href="#") Офисы продаж списком
+				._sub 
+					._sub-item 
+						a(href="#") Офисы продаж на карте
+					._sub-item 
+						a(href="#") Офисы продаж списком
 
-		._item
-			a(href="#") О компании
+			._item
+				a(href="#") О компании
 
-			._sub 
-				._sub-item 
-					a(href="#") О компании
-				._sub-item 
-					a(href="#") История
-				._sub-item 
-					a(href="#") Поставщики
-				._sub-item 
-					a(href="#") Сертификаты и дипломы
-				._sub-item 
-					a(href="#") Реализованные проекты
-				._sub-item 
-					a(href="#") Новости
+				._sub 
+					._sub-item 
+						a(href="#") О компании
+					._sub-item 
+						a(href="#") История
+					._sub-item 
+						a(href="#") Поставщики
+					._sub-item 
+						a(href="#") Сертификаты и дипломы
+					._sub-item 
+						a(href="#") Реализованные проекты
+					._sub-item 
+						a(href="#") Новости
 
-		._item
-			a(href="#") Акции
-		._item
-			a(href="#") Статьи
+			._item
+				a(href="#") Акции
+			._item
+				a(href="#") Статьи
+		
+		._mobile-menu.js-mobile-menu
+			._scroll
+				include ../accardion-block/template
+				+accardionBlockNavigation1()
+				+accardionBlockNavigation2()
+				+accardionBlockNavigation3()
+
+
+
 
 mixin menuBlockNav(data)
 	.menu-block.-nav&attributes(attributes)

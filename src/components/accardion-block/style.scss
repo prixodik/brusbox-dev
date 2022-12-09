@@ -36,6 +36,7 @@
 			font-size: 18px;
 			fill: $black;
 			display: block;
+			stroke: $black;
 		}
 
 		&:hover {
@@ -70,6 +71,81 @@
 		}
 	}
 
+	&--navigation & {
+		&__title {
+			&--bold {
+				font-weight: 550;
+			}
+		}
+		&__head {
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			padding-left: 40px;
+			padding-right: 40px;
+
+			&--padding {
+				padding-top: 24px;
+				padding-bottom: 24px;
+
+				@include media($xs) {
+					padding-top: 15px;
+					padding-bottom: 15px;
+				}
+			}
+
+			font: 400 16px/22px $baseFF;
+
+			&.is-active {
+				padding-bottom: 20px;
+			}
+
+			@include media($xs) {
+				justify-content: space-between;
+				padding-left: 16px;
+				padding-right: 16px;
+				font: 400 12px/13px $baseFF;
+			}
+		}
+		&__body {
+			background: $white;
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-top: 0;
+			font: 400 16px/22px $baseFF;
+
+			@include media($xs) {
+				font: 400 12px/13px $baseFF;
+				padding-left: 20px;
+				padding-right: 0;
+			}
+		}
+
+		&__arrow {
+			margin-left: 16px;
+		}
+
+		&__links {
+			padding-left: 24px;
+		}
+
+		&__link {
+			margin-bottom: 16px;
+			color: #53555a;
+			display: block;
+		}
+	}
+
+	&--footer  & {
+		&__head {
+			padding-left: 0;
+			justify-content: flex-end;
+
+			@include media($xs) {
+				justify-content: space-between;
+			}
+		}
+	}
+
 	&--location & {
 		&__title {
 			font-weight: 400;
@@ -88,12 +164,12 @@
 
 		&__item {
 			margin-bottom: 4px;
-			@include flex(0,center,center);
+			@include flex(0, center, center);
 
 			&:last-child {
 				margin-bottom: 0;
 			}
-			
+
 			&-tel {
 				margin-right: 8px;
 			}
@@ -116,7 +192,6 @@
 				padding-right: 0;
 				background-color: transparent;
 				&.is-active {
-					
 					padding: 4px 0;
 				}
 			}

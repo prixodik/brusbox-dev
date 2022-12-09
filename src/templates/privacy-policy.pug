@@ -5,7 +5,10 @@ append vars
 block styles
 	
 block content
-	include ../components/head-section/template	
+	include ../components/head-section/template
+
+	include ../components/header/template
+	+header()
 
 	.main-section.privacy-policy-section
 		+headSection({

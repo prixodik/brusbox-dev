@@ -6,10 +6,82 @@ mixin popup(data)
 		._overflow.js-popup-hide
 		._wrapper
 			a._close.js-popup-hide
-				+svg('close2')
+				+svg('close')
 			block
+include ../search-block/template
+mixin popupLacationList(data)
+	+popup().popup--location-list#popup-location-list
+		._search
+			+searchBlock({
+				placeholder: 'Введите название'
+			})
+		._subtitle или выберите из списка:
+
+		._list
+			._list-wrap
+				._items
+					a(href="#")._litem Россия
+					a(href="#")._item Республика Беларусь
+					a(href="#")._item Республика Казахстан
+					a(href="#")._item Республика Таджикистан
+					a(href="#")._item Украина
+					a(href="#")._item Республика Молдова
+					a(href="#")._item Кыргызская Республика
+
+				._items
+					h4._list-title Россия
+					a(href="#")._item Москва
+					a(href="#")._item Санкт-Петербург
+
+				._items
+					h4._letter А
+					a(href="#")._item Абакан
+					a(href="#")._item Азов
+					a(href="#")._item Александров
+					a(href="#")._item Алексин
+					a(href="#")._item Альметьевск
+					a(href="#")._item Анапа
+					a(href="#")._item Ангарск
+					a(href="#")._item Анжеро-Судженск
+					a(href="#")._item Алматы
+					a(href="#")._item Альметьевск
+					a(href="#")._item Альметьевск
+					a(href="#")._item Альметьевск
+				
+				._items
+					h4._letter А
+					a(href="#")._item Абакан
+					a(href="#")._item Азов
+					a(href="#")._item Александров
+					a(href="#")._item Алексин
+					a(href="#")._item Альметьевск
+					a(href="#")._item Анапа
+					a(href="#")._item Ангарск
+					a(href="#")._item Анжеро-Судженск
+					a(href="#")._item Алматы
+					a(href="#")._item Альметьевск
+					a(href="#")._item Альметьевск
+					a(href="#")._item Альметьевск
+
+mixin popupModel(data)
+	+popup().popup--location#popup-location
+		._title Ваш город <span>Нижний Новгород</span>?
+		._buttons
+			a.btn(href="#").btn.js-popup-hide Да
+			a.btn(href="#popup-location-list").js-popup-show.btn Нет
 
 
+mixin popupLacation(data)
+	+popup().popup--location#popup-location
+		._title Ваш город <span>Нижний Новгород</span>?
+		._buttons
+			a.btn(href="#").btn.js-popup-hide Да
+			a.btn(href="#popup-location-list").js-popup-show.btn Нет
+
+
+
+
+//все что ниже можно удалить по оконячанию разработки
 
 mixin popupFinish(data)
 	+popup().popup--finish#popup-finish

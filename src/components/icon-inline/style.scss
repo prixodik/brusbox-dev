@@ -39,8 +39,50 @@
 		svg {
 			display: block;
 			font-size: 24px;
-			fill: $black;
-			stroke: $black;
+			fill: $btn-red;
+			stroke: $btn-red;
+		}
+	}
+
+	&__wrap {
+		@include media ($md) {
+			font: 400 12px/1 $baseFF;
+		}
+	}
+
+	@include media($sm) {
+		&__icon {
+			width: 18px;
+			height: 18px;
+			svg {
+				font-size: 18px;
+			}
+		}
+
+		&__wrap {
+			font: 400 12px/1 $baseFF;
+		}
+	}
+
+	@include media($xs) {
+		/* &__counter {
+			width: 16px;
+			height: 16px;
+			bottom: -8px;
+			left: -8px;
+			font: 600 8px $baseFF;
+		} */
+
+		&__icon {
+			width: 16px;
+			height: 16px;
+			svg {
+				font-size: 16px;
+			}
+		}
+
+		&__wrap {
+			font: 400 12px/1 $baseFF;
 		}
 	}
 
@@ -90,27 +132,26 @@
 		}
 	} */
 
-	@include media($md) {
+	&--phone {
+		white-space: nowrap;
+		@include media($xs) {
+			display: none;
+		}
 	}
 
-	@include media($sm) {
+	&--login {
+		@include media($md) {
+			display: none;
+		}
+
+		@include media($xs) {
+			display: flex;
+		}
 	}
 
-	@include media($xs) {
-		/* &__counter {
-			width: 16px;
-			height: 16px;
-			bottom: -8px;
-			left: -8px;
-			font: 600 8px $baseFF;
-		} */
-
-		&__icon {
-			width: 16px;
-			height: 16px;
-			svg {
-				font-size: 16px;
-			}
+	&--location {
+		@include media($sm) {
+			display: none;
 		}
 	}
 }

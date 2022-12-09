@@ -1,5 +1,5 @@
 .footer {
-	padding: 40px 0;
+	padding: 60px 0;
 	margin-top: 80px;
 	position: relative;
 	color: $black;
@@ -7,8 +7,25 @@
 	background-color: $white;
 	border-top: 1px $gray-200 solid;
 
+	@include media($md) {
+		padding: 40px 0;
+		margin-top: 0;
+	}
+
+	@include media($xs) {
+		padding: 24px 0 24px;
+	}
+
 	&--mt0 {
 		margin-top: 0;
+	}
+
+	&__mobile-menu {
+		display: none;
+		@include media($sm) {
+			display: block;
+			margin-bottom: 56px;
+		}
 	}
 
 	&__logo {
@@ -17,50 +34,157 @@
 
 		&-col {
 			@include flex(space-between, stretch, stretch, nowrap, column);
+
+			@include media($sm) {
+				flex-direction: row;
+				align-items: center;
+				width: 100%;
+			}
+
+			@include media($xs) {
+				margin-bottom: 48px;
+			}
+		}
+
+		@include media($sm) {
+			max-width: 147px;
+		}
+
+		@include media($xs) {
+			max-width: 91px;
 		}
 	}
+
+	&__img {
+		max-width: 48px;
+	}
+
+	&__search {
+		input {
+			font: 400 14px/14px $baseFF;
+
+			&::placeholder {
+				font: 400 14px/14px $baseFF;
+				color: $medium-gray;
+			}
+		}
+	}
+
 	&__slogan {
 		font: 300 14px/1.1 $baseFF;
 		color: $black;
+
+		@include media($sm) {
+			display: none;
+		}
 	}
 
 	&__title {
 		font: bold 14px/1.1 $baseFF;
 		margin-bottom: 20px;
+
+		@include media($md) {
+			font: bold 12px/14px $baseFF;
+		}
 	}
+
 	&__menu {
 		&-item {
 			margin-bottom: 8px;
 			font: 300 13px/1 $baseFF;
 
+			@include media($md) {
+				font: 300 12px/1 $baseFF;
+			}
+
 			&:last-child {
 				margin-bottom: 0;
 			}
 		}
+
+		&-col {
+			@include media($sm) {
+				display: none
+			}
+		}
 	}
+
 	&__contacts {
 		@include flex(0, center, center);
 		font: $fs-p5;
-		margin-bottom: 10px;
+		margin-bottom: 16px;
+
+		@include media($md) {
+			justify-content: space-between;
+		}
+
+		
+		@include media($xs) {
+			margin-bottom: 40px;
+		}
 	}
+
+	&__row {
+		@include media($sm) {
+			flex-direction: column;
+		}
+	}
+
 	&__phone {
 		margin-right: 18px;
+
+		@include media($xs) {
+			width: 100%;
+			margin-bottom: 14px;
+		}
 	}
+
 	&__soc-2 {
 		flex: 0 0 auto;
 		flex-wrap: nowrap;
-		margin: 0 60px 0 0;
+		margin: 0 16px 0 0;
+		
+		@include media($xs) {
+			margin-bottom: 17px;
+		}
 	}
+
+	&__soc {
+		@include media($sm) {
+			align-items: center;
+		}
+	}
+
 	&__call {
 		font: $fs-p5;
 		margin-right: 60px;
+		background-color: $gray-bridge;
+		padding: 13px 16px;
+		border-radius: 59px;
+		color: $btn-red;
+
+		@include media($lg) {
+			margin-right: 10px;
+		}
+
+		@include media($md) {
+			font: 300 12px/14px $baseFF;
+			padding: 10px 15px;
+		}
+
+		@include media($xs) {
+			margin-bottom: 17px;
+		}
 	}
+
 	&__search {
-		margin-bottom: 26px;
+		margin-bottom: 38px;
 	}
+
 	&__bottom {
-		@include flex(space-between, center, center);
+		@include flex(space-between, flex-end, center);
 	}
+
 	&__copyright {
 		font: $fs-p6-light;
 
@@ -68,7 +192,8 @@
 			text-decoration: none;
 		}
 		p {
-			margin-bottom: 8px;
+			color: $medium-gray;
+			margin-bottom: 8px !important;
 			&:last-child {
 				margin-bottom: 0;
 			}
