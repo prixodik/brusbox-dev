@@ -96,6 +96,7 @@
 			max-width: 21px;
 			max-height: 21px;
 			bottom: calc(50% - 9px);
+
 			svg {
 				min-width: 21px;
 				min-height: 21px;
@@ -110,6 +111,7 @@
 			max-width: 16px;
 			max-height: 16px;
 			bottom: calc(50% - 8px);
+
 			svg {
 				min-width: 16px;
 				min-height: 16px;
@@ -125,6 +127,7 @@
 			font: $button-xs;
 			line-height: 20px;
 		}
+
 		&__icon {
 			padding: 5px 0 5px 12px;
 			height: 32px;
@@ -152,6 +155,7 @@
 			}
 		}
 
+		.search-block__icon {right: 0;}
 		.search-block__wrapper {
 			display: none;
 		}
@@ -163,6 +167,12 @@
 			margin: 0;
 			z-index: 1000;
 
+			.search-block__icon {right: 17px;}
+
+			@include media($xs) {
+				top: -2px;
+			}
+
 			.search-block__wrapper {
 				display: block;
 			}
@@ -170,17 +180,17 @@
 			input {
 				background: $bg-grey;
 				padding: 12px 40px 12px 30px;
-				
+
 
 				@include media($md) {
 					padding: 8px 40px 8px 25px;
 				}
-		
+
 				@include media($sm) {
 					padding: 6px 40px 6px 25px;
 					height: 35px;
 				}
-		
+
 				@include media($xs) {
 					padding: 12px 40px 12px 20px;
 				}
