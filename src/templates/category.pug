@@ -7,6 +7,10 @@ block styles
 	
 block content
 	include ../components/head-section/template
+
+	include ../components/header/template
+	+header()
+
 	.dilers-page
 		+headSection({
 			bread: [{url: '#', title: 'Покупателям'},{url: '#', title: 'О компании'},{url: '#', title: 'История'}],

@@ -54,3 +54,49 @@ mixin header(data)
 						+searchBlockHeader({
 							placeholder: "поиск по сайту"
 						})._search--sm
+
+mixin header2(data)
+	header.header.--mode2&attributes(attributes)
+		._body
+			._container.container
+				._wrapper
+					._top
+						a._logo(href="/")
+							img(src='/images/logo.svg' alt='brusbox')
+
+						._items
+							+menuBlockNav()._nav
+
+							._contacts
+								+iconInline({
+									icon: 'marker',
+									text: 'Нижний Новгород'
+								})._contacts-item.header__contacts-item--location.icon-inline--location
+
+								a(href="#")._link Заказать замер
+
+								+iconInline({
+									icon: 'phone',
+									text: '8 (800) 777-55-33'
+								})._contacts-item.icon-inline--phone
+
+								+socListHeader()._soc
+
+								+searchBlockHeader({
+									placeholder: "поиск по сайту"
+								})._search
+
+							+burger()._burger
+
+					._bottom
+						._menu
+							+menuBlock()
+												
+						+iconInline({
+							icon: 'marker',
+							text: 'Нижний Новгород'
+						})._contacts-item.header__contacts-item--location.header__contacts-item--sm
+						
+						+searchBlockHeader({
+							placeholder: "поиск по сайту"
+						})._search--sm

@@ -1,5 +1,7 @@
 include ../soc-list/template
 include ../search-block/template
+include ../icon-inline/template
+
 
 mixin footer(data)
 	footer.footer&attributes(attributes)
@@ -8,7 +10,7 @@ mixin footer(data)
 					._logo-col.col-2
 						img(src="/images/logo.svg", alt="")._logo
 						._slogan Современные <br>оконные системы
-						+socList()._soc
+						+socList()._soc.soc-list--footer
 						
 					._menu-col.col-2
 						._title Покупателям окон
@@ -46,7 +48,10 @@ mixin footer(data)
 
 					._right.col-6
 						._contacts
-							a._phone(href="#") 8 (800) 777-55-33
+							+iconInline({
+								icon: 'phone',
+								text: '8 (800) 777-55-33'
+							})._phone
 							+socListHeader()._soc-2
 							a(href="#")._call Заказать замер
 							a(href="#")._mail one@brusbox.ru
