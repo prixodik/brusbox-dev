@@ -7571,6 +7571,24 @@ var uikit = {
 
 
 
+  showPopupLocation: function() {
+
+
+    setTimeout(()=>{
+
+
+      $('#popup-location').addClass('active');
+
+
+    }, 3000)
+
+
+  },
+
+
+
+
+
   mobile: function () {
 
 
@@ -8418,6 +8436,9 @@ var uikit = {
 
 
     this.hideText();
+
+
+    this.showPopupLocation();
 
 
   },

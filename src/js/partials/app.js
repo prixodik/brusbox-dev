@@ -510,6 +510,12 @@ var uikit = {
     });
   },
 
+  showPopupLocation: function() {
+    setTimeout(()=>{
+      $('#popup-location').addClass('active');
+    }, 3000)
+  },
+
   mobile: function () {
     $(".js-mobile-menu-toggle").click(function () {
       $(this).toggleClass("active");
@@ -793,6 +799,7 @@ var uikit = {
     this.sliders();
     this.selectsSorting();
     this.hideText();
+    this.showPopupLocation();
   },
 };
 $(document).ready(function () {

@@ -7,7 +7,7 @@ mixin footer(data)
 	footer.footer&attributes(attributes)
 		._container.container
 				._row.row.row--stretch
-					._logo-col.col-2
+					._logo-col.col-2.col-sm-12
 						img(src="/images/logo.svg", alt="")._logo
 						._slogan Современные <br>оконные системы
 						+socList()._soc.soc-list--footer
@@ -46,7 +46,13 @@ mixin footer(data)
 							._menu-item
 								a(href="#") Выберите цвет
 
-					._right.col-6
+					._right.col-6.col-sm-12
+
+						._mobile-menu
+							include ../accardion-block/template
+							+accardionBlockNavigation1().accardion-block--footer
+							+accardionBlockNavigation2().accardion-block--footer
+							+accardionBlockNavigation3().accardion-block--footer
 						._contacts
 							+iconInline({
 								icon: 'phone',
@@ -57,7 +63,7 @@ mixin footer(data)
 							a(href="#")._mail one@brusbox.ru
 						+searchBlock({
 							placeholder: "Поиск по сайту"
-						}).search-block--static._search 
+						}).search-block--static.search-block--footer._search
 
 						._bottom 
 							._copyright
