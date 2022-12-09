@@ -623,6 +623,12 @@
 		}
 	}
 
+	&--login & {
+		&__title {
+			margin-bottom: 37px;
+		}
+	}
+
 	&--subscribe & {
 		&__check {
 			margin: 25px 0 40px;

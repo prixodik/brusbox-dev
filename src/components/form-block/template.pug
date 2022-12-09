@@ -36,6 +36,19 @@ mixin formBlockContactsCalculator()
 				._buttons
 					button.btn.-red.js-submit(type="submit") Отправить
 
+mixin formBlockLogin()
+	.form-block.--login&attributes(attributes)
+		h4._title Для просмотра материалов введите логин и пароль
+		form(action="")
+			.form-block__row
+				.form-block__inputs
+					.form-block__input
+						input.form-control.js-required(type="text" placeholder="Логин*" required)
+					.form-block__input
+						input.form-control.js-required(type="password" placeholder="Пароль*" required)
+				.form-block__buttons
+					button.btn.-red.js-submit(type="submit") Войти
+
 mixin formBlockSunscribe()
 	.form-block.--subscribe&attributes(attributes)
 		h4._title Оформите подписку на новости

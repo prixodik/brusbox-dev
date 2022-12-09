@@ -231,6 +231,55 @@
 		}
 	}
 
+	&--model & {
+		&__wrapper {
+			max-width: 460px;
+
+			@include media($xs) {
+				max-width: 350px;
+
+				padding-top: 30px;
+				padding-bottom: 25px;
+			}
+		}
+
+		&__item {
+			@include flex(space-between,center,center,0);
+			margin-bottom: 8px;
+		}
+
+		&__icon {
+			background-color: $gray-bridge;
+			border-radius: 50%;
+			@include flex(center,center,center);
+			height: 40px;
+			width: 40px;
+
+			@include media($xs) {
+				height: 30px;
+				width: 30px;
+			}
+
+			svg {
+				width: 17px;
+				height: 17px;
+
+				@include media($xs) {
+					height: 13px;
+					width: 13px;
+				}
+			}
+		}
+
+		&__button {
+			margin-top: 40px;
+
+			@include media($xs) {
+				margin-top: 25px;
+			}
+		}
+	}
+
 	&--location & {
 		&__title {
 			margin-bottom: 16px;
@@ -256,7 +305,7 @@
 		}
 	}
 
-	/********* MODS *********************/
+	/***-----------------------------------****** Можно удалить по окончанию проекта **************--------------------------*******/
 
 	&--add-product & {
 		&__wrapper {

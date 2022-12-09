@@ -64,11 +64,27 @@ mixin popupLacationList(data)
 					a(href="#")._item Альметьевск
 
 mixin popupModel(data)
-	+popup().popup--location#popup-location
-		._title Ваш город <span>Нижний Новгород</span>?
-		._buttons
-			a.btn(href="#").btn.js-popup-hide Да
-			a.btn(href="#popup-location-list").js-popup-show.btn Нет
+	+popup().popup--model#popup-model
+		._item
+			._text Профиль BRUSBOX 60-4
+			._icon
+				+svg('download')
+		._item
+			._text Профиль BRUSBOX 70-6
+			._icon
+				+svg('download')
+		._item
+			._text Профиль BRUSBOX AERO
+			._icon
+				+svg('download')
+		._button
+			a(href="#").btn Скачать все
+
+
+mixin popupLogin(data)
+	+popup().popup--login#popup-login
+		include ../form-block/template
+		+formBlockLogin()
 
 
 mixin popupLacation(data)
@@ -81,7 +97,7 @@ mixin popupLacation(data)
 
 
 
-//все что ниже можно удалить по оконячанию разработки
+//---------------------------------------------------------------------все что ниже можно удалить по оконячанию разработки
 
 mixin popupFinish(data)
 	+popup().popup--finish#popup-finish
@@ -95,54 +111,54 @@ mixin popupAddProduct(data)
 			a.btn.-border(href="#") Продолжить покупки
 			a.btn(href="#") Перейти в корзину
 
-mixin popupLogin()
-	+popup().popup--login.popup--registration#popup-login(attributes)
-		._title Авторизация
-		form._form(action="") 
-			.form-group.-sm._input
-				._label E-mail
-				input.form-control.form-control--border.js-required(type="email" placeholder="" required)
-			.form-group.-sm._input
-				._label Пароль
-				input.form-control.form-control--border.js-required(type="password" placeholder="" required)
-			._buttons
-				button.btn.js-submit Вход
-				a.btn.-border.js-popup-show(href="#popup-registration")
-					span Регистрация
+//- mixin popupLogin()
+//- 	+popup().popup--login.popup--registration#popup-login(attributes)
+//- 		._title Авторизация
+//- 		form._form(action="") 
+//- 			.form-group.-sm._input
+//- 				._label E-mail
+//- 				input.form-control.form-control--border.js-required(type="email" placeholder="" required)
+//- 			.form-group.-sm._input
+//- 				._label Пароль
+//- 				input.form-control.form-control--border.js-required(type="password" placeholder="" required)
+//- 			._buttons
+//- 				button.btn.js-submit Вход
+//- 				a.btn.-border.js-popup-show(href="#popup-registration")
+//- 					span Регистрация
 
-mixin popupRegistration()
-	+popup().popup--registration#popup-registration(attributes)
-		._title Регистрация
-		form._form(action="") 
-			.form-group.-sm._input
-				._label ФИО*
-				input.form-control.form-control--border.js-required(type="text" placeholder="" required)
-			.form-group.-sm._input
-				._label E-mail*
-				input.form-control.form-control--border.js-required(type="email" placeholder="" required)
-			.form-group.-sm._input
-				._label Место работы
-				input.form-control.form-control--border(type="text" placeholder="")
-			.form-group.-sm._input
-				._label Должность
-				input.form-control.form-control--border(type="text" placeholder="")
-			.form-group.-sm._input
-				._label Телефон
-				input.form-control.form-control--border(type="phone" placeholder="")
-			.form-group.-sm._input
-				._label Адрес доставки
-				input.form-control.form-control--border.js-required(type="text" placeholder="" required)
-			.form-group.-sm._input
-				._label Пароль
-				input.form-control.form-control--border.js-required(type="password" placeholder="" required)
-			.form-group.-sm._input
-				._label Подтверждение пароля
-				input.form-control.form-control--border.js-required(type="password" placeholder="" required)
-			.checkbox.-sm._input
-				input#polic-02.js-required(type="checkbox" required)
-				label(for="polic-02") Я прочитал <a href="#">политику конфиденциальности и согласен</a> с ней
-			._buttons
-				button.btn.js-submit Зарегистрироваться
+//- mixin popupRegistration()
+//- 	+popup().popup--registration#popup-registration(attributes)
+//- 		._title Регистрация
+//- 		form._form(action="") 
+//- 			.form-group.-sm._input
+//- 				._label ФИО*
+//- 				input.form-control.form-control--border.js-required(type="text" placeholder="" required)
+//- 			.form-group.-sm._input
+//- 				._label E-mail*
+//- 				input.form-control.form-control--border.js-required(type="email" placeholder="" required)
+//- 			.form-group.-sm._input
+//- 				._label Место работы
+//- 				input.form-control.form-control--border(type="text" placeholder="")
+//- 			.form-group.-sm._input
+//- 				._label Должность
+//- 				input.form-control.form-control--border(type="text" placeholder="")
+//- 			.form-group.-sm._input
+//- 				._label Телефон
+//- 				input.form-control.form-control--border(type="phone" placeholder="")
+//- 			.form-group.-sm._input
+//- 				._label Адрес доставки
+//- 				input.form-control.form-control--border.js-required(type="text" placeholder="" required)
+//- 			.form-group.-sm._input
+//- 				._label Пароль
+//- 				input.form-control.form-control--border.js-required(type="password" placeholder="" required)
+//- 			.form-group.-sm._input
+//- 				._label Подтверждение пароля
+//- 				input.form-control.form-control--border.js-required(type="password" placeholder="" required)
+//- 			.checkbox.-sm._input
+//- 				input#polic-02.js-required(type="checkbox" required)
+//- 				label(for="polic-02") Я прочитал <a href="#">политику конфиденциальности и согласен</a> с ней
+//- 			._buttons
+//- 				button.btn.js-submit Зарегистрироваться
 		
 
 mixin popupCallBack()
