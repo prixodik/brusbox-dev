@@ -52,10 +52,11 @@ mixin gridLayout()
           .in.w-100
 
 mixin webp(img)
-  -var src = img.replace(/\.jp[e]?g|.png/g, '')
-  picture
-    source(data-srcset=src+'.webp' class="lazy" type="image/webp")
-    img(data-src=img, class="lazy" alt="")&attributes(attributes)
+  if img
+    - var src = img.replace(/\.jp[e]?g|.png/g, '')
+    picture
+      source(data-srcset=src+'.webp' class="lazy" type="image/webp")
+      img(data-src=img, class="lazy" alt="")&attributes(attributes)
 
 mixin field(data)
   case data.type

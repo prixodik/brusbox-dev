@@ -32,14 +32,26 @@
 		position: absolute;
 		bottom: 67px;
 		z-index: -1;
+
+		@include media($xs) {
+			bottom: 16px;
+		}
 	}
 
 	&__prev {
 		right: 116px;
+
+		@include media($xs) {
+			right: 60px;
+		}
 	}
 
 	&__next {
 		right: 60px;
+
+		@include media($xs) {
+			right: 16px;
+		}
 	}
 
 	&__info {
@@ -91,11 +103,11 @@
 		text-align: center;
 
 		@include media($sm) {
-			text-align: start;
+			text-align: left;
 		}
 
 		@include media($xs) {
-			text-align: start;
+			text-align: left;
 		}
 	}
 
@@ -114,7 +126,7 @@
 		}
 
 		@include media($sm) {
-			display: none;
+			text-align: left;
 		}
 	}
 

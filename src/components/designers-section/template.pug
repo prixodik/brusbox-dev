@@ -1,6 +1,6 @@
 mixin designersSection(data)
 	.products-section&attributes(attributes)
-		img(src=data.img, alt="")
+		+webp(data.img)
 		._container.container.container--text
 			._info
 				each param in data.params

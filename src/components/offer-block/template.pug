@@ -2,7 +2,7 @@ mixin offerBlock(data)
 	.offer-block&attributes(attributes)
 		._row
 			._img
-				img(src=data.img, alt="")
+				+webp(data.img)
 			._about
 				._info
 					h5._title

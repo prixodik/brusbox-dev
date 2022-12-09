@@ -1,0 +1,19 @@
+.show-text-block {
+	@include flex(space-between,center,center,0);
+
+	&__title {
+		color: $btn-red;
+		font-weight: 400;
+	}
+	&__icon {
+		svg {
+			fill: $btn-red;
+			stroke: red;
+
+			@include media ($sm) {
+				width: 18px;
+				height: 6px;
+			}
+		}
+	}
+}

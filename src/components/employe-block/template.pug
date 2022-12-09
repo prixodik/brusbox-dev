@@ -1,7 +1,7 @@
 mixin employeBlock(data)
 	.employe-block&attributes(attributes)
 		._img
-			img(src=data.img, alt="")
+			+webp(data.img)
 		._info
 			._info-title
 				!=data.title

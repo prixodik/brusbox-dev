@@ -10,6 +10,7 @@
 
 	@include media($sm) {
 		align-items: center;
+		/* display: block; */
 		max-width: 688px;
 	}
 
@@ -44,6 +45,7 @@
 
 	}
 
+	picture,
 	&__img {
 		flex: 0 0 95px;
 		max-width: 95px;
@@ -125,11 +127,8 @@
 				}
 			}
 			@include media($xs) {
-				padding: 0px 0px;
+				padding: 0;
 			}
-		}
-		&__item{
-			@include flex(center, 0, 0, 0, 0);
 		}
 	}
 

@@ -4,7 +4,7 @@ mixin actionBlock(data)
 			._head
 				!=data.date
 			._img
-				img(src=data.img, alt="")
+				+webp(data.img)
 			._title
 				!=data.title
 			._text
@@ -15,7 +15,7 @@ mixin actionBlockMode(data)
 	.action-block.--mode&attributes(attributes)
 		a(href="#")._link
 			._img
-				img(src=data.img, alt="")
+				+webp(data.img)
 			._date
 				!=data.date
 			._title

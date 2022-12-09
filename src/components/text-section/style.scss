@@ -65,7 +65,7 @@
 		}
 
 		@include media($sm) {
-			text-align: start;
+			text-align: left;
 
 			br{
 				display: none;

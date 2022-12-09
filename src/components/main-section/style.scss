@@ -401,17 +401,63 @@
 	&--advantages & {
 	}
 
+	&--buyers {
+		.js-hide-text-btn.is-active {
+			transition: all 0.3s;
+
+			.js-hide-text-arrow {
+				transform: rotate(180deg);
+				transition: all 0.3s;
+			}
+		}
+		
+	}
+
 	&--buyers & {
+		&__info-section-buttons{
+			@include media($sm) {
+				background-color: #f1f1f1;
+			}
+		}
 		&__button {
-			margin: 49px 0 101px;
-			text-align: center;
+			padding: 49px 0 100px;
+			display: flex;
+			justify-content: center;
 
 			@include media($sm) {
-				margin: 0 0 80px;
+				padding: 0 0 80px;
 			}
 
 			@include media($xs) {
-				margin: 16px 0 40px;
+				padding: 16px 0 40px;
+			}
+		}
+
+		&__hide-text {
+			max-height: 324px;
+			overflow-y: hidden;
+			position: relative;
+			margin-bottom: 20px;
+
+			&:after {
+				content: "";
+				text-align: right;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				height: 20px;
+				background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+				pointer-events: none;
+			}
+
+			&.is-active {
+				&:after {
+					display: none;
+				}
+
+				max-height: 100%;
+				overflow-y: visible;
 			}
 		}
 		&__item {

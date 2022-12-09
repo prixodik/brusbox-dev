@@ -18,6 +18,24 @@ mixin formBlockContacts()
 				._buttons
 					button.btn.-red.js-submit(type="submit") Отправить
 
+
+mixin formBlockContactsCalculator()
+	.form-block.--contacts&attributes(attributes)
+		h5._title Не знаете как правильно рассчитать?
+		._subtitle Оставьте заявку и наш специалист поможет вам
+		form(action="")
+			._row
+				._inputs
+					._input
+						input.form-control.js-required(type="text" placeholder="Ваше имя*" required)
+					._input
+						input.form-control.js-required(type="tel" placeholder="Телeфон*" required)
+					._input
+						input.form-control.js-required(type="email" placeholder="Email*" required)
+				._agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность,<br>согласие на обработку персональных данных в соответствии с указанным здесь текстом
+				._buttons
+					button.btn.-red.js-submit(type="submit") Отправить
+
 mixin formBlockSunscribe()
 	.form-block.--subscribe&attributes(attributes)
 		h4._title Оформите подписку на новости
@@ -228,6 +246,8 @@ mixin formBlockWindow3()
 					._item
 						include ../options-block/template
 						+optionsBlock()
+						._button.form-block__button-xs
+							a(href="#" data-step="2" data-current="3").btn.-border.js-steps-quiz-next Назад
 					._item
 						h4._title Отправьте заявку на расчёт
 						._inputs
@@ -237,15 +257,13 @@ mixin formBlockWindow3()
 								input.form-control.js-required(type="tel" placeholder="Телeфон*" required)
 						._agree Нажимая кнопку «Отправить», я подтверждаю свою дееспособность, согласие на обработку персональных данных в соответствии с указанным здесь текстом
 						._buttons
-							._button-close
-								a(href="#" data-step="2" data-current="3").btn.-border.js-steps-quiz-next Назад
 							button.btn.-red.js-steps-quiz-submit(type="submit") Отправить
 
-			._button(data-step="1")
-				a(href="#" data-step="2" data-current="3").btn.-border.js-prev-btn Назад
+			._button.form-block__button--close
+				a(href="#" data-step="2" data-current="3").btn.-border.js-steps-quiz-next Назад
 
 mixin formBlockWindow4()
-	.form-block.--thanks.js-steps-quiz#quiz-4&attributes(attributes)
+	.form-block.--thanks.js-steps-quiz.js-quiz-thanks#quiz-4&attributes(attributes)
 		h4._title Благодарим вас за заявку!
 		._subtitle В ближайшее время наш менеджер свяжется<br> с вами для точного расчёта необходимого окна.<br> Ожидайте, пожалуйста.
 

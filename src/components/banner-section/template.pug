@@ -3,7 +3,7 @@ mixin bannerSection(data)
 		._container.container
 			._row.row
 				._img.col-3.col-sm-12
-					img(src="images/banner-user.png", alt="")
+					+webp("images/banner-user.png")
 				._info.col-9.col-sm-12
 					._title.title-h2 А как всё начиналось?
 					._text
@@ -22,7 +22,7 @@ mixin bannerImg(data)
 mixin bannerSectionImg(data)
 	.banner-section.--img-mode&attributes(attributes)
 		._img
-			img(src=data.img, alt="")
+			+webp(data.img)
 		._info
 			h3._title
 				!=data.title
@@ -32,7 +32,7 @@ mixin bannerSectionImg(data)
 mixin bannerSectionBtn(data)
 	.banner-section.--img-mode.--btn&attributes(attributes)
 		._img
-			img(src=data.img, alt="")
+			+webp(data.img)
 		._container.container.container--sm
 			._info
 				if data.title

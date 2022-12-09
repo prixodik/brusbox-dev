@@ -3,9 +3,9 @@ include ../param-block/template
 mixin buyersProductSection(data)
 	.buyers-product-section&attributes(attributes)
 		._row
-			._left.col-5.col-sm-12
-				._img.col-sm-12
-					img(src="images/buyers-product-section-1.png", alt="")
+			._left.col-5
+				._img 
+					+webp("images/buyers-product-section-1.png")
 					._link 
 						a(href="#")._img.js-fancybox
 							+svg("rotate")
