@@ -1,15 +1,15 @@
 .header {
 	position: relative;
 	z-index: 25;
-	padding: 6px 0;
+	padding: 6px 0 0;
 	background-color: $white;
 
 	@include media($md) {
-		padding: 10px 0;
+		padding: 10px 0 0;
 	}
 
 	@include media($xs) {
-		padding-bottom: 0;
+		padding: 8px 0;
 	}
 
 	&__container {
@@ -67,7 +67,7 @@
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
-		margin-left: 204px;
+		/* margin-left: 204px; */
 		padding: 15px 0;
 
 		@include media($md) {
@@ -91,12 +91,15 @@
 
 		@include media($lg) {
 			margin: 20px 0;
+			flex: 0 1 auto;
 		}
 
 		@include media($md) {
-			margin-bottom: 10px;
+			margin-bottom: 0px;
 			margin-top: 0;
 		}
+
+		
 	}
 
 	&__soc {
@@ -116,7 +119,10 @@
 	}
 
 	&__menu {
-		flex: 0 1 calc(100% - 48px);
+		/* flex: 0 1 calc(100% - 48px); */
+		flex: 1;
+
+		@include media($lg) {}
 
 		@include media($sm) {
 			flex: 1;
@@ -127,7 +133,7 @@
 		margin-left: 24px;
 		display: flex;
 		flex-wrap: nowrap;
-		flex: 1 1 auto;
+		flex: 0 1 auto;
 		align-items: center;
 		align-content: center;
 
@@ -137,7 +143,7 @@
 		}
 
 		@include media($md) {
-			margin-bottom: 10px;
+			margin-bottom: 0px;
 		}
 
 		@include media($sm) {
@@ -147,9 +153,14 @@
 
 		&-item {
 			margin-right: 40px;
+			white-space: nowrap;
 
 			&:last-child {
 				margin-right: 0;
+			}
+
+			@include media($lg) {
+				margin-right: 24px;
 			}
 
 			@include media($md) {
@@ -162,8 +173,14 @@
 		}
 
 		&-item--location {
+			white-space: nowrap;
+
+			.icon-inline__icon {
+				margin-right: 0;
+			}
+
 			.icon-inline__wrap {
-				@include media($md) {
+				@include media($lg) {
 					display: none;
 				}
 
@@ -208,11 +225,13 @@
 		@include flex(space-between, center, center, 0);
 
 		@include media($lg) {
-			flex-wrap: wrap;
+			//flex-wrap: wrap;
+			flex: 0 1 auto;
 		}
 
-		@include media($sm) {
+		@include media(1100px) {
 			flex-wrap: nowrap;
+			justify-content: flex-end;
 		}
 	}
 
@@ -236,6 +255,7 @@
 
 		&--sm {
 			display: none;
+
 			@include media($sm) {
 				display: block;
 			}
@@ -270,6 +290,7 @@
 	}
 
 	&--mode2 & {
+
 		&__link {
 			padding: 0 15px;
 			height: 36px;
@@ -287,6 +308,14 @@
 				font: 400 12px/1 $baseFF;
 			}
 
+			@include media(1100px) {
+				display: none;
+			}
+
+			@include media($sm) {
+				display: flex;
+			}
+
 			@include media($xs) {
 				margin-right: 10px;
 			}
@@ -302,7 +331,7 @@
 		}
 
 		&__search {
-			flex: 0 1 16px;
+			flex: 0 0 16px;
 		}
 
 		&__contacts {

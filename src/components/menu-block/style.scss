@@ -5,11 +5,12 @@
 		position: relative;
 		@include time();
 		text-transform: uppercase;
-		flex: 1 1 auto;
+		flex: 0 1 auto;
 
 		&:first-child {
 			margin-left: 0;
 		}
+
 		&:last-child {
 			margin-right: 0;
 		}
@@ -18,8 +19,8 @@
 			font: 400 12px/1 $baseFF;
 		}
 
-		& > a,
-		& > span {
+		&>a,
+		&>span {
 			white-space: nowrap;
 			@include time();
 		}
@@ -30,7 +31,7 @@
 
 		&.is-active,
 		&:hover {
-			& > a {
+			&>a {
 				text-decoration: none;
 				//background-color: $green-dark;
 				color: $red;
@@ -46,6 +47,7 @@
 
 	&__menu {
 		@include flex(space-between, center, center, nowrap);
+
 		@include media($sm) {
 			display: none;
 		}
@@ -55,8 +57,8 @@
 		position: absolute;
 		top: 100%;
 		left: -1px;
-		padding-top: 18px;
-		right: -1px;
+		padding-top: 16px;
+		/* right: -1px; */
 		z-index: 10;
 		display: none;
 		text-transform: none;
@@ -66,10 +68,12 @@
 			padding: 10px 20px;
 			font: 700 14px/1 $baseFF;
 			color: $black;
+			white-space: nowrap;
 
 			&:hover {
 				color: $btn-red;
 			}
+
 			&:last-child {
 				border: 0;
 			}
@@ -99,9 +103,8 @@
 				right: -16px;
 			}
 		}
-		@include media($sm) {
-			
-		}
+
+		@include media($sm) {}
 	}
 
 	&__scroll {
@@ -119,6 +122,7 @@
 	}
 
 	@include media($md) {
+
 		//@include flex(space-between, center, center, nowrap);
 		&__item {
 			//font: 16px/1.2 $baseFF;
@@ -127,22 +131,24 @@
 				display: block;
 			}
 		}
+
 		/* &__sub {
 			&-item {
 				font: $fs-p2-lg;
 			}
 		} */
 	}
+
 	@include media($xs) {
 		display: block;
 
-		&__item {
-		}
+		&__item {}
 	}
 
 	&--nav {
-		@include flex(space-between, center, center, nowrap);
-		@include media($sm) {
+		@include flex(flex-start, center, center, nowrap);
+
+		@include media(1100px) {
 			display: none;
 		}
 	}
@@ -153,6 +159,16 @@
 			font: bold 14px $baseFF;
 			margin-right: 32px;
 			color: $gray-medium;
+			flex: 0 1 auto;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			@include media($lg) {
+				margin-right: 24px;
+				font: 700 12px/1 $baseFF;
+			}
 
 			@include media($md) {
 				font: 700 12px/1 $baseFF;
@@ -161,7 +177,7 @@
 
 			&.is-active,
 			&:hover {
-				& > a {
+				&>a {
 					color: $black;
 				}
 			}
