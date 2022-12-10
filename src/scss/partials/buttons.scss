@@ -11,7 +11,8 @@ button.btn {
 	text-align: center;
 	display: inline-flex;
 	vertical-align: top;
-	white-space: nowrap;
+	// white-space: nowrap;
+	white-space: wrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	border-radius: 30px;

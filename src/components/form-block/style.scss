@@ -502,6 +502,12 @@
 		}
 	}
 
+	&--request {
+		&.is-hide {
+			display: none;
+		}
+	}
+
 	&--quiz3 & {
 		&__title {
 			@include media($xs) {
@@ -626,6 +632,18 @@
 	&--login & {
 		&__title {
 			margin-bottom: 37px;
+
+			@include media($xs) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&__buttons {
+			margin-top: 61px;
+			
+			@include media($xs) {
+				margin-top: 25px;
+			}
 		}
 	}
 

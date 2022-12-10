@@ -98,8 +98,6 @@
 			margin-bottom: 0px;
 			margin-top: 0;
 		}
-
-		
 	}
 
 	&__soc {
@@ -122,7 +120,8 @@
 		/* flex: 0 1 calc(100% - 48px); */
 		flex: 1;
 
-		@include media($lg) {}
+		@include media($lg) {
+		}
 
 		@include media($sm) {
 			flex: 1;
@@ -290,7 +289,6 @@
 	}
 
 	&--mode2 & {
-
 		&__link {
 			padding: 0 15px;
 			height: 36px;

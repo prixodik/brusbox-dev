@@ -8,6 +8,15 @@ mixin iconInline(data)
 		._wrap
 			!= data.text
 
+
+mixin iconInlineLocation(data)
+	.icon-inline&attributes(attributes)
+		a._link(href="#popup-location-list").js-popup-show
+		._icon
+			+svg(data.icon)
+		._wrap
+			!= data.text
+
 mixin iconInlineSearch(data)
 	.icon-inline.-default&attributes(attributes)
 		a._link.js-search-mob-show(href="#")

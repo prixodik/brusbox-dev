@@ -144,6 +144,23 @@
 
 	}
 
+	&--gray {
+		background-color: $gray-bridge;
+		padding: 112px 0;
+
+		@include media($md) {
+			padding: 60px 0;
+		}
+
+		@include media($sm) {
+			padding: 70px 0;
+		}
+
+		@include media($xs) {
+			padding: 60px 0;
+		}
+	}
+
 	&--max-width {
 		justify-content: center;
 		max-width: 100%;

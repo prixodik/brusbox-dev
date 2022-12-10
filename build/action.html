@@ -34,7 +34,7 @@
                           <div class="menu-block__item"><a href="#">Архитекторам и дизайнерам</a></div>
                         </div>
                     <div class="header__contacts">
-                          <div class="icon-inline header__contacts-item header__contacts-item--location icon-inline--location"><a class="icon-inline__link" href="#"></a>
+                          <div class="icon-inline header__contacts-item header__contacts-item--location icon-inline--location"><a class="icon-inline__link js-popup-show" href="#popup-location-list"></a>
                             <div class="icon-inline__icon">
                               <svg class="icon icon_marker">
                                 <use xlink:href="images/sprite-svg.svg#marker"></use>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="icon-inline__wrap">Нижний Новгород
                             </div>
-                          </div><a class="header__link" href="#">Заказать замер</a>
+                          </div><a class="header__link js-popup-show" href="#popup-request">Заказать замер</a>
                           <div class="icon-inline header__contacts-item icon-inline--phone"><a class="icon-inline__link" href="#"></a>
                             <div class="icon-inline__icon">
                               <svg class="icon icon_phone">
@@ -295,16 +295,16 @@
                             </div>
                           </div>
                         </div>
-                  </div>
-                      <div class="icon-inline header__contacts-item header__contacts-item--location header__contacts-item--sm"><a class="icon-inline__link" href="#"></a>
-                        <div class="icon-inline__icon">
-                          <svg class="icon icon_marker">
-                            <use xlink:href="images/sprite-svg.svg#marker"></use>
-                          </svg>
-                        </div>
-                        <div class="icon-inline__wrap">Нижний Новгород
-                        </div>
-                      </div>
+                  </div><a class="header__contact-link js-popup-show" href="#popup-location-list">
+                        <div class="icon-inline header__contacts-item header__contacts-item--location header__contacts-item--sm"><a class="icon-inline__link js-popup-show" href="#popup-location-list"></a>
+                          <div class="icon-inline__icon">
+                            <svg class="icon icon_marker">
+                              <use xlink:href="images/sprite-svg.svg#marker"></use>
+                            </svg>
+                          </div>
+                          <div class="icon-inline__wrap">Нижний Новгород
+                          </div>
+                        </div></a>
                       <form class="search-block search-block--header js-search-block header__search--sm">
                         <button class="search-block__icon js-search-toggle is-disabled" type="submit">
                           <svg class="icon icon_search">
@@ -860,23 +860,67 @@
                   <svg class="icon icon_close">
                     <use xlink:href="images/sprite-svg.svg#close"></use>
                   </svg></a>
-                <div class="form-block form-block--login">
-                  <h4 class="form-block__title">Для просмотра материалов введите логин и пароль</h4>
-                  <form action="">
-                    <div class="form-block__row">
-                      <div class="form-block__inputs">
-                        <div class="form-block__input">
-                          <input class="form-control js-required" type="text" placeholder="Логин*" required>
+                    <div class="form-block form-block--login">
+                      <h4 class="form-block__title">Для просмотра материалов<br> введите логин и пароль</h4>
+                      <form action="">
+                        <div class="form-block__row">
+                          <div class="form-block__inputs">
+                            <div class="form-block__input">
+                              <input class="form-control js-required" type="text" placeholder="Логин*" required>
+                            </div>
+                            <div class="form-block__input">
+                              <input class="form-control js-required" type="password" placeholder="Пароль*" required>
+                            </div>
+                          </div>
+                          <div class="form-block__buttons">
+                            <button class="btn btn--red js-submit" type="submit">Войти</button>
+                          </div>
                         </div>
-                        <div class="form-block__input">
-                          <input class="form-control js-required" type="password" placeholder="Пароль*" required>
-                        </div>
-                      </div>
-                      <div class="form-block__buttons">
-                        <button class="btn btn--red js-submit" type="submit">Войти</button>
-                      </div>
+                      </form>
                     </div>
-                  </form>
+              </div>
+            </div>
+            <div class="popup popup--request" id="popup-request">
+              <div class="popup__overflow js-popup-hide"></div>
+              <div class="popup__wrapper"><a class="popup__close js-popup-hide">
+                  <svg class="icon icon_close">
+                    <use xlink:href="images/sprite-svg.svg#close"></use>
+                  </svg></a>
+                <div class="popup__row">
+                  <div class="popup__img"><img src="./images/popup-request-img.jpg" alt=""></div>
+                  <div class="popup__form">
+                        <div class="form-block form-block--subscribe form-block--request js-form">
+                          <h4 class="form-block__title">Оставьте заявку!</h4>
+                          <form class="form-block__form js-request-form" action="">
+                            <div class="form-block__row">
+                              <div class="form-block__inputs">
+                                <div class="form-block__input">
+                                  <input class="form-control js-required" type="text" placeholder="Ваше имя*" required>
+                                </div>
+                                <div class="form-block__input">
+                                  <input class="form-control js-required" type="text" placeholder="Телeфон*" required>
+                                </div>
+                                <div class="form-block__input">
+                                  <input class="form-control js-required" type="email" placeholder="Email*" required>
+                                </div>
+                              </div>
+                              <div class="form-block__check">
+                                <div class="checkbox">
+                                  <input class="js-required" id="df1" type="checkbox" name="" value="1" required>
+                                  <label for="df1">Ознакомлен с <span>политикой конфиденциальности</span></label>
+                                </div>
+                              </div>
+                              <div class="form-block__buttons">
+                                <button class="btn btn--red js-submit js-request-btn" type="submit">Отправить</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                    <div class="popup__send js-send-request">
+                      <h4 class="popup__send-title">Заявка отправлена!</h4>
+                      <div class="popup__send-subtitle">Наш менеджер свяжется с вами<br> в ближайшее время</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

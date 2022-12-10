@@ -1,5 +1,4 @@
 include ../form-block/template
-//- include ../stars/template
 
 mixin popup(data)
 	.popup&attributes(attributes)
@@ -83,7 +82,6 @@ mixin popupModel(data)
 
 mixin popupLogin(data)
 	+popup().popup--login#popup-login
-		include ../form-block/template
 		+formBlockLogin()
 
 
@@ -93,6 +91,19 @@ mixin popupLacation(data)
 		._buttons
 			a.btn(href="#").btn.js-popup-hide Да
 			a.btn(href="#popup-location-list").js-popup-show.btn Нет
+
+
+mixin popupRequest(data)
+	+popup().popup--request#popup-request
+		._row
+			._img
+				img(src="./images/popup-request-img.jpg", alt="")
+			._form
+				+formBlockRequest()
+				._send.js-send-request
+					h4._send-title Заявка отправлена!
+					._send-subtitle Наш менеджер свяжется с вами<br> в ближайшее время
+			
 
 
 
