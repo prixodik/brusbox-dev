@@ -13,7 +13,7 @@ block content
 	include ../components/header/template
 	+header()
 
-	.dilers-designers-section
+	.dilers-designers-page
 		+headSectionSlider({
 			title: "Современные тенденции, <br> свежие тренды рынка",
 			img: "images/main-bg-dilers-designers-1.jpg",
@@ -27,14 +27,23 @@ block content
 			._container.container
 				._title
 					h2 Полезные материалы
-				+documentBlockBtn({
-					items: [
-					{img: "images/dilers-designers-document-1.png",	btn: "Библиотека BIM-моделей"},
-					{img: "images/dilers-designers-document-2.png",	text: "Каталог продукции"},
-					{img: "images/dilers-designers-document-3.png",	btn: "Нормативная документация"},
-					{img: "images/dilers-designers-document-4.png",	text: "Альбом <br> интерьерных <br> решений"},
-					]
-				}).row
+				._row.row
+					+documentBlockBtn({
+						img: "images/dilers-designers-document-1.png",
+						btn: "Библиотека BIM-моделей"
+					})._cart.col-3.col-md-4.col-sm-12
+					+documentBlockBtn({
+						img: "images/dilers-designers-document-2.png",
+						text: "Каталог продукции"
+					})._cart.col-3.col-md-4.col-sm-12
+					+documentBlockBtn({
+						img: "images/dilers-designers-document-3.png",
+						btn: "Нормативная документация"
+					})._cart.col-3.col-md-4.col-sm-12
+					+documentBlockBtn({
+						img: "images/dilers-designers-document-4.png",
+						text: "Альбом <br> интерьерных <br> решений"
+					})._cart.col-3.col-md-4.col-sm-12
 
 		+infoSectionSliderImg({
 			items: [

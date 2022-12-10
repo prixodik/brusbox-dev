@@ -92,7 +92,6 @@
 			max-width: 100%;
 			overflow-x: auto;
 		}
-
 	}
 
 	&__title {
@@ -142,6 +141,10 @@
 			min-height: 733px;
 			position: relative;
 
+			@include media($xs) {
+				min-height: 375px;
+			}
+
 			&::after {
 				position: absolute;
 				bottom: 0;
@@ -161,13 +164,8 @@
 
 		&__info {
 			align-items: flex-start;
-			/* position: absolute;
-			bottom: 0;
-			height: 0;
-			height: auto;
-			left: 20px;
-			right: 20px; */
 			height: 100%;
+			
 		}
 
 		&__title {
@@ -183,6 +181,5 @@
 				text-align: start;
 			}
 		}
-
 	}
 }

@@ -10,6 +10,9 @@ block content
 	include ../components/text-section/template
 	include ../components/document-block/template
 
+	include ../components/header/template
+	+header()
+
 	.main-section.main-section--dealer-support
 		+headSection({
 			bread: [{url: '#', title: 'Главная'},{url: '#', title: 'Поддержка дилеров'}],
@@ -26,72 +29,77 @@ block content
 				._services-row.row
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-1.svg",
+							icon: "images/service-icon-1.svg",
 							title: "Помощь в проектировании цехов «под ключ»"
 						})
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-2.svg",
+							icon: "images/service-icon-2.svg",
 							title: "Услуги технических специалистов по накладке производственных цехов"
 						})
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-3.svg",
+							icon: "images/service-icon-3.svg",
 							title: "Услуги по проекти-рованию и расчету сложных конструкций"
 						})
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-4.svg",
+							icon: "images/service-icon-4.svg",
 							title: "Предоставление программы по расчету окон Optima"
 						})
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-5.svg",
+							icon: "images/service-icon-5.svg",
 							title: "Региональные семинары по продажам и монтажу"
 						})
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-5.svg",
+							icon: "images/service-icon-5.svg",
 							title: "Региональные семинары по продажам и монтажу"
 						})
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-6.svg",
+							icon: "images/service-icon-6.svg",
 							title: "Предоставление технологической оснастки с последующей компенсацией затрат"
 						})
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-7.svg",
+							icon: "images/service-icon-7.svg",
 							title: "Предоставление всевозможной рекламной продукции"
 						})
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-8.svg",
+							icon: "images/service-icon-8.svg",
 							title: "Совместные рекламные кампании"
 						})
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-9.svg",
+							icon: "images/service-icon-9.svg",
 							title: "Гибкую систему скидок"
 						})
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-10.svg",
+							icon: "images/service-icon-10.svg",
 							title: "Различные бонусные и мотивационные программы"
 						})
 					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-11.svg",
+							icon: "images/service-icon-11.svg",
 							title: "Индивидуальный подход к каждому клиенту"
 						})
-		+documentBlockBtn({
-			items: [
-				{img: "./images/flag-img.png",	btn: "Каталог сувенирной продукции"},
-				{img: "./images/table-img.png",	btn: "Каталог внешней рекламы"}
-			]
-		}).document-block--gray
 		._contaciner.container.container--text
 			._about Таким образом, мы предлагаем нашим партнёрам приятное сотрудничество на взаимовыгодных условиях
+		._carts
+			._container.container
+				._row
+					+documentBlockBtn({
+						img: "images/flag-img.png",
+						btn: "Библиотека BIM-моделей"
+					})._cart
+					+documentBlockBtn({
+						img: "images/table-img.png",
+						btn: "Каталог внешней рекламы"
+					})._cart
 		+infoSectionSupport({
 			img: 'images/contact-img.jpg'
 		})

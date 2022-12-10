@@ -1,10 +1,10 @@
 .document-block {
-
+	align-items: center;
 	@include media($md) {
-
 		// align-items: flex-start;
 		.btn {
-			padding: 0px 4px;
+			padding: 8px 10px;
+			min-width: 217px;
 		}
 	}
 
@@ -28,14 +28,12 @@
 		}
 	}
 
-
 	&__items {
 		position: relative;
 		@include flex(0, center, flex-start, 0, 0);
 
 		@include media($sm) {
 			margin-bottom: 24px;
-
 		}
 	}
 
@@ -62,7 +60,6 @@
 			padding: 40px 0px;
 			font: 300 13px/18.2px $baseFF;
 		}
-
 	}
 
 	picture,
@@ -111,10 +108,9 @@
 				height: 24px;
 
 				@include media($xs) {
-					height: 17px
+					height: 17px;
 				}
 			}
-
 		}
 
 		picture,
@@ -143,6 +139,11 @@
 				min-height: 44px;
 				max-width: 44px;
 				max-height: 44px;
+			}
+		}
+		&__button {
+			.btn {
+				height: auto;
 			}
 		}
 
@@ -174,42 +175,20 @@
 		}
 	}
 
-	&--btn-list & {
-		&__row {
-			@include flex(center, center, 0, nowrap, 0);
+	&--mode {
+		@include flex(0,center,center,0);
 
-			@include media($md) {
-				margin-right: 0px;
-
-				img {
-					max-width: 33px;
-				}
-			}
-
-			@include media($sm) {
-				img {
-					max-width: 48px;
-					margin-right: 20px;
-				}
-
-				justify-content: start;
-				margin-bottom: 24px;
-
-				br {
-					display: none;
-				}
-			}
-
-			@include media($xs) {
-				img {
-					max-width: 26px;
-				}
-			}
+		.btn {
+			width: 100%;
 		}
+	}
 
+	&--market {
+		@include flex(0,center,center,0);
 
-
-
+		@include media($xs) {
+			justify-content: space-between;
+		}
 	}
 
 	&--gray {
