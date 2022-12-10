@@ -24,16 +24,17 @@ block content
 		})._head
 
 		._document
-			._title.col-12
-				h2 Полезные материалы
-			+documentBlockBtn({
-				items: [
-				{img: "images/dilers-designers-document-1.png",	btn: "Библиотека BIM-моделей"},
-				{img: "images/dilers-designers-document-2.png",	text: "Каталог продукции"},
-				{img: "images/dilers-designers-document-3.png",	btn: "Нормативная документация"},
-				{img: "images/dilers-designers-document-4.png",	text: "Альбом <br> интерьерных <br> решений"},
-				]
-			}).col-12
+			._container.container
+				._title
+					h2 Полезные материалы
+				+documentBlockBtn({
+					items: [
+					{img: "images/dilers-designers-document-1.png",	btn: "Библиотека BIM-моделей"},
+					{img: "images/dilers-designers-document-2.png",	text: "Каталог продукции"},
+					{img: "images/dilers-designers-document-3.png",	btn: "Нормативная документация"},
+					{img: "images/dilers-designers-document-4.png",	text: "Альбом <br> интерьерных <br> решений"},
+					]
+				}).row
 
 		+infoSectionSliderImg({
 			items: [

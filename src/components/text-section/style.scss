@@ -55,10 +55,6 @@
 	}
 
 
-	&__list {
-		padding-left: 28px;
-	}
-
 	&--text-center {
 		text-align: center;
 	}
@@ -192,6 +188,9 @@
 		@include media($xs) {
 			padding: 40px 0;
 			font-size: 13px;
+		}
+		.container--text{
+			max-width: 926px;
 		}
 	}
 

@@ -142,4 +142,27 @@
 			margin-bottom: 60px;
 		}
 	}
+	&__services{
+		padding: 104px 0px 112px;
+
+		@include media($md) {
+			padding: 40px 0px 40px;
+		}
+
+		@include media($sm) {
+			padding: 70px 0px 70px;
+
+			.service-block{
+				margin-bottom: 8px;
+			}
+		}
+
+		@include media($xs) {
+			padding: 40px 0px 40px;
+
+			.service-block{
+				margin-bottom: 12px;
+			}
+		}
+	}
 }

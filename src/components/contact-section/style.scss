@@ -109,6 +109,10 @@
 		position: relative;
 		padding: 112px 0px;
 
+		@include media($sm) {
+			padding: 40px 0px;
+		}
+
 		img {
 			object-fit: cover;
 			width: 100%;
@@ -127,6 +131,13 @@
 			bottom: 0;
 			padding: 0;
 			z-index: -1;
+
+			@include media($sm) {
+				background: #37585D;
+				img{
+					display: none;
+				}
+			}
 		}
 
 		&__text {
@@ -135,6 +146,9 @@
 
 		&__form {
 			padding: 0px 112px;
+			@include media($sm) {
+				padding: 0px;
+			}
 		}
 	}
 	&--bg-white{

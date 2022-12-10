@@ -10,6 +10,7 @@ block content
 	include ../components/text-block/template
 	include ../components/info-section/template
 	include ../components/banner-section/template
+	include ../components/service-block/template
 
 	include ../components/header/template
 	+header2()
@@ -65,6 +66,29 @@ block content
 			+textSection({
 				text: '<p>Профилем BRUSBOX, который производится за год, <br> можно было бы обернуть землю по экватору в 1,5 оборота</p>',
 			}).text-section--text-center.text-section--small
+
+			._container.container.container--sm
+				._services-row.row
+					._services-item.col-6.col-md-6.col-sm-12.col-xs-12
+						+serviceBlock({
+							icon: "images/about-company-service-1.svg",
+							title: "Основной склад компании «БРУСБОКС» расположен в Брянске, буферный – в Москве"
+						}).service-block--padding-y.col-12
+					._services-item.col-6.col-md-6.col-sm-12.col-xs-12
+						+serviceBlock({
+							icon: "images/about-company-service-3.svg",
+							title: "Для производства профиля BRUSBOX применяются самые технологические решения, используются лучшее сырье, оборудование и инструменты от ведущих мировых производителей"
+						}).service-block--padding-y.col-12
+					._services-item.col-6.col-md-6.col-sm-12.col-xs-12
+						+serviceBlock({
+							icon: "images/about-company-service-2.svg",
+							title: "Компания «БРУСБОКС» может обеспечить непрерывную поставку продукции в любом объеме и в любую географическую точку"
+						}).service-block--padding-y.col-12
+					._services-item.col-6.col-md-6.col-sm-12.col-xs-12
+						+serviceBlock({
+							icon: "images/about-company-service-4.svg",
+							title: "Штат компании «БРУСБОКС» – это сплоченный и дружный коллектив. Многие сотрудники работают более 10 лет, а некоторые – с самого её основания"
+						}).service-block--padding-y.col-12
 
 		.about-company-section
 			+infoSectionSliderImg({

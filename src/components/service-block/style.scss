@@ -4,6 +4,7 @@
 
 	@include media($sm) {
 		margin-bottom: 12px;
+
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -37,8 +38,14 @@
 			max-height: 44px;
 		}
 	}
-	&__wrap {
-	}
-	&__title {
+
+	&__wrap {}
+
+	&__title {}
+
+	&--padding-y {
+		@include media($sm) {
+			padding: 40px 0px;
+		}
 	}
 }

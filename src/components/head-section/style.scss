@@ -117,6 +117,14 @@
 		margin-top: 16px;
 		margin-bottom: 0;
 
+		@include media($md) {
+			margin-top: 8px;
+		}
+
+		@include media($sm) {
+			display: none;
+		}
+
 		@include media($sm) {
 			text-align: left;
 		}
@@ -155,6 +163,7 @@
 			align-items: flex-start;
 			/* position: absolute;
 			bottom: 0;
+			height: 0;
 			height: auto;
 			left: 20px;
 			right: 20px; */
@@ -164,5 +173,16 @@
 		&__title {
 			text-align: left;
 		}
+
+		&__subtitle {
+			@include media($sm) {
+				display: block;
+			}
+
+			@include media($xs) {
+				text-align: start;
+			}
+		}
+
 	}
 }

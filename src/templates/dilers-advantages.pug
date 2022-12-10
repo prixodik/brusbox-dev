@@ -8,6 +8,9 @@ block content
 	include ../components/head-section/template
 	include ../components/info-section/template
 	include ../components/advantages-section/template
+	include ../components/documentation-block/template
+	include ../components/service-block/template
+
 
 	include ../components/header/template
 	+header()
@@ -18,6 +21,41 @@ block content
 			title: "Преимущества профильной системы BRUSBOX",
 			img: "images/main-bg-dilers-advantages.jpg",
 		})
+		
+		._services
+			._container.container.container--sm
+				._services__row.row
+					._services-item.col-4.col-md-4.col-sm-12.col-xs-12
+						+serviceBlock({
+							icon: "images/dilers-advantages-service-1.svg",
+							title: "Использование только первичной сырьевой смеси в производстве профильных систем"
+						})
+					._services-item.col-4.col-md-4.col-sm-12.col-xs-12
+						+serviceBlock({
+							icon: "images/dilers-advantages-service-2.svg",
+							title: "Во всех системах BRUSBOX смещение оси фурнитурного паза — 13 мм, что позволяет установить в окно фурнитуру с улучшенными показателями по взломостойкости"
+						})
+					._services-item.col-4.col-md-4.col-sm-12.col-xs-12
+						+serviceBlock({
+							icon: "images/dilers-advantages-service-3.svg",
+							title: "Использование сырьевых компонентов, поставляемых признанными лидерами химической промышленности"
+						})
+					._services-item.col-4.col-md-4.col-sm-12.col-xs-12
+						+serviceBlock({
+							icon: "images/dilers-advantages-service-4.svg",
+							title: "Сбалансированная сырьевая композиция (с оптимальным содержанием мела) позволяет изготавливать конструкции нестандартной формы (арки) из всех систем BRUSBOX"
+						})
+					._services-item.col-4.col-md-4.col-sm-12.col-xs-12
+						+serviceBlock({
+							icon: "images/dilers-advantages-service-5.svg",
+							title: "Готовое комплексное решение для конечного потребителя, выполненное в едином стиле с использованием продуктов одной торговой марки (окно/балкон/подоконник/доп.комплектующие)"
+						})
+					._services-item.col-4.col-md-4.col-sm-12.col-xs-12
+						+serviceBlock({
+							icon: "images/dilers-advantages-service-5.svg",
+							title: "Готовое комплексное решение для конечного потребителя, выполненное в едином стиле с использованием продуктов одной торговой марки (окно/балкон/подоконник/доп.комплектующие)"
+						})
+
 		+infoSectionSliderImg({
 			items: [
 			{img: "images/dilers-advantages-slider-1.jpg", text: 'С абсолютно разным набором технических характеристик (от 60 до 70 мм, от 3 до 6 камер). Относящиеся к различным ценовым сегментам (от эконом- до премиум-класса), следовательно предназначенные для различных целевых групп потребителей'},

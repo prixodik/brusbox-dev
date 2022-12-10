@@ -334,7 +334,9 @@
             <div class="head-section head-section--slider market-page__head">
               <div class="head-section__slider js-slider-head">
                 <div class="head-section__slide">
-                  <picture><img class="head-section__img" src="images/main-bg-market-1.jpg" alt="">
+                  <picture>
+                    <source media="(max-width: 770px)" srcset="images/main-bg-market-sm-1.jpg">
+                    <source media="(max-width: 450px)" srcset="images/main-bg-market-sm-1.jpg"><img class="head-section__img" src="images/main-bg-market-1.jpg" alt="">
                   </picture>
                   <div class="head-section__container container container--text">
                     <div class="head-section__info">
@@ -496,11 +498,11 @@
                         <source class="lazy" data-srcset="images/main-market-document-1.webp" type="image/webp"/><img class="lazy document-block__img" data-src="images/main-market-document-1.png" alt=""/>
                       </picture>
                       <div class="document-block__text">Сертификат <br> соответствия
-                        <div class="document-block__link"><a href="#">
-                            <svg class="icon icon_download">
-                              <use xlink:href="images/sprite-svg.svg#download"></use>
-                            </svg></a></div>
                       </div>
+                      <div class="document-block__link"><a href="#">
+                          <svg class="icon icon_download">
+                            <use xlink:href="images/sprite-svg.svg#download"></use>
+                          </svg></a></div>
                     </div>
               </div>
               <div class="market-page-document__col col-4 col-md-4 col-sm-12">
@@ -509,11 +511,11 @@
                         <source class="lazy" data-srcset="images/main-market-document-2.webp" type="image/webp"/><img class="lazy document-block__img" data-src="images/main-market-document-2.png" alt=""/>
                       </picture>
                       <div class="document-block__text">Пожарный сертификат на профильные системы BRUSBOX
-                        <div class="document-block__link"><a href="#">
-                            <svg class="icon icon_download">
-                              <use xlink:href="images/sprite-svg.svg#download"></use>
-                            </svg></a></div>
                       </div>
+                      <div class="document-block__link"><a href="#">
+                          <svg class="icon icon_download">
+                            <use xlink:href="images/sprite-svg.svg#download"></use>
+                          </svg></a></div>
                     </div>
               </div>
               <div class="market-page-document__col col-4 col-md-4 col-sm-12">
@@ -522,11 +524,11 @@
                         <source class="lazy" data-srcset="images/main-market-document-3.webp" type="image/webp"/><img class="lazy document-block__img" data-src="images/main-market-document-3.png" alt=""/>
                       </picture>
                       <div class="document-block__text">Санитарно-эпидемиологическое заключение
-                        <div class="document-block__link"><a href="#">
-                            <svg class="icon icon_download">
-                              <use xlink:href="images/sprite-svg.svg#download"></use>
-                            </svg></a></div>
                       </div>
+                      <div class="document-block__link"><a href="#">
+                          <svg class="icon icon_download">
+                            <use xlink:href="images/sprite-svg.svg#download"></use>
+                          </svg></a></div>
                     </div>
               </div>
             </div>
@@ -539,6 +541,129 @@
               <picture><img src="images/banner-main-market.jpg" alt="">
               </picture>
             </div>
+        <div class="market-page__services">
+          <div class="market-page__col col-sm-12">
+            <div class="market-page__container container container--sm">
+              <div class="market-page__services__title title-h2">Поддержка дилеров</div>
+              <p>Одним из основных условий нашего сотрудничества является максимальное удовлетворение потребностей предприятий — производителей окон ПВХ. Не зависимо от того, где и на каком этапе своего развития находятся данные предприятия, каждое из них воспринимается как равноправный партнер нашей компании.</p>
+              <div class="market-page__services__text">Компания «БРУСБОКС» предлагает своим партнёрам:</div>
+              <div class="market-page__services__row row">
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-1.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Помощь в проектировании цехов «под ключ»
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-2.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Услуги технических специалистов по накладке производственных цехов
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-4.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Предоставление программы по расчету окон Optima
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-3.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Услуги по проекти-рованию и расчету сложных конструкций
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-5.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Региональные семинары по продажам и монтажу
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-5.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Региональные семинары по продажам и монтажу
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-7.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Предоставление всевозможной рекламной продукции
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-6.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Предоставление технологической оснастки
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-9.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Гибкую систему скидок
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-8.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Совместные рекламные кампании
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-10.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Различные бонусные и мотивационные программы
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="market-page__services-item col-3 col-sm-12">
+                      <div class="service-block">
+                        <div class="service-block__icon"><img src="/images/service-icon-11.svg" alt=""></div>
+                        <div class="service-block__wrap">
+                          <div class="service-block__title">Индивидуальный подход к каждому клиенту
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="market-page__services__bottom">Таким образом, мы предлагаем нашим партнёрам приятное сотрудничество на взаимовыгодных условиях</div>
+            <div class="market-page__services__btn">
+              <button class="btn btn--border btn--red js-submit" type="submit">Узнать больше о поддержке</button>
+            </div>
+          </div>
+        </div>
             <div class="info-section info-section--gray info-section--big-text info-section--no-column-revers">
               <div class="info-section__container container">
                 <div class="info-section__row row">

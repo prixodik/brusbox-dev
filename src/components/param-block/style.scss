@@ -81,10 +81,37 @@
 
 		&__item {
 			margin-bottom: 4px;
+			@include media($xs) {
+				border-bottom: 1px solid #e1e1e1;
+				margin-bottom: 7px;
+			}
 		}
+		@include media($sm) {
+			&__title {
+				margin-bottom: 24px;
+			}
+			&__item {
+				display: flex;
+			}
+			&__value{
+				text-align: right;
+			}
+		}
+		
 	}
 
 	&--padding {
 		padding: 40px 0px;
+
+		@include media($md) {
+			padding: 24px 0px;
+		}
+
+		@include media($sm) {
+			padding: 80px 0px 40px;
+		}
+		@include media($xs) {
+			padding: 40px 0px 40px;
+		}
 	}
 }

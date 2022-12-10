@@ -94,7 +94,7 @@
 			@include media($xs) {
 				font: 400 13px/14px $baseFF;
 			}
-		}
+		}h
 
 		&__img {
 			img {
@@ -177,6 +177,9 @@
 	}
 	&--big-banner{
 		padding: 0px 0px;
+		img{
+			width: 100%;
+		}
 	}
 	&--padding-mode{
 		padding: 120px 0px 112px;
