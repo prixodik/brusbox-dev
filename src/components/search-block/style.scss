@@ -138,6 +138,7 @@
 		right: 0;
 		top: 0;
 		height: 42px;
+		min-width: 18px;
 
 		@include media($sm) {
 			height: 20px;

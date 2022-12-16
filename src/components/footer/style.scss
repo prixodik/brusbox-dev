@@ -22,9 +22,13 @@
 
 	&__mobile-menu {
 		display: none;
+
 		@include media($sm) {
 			display: block;
 			margin-bottom: 56px;
+		}
+		@include media($sm) {
+			margin-bottom: 40px;
 		}
 	}
 
@@ -120,7 +124,7 @@
 
 		
 		@include media($xs) {
-			margin-bottom: 40px;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -172,6 +176,12 @@
 			padding: 10px 15px;
 		}
 
+		@include media($xs) {
+			margin-bottom: 17px;
+		}
+	}
+
+	&__mail{
 		@include media($xs) {
 			margin-bottom: 17px;
 		}

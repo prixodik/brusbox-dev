@@ -82,6 +82,10 @@
 			border-radius: 50%;
 			margin-bottom: 0;
 
+			&:last-child {
+				margin-right: 0;
+			}
+
 			svg {
 				fill: $btn-red;
 				display: block;
