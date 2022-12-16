@@ -15,29 +15,25 @@ mixin documentBlockMode(data)
 					!=data.text
 
 mixin documentBlockMarket(data)
-	.document-block.--btn&attributes(attributes)
+	.document-block.--btn.--market&attributes(attributes)
 		+webp(data.img)._img
+		if data.text
+			._text
+				!=data.text
+		._link
+			a(href="#")
+				+svg("download")
+
+mixin documentBlockBtn(data)
+	.document-block.--btn.--mode&attributes(attributes)
+		+webp(data.img)
+		if data.btn
+			._button
+				a(href="#").btn.-border.-red 
+					!=data.btn
 		if data.text
 			._text
 				!=data.text
 				._link
 					a(href="#")
 						+svg("download")
-
-mixin documentBlockBtn(data)
-	.document-block.--btn.--btn-list.--max-width&attributes(attributes)
-		each item in data.items
-			._row.row.col-3.col-sm-12
-				+webp(item.img)
-				if item.btn
-					._button
-						a(href="#").btn.-border.-red 
-							!=item.btn
-				if item.text
-					._text
-						!=item.text
-						._link
-							a(href="#")
-								+svg("download")
-
-				

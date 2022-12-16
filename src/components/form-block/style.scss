@@ -502,6 +502,12 @@
 		}
 	}
 
+	&--request {
+		&.is-hide {
+			display: none;
+		}
+	}
+
 	&--quiz3 & {
 		&__title {
 			@include media($xs) {
@@ -623,6 +629,24 @@
 		}
 	}
 
+	&--login & {
+		&__title {
+			margin-bottom: 37px;
+
+			@include media($xs) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&__buttons {
+			margin-top: 61px;
+			
+			@include media($xs) {
+				margin-top: 25px;
+			}
+		}
+	}
+
 	&--subscribe & {
 		&__check {
 			margin: 25px 0 40px;
@@ -639,15 +663,32 @@
 	&--buy-form & {
 		&__title {
 			color: $white;
-			font-size: 56px;
 		}
 		&__subtitle {
 			margin-bottom: 40px;
 			color: $white;
 			font-size: 18px;
+
+			@include media($md) {
+				font-size: 14px;
+				margin-top: 4px;
+				margin-bottom: 16px;
+			}
+
+			@include media($sm) {
+				margin-top: 16px;
+				margin-bottom: 40px;
+			}
+
+			@include media($xs) {
+				margin-top: 16px;
+				margin-bottom: 16px;
+			}
+
 		}
 		&__text {
 			color: $white;
+
 		}
 		&__inputs {
 			margin-top: 16px;
@@ -657,9 +698,29 @@
 			textarea::placeholder {
 				color: $white;
 			}
+
+			@include media($md) {
+				max-width: 435px;
+			}
+
+			@include media($sm) {
+				max-width: 100%;
+				margin-bottom: 18px;
+			}
+
+			@include media($xs) {
+				margin-bottom: 13px;
+			}
 		}
 		&__agree {
 			margin-bottom: 40px;
+
+			@include media($md) {
+				margin-bottom: 24px;
+			}
+			@include media($sm) {
+				margin-bottom: 40px;
+			}
 		}
 		&__buttons {
 			button {
@@ -669,14 +730,30 @@
 		&__header {
 			margin-bottom: 60px;
 			padding-bottom: 16px;
-			.btn--icon {
-				margin-right: 16px;
-				padding-left: 22px;
-				padding-right: 22px;
+		.btn--icon {
+			margin-right: 16px;
+			padding-left: 22px;
+			padding-right: 22px;
+
+			@include media($sm) {
+				margin-right: 40px;
 			}
-			svg {
-				margin-right: 10px;
+
+			@include media($sm) {
+				margin-bottom: 8px;
 			}
+
 		}
+		svg{
+			margin-right: 10px;
+		}
+
+		@include media($md) {
+			margin-bottom: 56px;
+		}
+		@include media($sm) {
+			margin-bottom: 80px;
+		}
+	}
 	}
 }

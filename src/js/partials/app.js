@@ -742,6 +742,27 @@ var uikit = {
     });
   },
 
+  sendFormDefault: function() {
+    $('.js-request-form').submit((e)=> {
+      $('.js-send-request').addClass('is-active')
+
+      e.preventDefault();
+
+      let form_data = $(this).serialize(); // Собираем все данные из формы
+      $.ajax({
+          type: "POST", // Метод отправки
+          url: "", // Путь до php файла отправителя
+          data: form_data,
+          success: function () {
+            // действия после отправки
+          }
+      });
+
+      $('.js-form').addClass('is-hide')
+      console.log(true)
+    });
+  },
+
   selectsSorting: function () {
     let arr = [];
     $('.js-select-sorting').on('change', 'select', function () {
@@ -800,6 +821,7 @@ var uikit = {
     this.selectsSorting();
     this.hideText();
     this.showPopupLocation();
+    this.sendFormDefault();
   },
 };
 $(document).ready(function () {

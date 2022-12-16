@@ -10,20 +10,24 @@ block content
 	include ../components/info-section/template
 	include ../components/document-block/template
 	include ../components/banner-section/template
+	include ../components/service-block/template
 
 	include ../components/header/template
 	+header()
 
 	.market-page
+		+headSectionSlider({
+			title: "Поддержка дилеров на 360°",
+			img: "images/main-bg-market-1.jpg",
+			imgSm: "images/main-bg-market-sm-1.jpg",
+			imgXs: "images/main-bg-market-xs-1.jpg",
+			subtitle: 'Возможности производства и поставки без ограничений дилерам',
+			title2: "Качественные окна<br> на любой вкус (вариант 2)",
+			img2: "images/main-bg-buyers.jpg",
+			subtitle2: 'Возможности производства и поставки без ограничений дилерам',
+		})._head
+		
 		._container.container.container--full
-			+headSectionSlider({
-				title: "Поддержка дилеров на 360°",
-				img: "images/main-bg-market-1.jpg",
-				subtitle: 'Возможности производства и поставки без ограничений дилерам',
-				title2: "Качественные окна<br> на любой вкус (вариант 2)",
-				img2: "images/main-bg-buyers.jpg",
-				subtitle2: 'Возможности производства и поставки без ограничений дилерам',
-			})._head
 			+infoSectionMarket({
 				title: "Наша продукция",
 				text: "BRUSBOX — это принципиально новая разработка — качественный профиль ПВХ, созданный в России и для России <br> на основе уникального комплекса передовых технологий <br> и собственного практического опыта производства металлопластиковых окон.",
@@ -56,51 +60,121 @@ block content
 					btn: 'Цветовые решения'
 				}).info-section--swapper-center.info-section--bg-white.info-section--no-column-revers
 
-			.market-page-document
-				._container.container.container--text
-					._title.col-sm-12
-						._title-h5 Сертификаты BRUSBOX
-					._text.col-sm-12 Для соответствия всем необходимым требованиям, компания BRUSBOX предоставляет дилерам всю необходимую документацию
-					._items.col-12
-						._col.col-4.col-md-4.col-sm-12
-							+documentBlockMarket({
-								text: "Сертификат <br> соответствия",
-								img: "images/main-market-document-1.png",
-							})
-						._col.col-4.col-md-4.col-sm-12
-							+documentBlockMarket({
-								text: "Пожарный сертификат на профильные системы BRUSBOX",
-								img: "images/main-market-document-2.png",
-							})
-						._col.col-4.col-md-4.col-sm-12
-							+documentBlockMarket({
-								text: "Санитарно-эпидемиологическое заключение",
-								img: "images/main-market-document-3.png",
-							})
-					._buttons.col-sm-5
-						button.btn.-border.-red.js-submit(type="submit") Тех. документация
+		.market-page-document.market-page__document
+			._container.container.container--text
+				._title
+					._title-h5 Сертификаты BRUSBOX
+				._text Для соответствия всем необходимым требованиям, компания BRUSBOX предоставляет дилерам всю необходимую документацию
+				._items.row
+					._col.col-4.col-md-4.col-sm-12
+						+documentBlockMarket({
+							text: "Сертификат <br> соответствия",
+							img: "images/main-market-document-1.png",
+						})
+					._col.col-4.col-md-4.col-sm-12
+						+documentBlockMarket({
+							text: "Пожарный сертификат на профильные системы BRUSBOX",
+							img: "images/main-market-document-2.png",
+						})
+					._col.col-4.col-md-4.col-sm-12
+						+documentBlockMarket({
+							text: "Санитарно-эпидемиологическое заключение",
+							img: "images/main-market-document-3.png",
+						})
+				._buttons
+					button.btn.-border.-red.js-submit(type="submit") Тех. документация
 
-			+bannerImg({
-				img:"images/banner-main-market.jpg"
-			}).banner-section--big-banner
+		+bannerImg({
+			img:"images/banner-main-market.jpg"
+		}).banner-section--big-banner
 
-			+infoSection({
-				img: 'images/main-market-5.jpg',
-				title: 'О компании',
-				text: '<p>Компания «БРУСБОКС» — один из крупнейших производителей ПВХ профиля <br> и подоконной доски в России, основана в марте 2004 года.</p> <br> <p> На сегодняшний день производственная база компании «БРУСБОКС» расположена <br> в г. Брянске и составляет 50 000 м², площадь производственных помещений — <br> 10 000 м², 28 экструзионных линий фирмы KraussMaffei Technologies GmbH.</p>'
-			}).info-section--gray.info-section--big-text.info-section--no-column-revers
+		._services
+			._container.container.container--sm
+				._services__title.title-h2 Поддержка дилеров
+				p Одним из основных условий нашего сотрудничества является максимальное удовлетворение потребностей предприятий — производителей окон ПВХ. Не зависимо от того, где и на каком этапе своего развития находятся данные предприятия, каждое из них воспринимается как равноправный партнер нашей компании.
+				._services__text Компания «БРУСБОКС» предлагает своим партнёрам:
+				._services__row.row
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-1.svg",
+							title: "Помощь в проектировании цехов «под ключ»"
+						})
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-2.svg",
+							title: "Услуги технических специалистов по накладке производственных цехов"
+						})
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-4.svg",
+							title: "Предоставление программы по расчету окон Optima"
+						})
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-3.svg",
+							title: "Услуги по проекти-рованию и расчету сложных конструкций"
+						})
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-5.svg",
+							title: "Региональные семинары по продажам и монтажу"
+						})
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-5.svg",
+							title: "Региональные семинары по продажам и монтажу"
+						})
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-7.svg",
+							title: "Предоставление всевозможной рекламной продукции"
+						})
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-6.svg",
+							title: "Предоставление технологической оснастки"
+						})
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-9.svg",
+							title: "Гибкую систему скидок"
+						})
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-8.svg",
+							title: "Совместные рекламные кампании"
+						})
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-10.svg",
+							title: "Различные бонусные и мотивационные программы"
+						})
+					._services-item.col-3.col-sm-12
+						+serviceBlock({
+							icon: "/images/service-icon-11.svg",
+							title: "Индивидуальный подход к каждому клиенту"
+						})
+				._services__bottom Таким образом, мы предлагаем нашим партнёрам приятное сотрудничество на взаимовыгодных условиях
+				._services__btn
+					button.btn.-border.-red.js-submit(type="submit") Узнать больше о поддержке
+						
+		+infoSection({
+			img: 'images/main-market-5.jpg',
+			title: 'О компании',
+			text: '<p>Компания «БРУСБОКС» — один из крупнейших производителей ПВХ профиля <br> и подоконной доски в России, основана в марте 2004 года.</p> <br> <p> На сегодняшний день производственная база компании «БРУСБОКС» расположена <br> в г. Брянске и составляет 50 000 м², площадь производственных помещений — <br> 10 000 м², 28 экструзионных линий фирмы KraussMaffei Technologies GmbH.</p>'
+		}).info-section--gray.info-section--big-text.info-section--no-column-revers
 
-			+bannerSectionImg({
-			img:'images/banner-bg-main.jpg',
-			title: 'Миссия',
-			text: 'Мы создаем высококачественный профиль<br> для ваших окон, гордясь тем, что делаем вашу жизнь светлее и комфортнее.<br> Мы работаем, чтобы развивались наша страна<br> и партнеры, повышалось благополучие предприятия и сотрудников БРУСБОКС.'
-			})
+		+bannerSectionImg({
+		img:'images/banner-bg-main.jpg',
+		title: 'Миссия',
+		text: 'Мы создаем высококачественный профиль<br> для ваших окон, гордясь тем, что делаем вашу жизнь светлее и комфортнее.<br> Мы работаем, чтобы развивались наша страна<br> и партнеры, повышалось благополучие предприятия и сотрудников БРУСБОКС.'
+		})
 
-			+infoSectionButton({
-			img: 'images/info-section-about.jpg',
-			text: 'BRUSBOX — это принципиально новая разработка — качественный профиль ПВХ, созданный в России и для России на основе уникального комплекса передовых техно-логий и собственного практического опыта производства металлопластиковых окон.',
-			btn: 'Подробнее о компании'
-			}).info-section--gray.info-section--row-revers.info-section--big-text
+		+infoSectionButton({
+		img: 'images/info-section-about.jpg',
+		text: 'BRUSBOX — это принципиально новая разработка — качественный профиль ПВХ, созданный в России и для России на основе уникального комплекса передовых техно-логий и собственного практического опыта производства металлопластиковых окон.',
+		btn: 'Подробнее о компании'
+		}).info-section--gray.info-section--row-revers.info-section--big-text
 	//- +gridLayout()
 
 block scripts 

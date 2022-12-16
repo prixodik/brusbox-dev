@@ -17,7 +17,7 @@ mixin header(data)
 							+menuBlockNav()._nav
 
 							._contacts
-								+iconInline({
+								+iconInlineLocation({
 									icon: 'marker',
 									text: 'Нижний Новгород'
 								})._contacts-item.header__contacts-item--location.icon-inline--location
@@ -45,8 +45,7 @@ mixin header(data)
 					._bottom
 						._menu
 							+menuBlock()
-												
-						+iconInline({
+						+iconInlineLocation({
 							icon: 'marker',
 							text: 'Нижний Новгород'
 						})._contacts-item.header__contacts-item--location.header__contacts-item--sm
@@ -68,12 +67,12 @@ mixin header2(data)
 							+menuBlockNav()._nav
 
 							._contacts
-								+iconInline({
+								+iconInlineLocation({
 									icon: 'marker',
 									text: 'Нижний Новгород'
 								})._contacts-item.header__contacts-item--location.icon-inline--location
 
-								a(href="#")._link Заказать замер
+								a(href="#popup-request")._link.js-popup-show Заказать замер
 
 								+iconInline({
 									icon: 'phone',
@@ -91,11 +90,11 @@ mixin header2(data)
 					._bottom
 						._menu
 							+menuBlock()
-												
-						+iconInline({
-							icon: 'marker',
-							text: 'Нижний Новгород'
-						})._contacts-item.header__contacts-item--location.header__contacts-item--sm
+						a(href="#popup-location-list")._contact-link.js-popup-show
+							+iconInlineLocation({
+								icon: 'marker',
+								text: 'Нижний Новгород'
+							})._contacts-item.header__contacts-item--location.header__contacts-item--sm
 						
 						+searchBlockHeader({
 							placeholder: "поиск по сайту"

@@ -2,18 +2,20 @@
 
 	&-document {
 		padding: 184px 0px;
+
 		&__items {
 			margin-top: 40px;
 			margin-bottom: 40px;
 			@include flex(center,center);
 			justify-content: space-between;
 		}
-		&__title{
+
+		&__title {
 			margin-bottom: 40px;
 			font-size: 36px;
 		}
 
-				
+
 		@include media($md) {
 			text-align: center;
 			padding: 80px 0px;
@@ -21,11 +23,15 @@
 			&__items {
 				align-items: center;
 			}
+			&__row{
+				justify-content: space-between;
+			}
 
-			&__title{
+			&__title {
 				font: 300 32px/32px $baseFF;
 			}
-			.document-block{
+
+			.document-block {
 				align-items: center;
 			}
 		}
@@ -40,14 +46,15 @@
 				justify-content: center;
 			}
 
-			.document-block{
+			.document-block {
 				margin-bottom: 24px;
-				&__text{
+
+				&__text {
 					max-width: 600px;
 				}
 			}
 
-			&__title{
+			&__title {
 				font: 300 56px/61.6px $baseFF;
 				margin-bottom: 24px;
 			}
@@ -62,17 +69,88 @@
 				justify-content: center;
 			}
 
-			.document-block{
+			.document-block {
 				margin-bottom: 25px;
-				&__text{
-				}
-				img{
+
+				&__text {}
+
+				img {
 					width: 32px;
 				}
 			}
 
-			&__title{
+			&__title {
 				font: 300 24px/26.4px $baseFF;
+			}
+		}
+	}
+
+	&__services {
+		padding: 60px 0px;
+
+		&__title,
+		&__text,
+		&__bottom,
+		&__btn,
+		p {
+			text-align: center;
+
+			@include media($sm) {
+				text-align: left;
+			}
+		}
+
+		&__title {
+			margin-bottom: 40px;
+		}
+
+		&__text {
+			margin: 24px 0px 60px;
+		}
+
+		&__bottom {
+			margin: 60px 0px;
+		}
+
+		@include media($md) {
+			&__text {
+				margin: 24px 0px 40px;
+			}
+
+			&__bottom {
+				margin: 40px 0px 60px;
+			}
+		}
+
+		@include media($sm) {
+			padding: 70px 0px;
+
+			&__title {
+				margin-bottom: 24px;
+			}
+
+			&__text {
+				margin: 70px 0px 16px;
+			}
+
+			&__bottom {
+				margin: 24px 0px 70px;
+			}
+
+			.service-block {
+				margin-bottom: 16px;
+			}
+		}
+
+		@include media($xs) {
+			padding: 40px 0px;
+
+			&__text {
+				margin: 40px 0px 16px;
+			}
+
+			&__bottom {
+				margin: 24px 0px 40px;
 			}
 		}
 	}

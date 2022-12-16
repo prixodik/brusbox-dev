@@ -6,79 +6,103 @@ block styles
 	
 block content
 	include ../components/head-section/template
+	include ../components/info-section/template
+	include ../components/text-section/template
+	include ../components/document-block/template
+
+	include ../components/header/template
+	+header()
 
 	.main-section.main-section--dealer-support
 		+headSection({
-			bread: [{url: '#', title: 'Главная'},{url: '#', title: 'Поддержка дилеров'}]
+			bread: [{url: '#', title: 'Главная'},{url: '#', title: 'Поддержка дилеров'}],
+			title: 'Поддержка дилеров',
+			img: './images/dealer-support-img.jpg',
+			imgSm: './images/dealer-support-img-sm.jpg'
 		})._head
+		._container.container.container--text
+			._text Одним из основных условий нашего сотрудничества является максимальное удовлетворение потребностей предприятий — производителей<br> окон ПВХ. Не зависимо от того, где и на каком этапе своего развития находятся данные предприятия, каждое из них воспринимается<br> как равноправный партнер нашей компании.
+			._about Компания «БРУСБОКС» предлагает своим партнёрам:
 		._container.container
-			h1._title Поддержка дилеров
-			._row.row
-				._col.col-6.col-xs-12
-					._text.title-h4 Одним из основных условий нашего сотрудничества является максимальное удовлетворение потребностей предприятий — производителей окон ПВХ. Не зависимо от того, где и на каком этапе своего развития находятся данные предприятия, каждое из них воспринимается как равноправный партнер нашей компании.
-				._col.col-6.col-xs-12
-					img(src="/images/dealer-support-img-1.jpg", alt="")
-
 			include ../components/service-block/template
 			._services
-				._services-title.title-h4 Компания «БРУСБОКС» предлагает своим партнёрам:
 				._services-row.row
-					._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-1.svg",
+							icon: "images/service-icon-1.svg",
 							title: "Помощь в проектировании цехов «под ключ»"
 						})
-					._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-2.svg",
+							icon: "images/service-icon-2.svg",
 							title: "Услуги технических специалистов по накладке производственных цехов"
 						})
-					._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-3.svg",
+							icon: "images/service-icon-3.svg",
 							title: "Услуги по проекти-рованию и расчету сложных конструкций"
 						})
-					._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-4.svg",
+							icon: "images/service-icon-4.svg",
 							title: "Предоставление программы по расчету окон Optima"
 						})
-					._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-5.svg",
+							icon: "images/service-icon-5.svg",
 							title: "Региональные семинары по продажам и монтажу"
 						})
-					._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-6.svg",
+							icon: "images/service-icon-5.svg",
+							title: "Региональные семинары по продажам и монтажу"
+						})
+					._services-item.col-3.col-md-4.col-sm-12
+						+serviceBlock({
+							icon: "images/service-icon-6.svg",
 							title: "Предоставление технологической оснастки с последующей компенсацией затрат"
 						})
-					._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-7.svg",
+							icon: "images/service-icon-7.svg",
 							title: "Предоставление всевозможной рекламной продукции"
 						})
-					._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-8.svg",
+							icon: "images/service-icon-8.svg",
 							title: "Совместные рекламные кампании"
 						})
-					._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-9.svg",
+							icon: "images/service-icon-9.svg",
 							title: "Гибкую систему скидок"
 						})
-					._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-10.svg",
+							icon: "images/service-icon-10.svg",
 							title: "Различные бонусные и мотивационные программы"
 						})
-					._services-item.col-3.col-md-4.col-sm-6.col-xs-12
+					._services-item.col-3.col-md-4.col-sm-12
 						+serviceBlock({
-							icon: "/images/service-icon-11.svg",
+							icon: "images/service-icon-11.svg",
 							title: "Индивидуальный подход к каждому клиенту"
 						})
-				._services-bottom.title-h4 Таким образом, мы предлагаем нашим партнёрам приятное сотрудничество на взаимовыгодных условиях
+		._contaciner.container.container--text
+			._about Таким образом, мы предлагаем нашим партнёрам приятное сотрудничество на взаимовыгодных условиях
+		._carts
+			._container.container
+				._row
+					+documentBlockBtn({
+						img: "images/flag-img.png",
+						btn: "Библиотека BIM-моделей"
+					})._cart
+					+documentBlockBtn({
+						img: "images/table-img.png",
+						btn: "Каталог внешней рекламы"
+					})._cart
+		+infoSectionSupport({
+			img: 'images/contact-img.jpg'
+		})
 
 
 	//- +gridLayout()

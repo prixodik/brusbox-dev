@@ -1,22 +1,40 @@
 .document-block {
-	position: relative;
-	@include flex(0, center, flex-start, 0, 0);
-	max-width: 456px;
-
+	align-items: center;
 	@include media($md) {
 		// align-items: flex-start;
-		max-width: 346px;
+		.btn {
+			padding: 8px 10px;
+			min-width: 217px;
+		}
 	}
 
 	@include media($sm) {
 		align-items: center;
 		/* display: block; */
 		max-width: 688px;
+		display: block;
+
+		.btn {
+			padding: 0px 32px;
+		}
 	}
 
 	@include media($xs) {
 		align-items: center;
 		max-width: 288px;
+
+		.btn {
+			padding: 0px 17px;
+		}
+	}
+
+	&__items {
+		position: relative;
+		@include flex(0, center, flex-start, 0, 0);
+
+		@include media($sm) {
+			margin-bottom: 24px;
+		}
 	}
 
 	&__text {
@@ -42,13 +60,12 @@
 			padding: 40px 0px;
 			font: 300 13px/18.2px $baseFF;
 		}
-
 	}
 
 	picture,
 	&__img {
-		flex: 0 0 95px;
-		max-width: 95px;
+		flex: 0 0 56px;
+		max-width: 56px;
 
 		img {
 			display: block;
@@ -65,7 +82,7 @@
 		}
 
 		@include media($xs) {
-			max-width: 48px;
+			max-width: 26px;
 		}
 	}
 
@@ -81,51 +98,71 @@
 			background: #f1f1f1;
 			border-radius: 40px;
 
+			@include media($xs) {
+				padding: 8px 0px;
+				height: 32px;
+				padding-right: 0px;
+			}
+
 			.icon {
 				height: 24px;
+
+				@include media($xs) {
+					height: 17px;
+				}
+			}
+		}
+
+		picture,
+		&__icon {
+			min-width: 95px;
+			min-height: 95px;
+			max-width: 95px;
+			max-height: 95px;
+
+			@include media($md) {
+				min-width: 56px;
+				min-height: 56px;
+				max-width: 56px;
+				max-height: 56px;
+			}
+
+			@include media($sm) {
+				min-width: 80px;
+				min-height: 80px;
+				max-width: 80px;
+				max-height: 80px;
+			}
+
+			@include media($xs) {
+				min-width: 44px;
+				min-height: 44px;
+				max-width: 44px;
+				max-height: 44px;
+			}
+		}
+		&__button {
+			.btn {
+				height: auto;
+			}
+		}
+
+		&__button,
+		&__text {
+			margin-left: 20px;
+
+			@include media($xs) {
+				margin-left: 17px;
 			}
 		}
 
 		&__text {
-			margin-left: 20px;
 			align-items: center;
 			max-width: 267px;
 			@include flex(center, 0, 0, 0, 0);
 
 			@include media($sm) {
 				max-width: 600px;
-			}
-			@include media($xs) {
-				padding: 0;
-			}
-		}
-	}
-
-	&--btn-list & {
-
-		&__text,
-		&__button {
-			margin-left: 20px;
-		}
-
-		&__row {
-			@include flex(center, center, 0, nowrap, 0);
-
-			@include media($md) {
-				margin-right: 0px;
-
-				img {
-					max-width: 33px;
-				}
-			}
-
-			@include media($sm) {
-				img {
-					max-width: 48px;
-				}
-
-				justify-content: start;
-				margin-bottom: 24px;
 
 				br {
 					display: none;
@@ -133,15 +170,42 @@
 			}
 
 			@include media($xs) {
-				img {
-					max-width: 26px;
-				}
+				padding: 0;
 			}
 		}
+	}
 
+	&--mode {
+		@include flex(0,center,center,0);
 
+		.btn {
+			width: 100%;
+		}
+	}
 
+	&--market {
+		@include flex(0,center,center,0);
 
+		@include media($xs) {
+			justify-content: space-between;
+		}
+	}
+
+	&--gray {
+		background-color: $gray-bridge;
+		padding: 112px 0;
+
+		@include media($md) {
+			padding: 60px 0;
+		}
+
+		@include media($sm) {
+			padding: 70px 0;
+		}
+
+		@include media($xs) {
+			padding: 60px 0;
+		}
 	}
 
 	&--max-width {
@@ -157,6 +221,14 @@
 
 		&__text {
 			margin-left: 16px;
+		}
+	}
+
+	&--right-link-sm {
+		@include media($sm) {
+			max-width: 100%;
+			justify-content: space-between;
+			width: 100%;
 		}
 	}
 }

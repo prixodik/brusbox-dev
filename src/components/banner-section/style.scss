@@ -94,7 +94,7 @@
 			@include media($xs) {
 				font: 400 13px/14px $baseFF;
 			}
-		}
+		}h
 
 		&__img {
 			img {
@@ -109,21 +109,21 @@
 		img {
 			object-fit: cover;
 			display: block;
-			height: 524px;
+			// height: 524px;
 			width: 100%;
 
 			@include media($md) {
-				max-height: 328px;
+				// max-height: 328px;
 				// height: auto;
 			}
 
 			@include media($sm) {
-				max-height: 576px;
+				// max-height: 576px;
 				// height: auto;
 			}
 
 			@include media($xs) {
-				max-height: 320px;
+				// max-height: 320px;
 				// height: auto;
 			}
 		}
@@ -177,6 +177,9 @@
 	}
 	&--big-banner{
 		padding: 0px 0px;
+		img{
+			width: 100%;
+		}
 	}
 	&--padding-mode{
 		padding: 120px 0px 112px;

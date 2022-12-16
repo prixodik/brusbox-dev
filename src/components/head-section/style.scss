@@ -92,7 +92,6 @@
 			max-width: 100%;
 			overflow-x: auto;
 		}
-
 	}
 
 	&__title {
@@ -117,6 +116,14 @@
 		margin-top: 16px;
 		margin-bottom: 0;
 
+		@include media($md) {
+			margin-top: 8px;
+		}
+
+		@include media($sm) {
+			display: none;
+		}
+
 		@include media($sm) {
 			text-align: left;
 		}
@@ -133,6 +140,10 @@
 		&__slide {
 			min-height: 733px;
 			position: relative;
+
+			@include media($xs) {
+				min-height: 375px;
+			}
 
 			&::after {
 				position: absolute;
@@ -153,16 +164,22 @@
 
 		&__info {
 			align-items: flex-start;
-			/* position: absolute;
-			bottom: 0;
-			height: auto;
-			left: 20px;
-			right: 20px; */
 			height: 100%;
+			
 		}
 
 		&__title {
 			text-align: left;
+		}
+
+		&__subtitle {
+			@include media($sm) {
+				display: block;
+			}
+
+			@include media($xs) {
+				text-align: start;
+			}
 		}
 	}
 }

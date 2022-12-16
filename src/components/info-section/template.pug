@@ -64,6 +64,16 @@ mixin infoSectionForm(data)
 					._img.col-6.col-sm-12
 						+webp(data.img)
 
+mixin infoSectionSupport(data)
+	.info-section.--form&attributes(attributes)
+		._container.container
+			._row.row
+				._info.col-6.col-sm-12
+					+formBlockContacts()
+				if data.img
+					._img.col-6.col-sm-12
+						+webp(data.img)
+
 mixin infoSectionFormCalculator(data)
 	.info-section.--form&attributes(attributes)
 		._container.container

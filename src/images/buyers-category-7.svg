@@ -1,0 +1,8 @@
+<svg width="95" height="95" viewBox="0 0 95 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="95" height="95" rx="4" fill="white"/>
+<rect x="17" y="22" width="28" height="48" fill="#E40032"/>
+<path d="M49 22H77V70H49V22Z" fill="#E40032"/>
+<circle cx="66.5" cy="32.5" r="6.5" fill="white"/>
+<rect x="62.6484" y="19" width="2" height="78.696" transform="rotate(45 62.6484 19)" fill="white"/>
+<rect x="46.0156" y="49" width="2" height="31.1412" transform="rotate(45 46.0156 49)" fill="white"/>
+</svg>

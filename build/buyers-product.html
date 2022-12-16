@@ -34,7 +34,7 @@
                           <div class="menu-block__item"><a href="#">Архитекторам и дизайнерам</a></div>
                         </div>
                     <div class="header__contacts">
-                          <div class="icon-inline header__contacts-item header__contacts-item--location icon-inline--location"><a class="icon-inline__link" href="#"></a>
+                          <div class="icon-inline header__contacts-item header__contacts-item--location icon-inline--location"><a class="icon-inline__link js-popup-show" href="#popup-location-list"></a>
                             <div class="icon-inline__icon">
                               <svg class="icon icon_marker">
                                 <use xlink:href="images/sprite-svg.svg#marker"></use>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="icon-inline__wrap">Нижний Новгород
                             </div>
-                          </div><a class="header__link" href="#">Заказать замер</a>
+                          </div><a class="header__link js-popup-show" href="#popup-request">Заказать замер</a>
                           <div class="icon-inline header__contacts-item icon-inline--phone"><a class="icon-inline__link" href="#"></a>
                             <div class="icon-inline__icon">
                               <svg class="icon icon_phone">
@@ -295,16 +295,16 @@
                             </div>
                           </div>
                         </div>
-                  </div>
-                      <div class="icon-inline header__contacts-item header__contacts-item--location header__contacts-item--sm"><a class="icon-inline__link" href="#"></a>
-                        <div class="icon-inline__icon">
-                          <svg class="icon icon_marker">
-                            <use xlink:href="images/sprite-svg.svg#marker"></use>
-                          </svg>
-                        </div>
-                        <div class="icon-inline__wrap">Нижний Новгород
-                        </div>
-                      </div>
+                  </div><a class="header__contact-link js-popup-show" href="#popup-location-list">
+                        <div class="icon-inline header__contacts-item header__contacts-item--location header__contacts-item--sm"><a class="icon-inline__link js-popup-show" href="#popup-location-list"></a>
+                          <div class="icon-inline__icon">
+                            <svg class="icon icon_marker">
+                              <use xlink:href="images/sprite-svg.svg#marker"></use>
+                            </svg>
+                          </div>
+                          <div class="icon-inline__wrap">Нижний Новгород
+                          </div>
+                        </div></a>
                       <form class="search-block search-block--header js-search-block header__search--sm">
                         <button class="search-block__icon js-search-toggle is-disabled" type="submit">
                           <svg class="icon icon_search">
@@ -365,8 +365,8 @@
                         </svg></a></div>
                   </div>
                 </div>
-                <div class="buyers-product-section__right col-7">
-                  <div class="buyers-product-section__text"> <span>Профиль BRUSBOX AERO стал главной новинкой 2018 года. <br></span><span>Основанием для создания которой явилось ужесточение требований ГОСТ 30673-2013 к толщине наружных стенок.<br></span><span>Относится к классу «А», поскольку имеет толщину лицевой стенки – 3,0 мм.<br></span><span>Классический дизайн, простота и технологичность – гарант успеха этой системы.<br></span><span>Выпускается на карамельном, сером и темно-коричневом основании, что позволяет удовлетворить требования к эстетике окна даже самого притязательного потребителя.</span><span> Морозостойкое исполнение гарантирует безоговорочную  эксплуатацию даже в регионах <br> с экстремальными климатическими условиями.</span></div>
+                <div class="buyers-product-section__right col-7 col-sm-12">
+                  <div class="buyers-product-section__text"> <span>Профиль BRUSBOX AERO стал главной новинкой 2018 года. <br></span><span>Основанием для создания которой явилось ужесточение требований ГОСТ 30673-2013 к толщине наружных стенок.<br></span><span>Относится к классу «А», поскольку имеет толщину лицевой стенки – 3,0 мм.<br></span><span>Классический дизайн, простота и технологичность – гарант успеха этой системы.<br></span><span>Выпускается на карамельном, сером и темно-коричневом основании, что позволяет удовлетворить требования к эстетике окна даже самого притязательного потребителя.<br></span><span> Морозостойкое исполнение гарантирует безоговорочную  эксплуатацию даже в регионах <br> с экстремальными климатическими условиями.</span></div>
                       <div class="param-block param-block--buyers param-block--padding">
                         <h4 class="param-block__title">Технические характеристики:
                         </h4>
@@ -461,20 +461,22 @@
                               </div>
                         </div>
                       </div>
-                  <div class="btn btn--icon btn--gray">
-                    <svg class="icon icon_download">
-                      <use xlink:href="images/sprite-svg.svg#download"></use>
-                    </svg><span>Скачать</span>
-                  </div>
-                  <div class="btn btn--icon btn--gray">
-                    <svg class="icon icon_print">
-                      <use xlink:href="images/sprite-svg.svg#print"></use>
-                    </svg><span>Распечатать</span>
-                  </div>
-                  <div class="btn btn--icon btn--gray">
-                    <svg class="icon icon_mail-red">
-                      <use xlink:href="images/sprite-svg.svg#mail-red"></use>
-                    </svg><span>Отправить на e-mail</span>
+                  <div class="btn-list">
+                    <div class="btn btn--icon btn--gray">
+                      <svg class="icon icon_download">
+                        <use xlink:href="images/sprite-svg.svg#download"></use>
+                      </svg><span>Скачать</span>
+                    </div>
+                    <div class="btn btn--icon btn--gray">
+                      <svg class="icon icon_print">
+                        <use xlink:href="images/sprite-svg.svg#print"></use>
+                      </svg><span>Распечатать</span>
+                    </div>
+                    <div class="btn btn--icon btn--gray">
+                      <svg class="icon icon_mail-red">
+                        <use xlink:href="images/sprite-svg.svg#mail-red"></use>
+                      </svg><span>Отправить на e-mail</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -535,7 +537,7 @@
             </div>
         <h2 class="buyers-product-section__title--gray">Преимущества BRUSBOX ACLASS</h2>
       </div>
-          <div class="info-section info-section--title-size-md info-section--long-text info-section--padding-bt-big">
+          <div class="info-section info-section--title-size-md info-section--long-text">
             <div class="info-section__container container">
               <div class="info-section__row row">
                 <div class="info-section__info col-6 col-sm-12">
@@ -828,12 +830,14 @@
         </div>
       </div>
           <div class="text-section text-section--gray text-section--long-2">
-            <div class="text-section__container container container--text"><span>Современные окна BRUSBOX Aero — энергоэффективные изделия. Они подходят как для нового строительства, так и для проектов по замене евроокон. Благодаря разнообразию стилей и опций на выбор, модель поможет создать идеальный облик вашего дома, офиса или производственного помещения. <br><span>Модель «БРУСБОКС» Аэро обладает высоким качеством, доступными ценам и улучшенным техническим показателям. Модификация лидирует в сегменте ПВХ окон. Линейку можно назвать универсальной. </span><span><br> Модель обеспечивает:</span></span>
-              <ul>
-                <li>надежную защиту от шума;</li>
-                <li>достаточный уровень теплоизоляции;</li>
-                <li>отличную светопропускную способность.</li>
-              </ul><span>Профиль устойчив к загрязнениям благодаря высоким пылеотталкивающим характеристикам. ПВХ материал невосприимчив к морозу, перепадам температур, солнечным лучам. Даже при суровых условиях эксплуатации конструкции не деформируются, не теряют привлекательность. <br></span><span>Благодаря трем высокотехнологичным камерам, изделия надежно защищены не только от холода, но и влажности. Небольшой вес окон позволяет проводить быстрый монтаж без ограничений.</span>
+            <div class="text-section__container container container--text">
+              <div class="text-section__info"><span>Современные окна BRUSBOX Aero — энергоэффективные изделия. Они подходят как для нового строительства, так и для проектов по замене евроокон. Благодаря разнообразию стилей и опций на выбор, модель поможет создать идеальный облик вашего дома, офиса или производственного помещения. <br><span>Модель «БРУСБОКС» Аэро обладает высоким качеством, доступными ценам и улучшенным техническим показателям. Модификация лидирует в сегменте ПВХ окон. Линейку можно назвать универсальной. </span><span><br> Модель обеспечивает:</span></span>
+                <ul>
+                  <li>надежную защиту от шума;</li>
+                  <li>достаточный уровень теплоизоляции;</li>
+                  <li>отличную светопропускную способность.</li>
+                </ul><span>Профиль устойчив к загрязнениям благодаря высоким пылеотталкивающим характеристикам. ПВХ материал невосприимчив к морозу, перепадам температур, солнечным лучам. Даже при суровых условиях эксплуатации конструкции не деформируются, не теряют привлекательность. <br></span><span>Благодаря трем высокотехнологичным камерам, изделия надежно защищены не только от холода, но и влажности. Небольшой вес окон позволяет проводить быстрый монтаж без ограничений.</span>
+              </div>
             </div>
           </div>
           <div class="info-section info-section--long-text info-section--ul info-section--title-mb">
@@ -1153,7 +1157,6 @@
             </div>
           </div>
         </footer>
-    <!--все что ниже можно удалить по оконячанию разработки-->
             <div class="popup popup--location-list" id="popup-location-list">
               <div class="popup__overflow js-popup-hide"></div>
               <div class="popup__wrapper"><a class="popup__close js-popup-hide">
@@ -1184,6 +1187,109 @@
                     </div>
                     <div class="popup__items">
                       <h4 class="popup__letter">А</h4><a class="popup__item" href="#">Абакан</a><a class="popup__item" href="#">Азов</a><a class="popup__item" href="#">Александров</a><a class="popup__item" href="#">Алексин</a><a class="popup__item" href="#">Альметьевск</a><a class="popup__item" href="#">Анапа</a><a class="popup__item" href="#">Ангарск</a><a class="popup__item" href="#">Анжеро-Судженск</a><a class="popup__item" href="#">Алматы</a><a class="popup__item" href="#">Альметьевск</a><a class="popup__item" href="#">Альметьевск</a><a class="popup__item" href="#">Альметьевск</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup popup--model" id="popup-model">
+              <div class="popup__overflow js-popup-hide"></div>
+              <div class="popup__wrapper"><a class="popup__close js-popup-hide">
+                  <svg class="icon icon_close">
+                    <use xlink:href="images/sprite-svg.svg#close"></use>
+                  </svg></a>
+                <div class="popup__item">
+                  <div class="popup__text">Профиль BRUSBOX 60-4</div>
+                  <div class="popup__icon">
+                    <svg class="icon icon_download">
+                      <use xlink:href="images/sprite-svg.svg#download"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="popup__item">
+                  <div class="popup__text">Профиль BRUSBOX 70-6</div>
+                  <div class="popup__icon">
+                    <svg class="icon icon_download">
+                      <use xlink:href="images/sprite-svg.svg#download"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="popup__item">
+                  <div class="popup__text">Профиль BRUSBOX AERO</div>
+                  <div class="popup__icon">
+                    <svg class="icon icon_download">
+                      <use xlink:href="images/sprite-svg.svg#download"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="popup__button"><a class="btn" href="#">Скачать все</a></div>
+              </div>
+            </div>
+            <div class="popup popup--login" id="popup-login">
+              <div class="popup__overflow js-popup-hide"></div>
+              <div class="popup__wrapper"><a class="popup__close js-popup-hide">
+                  <svg class="icon icon_close">
+                    <use xlink:href="images/sprite-svg.svg#close"></use>
+                  </svg></a>
+                    <div class="form-block form-block--login">
+                      <h4 class="form-block__title">Для просмотра материалов<br> введите логин и пароль</h4>
+                      <form action="">
+                        <div class="form-block__row">
+                          <div class="form-block__inputs">
+                            <div class="form-block__input">
+                              <input class="form-control js-required" type="text" placeholder="Логин*" required>
+                            </div>
+                            <div class="form-block__input">
+                              <input class="form-control js-required" type="password" placeholder="Пароль*" required>
+                            </div>
+                          </div>
+                          <div class="form-block__buttons">
+                            <button class="btn btn--red js-submit" type="submit">Войти</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+              </div>
+            </div>
+            <div class="popup popup--request" id="popup-request">
+              <div class="popup__overflow js-popup-hide"></div>
+              <div class="popup__wrapper"><a class="popup__close js-popup-hide">
+                  <svg class="icon icon_close">
+                    <use xlink:href="images/sprite-svg.svg#close"></use>
+                  </svg></a>
+                <div class="popup__row">
+                  <div class="popup__img"><img src="./images/popup-request-img.jpg" alt=""></div>
+                  <div class="popup__form">
+                        <div class="form-block form-block--subscribe form-block--request js-form">
+                          <h4 class="form-block__title">Оставьте заявку!</h4>
+                          <form class="form-block__form js-request-form" action="">
+                            <div class="form-block__row">
+                              <div class="form-block__inputs">
+                                <div class="form-block__input">
+                                  <input class="form-control js-required" type="text" placeholder="Ваше имя*" required>
+                                </div>
+                                <div class="form-block__input">
+                                  <input class="form-control js-required" type="text" placeholder="Телeфон*" required>
+                                </div>
+                                <div class="form-block__input">
+                                  <input class="form-control js-required" type="email" placeholder="Email*" required>
+                                </div>
+                              </div>
+                              <div class="form-block__check">
+                                <div class="checkbox">
+                                  <input class="js-required" id="df1" type="checkbox" name="" value="1" required>
+                                  <label for="df1">Ознакомлен с <span>политикой конфиденциальности</span></label>
+                                </div>
+                              </div>
+                              <div class="form-block__buttons">
+                                <button class="btn btn--red js-submit js-request-btn" type="submit">Отправить</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                    <div class="popup__send js-send-request">
+                      <h4 class="popup__send-title">Заявка отправлена!</h4>
+                      <div class="popup__send-subtitle">Наш менеджер свяжется с вами<br> в ближайшее время</div>
                     </div>
                   </div>
                 </div>

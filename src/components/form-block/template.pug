@@ -36,6 +36,19 @@ mixin formBlockContactsCalculator()
 				._buttons
 					button.btn.-red.js-submit(type="submit") Отправить
 
+mixin formBlockLogin()
+	.form-block.--login&attributes(attributes)
+		h4._title Для просмотра материалов<br> введите логин и пароль
+		form(action="")
+			.form-block__row
+				.form-block__inputs
+					.form-block__input
+						input.form-control.js-required(type="text" placeholder="Логин*" required)
+					.form-block__input
+						input.form-control.js-required(type="password" placeholder="Пароль*" required)
+				.form-block__buttons
+					button.btn.-red.js-submit(type="submit") Войти
+
 mixin formBlockSunscribe()
 	.form-block.--subscribe&attributes(attributes)
 		h4._title Оформите подписку на новости
@@ -53,6 +66,25 @@ mixin formBlockSunscribe()
 						label(for="a1") Ознакомлен с <span>политикой конфиденциальности</span>
 				._buttons
 					button.btn.-red.js-submit(type="submit") Отправить
+
+mixin formBlockRequest()
+	.form-block.--subscribe.--request.js-form&attributes(attributes)
+		h4._title Оставьте заявку!
+		form(action="")._form.js-request-form
+			._row
+				._inputs
+					._input
+						input.form-control.js-required(type="text" placeholder="Ваше имя*" required)
+					._input
+						input.form-control.js-required(type="text" placeholder="Телeфон*" required)
+					._input
+						input.form-control.js-required(type="email" placeholder="Email*" required)
+				._check
+					.checkbox
+						input.js-required#df1(type="checkbox" name="" value="1" required)
+						label(for="df1") Ознакомлен с <span>политикой конфиденциальности</span>
+				._buttons
+					button.btn.-red.js-submit.js-request-btn(type="submit") Отправить
 
 mixin formBlockContactsOrder2()
 	.form-block.--order&attributes(attributes)

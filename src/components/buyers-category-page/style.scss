@@ -1,0 +1,16 @@
+.buyers-category-page {
+&__services{
+	padding: 86px 0px;
+
+	@include media($md) {
+		padding: 64px 0px;
+	}
+	@include media($sm) {
+		padding: 56px 0px;
+	}
+	@include media($xs) {
+		padding-top: 40px;
+		padding-bottom: 16px;
+	}
+}
+}

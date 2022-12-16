@@ -74,7 +74,7 @@
 	&__title {
 		text-align: center;
 		margin: 0 0 24px;
-		font: bold 24px/1.2 $baseFF;
+		// font: bold 24px/1.2 $baseFF;
 		color: $black;
 	}
 	&__desc {
@@ -128,7 +128,7 @@
 
 	@include media($xs) {
 		&__wrapper {
-			padding: 48px 24px;
+			padding: 30px 25px;
 		}
 		&__close {
 			width: 12px;
@@ -231,6 +231,55 @@
 		}
 	}
 
+	&--model & {
+		&__wrapper {
+			max-width: 460px;
+
+			@include media($xs) {
+				max-width: 350px;
+
+				padding-top: 30px;
+				padding-bottom: 25px;
+			}
+		}
+
+		&__item {
+			@include flex(space-between,center,center,0);
+			margin-bottom: 8px;
+		}
+
+		&__icon {
+			background-color: $gray-bridge;
+			border-radius: 50%;
+			@include flex(center,center,center);
+			height: 40px;
+			width: 40px;
+
+			@include media($xs) {
+				height: 30px;
+				width: 30px;
+			}
+
+			svg {
+				width: 17px;
+				height: 17px;
+
+				@include media($xs) {
+					height: 13px;
+					width: 13px;
+				}
+			}
+		}
+
+		&__button {
+			margin-top: 40px;
+
+			@include media($xs) {
+				margin-top: 25px;
+			}
+		}
+	}
+
 	&--location & {
 		&__title {
 			margin-bottom: 16px;
@@ -256,7 +305,108 @@
 		}
 	}
 
-	/********* MODS *********************/
+	&--login & {
+
+		&__wrapper {
+			max-width: 870px;
+			width: 100%;
+			padding: 112px;
+
+			@include media($sm) {
+				padding: 45px;
+			}
+
+			@include media($xs) {
+				padding: 30px 20px;
+			}
+		}
+	}
+
+	&--request & {
+		&__row {
+			@include flex(center,center,center,0);
+
+			@include media($sm) {
+				flex-direction: column;
+			}
+		}
+
+		&__send {
+			display: none;
+
+			&.is-active {
+				display: block;
+			}
+
+			&-title {
+				margin-bottom: 16px;
+			}
+		}
+ 
+		&__wrapper {
+			padding: 0;
+			max-width: 1247px;
+			width: 100%;
+		}
+
+		&__img {
+			max-width: 50%;
+			width: 100%;
+			min-height: 100%;
+			img {
+				object-fit: cover;
+				width: 100%;
+				display: block;
+				height: 100%;
+
+				@include media($sm) {
+					max-height: 300px;
+					min-height: auto;
+					border-radius: 8px 8px 0 0;
+				}
+
+				@include media($xs) {
+					max-height: 200px;
+				}
+			}
+
+			@include media($sm) {
+				max-width: 100%;
+				max-height: 300px;
+				min-height: auto;
+			}
+
+			@include media($xs) {
+				max-height: 200px;
+			}
+		}
+
+		&__form {
+			padding: 112px 85px 112px 85px;
+			max-width: 50%;
+			width: 100%;
+
+			@include media($md) {
+				padding: 20px 50px 20px 50px;
+			}
+
+			@include media($sm) {
+				max-width: 100%;
+			}
+
+			@include media($xs) {
+				padding: 20px 30px 20px 30px;
+			}
+		}
+
+		&__buttons {
+			@include media($sm) {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	/***-----------------------------------****** Можно удалить по окончанию проекта **************--------------------------*******/
 
 	&--add-product & {
 		&__wrapper {
@@ -342,52 +492,39 @@
 		}
 	}
 
-	&--login & {
-		@include media($xs) {
-			&__buttons {
-				margin: 40px -4px 0;
-				.btn {
-					width: auto;
-					flex: 1 1 auto;
-					margin: 0 4px;
-				}
-			}
-		}
-	}
+	// &--call-back & {
+	// 	&__wrapper {
+	// 		padding: 48px;
+	// 		max-width: 640px;
+	// 	}
 
-	&--call-back & {
-		&__wrapper {
-			padding: 48px;
-			max-width: 640px;
-		}
+	// 	&__title {
+	// 		margin-bottom: 20px;
+	// 	}
 
-		&__title {
-			margin-bottom: 20px;
-		}
+	// 	&__form {
+	// 		max-width: 100%;
+	// 	}
 
-		&__form {
-			max-width: 100%;
-		}
+	// 	@include media($xs) {
+	// 		&__wrapper {
+	// 			padding: 20px 28px 28px;
+	// 		}
 
-		@include media($xs) {
-			&__wrapper {
-				padding: 20px 28px 28px;
-			}
+	// 		&__title {
+	// 			margin-bottom: 16px;
+	// 			font-size: 18px;
+	// 		}
+	// 		&__input {
+	// 			margin-bottom: 16px;
+	// 		}
 
-			&__title {
-				margin-bottom: 16px;
-				font-size: 18px;
-			}
-			&__input {
-				margin-bottom: 16px;
-			}
-
-			&__buttons {
-				margin-top: 16px;
-				.btn {
-					width: 100%;
-				}
-			}
-		}
-	}
+	// 		&__buttons {
+	// 			margin-top: 16px;
+	// 			.btn {
+	// 				width: 100%;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
