@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/template.css">
   </head>
   <body>
-        <header class="header">
+        <header class="header header--mode2 header--mode3">
           <div class="header__body">
             <div class="header__container container">
               <div class="header__wrapper">
@@ -42,16 +42,7 @@
                             </div>
                             <div class="icon-inline__wrap">Нижний Новгород
                             </div>
-                          </div>
-                          <div class="icon-inline header__contacts-item icon-inline--login"><a class="icon-inline__link" href="#"></a>
-                            <div class="icon-inline__icon">
-                              <svg class="icon icon_user">
-                                <use xlink:href="images/sprite-svg.svg#user"></use>
-                              </svg>
-                            </div>
-                            <div class="icon-inline__wrap">Личный кабинет
-                            </div>
-                          </div>
+                          </div><a class="header__link js-popup-show" href="#popup-request">Заказать замер</a>
                           <div class="icon-inline header__contacts-item icon-inline--phone"><a class="icon-inline__link" href="#"></a>
                             <div class="icon-inline__icon">
                               <svg class="icon icon_phone">
@@ -70,7 +61,7 @@
                                 <svg class="icon icon_whatsapp">
                                   <use xlink:href="images/sprite-svg.svg#whatsapp"></use>
                                 </svg></a></div>
-                          </div><a class="header__login" href="#">Личный кабинет</a>
+                          </div>
                           <form class="search-block search-block--header js-search-block header__search">
                             <button class="search-block__icon js-search-toggle is-disabled" type="submit">
                               <svg class="icon icon_search">
@@ -304,16 +295,16 @@
                             </div>
                           </div>
                         </div>
-                  </div>
-                      <div class="icon-inline header__contacts-item header__contacts-item--location header__contacts-item--sm"><a class="icon-inline__link js-popup-show" href="#popup-location-list"></a>
-                        <div class="icon-inline__icon">
-                          <svg class="icon icon_marker">
-                            <use xlink:href="images/sprite-svg.svg#marker"></use>
-                          </svg>
-                        </div>
-                        <div class="icon-inline__wrap">Нижний Новгород
-                        </div>
-                      </div>
+                  </div><a class="header__contact-link js-popup-show" href="#popup-location-list">
+                        <div class="icon-inline header__contacts-item header__contacts-item--location header__contacts-item--sm"><a class="icon-inline__link js-popup-show" href="#popup-location-list"></a>
+                          <div class="icon-inline__icon">
+                            <svg class="icon icon_marker">
+                              <use xlink:href="images/sprite-svg.svg#marker"></use>
+                            </svg>
+                          </div>
+                          <div class="icon-inline__wrap">Нижний Новгород
+                          </div>
+                        </div></a>
                       <form class="search-block search-block--header js-search-block header__search--sm">
                         <button class="search-block__icon js-search-toggle is-disabled" type="submit">
                           <svg class="icon icon_search">

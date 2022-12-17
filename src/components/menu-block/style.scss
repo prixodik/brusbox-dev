@@ -86,11 +86,12 @@
 
 	&__mobile-menu {
 		display: none;
+		padding-top: 10px;
 
 		&.js-mobile-menu {
 			background-color: #fff;
 			position: absolute;
-			top: 34px;
+			top: 30px;
 			z-index: 5;
 
 			@include media($sm) {

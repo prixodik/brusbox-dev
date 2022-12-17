@@ -22,10 +22,10 @@ mixin header(data)
 									text: 'Нижний Новгород'
 								})._contacts-item.header__contacts-item--location.icon-inline--location
 
-								+iconInline({
-									icon: 'user',
-									text: 'Личный кабинет'
-								})._contacts-item.icon-inline--login
+								//- +iconInline({
+								//- 	icon: 'user',
+								//- 	text: 'Личный кабинет'
+								//- })._contacts-item.icon-inline--login
 
 								+iconInline({
 									icon: 'phone',
@@ -56,6 +56,52 @@ mixin header(data)
 
 mixin header2(data)
 	header.header.--mode2&attributes(attributes)
+		._body
+			._container.container
+				._wrapper
+					._top
+						a._logo(href="/")
+							img(src='/images/logo.svg' alt='brusbox')
+
+						._items
+							+menuBlockNav()._nav
+
+							._contacts
+								+iconInlineLocation({
+									icon: 'marker',
+									text: 'Нижний Новгород'
+								})._contacts-item.header__contacts-item--location.icon-inline--location
+
+								a(href="#popup-request")._link.js-popup-show Заказать замер
+
+								+iconInline({
+									icon: 'phone',
+									text: '8 (800) 777-55-33'
+								})._contacts-item.icon-inline--phone
+
+								+socListHeader()._soc
+
+								+searchBlockHeader({
+									placeholder: "поиск по сайту"
+								})._search
+
+							+burger()._burger
+
+					._bottom
+						._menu
+							+menuBlock()
+						a(href="#popup-location-list")._contact-link.js-popup-show
+							+iconInlineLocation({
+								icon: 'marker',
+								text: 'Нижний Новгород'
+							})._contacts-item.header__contacts-item--location.header__contacts-item--sm
+						
+						+searchBlockHeader({
+							placeholder: "поиск по сайту"
+						})._search--sm
+
+mixin header3(data)
+	header.header.--mode2.--mode3&attributes(attributes)
 		._body
 			._container.container
 				._wrapper

@@ -101,10 +101,14 @@
 	}
 
 	&__soc {
-		//margin-left: 16px;
+		margin-left: 6px;
 
 		@include media($md) {
 			margin-left: 0;
+		}
+
+		@include media($sm) {
+			order: 2;
 		}
 
 		&.soc-list {
@@ -151,23 +155,15 @@
 		}
 
 		&-item {
-			margin-right: 40px;
+			margin-right: 10px;
 			white-space: nowrap;
 
 			&:last-child {
 				margin-right: 0;
 			}
 
-			@include media($lg) {
-				margin-right: 24px;
-			}
-
-			@include media($md) {
-				margin-right: 16px;
-
-				&:last-child {
-					margin-right: 0;
-				}
+			@include media($sm) {
+				order: 3;
 			}
 		}
 
@@ -187,6 +183,10 @@
 					display: block;
 				}
 			}
+
+			@include media($sm) {
+				order: 0;
+			}
 		}
 
 		&-item--sm {
@@ -201,20 +201,31 @@
 
 	&__login {
 		padding: 0 18px;
-		height: 36px;
+		height: 40px;
 		background-color: $gray-bridge;
 		color: $btn-red;
 		border-radius: 59px;
 		font: 400 12px/1 $baseFF;
-		display: none;
+		// display: none;
+		@include flex(center, center, center);
+		text-align: center;
+		min-width: 140px;
 
 		@include media($md) {
 			@include flex(center, center, center);
 			text-align: center;
+			padding: 0 10px;
+			min-width: 112px;
+		}
+
+		@include media($sm) {
+			order: 1;
+			margin-right: 10px;
 		}
 
 		@include media($xs) {
-			display: none;
+			margin-right: 0;
+			height: 30px;
 		}
 	}
 
@@ -235,7 +246,7 @@
 	}
 
 	&__search {
-		flex: 1 0 18px;
+		flex: 1 1 18px;
 		margin-left: 24px;
 		width: 18px;
 		height: 18px;
@@ -257,6 +268,12 @@
 
 			@include media($sm) {
 				display: block;
+			}
+
+			@include media($xs) {
+				.search-block__icon {
+					padding: 0;
+				}
 			}
 		}
 	}
@@ -281,6 +298,7 @@
 
 		@include media($sm) {
 			padding-bottom: 10px;
+
 		}
 
 		@include media($xs) {
@@ -291,7 +309,7 @@
 	&--mode2 & {
 		&__link {
 			padding: 0 15px;
-			height: 36px;
+			height: 40px;
 			background-color: $gray-bridge;
 			color: $btn-red;
 			border-radius: 59px;
@@ -316,6 +334,7 @@
 
 			@include media($xs) {
 				margin-right: 10px;
+				height: 30px;
 			}
 		}
 
@@ -325,6 +344,7 @@
 
 			@include media($sm) {
 				margin-right: 0;
+				order: 3;
 			}
 		}
 
@@ -341,6 +361,31 @@
 
 			@include media($sm) {
 				justify-content: flex-end;
+			}
+		}
+	}
+
+	&--mode3 & {
+		&__search {
+			margin-left: 10px;
+			flex: 1 1 16px;
+		}
+
+		&__bottom {
+			@include media($sm) {
+				margin-bottom: 0;
+			}
+
+			@include media($xs) {
+				margin-bottom: 15px;
+			}
+		}
+
+		&__link {
+			display: none;
+
+			@include media($xs) {
+				display: flex;
 			}
 		}
 	}

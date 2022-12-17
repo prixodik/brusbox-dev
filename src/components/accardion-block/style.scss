@@ -122,6 +122,10 @@
 
 		&__arrow {
 			margin-left: 16px;
+
+			@include media($xs) {
+				margin-right: 0;
+			}
 		}
 
 		&__links {
