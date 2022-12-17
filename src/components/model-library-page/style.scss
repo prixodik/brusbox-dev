@@ -69,7 +69,10 @@
 			@include media ($sm){
 				display: flex;
 				order: 1;
-				
+			}
+
+			@include media ($xs){
+				flex-direction: column;
 			}
 
 

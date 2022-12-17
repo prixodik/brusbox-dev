@@ -15,6 +15,14 @@
 		border-radius: 40px;
 	}
 
+	&__img {
+		@include media($xs) {
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+
 	.icon {
 		height: 24px;
 	}
