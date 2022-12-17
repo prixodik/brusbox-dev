@@ -224,6 +224,9 @@
 		&__actions {
 			padding: 112px 0 0;
 
+			@include media($lg) {
+				margin: 0 -15px;
+			}
 			@include media($md) {
 				padding: 64px 0 0;
 			}
@@ -231,6 +234,10 @@
 
 		&__action {
 			margin-bottom: 76px;
+
+			@include media($lg) {
+				padding: 0 15px;
+			}
 			@include media($sm) {
 				margin-bottom: 40px;
 			}
@@ -415,6 +422,7 @@
 
 	}
 
+	&--article {overflow: hidden;}
 	&--article & {
 		&__head {
 			margin-bottom: 0;
