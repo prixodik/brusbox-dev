@@ -14,7 +14,7 @@
 	}
 
 	&__row {
-		@include flex(0);
+		@include flex(space-between);
 		flex-wrap: nowrap;
 
 		@include media($sm) {
@@ -80,7 +80,7 @@
 
 		@include media($lg) {
 			max-width: 600px;
-			padding-left: 0;
+			padding-left: 15px;
 		}
 		@include media($md) {
 			max-width: 444px;

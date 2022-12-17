@@ -95,7 +95,7 @@
 	&__menu {
 		&-item {
 			margin-bottom: 8px;
-			font: 300 13px/1 $baseFF;
+			font: 300 14px/1 $baseFF;
 
 			@include media($md) {
 				font: 300 12px/1 $baseFF;
@@ -196,7 +196,7 @@
 	}
 
 	&__copyright {
-		font: $fs-p6-light;
+		font: $fs-p5;
 
 		a {
 			text-decoration: none;

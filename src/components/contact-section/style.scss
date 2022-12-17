@@ -28,11 +28,19 @@
 	}
 
 	&__right {
+		picture{
+			margin-right: calc(-50vw + 100%);
+			display: block;
+
+			@include media($sm){ margin-right: 0;}
+		}
 		img {
+			width: 100%;
 			display: block;
 			min-height: 823px;
 			max-height: 823px;
 			object-fit: cover;
+			
 
 			@include media($md) {
 				min-height: 665px;
