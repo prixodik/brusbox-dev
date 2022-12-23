@@ -104,6 +104,13 @@
 	&--contacts & {
 		&__map {
 			padding: 112px 0 60px;
+
+			@include media($sm){
+				padding: 60px 0;
+			}
+			@include media($xs){
+				padding: 40px 0;
+			}
 		}
 	}
 

@@ -9,6 +9,7 @@
 	&__img {
 		margin-right: 60px;
 		max-width: 250px;
+		flex: 0 1 auto;
 		border-radius: 50%;
 		overflow: hidden;
 		img {
@@ -16,8 +17,13 @@
 			width: 100%;
 		}
 
-		@include media($md) {
+		@include media($lg) {
+			max-width: 230px;
 			margin-right: 40px;
+		}
+		@include media($md) {
+			margin-right: 30px;
+			max-width: 203px;
 		}
 
 		@include media($sm) {

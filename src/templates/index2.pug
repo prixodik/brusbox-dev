@@ -1,0 +1,34 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'index.html';
+	- var pageTitle = 'Структура сайта';
+	- var classBody = 'homepage';
+	//- var headerBg = 'images/main-banner.jpg';
+block styles
+	
+block content
+	.main-section
+		.container
+			h1 Cтраницы проекта
+			
+			+listLink({
+				tagName: 'ol',
+					items: [
+						{ttl: 'Дилерам: цветовые решения', url: 'color-solution.html', target: '_blank'},
+						{ttl: 'Покупателям: Выбор цвета', url: 'select-color.html', target: '_blank'},
+						{ttl: 'Поддержка дилеров', url: 'dealer-support.html', target: '_blank'},
+						{ttl: 'История', url: 'history.html', target: '_blank'},
+						{ttl: 'Акции ', url: 'action.html', target: '_blank'},
+						{ttl: 'Новости ', url: 'news.html', target: '_blank'},
+						{ttl: 'Новость ', url: 'one-news.html', target: '_blank'},
+						{ttl: 'Статья ', url: 'article.html', target: '_blank'},
+						{ttl: 'Статьи ', url: 'articles.html', target: '_blank'},
+						{ttl: 'Дилеры списком ', url: 'dilers-list.html', target: '_blank'},
+						{ttl: 'Дилеры на карте ', url: 'dilers-map.html', target: '_blank'},
+						{ttl: 'Дилерам: категория ', url: 'category.html', target: '_blank'},
+						{ttl: 'Дилерам: контакты ', url: 'contacts.html', target: '_blank'}
+					]
+				})
+
+
+block scripts
