@@ -118,13 +118,15 @@
 			}
 
 			@include media($sm) {
-				// max-height: 576px;
+				max-height: 576px;
+				object-fit: contain;
 				// height: auto;
 			}
 
 			@include media($xs) {
 				// max-height: 320px;
-				// height: auto;
+				height: 258px;
+				object-fit: cover;
 			}
 		}
 	}

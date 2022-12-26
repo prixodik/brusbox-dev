@@ -164,6 +164,13 @@
 			&-title {
 				font-weight: 300;
 				margin-bottom: 4px;
+
+				transition: all 0.3s;
+
+				&:hover {
+					transition: all 0.3s;
+					color: $btn-red;
+				}
 			}
 		}
 
@@ -173,6 +180,15 @@
 
 			&:last-child {
 				margin-bottom: 0;
+			}
+
+			a {
+				transition: all 0.3s;
+
+				&:hover {
+					transition: all 0.3s;
+					color: $btn-red;
+				}
 			}
 
 			&-tel {

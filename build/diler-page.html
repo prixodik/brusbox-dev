@@ -591,13 +591,13 @@
                               </div>
                             </div>
                             <div class="accardion-block__body js-accardion-body">
-                              <div class="accardion-block__list"><a class="accardion-block__list-title" href="#">Показать на карте</a>
+                              <div class="accardion-block__list"><a class="accardion-block__list-title js-popup-show" href="#popup-map">Показать на карте</a>
                                 <div class="accardion-block__item">
                                   <div class="accardion-block__item-title">Телефон:</div>
                                   <div class="accardion-block__item-text"> <a href="tel:+79852229799"><span>+7(985) 222-97-99</span></a><span class="accardion-block__decor-line">|</span><a href="tel:+79852229798"><span>+7(985) 222-97-98</span></a></div>
                                 </div>
                                 <div class="accardion-block__item">
-                                  <div class="accardion-block__item-title">Сайт:</div><a class="accardion-block__item-text" href="http://vdomokna.ru">vdomokna.ru</a>
+                                  <div class="accardion-block__item-title">Сайт:</div><a class="accardion-block__item-text" href="http://vdomokna.ru" target="_blank">vdomokna.ru</a>
                                 </div>
                                 <div class="accardion-block__item">
                                   <div class="accardion-block__item-title">Email:</div><a class="accardion-block__item-text" href="mailto:OVD@vdomokna.ru">OVD@vdomokna.ru</a>
@@ -616,13 +616,13 @@
                               </div>
                             </div>
                             <div class="accardion-block__body js-accardion-body">
-                              <div class="accardion-block__list"><a class="accardion-block__list-title" href="#">Показать на карте</a>
+                              <div class="accardion-block__list"><a class="accardion-block__list-title js-popup-show" href="#popup-map">Показать на карте</a>
                                 <div class="accardion-block__item">
                                   <div class="accardion-block__item-title">Телефон:</div>
                                   <div class="accardion-block__item-text"> <a href="tel:+79852229799"><span>+7(985) 222-97-99</span></a><span class="accardion-block__decor-line">|</span><a href="tel:+79852229798"><span>+7(985) 222-97-98</span></a></div>
                                 </div>
                                 <div class="accardion-block__item">
-                                  <div class="accardion-block__item-title">Сайт:</div><a class="accardion-block__item-text" href="http://vdomokna.ru">vdomokna.ru</a>
+                                  <div class="accardion-block__item-title">Сайт:</div><a class="accardion-block__item-text" href="http://vdomokna.ru" target="_blank">vdomokna.ru</a>
                                 </div>
                                 <div class="accardion-block__item">
                                   <div class="accardion-block__item-title">Email:</div><a class="accardion-block__item-text" href="mailto:OVD@vdomokna.ru">OVD@vdomokna.ru</a>
@@ -641,13 +641,13 @@
                               </div>
                             </div>
                             <div class="accardion-block__body js-accardion-body">
-                              <div class="accardion-block__list"><a class="accardion-block__list-title" href="#">Показать на карте</a>
+                              <div class="accardion-block__list"><a class="accardion-block__list-title js-popup-show" href="#popup-map">Показать на карте</a>
                                 <div class="accardion-block__item">
                                   <div class="accardion-block__item-title">Телефон:</div>
                                   <div class="accardion-block__item-text"> <a href="tel:+79852229799"><span>+7(985) 222-97-99</span></a><span class="accardion-block__decor-line">|</span><a href="tel:+79852229798"><span>+7(985) 222-97-98</span></a></div>
                                 </div>
                                 <div class="accardion-block__item">
-                                  <div class="accardion-block__item-title">Сайт:</div><a class="accardion-block__item-text" href="http://vdomokna.ru">vdomokna.ru</a>
+                                  <div class="accardion-block__item-title">Сайт:</div><a class="accardion-block__item-text" href="http://vdomokna.ru" target="_blank">vdomokna.ru</a>
                                 </div>
                                 <div class="accardion-block__item">
                                   <div class="accardion-block__item-title">Email:</div><a class="accardion-block__item-text" href="mailto:OVD@vdomokna.ru">OVD@vdomokna.ru</a>
@@ -656,10 +656,8 @@
                             </div>
                           </div>
                   </div>
-                  <div class="map-section__map-img col-8 col-md-7 col-sm-12">
-                    <picture>
-                      <source media="(max-width: 770px)" srcset="images/map-sm.jpg"><img src="images/map.jpg" alt="">
-                    </picture>
+                  <div class="map-section__map-item col-8 col-md-7 col-sm-12">
+                    <div id="first_map"></div>
                   </div>
                 </div>
               </div>
@@ -1090,6 +1088,33 @@
                 </div>
               </div>
             </div>
+            <div class="popup popup--map" id="popup-map">
+              <div class="popup__overflow js-popup-hide"></div>
+              <div class="popup__wrapper"><a class="popup__close js-popup-hide">
+                  <svg class="icon icon_close">
+                    <use xlink:href="images/sprite-svg.svg#close"></use>
+                  </svg></a>
+                <div class="popup__row">
+                  <div class="popup__img-1"><img src="images/map-popup-img-1.png" alt=""></div>
+                  <div class="popup__img-2">
+                    <div id="location_map"></div>
+                  </div>
+                </div>
+                <div class="popup__text">Проезд общественным транспортом от станции метро Кунцевская:<br>маршрутное такси № 575 или автобус № 610 — до остановки «Рябиновая, 45».<br> Здание бизнес центра West Plaza.<br> *Внимание! Для входа в бизнес центр необходимо предъявить документы!</div>
+                <div class="popup__links"><a class="popup__link" href="#"> <span>Скачать карту проезда</span>
+                    <div class="popup__link-icon">
+                      <svg class="icon icon_download">
+                        <use xlink:href="images/sprite-svg.svg#download"></use>
+                      </svg>
+                    </div></a><a class="popup__link" href="#"><span>Построить маршрут в навигаторе</span>
+                    <div class="popup__link-icon">
+                      <svg class="icon icon_link-arrow">
+                        <use xlink:href="images/sprite-svg.svg#link-arrow"></use>
+                      </svg>
+                    </div></a></div>
+              </div>
+            </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=76b76894-338a-4622-b5fd-4624476fbb27&amp;lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

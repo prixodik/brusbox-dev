@@ -41,12 +41,27 @@
 		@include media($xs) {
 			font: 400 12px/16px $baseFF;
 		}
+
+		svg {
+			fill: $black;
+			transition: all 0.3s;
+		}
+		
+		transition: all 0.3s;
+		&:hover {
+			transition: all 0.3s;
+			color: $btn-red;
+
+			svg {
+				fill: $btn-red;
+			}
+		}
 	}
 
 	&__icon {
-		width: 6px;
-		height: 6px;
-		margin-right: 18px;
+		width: 15px;
+   	height: 15px;
+		margin-right: 13px;
 
 		@include media($sm) {
 			width: 5px;

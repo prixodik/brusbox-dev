@@ -22,9 +22,26 @@
 	}
 
 	&__map {
-		&-accardion {
+		&-item #first_map {
+			height: 540px;
+			width: 100%;
+
+			@include media($md) {
+				height: 465px;
+			}
+
 			@include media($sm) {
-				border-bottom: 1px solid $gray;
+				height: 688px;
+			}
+
+			@include media($xs) {
+				height: 288px;
+			}
+		}
+		&-accardion {
+			border-bottom: 1px solid $gray;
+			&:nth-child(1) {
+				border-top: 1px solid $gray;
 			}
 		}
 		&-accardions {

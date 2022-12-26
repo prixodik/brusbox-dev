@@ -41,8 +41,17 @@
 			font-weight: 400;
 			margin-bottom: 4px;
 		}
+
+		a {
+			transition: all 0.3s;
+
+			&:hover {
+				transition: all 0.3s;
+				color: $btn-red;
+			}
+		}
 	}
-	
+
 	&__item {
 		@include flex(0, center, center, nowrap);
 

@@ -6,14 +6,46 @@
 		font-weight: 400;
 	}
 	&__icon {
+		transition: all 0.3s;
 		svg {
 			fill: $btn-red;
 			stroke: red;
 
-			@include media ($sm) {
-				width: 18px;
-				height: 6px;
+			@include media ($md) {
+				width: 15px;
+				height: 15px;
 			}
+
+			@include media ($sm) {
+				width: 22px;
+				height: 22px;
+			}
+
+			@include media ($xs) {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		@include media ($md) {
+			width: 15px;
+			height: 15px;
+		}
+
+		@include media ($sm) {
+			width: 22px;
+			height: 22px;
+		}
+
+		@include media ($xs) {
+			width: 20px;
+			height: 20px;
+		}
+		
+
+		&.is-active {
+			transition: all 0.3s;
+			transform: rotate(180deg);
 		}
 	}
 }

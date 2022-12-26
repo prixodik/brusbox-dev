@@ -6,6 +6,20 @@
 		z-index: 5;
 		transition: all 0.3s;
 		margin-bottom: 0;
+		&:after {
+			opacity: 0;
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			right: 0;
+			content: "";
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: $btn-red;
+			transition: all 0.3s;
+		}
+
 		&:hover {
 			transition: all 0.3s;
 			.action-block__title,
@@ -13,9 +27,13 @@
 				transition: all 0.3s;
 				color: $btn-red;
 			}
-
-			border-bottom: 2px solid $btn-red;
-			margin-bottom: -2px;
+			&:after {
+				transition: all 0.3s;
+				opacity: 1;
+			}
+			// border-bottom: 2px solid ;
+			// outline-width: -2px;
+			// margin-bottom: -2px;
 		}
 	}
 
@@ -68,7 +86,6 @@
 	}
 
 	&--mode {
-
 	}
 	&--mode & {
 		&__img {
@@ -78,9 +95,15 @@
 			color: $medium-gray;
 			margin-bottom: 8px;
 		}
+
+		&__title {
+			@include media($lg, $md) {
+				font: 300 21px/25px $baseFF;
+			}
+		}
 	}
 
-	&--hover-none &{
+	&--hover-none & {
 		&__link {
 			&:hover {
 				.action-block__title,

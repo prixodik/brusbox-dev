@@ -492,6 +492,181 @@
 		}
 	}
 
+	&--map {
+		@include media($xs) {
+			padding: 50px 11px;
+		}
+	}
+
+	&--map & {
+		&__row {
+			@include flex(0,center,center,0);
+			margin-bottom: 16px;
+
+			@include media($sm) {
+				flex-direction: column;
+				margin-bottom: 40px;
+			}
+		}
+
+		&__text {
+			margin-bottom: 40px;
+
+			@include media($md) {
+				margin-bottom: 16px
+			}
+
+			@include media($sm) {
+				margin-bottom: 40px
+			}
+
+			@include media($xs) {
+				margin-bottom: 16px
+			}
+		}
+
+		&__links {
+			@include flex(0,center,center);
+
+			@include media($sm) {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+				align-content: flex-start;
+			}
+		}
+
+		&__link {
+			@include flex(0,center,center,0);
+			margin-right: 60px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			@include media($sm) {
+				margin-bottom: 16px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			@include media($xs) {
+				margin-bottom: 4px;
+				margin-right: 0;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&-icon {
+				height: 40px;
+				width: 40px;
+				border-radius: 50%;
+				background-color: $gray-bridge;
+				@include flex(center,center,center,0);
+				margin-left: 16px;
+				svg {
+					width: 24px;
+					height: 24px;
+				}
+
+				@include media($xs) {
+					height: 32px;
+					width: 32px;
+
+					svg {
+						width: 17px;
+						height: 17px;
+					}
+				}
+			}
+		}
+
+		&__img {
+			&-1,
+			&-2 {
+				height: 420px;
+				display: block;
+
+				img {
+					object-fit: cover;
+					display: block;
+					min-height: 100%;
+					width: 100%;
+				}
+
+				@include media($md) {
+					height: 317px;
+				}
+
+				@include media($sm) {
+					height: auto;
+				}
+			}
+
+			&-1 {
+				max-width: 870px;
+				width: 100%;
+				margin-right: 60px;
+
+				@include media($md) {
+					max-width: 656px;
+					margin-right: 40px;
+				}
+
+				@include media($sm) {
+					margin-right: 0;
+					margin-bottom: 40px;
+					max-width: 100%;
+					width: 100%;
+				}
+
+				@include media($xs) {
+					margin-bottom: 16px;
+				}
+			}
+
+			&-2 {
+				max-width: 560px;
+				width: 100%;
+
+				@include media($md) {
+					max-width: 421px;
+				}
+
+				@include media($sm) {
+					max-width: 100%;
+					width: 100%;
+				}
+
+				#location_map {
+					max-width: 100%;
+					width: 100%;
+					height: 420px;
+
+					@include media($md) {
+						height: 317px;
+					}
+
+					@include media($sm) {
+						height: 455px;
+					}
+
+					@include media($xs) {
+						height: 191px;
+					}
+				}
+			}
+		}
+
+		&__wrapper {
+			max-width: 1490px;
+		}
+	}
+
 	// &--call-back & {
 	// 	&__wrapper {
 	// 		padding: 48px;

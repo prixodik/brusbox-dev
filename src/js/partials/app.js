@@ -50,13 +50,30 @@ var uikit = {
     });
   },
 
+  yandexMap: function () {
+    ymaps.ready(function(){
+      // Указывается идентификатор HTML-элемента.
+      let moscow_map = new ymaps.Map("first_map", {
+          center: [55.76, 37.64],
+          zoom: 10
+      });
+
+      let location = new ymaps.Map("location_map", {
+        center: [55.76, 37.64],
+        zoom: 10
+    });
+  });
+  },
+
   hideText: function () {
     $(".js-hide-text-btn").click(function () {
       if ($(this).siblings('.js-hide-text').hasClass('is-active')) {
         $(this).siblings('.js-hide-text').removeClass('is-active')
         $(this).removeClass('is-active')
+        $(this).children('.js-hide-text-arrow').removeClass('is-active')
       } else {
         $(this).siblings('.js-hide-text').addClass('is-active')
+        $(this).children('.js-hide-text-arrow').addClass('is-active')
         $(this).addClass('is-active')
       }
 
@@ -510,8 +527,8 @@ var uikit = {
     });
   },
 
-  showPopupLocation: function() {
-    setTimeout(()=>{
+  showPopupLocation: function () {
+    setTimeout(() => {
       $('#popup-location').addClass('active');
     }, 3000)
   },
@@ -696,6 +713,26 @@ var uikit = {
 
   },
 
+  historyAnimation: function () {
+    if (document.getElementById('history-animation') !== null) {
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop() + $(window).height();
+        //Если скролл до конца елемента
+        //var offset = $element.offset().top + $element.height();
+        //Если скролл до начала елемента
+
+        if ($('#history-animation')) {
+          let offset = $('#history-animation').offset().top
+
+          if (scroll > offset) {
+            $('.history-section__item').addClass('is-active')
+          }
+        }
+      });
+    }
+      
+  },
+
   searchBlock: function () {
     $(".js-search-toggle").click(function () {
       if ($(this).hasClass("is-disabled") == true) {
@@ -742,20 +779,20 @@ var uikit = {
     });
   },
 
-  sendFormDefault: function() {
-    $('.js-request-form').submit((e)=> {
+  sendFormDefault: function () {
+    $('.js-request-form').submit((e) => {
       $('.js-send-request').addClass('is-active')
 
       e.preventDefault();
 
       let form_data = $(this).serialize(); // Собираем все данные из формы
       $.ajax({
-          type: "POST", // Метод отправки
-          url: "", // Путь до php файла отправителя
-          data: form_data,
-          success: function () {
-            // действия после отправки
-          }
+        type: "POST", // Метод отправки
+        url: "", // Путь до php файла отправителя
+        data: form_data,
+        success: function () {
+          // действия после отправки
+        }
       });
 
       $('.js-form').addClass('is-hide')
@@ -807,6 +844,7 @@ var uikit = {
   mainInit: function () {
     this.lazy();
     // this.validation();
+    this.historyAnimation();
     this.copyMaterial();
     this.fancybox();
     this.popups();
@@ -822,6 +860,7 @@ var uikit = {
     this.hideText();
     this.showPopupLocation();
     this.sendFormDefault();
+    this.yandexMap();
   },
 };
 $(document).ready(function () {

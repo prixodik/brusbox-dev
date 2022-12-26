@@ -16,10 +16,8 @@ mixin mapSection(data)
 				+accardionBlockDilers({
 					title: 'Петровские окна'
 				}).map-section__map-accardion
-			.map-section__map-img.col-8.col-md-7.col-sm-12
-				picture
-					source(media="(max-width: 770px)" srcset="images/map-sm.jpg")
-					img(src="images/map.jpg", alt="")
+			.map-section__map-item.col-8.col-md-7.col-sm-12
+				#first_map
 
 mixin mapSectionContainer(data)
 	.map-section&attributes(attributes)
@@ -35,7 +33,5 @@ mixin mapSectionContainer(data)
 					+accardionBlockLocation({
 						title: 'ул. Вторая, д. 43'
 					}).map-section__map-accardion
-				.map-section__map-img.col-8.col-md-7.col-sm-12
-					picture
-						source(media="(max-width: 770px)" srcset="images/map-sm.jpg")
-						img(src="images/map.jpg", alt="")
+				.map-section__map-item.col-8.col-md-7.col-sm-12
+					#first_map

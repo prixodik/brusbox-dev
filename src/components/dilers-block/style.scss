@@ -1,21 +1,53 @@
 .dilers-block {
 	&__title {
-		@include flex(0,center,center,0);
+		@include flex(0);
+		flex-wrap: nowrap;
 		font-weight: 550;
 		margin-bottom: 5px;
+
+		transition: all 0.3s;
+
+		&:hover {
+			transition: all 0.3s;
+			color: $btn-red;
+		}
 	}
 
 	&__icon {
-		width: 24px;
-		height: 24px;
+		min-width: 25px;
+		min-height: 25px;
+		max-width: 25px;
+		max-height: 25px;
 		margin-right: 8px;
 
-		@include media($xs){ margin-right: 4px; }
+		
+		@include media($md){ 
+			min-height: 20px;
+			max-height: 20px;
+		}
+
+		@include media($sm){ 
+			min-height: 30px;
+			max-height: 30px;
+		}
+
+		@include media($xs){ 
+			margin-right: 4px;
+			max-height: 20px;
+    		min-height: 14px;
+		}
 	}
 
 	&__item {
-		@include flex(0,center,center,0);
+		@include flex(0);
+		flex-wrap: nowrap;
 		margin-bottom: 5px;
+		transition: all 0.3s;
+
+		&:hover {
+			transition: all 0.3s;
+			color: $btn-red;
+		}
 	}
 
 	&__items {

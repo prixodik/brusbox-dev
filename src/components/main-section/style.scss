@@ -125,13 +125,23 @@
 	}
 
 	&--color-solutions {
+		@include media($xlg, $sm) {
+			.container--sm {
+				padding-left: 135px;
+				padding-right: 135px;
+			}
+		}
+
 		@include media($md) {
 			padding-bottom: 0;
+
+			.container--sm {
+				max-width: 100%;
+			}
 		}
 	}
 
 	&--products & {
-
 		&__hed-text {
 			@include media($sm) {
 				display: none;
@@ -310,18 +320,24 @@
 	} */
 
 	&--dealer-support & {
-		&__services-item {
-			@include media($sm) {
-				margin-bottom: 16px;
+		&__services {
+			&-item {
+				@include media($sm) {
+					margin-bottom: 16px;
 
-				&:last-child {
-					margin-bottom: 0;
+					&:last-child {
+						margin-bottom: 0;
+					}
 				}
+			}
+
+			&-row {
+				align-items: center;
 			}
 		}
 
 		&__row {
-			@include flex(center,center,center,0);
+			@include flex(center, center, center, 0);
 
 			@include media($sm) {
 				flex-direction: column;
@@ -376,7 +392,7 @@
 				}
 			}
 		}
-		
+
 		&__text {
 			text-align: center;
 			padding: 112px 0 0;
@@ -393,7 +409,6 @@
 			@include media($xs) {
 				padding: 40px 0 0;
 			}
-
 		}
 
 		&__about {
@@ -417,12 +432,12 @@
 				margin-top: 40px;
 				text-align: left;
 			}
-
 		}
-
 	}
 
-	&--article {overflow: hidden;}
+	&--article {
+		overflow: hidden;
+	}
 	&--article & {
 		&__head {
 			margin-bottom: 0;
@@ -531,11 +546,10 @@
 				transition: all 0.3s;
 			}
 		}
-		
 	}
 
 	&--buyers & {
-		&__info-section-buttons{
+		&__info-section-buttons {
 			@include media($sm) {
 				background-color: #f1f1f1;
 			}

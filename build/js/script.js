@@ -6191,6 +6191,51 @@ var uikit = {
 
 
 
+  yandexMap: function () {
+
+
+    ymaps.ready(function(){
+
+
+      // Указывается идентификатор HTML-элемента.
+
+
+      let moscow_map = new ymaps.Map("first_map", {
+
+
+          center: [55.76, 37.64],
+
+
+          zoom: 10
+
+
+      });
+
+
+
+
+
+      let location = new ymaps.Map("location_map", {
+
+
+        center: [55.76, 37.64],
+
+
+        zoom: 10
+
+
+    });
+
+
+  });
+
+
+  },
+
+
+
+
+
   hideText: function () {
 
 
@@ -6206,10 +6251,16 @@ var uikit = {
         $(this).removeClass('is-active')
 
 
+        $(this).children('.js-hide-text-arrow').removeClass('is-active')
+
+
       } else {
 
 
         $(this).siblings('.js-hide-text').addClass('is-active')
+
+
+        $(this).children('.js-hide-text-arrow').addClass('is-active')
 
 
         $(this).addClass('is-active')
@@ -7571,10 +7622,10 @@ var uikit = {
 
 
 
-  showPopupLocation: function() {
+  showPopupLocation: function () {
 
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
 
       $('#popup-location').addClass('active');
@@ -8129,6 +8180,66 @@ var uikit = {
 
 
 
+  historyAnimation: function () {
+
+
+    if (document.getElementById('history-animation') !== null) {
+
+
+      $(window).scroll(function () {
+
+
+        let scroll = $(window).scrollTop() + $(window).height();
+
+
+        //Если скролл до конца елемента
+
+
+        //var offset = $element.offset().top + $element.height();
+
+
+        //Если скролл до начала елемента
+
+
+
+
+
+        if ($('#history-animation')) {
+
+
+          let offset = $('#history-animation').offset().top
+
+
+
+
+
+          if (scroll > offset) {
+
+
+            $('.history-section__item').addClass('is-active')
+
+
+          }
+
+
+        }
+
+
+      });
+
+
+    }
+
+
+      
+
+
+  },
+
+
+
+
+
   searchBlock: function () {
 
 
@@ -8267,10 +8378,10 @@ var uikit = {
 
 
 
-  sendFormDefault: function() {
+  sendFormDefault: function () {
 
 
-    $('.js-request-form').submit((e)=> {
+    $('.js-request-form').submit((e) => {
 
 
       $('.js-send-request').addClass('is-active')
@@ -8291,22 +8402,22 @@ var uikit = {
       $.ajax({
 
 
-          type: "POST", // Метод отправки
+        type: "POST", // Метод отправки
 
 
-          url: "", // Путь до php файла отправителя
+        url: "", // Путь до php файла отправителя
 
 
-          data: form_data,
+        data: form_data,
 
 
-          success: function () {
+        success: function () {
 
 
-            // действия после отправки
+          // действия после отправки
 
 
-          }
+        }
 
 
       });
@@ -8462,6 +8573,9 @@ var uikit = {
     // this.validation();
 
 
+    this.historyAnimation();
+
+
     this.copyMaterial();
 
 
@@ -8505,6 +8619,9 @@ var uikit = {
 
 
     this.sendFormDefault();
+
+
+    this.yandexMap();
 
 
   },

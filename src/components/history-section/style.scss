@@ -1,5 +1,6 @@
 .history-section {
 	padding: 120px 0 0;
+	overflow-x: hidden;
 
 	@include media($sm) {
 		padding: 70px 0 0;
@@ -43,6 +44,28 @@
 
 		@include media($xs) {
 			padding: 40px 16px 40px;
+		}
+
+		&:nth-child(even) {
+			transform: translateX(-100%);
+		}
+
+		&:nth-child(odd) {
+			transform: translateX(100%);
+			opacity: 0;
+		}
+
+		&:first-child {
+			transform: none;
+		}
+
+		&:nth-child(odd),
+		&:nth-child(even) {
+			&.is-active {
+				opacity: 1;
+				transition: all 3s;
+				transform: translateX(0);
+			}
 		}
 
 		&::after {

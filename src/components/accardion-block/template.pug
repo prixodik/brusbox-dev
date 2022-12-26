@@ -19,7 +19,7 @@ mixin accardionBlockLocation(data)
 					!= data.title
 			._body.js-accardion-body
 				._list
-					a(href="#")._list-title Показать на карте
+					a(href="#popup-map")._list-title.js-popup-show Показать на карте
 					._item
 						._item-title Телефон:
 						._item-text 
@@ -30,7 +30,7 @@ mixin accardionBlockLocation(data)
 								span +7(985) 222-97-98
 					._item
 						._item-title Сайт:
-						a(href="http://vdomokna.ru")._item-text vdomokna.ru
+						a(href="http://vdomokna.ru" target="_blank")._item-text vdomokna.ru
 					._item
 						._item-title Email:
 						a(href="mailto:OVD@vdomokna.ru")._item-text OVD@vdomokna.ru

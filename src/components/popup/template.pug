@@ -103,7 +103,24 @@ mixin popupRequest(data)
 				._send.js-send-request
 					h4._send-title Заявка отправлена!
 					._send-subtitle Наш менеджер свяжется с вами<br> в ближайшее время
-			
+
+mixin popupMap(data)
+	+popup().popup--map#popup-map
+		._row
+			._img-1
+				img(src="images/map-popup-img-1.png", alt="")
+			._img-2
+				#location_map
+		._text Проезд общественным транспортом от станции метро Кунцевская:<br>маршрутное такси № 575 или автобус № 610 — до остановки «Рябиновая, 45».<br> Здание бизнес центра West Plaza.<br> *Внимание! Для входа в бизнес центр необходимо предъявить документы!
+		._links
+			a(href="#")._link 
+				span Скачать карту проезда
+				._link-icon
+					+svg('download')
+			a(href="#")._link
+				span Построить маршрут в навигаторе
+				._link-icon
+					+svg('link-arrow')
 
 
 

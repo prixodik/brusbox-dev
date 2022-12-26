@@ -143,16 +143,24 @@ a:hover {
 	&--sm {
 		margin: 0 auto;
 		max-width: 1490px;
-		// padding-left: 10px;
-		// padding-right: 10px;
-		padding-left: 40px;
-		padding-right: 40px;
+
+		@include media($lg, $xs) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
 	}
 
 	&--text {
 		max-width: 1200px;
-		padding-left: 10px;
-		padding-right: 10px;
+		@include media($xlg, $md) {
+			max-width: 1400px;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+
+		@include media($md) {
+			max-width: 926px;
+		}
 	}
 
 	&--padding {

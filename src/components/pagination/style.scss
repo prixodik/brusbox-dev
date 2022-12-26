@@ -31,13 +31,16 @@
 		height: 40px;
 		transition: all 0.3s;
 		cursor: pointer;
-		&:hover {
-			background-color: rgba(rgb(132, 132, 132), 0.1);
-			transition: all 0.3s;
-		}
+		// &:hover {
+		// 	background-color: rgba(rgb(132, 132, 132), 0.1);
+		// 	transition: all 0.3s;
+		// }
 
 		&.is-active {
 			color: $black;
+			&:hover {
+				color: $black;
+			}
 		}
 
 		@include media($xs) {
@@ -48,5 +51,16 @@
 	&__prev,
 	&__next {
 		cursor: pointer;
+	}
+
+	&__next,
+	&__prev,
+	&__value {
+		transition: all 0.3s;
+
+		&:hover {
+			transition: all 0.3s;
+			color: $red;
+		}
 	}
 }

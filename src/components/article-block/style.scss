@@ -18,7 +18,8 @@
 	
 	&__title {
 		margin: 16px 0 0;
-
+		transition: all 0.3s;
+		color: $black;
 		@include media($xs) {
 			margin: 12px 0 0;
 		}
@@ -42,6 +43,12 @@
 			font: 300 12px/13px $baseFF;
 			display: block;
 			margin-top: 12px;
+		}
+	}
+	&:hover {
+		.article-block__title {
+			color: $btn-red;
+			transition: all 0.3s;
 		}
 	}
 	

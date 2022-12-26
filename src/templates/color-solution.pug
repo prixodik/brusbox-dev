@@ -12,11 +12,12 @@ block content
 	include ../components/header/template
 	+header()
 
-	.main-section.main-section--color-solutions.main-section--padding-bottom
+	.main-section.main-section--color-solutions
 		+headSection({
 			bread: [{url: '#', title: 'Профессионалам рынка'},{url: '#', title: 'Цветовые решения'}],
 			title: "Цветовые решения",
-			img: "images/main-bg-1.jpg"
+			img: "images/main-bg-1.jpg",
+			imgXs: "images/main-bg-1-xs.jpg"
 		})
 		.main-section__container.container.container--sm
 			.main-section__info
