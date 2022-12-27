@@ -59,6 +59,7 @@
 	&__param {
 		@include flex(0, center, center, 0);
 		margin-bottom: 8px;
+		white-space: nowrap;
 
 		&:last-child {
 			margin-bottom: 0;

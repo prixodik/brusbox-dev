@@ -8,9 +8,6 @@
 		padding-right: 0;
 	}
 
-	&__title {
-	}
-
 	&__row {
 		margin: 0;
 		// @include flex(space-between, stretch, stretch, nowrap);
@@ -47,6 +44,8 @@
 	&__title {
 		/* padding-bottom: 8px; */
 		margin-bottom: 16px;
+
+		&--mb40{ margin-bottom: 40px;}
 	}
 
 	&__text {

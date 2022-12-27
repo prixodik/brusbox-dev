@@ -16,6 +16,7 @@
 
 	&__row {
 		justify-content: space-between;
+		align-items: center;
 
 		@include media($md) {
 			gap: 60px;

@@ -1,5 +1,7 @@
 .document-block {
 	align-items: center;
+	display: flex;
+
 	@include media($md) {
 		// align-items: flex-start;
 		.btn {
@@ -12,7 +14,7 @@
 		align-items: center;
 		/* display: block; */
 		max-width: 688px;
-		display: block;
+		//display: block;
 
 		.btn {
 			padding: 0px 32px;
@@ -21,7 +23,7 @@
 
 	@include media($xs) {
 		align-items: center;
-		max-width: 288px;
+		//max-width: 288px;
 
 		.btn {
 			padding: 0px 17px;
@@ -57,15 +59,16 @@
 		}
 
 		@include media($xs) {
-			padding: 40px 0px;
+			//padding: 40px 0px;
 			font: 300 13px/18.2px $baseFF;
+			max-width: none;
 		}
 	}
 
 	picture,
 	&__img {
-		flex: 0 0 56px;
-		max-width: 56px;
+		flex: 0 0 95px;
+		max-width: 95px;
 
 		img {
 			display: block;
@@ -73,16 +76,18 @@
 		}
 
 		@include media($md) {
-			flex: none;
-			max-width: 32px;
+			flex: 0 0 57px;
+			max-width: 57px;
 		}
 
 		@include media($sm) {
+			flex: 0 0 80px;
 			max-width: 80px;
 		}
 
 		@include media($xs) {
-			max-width: 26px;
+			flex: 0 0 48px;
+			max-width: 48px;
 		}
 	}
 
