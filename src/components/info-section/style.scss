@@ -23,12 +23,12 @@
 	&__info {
 		max-width: 736px;
 		margin: 0 auto;
-		padding: 15px 24px;
+		padding: 60px 24px;
 		align-self: center;
 
 		@include media($md) {
 			max-width: 400px;
-			padding: 25px 70px;
+			padding: 60px 70px;
 		}
 
 		@include media($sm) {

@@ -87,13 +87,12 @@
 			justify-content: center;
 		}
 		@include media($sm) {
-			max-width: 640px;
-			justify-content: flex-start;
+			max-width: 100%;
+			padding-left: 0;
+			justify-content: center;
 		}
 		@include media($xs) {
-			max-width: 100%;
 			justify-content: center;
-			padding: 0;
 			margin-top: 16px;
 		}
 
@@ -105,10 +104,7 @@
 				max-width: 300px;
 			}
 			@include media($sm) {
-				max-width: 325px;
-			}
-			@include media($xs) {
-				max-width: 162px;
+				max-width: 100%;
 			}
 
 			img {
@@ -132,19 +128,12 @@
 
 			@include media($xs) {
 				margin-right: 40px;
-				max-width: 171px;
+				// max-width: 171px;
 			}
 		}
 
 		img {
 			max-height: 455px;
-
-			@include media($lg) {
-				max-height: 370px;
-			}
-			@include media($xs) {
-				max-height: 196px;
-			}
 
 			&.is-active {
 				animation-name: Appearance;

@@ -69,12 +69,12 @@
 		@include media($sm) {
 			padding: 78px 0;
 			@include flex(flex-end, flex-start, stretch, nowrap, column);
-			height: 600px;
+			height: 700px;
 		}
 
 		@include media($xs) {
 			padding: 60px 0;
-			height: 449px;
+			height: 500px;
 		}
 	}
 

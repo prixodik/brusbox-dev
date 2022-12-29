@@ -22,7 +22,8 @@
 	}
 
 	&__map {
-		&-item #first_map {
+
+		&-item #black_map {
 			height: 540px;
 			width: 100%;
 
@@ -36,6 +37,16 @@
 
 			@include media($xs) {
 				height: 288px;
+			}
+		}
+
+		&-item {
+			.ymaps-layers-pane {
+				filter: grayscale(1);
+				-ms-filter: grayscale(1);
+				-webkit-filter: grayscale(1);
+				-moz-filter: grayscale(1);
+				-o-filter: grayscale(1);
 			}
 		}
 		&-accardion {

@@ -52,17 +52,69 @@ var uikit = {
 
   yandexMap: function () {
     ymaps.ready(function(){
-      // Указывается идентификатор HTML-элемента.
-      let moscow_map = new ymaps.Map("first_map", {
-          center: [55.76, 37.64],
-          zoom: 10
+      let i;
+      let place;
+      let pointer = [
+        [56.326797, 44.006516],
+        [56.204805, 43.879950], 
+        [56.238376, 43.461620]
+      ];
+
+
+      let myMap = new ymaps.Map('black_map', {
+        center: [56.326797, 44.006516],
+        zoom: 9
+      }, {
+          searchControlProvider: 'yandex#search',
       });
 
-      let location = new ymaps.Map("location_map", {
-        center: [55.76, 37.64],
-        zoom: 10
-    });
-  });
+      let locationMap = new ymaps.Map('location_map', {
+        center: [55.655996, 37.280426],
+        zoom: 16.5
+      }, {
+          searchControlProvider: 'yandex#search',
+      });
+
+      storeLocation = new ymaps.Placemark([55.655996, 37.280426], {
+        balloonContent: ""
+      }, {
+        iconLayout: "default#image",
+      });
+
+      locationMap.geoObjects.add(storeLocation);
+      
+      for(i = 0; i < pointer.length; ++i) {
+		
+        place = new ymaps.Placemark(pointer[i], {
+          balloonContent: ""
+        }, {
+          iconLayout: "default#image",
+          iconImageHref: 'images/yandex-map-flag.png', // Ссылка на изображение 
+          iconImageSize: [53, 55], // Размер изображения 
+          iconImageOffset: [-25, -52] // Положение изображения 
+        });
+
+        myMap.geoObjects.add(place);
+      }
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
+      }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: 'images/yandex-map-flag.png',
+          // Размеры метки.
+          iconImageSize: [53, 55],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-25, -52]
+      });
+
+      myMap.geoObjects
+        .add(myPlacemark)
+   });
   },
 
   hideText: function () {
