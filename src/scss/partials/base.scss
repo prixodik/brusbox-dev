@@ -48,6 +48,10 @@ body {
 		}
 	}
 
+	@include media($xmd) {
+		font: 300 16px/20px $baseFF;
+	}
+
 	@include media($md) {
 		font: 300 14px/20px $baseFF;
 	}
@@ -139,6 +143,31 @@ a:hover {
 		max-width: 100%;
 	}
 
+	@include media($xlg) {
+		//max-width: 1360px;
+	}
+
+	@include media($lg) {
+		//max-width: 1060px;
+	}
+
+	@include media($xmd) {
+		max-width: 1400px;
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+
+	@include media($md) {
+		// max-width: 1120px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	@include media($xs) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
 	&--xlg {
 		max-width: 1264px;
 	}
@@ -159,12 +188,23 @@ a:hover {
 			padding-left: 40px;
 			padding-right: 40px;
 		}
+
+		@include media($xmd) {
+			max-width: 1300px;
+		}
 	}
 
 	&--text {
 		max-width: 1200px;
-		@include media($xlg, $md) {
-			max-width: 1400px;
+		
+		@include media($xlg, $xmd) {
+			max-width: 1500px;
+			padding-left: 120px;
+			padding-right: 120px;
+		}
+
+		@include media($xmd, $md) {
+			max-width: 1300px;
 			padding-left: 100px;
 			padding-right: 100px;
 		}
@@ -177,24 +217,6 @@ a:hover {
 	&--padding {
 		padding-left: 0;
 		padding-right: 0;
-	}
-
-	@include media($xlg) {
-		//max-width: 1360px;
-	}
-
-	@include media($lg) {
-		//max-width: 1060px;
-	}
-
-	@include media($md) {
-		// max-width: 1120px;
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-	@include media($xs) {
-		padding-left: 16px;
-		padding-right: 16px;
 	}
 
 	&--full {

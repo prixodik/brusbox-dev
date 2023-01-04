@@ -6,11 +6,13 @@ $breakpointsTabletSmall: 640px;
 $breakpointsTablet: 768px;
 $breakpointsTabletWide: 992px;
 $breakpointsDesktop: 1200px;
+$breakpointsDesktopLongMd: 1600px;
 $breakpointsDesktopWideMd: 1450px;
 $breakpointsDesktopWide: 1700px;
 
 $xlg: $breakpointsDesktopWide;
 $lg: $breakpointsDesktopWideMd;
+$xmd: $breakpointsDesktopLongMd;
 $md: $breakpointsDesktop;
 $sm: $breakpointsTabletWide;
 $xs: $breakpointsTabletSmall;

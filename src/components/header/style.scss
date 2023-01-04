@@ -253,6 +253,10 @@
 		width: 18px;
 		height: 18px;
 
+		@include media($lg) {
+			margin-left: 14px;
+		}
+
 		@include media($md) {
 			margin-left: 20px;
 		}
