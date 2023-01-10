@@ -706,7 +706,7 @@ var uikit = {
           arrows: true,
           dots: false,
           infinite: true,
-          adaptiveHeight: true,
+          adaptiveHeight: false,
           autoplay: false,
           autoplaySpeed: 2000,
           lazyLoad: 'progressive',

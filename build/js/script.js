@@ -8159,7 +8159,7 @@ var uikit = {
           infinite: true,
 
 
-          adaptiveHeight: true,
+          adaptiveHeight: false,
 
 
           autoplay: false,
