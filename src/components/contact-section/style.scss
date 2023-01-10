@@ -4,6 +4,10 @@
 	&__form {
 		padding: 50px 112px;
 
+		@include media($xlg) {
+			padding: 30px 100px;
+		}
+
 		@include media($md) {
 			padding: 30px 70px;
 		}

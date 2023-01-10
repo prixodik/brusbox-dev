@@ -4,7 +4,7 @@ mixin productBlock(data)
 			._slider.js-slider-product
 				each slide in data.slides
 					._slide
-						+webp(slide.img)._img
+						img(src=slide.img, alt="")._img
 			._info
 				h4._title
 					!=data.title

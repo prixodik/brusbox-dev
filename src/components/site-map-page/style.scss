@@ -1,0 +1,89 @@
+.site-map-page {
+	&__container {
+		padding-top: 112px;
+		padding-bottom: 112px;
+
+		@include media($md) {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+
+		@include media($xs) {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+	}
+	&__item {
+		margin-bottom: 60px;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include media($sm) {
+			margin-bottom: 24px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		a {
+			transition: all 0.3s;
+
+			&:hover {
+				transition: all 0.3s;
+				color: $btn-red;
+			}
+		}
+
+		&-title {
+			font-weight: 550;
+			padding: 8px 0;
+		}
+		&-link {
+			padding: 8px 0;
+			color: $link-color;
+			display: block;
+		}
+	}
+	&__sub-body {
+		padding-left: 40px;
+
+		@include media($sm) {
+			padding-left: 60px;
+		}
+
+		@include media($xs) {
+			padding-left: 24px;
+		}
+	}
+	&__item-list-title {
+		padding: 8px 0 8px 18px;
+		position: relative;
+		font-weight: 550;
+		display: block;
+
+		@include media($xs) {
+			padding: 8px 0 8px 15px;
+		}
+
+		&::after {
+			position: absolute;
+			top: calc(50% - 4px);
+			left: 0;
+			display: block;
+			content: "";
+			height: 8px;
+			width: 8px;
+			border-radius: 50%;
+			background-color: #e40032;
+
+			@include media($xs) {
+				top: calc(50% - 3px);
+				height: 6px;
+				width: 6px;
+			}
+		}
+	}
+}

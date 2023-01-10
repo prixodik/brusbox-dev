@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Рекламный каталог</title>
+    <title>Покупателям: Поставщики</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/template.css">
   </head>
   <body>
-        <header class="header">
+        <header class="header header--mode2">
           <div class="header__body">
             <div class="header__container container">
               <div class="header__wrapper">
@@ -42,7 +42,7 @@
                             </div>
                             <div class="icon-inline__wrap">Нижний Новгород
                             </div>
-                          </div>
+                          </div><a class="header__link js-popup-show" href="#popup-request">Заказать замер</a>
                           <div class="icon-inline header__contacts-item icon-inline--phone"><a class="icon-inline__link" href="#"></a>
                             <div class="icon-inline__icon">
                               <svg class="icon icon_phone">
@@ -61,7 +61,7 @@
                                 <svg class="icon icon_whatsapp">
                                   <use xlink:href="images/sprite-svg.svg#whatsapp"></use>
                                 </svg></a></div>
-                          </div><a class="header__login" href="#">Личный кабинет</a>
+                          </div>
                           <form class="search-block search-block--header js-search-block header__search">
                             <button class="search-block__icon js-search-toggle is-disabled" type="submit">
                               <svg class="icon icon_search">
@@ -295,16 +295,16 @@
                             </div>
                           </div>
                         </div>
-                  </div>
-                      <div class="icon-inline header__contacts-item header__contacts-item--location header__contacts-item--sm"><a class="icon-inline__link js-popup-show" href="#popup-location-list"></a>
-                        <div class="icon-inline__icon">
-                          <svg class="icon icon_marker">
-                            <use xlink:href="images/sprite-svg.svg#marker"></use>
-                          </svg>
-                        </div>
-                        <div class="icon-inline__wrap">Нижний Новгород
-                        </div>
-                      </div>
+                  </div><a class="header__contact-link js-popup-show" href="#popup-location-list">
+                        <div class="icon-inline header__contacts-item header__contacts-item--location header__contacts-item--sm"><a class="icon-inline__link js-popup-show" href="#popup-location-list"></a>
+                          <div class="icon-inline__icon">
+                            <svg class="icon icon_marker">
+                              <use xlink:href="images/sprite-svg.svg#marker"></use>
+                            </svg>
+                          </div>
+                          <div class="icon-inline__wrap">Нижний Новгород
+                          </div>
+                        </div></a>
                       <form class="search-block search-block--header js-search-block header__search--sm">
                         <button class="search-block__icon js-search-toggle is-disabled" type="submit">
                           <svg class="icon icon_search">
@@ -320,10 +320,10 @@
             </div>
           </div>
         </header>
-    <div class="advertising-catalog-page">
-          <div class="head-section advertising-catalog-page__head">
+    <div class="site-map-page">
+          <div class="head-section site-map-page__head">
             <picture>
-              <source media="(max-width: 770px)" srcset="images/head-bg-catalog-sm.jpg"><img class="head-section__img" src="images/head-bg-catalog.jpg" alt="">
+              <source media="(max-width: 770px)" srcset="images/head-site-map-sm.png"><img class="head-section__img" src="images/head-site-map.png" alt="">
             </picture>
             <div class="head-section__container container">
               <div class="head-section__info">
@@ -332,147 +332,114 @@
                         <ul class="breadcrumbs__ul" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                           <li class="breadcrumbs__li" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
                               <meta itemprop="position" content="0"></a></li>
-                          <li class="breadcrumbs__li active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Покупателям</span>
+                          <li class="breadcrumbs__li active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Карта сайта</span>
                               <meta itemprop="position" content="1"></a></li>
-                          <li class="breadcrumbs__li active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Рекламный каталог</span>
-                              <meta itemprop="position" content="2"></a></li>
                         </ul>
                       </div>
                     </div>
-                <h1 class="head-section__title">Рекламный каталог
+                <h1 class="head-section__title">Карта сайта
                 </h1>
               </div>
             </div>
           </div>
-      <div class="advertising-catalog-page__container container container--text">
-            <div class="text-section advertising-catalog-page__text text-section--center">
-              <div class="text-section__container container container--text">
-                <div class="text-section__text"> Данный каталог носит информационный характер.<br> По всем вопросам обращаться в отдел маркетинга и рекламы.
-                </div>
+      <div class="site-map-page__container container container--text">
+        <div class="site-map-page__item"> 
+          <div class="site-map-page__item-title">Покупателям окон</div>
+          <div class="site-map-page__sub-body">
+            <div class="site-map-page__item-title">Главная</div>
+            <div class="site-map-page__sub-body">
+              <div class="site-map-page__item-title">Продукция</div>
+              <div class="site-map-page__sub-body">
+                <div class="site-map-page__item-list-title">Пластиковые окна</div>
+                <div class="site-map-page__item-list"><a class="site-map-page__item-link" href="#">BRUSBOX SUPER AERO</a><a class="site-map-page__item-link" href="#">BRUSBOX GLIDE</a><a class="site-map-page__item-link" href="#">BRUSBOX AERO</a><a class="site-map-page__item-link" href="#">BRUSBOX ACLASS</a><a class="site-map-page__item-link" href="#">BRUSBOX 70-6</a><a class="site-map-page__item-link" href="#">BRUSBOX 60-4</a><a class="site-map-page__item-link" href="#">Раздвижные системы GLIDE</a><a class="site-map-page__item-link" href="#">Нестандартные пластиковые окна</a><a class="site-map-page__item-link" href="#">Цветные пластиковые окна</a><a class="site-map-page__item-link" href="#">Фигурные пластиковые окна</a></div>
+              </div>
+              <div class="site-map-page__sub-body">
+                <div class="site-map-page__item-list-title">Балконы и лоджии</div>
+                <div class="site-map-page__item-list"><a class="site-map-page__item-link" href="#">Холодное остекление</a><a class="site-map-page__item-link" href="#">Теплое остекление</a><a class="site-map-page__item-link" href="#">Панорамное остекление</a><a class="site-map-page__item-link" href="#">Французское остекление</a><a class="site-map-page__item-link" href="#">Остекление лоджий</a><a class="site-map-page__item-link" href="#">Остекление балконов</a><a class="site-map-page__item-link" href="#">Остекление веранд</a></div>
+              </div>
+              <div class="site-map-page__sub-body">
+                <div class="site-map-page__item-list-title">Подоконники</div>
+                <div class="site-map-page__item-list"><a class="site-map-page__item-link" href="#">Подоконник BRUSBOX</a><a class="site-map-page__item-link" href="#">Подоконник BRUSBOX AERO</a><a class="site-map-page__item-link" href="#">Соединители подоконника</a><a class="site-map-page__item-link" href="#">Заглушки на подоконник</a></div>
+              </div>
+              <div class="site-map-page__sub-body">
+                <div class="site-map-page__item-list-title">Пластиковые двери</div>
+                <div class="site-map-page__item-list"><a class="site-map-page__item-link" href="#">Входные двери</a><a class="site-map-page__item-link" href="#">Балконные двери</a><a class="site-map-page__item-link" href="#">Межкомнатные двери</a></div>
               </div>
             </div>
-        <div class="advertising-catalog-page__search-row">
-                    <div class="sort-block advertising-catalog-page__sort-block">
-                      <select class="sort-block__select nice-select">
-                        <option class="sort-block__option option">Выберите тип продукции
-                        </option>
-                        <option class="sort-block__option option">Выберите тип продукции 2
-                        </option>
-                        <option class="sort-block__option option">Все включено
-                        </option>
-                      </select>
-                    </div>
-                    <form class="search-block js-search-block">
-                      <button class="search-block__icon js-search-toggle is-disabled" type="submit">
-                        <svg class="icon icon_search">
-                          <use xlink:href="images/sprite-svg.svg#search"></use>
-                        </svg>
-                      </button>
-                      <div class="search-block__wrapper">
-                        <input class="search-block__input" type="text" placeholder="Поиск по словам">
-                      </div>
-                    </form>
+            <div class="site-map-page__sub-body">
+              <div class="site-map-page__item-title">Калькулятор</div>
+            </div>
+            <div class="site-map-page__sub-body">
+              <div class="site-map-page__item-title">Где купить</div>
+              <div class="site-map-page__sub-body">
+                <div class="site-map-page__item-list-title">Офисы продаж </div>
+                <div class="site-map-page__item-list"><a class="site-map-page__item-link" href="#">Компания Петровские окна</a><a class="site-map-page__item-link" href="#">Компания Окна в дом</a><a class="site-map-page__item-link" href="#">Окна нашего региона</a></div>
+              </div>
+            </div>
+            <div class="site-map-page__sub-body">
+              <div class="site-map-page__item-title">О компании</div>
+              <div class="site-map-page__sub-body">
+                <div class="site-map-page__item-list"><a class="site-map-page__item-list-title" href="#">О компании</a><a class="site-map-page__item-list-title" href="#">История </a><a class="site-map-page__item-list-title" href="#">Поставщики</a><a class="site-map-page__item-list-title" href="#">Сертификаты и дипломы</a><a class="site-map-page__item-list-title" href="#">Реализованные проекты	</a><a class="site-map-page__item-list-title" href="#">Новости</a></div>
+              </div>
+            </div>
+            <div class="site-map-page__sub-body">
+              <div class="site-map-page__item-title">Акции</div>
+            </div>
+            <div class="site-map-page__sub-body">
+              <div class="site-map-page__item-title">Статьи</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="advertising-catalog-page__container container container--sm">
-            <div class="products-section products-section--catalog">
-              <h2 class="products-section__title">Канцелярия</h2>
-              <div class="products-section__items">
-                <div class="products-section__item">
-                      <div class="product-block">
-                        <div class="product-block__row">
-                          <div class="product-block__slider js-slider-product">
-                            <div class="product-block__slide"><img class="product-block__img" src="images/product-img-1.png" alt=""></div>
-                            <div class="product-block__slide"><img class="product-block__img" src="images/product-img-1.png" alt=""></div>
-                          </div>
-                          <div class="product-block__info">
-                            <h4 class="product-block__title">Папка BRUSBOX А4
-                            </h4>
-                            <p class="product-block__text">Папка для документов с карманом
-                            </p>
-                            <div class="product-block__params"><div><span>Формат: </span>А4</div> <div><span>Упаковка: </span>20 штук</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="products-section__item">
-                      <div class="product-block">
-                        <div class="product-block__row">
-                          <div class="product-block__slider js-slider-product">
-                            <div class="product-block__slide"><img class="product-block__img" src="images/product-img-2.png" alt=""></div>
-                            <div class="product-block__slide"><img class="product-block__img" src="images/product-img-2.png" alt=""></div>
-                          </div>
-                          <div class="product-block__info">
-                            <h4 class="product-block__title">Беспроводная колонка BRUSBOX красная
-                            </h4>
-                            <p class="product-block__text">Динамик Bluetooth® мощностью 3 Вт с возможностью беспроводной подзарядки<br> Совместимость с технологией TWS
-                            </p>
-                            <div class="product-block__params"><div><span>Время автономной работы: </span>до 3х часов</div> <div><span>Время зарядки: </span>30 мин</div> <div><span>Цвет: </span>красный</div> <div><span>Материал: </span>пластик ABS</div> <div><span>Размер: </span>3.7 x 3.7 x 3.2 см</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
+        <div class="site-map-page__item"> 
+          <div class="site-map-page__item-title">Профессионалам</div>
+          <div class="site-map-page__sub-body">
+            <div class="site-map-page__item-title">Главная</div>
+            <div class="site-map-page__sub-body">
+              <div class="site-map-page__item-title">Продукция</div>
+              <div class="site-map-page__sub-body">
+                <div class="site-map-page__item-title">Профиль BRUSBOX</div>
+                <div class="site-map-page__item-list"><a class="site-map-page__item-link" href="#">BRUSBOX SUPER AERO</a><a class="site-map-page__item-link" href="#">BRUSBOX GLIDE</a><a class="site-map-page__item-link" href="#">BRUSBOX AERO</a><a class="site-map-page__item-link" href="#">BRUSBOX ACLASS</a><a class="site-map-page__item-link" href="#">BRUSBOX 70-6</a><a class="site-map-page__item-link" href="#">BRUSBOX 60-4</a></div>
               </div>
-              <h2 class="products-section__title">Упаковка</h2>
-              <div class="products-section__items">
-                <div class="products-section__item">
-                      <div class="product-block">
-                        <div class="product-block__row">
-                          <div class="product-block__slider js-slider-product">
-                            <div class="product-block__slide"><img class="product-block__img" src="images/product-img-3.png" alt=""></div>
-                            <div class="product-block__slide"><img class="product-block__img" src="images/product-img-3.png" alt=""></div>
-                          </div>
-                          <div class="product-block__info">
-                            <h4 class="product-block__title">Упаковка подарочная ДОМ
-                            </h4>
-                            <p class="product-block__text">Крыша дома откидывается и закрывается на магните.<br>Жесткая конструкция, подходит для формирования новогодних подарков,<br>например, можно собрать подарок из конфет, упаковки чая и вставить кружку BRUSBOX.<br>Данную упаковку не хочется выбрасывать,<br>поэтому она еще долго будет украшать офисы ваших клиентов
-                            </p>
-                            <div class="product-block__params"><div><span>Изделие: </span>Упаковка подарочная, складная</div> <div><span>Цвет: </span> белый, красный</div> <div><span>Материал: </span>кашированный картон</div> <p><span>Размер: </span> 150 х 210 х 270 мм</p> <p><span>Упаковка: </span> 1 шт.(25 штук в коробке)</p> <div>Красная бумага (сено) для размещения внутри коробки в комплекте </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="products-section__item">
-                      <div class="product-block">
-                        <div class="product-block__row">
-                          <div class="product-block__slider js-slider-product">
-                            <div class="product-block__slide"><img class="product-block__img" src="images/product-img-4.png" alt=""></div>
-                            <div class="product-block__slide"><img class="product-block__img" src="images/product-img-4.png" alt=""></div>
-                          </div>
-                          <div class="product-block__info">
-                            <h4 class="product-block__title">Пакет BRUSBOX
-                            </h4>
-                            <p class="product-block__text">Большой вместительный пакет для больших и щедрых подарков 🙂
-                            </p>
-                            <div class="product-block__params"><p><span>Размер: </span> 570x370x110 мм,(горизонтальный)</p> <p><span>Упаковка: </span>1 штука</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="products-section__item">
-                      <div class="product-block">
-                        <div class="product-block__row">
-                          <div class="product-block__slider js-slider-product">
-                            <div class="product-block__slide"><img class="product-block__img" src="images/product-img-5.png" alt=""></div>
-                            <div class="product-block__slide"><img class="product-block__img" src="images/product-img-5.png" alt=""></div>
-                          </div>
-                          <div class="product-block__info">
-                            <h4 class="product-block__title">Одноразовые тарелки
-                            </h4>
-                            <p class="product-block__text">Тарелки для ваших офисов продаж.<br>Приятно подавать угощения в имиджевой посуде.<br>Можно использовать для горячих блюд.
-                            </p>
-                            <div class="product-block__params"><div><span>Размер: </span>  197х197 мм</div> <p><span>Материал: </span>картон, матовая ламинация.</p> <div><span>Упаковка: </span>50 штук</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
+              <div class="site-map-page__sub-body">
+                <div class="site-map-page__item-title">Подоконники</div>
+              </div>
+              <div class="site-map-page__sub-body">
+                <div class="site-map-page__item-title">Дополнения к профилям</div>
+                <div class="site-map-page__item-list"><a class="site-map-page__item-link" href="#">Для BRUSBOX 60</a><a class="site-map-page__item-link" href="#">Для BRUSBOX 70</a><a class="site-map-page__item-link" href="#">Универсальные</a></div>
               </div>
             </div>
+          </div>
+          <div class="site-map-page__sub-body">
+            <div class="site-map-page__item-title">Преимущества</div>
+          </div>
+          <div class="site-map-page__sub-body">
+            <div class="site-map-page__item-title">Поддержка дилеров</div>
+          </div>
+          <div class="site-map-page__sub-body">
+            <div class="site-map-page__item-title">Тех. документация</div>
+          </div>
+          <div class="site-map-page__sub-body">
+            <div class="site-map-page__item-title">О компании</div>
+            <div class="site-map-page__sub-body">
+              <div class="site-map-page__item-list"><a class="site-map-page__item-list-title" href="#">О компании</a><a class="site-map-page__item-list-title" href="#">История </a><a class="site-map-page__item-list-title" href="#">Поставщики</a><a class="site-map-page__item-list-title" href="#">Сертификаты и дипломы</a><a class="site-map-page__item-list-title" href="#">Реализованные проекты	</a><a class="site-map-page__item-list-title" href="#">Новости</a></div>
+            </div>
+          </div>
+          <div class="site-map-page__sub-body">
+            <div class="site-map-page__item-title">Контакты</div>
+          </div>
+          <div class="site-map-page__sub-body">
+            <div class="site-map-page__item-title">Учебный центр</div>
+          </div>
+        </div>
+        <div class="site-map-page__item"> 
+          <div class="site-map-page__item-title">Архитекторам и дизайнерам</div>
+          <div class="site-map-page__sub-body">
+            <div class="site-map-page__item-title">Главная</div>
+            <div class="site-map-page__sub-body">
+              <div class="site-map-page__item-title">Каталог BIM-моделей</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
         <footer class="footer">

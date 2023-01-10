@@ -45,7 +45,9 @@
 		/* padding-bottom: 8px; */
 		margin-bottom: 16px;
 
-		&--mb40{ margin-bottom: 40px;}
+		&--mb40 {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__text {
@@ -87,7 +89,6 @@
 	}
 
 	&--title-small & {
-
 		&__info {
 			@include media($md) {
 				max-width: 500px;
@@ -451,21 +452,6 @@
 		}
 	}
 
-	&--swiper {
-		&__slider {
-			// overflow: visible;
-			padding-bottom: 70px;
-			margin: 0;
-			position: relative;
-			max-width: 714px;
-
-			&-wrap {
-				width: 400px;
-				height: 400px;
-			}
-		}
-	}
-
 	&--slider & {
 		&__row {
 		}
@@ -506,6 +492,50 @@
 				@include media($xs) {
 					max-width: 203px;
 				}
+			}
+		}
+	}
+
+	&--swiper & {
+		&__slider {
+			// overflow: visible;
+			padding-bottom: 70px;
+			margin: 0 auto;
+			position: relative;
+			max-width: 714px;
+
+			picture {
+				height: 100%;
+				width: 100%;
+
+				@include media($sm) {
+					height: auto;
+				}
+			}
+
+			@include media($md) {
+				max-width: 488px;
+			}
+
+			&-wrap {
+				width: 400px;
+				height: 400px;
+
+				@include media($sm) {
+					width: 360px;
+					height: 360px;
+				}
+
+				@include media($xs) {
+					width: 200px;
+					height: 200px;
+				}
+			}
+		}
+
+		&__slide {
+			img {
+				max-width: 100%;
 			}
 		}
 	}
@@ -852,7 +882,7 @@
 
 	&--title-h2 & {
 		&__title {
-			@include media ($lg, $md) {
+			@include media($lg, $md) {
 				font: 300 40px/45px $baseFF;
 			}
 		}

@@ -50,6 +50,10 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+		@include media($xlg) {
+			max-width: 420px;
+		}
+
 		@include media($md) {
 			max-width: 348px;
 		}
