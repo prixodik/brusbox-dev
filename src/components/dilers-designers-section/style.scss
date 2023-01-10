@@ -1,0 +1,13 @@
+.dilers-designers-section {
+	&__services-row {
+		padding-top: 80px;
+
+		@include media($md) {
+			padding-top: 40px;
+		}
+
+		@include media($sm) {
+			padding-top: 20px;
+		}
+	}
+}

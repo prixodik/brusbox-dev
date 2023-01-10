@@ -5,7 +5,10 @@
 		@include flex(0, 0, center, 0);
 	}
 
-	&__img {}
+	&__img {
+		max-width: 443px;
+		width: 100%;
+	}
 
 	&__info {
 		margin-left: 60px;
@@ -109,7 +112,7 @@
 		}
 
 		&__img {
-			min-width: 688px;
+			max-width: 100%;
 		}
 	}
 

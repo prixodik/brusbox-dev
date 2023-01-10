@@ -1,6 +1,7 @@
 .documentation-block {
 	&__row {
 		@include flex(0, center, center, 0);
+		min-height: 271px;
 		padding: 40px 0 23px;
 
 		@include media($md) {
@@ -21,12 +22,20 @@
 	&__img {
 		margin-right: 62px;
 
+		@include media($xlg) {
+			margin-right: 0;
+		}
+
 		@include media($md) {
 			margin-right: 41px;
 		}
 
 		@include media($sm) {
-			max-width: 80px;
+			max-width: 140px;
+
+			img {
+				width: 100%;
+			}
 		}
 
 		@include media($xs) {
@@ -36,6 +45,14 @@
 	}
 	&__info {
 		color: $white;
+
+		@include media($xlg) {
+			min-width: 442px;
+		}
+
+		@include media($lg) {
+			min-width: auto;
+		}
 
 		@include media($sm) {
 			width: 100%;

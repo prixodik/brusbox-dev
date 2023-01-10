@@ -1,0 +1,151 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'suppliers.html';
+	- var pageTitle = 'Покупателям: Поставщики';
+	//- - var classBody = 'color-solution-page';
+	- var headerBg = 'images/main-banner.jpg';
+
+block styles
+
+block content
+
+	include ../components/header/template
+	include ../components/head-section/template
+
+	+header2()
+
+	.site-map-page
+		+headSection({
+			bread: [{url: '#', title: 'Карта сайта'}],
+			title: "Карта сайта",
+			img: "images/head-site-map.png",
+			imgSm: "images/head-site-map-sm.png"
+		})._head
+		._container.container.container--text
+			._item 
+				div._item-title Покупателям окон
+				._sub-body
+					div._item-title Главная
+					._sub-body
+						div._item-title Продукция
+						._sub-body
+							div._item-list-title Пластиковые окна
+							._item-list
+								a(href="#")._item-link BRUSBOX SUPER AERO
+								a(href="#")._item-link BRUSBOX GLIDE
+								a(href="#")._item-link BRUSBOX AERO
+								a(href="#")._item-link BRUSBOX ACLASS
+								a(href="#")._item-link BRUSBOX 70-6
+								a(href="#")._item-link BRUSBOX 60-4
+								a(href="#")._item-link Раздвижные системы GLIDE
+								a(href="#")._item-link Нестандартные пластиковые окна
+								a(href="#")._item-link Цветные пластиковые окна
+								a(href="#")._item-link Фигурные пластиковые окна
+
+						._sub-body
+							div._item-list-title Балконы и лоджии
+							._item-list
+								a(href="#")._item-link Холодное остекление
+								a(href="#")._item-link Теплое остекление
+								a(href="#")._item-link Панорамное остекление
+								a(href="#")._item-link Французское остекление
+								a(href="#")._item-link Остекление лоджий
+								a(href="#")._item-link Остекление балконов
+								a(href="#")._item-link Остекление веранд
+						
+						._sub-body
+							div._item-list-title Подоконники
+							._item-list
+								a(href="#")._item-link Подоконник BRUSBOX
+								a(href="#")._item-link Подоконник BRUSBOX AERO
+								a(href="#")._item-link Соединители подоконника
+								a(href="#")._item-link Заглушки на подоконник
+						
+						._sub-body
+							div._item-list-title Пластиковые двери
+							._item-list
+								a(href="#")._item-link Входные двери
+								a(href="#")._item-link Балконные двери
+								a(href="#")._item-link Межкомнатные двери
+					._sub-body
+						div._item-title Калькулятор
+					._sub-body
+						div._item-title Где купить
+						._sub-body
+							div._item-list-title Офисы продаж 
+							._item-list
+								a(href="#")._item-link Компания Петровские окна
+								a(href="#")._item-link Компания Окна в дом
+								a(href="#")._item-link Окна нашего региона
+
+					._sub-body
+						div._item-title О компании
+						._sub-body
+							._item-list
+								a(href="#")._item-list-title О компании
+								a(href="#")._item-list-title История 
+								a(href="#")._item-list-title Поставщики
+								a(href="#")._item-list-title Сертификаты и дипломы
+								a(href="#")._item-list-title Реализованные проекты	
+								a(href="#")._item-list-title Новости
+					._sub-body
+						div._item-title Акции
+					._sub-body
+						div._item-title Статьи
+
+
+			._item 
+				div._item-title Профессионалам
+				._sub-body
+					div._item-title Главная
+					._sub-body
+						div._item-title Продукция
+						._sub-body
+							div._item-title Профиль BRUSBOX
+							._item-list
+								a(href="#")._item-link BRUSBOX SUPER AERO
+								a(href="#")._item-link BRUSBOX GLIDE
+								a(href="#")._item-link BRUSBOX AERO
+								a(href="#")._item-link BRUSBOX ACLASS
+								a(href="#")._item-link BRUSBOX 70-6
+								a(href="#")._item-link BRUSBOX 60-4
+						._sub-body
+							div._item-title Подоконники
+						._sub-body
+							div._item-title Дополнения к профилям
+							._item-list
+								a(href="#")._item-link Для BRUSBOX 60
+								a(href="#")._item-link Для BRUSBOX 70
+								a(href="#")._item-link Универсальные
+				._sub-body
+					div._item-title Преимущества
+				._sub-body
+					div._item-title Поддержка дилеров
+				._sub-body
+					div._item-title Тех. документация
+				._sub-body
+					div._item-title О компании
+					._sub-body
+						._item-list
+							a(href="#")._item-list-title О компании
+							a(href="#")._item-list-title История 
+							a(href="#")._item-list-title Поставщики
+							a(href="#")._item-list-title Сертификаты и дипломы
+							a(href="#")._item-list-title Реализованные проекты	
+							a(href="#")._item-list-title Новости
+				._sub-body
+					div._item-title Контакты
+				._sub-body
+					div._item-title Учебный центр
+			
+
+			._item 
+				div._item-title Архитекторам и дизайнерам
+				._sub-body
+					div._item-title Главная
+					._sub-body
+						div._item-title Каталог BIM-моделей
+
+
+
+block scripts

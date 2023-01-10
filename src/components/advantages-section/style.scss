@@ -59,6 +59,10 @@
 		}
 	}
 
+	&--bg-white {
+		background: $white;
+	}
+
 	&--mini-img & {
 		&__items {
 			align-items: flex-start;
