@@ -25,6 +25,8 @@
 
 	.icon {
 		height: 24px;
+		fill: #E40032;
+			stroke: #E40032;
 	}
 
 	@include media($md) {
