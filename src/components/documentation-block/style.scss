@@ -1,4 +1,12 @@
 .documentation-block {
+	&__title-xs {
+		display: none;
+		color: $white;
+		@include media($xs) {
+			display: block;
+			font: 300 18px/20px $baseFF;
+		}
+	}
 	&__row {
 		@include flex(0, center, center, 0);
 		min-height: 271px;
@@ -21,16 +29,24 @@
 	}
 	&__img {
 		margin-right: 62px;
+		max-width: 248px;
+		width: 100%;
 
 		@include media($xlg) {
 			margin-right: 0;
+
+			img {
+				max-height: 160px;
+			}
 		}
 
 		@include media($md) {
 			margin-right: 41px;
+			max-width: 204px;
 		}
 
 		@include media($sm) {
+			margin-right: 21px;
 			max-width: 140px;
 
 			img {
@@ -40,7 +56,16 @@
 
 		@include media($xs) {
 			margin-right: 0;
-			margin: 0 auto 0;
+			margin: 0 auto 16px;
+			width: 100%;
+			max-width: 100%;
+			@include flex(0,center,center,0);
+
+			img {
+				max-width: 60px;
+				max-height: 70px;
+				margin-right: 16px;
+			}
 		}
 	}
 	&__info {
@@ -69,6 +94,7 @@
 		@include media($xs) {
 			margin-top: 20px;
 			margin-bottom: 30px;
+			display: none;
 		}
 	}
 	&__params {
@@ -102,6 +128,7 @@
 			background-color: $dark-grey;
 			border-radius: 50%;
 			margin-left: 6px;
+			transition: all 0.3s;
 
 			@include media($md) {
 				width: 36px;
@@ -114,6 +141,15 @@
 				max-width: 20px;
 				max-height: 20px;
 				stroke: $btn-red;
+				transition: all 0.3s;
+			}
+
+			&:hover {
+				background-color: $btn-red;
+				svg {
+					transition: all 0.3s;
+					stroke: $white;
+				}
 			}
 		}
 
@@ -125,6 +161,16 @@
 	&--border-bottom & {
 		&__row {
 			border-bottom: 1px solid $white;
+		}
+	}
+
+	&--border-bottom-sm & {
+		&__row {
+
+			border-bottom: none;
+			@include media($sm) {
+				border-bottom: 1px solid $white;
+			}
 		}
 	}
 
@@ -163,6 +209,7 @@
 
 			@include media($sm) {
 				margin-right: 0;
+				justify-content: center;
 				max-width: 100%;
 				margin-bottom: 24px;
 			}

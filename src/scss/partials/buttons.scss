@@ -89,19 +89,20 @@ button.btn {
 	}
 
 	&--black {
-		border-color: $black;
-		color: $black;
-		border: 2px solid $black;
+		color: $gray-medium;
+		border: 2px solid transparent;
+		border-color: transparent;
 
 		&:hover {
 			background: $black;
-			border: 2px solid transparent;
+			border: 2px solid $gray-medium;
 			color: $white;
 		}
 
 		&.btn[disabled] {
 			opacity: 1;
-			color: $gray-medium;
+			color: $black;
+			border: 2px solid $black;
 			background: transparent;
 		}
 

@@ -194,6 +194,14 @@ a:hover {
 		}
 	}
 
+	&--text-section {
+		max-width: 1180px;
+
+		@include media($md) {
+			max-width: 926px;
+		}
+	}
+
 	&--text {
 		max-width: 1200px;
 		

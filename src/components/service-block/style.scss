@@ -4,10 +4,6 @@
 
 	@include media($sm) {
 		margin-bottom: 12px;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
 	}
 
 	&__icon {

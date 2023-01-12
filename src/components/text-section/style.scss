@@ -1,5 +1,5 @@
 .text-section {
-	padding: 100px 0;
+	padding: 112px 0;
 
 	@include media($md) {
 		padding: 64px 0;
@@ -74,6 +74,12 @@
 	}
 
 	&--border {
+
+		@include media($md) {
+			padding-top: 112px;
+			padding-bottom: 112px;
+		}
+
 		@include media($sm) {
 			padding: 0;
 		}
@@ -102,8 +108,21 @@
 			}
 		}
 
-		&__col {
+		&__info {
 			max-width: 736px;
+			margin: 0 auto;
+
+			@include media($md) {
+				max-width: 376px;
+			}
+
+			@include media($sm) {
+				max-width: 100%;
+			}
+		}
+
+		&__col {
+			
 
 			&:last-child {
 				@include media($sm) {
@@ -118,7 +137,6 @@
 				position: relative;
 				padding-top: 70px;
 				padding-bottom: 70px;
-				max-width: 100%;
 
 				&::after {
 					content: "";
@@ -255,6 +273,22 @@
 
 		@include media($xs) {
 			padding: 56px 0 16px;
+		}
+	}
+
+	&--padding-top-none {
+		padding-top: 0;
+
+		@include media($md) {
+			padding-top: 100px;
+		}
+
+		@include media($sm) {
+			padding-top: 140px;
+		}
+
+		@include media($xs) {
+			padding-top: 70px;
 		}
 	}
 }

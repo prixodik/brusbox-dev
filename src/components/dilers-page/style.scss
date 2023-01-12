@@ -53,6 +53,16 @@
 		}
 	}
 
+	&__actions {
+		.action-section {
+			padding-bottom: 0;
+		}
+
+		.action-block {
+			margin-bottom: 10px;
+		}
+	}
+
 	&__link {
 		margin-right: 16px;
 		color: $bb-gray;
@@ -105,10 +115,10 @@
 		&__map {
 			padding: 112px 0 60px;
 
-			@include media($sm){
+			@include media($sm) {
 				padding: 60px 0;
 			}
-			@include media($xs){
+			@include media($xs) {
 				padding: 40px 0;
 			}
 		}
@@ -149,7 +159,7 @@
 			margin-bottom: 60px;
 		}
 	}
-	&__services{
+	&__services {
 		padding: 104px 0px 112px;
 
 		@include media($md) {
@@ -159,7 +169,7 @@
 		@include media($sm) {
 			padding: 70px 0px 70px;
 
-			.service-block{
+			.service-block {
 				margin-bottom: 8px;
 			}
 		}
@@ -167,9 +177,15 @@
 		@include media($xs) {
 			padding: 40px 0px 40px;
 
-			.service-block{
+			.service-block {
 				margin-bottom: 12px;
 			}
+		}
+	}
+
+	&--calculator {
+		.calc-block__row {
+			padding: 0 60px 120px;
 		}
 	}
 }

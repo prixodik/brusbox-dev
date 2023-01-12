@@ -1,5 +1,5 @@
 .about-window-block {
-	padding: 112px 0 120px;
+	padding: 112px 0 110px;
 
 	@include media($md) {
 		padding: 64px 0 80px;
@@ -85,6 +85,7 @@
 			margin-top: 15px;
 			img {
 				margin: 0 auto;
+				width: 100%;
 			}
 
 			@include media($sm) {

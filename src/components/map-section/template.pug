@@ -1,7 +1,7 @@
 include ../accardion-block/template
 
 mixin mapSection(data)
-	.map-section&attributes(attributes)
+	#map.map-section&attributes(attributes)
 		._row.row
 			._map-accardions.col-4.col-md-5.col-sm-12
 				+accardionBlockDilers({
@@ -20,7 +20,7 @@ mixin mapSection(data)
 				#black_map
 
 mixin mapSectionContainer(data)
-	.map-section&attributes(attributes)
+	#map.map-section&attributes(attributes)
 		._container.container
 			._row.row
 				._map-accardions.col-4.col-md-5.col-sm-12

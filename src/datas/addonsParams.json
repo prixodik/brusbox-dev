@@ -1,0 +1,75 @@
+{
+	"mosquito": [
+		{
+			"title": "Белая",
+			"counter": 0
+		},
+		{
+			"title": "Коричневая",
+			"counter": 0
+		},
+		{
+			"title": "Антрацит",
+			"counter": 0
+		}
+	],
+	"sills": {
+		"width": [
+			"150",
+			"200",
+			"250",
+			"300",
+			"350",
+			"400",
+			"450",
+			"500"
+		],
+		"list": [
+			{
+				"title": "BRUSBOX СТАНДАРТ",
+				"desc": "BRUSBOX СТАНДАРТ BRUSBOX СТАНДАРТ BRUSBOX СТАНДАРТ"
+			},
+			{
+				"title": "BRUSBOX AERO",
+				"desc": "BRUSBOX AERO BRUSBOX AERO BRUSBOX AERO"
+			}
+		],
+		"colors": [
+			{
+				"title": "Ирландский дуб",
+				"sku": " 3211005",
+				"image": "color-1.png"
+			},
+			{
+				"title": "Русский дуб",
+				"sku": " 22105",
+				"image": "color-2.png"
+			},
+			{
+				"title": "Египетский камыш",
+				"sku": " 1005",
+				"image": "color-3.png"
+			},
+			{
+				"title": "Красный дуб",
+				"sku": " 211005",
+				"image": "color-4.png"
+			},
+			{
+				"title": "Сизый мерен",
+				"sku": " 32411005",
+				"image": "color-5.png"
+			},
+			{
+				"title": "Обычный сук",
+				"sku": "33005",
+				"image": "color-6.png"
+			},
+			{
+				"title": "Пень обыкновенный",
+				"sku": " 3444005",
+				"image": "color-7.png"
+			}
+		]
+	}
+}

@@ -1,5 +1,14 @@
 .object-block {
 	&__slider {
+		.slick-list {
+			height: 100%!important;
+			// width: 100%;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	&__prev,
@@ -12,6 +21,10 @@
 		right: 72px;
 
 		@include media($sm) {
+			right: 70px;
+		}
+
+		@include media($xs) {
 			right: 60px;
 		}
 	}
