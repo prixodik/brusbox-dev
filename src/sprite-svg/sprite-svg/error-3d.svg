@@ -1,0 +1,6 @@
+<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 188H172V360V360C77.007 360 0 282.993 0 188V188Z" fill="#E40032"/>
+<path d="M0 172C0 77.007 77.007 0 172 0V0V172H0V172Z" fill="#E40032"/>
+<path d="M188 188H360V188C360 282.993 282.993 360 188 360V360V188Z" fill="#E40032"/>
+<path d="M188 0V0C282.993 0 360 77.007 360 172V172H188V0Z" fill="#E40032"/>
+</svg>

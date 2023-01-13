@@ -62,8 +62,12 @@
 		@include media($xs) {
 			font: 300 10px/11px $baseFF;
 		}
-		span {
+		a {
 			font-weight: 400;
+		}
+		a:hover {
+			color: #db3131;
+			
 		}
 
 		li {

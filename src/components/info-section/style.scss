@@ -27,7 +27,6 @@
 		align-self: center;
 
 		@include media($md) {
-			max-width: 400px;
 			padding: 60px 70px;
 		}
 
@@ -50,8 +49,7 @@
 		}
 	}
 
-	&__text {
-	}
+	&__text {}
 
 	&__img {
 		max-width: 50%;
@@ -475,7 +473,7 @@
 	}
 
 	&--small-img & {
-		
+
 		&__img {
 			img {
 				width: auto;
@@ -484,12 +482,12 @@
 			picture {
 				margin-right: 0;
 				height: auto;
-	
+
 				@include media($sm) {
 					margin-right: 0;
 				}
 			}
-	
+
 		}
 	}
 
@@ -500,8 +498,7 @@
 	}
 
 	&--slider & {
-		&__row {
-		}
+		&__row {}
 
 		&__slider {
 			// overflow: visible;
@@ -525,8 +522,7 @@
 			}
 		}
 
-		&__slides {
-		}
+		&__slides {}
 
 		&__slide {
 			display: flex;
@@ -644,7 +640,21 @@
 		&__item {
 			&-img {
 				margin-bottom: 16px;
+				min-width: 220px;
 			}
+
+			// &-img:hover {
+			// 	zoom: 11;
+			// }
+
+			a:hover & {
+				&-title {
+					color: red;
+				}
+			}
+		}
+		&__item-img:hover{
+			zoom: 1.3;
 		}
 
 		@include media($md) {
@@ -711,9 +721,13 @@
 			align-items: center;
 			max-width: 736px;
 			margin: 0 auto;
-			padding-left: 60px;
-			padding-right: 60px;
+			// padding-left: 60px;
+			// padding-right: 60px;
 
+			@include media($xlg) {
+				padding-left: 40px;
+				padding-right: 0;
+			}
 			@include media($sm) {
 				max-width: 100%;
 				padding-left: 0;
@@ -818,7 +832,7 @@
 			}
 
 			&__prev {
-				right: 72px;
+				right: 60px;
 				left: auto;
 			}
 
@@ -905,8 +919,7 @@
 		&__title {
 			margin-bottom: 40px;
 
-			@include media($sm) {
-			}
+			@include media($sm) {}
 		}
 	}
 
@@ -1034,13 +1047,13 @@
 		&__prev {
 			right: 72px;
 			left: auto;
-			
+
 			@include media($xs) {
 				right: 60px;
 			}
 		}
 
-		
+
 		&__img {
 			picture {
 				min-height: 100%;

@@ -3,6 +3,7 @@
 	display: flex;
 
 	@include media($md) {
+
 		// align-items: flex-start;
 		.btn {
 			padding: 8px 10px;
@@ -146,6 +147,7 @@
 				max-height: 44px;
 			}
 		}
+
 		&__button {
 			.btn {
 				height: auto;
@@ -181,7 +183,7 @@
 	}
 
 	&--mode {
-		@include flex(0,center,center,0);
+		@include flex(0, center, center, 0);
 
 		.btn {
 			width: 100%;
@@ -189,7 +191,7 @@
 	}
 
 	&--market {
-		@include flex(0,center,center,0);
+		@include flex(0, center, center, 0);
 
 		@include media($xs) {
 			justify-content: space-between;
@@ -234,6 +236,36 @@
 			max-width: 100%;
 			justify-content: space-between;
 			width: 100%;
+		}
+	}
+
+	&--red-text & {
+		&__img:hover {
+			.document-block__text {
+				color: rgb(218, 9, 9);
+			}
+		}
+
+		&__text:hover {
+			color: rgb(218, 9, 9);
+		}
+	}
+
+	&--svg-fancybox {
+		svg {
+			font-size: 95px;
+
+			@include media($md) {
+				font-size: 56px;
+			}
+
+			@include media($sm) {
+				font-size: 80px;
+			}
+
+			@include media($xs) {
+				font-size: 44px;
+			}
 		}
 	}
 }
