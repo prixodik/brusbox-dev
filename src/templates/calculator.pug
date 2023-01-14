@@ -19,9 +19,17 @@ block content
 			imgSm: 'images/head-bg-calculator-sm.jpg',
 			bread: [{url: '#', title: 'Главная'},{url: '#', title: 'Покупателям'},{url: '#', title: 'Подобрать окно'}],
 		})._head
+
 		+selectWindowSection()
+		
+		include ../components/text-section/template
+		.dilers-page__title
+			+textSectionTitle({
+				title: 'Калькулятор'
+			}).text-section--black.text-section--padding-top-none
+
 		._container.container
-			div#app
+			//- div#app
  
 		+infoSectionFormCalculator({
 			img: 'images/info-calculator.jpg'

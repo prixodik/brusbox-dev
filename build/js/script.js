@@ -8627,6 +8627,66 @@ var uikit = {
     let arr = [];
 
 
+
+
+
+    $('.js-select-options').on('click', function(event) {
+
+
+
+
+
+      let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
+
+
+      $(this).find('.current').html(place)
+
+
+      
+
+
+    });
+
+
+
+
+
+    $('.js-select-options li').on('click', function(event) {
+
+
+
+
+
+      let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
+
+
+      $(this).closest('.js-select-sorting').find('.current').html(place)
+
+
+      // console.log( $(this).closest('.js-select-sorting'))
+
+
+      
+
+
+    });
+
+
+
+
+
+    $('.js-select-options').on('change', function() {
+
+
+      let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
+
+
+    })
+
+
+
+
+
     $('.js-select-sorting').on('change', function(e) {
 
 
@@ -8642,10 +8702,7 @@ var uikit = {
       $(this).children('.current')
 
 
-      console.log($(this).find('.sort-block__option--placeholder').parent('.js-select-options'))
-
-
-      // console.log($(`.js-select-options .current`).text())
+      
 
 
     })
@@ -8901,4 +8958,3 @@ $(window).scroll(function () {
 
 
 });
-

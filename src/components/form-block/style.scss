@@ -317,7 +317,8 @@
 
 			@include media($xs) {
 				flex-direction: column;
-
+				margin-left: 0;
+				margin-right: 0;
 				margin-bottom: 26px;
 				&:last-child {
 					margin-bottom: 0;

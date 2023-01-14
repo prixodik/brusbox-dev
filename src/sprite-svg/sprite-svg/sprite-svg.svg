@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<symbol viewBox="0 0 24 24" id="zoom" xmlns="http://www.w3.org/2000/svg">
+	<path d="M15 11.5L8 11.5" fill="none"/>
+	<path d="M11.5 8L11.5 15" fill="none"/>
+	<circle cx="11.5" cy="11.5" r="7" fill="none"/>
+	<path d="M20.6464 21.3536C20.8417 21.5488 21.1583 21.5488 21.3536 21.3536C21.5488 21.1583 21.5488 20.8417 21.3536 20.6464L20.6464 21.3536ZM16.1464 16.8536L20.6464 21.3536L21.3536 20.6464L16.8536 16.1464L16.1464 16.8536Z" stroke="none"/>
+</symbol>
+
+<symbol viewBox="0 0 30 30" id="link" xmlns="http://www.w3.org/2000/svg">
+	<g clip-path="url(#clip0_1682_13593)">
+	<path d="M29 1L1 29" fill="none"/>
+	<path d="M30 0L28 6L24 2L30 0Z" stroke="none"/>
+	</g>
+	<defs>
+	<clipPath id="clip0_1682_13593">
+	<rect width="30" height="30" stroke="none" fill="white"/>
+	</clipPath>
+	</defs>
+</symbol>
+
+<symbol viewBox="0 0 32 32" id="close" xmlns="http://www.w3.org/2000/svg">
+	<path d="M8 8L24 24" fill="none" stroke-linecap="round"/>
+	<path d="M24 8L8 24" fill="none" stroke-linecap="round"/>
+</symbol>
+
+<symbol viewBox="0 0 24 24" id="question" xmlns="http://www.w3.org/2000/svg">
+	<circle cx="12" cy="12" r="9.5" fill="none"/>
+	<path d="M8.99993 11V9M14.9999 9C14.9999 11.7551 11.9999 13.1239 11.9999 16M11.9999 18V17" fill="none"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 9C15.5 7.067 13.933 5.5 12 5.5C10.067 5.5 8.5 7.067 8.5 9H9.5C9.5 7.61929 10.6193 6.5 12 6.5C13.3807 6.5 14.5 7.61929 14.5 9H15.5Z" stroke="none"/>
+</symbol>
+
+<symbol viewBox="0 0 24 24" id="plus" xmlns="http://www.w3.org/2000/svg">
+	<path d="M12.5 2L12.5 21" fill="none"/>
+	<path d="M3 11.5H22" fill="none"/>
+</symbol>
+
+<symbol viewBox="0 0 24 24" id="minus" xmlns="http://www.w3.org/2000/svg">
+	<path d="M22 11L22 12L3 12L3 11L22 11Z" stroke="none"/>
+</symbol>
+
+<symbol viewBox="0 0 24 24" id="copy" xmlns="http://www.w3.org/2000/svg">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M11 3H18C18.5523 3 19 3.44772 19 4V14C19 14.5523 18.5523 15 18 15H15V16H18C19.1046 16 20 15.1046 20 14V4C20 2.89543 19.1046 2 18 2H11C9.89543 2 9 2.89543 9 4V8H10V4C10 3.44772 10.4477 3 11 3Z" stroke="none"/>
+	<rect x="4.5" y="8.5" width="10" height="13" rx="1.5" fill="none"/>
+</symbol>
+
+<symbol viewBox="0 0 24 24" id="delete" xmlns="http://www.w3.org/2000/svg">
+	<path d="M2.5 4.5H21.5" fill="none" stroke-linecap="round"/>
+	<path d="M8.5 4.5V4.5C8.5 3.39543 9.39543 2.5 10.5 2.5H13.5C14.6046 2.5 15.5 3.39543 15.5 4.5V4.5" fill="none" stroke-linecap="round"/>
+	<path d="M4.5 4.5V19.5C4.5 20.6046 5.39543 21.5 6.5 21.5H17.5C18.6046 21.5 19.5 20.6046 19.5 19.5V4.5" fill="none" stroke-linecap="round"/>
+	<rect x="16" y="7" width="1" height="12" rx="0.5" stroke="none"/>
+	<rect x="13" y="7" width="1" height="12" rx="0.5" stroke="none"/>
+	<rect x="10" y="7" width="1" height="12" rx="0.5" stroke="none"/>
+	<rect x="7" y="7" width="1" height="12" rx="0.5" stroke="none"/>
+</symbol>
+
+<symbol viewBox="0 0 24 24" id="arrow-down" xmlns="http://www.w3.org/2000/svg">
+	<path d="M3 10L12 16L21 10" fill="none" stroke-linecap="round"/>
+</symbol>
+
+<symbol viewBox="0 0 32 32" id="download" xmlns="http://www.w3.org/2000/svg">
+	<path d="M16 4L16 22.6667" fill="none"/>
+	<path d="M9.3335 17.3333L16.0002 22.6666L22.6668 17.3333" fill="none"/>
+	<path d="M4.5 12V24.8333C4.5 26.3061 5.69391 27.5 7.16667 27.5H24.8333C26.3061 27.5 27.5 26.3061 27.5 24.8333V12" fill="none"/>
+</symbol>
+
+<symbol viewBox="0 0 32 32" id="print" xmlns="http://www.w3.org/2000/svg">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M8 14H5H4V15V27V28H5H27H28V27V15V14H27H24V15H27V27H5V15H8V14Z" stroke="none"/>
+	<rect x="7.5" y="4.5" width="17" height="15" fill="none"/>
+	<path d="M12 11.5H20" fill="none"/>
+	<path d="M11.9985 8.5H19.9985" fill="none"/>
+</symbol>
+
+<symbol viewBox="0 0 32 32" id="email" xmlns="http://www.w3.org/2000/svg">
+	<rect x="4.5" y="8.5" width="23" height="15" fill="none"/>
+	<path d="M5 9L16 19L27 9" fill="none"/>
+</symbol>
+
+<symbol viewBox="0 0 82 144" width="82" height="144" id="type-img-1" xmlns="http://www.w3.org/2000/svg">
+	<rect x="4" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+</symbol>
+
+<symbol viewBox="0 0 157 144" width="157" height="144" id="type-img-2" xmlns="http://www.w3.org/2000/svg">
+	<rect x="4.25" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="78.25" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+</symbol>
+
+<symbol viewBox="0 0 231 144" width="231" height="144" id="type-img-3" xmlns="http://www.w3.org/2000/svg">
+	<rect x="4.5" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="78.5" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="152.5" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+</symbol>
+
+<symbol viewBox="0 0 126 144" width="126" height="144" id="type-img-4" xmlns="http://www.w3.org/2000/svg">
+	<rect x="4.75" y="4" width="117" height="49" fill="none" stroke-width="8"/>
+	<rect x="4.75" y="53" width="58.5" height="87" fill="none" stroke-width="8"/>
+	<rect x="63.25" y="53" width="58.5" height="87" fill="none" stroke-width="8"/>
+</symbol>
+
+<symbol viewBox="0 0 378 144" width="378" height="144" id="type-img-5" xmlns="http://www.w3.org/2000/svg">
+	<rect x="4" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="78" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="152" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="226" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="300" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+</symbol>
+
+<symbol viewBox="0 0 566 144" width="566" height="144" id="type-img-6" xmlns="http://www.w3.org/2000/svg">
+	<rect x="4" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="98" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="172" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="246" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="320" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="394" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+	<rect x="488" y="4" width="74" height="136" fill="none" stroke-width="8"/>
+</symbol>
+
+<symbol viewBox="0 0 72 144" width="72" height="144" id="type-img-7" xmlns="http://www.w3.org/2000/svg">
+	<rect x="4" y="4" width="64" height="87" fill="none" stroke-width="8"/>
+	<rect x="4" y="91" width="64" height="49" fill="none" stroke-width="8"/>
+</symbol>
+
+<symbol viewBox="0 0 136 144" width="136" height="144" id="type-img-8" xmlns="http://www.w3.org/2000/svg">
+	<rect x="4" y="4" width="64" height="87" fill="none" stroke-width="8"/>
+	<rect x="4" y="91" width="64" height="49" fill="none" stroke-width="8"/>
+	<rect x="68" y="4" width="64" height="87" fill="none" stroke-width="8"/>
+</symbol>
+
+<symbol viewBox="0 0 200 144" width="200" height="144" id="type-img-9" xmlns="http://www.w3.org/2000/svg">
+	<rect x="4" y="4" width="64" height="87" fill="none" stroke-width="8"/>
+	<rect x="4" y="91" width="64" height="49" fill="none" stroke-width="8"/>
+	<rect x="68" y="4" width="64" height="87" fill="none" stroke-width="8"/>
+	<rect x="132" y="4" width="64" height="87" fill="none" stroke-width="8"/>
+</symbol>
+
+</svg>
