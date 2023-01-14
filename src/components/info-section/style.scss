@@ -27,7 +27,6 @@
 		align-self: center;
 
 		@include media($md) {
-			max-width: 400px;
 			padding: 60px 70px;
 		}
 
@@ -50,8 +49,7 @@
 		}
 	}
 
-	&__text {
-	}
+	&__text {}
 
 	&__img {
 		max-width: 50%;
@@ -296,6 +294,9 @@
 			@include media($md) {
 				max-width: 436px;
 			}
+			@include media($sm) {
+				max-width: 715px;
+			}
 		}
 	}
 
@@ -475,7 +476,7 @@
 	}
 
 	&--small-img & {
-		
+
 		&__img {
 			img {
 				width: auto;
@@ -484,12 +485,12 @@
 			picture {
 				margin-right: 0;
 				height: auto;
-	
+
 				@include media($sm) {
 					margin-right: 0;
 				}
 			}
-	
+
 		}
 	}
 
@@ -500,8 +501,7 @@
 	}
 
 	&--slider & {
-		&__row {
-		}
+		&__row {}
 
 		&__slider {
 			// overflow: visible;
@@ -525,8 +525,7 @@
 			}
 		}
 
-		&__slides {
-		}
+		&__slides {}
 
 		&__slide {
 			display: flex;
@@ -644,7 +643,22 @@
 		&__item {
 			&-img {
 				margin-bottom: 16px;
+				min-width: 220px;
 			}
+
+			// &-img:hover {
+			// 	zoom: 11;
+			// }
+
+			a:hover & {
+				&-title {
+					color: red;
+				}
+			}
+		}
+
+		&__item-img:hover {
+			zoom: 1.3;
 		}
 
 		@include media($md) {
@@ -711,8 +725,13 @@
 			align-items: center;
 			max-width: 736px;
 			margin: 0 auto;
-			padding-left: 60px;
-			padding-right: 60px;
+			// padding-left: 60px;
+			// padding-right: 60px;
+
+			@include media($xlg) {
+				padding-left: 40px;
+				padding-right: 0;
+			}
 
 			@include media($sm) {
 				max-width: 100%;
@@ -818,7 +837,7 @@
 			}
 
 			&__prev {
-				right: 72px;
+				right: 60px;
 				left: auto;
 			}
 
@@ -905,8 +924,7 @@
 		&__title {
 			margin-bottom: 40px;
 
-			@include media($sm) {
-			}
+			@include media($sm) {}
 		}
 	}
 
@@ -1034,13 +1052,13 @@
 		&__prev {
 			right: 72px;
 			left: auto;
-			
+
 			@include media($xs) {
 				right: 60px;
 			}
 		}
 
-		
+
 		&__img {
 			picture {
 				min-height: 100%;
@@ -1048,5 +1066,35 @@
 				margin-left: auto;
 			}
 		}
+	}
+
+	&--padding-col {
+		@include media($sm) {
+			.col-sm-12{
+			padding-left: 40px;
+			padding-right: 40px;
+			}
+		}
+		@include media($xs) {
+			.col-sm-12{
+			padding-left: 16px;
+			padding-right: 16px;
+			}
+		}
+	}
+	&--title-h2-small &{
+		&__title{
+		font: 300 36px/36px $baseFF;
+		}
+		@include media($xlg) {
+			font: 300 24px/29px $baseFF;
+		}
+	}
+
+	&--title-h2-small-2 &{
+		&__title{
+		font: 300 28px/30px $baseFF;
+		}
+		
 	}
 }

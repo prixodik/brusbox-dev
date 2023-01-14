@@ -23,15 +23,15 @@ block content
 		})
 		
 		+textSection({
-				text: '<p>Компания «БРУСБОКС» основана в 2004 году. Сегодня это один из крупнейших производителей ПВХ-профиля и подоконной доски в России.<br> Среди отечественных производителей «БРУСБОКС» является компанией №1 по производству и объемам продаж.</p>',
+				text: '<p>Компания «БРУСБОКС» основана в 2004 году. Сегодня это один из крупнейших производителей ПВХ-профиля и подоконной доски в России. Среди отечественных производителей «БРУСБОКС» является компанией №1 по производству и объемам продаж.</p>',
 				btn: 'История компании'
-			}).text-section--text-center.text-section--center-btn.text-section--long-2.text-section--text-start-sm
+			}).text-section--text-center.text-section--center-btn.text-section--text-start-sm
 
 		+infoSection({
 						img: 'images/about-company-1.jpg',
 						title: 'Наша миссия',
 						text: '<p>Мы создаем высококачественный профиль для Ваших окон, гордясь тем, <br> что делаем Вашу жизнь светлее и комфортнее.<br> Мы работаем, чтобы развивалась наша страна и партнеры, повышалось <br> благополучие предприятия и сотрудников. <br> <br> «БРУСБОКС» — это МЫ!</p>'
-					}).info-section--gray.info-section--row-revers.info-section--title-size
+					}).info-section--gray.info-section--row-revers.info-section--title-size.info-section--padding-col
 
 		+textSection({
 					text: '<p>BRUSBOX — это принципиально новая разработка, качественный ПВХ-профиль, созданный на основе уникального комплекса передовых технологий и собственного практического опыта производства металлопластиковых окон.</p>',
@@ -59,13 +59,14 @@ block content
 
 		.about-company-section
 			+bannerImg({
-				img:"images/banner-about-company.jpg"
+				img:"images/banner-about-company.jpg",
+				imgSm: "images/banner-about-company-sm.jpg"
 			}).banner-section--big-banner
 
 		.about-company-section
 			+textSection({
 				text: '<p>Профилем BRUSBOX, который производится за год, <br> можно было бы обернуть землю по экватору в 1,5 оборота</p>',
-			}).text-section--text-center.text-section--small
+			}).text-section--text-center.text-section--small.text-section--gray
 
 			._container.container.container--sm
 				._services-row.row

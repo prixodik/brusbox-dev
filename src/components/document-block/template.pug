@@ -1,9 +1,8 @@
 mixin documentBlock(data)
-	.document-block&attributes(attributes)
+	.document-block.--red-text.--svg-fancybox&attributes(attributes)
 		a(href=data.link)._img.js-fancybox
-			+webp(data.img)
-		if data.text
-			._text
+			+svg("certificates")
+			a(href=data.link)._text.js-fancybox
 				!=data.text
 
 mixin documentBlockMode(data)
@@ -37,3 +36,10 @@ mixin documentBlockBtn(data)
 				._link
 					a(href="#")
 						+svg("download")
+
+mixin documentBlockDownload(data)
+	.document-block.--red-text.--svg-fancybox&attributes(attributes)
+		a(href="Файл" download)._img
+			+svg("certificates-2")
+			a(href="#" download)._text
+				!=data.text

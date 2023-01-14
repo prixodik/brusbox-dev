@@ -51,12 +51,12 @@ var uikit = {
   },
 
   yandexMap: function () {
-    ymaps.ready(function(){
+    ymaps.ready(function () {
       let i;
       let place;
       let pointer = [
         [56.326797, 44.006516],
-        [56.204805, 43.879950], 
+        [56.204805, 43.879950],
         [56.238376, 43.461620]
       ];
 
@@ -65,14 +65,14 @@ var uikit = {
         center: [56.326797, 44.006516],
         zoom: 9
       }, {
-          searchControlProvider: 'yandex#search',
+        searchControlProvider: 'yandex#search',
       });
 
       let locationMap = new ymaps.Map('location_map', {
         center: [55.655996, 37.280426],
         zoom: 16.5
       }, {
-          searchControlProvider: 'yandex#search',
+        searchControlProvider: 'yandex#search',
       });
 
       storeLocation = new ymaps.Placemark([55.655996, 37.280426], {
@@ -82,9 +82,9 @@ var uikit = {
       });
 
       locationMap.geoObjects.add(storeLocation);
-      
-      for(i = 0; i < pointer.length; ++i) {
-		
+
+      for (i = 0; i < pointer.length; ++i) {
+
         place = new ymaps.Placemark(pointer[i], {
           balloonContent: ""
         }, {
@@ -100,21 +100,21 @@ var uikit = {
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
 
       }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: 'images/yandex-map-flag.png',
-          // Размеры метки.
-          iconImageSize: [53, 55],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-25, -52]
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'images/yandex-map-flag.png',
+        // Размеры метки.
+        iconImageSize: [53, 55],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-25, -52]
       });
 
       myMap.geoObjects
         .add(myPlacemark)
-   });
+    });
   },
 
   hideText: function () {
@@ -462,8 +462,8 @@ var uikit = {
       e.preventDefault();
       let tab =
         typeof $(this).attr("href") != "undefined" ?
-        $(this).attr("href") :
-        $(this).attr("data-tab");
+          $(this).attr("href") :
+          $(this).attr("data-tab");
       if (typeof $(this).attr("data-parent") != "undefined") {
         $('[href="' + tab + '"], [data-tab="' + tab + '"]')
           .closest($(this).attr("data-parent"))
@@ -495,8 +495,8 @@ var uikit = {
       }
       var href =
         $(this).attr("href") != undefined ?
-        $(this).attr("href") :
-        "#" + $(this).val();
+          $(this).attr("href") :
+          "#" + $(this).val();
       var nav_id = $(this).data("navid");
       $(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass(
         "is-active"
@@ -542,14 +542,14 @@ var uikit = {
   },
 
   lazy: function () {
-    function logElementEvent(eventName, element) {}
-    var callback_enter = function (element) {};
-    var callback_exit = function (element) {};
-    var callback_loading = function (element) {};
-    var callback_loaded = function (element) {};
-    var callback_error = function (element) {};
-    var callback_finish = function () {};
-    var callback_cancel = function (element) {};
+    function logElementEvent(eventName, element) { }
+    var callback_enter = function (element) { };
+    var callback_exit = function (element) { };
+    var callback_loading = function (element) { };
+    var callback_loaded = function (element) { };
+    var callback_error = function (element) { };
+    var callback_finish = function () { };
+    var callback_cancel = function (element) { };
 
     var lazyLoadOb = new LazyLoad({
       class_applied: "lz-applied",
@@ -609,8 +609,8 @@ var uikit = {
     $(".js-scroll-to").click(function () {
       var href = $(this).attr("href");
       $("html, body").animate({
-          scrollTop: $(href).offset().top,
-        },
+        scrollTop: $(href).offset().top,
+      },
         400
       );
       return false;
@@ -782,7 +782,7 @@ var uikit = {
         }
       });
     }
-      
+
   },
 
   searchBlock: function () {
@@ -829,6 +829,29 @@ var uikit = {
       $(this).toggleClass('is-active').next().toggleClass('is-active');
       return false;
     });
+  },
+
+  horizontalScrollDilers: function () {
+    var pass = $('#about-company-section--wrapper');
+    pass.mousedown(function (e) {
+      console.log(e);
+      $this = $(this);
+      $this.css('z-index', '-1000');
+      $('document').trigger(e);
+      $(document).mouseup(function (e) {
+        console.log(e);
+        $this.css('z-index', '1000');
+      })
+    });
+
+    $(document).mousemove(function (e, d) {
+      pass.css('top', e.clientY);
+      pass.css('left', e.clientX);
+    })
+    pass.scroll(function () {
+      console.log(pass.scrollTop());
+      $('body').scrollLeft(pass.scrollTop());
+    })
   },
 
   sendFormDefault: function () {
@@ -904,7 +927,7 @@ var uikit = {
 
       $('.js-select-sorting-options').html(list)
 
-      
+
       // $(this).find('.sort-block__option--placeholder').attr('data-display')
       let text = $(this).find('.sort-block__option--placeholder').attr('data-display')
       // console.log($(this).children('.current'))
@@ -946,6 +969,7 @@ var uikit = {
     this.showPopupLocation();
     this.sendFormDefault();
     this.yandexMap();
+    this.horizontalScrollDilers();
   },
 };
 $(document).ready(function () {
@@ -954,12 +978,12 @@ $(document).ready(function () {
 var clrTimeOut;
 $(window).on("load", function (e) {
   clearTimeout(clrTimeOut);
-  clrTimeOut = setTimeout(function () {}, 200);
+  clrTimeOut = setTimeout(function () { }, 200);
 });
 
 $(window).resize(function () {
   clearTimeout(clrTimeOut);
-  clrTimeOut = setTimeout(function () {}, 200);
+  clrTimeOut = setTimeout(function () { }, 200);
 });
 
 $(window).scroll(function () {

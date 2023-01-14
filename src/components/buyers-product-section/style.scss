@@ -1,6 +1,10 @@
 .buyers-product-section {
 	&--padding-top {
 		padding: 112px 0px 60px;
+
+		@include media($xs) {
+			padding: 40px 0px;
+		}
 	}
 
 	&--padding-md {
@@ -86,7 +90,7 @@
 	&__title {
 		text-align: center;
 		margin-bottom: 40px;
-		padding-top: 120px;
+		padding-top: 100px;
 	}
 
 	&__title--gray {
@@ -95,9 +99,6 @@
 		margin-bottom: 40px;
 	}
 
-	&__gray {
-		background: #F1F1F1;
-	}
 
 	.btn {
 		margin-right: 24px;
@@ -118,9 +119,44 @@
 		}
 
 	}
-	.btn-list{
+
+	.btn-list {
 		@include media($xs) {
-		text-align: center;
+			text-align: center;
 		}
+	}
+
+	svg {
+		font-size: 1.3rem;
+		width: 1em;
+	}
+	.btn--icon img, .btn--icon svg {
+		width: 24px;
+		height: 24px;
+	}
+}
+.buyers-product{
+	&__gray {
+		background: #F1F1F1;
+	}
+	hr{
+		width: auto;
+	}
+	h2{
+		@include media($xlg) {
+			font: 300 32px/32px $baseFF;
+		}
+
+		@include media($sm) {
+			font: 300 32px/32px $baseFF;
+		}
+
+		@include media($xs) {
+			font: 300 24px/26px $baseFF;
+		}
+	}
+
+	.btn{
+		font-size: 13px;
 	}
 }

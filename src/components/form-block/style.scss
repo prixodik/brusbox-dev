@@ -700,6 +700,10 @@
 				color: $white;
 			}
 
+			@include media($xlg) {
+				max-width: 435px;
+			}
+
 			@include media($md) {
 				max-width: 435px;
 			}

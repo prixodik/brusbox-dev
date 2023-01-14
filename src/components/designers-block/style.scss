@@ -6,8 +6,8 @@
 	}
 
 	&__img {
-		max-width: 443px;
-		width: 100%;
+		max-width: 560px;
+		height: 100%;
 	}
 
 	&__info {
@@ -71,7 +71,8 @@
 
 		&__title & {
 			&__subtitle {
-				display: none;
+				// display: none;
+				font-size: 17px;
 			}
 		}
 
@@ -104,7 +105,7 @@
 		}
 
 		&__param {
-			display: none;
+			// display: none;
 		}
 
 		&__button {
@@ -155,11 +156,11 @@
 
 		&__param {
 			display: flex;
-			margin: 16px 0px;
+			margin: 3px 0px;
 		}
 
 		&__button {
-			margin-top: 24px;
+			margin-top: 10px;
 		}
 
 		&__item {
@@ -170,6 +171,9 @@
 
 		&__img {
 			min-width: 100%;
+		}
+		p{
+			margin: 0 0 0px!important;
 		}
 	}
 }

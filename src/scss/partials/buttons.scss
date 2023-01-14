@@ -4,10 +4,10 @@ button.btn {
 }
 
 .btn {
-	background: $btn-red;
+	// background: $btn-red;
 	font: 400 18px/25px $baseFF;
 	padding: 8px 24px;
-	color: $white;
+	// color: $white;
 	text-align: center;
 	display: inline-flex;
 	vertical-align: top;
@@ -57,6 +57,20 @@ button.btn {
 
 	&:focus {
 		outline: none;
+	}
+
+	&--border {
+		background: transparent;
+		border: 2px solid $btn-red;
+		color: $btn-red;
+		// transition: all 0.3s;
+
+		&:hover,
+		&:active {
+			transition: all 0.3s;
+			background: $btn-red;
+			// color: $white;
+		}
 	}
 
 	&--white {
