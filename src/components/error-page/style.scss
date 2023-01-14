@@ -143,6 +143,21 @@
 		.icon_error-3d {
 			font-size: 15rem;
 			width: 0.99em;
+
+			@include media($md) {
+				font-size: 14rem;
+				width: 0.8em;
+			}
+
+			@include media($sm) {
+				font-size: 18rem;
+				width: 0.8em;
+			}
+
+			@include media($xs) {
+				font-size: 10rem;
+				width: 0.6em;
+			}
 		}
 
 		position: absolute;

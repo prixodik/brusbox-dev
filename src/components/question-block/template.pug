@@ -4,3 +4,16 @@ mixin questionBlock(data)
 			+svg('question')
 		._answer
 			!=data.answer
+
+mixin questionBlockPopup(data)
+	.question-block.--popup.--bg-white&attributes(attributes)
+		._icon
+			+svg('question')
+		._answer
+			._img
+				+webp("images/buyers-product-section-1.png")
+			._text
+				!=data.text 
+			._info
+				!=data.info
+				
