@@ -62,12 +62,14 @@
 		@include media($xs) {
 			font: 300 10px/11px $baseFF;
 		}
+
 		a {
 			font-weight: 400;
 		}
+
 		a:hover {
 			color: #db3131;
-			
+
 		}
 
 		li {
@@ -125,7 +127,36 @@
 			margin-top: 16px;
 		}
 	}
+
 	p {
-		margin: 0px!important;
+		margin: 0px !important;
+	}
+
+	&__img {
+		// perspective: 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__3d {
+		.icon_error-3d {
+			font-size: 15rem;
+			width: 0.99em;
+		}
+
+		position: absolute;
+		transform: rotateY(45deg);
+		animation: rotateAnimation 5s linear infinite;
+
+		@keyframes rotateAnimation {
+			from {
+				transform: rotateY(45deg);
+			}
+
+			to {
+				transform: rotateY(225deg);
+			}
+		}
 	}
 }

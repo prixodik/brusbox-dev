@@ -87,8 +87,8 @@
 		}
 
 		@include media($xs) {
-			flex: 0 0 48px;
-			max-width: 48px;
+			flex: 0 0 40px;
+			max-width: 40px;
 		}
 	}
 
@@ -150,7 +150,7 @@
 
 		&__button {
 			.btn {
-				height: auto;
+				// height: auto;
 			}
 		}
 
@@ -159,7 +159,7 @@
 			margin-left: 20px;
 
 			@include media($xs) {
-				margin-left: 17px;
+				margin-left: 10px;
 			}
 		}
 
