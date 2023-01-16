@@ -6551,49 +6551,52 @@ var uikit = {
   horisontalScroll(){
 
 
-    document.getElementById("horizontal-scroller")
+    if(document.getElementById("horizontal-scroller"))
 
 
-    .addEventListener('wheel', function(event) {
+      document.getElementById("horizontal-scroller")
 
 
-      if (event.deltaMode == event.DOM_DELTA_PIXEL) {
+      .addEventListener('wheel', function(event) {
 
 
-        var modifier = 1;
+        if (event.deltaMode == event.DOM_DELTA_PIXEL) {
 
 
-        // иные режимы возможны в Firefox
+          var modifier = 1;
 
 
-      } else if (event.deltaMode == event.DOM_DELTA_LINE) {
+          // иные режимы возможны в Firefox
 
 
-        var modifier = parseInt(getComputedStyle(this).lineHeight);
+        } else if (event.deltaMode == event.DOM_DELTA_LINE) {
 
 
-      } else if (event.deltaMode == event.DOM_DELTA_PAGE) {
+          var modifier = parseInt(getComputedStyle(this).lineHeight);
 
 
-        var modifier = this.clientHeight;
+        } else if (event.deltaMode == event.DOM_DELTA_PAGE) {
 
 
-      }
+          var modifier = this.clientHeight;
 
 
-      if (event.deltaY != 0) {
+        }
 
 
-        // замена вертикальной прокрутки горизонтальной
+        if (event.deltaY != 0) {
 
 
-        this.scrollLeft += modifier * event.deltaY;
+          // замена вертикальной прокрутки горизонтальной
 
 
-        event.preventDefault();
+          this.scrollLeft += modifier * event.deltaY;
 
 
-      }
+          event.preventDefault();
+
+
+        }
 
 
     });
