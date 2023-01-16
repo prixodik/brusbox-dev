@@ -9,6 +9,8 @@
 //=include ./plugins/jquery.nice-select.min.js
 //=include ../../node_modules/swiper/swiper-bundle.min.js
 
+//=include "./calculator/app.js"
+//=include "./calculator/chunk-vendors.js"
 
-//=include ./partials/app.js 
 
+//=include ./partials/app.js

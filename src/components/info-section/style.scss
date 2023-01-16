@@ -23,7 +23,7 @@
 	&__info {
 		max-width: 736px;
 		margin: 0 auto;
-		padding: 60px 24px;
+		padding: 40px 24px;
 		align-self: center;
 
 		@include media($md) {
@@ -88,10 +88,28 @@
 		}
 	}
 
+	&--row-reverse-sm & {
+		&__row {
+			@include media($sm) {
+				flex-direction: column-reverse;
+			}
+		}
+	}
+
+	&--short-info & {
+		&__info {
+			max-width: 550px;
+
+			@include media($sm) {
+				max-width: 100%;
+			}
+		}
+	}
+
 	&--title-small & {
 		&__info {
 			@include media($md) {
-				max-width: 500px;
+				max-width: 400px;
 			}
 
 			@include media($sm) {
@@ -150,6 +168,16 @@
 			@include media($sm) {
 				flex-direction: column-reverse;
 			}
+		}
+
+		&__next {
+			right: 16px;
+			left: auto;
+		}
+
+		&__prev {
+			right: 72px;
+			left: auto;
 		}
 
 		&__img {
@@ -446,6 +474,25 @@
 		}
 	}
 
+	&--small-img & {
+		
+		&__img {
+			img {
+				width: auto;
+			}
+
+			picture {
+				margin-right: 0;
+				height: auto;
+	
+				@include media($sm) {
+					margin-right: 0;
+				}
+			}
+	
+		}
+	}
+
 	&--padding-bt-big & {
 		&__row {
 			padding-bottom: 120px;
@@ -497,6 +544,13 @@
 	}
 
 	&--swiper & {
+		&__container {
+			max-width: 1330px;
+			margin: 0 auto;
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+
 		&__slider {
 			// overflow: visible;
 			padding-bottom: 70px;
@@ -514,12 +568,17 @@
 			}
 
 			@include media($md) {
-				max-width: 488px;
+				max-width: 640px;
 			}
 
 			&-wrap {
 				width: 400px;
 				height: 400px;
+
+				@include media($md) {
+					width: 340px;
+					height: 340px;
+				}
 
 				@include media($sm) {
 					width: 360px;
@@ -533,8 +592,25 @@
 			}
 		}
 
+		&__slides {
+			@include media($sm) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
 		&__slide {
 			img {
+				max-width: 100%;
+			}
+		}
+
+		&__info {
+			@include media($lg) {
+				max-width: 560px;
+			}
+
+			@include media($sm) {
 				max-width: 100%;
 			}
 		}
@@ -635,6 +711,14 @@
 			align-items: center;
 			max-width: 736px;
 			margin: 0 auto;
+			padding-left: 60px;
+			padding-right: 60px;
+
+			@include media($sm) {
+				max-width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}
 
 		&__text {
@@ -643,7 +727,8 @@
 
 		&__img {
 			display: block;
-			height: 100%;
+			min-height: 100%;
+			// max-height: 600px;
 			width: 100%;
 		}
 
@@ -692,8 +777,8 @@
 
 		@include media($sm) {
 			&__info {
-				max-width: 688px;
-				padding: 70px 0px;
+				max-width: 100%;
+				padding: 70px 40px;
 
 				br {
 					display: none;
@@ -900,7 +985,68 @@
 		}
 	}
 
+	&--info-center & {
+		&__img {
+			img {
+				margin: 0;
+
+				@include media($sm) {
+					margin: 0 auto;
+				}
+			}
+		}
+
+		&__row {
+			@include media($sm) {
+				flex-direction: column;
+			}
+		}
+
+		&__info {
+			max-width: 570px;
+
+			@include media($sm) {
+				max-width: 100%;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
+		&__container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
+
 	&--bg-white {
 		background-color: $white;
+	}
+
+	&--row-revers & {
+		&__next {
+			right: 16px;
+			left: auto;
+		}
+
+		&__prev {
+			right: 72px;
+			left: auto;
+			
+			@include media($xs) {
+				right: 60px;
+			}
+		}
+
+		
+		&__img {
+			picture {
+				min-height: 100%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
 	}
 }

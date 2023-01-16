@@ -1,24 +1,26 @@
 mixin actionBlock(data)
 	.action-block&attributes(attributes)
 		a(href="#")._link
-			._head
-				!=data.date
-			._img
-				+webp(data.img)
-			._title
-				!=data.title
-			._text
-				!=data.text
+			._wrap
+				._head
+					!=data.date
+				._img
+					+webp(data.img)
+				._title
+					!=data.title
+				._text
+					!=data.text
 
 
 mixin actionBlockMode(data)
 	.action-block.--mode&attributes(attributes)
 		a(href="#")._link
-			._img
-				+webp(data.img)
-			._date
-				!=data.date
-			._title
-				!=data.title
-			._text
-				!=data.text
+			._wrap
+				._img
+					+webp(data.img)
+				._date
+					!=data.date
+				._title
+					!=data.title
+				._text
+					!=data.text

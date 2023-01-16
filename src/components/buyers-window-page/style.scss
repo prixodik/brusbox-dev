@@ -3,5 +3,19 @@
 		text-align: center;
 		color: $gray-medium;
 		margin-bottom: 40px;
+
+		@include media($lg) {
+			font: 300 32px/32px $baseFF
+		}
+
+		@include media($sm) {
+			font: 300 46px/51px $baseFF;
+			text-align: left;
+		}
+
+		@include media($xs) {
+			font: 300 24px/26px $baseFF;
+			text-align: center;
+		}
 	}
 }

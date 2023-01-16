@@ -3,6 +3,8 @@ mixin documentationBlock(data)
 		._row
 			._img
 				+webp(data.img)
+				._title-xs
+					!=data.title
 			._info
 				h5._title
 					!=data.title

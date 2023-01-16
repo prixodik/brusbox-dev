@@ -1,0 +1,94 @@
+{
+	"palitra": [
+		{
+			"title": "Ирландский дуб",
+			"sku": " 3211005",
+			"image": "color-1.png"
+		},
+		{
+			"title": "Русский дуб",
+			"sku": " 22105",
+			"image": "color-2.png"
+		},
+		{
+			"title": "Египетский камыш",
+			"sku": " 1005",
+			"image": "color-3.png"
+		},
+		{
+			"title": "Красный дуб",
+			"sku": " 211005",
+			"image": "color-4.png"
+		},
+		{
+			"title": "Сизый мерен",
+			"sku": " 32411005",
+			"image": "color-5.png"
+		},
+		{
+			"title": "Обычный сук",
+			"sku": "33005",
+			"image": "color-6.png"
+		},
+		{
+			"title": "Пень обыкновенный",
+			"sku": " 3444005",
+			"image": "color-7.png"
+		},
+		{
+			"title": "Крымская ёлочка",
+			"sku": " 11005",
+			"image": "color-8.png"
+		},
+		{
+			"title": "Егоркова радость",
+			"sku": "999",
+			"image": "color-9.png"
+		},
+		{
+			"title": "Ирландский дуб",
+			"sku": " 3211005",
+			"image": "color-1.png"
+		},
+		{
+			"title": "Русский дуб",
+			"sku": " 22105",
+			"image": "color-2.png"
+		},
+		{
+			"title": "Египетский камыш",
+			"sku": " 1005",
+			"image": "color-3.png"
+		},
+		{
+			"title": "Красный дуб",
+			"sku": " 211005",
+			"image": "color-4.png"
+		},
+		{
+			"title": "Сизый мерен",
+			"sku": " 32411005",
+			"image": "color-5.png"
+		},
+		{
+			"title": "Обычный сук",
+			"sku": "33005",
+			"image": "color-6.png"
+		},
+		{
+			"title": "Пень обыкновенный",
+			"sku": " 3444005",
+			"image": "color-7.png"
+		},
+		{
+			"title": "Крымская ёлочка",
+			"sku": " 11005",
+			"image": "color-8.png"
+		},
+		{
+			"title": "Егоркова радость",
+			"sku": "999",
+			"image": "color-9.png"
+		}
+	]
+}

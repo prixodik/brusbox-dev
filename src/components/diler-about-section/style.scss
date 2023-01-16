@@ -69,6 +69,9 @@
 			margin-right: 8px;
 			color: $gray-medium;
 		}
+		a {
+			display: inline-block;
+		}
 	}
 
 	&__additionsl {
@@ -89,10 +92,25 @@
 	&__slider {
 		@include media($sm) {
 			margin-top: 70px;
+
+			.product-block__prev {
+				right: 70px;
+			}
 		}
 
 		@include media($xs) {
 			margin-top: 17px;
+
+			.product-block__prev {
+				right: 60px;
+			}
+		}
+
+		.slick-list {
+			height: 100%!important;
+			@include media($sm) {
+				height: auto!important;
+			}
 		}
 	}
 

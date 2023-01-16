@@ -13,7 +13,7 @@ block content
 	include ../components/header/template
 	+header2()
 
-	.diler-page
+	.dilers-page
 		+headSection({
 			title: 'Пластиковые окна и двери<br> в ООО «Окна в дом»',
 			img: 'images/head-bg-diler.jpg',
@@ -27,7 +27,7 @@ block content
 				title: 'Реализованные проекты'
 			}).text-section--center.text-section--title-black.text-section--special-padding
 
-		+infoSectionSliderImg({
+		+infoSectionSliderImgH5({
 			items: [{
 				img: 'images/info-slide-object-1.jpg',
 				title: '«Красная горка»',
@@ -44,13 +44,14 @@ block content
 
 		._container.container
 			+textSectionTitle({
-				title: 'Реализованные проекты'
+				title: 'Акции дилера'
 			}).text-section--center.text-section--title-black.text-section--special-padding
 
-		include ../components/action-section/template
-		+actionSection({
-			title: ''
-		}).action-section--transporent.action-section--padding-top-none
+		._actions
+			include ../components/action-section/template
+			+actionSection({
+				title: ''
+			}).action-section--transporent.action-section--padding-top-none
 
 		._container.container
 			+textSectionTitle({
@@ -84,7 +85,7 @@ block content
 			}]
 		}).info-section--row-revers
 
-		+textSection({
+		+textSectionContainerSm({
 			text: 'Клиенты компании «Окна в дом» получают качественное остекление квартир, частных домов, коттеджей и офисных помещений по разумной цене. Безупречный сервис компании выражается в понимании потребностей каждого покупателя, профессиональной консультации квалифицированного персонала, грамотном подходе в выборе продукции, и точном расчете стоимости окон. <br>Наша компания не экономит на материалах и работает только с надежными поставщиками. <br>Благодаря комплексному подходу наши оконные блоки служат дольше других. <br>Контроль качества происходит на всех этапах — от замера окон до монтажа и принятия объекта. Поэтому мы даем гарантии на все предлагаемые конструкции и работы по их установке. На официальном сайте  «Окна в дом» работает удобная навигация, поэтому вы без труда найдете необходимую и полезную информацию, которая поможет сделать правильный выбор.'
 		}).text-section--gray-dark.text-section--long-2
 

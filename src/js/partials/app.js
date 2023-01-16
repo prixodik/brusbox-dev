@@ -873,7 +873,35 @@ var uikit = {
 
   selectsSorting: function () {
     let arr = [];
-    $('.js-select-sorting').on('change', 'select', function () {
+
+    $('.js-select-options').on('click', function(event) {
+
+      let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
+      $(this).find('.current').html(place)
+      
+    });
+
+    $('.js-select-options li').on('click', function(event) {
+
+      let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
+      $(this).closest('.js-select-sorting').find('.current').html(place)
+      // console.log( $(this).closest('.js-select-sorting'))
+      
+    });
+
+    $('.js-select-options').on('change', function() {
+      let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
+    })
+
+    $('.js-select-sorting').on('change', function(e) {
+      let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
+      $(this).find('.sort-block__option').removeClass('selected')
+      $(this).find('.sort-block__option--placeholder').addClass('selected')
+      $(this).children('.current')
+      
+    })
+
+    $('.js-select-sorting').on('change', 'select', function (e) {
       let sortBy = $(this).val();
       let list = '<ul>';
 
@@ -888,13 +916,18 @@ var uikit = {
       } else {
         arr.push(sortBy)
       }
-      console.log(arr)
 
       arr.forEach(function (item, i, arr) {
         list += `<li id=${i}>` + item + '<svg class="selects-section__close js-close-option" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.5 0.5L12.5 12.5" stroke="black" stroke-linecap="round"/><path d="M12.5 0.5L0.5 12.5" stroke="black" stroke-linecap="round"/></svg>' + '</li>';
       });
 
       $('.js-select-sorting-options').html(list)
+
+      
+      // $(this).find('.sort-block__option--placeholder').attr('data-display')
+      let text = $(this).find('.sort-block__option--placeholder').attr('data-display')
+      // console.log($(this).children('.current'))
+      // $(e.target).children('.current').text('erere')
     });
 
     $(function () {

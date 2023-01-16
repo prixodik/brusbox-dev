@@ -53,6 +53,16 @@
 		}
 	}
 
+	&__actions {
+		.action-section {
+			padding-bottom: 0;
+		}
+
+		.action-block {
+			margin-bottom: 10px;
+		}
+	}
+
 	&__link {
 		margin-right: 16px;
 		color: $bb-gray;
@@ -105,10 +115,10 @@
 		&__map {
 			padding: 112px 0 60px;
 
-			@include media($sm){
+			@include media($sm) {
 				padding: 60px 0;
 			}
-			@include media($xs){
+			@include media($xs) {
 				padding: 40px 0;
 			}
 		}
@@ -149,7 +159,7 @@
 			margin-bottom: 60px;
 		}
 	}
-	&__services{
+	&__services {
 		padding: 104px 0px 112px;
 
 		@include media($md) {
@@ -159,7 +169,7 @@
 		@include media($sm) {
 			padding: 70px 0px 70px;
 
-			.service-block{
+			.service-block {
 				margin-bottom: 8px;
 			}
 		}
@@ -167,8 +177,94 @@
 		@include media($xs) {
 			padding: 40px 0px 40px;
 
-			.service-block{
+			.service-block {
 				margin-bottom: 12px;
+			}
+		}
+	}
+
+	&--calculator & {
+		&__title {
+			.text-section__title {
+				text-align: center;
+			}
+		}
+	}
+
+	&--calculator {
+		.calc-block__row {
+			padding: 0 60px 120px;
+
+			@include media($max: 1180px) {
+				flex-direction: column;
+				justify-content: center;
+				padding: 0 40px 70px;
+			}
+		}
+		.window-block {
+			padding: 80px 24px 0 24px;
+		}
+
+		@include media($lg) {
+			.calc-block__row {
+				padding: 0 0 80px;
+			}
+		}
+		@include media($max: 1180px) {
+			.calc-block__left[data-v-8143caf4] {
+				width: 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+
+			.calc-block__center {
+				margin: 40px auto;
+			}
+
+			.calc-block__right[data-v-8143caf4] {
+				width: 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+
+			.list-item-block__item[data-v-026c4227]{
+				padding-left: 0;
+			}
+		}
+
+		@include media($xs) {
+			.window-block__params {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			.dilers-page--calculator .window-block {
+				padding: 101px 79px 0 25px;
+			}
+			.calc-block__center[data-v-8143caf4] {
+				flex: 1 1 auto;
+				width: 100%;
+				max-width: 250px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.calc-block__row {
+				padding: 0 16px 100px;
+			}
+
+			.window-block__sizes--right {
+				right: -45px;
+				width: 50px;
+			}
+
+			.window-block {
+				padding-left: 0;
+			}
+		}
+
+		@include media($max: 400px) {
+			.calc-block__center[data-v-8143caf4] {
+				margin-left: 0;
+				margin-right: 0;
 			}
 		}
 	}
