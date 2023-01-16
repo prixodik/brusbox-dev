@@ -21,9 +21,6 @@
   font-size:(8/10)*1rem;
   width:(7/8)*1em;
 }
-.icon_check-gray {
-  font-size:(10/10)*1rem;
-  width:(16/10)*1em;
 .icon_certificates {
   font-size:(95/10)*1rem;
   width:(95/95)*1em;
@@ -31,6 +28,10 @@
 .icon_certificates-2 {
   font-size:(95/10)*1rem;
   width:(95/95)*1em;
+}
+.icon_check-gray {
+  font-size:(10/10)*1rem;
+  width:(16/10)*1em;
 }
 .icon_close {
   font-size:(18/10)*1rem;
@@ -84,9 +85,14 @@
   font-size:(24/10)*1rem;
   width:(24/24)*1em;
 }
+.icon_download-2 {
+  font-size:(25/10)*1rem;
+  width:(24/25)*1em;
+}
 .icon_email {
   font-size:(32/10)*1rem;
   width:(32/32)*1em;
+}
 .icon_error-3d {
   font-size:(360/10)*1rem;
   width:(360/360)*1em;
@@ -187,7 +193,10 @@
   font-size:(48/10)*1rem;
   width:(48/48)*1em;
 }
-
+// .icon_sprite-svg {
+//   font-size:(0/10)*1rem;
+//   width:(0/0)*1em;
+// }
 .icon_telegram {
   font-size:(15/10)*1rem;
   width:(18/15)*1em;

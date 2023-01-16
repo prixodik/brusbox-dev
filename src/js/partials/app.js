@@ -195,6 +195,24 @@ var uikit = {
         `images/color-sol-${id}.png`
       );
 
+      if (id !== undefined) {
+        $(".js-pallette-profile-chenge img").attr(
+          "src",
+          `images/color-sol-${id}.png`
+        );
+        $(".js-data-color").text(color);
+      }
+
+      $(".js-pallette-profile-chenge img:not(.is-active)").attr(
+        "src",
+        `images/color-sol-second-img-${id}.png`
+      );
+
+      let a2 = $(".js-pallette-profile-chenge img.is-active");
+      let nota2 = $(".js-pallette-profile-chenge img:not(.is-active)");
+      a2.removeClass("is-active");
+      nota2.addClass("is-active");
+
       let a = $(".js-pallette-chenge img.is-active");
       let nota = $(".js-pallette-chenge img:not(.is-active)");
       a.removeClass("is-active");
@@ -462,8 +480,8 @@ var uikit = {
       e.preventDefault();
       let tab =
         typeof $(this).attr("href") != "undefined" ?
-          $(this).attr("href") :
-          $(this).attr("data-tab");
+        $(this).attr("href") :
+        $(this).attr("data-tab");
       if (typeof $(this).attr("data-parent") != "undefined") {
         $('[href="' + tab + '"], [data-tab="' + tab + '"]')
           .closest($(this).attr("data-parent"))
@@ -495,8 +513,8 @@ var uikit = {
       }
       var href =
         $(this).attr("href") != undefined ?
-          $(this).attr("href") :
-          "#" + $(this).val();
+        $(this).attr("href") :
+        "#" + $(this).val();
       var nav_id = $(this).data("navid");
       $(".tabs__nav__item, .tabs__nav-item, .tabs__body").removeClass(
         "is-active"
@@ -542,14 +560,14 @@ var uikit = {
   },
 
   lazy: function () {
-    function logElementEvent(eventName, element) { }
-    var callback_enter = function (element) { };
-    var callback_exit = function (element) { };
-    var callback_loading = function (element) { };
-    var callback_loaded = function (element) { };
-    var callback_error = function (element) { };
-    var callback_finish = function () { };
-    var callback_cancel = function (element) { };
+    function logElementEvent(eventName, element) {}
+    var callback_enter = function (element) {};
+    var callback_exit = function (element) {};
+    var callback_loading = function (element) {};
+    var callback_loaded = function (element) {};
+    var callback_error = function (element) {};
+    var callback_finish = function () {};
+    var callback_cancel = function (element) {};
 
     var lazyLoadOb = new LazyLoad({
       class_applied: "lz-applied",
@@ -609,8 +627,8 @@ var uikit = {
     $(".js-scroll-to").click(function () {
       var href = $(this).attr("href");
       $("html, body").animate({
-        scrollTop: $(href).offset().top,
-      },
+          scrollTop: $(href).offset().top,
+        },
         400
       );
       return false;
@@ -832,26 +850,16 @@ var uikit = {
   },
 
   horizontalScrollDilers: function () {
-    var pass = $('#about-company-section--wrapper');
-    pass.mousedown(function (e) {
-      console.log(e);
-      $this = $(this);
-      $this.css('z-index', '-1000');
-      $('document').trigger(e);
-      $(document).mouseup(function (e) {
-        console.log(e);
-        $this.css('z-index', '1000');
+    let element = $("#js-horizontal-scroller");
+
+    element.on('wheel', (event) => {
+      event.preventDefault();
+    
+      element.scrollBy({
+        left: event.deltaY < 0 ? -30 : 30,
+        
       })
     });
-
-    $(document).mousemove(function (e, d) {
-      pass.css('top', e.clientY);
-      pass.css('left', e.clientX);
-    })
-    pass.scroll(function () {
-      console.log(pass.scrollTop());
-      $('body').scrollLeft(pass.scrollTop());
-    })
   },
 
   sendFormDefault: function () {
@@ -878,31 +886,31 @@ var uikit = {
   selectsSorting: function () {
     let arr = [];
 
-    $('.js-select-options').on('click', function(event) {
+    $('.js-select-options').on('click', function (event) {
 
       let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
       $(this).find('.current').html(place)
-      
+
     });
 
-    $('.js-select-options li').on('click', function(event) {
+    $('.js-select-options li').on('click', function (event) {
 
       let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
       $(this).closest('.js-select-sorting').find('.current').html(place)
       // console.log( $(this).closest('.js-select-sorting'))
-      
+
     });
 
-    $('.js-select-options').on('change', function() {
+    $('.js-select-options').on('change', function () {
       let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
     })
 
-    $('.js-select-sorting').on('change', function(e) {
+    $('.js-select-sorting').on('change', function (e) {
       let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
       $(this).find('.sort-block__option').removeClass('selected')
       $(this).find('.sort-block__option--placeholder').addClass('selected')
       $(this).children('.current')
-      
+
     })
 
     $('.js-select-sorting').on('change', 'select', function (e) {
@@ -978,12 +986,12 @@ $(document).ready(function () {
 var clrTimeOut;
 $(window).on("load", function (e) {
   clearTimeout(clrTimeOut);
-  clrTimeOut = setTimeout(function () { }, 200);
+  clrTimeOut = setTimeout(function () {}, 200);
 });
 
 $(window).resize(function () {
   clearTimeout(clrTimeOut);
-  clrTimeOut = setTimeout(function () { }, 200);
+  clrTimeOut = setTimeout(function () {}, 200);
 });
 
 $(window).scroll(function () {

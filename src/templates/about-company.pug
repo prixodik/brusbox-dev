@@ -37,25 +37,25 @@ block content
 					text: '<p>BRUSBOX — это принципиально новая разработка, качественный ПВХ-профиль, созданный на основе уникального комплекса передовых технологий и собственного практического опыта производства металлопластиковых окон.</p>',
 				}).text-section--text-center.text-section--long-3
 
-		.about-company-section--wrapper
+		.about-company-section.about-company-section--wrapper
 			._container.container
-				._info
+				#js-horizontal-scrolle._info
 					+textBlockNumerical({
 						number: '50 000',
 						text: 'м² собственного производства'
-					})
+					})._item
 					+textBlockNumerical({
 						number: '40 000',
 						text: 'тонн в год — объём производства'
-					})
+					})._item
 					+textBlockNumerical({
 						number: '18 лет',
 						text: 'на рынке'
-					})
+					})._item
 					+textBlockNumerical({
 						number: '120 000',
 						text: 'км оконного профиля ежегодно'
-					})
+					})._item
 
 		.about-company-section
 			+bannerImg({
@@ -101,7 +101,7 @@ block content
 					{img: "images/about-company-slider-5.jpg", text: 'И о главном! Оконные системы BRUSBOX – продукт долговечный и надежный. <br> Первые окна из профиля BRUSBOX, произведенные ещё в 2004 году,<br> радуют их владельцев по сей день.'}
 				]
 				}).info-section--slider-column-xs
-		.about-company-section
+		._item
 			+infoSectionAboutCompany()
 	//- +gridLayout()
 
