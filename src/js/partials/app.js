@@ -844,7 +844,6 @@ var uikit = {
             div.find(".js-search-toggle").addClass("is-disabled");
           }
         });
-        console.log(1);
         return false;
       } else {
         $(this)
@@ -906,24 +905,29 @@ var uikit = {
   selectsSorting: function () {
     let arr = [];
 
-    $('.js-select-options').on('click', function (event) {
+    $('.js-select-options .sort-block__option').on('click', function (event) {
 
-      let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
-      $(this).find('.current').html(place)
-
+      //
+      //$(this).find('.current').html(place)
+      let self = $(this);
+      setTimeout(()=>{
+        let place = self.parents('.js-select-sorting').find('select').data('display');
+        console.log(self.parents('.js-select-sorting'));
+        self.parents('.js-select-sorting').find('.current').text(place);
+      },100);
     });
 
-    $('.js-select-options li').on('click', function (event) {
+    /* $('.js-select-options li').on('click', function (event) {
 
       let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
-      $(this).closest('.js-select-sorting').find('.current').html(place)
+      //$(this).closest('.js-select-sorting').find('.current').html(place)
       // console.log( $(this).closest('.js-select-sorting'))
 
-    });
+    }); */
 
-    $('.js-select-options').on('change', function () {
+    /* $('.js-select-options').on('change', function () {
       let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
-    })
+    }) */
 
     $('.js-select-sorting').on('change', function (e) {
       let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
