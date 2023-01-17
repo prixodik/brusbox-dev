@@ -29,3 +29,21 @@ mixin paramBlockProduct(data)
 					+questionBlock({
 						answer: "Тут подсказка",
 					})
+
+mixin paramBlockBuyers(data)
+	.param-block.--buyers.--padding&attributes(attributes)
+		each list in data.list
+			if list.title
+				h4._title
+					!=list.title
+			._item
+				if list.label
+					._label
+						!=list.label
+				if list.value
+					._value
+						!=list.value
+					+questionBlockPopup({
+						text: "<p> Профиль BRUSBOX AERO стал главной новинкой 2018 года. Основанием для создания которой явилось ужесточение требований ГОСТ 30673-2013 к толщине наружных стенок.</p>",
+						info: " Относится к классу «А», поскольку имеет толщину лицевой стенки – 3,0 мм.",
+					})

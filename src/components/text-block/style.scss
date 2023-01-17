@@ -21,6 +21,11 @@
 			text-transform: uppercase;
 			margin-right: 121px;
 			
+			@include media($xlg) {
+				font: 100 64px/60.16px $baseFF;
+				margin-right: 120px;
+			}
+
 			@include media($md) {
 				font: 100 64px/60.16px $baseFF;
 				margin-right: 120px;
@@ -33,7 +38,7 @@
 		
 			@include media($xs) {
 				font: 100 60px/56.4px $baseFF;
-				margin-right: 72px;
+				margin-right: 32px;
 			}
 		}
 		&__text {

@@ -14,21 +14,22 @@ var uikit = {
   },
 
   horisontalScroll(){
-    document.getElementById("horizontal-scroller")
-    .addEventListener('wheel', function(event) {
-      if (event.deltaMode == event.DOM_DELTA_PIXEL) {
-        var modifier = 1;
-        // иные режимы возможны в Firefox
-      } else if (event.deltaMode == event.DOM_DELTA_LINE) {
-        var modifier = parseInt(getComputedStyle(this).lineHeight);
-      } else if (event.deltaMode == event.DOM_DELTA_PAGE) {
-        var modifier = this.clientHeight;
-      }
-      if (event.deltaY != 0) {
-        // замена вертикальной прокрутки горизонтальной
-        this.scrollLeft += modifier * event.deltaY;
-        event.preventDefault();
-      }
+    if(document.getElementById("horizontal-scroller"))
+      document.getElementById("horizontal-scroller")
+      .addEventListener('wheel', function(event) {
+        if (event.deltaMode == event.DOM_DELTA_PIXEL) {
+          var modifier = 1;
+          // иные режимы возможны в Firefox
+        } else if (event.deltaMode == event.DOM_DELTA_LINE) {
+          var modifier = parseInt(getComputedStyle(this).lineHeight);
+        } else if (event.deltaMode == event.DOM_DELTA_PAGE) {
+          var modifier = this.clientHeight;
+        }
+        if (event.deltaY != 0) {
+          // замена вертикальной прокрутки горизонтальной
+          this.scrollLeft += modifier * event.deltaY;
+          event.preventDefault();
+        }
     });
   },
 
@@ -70,12 +71,12 @@ var uikit = {
   },
 
   yandexMap: function () {
-    ymaps.ready(function(){
+    ymaps.ready(function () {
       let i;
       let place;
       let pointer = [
         [56.326797, 44.006516],
-        [56.204805, 43.879950], 
+        [56.204805, 43.879950],
         [56.238376, 43.461620]
       ];
 
@@ -84,14 +85,14 @@ var uikit = {
         center: [56.326797, 44.006516],
         zoom: 9
       }, {
-          searchControlProvider: 'yandex#search',
+        searchControlProvider: 'yandex#search',
       });
 
       let locationMap = new ymaps.Map('location_map', {
         center: [55.655996, 37.280426],
         zoom: 16.5
       }, {
-          searchControlProvider: 'yandex#search',
+        searchControlProvider: 'yandex#search',
       });
 
       storeLocation = new ymaps.Placemark([55.655996, 37.280426], {
@@ -101,9 +102,9 @@ var uikit = {
       });
 
       locationMap.geoObjects.add(storeLocation);
-      
-      for(i = 0; i < pointer.length; ++i) {
-		
+
+      for (i = 0; i < pointer.length; ++i) {
+
         place = new ymaps.Placemark(pointer[i], {
           balloonContent: ""
         }, {
@@ -119,21 +120,21 @@ var uikit = {
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
 
       }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: 'images/yandex-map-flag.png',
-          // Размеры метки.
-          iconImageSize: [53, 55],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-25, -52]
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'images/yandex-map-flag.png',
+        // Размеры метки.
+        iconImageSize: [53, 55],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-25, -52]
       });
 
       myMap.geoObjects
         .add(myPlacemark)
-   });
+    });
   },
 
   hideText: function () {
@@ -213,6 +214,24 @@ var uikit = {
         "src",
         `images/color-sol-${id}.png`
       );
+
+      if (id !== undefined) {
+        $(".js-pallette-profile-chenge img").attr(
+          "src",
+          `images/color-sol-${id}.png`
+        );
+        $(".js-data-color").text(color);
+      }
+
+      $(".js-pallette-profile-chenge img:not(.is-active)").attr(
+        "src",
+        `images/color-sol-second-img-${id}.png`
+      );
+
+      let a2 = $(".js-pallette-profile-chenge img.is-active");
+      let nota2 = $(".js-pallette-profile-chenge img:not(.is-active)");
+      a2.removeClass("is-active");
+      nota2.addClass("is-active");
 
       let a = $(".js-pallette-chenge img.is-active");
       let nota = $(".js-pallette-chenge img:not(.is-active)");
@@ -801,7 +820,7 @@ var uikit = {
         }
       });
     }
-      
+
   },
 
   searchBlock: function () {
@@ -850,6 +869,19 @@ var uikit = {
     });
   },
 
+  horizontalScrollDilers: function () {
+    let element = $("#js-horizontal-scroller");
+
+    element.on('wheel', (event) => {
+      event.preventDefault();
+    
+      element.scrollBy({
+        left: event.deltaY < 0 ? -30 : 30,
+        
+      })
+    });
+  },
+
   sendFormDefault: function () {
     $('.js-request-form').submit((e) => {
       $('.js-send-request').addClass('is-active')
@@ -874,31 +906,31 @@ var uikit = {
   selectsSorting: function () {
     let arr = [];
 
-    $('.js-select-options').on('click', function(event) {
+    $('.js-select-options').on('click', function (event) {
 
       let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
       $(this).find('.current').html(place)
-      
+
     });
 
-    $('.js-select-options li').on('click', function(event) {
+    $('.js-select-options li').on('click', function (event) {
 
       let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
       $(this).closest('.js-select-sorting').find('.current').html(place)
       // console.log( $(this).closest('.js-select-sorting'))
-      
+
     });
 
-    $('.js-select-options').on('change', function() {
+    $('.js-select-options').on('change', function () {
       let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
     })
 
-    $('.js-select-sorting').on('change', function(e) {
+    $('.js-select-sorting').on('change', function (e) {
       let place = $(this).find('.sort-block__option--placeholder').attr('data-display')
       $(this).find('.sort-block__option').removeClass('selected')
       $(this).find('.sort-block__option--placeholder').addClass('selected')
       $(this).children('.current')
-      
+
     })
 
     $('.js-select-sorting').on('change', 'select', function (e) {
@@ -923,7 +955,7 @@ var uikit = {
 
       $('.js-select-sorting-options').html(list)
 
-      
+
       // $(this).find('.sort-block__option--placeholder').attr('data-display')
       let text = $(this).find('.sort-block__option--placeholder').attr('data-display')
       // console.log($(this).children('.current'))
@@ -966,6 +998,7 @@ var uikit = {
     this.showPopupLocation();
     this.sendFormDefault();
     this.yandexMap();
+    this.horizontalScrollDilers();
   },
 };
 $(document).ready(function () {

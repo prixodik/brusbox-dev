@@ -3,7 +3,7 @@
 	margin-bottom: 24px;
 
 	@include media($sm) {
-		margin-bottom: 12px;
+		margin-bottom: 16px;
 	}
 
 	&__icon {
@@ -42,6 +42,10 @@
 	&--padding-y {
 		@include media($sm) {
 			padding: 40px 0px;
+		}
+
+		@include media($xs) {
+			padding: 20px 0px;
 		}
 	}
 }

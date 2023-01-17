@@ -115,7 +115,7 @@ mixin infoSectionFormCalculator(data)
 						img(src=data.img, alt="")
 
 mixin infoSectionImgParams(data)
-	.info-section.--params&attributes(attributes)
+	.info-section.--params.info-section--no-column-revers&attributes(attributes)
 		._container.container.container--full
 			._row.row
 				._img.col-6.col-sm-12
@@ -177,8 +177,8 @@ mixin infoSectionButtonRed(data)
 						+webp(data.img)
 
 mixin infoSectionAboutCompany(data)
-	.info-section--about-company&attributes(attributes)
-		._container.container
+	.info-section.info-section--about-company&attributes(attributes)
+		._wrapper.container
 			._title
 				h5 Ознакомьтесь подробнее с компанией BRUSBOX
 			._items.row

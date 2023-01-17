@@ -27,7 +27,6 @@
 		align-self: center;
 
 		@include media($md) {
-			max-width: 400px;
 			padding: 60px 70px;
 		}
 
@@ -296,6 +295,9 @@
 			@include media($md) {
 				max-width: 436px;
 			}
+			@include media($sm) {
+				max-width: 715px;
+			}
 		}
 	}
 
@@ -475,7 +477,6 @@
 	}
 
 	&--small-img & {
-		
 		&__img {
 			img {
 				width: auto;
@@ -484,12 +485,11 @@
 			picture {
 				margin-right: 0;
 				height: auto;
-	
+
 				@include media($sm) {
 					margin-right: 0;
 				}
 			}
-	
 		}
 	}
 
@@ -635,6 +635,21 @@
 
 	&--about-company {
 		padding: 120px 0px;
+		
+		@include media($md) {
+			padding: 80px 0px;
+		}
+
+		@include media($sm) {
+			padding: 70px 0px;
+		}
+
+		@include media($xs) {
+			padding: 40px 0px;
+		}
+	}
+
+	&--about-company & {
 
 		&__title {
 			text-align: center;
@@ -644,15 +659,37 @@
 		&__item {
 			&-img {
 				margin-bottom: 16px;
+				width: 100%;
+				overflow: hidden;
+				img {
+					display: block;
+					transition: all 0.3s;
+				}
+			}
+
+			// &-img:hover {
+			// 	zoom: 11;
+			// }
+
+			a {
+				transition: all 0.3s;
+				&:hover{
+					.info-section__item-title {
+						color: red;
+						transition: all 0.3s;
+					}
+
+					.info-section__item-img img{
+						transform: scale(1.2);
+						transition: all 0.3s;
+					}
+				}
+
 			}
 		}
 
-		@include media($md) {
-			padding: 80px 0px;
-		}
 
 		@include media($sm) {
-			padding: 70px 0px;
 
 			&__item:nth-child(1),
 			&__item:nth-child(2) {
@@ -661,7 +698,6 @@
 		}
 
 		@include media($xs) {
-			padding: 40px 0px;
 
 			&__title {
 				margin-bottom: 16px;
@@ -711,8 +747,13 @@
 			align-items: center;
 			max-width: 736px;
 			margin: 0 auto;
-			padding-left: 60px;
-			padding-right: 60px;
+			// padding-left: 60px;
+			// padding-right: 60px;
+
+			@include media($xlg) {
+				padding-left: 40px;
+				padding-right: 0;
+			}
 
 			@include media($sm) {
 				max-width: 100%;
@@ -818,7 +859,7 @@
 			}
 
 			&__prev {
-				right: 72px;
+				right: 60px;
 				left: auto;
 			}
 
@@ -841,6 +882,12 @@
 			padding: 0px 0px;
 			max-width: 560px;
 			margin: 0px 112px 0px 0px;
+		}
+
+		&__img picture {
+			margin-right: 0;
+			display: block;
+			height: 100%;
 		}
 
 		&__img {
@@ -869,7 +916,7 @@
 			}
 
 			&__info {
-				max-width: 688px;
+				max-width: 100%;
 				margin: 0px 0px 16px 0px;
 			}
 		}
@@ -884,7 +931,7 @@
 			}
 
 			&__info {
-				max-width: 238px;
+				// max-width: 238px;
 			}
 		}
 	}
@@ -1034,19 +1081,47 @@
 		&__prev {
 			right: 72px;
 			left: auto;
-			
+
 			@include media($xs) {
 				right: 60px;
 			}
 		}
 
-		
 		&__img {
 			picture {
 				min-height: 100%;
 				margin-right: auto;
 				margin-left: auto;
 			}
+		}
+	}
+
+	&--padding-col {
+		@include media($sm) {
+			.col-sm-12 {
+				padding-left: 40px;
+				padding-right: 40px;
+			}
+		}
+		@include media($xs) {
+			.col-sm-12 {
+				padding-left: 16px;
+				padding-right: 16px;
+			}
+		}
+	}
+	&--title-h2-small & {
+		&__title {
+			font: 300 36px/36px $baseFF;
+		}
+		@include media($xlg) {
+			font: 300 24px/29px $baseFF;
+		}
+	}
+
+	&--title-h2-small-2 & {
+		&__title {
+			font: 300 28px/30px $baseFF;
 		}
 	}
 }

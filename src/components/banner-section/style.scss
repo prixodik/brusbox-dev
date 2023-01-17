@@ -180,7 +180,12 @@
 		padding: 0px 0px;
 		img{
 			width: 100%;
+
+			@include media($sm) {
+				height: auto;
+			}
 		}
+		
 	}
 	&--padding-mode{
 		padding: 120px 0px 112px;
