@@ -13,6 +13,13 @@
 		max-width: 90px;
 		max-height: 90px;
 
+		@include media($xlg) {
+			min-width: 60px;
+			min-height: 60px;
+			max-width: 60px;
+			max-height: 60px;
+		}
+
 		@include media($md) {
 			min-width: 56px;
 			min-height: 56px;

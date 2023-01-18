@@ -32,8 +32,13 @@
 
 		}
 		&__info {
-			@include flex(space-between, 0, 0, 0);
+			@include flex(start, 0, 0, 0);
 			min-width: 1920px;
+
+			@include media($xlg) {
+				justify-content: start;
+				min-width: 1700px;
+			}
 
 			@include media($md) {
 				justify-content: start;

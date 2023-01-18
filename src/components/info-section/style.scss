@@ -39,6 +39,13 @@
 			padding: 40px 16px 40px;
 		}
 	}
+	&--info-xlg &{
+		&__info {
+			@include media($xlg) {
+				padding: 40px 90px;
+			}
+		}
+	}
 
 	&__title {
 		/* padding-bottom: 8px; */
