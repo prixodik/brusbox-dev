@@ -7,7 +7,7 @@ mixin sortBlock(data)
 
 mixin sortBlockMode(data)
 	.sort-block.--mode&attributes(attributes)
-		select._select.nice-select.js-select-options
+		select._select.nice-select.js-select-options(data-display=data.display)
 			option._option.sort-block__option--placeholder.option(data-display=data.display)
 			each option in data.options
 				option._option.option
