@@ -78,8 +78,8 @@
 	&__prev {
 		right: 72px;
 
-		@include media($sm) {
-			right: 60px;
+		@include media($xs) {
+			right: 65px;
 		}
 	}
 

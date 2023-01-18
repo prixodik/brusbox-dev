@@ -19,12 +19,13 @@ block content
 			img: "images/main-bg-dilers-products.jpg"
 		})._head
 		._about
-			+infoSectionButtonRed({
-				img: 'images/info-section-product.png',
-				title: 'Профиль BRUSBOX',
-				text: 'Мы готовы предложить вам семь типов профилей, каждый<br> из которых обладает уникальными свойствами!<br> Профили BRUSBOX обладают бескомпромиссным качеством<br> и превосходными показателями',
-				btn: 'Подробнее о профиле'
-			}).dilers-page__info.info-section--bg-black.info-section--big-title.info-section--info-center
+			._container.container.container--text
+				+infoSectionButtonRed({
+					img: 'images/info-section-product.png',
+					title: 'Профиль BRUSBOX',
+					text: 'Мы готовы предложить вам семь типов профилей, каждый<br> из которых обладает уникальными свойствами!<br> Профили BRUSBOX обладают бескомпромиссным качеством<br> и превосходными показателями',
+					btn: 'Подробнее о профиле'
+				}).dilers-page__info.info-section--bg-black.info-section--big-title.info-section--info-center
 
 			._container.container.container--text
 				+documentationBlockTwoImg({
@@ -81,7 +82,7 @@ block content
 				title: 'Подоконники',
 				text: 'На сегодняшний день компания «БРУСБОКС» является одним<br> из крупнейших поставщиков ПВХ-подоконников на российском<br> рынке. Объемы производства превышают миллион квадратных<br> метров в год.',
 				btn: 'Подробнее о подоконниках'
-			}).info-section--transparent.info-section--padding-big.info-section--small-img 
+			}).info-section--transparent.info-section--padding-big.info-section--small-img.info-section--info-center
 		
 		._about.dilers-page__about--white
 			._container.container.container--text

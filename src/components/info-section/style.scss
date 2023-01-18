@@ -90,7 +90,7 @@
 	&--row-reverse-sm & {
 		&__row {
 			@include media($sm) {
-				flex-direction: column-reverse;
+				flex-direction: column;
 			}
 		}
 	}
@@ -1034,11 +1034,25 @@
 
 	&--info-center & {
 		&__img {
+			picture {
+				margin-right: 0;
+		  	}
 			img {
-				margin: 0;
+				margin: 0 0 0 auto;
+				max-width: 420px;
+				width: 100%;
+
+				@include media($lg) {
+					margin: 0 auto;
+					max-width: 400px;
+				}
+
+				@include media($md) {
+					max-width: 370px;
+				}
 
 				@include media($sm) {
-					margin: 0 auto;
+					max-width: 600px;
 				}
 			}
 		}
@@ -1051,10 +1065,11 @@
 
 		&__info {
 			max-width: 570px;
+			padding: 0;
 
 			@include media($sm) {
 				max-width: 100%;
-				padding-bottom: 0;
+				padding-bottom: 30px;
 				padding-left: 0;
 				padding-right: 0;
 			}

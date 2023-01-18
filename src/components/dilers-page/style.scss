@@ -17,6 +17,12 @@
 		}
 	}
 
+	.documentation-block {
+		&:first-child {
+			border-top: 1px solid $bb-gray;
+		}
+	}
+
 	&__col {
 		margin-bottom: 70px;
 
@@ -141,14 +147,17 @@
 
 			@include media($md) {
 				padding-bottom: 40px;
+				padding-top: 30px;
 			}
 
 			@include media($sm) {
 				padding-bottom: 70px;
+				padding-top: 40px;
 			}
 
 			@include media($xs) {
 				padding-bottom: 40px;
+				padding-top: 30px;
 			}
 
 			&--white {
@@ -157,6 +166,9 @@
 		}
 		&__info {
 			margin-bottom: 60px;
+			.container {
+				padding: 0;
+			}
 		}
 	}
 	&__services {
