@@ -35,6 +35,11 @@
 	}
 
 	&__palettes {
+		@include media($lg, $md) {
+			.palette-block {
+				margin: 0 auto;
+			}
+		}
 		@include media($sm) {
 			margin-bottom: 33px;
 		}
@@ -130,9 +135,14 @@
 		&-img-1 {
 			margin-right: 43px;
 
-			@include media($xs) {
-				margin-right: 0;
+			@include media($lg) {
+				margin-right: 65px;
 			}
+
+			@include media($md) {
+				margin-right: 43px;
+			}
+
 			@include media($sm) {
 				margin-right: 100px;
 			}

@@ -41,8 +41,8 @@
 	}
 	&--info-xlg &{
 		&__info {
-			@include media($xlg) {
-				padding: 40px 90px;
+			@include media($xlg, $min: 1201px) {
+				padding: 40px 64px;
 			}
 		}
 	}
