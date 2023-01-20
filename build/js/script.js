@@ -7313,13 +7313,13 @@ var uikit = {
       if (id !== undefined) {
 
 
-        $(".js-pallette-profile-chenge img").attr(
+        $(".colors-section__profile-img img").attr(
 
 
           "src",
 
 
-          `images/color-sol-${id}.png`
+          `images/color-sol-second-img-${id}-profile.png`
 
 
         );
@@ -7334,13 +7334,13 @@ var uikit = {
 
 
 
-      $(".js-pallette-profile-chenge img:not(.is-active)").attr(
+      $(".colors-section__profile-img img:not(.is-active)").attr(
 
 
         "src",
 
 
-        `images/color-sol-second-img-${id}.png`
+        `images/color-sol-second-img-${id}-profile.png`
 
 
       );
@@ -7349,10 +7349,10 @@ var uikit = {
 
 
 
-      let a = $(".js-pallette-profile-chenge img.is-active");
+      let a = $(".colors-section__profile-img img.is-active");
 
 
-      let nota = $(".js-pallette-profile-chenge img:not(.is-active)");
+      let nota = $(".colors-section__profile-img img:not(.is-active)");
 
 
       a.removeClass("is-active");

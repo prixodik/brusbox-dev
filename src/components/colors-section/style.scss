@@ -153,6 +153,10 @@
 			}
 		}
 
+		&-img-2 {
+			position: relative;
+		}
+
 		img {
 			max-height: 455px;
 
@@ -160,6 +164,26 @@
 				animation-name: Appearance;
 				animation-duration: 2s;
 			}
+		}
+	}
+
+	&__profile-img img {
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: all 2s;
+
+		&.is-active {
+			transition: all 2s;
+			opacity: 1;
+			animation-name: Appearance;
+			animation-duration: 2s;
 		}
 	}
 
@@ -247,5 +271,14 @@
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes AppearanceFrom {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
