@@ -11,9 +11,13 @@ mixin colorsSection(data)
 				._right-img-1.js-pallette-chenge
 					+webp("images/color-sol-2.png")
 					+webp("images/color-sol-1.png").is-active
-				._right-img-2.js-pallette-profile-chenge
-					+webp("images/color-sol-second-img-1.png")
-					+webp("images/color-sol-second-img-2.png").is-active
+				._right-img-2
+					.js-pallette-profile-chenge
+						+webp("images/color-sol-second-img-1.png")
+						+webp("images/color-sol-second-img-2.png").is-active
+					.colors-section__profile-img
+						img(src="images/color-sol-second-img-1-profile.png", alt="").is-active
+						img(src="images/color-sol-second-img-2-profile.png", alt="")
 
 mixin colorsSectionLamination(data)
 	.colors-section.-lamination&attributes(attributes)
