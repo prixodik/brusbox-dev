@@ -29,7 +29,7 @@ block content
 			}).text-section--black.text-section--padding-top-none
 
 		._container.container
-			//- div#app
+			div#app
  
 		+infoSectionFormCalculator({
 			img: 'images/info-calculator.jpg'
@@ -40,4 +40,6 @@ block content
 
 	//- +gridLayout()
 
-block scripts 
+block scripts
+	script(src="./js/calculator/app.js") 
+	script(src="./js/calculator/chunk-vendors.js") 

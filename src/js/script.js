@@ -11,8 +11,4 @@
 
 //=include ../../node_modules/jquery-mousewheel/jquery.mousewheel.js
 
-//=include "./calculator/app.js"
-//=include "./calculator/chunk-vendors.js"
-
-
 //=include ./partials/app.js
