@@ -7,6 +7,7 @@
 //=include ../../bower_components/fancybox/dist/jquery.fancybox.js
 //=include ../../bower_components/slick-carousel/slick/slick.min.js
 //=include ./plugins/jquery.nice-select.min.js
+//=include ./plugins/cookie.js
 //=include ../../node_modules/swiper/swiper-bundle.min.js
 
 //=include ../../node_modules/jquery-mousewheel/jquery.mousewheel.js

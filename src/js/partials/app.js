@@ -13,10 +13,10 @@ var uikit = {
     return $(window).height();
   },
 
-  horisontalScroll(){
-    if(document.getElementById("horizontal-scroller"))
+  horisontalScroll() {
+    if (document.getElementById("horizontal-scroller"))
       document.getElementById("horizontal-scroller")
-      .addEventListener('wheel', function(event) {
+      .addEventListener('wheel', function (event) {
         if (event.deltaMode == event.DOM_DELTA_PIXEL) {
           var modifier = 1;
           // иные режимы возможны в Firefox
@@ -30,7 +30,7 @@ var uikit = {
           this.scrollLeft += modifier * event.deltaY;
           event.preventDefault();
         }
-    });
+      });
   },
 
   ///------------------------------------------------используются в текущем проекте-----------------------------------------------
@@ -167,6 +167,19 @@ var uikit = {
       document.execCommand("copy");
       $temp.remove();
     });
+  },
+  showCookie: function () {
+
+    if (!$.cookie('acceptCookie')) {
+      setTimeout(() => {
+        $('.js-acept-cookie').addClass('is-active')
+      }, 2000)
+    }
+
+    $('.js-acept-cookie-btn').click(()=>{
+      $.cookie('acceptCookie', 'true');
+      $('.js-acept-cookie').removeClass('is-active')
+    })
   },
 
   chengeColorPalette: function () {
@@ -873,10 +886,10 @@ var uikit = {
 
     element.on('wheel', (event) => {
       event.preventDefault();
-    
+
       element.scrollBy({
         left: event.deltaY < 0 ? -30 : 30,
-        
+
       })
     });
   },
@@ -910,11 +923,11 @@ var uikit = {
       //
       //$(this).find('.current').html(place)
       let self = $(this);
-      setTimeout(()=>{
+      setTimeout(() => {
         let place = self.parents('.js-select-sorting').find('select').data('display');
         console.log(self.parents('.js-select-sorting'));
         self.parents('.js-select-sorting').find('.current').text(place);
-      },100);
+      }, 100);
     });
 
     /* $('.js-select-options li').on('click', function (event) {
@@ -1003,6 +1016,7 @@ var uikit = {
     this.sendFormDefault();
     this.yandexMap();
     this.horizontalScrollDilers();
+    this.showCookie();
   },
 };
 $(document).ready(function () {

@@ -1,0 +1,54 @@
+.cookie-block {
+	margin: 0 auto;
+	padding: 0 10px;
+	position: sticky;
+	bottom: 20px;
+	z-index: 99999999;
+	max-width: 1800px;
+	width: 100%;
+	display: none;
+
+	&.is-active {
+		display: block
+	}
+
+	&__wrap {
+		@include flex(space-between, center, center, 0);
+		background-color: $bg-grey;
+		border-radius: 48px;
+		padding: 16px 18px 16px 40px;
+		width: 100%;
+		@include media($sm) {
+			font: 400 12px/12px $baseFF;
+			padding: 13px 15px 13px 30px;
+		}
+
+		@include media($xs) {
+			padding: 15px 30px;
+
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&__text {
+		font: 400 14px/14px $baseFF;
+
+		@include media($xs) {
+			text-align: center;
+			font: 400 13px/15px $baseFF;
+		}
+	}
+	&__button {
+		margin-left: 10px;
+		@include media($xs) {
+			margin-left: 0;
+			margin-top: 10px;
+		}
+
+		.btn {
+			background: $btn-red;
+			color: $white;
+		}
+	}
+}
