@@ -12,6 +12,90 @@
 		padding: 8px 0;
 	}
 
+	&__submenu {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 130px;
+		background-color: $light-gray-bg;
+		padding: 32px 0;
+		z-index: 100;
+		display: none;
+
+		@include media($md) {
+			top: 110px;
+		}
+		@include media($sm) {
+			top: 80px;
+		}
+
+		&.is-active {
+			display: block;
+		}
+
+		&-container {
+			max-width: 1540px;
+			padding: 0 32px;
+
+			@include media($xlg) {
+				max-width: 1540px;
+				padding: 0 60px;
+			}
+
+			@include media($md) {
+				padding: 0 43px;
+			}
+
+			@include media($sm) {
+				padding: 0 20px;
+			}
+		}
+
+		&-row {
+			@include flex(space-between, 0, 0);
+		}
+
+		&-items {
+			font: 400 14px/14px $baseFF;
+			width: 100%;
+			color: $link-color;
+			max-width: fit-content;
+			margin-right: 20px;
+			&:last-child {
+				margin-right: 0;
+			}
+
+			a {
+				transition: all 0.3s;
+				&:hover {
+					color: $btn-red;
+					transition: all 0.3s;
+				}
+			}
+
+			span {
+				margin: 16px 0;
+				display: block;
+				height: 1px;
+				width: 100%;
+				background-color: $gray-200;
+			}
+		}
+		&-title {
+			display: block;
+			font-weight: 700;
+			margin-bottom: 16px;
+		}
+		&-item {
+			display: block;
+			margin-bottom: 16px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
 	&__container {
 		@include flex(space-between, center, center, nowrap);
 		max-width: 1540px;
@@ -304,7 +388,6 @@
 
 		@include media($sm) {
 			padding-bottom: 10px;
-
 		}
 
 		@include media($xs) {

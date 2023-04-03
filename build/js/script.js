@@ -6736,6 +6736,44 @@ var uikit = {
 
 
 
+  openSubmenu: function () {
+
+    $("#js-open-submenu").click(function () {
+
+      console.log(true)
+
+      $("#js-submenu").addClass('is-active')
+
+    })
+
+
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+
+
+
+      if ($("#js-submenu").hasClass('is-active')) {
+
+        console.log('work')
+
+        if (!$("#js-submenu").is(e.target) && $("#js-submenu").has(e.target).length === 0 ) {
+
+          $("#js-submenu").toggleClass('is-active')
+
+        }
+
+      }
+
+    });
+
+
+
+
+
+  },
+
+
+
   yandexMap: function () {
 
     ymaps.ready(function () {
@@ -6948,7 +6986,7 @@ var uikit = {
 
 
 
-    $('.js-acept-cookie-btn').click(()=>{
+    $('.js-acept-cookie-btn').click(() => {
 
       $.cookie('acceptCookie', 'true');
 
@@ -8629,6 +8667,8 @@ var uikit = {
     this.horizontalScrollDilers();
 
     this.showCookie();
+
+    this.openSubmenu();
 
   },
 

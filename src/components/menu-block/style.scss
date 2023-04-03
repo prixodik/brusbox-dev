@@ -1,4 +1,6 @@
 .menu-block {
+	// position: relative;
+
 	&__item {
 		color: $black;
 		font: 500 14px/1 $baseFF;
@@ -19,8 +21,8 @@
 			font: 400 12px/1 $baseFF;
 		}
 
-		&>a,
-		&>span {
+		& > a,
+		& > span {
 			white-space: nowrap;
 			@include time();
 		}
@@ -31,7 +33,7 @@
 
 		&.is-active,
 		&:hover {
-			&>a {
+			& > a {
 				text-decoration: none;
 				//background-color: $green-dark;
 				color: $red;
@@ -43,7 +45,18 @@
 				display: block;
 			}
 		}
+
+		// &.parent {
+		// 	&:hover {
+		// 		.menu-block__submenu {
+		// 			z-index: 200;
+		// 			opacity: 1;
+		// 			transition: all 0.4s;
+		// 		}
+		// 	}
+		// }
 	}
+
 
 	&__menu {
 		@include flex(space-between, center, center, nowrap);
@@ -105,7 +118,8 @@
 			}
 		}
 
-		@include media($sm) {}
+		@include media($sm) {
+		}
 	}
 
 	&__scroll {
@@ -123,7 +137,6 @@
 	}
 
 	@include media($md) {
-
 		//@include flex(space-between, center, center, nowrap);
 		&__item {
 			//font: 16px/1.2 $baseFF;
@@ -143,7 +156,8 @@
 	@include media($xs) {
 		display: block;
 
-		&__item {}
+		&__item {
+		}
 	}
 
 	&--nav {
@@ -178,7 +192,7 @@
 
 			&.is-active,
 			&:hover {
-				&>a {
+				& > a {
 					color: $black;
 				}
 			}
