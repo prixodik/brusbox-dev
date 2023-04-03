@@ -94,9 +94,8 @@
 			@include media($xs) {
 				font: 400 13px/14px $baseFF;
 			}
-		}h
-
-		&__img {
+		}
+		h &__img {
 			img {
 				max-width: 450px;
 			}
@@ -130,7 +129,6 @@
 		}
 	}
 	&--img & {
-
 	}
 
 	&--img-mode {
@@ -163,6 +161,7 @@
 			bottom: 0;
 			padding: 0;
 			z-index: -1;
+			background-color: #e1e1e1;
 
 			img {
 				object-fit: cover;
@@ -176,27 +175,26 @@
 			text-align: center;
 		}
 	}
-	&--big-banner{
+	&--big-banner {
 		padding: 0px 0px;
-		img{
+		img {
 			width: 100%;
 
 			@include media($sm) {
 				height: auto;
 			}
 		}
-		
 	}
-	&--padding-mode{
+	&--padding-mode {
 		padding: 120px 0px 112px;
 	}
-	&--btn &{
-		&__info{
+	&--btn & {
+		&__info {
 			padding-left: 0px;
 			text-align: center;
 			color: $white;
 		}
-		&__button{
+		&__button {
 			margin-top: 40px;
 		}
 	}

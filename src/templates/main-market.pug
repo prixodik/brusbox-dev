@@ -26,7 +26,8 @@ block content
 			img2: "images/main-bg-buyers.jpg",
 			subtitle2: 'Возможности производства и поставки без ограничений дилерам',
 		})._head
-		
+
+		.__document
 			+infoSectionMarket({
 				title: "Наша продукция",
 				text: "BRUSBOX — это принципиально новая разработка — качественный профиль ПВХ, созданный в России и для России <br> на основе уникального комплекса передовых технологий <br> и собственного практического опыта производства металлопластиковых окон.",
@@ -53,14 +54,14 @@ block content
 			}).info-section--bg-gray
 			
 			._container
-				+infoSectionSlider({
+				+infoSectionSliderDark({
 					title: 'Ламинация',
 					text: 'Важно соответствовать современным тенденциям и главное — потребностям клиентов. Поэтому мы в BRUSBOX разработали широкую линейку ламинационных материалов, способных удовлетворить любые потребности!',
 					btn: 'Цветовые решения'
 				}).info-section--swapper-center.info-section--bg-white.info-section--no-column-revers
 
 		.market-page-document.market-page__document
-			._container.container.container--text
+			._container.container.container--sertificates 
 				._title
 					._title-h5 Сертификаты BRUSBOX
 				._text Для соответствия всем необходимым требованиям, компания BRUSBOX предоставляет дилерам всю необходимую документацию
@@ -164,16 +165,15 @@ block content
 		}).info-section--gray.info-section--big-text.info-section--no-column-revers
 
 		+bannerSectionImg({
-		img:'images/banner-bg-main.jpg',
 		title: 'Миссия',
 		text: 'Мы создаем высококачественный профиль<br> для ваших окон, гордясь тем, что делаем вашу жизнь светлее и комфортнее.<br> Мы работаем, чтобы развивались наша страна<br> и партнеры, повышалось благополучие предприятия и сотрудников БРУСБОКС.'
 		})
 
-		+infoSectionButton({
+		+infoSectionButtonWhite({
 		img: 'images/info-section-about.jpg',
 		text: 'BRUSBOX — это принципиально новая разработка — качественный профиль ПВХ, созданный в России и для России на основе уникального комплекса передовых техно-логий и собственного практического опыта производства металлопластиковых окон.',
 		btn: 'Подробнее о компании'
-		}).info-section--gray.info-section--row-revers.info-section--big-text
+		}).info-section--gray.info-section--row-revers.info-section--big-text.info-section--white-btn
 	//- +gridLayout()
 
 block scripts 

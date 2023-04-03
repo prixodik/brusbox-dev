@@ -48,7 +48,7 @@
 
 		@include media($md) {
 			font: 300 14px/19.6px $baseFF;
-			margin-left: 20px;
+			margin-left: 18px;
 		}
 
 		@include media($sm) {
@@ -168,7 +168,7 @@
 
 		&__button,
 		&__text {
-			margin-left: 20px;
+			margin-left: 18px;
 
 			@include media($xs) {
 				margin-left: 10px;
@@ -207,6 +207,24 @@
 
 		@include media($xs) {
 			justify-content: space-between;
+		}
+		display: flex;
+		flex: auto;
+
+		picture {
+			max-width: 70px;
+			display: block;
+		}
+
+		img {
+			max-width: 70px;
+			width: 100%;
+		}
+	}
+
+	&--market & {
+		&__link {
+			background-color: #e1e1e1;
 		}
 	}
 

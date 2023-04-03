@@ -431,6 +431,10 @@
 		}
 	}
 
+	&--slider-padding-bottom {
+		padding-bottom: 0;
+	}
+
 	&--bg-black {
 		background-color: $black;
 		color: $white;
@@ -886,7 +890,8 @@
 		}
 
 		&__info {
-			padding: 0px 0px;
+			padding-top: 0;
+			padding-bottom: 0;
 			max-width: 560px;
 			margin: 0px 112px 0px 0px;
 		}

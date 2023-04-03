@@ -157,6 +157,25 @@ mixin infoSectionButton(data)
 					._img.col-6.col-sm-12
 						+webp(data.img)
 
+mixin infoSectionButtonWhite(data)
+	.info-section.-btn&attributes(attributes)
+		._container.container
+			._row.row
+				._info.col-6.col-sm-12
+					if data.title
+						h2._title
+							!=data.title
+					if data.text
+						._text
+							!=data.text
+					if data.btn
+						._button
+							a(href="#").btn.-border.-border-white.-white 
+								!=data.btn
+				if data.img
+					._img.col-6.col-sm-12
+						+webp(data.img)
+
 mixin infoSectionButtonRed(data)
 	.info-section.-btn.-title-margin&attributes(attributes)
 		._container.container
@@ -289,6 +308,37 @@ mixin infoSectionSlider(data)
 								+webp("images/swiper-product-2.png")
 							._slide.swiper-slide
 								+webp("images/swiper-product-1.png")
+						.swiper-button-prev
+							+svg('slider-arrow-right')
+						.swiper-button-next
+							+svg('slider-arrow-right')
+
+mixin infoSectionSliderDark(data)
+	.info-section.-btn.-slider.-swiper&attributes(attributes)
+		._container.container
+			._row.row
+				._info.col-6.col-sm-12
+					if data.title
+						h2._title
+							!=data.title
+					if data.text
+						._text
+							!=data.text
+					if data.btn
+						._button
+							a(href="#").btn.-border.-red 
+								!=data.btn
+				._slides.col-6.col-sm-12
+					._slider.swiper.mySwiper
+						._slider-wrap.swiper-wrapper
+							._slide.swiper-slide
+								+webp("images/swiper-product-1.png")
+							._slide.swiper-slide
+								+webp("images/swiper-product-2-black.png")
+							._slide.swiper-slide
+								+webp("images/swiper-product-2.png")
+							._slide.swiper-slide
+								+webp("images/swiper-product-2-black.png")
 						.swiper-button-prev
 							+svg('slider-arrow-right')
 						.swiper-button-next

@@ -22,7 +22,8 @@ mixin bannerImg(data)
 mixin bannerSectionImg(data)
 	.banner-section.--img-mode&attributes(attributes)
 		._img
-			+webp(data.img)
+			if data.img
+				+webp(data.img)
 		._info
 			h3._title
 				!=data.title

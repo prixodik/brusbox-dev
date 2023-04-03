@@ -197,6 +197,16 @@ a:hover {
 		}
 	}
 
+	&--sertificates {
+		max-width: 1177px;
+		padding-left: 30px;
+		padding-right: 30px;
+
+		@include media($md) {
+			max-width: 926px;
+		}
+	}
+
 	&--text {
 		max-width: 1200px;
 		

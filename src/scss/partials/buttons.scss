@@ -169,4 +169,17 @@ button.btn {
 			color: $white;
 		}
 	}
+
+	&--border-white {
+		border: 2px solid $white;
+		color: $white;
+
+		&:hover,
+		&:active {
+			transition: all 0.3s;
+			border: 2px solid transparent;
+			background: $btn-red;
+			color: $white;
+		}
+	}
 }
